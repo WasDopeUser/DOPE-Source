@@ -1,0 +1,1228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CE1C9AE-8866-4B44-A651-E86CDAD97087}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DOPE</RootNamespace>
+    <AssemblyName>DOPE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>DOPE.2.ico</ApplicationIcon>
+    <StartupObject>GClass5</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ace.Networking">
+      <HintPath>..\..\DOPE\Ace.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Ace.Networking.Entanglement">
+      <HintPath>..\..\DOPE\Ace.Networking.Entanglement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\DOPE\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\DOPE\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\DOPE\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.BinaryData">
+      <HintPath>..\..\DOPE\Syroot.BinaryData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\DOPE\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\DOPE\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--PropertyChangedEventArgs.cs" />
+    <Compile Include="-Module-{0BBA451F-3CE0-4D38-A88E-1964AAB2D5FB}.cs" />
+    <Compile Include="-Module-{4AEFE88A-41B4-4198-82E7-46263F4EC813}.cs" />
+    <Compile Include="-Module-{614FBBFE-E938-4EC4-838D-F69F6AB4818A}.cs" />
+    <Compile Include="-Module-{81FE5F86-8E0A-4CC8-9B2C-EE48D9AC2A23}.cs" />
+    <Compile Include="-Module-{8ACB3299-E1EC-4A51-A01F-3EC0C231CDAD}.cs" />
+    <Compile Include="chuvRxphSdnfhBmwTy3\GClass265.cs" />
+    <Compile Include="Class0.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
+    <Compile Include="Class4.cs" />
+    <Compile Include="Class5.cs" />
+    <Compile Include="Class6.cs" />
+    <Compile Include="Class7.cs" />
+    <Compile Include="Class8.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\DataUtils.cs" />
+    <Compile Include="Common\EnumExtensions.cs" />
+    <Compile Include="Common\IBotClient.cs" />
+    <Compile Include="Common\IBotController.cs" />
+    <Compile Include="Common\IDopeService.cs" />
+    <Compile Include="Common\LogConfig.cs" />
+    <Compile Include="Common\Models\AccountSettings.cs" />
+    <Compile Include="Common\Models\BotProfile.cs" />
+    <Compile Include="Common\Models\Bot\BasicBotStateInfo.cs" />
+    <Compile Include="Common\Models\Bot\BotAction.cs" />
+    <Compile Include="Common\Models\Bot\BotControlState.cs" />
+    <Compile Include="Common\Models\Bot\BotDetailedViewModel.cs" />
+    <Compile Include="Common\Models\Bot\BotState.cs" />
+    <Compile Include="Common\Models\Bot\BotStats.cs" />
+    <Compile Include="Common\Models\Bot\BotSummaryViewModel.cs" />
+    <Compile Include="Common\Models\Bot\ModuleState.cs" />
+    <Compile Include="Common\Models\Bot\Stats\BindingValue.cs" />
+    <Compile Include="Common\Models\Bot\Stats\DelegateValue.cs" />
+    <Compile Include="Common\Models\Bot\Stats\ILazyUpdatable.cs" />
+    <Compile Include="Common\Models\Bot\Stats\IRowEntry.cs" />
+    <Compile Include="Common\Models\Bot\Stats\IValueWrapper.cs" />
+    <Compile Include="Common\Models\Bot\Stats\LazyBindingValue.cs" />
+    <Compile Include="Common\Models\Bot\Stats\RowEntry.cs" />
+    <Compile Include="Common\Models\Bot\Stats\StatisticsCategory.cs" />
+    <Compile Include="Common\Models\Bot\Stats\VariableValue.cs" />
+    <Compile Include="Common\Models\ComboBoxAttribute.cs" />
+    <Compile Include="Common\Models\DopeServiceStatus.cs" />
+    <Compile Include="Common\Models\IPErkavaBotController.cs" />
+    <Compile Include="Common\Models\LayoutAttribute.cs" />
+    <Compile Include="Common\Models\MapProfile.cs" />
+    <Compile Include="Common\Models\ModuleType.cs" />
+    <Compile Include="Common\Models\PetModeSelection.cs" />
+    <Compile Include="Common\Models\Spacemap\EntityDataRoot.cs" />
+    <Compile Include="Common\Models\Spacemap\EntityRenderFragment.cs" />
+    <Compile Include="Common\Models\Spacemap\MapViewData.cs" />
+    <Compile Include="Common\Models\TargetMap.cs" />
+    <Compile Include="Common\Models\TimeTableDayEntry.cs" />
+    <Compile Include="Common\Models\VolatileData.cs" />
+    <Compile Include="Common\Packets\C2S_AuthorizationKey.cs" />
+    <Compile Include="Common\Packets\C2S_DollRequest.cs" />
+    <Compile Include="Common\Packets\ConnectionClosedReason.cs" />
+    <Compile Include="Common\Packets\DateTimeOffsetSurrogate.cs" />
+    <Compile Include="Common\Packets\DopeProtocol.cs" />
+    <Compile Include="Common\Packets\S2C_AccountInfo.cs" />
+    <Compile Include="Common\Packets\S2C_ConnectionClosed.cs" />
+    <Compile Include="Common\Packets\SC_Ping.cs" />
+    <Compile Include="Common\Structures\CachedDictionary.cs" />
+    <Compile Include="Common\Structures\StaticServerMap.cs" />
+    <Compile Include="Core\Controller.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\BfsQueue.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\ByteArray.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\CooldownTracker.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\DollConfig.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\ErrorReason.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\FlashSettings.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\GClass802.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\Heap.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\MapExtensions.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\MaxHeap.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\MaxStack.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\MinHeap.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\ObjectPool.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\Settings.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\Size.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\U.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\UnsafeStuff.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\Vector.cs" />
+    <Compile Include="DarkorbitAPI\ConnectionManager.cs" />
+    <Compile Include="DarkorbitAPI\DarkOrbitWebAPI.cs" />
+    <Compile Include="DarkorbitAPI\EquipmentAPI.cs" />
+    <Compile Include="DarkorbitAPI\GameManager.cs" />
+    <Compile Include="DarkorbitAPI\Licensing\ICoreDopeService.cs" />
+    <Compile Include="DarkorbitAPI\Licensing\IDopeServiceProxy.cs" />
+    <Compile Include="DarkorbitAPI\NativeWrappers\ILogManager.cs" />
+    <Compile Include="DarkorbitAPI\NativeWrappers\NullLogManager.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\Ability.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\Ammo.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\CooldownType.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\EntityModifierType.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\Items.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\PetMode.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\PetState.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\Resource.cs" />
+    <Compile Include="DarkorbitAPI\Packets\Static\ResourceType.cs" />
+    <Compile Include="DarkorbitAPI\SecurityManager.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Asset.cs" />
+    <Compile Include="DarkorbitAPI\Structures\AssetType.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Battlestation.cs" />
+    <Compile Include="DarkorbitAPI\Structures\BattlestationModule.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Collectible.cs" />
+    <Compile Include="DarkorbitAPI\Structures\CollidableRect.cs" />
+    <Compile Include="DarkorbitAPI\Structures\CollidableSphere.cs" />
+    <Compile Include="DarkorbitAPI\Structures\CollidableType.cs" />
+    <Compile Include="DarkorbitAPI\Structures\CommandDispatcher.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Entity.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Gate.cs" />
+    <Compile Include="DarkorbitAPI\Structures\GroupManager.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Hero.cs" />
+    <Compile Include="DarkorbitAPI\Structures\HeroPet.cs" />
+    <Compile Include="DarkorbitAPI\Structures\ICollidable.cs" />
+    <Compile Include="DarkorbitAPI\Structures\IInteractible.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Map.cs" />
+    <Compile Include="DarkorbitAPI\Structures\MapUtils.cs" />
+    <Compile Include="DarkorbitAPI\Structures\MenuItem.cs" />
+    <Compile Include="DarkorbitAPI\Structures\MovingEntity.cs" />
+    <Compile Include="DarkorbitAPI\Structures\NpcShip.cs" />
+    <Compile Include="DarkorbitAPI\Structures\NpcUtils.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Pathing\Collidable.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Pathing\MapGrid.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Pathing\MapNavigator.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Pathing\PathSequence.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Pet.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Resource.cs" />
+    <Compile Include="DarkorbitAPI\Structures\Ship.cs" />
+    <Compile Include="Dope\Common\GInterface7.cs" />
+    <Compile Include="GAttribute0.cs" />
+    <Compile Include="GAttribute1.cs" />
+    <Compile Include="GAttribute10.cs" />
+    <Compile Include="GAttribute11.cs" />
+    <Compile Include="GAttribute12.cs" />
+    <Compile Include="GAttribute13.cs" />
+    <Compile Include="GAttribute14.cs" />
+    <Compile Include="GAttribute15.cs" />
+    <Compile Include="GAttribute16.cs" />
+    <Compile Include="GAttribute17.cs" />
+    <Compile Include="GAttribute18.cs" />
+    <Compile Include="GAttribute19.cs" />
+    <Compile Include="GAttribute2.cs" />
+    <Compile Include="GAttribute20.cs" />
+    <Compile Include="GAttribute21.cs" />
+    <Compile Include="GAttribute22.cs" />
+    <Compile Include="GAttribute23.cs" />
+    <Compile Include="GAttribute24.cs" />
+    <Compile Include="GAttribute25.cs" />
+    <Compile Include="GAttribute26.cs" />
+    <Compile Include="GAttribute27.cs" />
+    <Compile Include="GAttribute28.cs" />
+    <Compile Include="GAttribute29.cs" />
+    <Compile Include="GAttribute3.cs" />
+    <Compile Include="GAttribute30.cs" />
+    <Compile Include="GAttribute31.cs" />
+    <Compile Include="GAttribute32.cs" />
+    <Compile Include="GAttribute33.cs" />
+    <Compile Include="GAttribute34.cs" />
+    <Compile Include="GAttribute35.cs" />
+    <Compile Include="GAttribute36.cs" />
+    <Compile Include="GAttribute37.cs" />
+    <Compile Include="GAttribute38.cs" />
+    <Compile Include="GAttribute39.cs" />
+    <Compile Include="GAttribute4.cs" />
+    <Compile Include="GAttribute40.cs" />
+    <Compile Include="GAttribute41.cs" />
+    <Compile Include="GAttribute42.cs" />
+    <Compile Include="GAttribute43.cs" />
+    <Compile Include="GAttribute44.cs" />
+    <Compile Include="GAttribute45.cs" />
+    <Compile Include="GAttribute46.cs" />
+    <Compile Include="GAttribute47.cs" />
+    <Compile Include="GAttribute48.cs" />
+    <Compile Include="GAttribute49.cs" />
+    <Compile Include="GAttribute5.cs" />
+    <Compile Include="GAttribute50.cs" />
+    <Compile Include="GAttribute51.cs" />
+    <Compile Include="GAttribute52.cs" />
+    <Compile Include="GAttribute53.cs" />
+    <Compile Include="GAttribute54.cs" />
+    <Compile Include="GAttribute55.cs" />
+    <Compile Include="GAttribute56.cs" />
+    <Compile Include="GAttribute57.cs" />
+    <Compile Include="GAttribute58.cs" />
+    <Compile Include="GAttribute59.cs" />
+    <Compile Include="GAttribute6.cs" />
+    <Compile Include="GAttribute60.cs" />
+    <Compile Include="GAttribute61.cs" />
+    <Compile Include="GAttribute62.cs" />
+    <Compile Include="GAttribute63.cs" />
+    <Compile Include="GAttribute64.cs" />
+    <Compile Include="GAttribute65.cs" />
+    <Compile Include="GAttribute66.cs" />
+    <Compile Include="GAttribute67.cs" />
+    <Compile Include="GAttribute68.cs" />
+    <Compile Include="GAttribute69.cs" />
+    <Compile Include="GAttribute7.cs" />
+    <Compile Include="GAttribute70.cs" />
+    <Compile Include="GAttribute8.cs" />
+    <Compile Include="GAttribute9.cs" />
+    <Compile Include="GClass0.cs" />
+    <Compile Include="GClass1.cs" />
+    <Compile Include="GClass10.cs" />
+    <Compile Include="GClass100.cs" />
+    <Compile Include="GClass101.cs" />
+    <Compile Include="GClass102.cs" />
+    <Compile Include="GClass103.cs" />
+    <Compile Include="GClass104.cs" />
+    <Compile Include="GClass105.cs" />
+    <Compile Include="GClass106.cs" />
+    <Compile Include="GClass107.cs" />
+    <Compile Include="GClass108.cs" />
+    <Compile Include="GClass109.cs" />
+    <Compile Include="GClass110.cs" />
+    <Compile Include="GClass111.cs" />
+    <Compile Include="GClass112.cs" />
+    <Compile Include="GClass113.cs" />
+    <Compile Include="GClass114.cs" />
+    <Compile Include="GClass115.cs" />
+    <Compile Include="GClass116.cs" />
+    <Compile Include="GClass117.cs" />
+    <Compile Include="GClass118.cs" />
+    <Compile Include="GClass119.cs" />
+    <Compile Include="GClass120.cs" />
+    <Compile Include="GClass121.cs" />
+    <Compile Include="GClass122.cs" />
+    <Compile Include="GClass123.cs" />
+    <Compile Include="GClass124.cs" />
+    <Compile Include="GClass125.cs" />
+    <Compile Include="GClass126.cs" />
+    <Compile Include="GClass127.cs" />
+    <Compile Include="GClass128.cs" />
+    <Compile Include="GClass129.cs" />
+    <Compile Include="GClass130.cs" />
+    <Compile Include="GClass131.cs" />
+    <Compile Include="GClass132.cs" />
+    <Compile Include="GClass133.cs" />
+    <Compile Include="GClass134.cs" />
+    <Compile Include="GClass135.cs" />
+    <Compile Include="GClass136.cs" />
+    <Compile Include="GClass137.cs" />
+    <Compile Include="GClass138.cs" />
+    <Compile Include="GClass139.cs" />
+    <Compile Include="GClass140.cs" />
+    <Compile Include="GClass141.cs" />
+    <Compile Include="GClass142.cs" />
+    <Compile Include="GClass143.cs" />
+    <Compile Include="GClass144.cs" />
+    <Compile Include="GClass145.cs" />
+    <Compile Include="GClass146.cs" />
+    <Compile Include="GClass147.cs" />
+    <Compile Include="GClass148.cs" />
+    <Compile Include="GClass149.cs" />
+    <Compile Include="GClass150.cs" />
+    <Compile Include="GClass151.cs" />
+    <Compile Include="GClass152.cs" />
+    <Compile Include="GClass153.cs" />
+    <Compile Include="GClass154.cs" />
+    <Compile Include="GClass155.cs" />
+    <Compile Include="GClass156.cs" />
+    <Compile Include="GClass157.cs" />
+    <Compile Include="GClass158.cs" />
+    <Compile Include="GClass159.cs" />
+    <Compile Include="GClass160.cs" />
+    <Compile Include="GClass161.cs" />
+    <Compile Include="GClass162.cs" />
+    <Compile Include="GClass163.cs" />
+    <Compile Include="GClass164.cs" />
+    <Compile Include="GClass165.cs" />
+    <Compile Include="GClass166.cs" />
+    <Compile Include="GClass167.cs" />
+    <Compile Include="GClass168.cs" />
+    <Compile Include="GClass169.cs" />
+    <Compile Include="GClass170.cs" />
+    <Compile Include="GClass171.cs" />
+    <Compile Include="GClass172.cs" />
+    <Compile Include="GClass173.cs" />
+    <Compile Include="GClass174.cs" />
+    <Compile Include="GClass175.cs" />
+    <Compile Include="GClass176.cs" />
+    <Compile Include="GClass177.cs" />
+    <Compile Include="GClass178.cs" />
+    <Compile Include="GClass179.cs" />
+    <Compile Include="GClass180.cs" />
+    <Compile Include="GClass181.cs" />
+    <Compile Include="GClass182.cs" />
+    <Compile Include="GClass183.cs" />
+    <Compile Include="GClass184.cs" />
+    <Compile Include="GClass185.cs" />
+    <Compile Include="GClass186.cs" />
+    <Compile Include="GClass187.cs" />
+    <Compile Include="GClass188.cs" />
+    <Compile Include="GClass189.cs" />
+    <Compile Include="GClass190.cs" />
+    <Compile Include="GClass191.cs" />
+    <Compile Include="GClass192.cs" />
+    <Compile Include="GClass193.cs" />
+    <Compile Include="GClass194.cs" />
+    <Compile Include="GClass195.cs" />
+    <Compile Include="GClass196.cs" />
+    <Compile Include="GClass197.cs" />
+    <Compile Include="GClass198.cs" />
+    <Compile Include="GClass199.cs" />
+    <Compile Include="GClass2.cs" />
+    <Compile Include="GClass200.cs" />
+    <Compile Include="GClass201.cs" />
+    <Compile Include="GClass202.cs" />
+    <Compile Include="GClass203.cs" />
+    <Compile Include="GClass204.cs" />
+    <Compile Include="GClass205.cs" />
+    <Compile Include="GClass206.cs" />
+    <Compile Include="GClass207.cs" />
+    <Compile Include="GClass208.cs" />
+    <Compile Include="GClass209.cs" />
+    <Compile Include="GClass210.cs" />
+    <Compile Include="GClass211.cs" />
+    <Compile Include="GClass212.cs" />
+    <Compile Include="GClass213.cs" />
+    <Compile Include="GClass214.cs" />
+    <Compile Include="GClass215.cs" />
+    <Compile Include="GClass216.cs" />
+    <Compile Include="GClass217.cs" />
+    <Compile Include="GClass218.cs" />
+    <Compile Include="GClass219.cs" />
+    <Compile Include="GClass220.cs" />
+    <Compile Include="GClass221.cs" />
+    <Compile Include="GClass222.cs" />
+    <Compile Include="GClass223.cs" />
+    <Compile Include="GClass224.cs" />
+    <Compile Include="GClass225.cs" />
+    <Compile Include="GClass226.cs" />
+    <Compile Include="GClass227.cs" />
+    <Compile Include="GClass228.cs" />
+    <Compile Include="GClass229.cs" />
+    <Compile Include="GClass230.cs" />
+    <Compile Include="GClass231.cs" />
+    <Compile Include="GClass232.cs" />
+    <Compile Include="GClass233.cs" />
+    <Compile Include="GClass234.cs" />
+    <Compile Include="GClass235.cs" />
+    <Compile Include="GClass236.cs" />
+    <Compile Include="GClass237.cs" />
+    <Compile Include="GClass238.cs" />
+    <Compile Include="GClass239.cs" />
+    <Compile Include="GClass240.cs" />
+    <Compile Include="GClass241.cs" />
+    <Compile Include="GClass242.cs" />
+    <Compile Include="GClass243.cs" />
+    <Compile Include="GClass244.cs" />
+    <Compile Include="GClass245.cs" />
+    <Compile Include="GClass246.cs" />
+    <Compile Include="GClass247.cs" />
+    <Compile Include="GClass248.cs" />
+    <Compile Include="GClass249.cs" />
+    <Compile Include="GClass250.cs" />
+    <Compile Include="GClass251.cs" />
+    <Compile Include="GClass252.cs" />
+    <Compile Include="GClass253.cs" />
+    <Compile Include="GClass254.cs" />
+    <Compile Include="GClass255.cs" />
+    <Compile Include="GClass256.cs" />
+    <Compile Include="GClass257.cs" />
+    <Compile Include="GClass258.cs" />
+    <Compile Include="GClass259.cs" />
+    <Compile Include="GClass260.cs" />
+    <Compile Include="GClass261.cs" />
+    <Compile Include="GClass262.cs" />
+    <Compile Include="GClass263.cs" />
+    <Compile Include="GClass264.cs" />
+    <Compile Include="GClass266.cs" />
+    <Compile Include="GClass267.cs" />
+    <Compile Include="GClass268.cs" />
+    <Compile Include="GClass269.cs" />
+    <Compile Include="GClass270.cs" />
+    <Compile Include="GClass271.cs" />
+    <Compile Include="GClass272.cs" />
+    <Compile Include="GClass273.cs" />
+    <Compile Include="GClass274.cs" />
+    <Compile Include="GClass275.cs" />
+    <Compile Include="GClass276.cs" />
+    <Compile Include="GClass277.cs" />
+    <Compile Include="GClass278.cs" />
+    <Compile Include="GClass279.cs" />
+    <Compile Include="GClass28.cs" />
+    <Compile Include="GClass280.cs" />
+    <Compile Include="GClass281.cs" />
+    <Compile Include="GClass282.cs" />
+    <Compile Include="GClass283.cs" />
+    <Compile Include="GClass284.cs" />
+    <Compile Include="GClass285.cs" />
+    <Compile Include="GClass286.cs" />
+    <Compile Include="GClass287.cs" />
+    <Compile Include="GClass288.cs" />
+    <Compile Include="GClass289.cs" />
+    <Compile Include="GClass290.cs" />
+    <Compile Include="GClass291.cs" />
+    <Compile Include="GClass292.cs" />
+    <Compile Include="GClass293.cs" />
+    <Compile Include="GClass294.cs" />
+    <Compile Include="GClass295.cs" />
+    <Compile Include="GClass296.cs" />
+    <Compile Include="GClass297.cs" />
+    <Compile Include="GClass298.cs" />
+    <Compile Include="GClass299.cs" />
+    <Compile Include="GClass3.cs" />
+    <Compile Include="GClass300.cs" />
+    <Compile Include="GClass301.cs" />
+    <Compile Include="GClass302.cs" />
+    <Compile Include="GClass303.cs" />
+    <Compile Include="GClass304.cs" />
+    <Compile Include="GClass305.cs" />
+    <Compile Include="GClass306.cs" />
+    <Compile Include="GClass307.cs" />
+    <Compile Include="GClass308.cs" />
+    <Compile Include="GClass309.cs" />
+    <Compile Include="GClass310.cs" />
+    <Compile Include="GClass311.cs" />
+    <Compile Include="GClass312.cs" />
+    <Compile Include="GClass313.cs" />
+    <Compile Include="GClass314.cs" />
+    <Compile Include="GClass315.cs" />
+    <Compile Include="GClass316.cs" />
+    <Compile Include="GClass317.cs" />
+    <Compile Include="GClass318.cs" />
+    <Compile Include="GClass319.cs" />
+    <Compile Include="GClass320.cs" />
+    <Compile Include="GClass321.cs" />
+    <Compile Include="GClass322.cs" />
+    <Compile Include="GClass323.cs" />
+    <Compile Include="GClass324.cs" />
+    <Compile Include="GClass325.cs" />
+    <Compile Include="GClass326.cs" />
+    <Compile Include="GClass327.cs" />
+    <Compile Include="GClass328.cs" />
+    <Compile Include="GClass329.cs" />
+    <Compile Include="GClass330.cs" />
+    <Compile Include="GClass331.cs" />
+    <Compile Include="GClass332.cs" />
+    <Compile Include="GClass333.cs" />
+    <Compile Include="GClass334.cs" />
+    <Compile Include="GClass335.cs" />
+    <Compile Include="GClass336.cs" />
+    <Compile Include="GClass337.cs" />
+    <Compile Include="GClass338.cs" />
+    <Compile Include="GClass339.cs" />
+    <Compile Include="GClass340.cs" />
+    <Compile Include="GClass341.cs" />
+    <Compile Include="GClass342.cs" />
+    <Compile Include="GClass343.cs" />
+    <Compile Include="GClass344.cs" />
+    <Compile Include="GClass345.cs" />
+    <Compile Include="GClass346.cs" />
+    <Compile Include="GClass347.cs" />
+    <Compile Include="GClass348.cs" />
+    <Compile Include="GClass349.cs" />
+    <Compile Include="GClass350.cs" />
+    <Compile Include="GClass351.cs" />
+    <Compile Include="GClass352.cs" />
+    <Compile Include="GClass353.cs" />
+    <Compile Include="GClass354.cs" />
+    <Compile Include="GClass355.cs" />
+    <Compile Include="GClass356.cs" />
+    <Compile Include="GClass357.cs" />
+    <Compile Include="GClass358.cs" />
+    <Compile Include="GClass359.cs" />
+    <Compile Include="GClass360.cs" />
+    <Compile Include="GClass361.cs" />
+    <Compile Include="GClass362.cs" />
+    <Compile Include="GClass363.cs" />
+    <Compile Include="GClass364.cs" />
+    <Compile Include="GClass365.cs" />
+    <Compile Include="GClass366.cs" />
+    <Compile Include="GClass367.cs" />
+    <Compile Include="GClass368.cs" />
+    <Compile Include="GClass369.cs" />
+    <Compile Include="GClass370.cs" />
+    <Compile Include="GClass371.cs" />
+    <Compile Include="GClass372.cs" />
+    <Compile Include="GClass373.cs" />
+    <Compile Include="GClass374.cs" />
+    <Compile Include="GClass375.cs" />
+    <Compile Include="GClass376.cs" />
+    <Compile Include="GClass377.cs" />
+    <Compile Include="GClass378.cs" />
+    <Compile Include="GClass379.cs" />
+    <Compile Include="GClass380.cs" />
+    <Compile Include="GClass381.cs" />
+    <Compile Include="GClass382.cs" />
+    <Compile Include="GClass383.cs" />
+    <Compile Include="GClass384.cs" />
+    <Compile Include="GClass385.cs" />
+    <Compile Include="GClass386.cs" />
+    <Compile Include="GClass387.cs" />
+    <Compile Include="GClass388.cs" />
+    <Compile Include="GClass389.cs" />
+    <Compile Include="GClass390.cs" />
+    <Compile Include="GClass391.cs" />
+    <Compile Include="GClass392.cs" />
+    <Compile Include="GClass393.cs" />
+    <Compile Include="GClass394.cs" />
+    <Compile Include="GClass395.cs" />
+    <Compile Include="GClass396.cs" />
+    <Compile Include="GClass397.cs" />
+    <Compile Include="GClass398.cs" />
+    <Compile Include="GClass399.cs" />
+    <Compile Include="GClass4.cs" />
+    <Compile Include="GClass400.cs" />
+    <Compile Include="GClass401.cs" />
+    <Compile Include="GClass402.cs" />
+    <Compile Include="GClass403.cs" />
+    <Compile Include="GClass404.cs" />
+    <Compile Include="GClass405.cs" />
+    <Compile Include="GClass406.cs" />
+    <Compile Include="GClass407.cs" />
+    <Compile Include="GClass408.cs" />
+    <Compile Include="GClass409.cs" />
+    <Compile Include="GClass410.cs" />
+    <Compile Include="GClass411.cs" />
+    <Compile Include="GClass412.cs" />
+    <Compile Include="GClass413.cs" />
+    <Compile Include="GClass414.cs" />
+    <Compile Include="GClass415.cs" />
+    <Compile Include="GClass416.cs" />
+    <Compile Include="GClass417.cs" />
+    <Compile Include="GClass418.cs" />
+    <Compile Include="GClass419.cs" />
+    <Compile Include="GClass420.cs" />
+    <Compile Include="GClass421.cs" />
+    <Compile Include="GClass422.cs" />
+    <Compile Include="GClass423.cs" />
+    <Compile Include="GClass424.cs" />
+    <Compile Include="GClass425.cs" />
+    <Compile Include="GClass426.cs" />
+    <Compile Include="GClass427.cs" />
+    <Compile Include="GClass428.cs" />
+    <Compile Include="GClass429.cs" />
+    <Compile Include="GClass430.cs" />
+    <Compile Include="GClass431.cs" />
+    <Compile Include="GClass432.cs" />
+    <Compile Include="GClass433.cs" />
+    <Compile Include="GClass434.cs" />
+    <Compile Include="GClass435.cs" />
+    <Compile Include="GClass436.cs" />
+    <Compile Include="GClass437.cs" />
+    <Compile Include="GClass438.cs" />
+    <Compile Include="GClass439.cs" />
+    <Compile Include="GClass440.cs" />
+    <Compile Include="GClass441.cs" />
+    <Compile Include="GClass442.cs" />
+    <Compile Include="GClass443.cs" />
+    <Compile Include="GClass444.cs" />
+    <Compile Include="GClass445.cs" />
+    <Compile Include="GClass446.cs" />
+    <Compile Include="GClass447.cs" />
+    <Compile Include="GClass448.cs" />
+    <Compile Include="GClass449.cs" />
+    <Compile Include="GClass450.cs" />
+    <Compile Include="GClass451.cs" />
+    <Compile Include="GClass452.cs" />
+    <Compile Include="GClass453.cs" />
+    <Compile Include="GClass454.cs" />
+    <Compile Include="GClass455.cs" />
+    <Compile Include="GClass456.cs" />
+    <Compile Include="GClass457.cs" />
+    <Compile Include="GClass458.cs" />
+    <Compile Include="GClass459.cs" />
+    <Compile Include="GClass460.cs" />
+    <Compile Include="GClass461.cs" />
+    <Compile Include="GClass462.cs" />
+    <Compile Include="GClass463.cs" />
+    <Compile Include="GClass464.cs" />
+    <Compile Include="GClass465.cs" />
+    <Compile Include="GClass466.cs" />
+    <Compile Include="GClass467.cs" />
+    <Compile Include="GClass468.cs" />
+    <Compile Include="GClass469.cs" />
+    <Compile Include="GClass470.cs" />
+    <Compile Include="GClass471.cs" />
+    <Compile Include="GClass472.cs" />
+    <Compile Include="GClass473.cs" />
+    <Compile Include="GClass474.cs" />
+    <Compile Include="GClass475.cs" />
+    <Compile Include="GClass476.cs" />
+    <Compile Include="GClass477.cs" />
+    <Compile Include="GClass478.cs" />
+    <Compile Include="GClass479.cs" />
+    <Compile Include="GClass480.cs" />
+    <Compile Include="GClass481.cs" />
+    <Compile Include="GClass482.cs" />
+    <Compile Include="GClass483.cs" />
+    <Compile Include="GClass484.cs" />
+    <Compile Include="GClass485.cs" />
+    <Compile Include="GClass486.cs" />
+    <Compile Include="GClass487.cs" />
+    <Compile Include="GClass488.cs" />
+    <Compile Include="GClass489.cs" />
+    <Compile Include="GClass49.cs" />
+    <Compile Include="GClass490.cs" />
+    <Compile Include="GClass491.cs" />
+    <Compile Include="GClass492.cs" />
+    <Compile Include="GClass493.cs" />
+    <Compile Include="GClass494.cs" />
+    <Compile Include="GClass495.cs" />
+    <Compile Include="GClass496.cs" />
+    <Compile Include="GClass497.cs" />
+    <Compile Include="GClass498.cs" />
+    <Compile Include="GClass499.cs" />
+    <Compile Include="GClass5.xaml.cs">
+      <DependentUpon>GClass5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GClass500.cs" />
+    <Compile Include="GClass501.cs" />
+    <Compile Include="GClass502.cs" />
+    <Compile Include="GClass503.cs" />
+    <Compile Include="GClass504.cs" />
+    <Compile Include="GClass505.cs" />
+    <Compile Include="GClass506.cs" />
+    <Compile Include="GClass507.cs" />
+    <Compile Include="GClass508.cs" />
+    <Compile Include="GClass509.cs" />
+    <Compile Include="GClass510.cs" />
+    <Compile Include="GClass511.cs" />
+    <Compile Include="GClass512.cs" />
+    <Compile Include="GClass513.cs" />
+    <Compile Include="GClass514.cs" />
+    <Compile Include="GClass515.cs" />
+    <Compile Include="GClass516.cs" />
+    <Compile Include="GClass517.cs" />
+    <Compile Include="GClass518.cs" />
+    <Compile Include="GClass519.cs" />
+    <Compile Include="GClass520.cs" />
+    <Compile Include="GClass521.cs" />
+    <Compile Include="GClass522.cs" />
+    <Compile Include="GClass523.cs" />
+    <Compile Include="GClass524.cs" />
+    <Compile Include="GClass525.cs" />
+    <Compile Include="GClass526.cs" />
+    <Compile Include="GClass527.cs" />
+    <Compile Include="GClass528.cs" />
+    <Compile Include="GClass529.cs" />
+    <Compile Include="GClass530.cs" />
+    <Compile Include="GClass531.cs" />
+    <Compile Include="GClass532.cs" />
+    <Compile Include="GClass533.cs" />
+    <Compile Include="GClass534.cs" />
+    <Compile Include="GClass535.cs" />
+    <Compile Include="GClass536.cs" />
+    <Compile Include="GClass537.cs" />
+    <Compile Include="GClass538.cs" />
+    <Compile Include="GClass539.cs" />
+    <Compile Include="GClass540.cs" />
+    <Compile Include="GClass541.cs" />
+    <Compile Include="GClass542.cs" />
+    <Compile Include="GClass543.cs" />
+    <Compile Include="GClass544.cs" />
+    <Compile Include="GClass545.cs" />
+    <Compile Include="GClass546.cs" />
+    <Compile Include="GClass547.cs" />
+    <Compile Include="GClass548.cs" />
+    <Compile Include="GClass549.cs" />
+    <Compile Include="GClass550.cs" />
+    <Compile Include="GClass551.cs" />
+    <Compile Include="GClass552.cs" />
+    <Compile Include="GClass553.cs" />
+    <Compile Include="GClass554.cs" />
+    <Compile Include="GClass555.cs" />
+    <Compile Include="GClass556.cs" />
+    <Compile Include="GClass557.cs" />
+    <Compile Include="GClass558.cs" />
+    <Compile Include="GClass559.cs" />
+    <Compile Include="GClass560.cs" />
+    <Compile Include="GClass561.cs" />
+    <Compile Include="GClass562.cs" />
+    <Compile Include="GClass563.cs" />
+    <Compile Include="GClass564.cs" />
+    <Compile Include="GClass565.cs" />
+    <Compile Include="GClass566.cs" />
+    <Compile Include="GClass567.cs" />
+    <Compile Include="GClass568.cs" />
+    <Compile Include="GClass569.cs" />
+    <Compile Include="GClass570.cs" />
+    <Compile Include="GClass571.cs" />
+    <Compile Include="GClass572.cs" />
+    <Compile Include="GClass573.cs" />
+    <Compile Include="GClass574.cs" />
+    <Compile Include="GClass575.cs" />
+    <Compile Include="GClass576.cs" />
+    <Compile Include="GClass577.cs" />
+    <Compile Include="GClass578.cs" />
+    <Compile Include="GClass579.cs" />
+    <Compile Include="GClass580.cs" />
+    <Compile Include="GClass581.cs" />
+    <Compile Include="GClass582.cs" />
+    <Compile Include="GClass583.cs" />
+    <Compile Include="GClass584.cs" />
+    <Compile Include="GClass585.cs" />
+    <Compile Include="GClass586.cs" />
+    <Compile Include="GClass587.cs" />
+    <Compile Include="GClass588.cs" />
+    <Compile Include="GClass589.cs" />
+    <Compile Include="GClass590.cs" />
+    <Compile Include="GClass591.cs" />
+    <Compile Include="GClass592.cs" />
+    <Compile Include="GClass593.cs" />
+    <Compile Include="GClass594.cs" />
+    <Compile Include="GClass595.cs" />
+    <Compile Include="GClass596.cs" />
+    <Compile Include="GClass597.cs" />
+    <Compile Include="GClass598.cs" />
+    <Compile Include="GClass599.cs" />
+    <Compile Include="GClass6.cs" />
+    <Compile Include="GClass600.cs" />
+    <Compile Include="GClass601.cs" />
+    <Compile Include="GClass602.cs" />
+    <Compile Include="GClass603.cs" />
+    <Compile Include="GClass604.cs" />
+    <Compile Include="GClass605.cs" />
+    <Compile Include="GClass606.cs" />
+    <Compile Include="GClass607.cs" />
+    <Compile Include="GClass608.cs" />
+    <Compile Include="GClass609.cs" />
+    <Compile Include="GClass610.cs" />
+    <Compile Include="GClass611.cs" />
+    <Compile Include="GClass612.cs" />
+    <Compile Include="GClass613.cs" />
+    <Compile Include="GClass614.cs" />
+    <Compile Include="GClass615.cs" />
+    <Compile Include="GClass616.cs" />
+    <Compile Include="GClass617.cs" />
+    <Compile Include="GClass618.cs" />
+    <Compile Include="GClass619.cs" />
+    <Compile Include="GClass620.cs" />
+    <Compile Include="GClass621.cs" />
+    <Compile Include="GClass622.cs" />
+    <Compile Include="GClass623.cs" />
+    <Compile Include="GClass624.cs" />
+    <Compile Include="GClass625.cs" />
+    <Compile Include="GClass626.cs" />
+    <Compile Include="GClass627.cs" />
+    <Compile Include="GClass628.cs" />
+    <Compile Include="GClass629.cs" />
+    <Compile Include="GClass630.cs" />
+    <Compile Include="GClass631.cs" />
+    <Compile Include="GClass632.cs" />
+    <Compile Include="GClass633.cs" />
+    <Compile Include="GClass634.cs" />
+    <Compile Include="GClass635.cs" />
+    <Compile Include="GClass636.cs" />
+    <Compile Include="GClass637.cs" />
+    <Compile Include="GClass638.cs" />
+    <Compile Include="GClass639.cs" />
+    <Compile Include="GClass640.cs" />
+    <Compile Include="GClass641.cs" />
+    <Compile Include="GClass642.cs" />
+    <Compile Include="GClass643.cs" />
+    <Compile Include="GClass644.cs" />
+    <Compile Include="GClass645.cs" />
+    <Compile Include="GClass646.cs" />
+    <Compile Include="GClass647.cs" />
+    <Compile Include="GClass648.cs" />
+    <Compile Include="GClass649.cs" />
+    <Compile Include="GClass650.cs" />
+    <Compile Include="GClass651.cs" />
+    <Compile Include="GClass652.cs" />
+    <Compile Include="GClass653.cs" />
+    <Compile Include="GClass654.cs" />
+    <Compile Include="GClass655.cs" />
+    <Compile Include="GClass656.cs" />
+    <Compile Include="GClass657.cs" />
+    <Compile Include="GClass658.cs" />
+    <Compile Include="GClass659.cs" />
+    <Compile Include="GClass660.cs" />
+    <Compile Include="GClass661.cs" />
+    <Compile Include="GClass662.cs" />
+    <Compile Include="GClass663.cs" />
+    <Compile Include="GClass664.cs" />
+    <Compile Include="GClass665.cs" />
+    <Compile Include="GClass666.cs" />
+    <Compile Include="GClass667.cs" />
+    <Compile Include="GClass668.cs" />
+    <Compile Include="GClass669.cs" />
+    <Compile Include="GClass670.cs" />
+    <Compile Include="GClass671.cs" />
+    <Compile Include="GClass672.cs" />
+    <Compile Include="GClass673.cs" />
+    <Compile Include="GClass674.cs" />
+    <Compile Include="GClass675.cs" />
+    <Compile Include="GClass676.cs" />
+    <Compile Include="GClass677.cs" />
+    <Compile Include="GClass678.cs" />
+    <Compile Include="GClass679.cs" />
+    <Compile Include="GClass680.cs" />
+    <Compile Include="GClass681.cs" />
+    <Compile Include="GClass682.cs" />
+    <Compile Include="GClass683.cs" />
+    <Compile Include="GClass684.cs" />
+    <Compile Include="GClass685.cs" />
+    <Compile Include="GClass686.cs" />
+    <Compile Include="GClass687.cs" />
+    <Compile Include="GClass688.cs" />
+    <Compile Include="GClass689.cs" />
+    <Compile Include="GClass690.cs" />
+    <Compile Include="GClass691.cs" />
+    <Compile Include="GClass692.cs" />
+    <Compile Include="GClass693.cs" />
+    <Compile Include="GClass694.cs" />
+    <Compile Include="GClass695.cs" />
+    <Compile Include="GClass696.cs" />
+    <Compile Include="GClass697.cs" />
+    <Compile Include="GClass698.cs" />
+    <Compile Include="GClass699.cs" />
+    <Compile Include="GClass7.cs" />
+    <Compile Include="GClass700.cs" />
+    <Compile Include="GClass701.cs" />
+    <Compile Include="GClass702.cs" />
+    <Compile Include="GClass703.cs" />
+    <Compile Include="GClass704.cs" />
+    <Compile Include="GClass705.cs" />
+    <Compile Include="GClass706.cs" />
+    <Compile Include="GClass707.cs" />
+    <Compile Include="GClass708.cs" />
+    <Compile Include="GClass709.cs" />
+    <Compile Include="GClass710.cs" />
+    <Compile Include="GClass711.cs" />
+    <Compile Include="GClass712.cs" />
+    <Compile Include="GClass713.cs" />
+    <Compile Include="GClass714.cs" />
+    <Compile Include="GClass715.cs" />
+    <Compile Include="GClass716.cs" />
+    <Compile Include="GClass717.cs" />
+    <Compile Include="GClass718.cs" />
+    <Compile Include="GClass719.cs" />
+    <Compile Include="GClass720.cs" />
+    <Compile Include="GClass721.cs" />
+    <Compile Include="GClass722.cs" />
+    <Compile Include="GClass723.cs" />
+    <Compile Include="GClass724.cs" />
+    <Compile Include="GClass725.cs" />
+    <Compile Include="GClass726.cs" />
+    <Compile Include="GClass727.cs" />
+    <Compile Include="GClass728.cs" />
+    <Compile Include="GClass729.cs" />
+    <Compile Include="GClass730.cs" />
+    <Compile Include="GClass731.cs" />
+    <Compile Include="GClass732.cs" />
+    <Compile Include="GClass733.cs" />
+    <Compile Include="GClass734.cs" />
+    <Compile Include="GClass735.cs" />
+    <Compile Include="GClass736.cs" />
+    <Compile Include="GClass737.cs" />
+    <Compile Include="GClass738.cs" />
+    <Compile Include="GClass739.cs" />
+    <Compile Include="GClass740.cs" />
+    <Compile Include="GClass741.cs" />
+    <Compile Include="GClass742.cs" />
+    <Compile Include="GClass743.cs" />
+    <Compile Include="GClass744.cs" />
+    <Compile Include="GClass745.cs" />
+    <Compile Include="GClass746.cs" />
+    <Compile Include="GClass747.cs" />
+    <Compile Include="GClass748.cs" />
+    <Compile Include="GClass749.cs" />
+    <Compile Include="GClass750.cs" />
+    <Compile Include="GClass751.cs" />
+    <Compile Include="GClass752.cs" />
+    <Compile Include="GClass753.cs" />
+    <Compile Include="GClass754.cs" />
+    <Compile Include="GClass755.cs" />
+    <Compile Include="GClass756.cs" />
+    <Compile Include="GClass757.cs" />
+    <Compile Include="GClass758.cs" />
+    <Compile Include="GClass759.cs" />
+    <Compile Include="GClass760.cs" />
+    <Compile Include="GClass761.cs" />
+    <Compile Include="GClass762.cs" />
+    <Compile Include="GClass763.cs" />
+    <Compile Include="GClass764.cs" />
+    <Compile Include="GClass765.cs" />
+    <Compile Include="GClass766.cs" />
+    <Compile Include="GClass767.cs" />
+    <Compile Include="GClass768.cs" />
+    <Compile Include="GClass769.cs" />
+    <Compile Include="GClass770.cs" />
+    <Compile Include="GClass771.cs" />
+    <Compile Include="GClass772.cs" />
+    <Compile Include="GClass773.cs" />
+    <Compile Include="GClass774.cs" />
+    <Compile Include="GClass775.cs" />
+    <Compile Include="GClass776.cs" />
+    <Compile Include="GClass777.cs" />
+    <Compile Include="GClass778.cs" />
+    <Compile Include="GClass779.cs" />
+    <Compile Include="GClass78.cs" />
+    <Compile Include="GClass780.cs" />
+    <Compile Include="GClass781.cs" />
+    <Compile Include="GClass782.cs" />
+    <Compile Include="GClass783.cs" />
+    <Compile Include="GClass784.cs" />
+    <Compile Include="GClass785.cs" />
+    <Compile Include="GClass786.cs" />
+    <Compile Include="GClass787.cs" />
+    <Compile Include="GClass788.cs" />
+    <Compile Include="GClass789.cs" />
+    <Compile Include="GClass790.cs" />
+    <Compile Include="GClass791.cs" />
+    <Compile Include="GClass792.cs" />
+    <Compile Include="GClass793.cs" />
+    <Compile Include="GClass794.cs" />
+    <Compile Include="GClass795.cs" />
+    <Compile Include="GClass796.cs" />
+    <Compile Include="GClass797.cs" />
+    <Compile Include="GClass798.cs" />
+    <Compile Include="GClass799.cs" />
+    <Compile Include="GClass8.cs" />
+    <Compile Include="GClass800.cs" />
+    <Compile Include="GClass801.cs" />
+    <Compile Include="GClass803.cs" />
+    <Compile Include="GClass804.cs" />
+    <Compile Include="GClass805.cs" />
+    <Compile Include="GClass806.cs" />
+    <Compile Include="GClass807.cs" />
+    <Compile Include="GClass808.cs" />
+    <Compile Include="GClass809.cs" />
+    <Compile Include="GClass81.cs" />
+    <Compile Include="GClass810.cs" />
+    <Compile Include="GClass811.cs" />
+    <Compile Include="GClass812.cs" />
+    <Compile Include="GClass813.cs" />
+    <Compile Include="GClass814.cs" />
+    <Compile Include="GClass815.cs" />
+    <Compile Include="GClass816.cs" />
+    <Compile Include="GClass817.cs" />
+    <Compile Include="GClass818.cs" />
+    <Compile Include="GClass819.cs" />
+    <Compile Include="GClass82.cs" />
+    <Compile Include="GClass820.cs" />
+    <Compile Include="GClass821.cs" />
+    <Compile Include="GClass822.cs" />
+    <Compile Include="GClass823.cs" />
+    <Compile Include="GClass824.cs" />
+    <Compile Include="GClass825.cs" />
+    <Compile Include="GClass826.cs" />
+    <Compile Include="GClass827.cs" />
+    <Compile Include="GClass828.cs" />
+    <Compile Include="GClass829.cs" />
+    <Compile Include="GClass830.cs" />
+    <Compile Include="GClass831.cs" />
+    <Compile Include="GClass832.cs" />
+    <Compile Include="GClass833.cs" />
+    <Compile Include="GClass834.cs" />
+    <Compile Include="GClass835.cs" />
+    <Compile Include="GClass836.cs" />
+    <Compile Include="GClass837.cs" />
+    <Compile Include="GClass838.cs" />
+    <Compile Include="GClass839.cs" />
+    <Compile Include="GClass84.cs" />
+    <Compile Include="GClass840.cs" />
+    <Compile Include="GClass841.cs" />
+    <Compile Include="GClass842.cs" />
+    <Compile Include="GClass843.cs" />
+    <Compile Include="GClass844.cs" />
+    <Compile Include="GClass845.cs" />
+    <Compile Include="GClass846.cs" />
+    <Compile Include="GClass847.cs" />
+    <Compile Include="GClass849.cs" />
+    <Compile Include="GClass85.cs" />
+    <Compile Include="GClass850.cs" />
+    <Compile Include="GClass86.cs" />
+    <Compile Include="GClass87.cs" />
+    <Compile Include="GClass88.cs" />
+    <Compile Include="GClass89.cs" />
+    <Compile Include="GClass9.cs" />
+    <Compile Include="GClass90.cs" />
+    <Compile Include="GClass91.cs" />
+    <Compile Include="GClass93.cs" />
+    <Compile Include="GClass94.cs" />
+    <Compile Include="GClass95.cs" />
+    <Compile Include="GClass96.cs" />
+    <Compile Include="GClass97.cs" />
+    <Compile Include="GClass98.cs" />
+    <Compile Include="GClass99.cs" />
+    <Compile Include="GDelegate0.cs" />
+    <Compile Include="GEnum0.cs" />
+    <Compile Include="GEnum1.cs" />
+    <Compile Include="GEnum2.cs" />
+    <Compile Include="GEnum3.cs" />
+    <Compile Include="GEnum4.cs" />
+    <Compile Include="GEnum5.cs" />
+    <Compile Include="GEnum6.cs" />
+    <Compile Include="GEnum8.cs" />
+    <Compile Include="GEnum9.cs" />
+    <Compile Include="GEventArgs0.cs" />
+    <Compile Include="GInterface0.cs" />
+    <Compile Include="GInterface1.cs" />
+    <Compile Include="GInterface2.cs" />
+    <Compile Include="GInterface3.cs" />
+    <Compile Include="GInterface4.cs" />
+    <Compile Include="GInterface5.cs" />
+    <Compile Include="GInterface6.cs" />
+    <Compile Include="GInterface8.cs" />
+    <Compile Include="Interface0.cs" />
+    <Compile Include="PErkava\PErkava.cs" />
+    <Compile Include="PErkava\Properties\Resources.cs" />
+    <Compile Include="PErkava\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PErkava\WindowStyle.xaml.cs">
+      <DependentUpon>WindowStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessedByFody.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\BrowserWindow.xaml.cs">
+      <DependentUpon>BrowserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Collections\AsyncObservableCollection.cs" />
+    <Compile Include="UI\Controls\SimpleTreeHeader.cs" />
+    <Compile Include="UI\Controls\SimpleTreeNode.cs" />
+    <Compile Include="UI\Controls\TreeHeaderNode.cs" />
+    <Compile Include="UI\Controls\TreeNode.cs" />
+    <Compile Include="UI\Controls\TreeViewObject.xaml.cs">
+      <DependentUpon>TreeViewObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Converters\BoolNegationConverter.cs" />
+    <Compile Include="UI\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\MapNameIdConverter.cs" />
+    <Compile Include="UI\DebugWindow.xaml.cs">
+      <DependentUpon>DebugWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MapControl.xaml.cs">
+      <DependentUpon>MapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Models\Commands\ResetStatsCommand.cs" />
+    <Compile Include="UI\Models\CommandViewModel.cs" />
+    <Compile Include="UI\Models\HellstormType.cs" />
+    <Compile Include="UI\Models\LaserType.cs" />
+    <Compile Include="UI\Models\RocketType.cs" />
+    <Compile Include="UI\Models\SelectedNpcModel.cs" />
+    <Compile Include="UI\Models\StatisticsCategoryWpf.cs" />
+    <Compile Include="UI\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShipSummaryControl.xaml.cs">
+      <DependentUpon>ShipSummaryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TrayHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" />
+    <EmbeddedResource Include="PErkava\Properties\Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="PErkava\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="GClass5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="app.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="overlaywindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PErkava\WindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\BrowserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\TreeViewObject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainWindow.2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MapControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ShipSummaryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowicons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dope.ico" />
+    <Resource Include="fodyweavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PErkava">
+	<Geometry
+		x:Key="closeGeometry">F1 M 151,217L 152,217L 154.5,219.5L 157,217L 158,217L 158,218L 155.5,220.5L 158,223L 158,224L 157,224L 154.5,221.5L 152,224L 151,224L 151,223L 153.5,220.5L 151,218L 151,217 Z</Geometry>
+	<Geometry
+		x:Key="minimizeGeometry">M0,0 L8,0 8,1 8,2 0,2 0,1 z</Geometry>
+	<Geometry
+		x:Key="maximizeGeometry">F1 M 34,17L 43,17L 43,23L 34,23L 34,17 Z M 35,19L 35,22L 42,22L 42,19L 35,19 Z</Geometry>
+	<Geometry
+		x:Key="restoreGeometry">M1,4.9996096 L1,7.000219 7,6.999219 7,5.001 2,5.001 2,4.9996096 z M3,2.0014141 L3,3.0000001 8,3.0000001 8,4.0000001 8,4.0008045 9,4.0008045 9,2.0014141 z M2,0 L10,0 10,0.0010234118 10,1.0000001 10,5.001 8,5.001 8,7.9990235 0,8.0000239 0,4.0000001 0,3.0009998 0,3.0000001 2,3.0000001 2,1.0000001 2,0.0010234118 z</Geometry>
+</ResourceDictionary>

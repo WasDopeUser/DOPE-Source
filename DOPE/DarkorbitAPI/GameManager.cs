@@ -1,0 +1,677 @@
+﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using DarkorbitAPI.CommonStructures;
+using DarkorbitAPI.Licensing;
+using DarkorbitAPI.NativeWrappers;
+using DarkorbitAPI.Structures;
+using NLog;
+
+namespace DarkorbitAPI
+{
+	public class GameManager : INotifyPropertyChanged
+	{
+		public ConnectionManager Connection
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Connection>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<Connection>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Connection>k__BackingField = value;
+				this.method_10(Class1.Connection);
+			}
+		}
+
+		public Hero Hero
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Hero>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<Hero>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Hero>k__BackingField = value;
+				this.method_10(Class1.Hero);
+			}
+		}
+
+		public Map Map
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Map>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<Map>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Map>k__BackingField = value;
+				this.method_10(Class1.Map);
+			}
+		}
+
+		public SecurityManager Security
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Security>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<Security>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Security>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_79);
+			}
+		}
+
+		public DarkOrbitWebAPI Web
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Web>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<Web>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Web>k__BackingField = value;
+				this.method_10(Class1.Web);
+			}
+		}
+
+		public Settings Settings
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Settings>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<Settings>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Settings>k__BackingField = value;
+				this.method_10(Class1.FvniVjhZkee);
+			}
+		}
+
+		public int NextMapId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<NextMapId>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<NextMapId>k__BackingField == value)
+				{
+					return;
+				}
+				this.<NextMapId>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_60);
+			}
+		}
+
+		public DateTime LastJumped
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LastJumped>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (DateTime.Equals(this.<LastJumped>k__BackingField, value))
+				{
+					return;
+				}
+				this.<LastJumped>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_47);
+			}
+		}
+
+		public DateTimeOffset LastDied
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LastDied>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (DateTimeOffset.Equals(this.<LastDied>k__BackingField, value))
+				{
+					return;
+				}
+				this.<LastDied>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_46);
+			}
+		}
+
+		public DateTimeOffset LastDailyLogin
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LastDailyLogin>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (DateTimeOffset.Equals(this.<LastDailyLogin>k__BackingField, value))
+				{
+					return;
+				}
+				this.<LastDailyLogin>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_45);
+			}
+		}
+
+		public GClass773.GEnum7 LicenseState
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LicenseState>k__BackingField;
+			}
+			[CompilerGenerated]
+			internal set
+			{
+				if (this.<LicenseState>k__BackingField == value)
+				{
+					return;
+				}
+				this.<LicenseState>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_54);
+			}
+		}
+
+		public DateTimeOffset LicenseExpiration
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LicenseExpiration>k__BackingField;
+			}
+			[CompilerGenerated]
+			internal set
+			{
+				if (DateTimeOffset.Equals(this.<LicenseExpiration>k__BackingField, value))
+				{
+					return;
+				}
+				this.<LicenseExpiration>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_53);
+			}
+		}
+
+		public IDopeServiceProxy Dope
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Dope>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<Dope>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Dope>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_13);
+			}
+		}
+
+		public ILogManager LogManager
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LogManager>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<LogManager>k__BackingField, value))
+				{
+					return;
+				}
+				this.<LogManager>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_55);
+				this.method_10(Class1.propertyChangedEventArgs_56);
+			}
+		}
+
+		private Logger Log
+		{
+			get
+			{
+				return this.LogManager.Get("Game");
+			}
+		}
+
+		public bool IsLoggedIn
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<IsLoggedIn>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<IsLoggedIn>k__BackingField == value)
+				{
+					return;
+				}
+				this.<IsLoggedIn>k__BackingField = value;
+				this.method_10(Class1.IsLoggedIn);
+			}
+		}
+
+		public bool IsLoggedOut
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<IsLoggedOut>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<IsLoggedOut>k__BackingField == value)
+				{
+					return;
+				}
+				this.<IsLoggedOut>k__BackingField = value;
+				this.method_10(Class1.propertyChangedEventArgs_35);
+			}
+		}
+
+		public Random Random { get; }
+
+		public GameManager(IDopeServiceProxy idopeServiceProxy_0)
+		{
+			Class8.xDph7tozmh5WD();
+			base..ctor();
+			GameManager.Instance.Value = this;
+			this.Connection = new ConnectionManager(this);
+			this.Connection.Socket.Connected += this.method_0;
+			this.Connection.Socket.Disconnected += this.method_1;
+			this.Hero = new Hero(this);
+			this.Map = new Map(this);
+			this.Security = new SecurityManager(this);
+			this.Settings = new Settings();
+			this.Web = new DarkOrbitWebAPI(this);
+			this.Dope = idopeServiceProxy_0;
+			this.LogManager = NullLogManager.Instance;
+			this.Random = new Random();
+		}
+
+		private void method_0(GClass91 gclass91_0)
+		{
+			this.IsLoggedOut = false;
+		}
+
+		private void method_1(GClass91 gclass91_0, ErrorReason errorReason_0, Exception exception_0 = null)
+		{
+			this.Hero.Clear();
+			this.Map.Clear();
+		}
+
+		public void method_2()
+		{
+			this.Settings = (this.Settings ?? new Settings());
+			this.Settings.MapHosts = this.Web.GetMapHosts();
+			this.Settings.SpacemapConfig = this.Web.GetSpacemapConfig();
+			try
+			{
+				this.Settings.UIString = this.Web.method_0();
+			}
+			catch
+			{
+			}
+			if (this.Settings.SpacemapConfig != null)
+			{
+				MapUtils.smethod_5(this.Settings.SpacemapConfig);
+			}
+		}
+
+		public void method_3()
+		{
+			if (this.IsLoggedIn)
+			{
+				this.Log.Info("Grabbing daily login");
+				if (this.Web.Get(GClass801.smethod_4(this.Web.Server), null).Data.IsSuccessStatusCode)
+				{
+					this.LastDailyLogin = DateTimeOffset.Now;
+				}
+			}
+		}
+
+		public bool method_4(string string_0, string string_1, string string_2)
+		{
+			if (!this.Web.Login(string_0, string_1, string_2))
+			{
+				this.IsLoggedIn = false;
+				return false;
+			}
+			this.method_3();
+			this.method_2();
+			this.Settings.FlashSettings = this.Web.GetFlashSettings();
+			this.IsLoggedIn = true;
+			return true;
+		}
+
+		public bool method_5(string string_0)
+		{
+			this.Web.Server = string_0;
+			this.method_2();
+			this.Settings.IsClient = false;
+			return true;
+		}
+
+		public void Start()
+		{
+			Settings settings = this.Settings;
+			int? num;
+			if (settings == null)
+			{
+				num = null;
+			}
+			else
+			{
+				FlashSettings flashSettings = settings.FlashSettings;
+				num = ((flashSettings != null) ? new int?(flashSettings.mapID) : null);
+			}
+			int num2 = num ?? 1;
+			if (this.Map.MapId != 0)
+			{
+				num2 = this.Map.MapId;
+			}
+			if (this.NextMapId != 0)
+			{
+				num2 = this.NextMapId;
+			}
+			if (num2 == 0)
+			{
+				num2 = 1;
+			}
+			this.Connection.method_18(num2);
+		}
+
+		internal void method_6(GClass209 gclass209_0)
+		{
+			this.Hero.Init(gclass209_0);
+			GameManager.GClass77.GDelegate1 heroInit = this.HeroInit;
+			if (heroInit == null)
+			{
+				return;
+			}
+			heroInit(this, this.Hero);
+		}
+
+		internal void method_7(GClass207 gclass207_0)
+		{
+			this.Hero.Hp = 0;
+			this.Hero.Clear();
+			this.LastDied = DateTimeOffset.Now;
+			this.IsLoggedOut = true;
+			GameManager.GClass77.GDelegate2 heroDied = this.HeroDied;
+			if (heroDied == null)
+			{
+				return;
+			}
+			heroDied(this, this.Hero, gclass207_0);
+		}
+
+		internal void method_8(bool bool_0 = false)
+		{
+			if (bool_0 || (this.Settings.MapHosts.ContainsKey(this.Map.MapId) && this.Settings.MapHosts.ContainsKey(this.NextMapId) && this.Settings.MapHosts[this.NextMapId] != this.Settings.MapHosts[this.Map.MapId]))
+			{
+				this.Log.Info<int, int>("Changing game server {oldMap} -> {newMap}", this.Map.MapId, this.NextMapId);
+			}
+		}
+
+		public void method_9(GClass255 gclass255_0)
+		{
+			string[] array = gclass255_0.string_0.Split(new char[]
+			{
+				'|'
+			});
+			Hero hero = this.Hero;
+			try
+			{
+				if (gclass255_0.string_0 == "0|l")
+				{
+					this.IsLoggedOut = true;
+					this.Connection.Socket.Disconnect(ErrorReason.LoggedOut, null, false);
+				}
+				if (array.Length >= 3 && array[1] == "A")
+				{
+					if (array[2] == "C")
+					{
+						hero.Credits = double.Parse(array[3]);
+						hero.Uridium = double.Parse(array[4]);
+					}
+					else if (array[2] == "BK")
+					{
+						hero.BootyKeys = (double)int.Parse(array[3]);
+					}
+					else if (array[2] == "STD")
+					{
+						this.Log.Info(array[3]);
+					}
+				}
+				string text = array[1];
+				if (text != null)
+				{
+					if (!(text == "i"))
+					{
+						if (!(text == "S"))
+						{
+							if (!(text == "LM"))
+							{
+								if (!(text == "n"))
+								{
+									if (text == "7" && array.Length > 2 && array[2] == "HS")
+									{
+										this.Connection.method_2(new string[]
+										{
+											"JCPU",
+											"GET"
+										});
+									}
+								}
+								else
+								{
+									string text2 = array[2];
+									if (text2 != null)
+									{
+										if (!(text2 == "INV"))
+										{
+											if (!(text2 == "LSH"))
+											{
+												if (text2 == "USH")
+												{
+													Ship ship = this.Map.method_4(int.Parse(array[3]));
+													if (ship != null)
+													{
+														NpcShip npcShip = ship as NpcShip;
+														if (npcShip != null)
+														{
+															npcShip.LeashedBy = 0;
+														}
+													}
+												}
+											}
+											else
+											{
+												Ship ship2 = this.Map.method_4(int.Parse(array[3]));
+												if (ship2 != null)
+												{
+													NpcShip npcShip2 = ship2 as NpcShip;
+													if (npcShip2 != null)
+													{
+														npcShip2.LeashedBy = int.Parse(array[4]);
+														if (npcShip2.LeashedBy == this.Hero.Id)
+														{
+															npcShip2.LeashedBy = -1;
+														}
+													}
+												}
+											}
+										}
+										else
+										{
+											Ship ship3 = this.Map.method_4(int.Parse(array[3]));
+											if (ship3 != null)
+											{
+												ship3.Cloaked = (array[4] == "1");
+											}
+										}
+									}
+								}
+							}
+							else if (array[2] == "ST" && array.Length > 5)
+							{
+								double num = double.Parse(array[5]);
+								string text2 = array[3];
+								if (text2 != null)
+								{
+									if (!(text2 == "EP"))
+									{
+										if (!(text2 == "HON"))
+										{
+											if (!(text2 == "CRE"))
+											{
+												if (text2 == "URI")
+												{
+													this.Hero.Uridium = num;
+												}
+											}
+											else
+											{
+												this.Hero.Credits = num;
+											}
+										}
+										else
+										{
+											this.Hero.Honor = num;
+										}
+									}
+									else
+									{
+										this.Hero.Experience = num;
+										this.Hero.Level = int.Parse(array[6]);
+									}
+								}
+							}
+						}
+						else
+						{
+							string text2 = array[2];
+							if (text2 != null && text2 == "CFG")
+							{
+								this.Hero.Config = int.Parse(array[3]);
+							}
+						}
+					}
+					else
+					{
+						this.NextMapId = int.Parse(array[2]);
+						this.Connection.SendMessage(new GClass142(true));
+						this.method_8(false);
+					}
+				}
+			}
+			catch
+			{
+			}
+			GameManager.GClass77.GDelegate3 logMessage = this.LogMessage;
+			if (logMessage == null)
+			{
+				return;
+			}
+			logMessage(this, gclass255_0);
+		}
+
+		public event GameManager.GClass77.GDelegate2 HeroDied;
+
+		public event GameManager.GClass77.GDelegate1 HeroInit;
+
+		public event GameManager.GClass77.GDelegate3 LogMessage;
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		// Note: this type is marked as 'beforefieldinit'.
+		static GameManager()
+		{
+			Class8.xDph7tozmh5WD();
+			GameManager.Instance = new ThreadLocal<GameManager>();
+		}
+
+		protected void method_10(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		{
+			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+			if (propertyChanged != null)
+			{
+				propertyChanged(this, propertyChangedEventArgs_0);
+			}
+		}
+
+		public static ThreadLocal<GameManager> Instance;
+
+		public sealed class GClass77
+		{
+			public GClass77()
+			{
+				Class8.xDph7tozmh5WD();
+				base..ctor();
+			}
+
+			public delegate void GDelegate1(GameManager game, Hero hero);
+
+			public delegate void GDelegate2(GameManager game, Hero hero, GClass207 e);
+
+			public delegate void GDelegate3(GameManager game, GClass255 e);
+		}
+	}
+}

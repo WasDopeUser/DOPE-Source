@@ -1,0 +1,121 @@
+<Window
+	x:Class="DOPE.UI.SettingsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:DOPE.UI" xmlns:em="clr-namespace:DOPE.Core.EModels"
+	Height="150"
+	Width="390"
+	Title="Settings">
+	<Grid
+		Margin="3"
+		ColumnDefinitions="">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="250" />
+				<ColumnDefinition
+					Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Label
+				Grid.Column="0">Bot key:</Label>
+			<TextBox
+				Grid.Column="1"
+				TextAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Text="{Binding NewKey, UpdateSourceTrigger=PropertyChanged}" />
+			<Button
+				Grid.Column="2"
+				Click="method_1">Apply</Button>
+		</Grid>
+		<Viewbox
+			Name="StatusMessageConnected"
+			Grid.Row="1">
+			<TextBlock>
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{x:Type TextBlock}">
+						<Setter
+							Property="Visibility"
+							Value="Hidden" />
+						<Style.Triggers>
+							<DataTrigger xmlns:wrcfmekllc13jibmgdg="clr-namespace:WrcFMekllc13jIBMgdg"
+								Value="{x:Static wrcfmekllc13jibmgdg:wwZ4utkwdjb0LSb75i0.Connected}"
+								Binding="{Binding Controller.Status}">
+								<Setter
+									Property="Visibility"
+									Value="Visible" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>You have successfully connected to DOPE. You may now close this window.</TextBlock>
+		</Viewbox>
+		<Viewbox
+			Name="StatusMessageConnecting"
+			Grid.Row="1">
+			<TextBlock>
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{x:Type TextBlock}">
+						<Setter
+							Property="Visibility"
+							Value="Hidden" />
+						<Style.Triggers>
+							<DataTrigger
+								Value="{x:Static :wwZ4utkwdjb0LSb75i0.Connecting}"
+								Binding="{Binding Controller.Status}">
+								<Setter
+									Property="Visibility"
+									Value="Visible" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>Please wait while the bot is connecting to the DOPE service.</TextBlock>
+		</Viewbox>
+		<Viewbox
+			Name="StatusMessageDisconnected"
+			Grid.Row="1">
+			<TextBlock
+				Text="{Binding DisconnectReason}">
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{x:Type TextBlock}">
+						<Setter
+							Property="Visibility"
+							Value="Hidden" />
+						<Style.Triggers>
+							<DataTrigger
+								Value="{x:Static :wwZ4utkwdjb0LSb75i0.Disconnected}"
+								Binding="{Binding Controller.Status}">
+								<Setter
+									Property="Visibility"
+									Value="Visible" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</TextBlock>
+		</Viewbox>
+		<Grid
+			Row="2">
+			<UniformGrid
+				Columns="2"
+				VerticalAlignment="Bottom">
+				<TextBlock
+					Margin="3"
+					Text="{Binding Controller.Status, StringFormat=Status: {0}}" />
+				<TextBlock
+					Margin="3"
+					Text="{Binding Controller.Email, StringFormat=Account: {0}}" />
+			</UniformGrid>
+		</Grid>
+	</Grid>
+</Window>

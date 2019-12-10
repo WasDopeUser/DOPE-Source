@@ -1,0 +1,22 @@
+<UserControl
+	x:Class="DOPE.UI.MapControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:DOPE" xmlns:logic="clr-namespace:DOPE.Core.Logic" xmlns:ui="clr-namespace:DOPE.UI">
+	<Grid>
+		<TextBlock
+			Margin="10"
+			Foreground="#FFF5F5F5"
+			Opacity="0.3"
+			VerticalAlignment="Center"
+			TextAlignment="Center"
+			HorizontalAlignment="Center"
+			FontSize="40"
+			Text="{Binding Game.Map.MapName}" />
+		<DockPanel>
+			<TextBlock
+				Name="Progress"
+				DockPanel.Dock="Right"
+				TextAlignment="Right"
+				Foreground="#FFFF0000"
+				FontSize="20" />
+		</DockPanel>
+	</Grid>
+</UserControl>

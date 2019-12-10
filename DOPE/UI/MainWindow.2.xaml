@@ -1,0 +1,487 @@
+<Window
+	x:Class="DOPE.UI.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:DOPE.UI" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:commands="clr-namespace:DOPE.UI.Models.Commands" xmlns:structures="clr-namespace:DarkorbitAPI.Structures" xmlns:em="clr-namespace:DOPE.Core.EModels" xmlns:bot="clr-namespace:DOPE.Common.Models.Bot" xmlns:controls="clr-namespace:DOPE.UI.Controls" xmlns:common_stats="clr-namespace:DOPE.Common.Models.Bot.Stats"
+	Name="Main"
+	Title="DOPE"
+	Height="500"
+	Width="800"
+	Closing="Main_Closing"
+	Loaded="Main_Loaded">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<DataTemplate
+				DataType="{x:Type common_stats:StatisticsCategory}"
+				x:Key="{DataTemplateKey {x:Type common_stats:StatisticsCategory}}">
+				<!--Unknown connection ID: 2-->
+				<ListView
+					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					ItemsSource="{Binding Items}">
+					<ListView.View>
+						<GridView>
+							<GridViewColumn
+								Header="Empty?"
+								Width="200" />
+						</GridView>
+					</ListView.View>
+					<ItemsControl.GroupStyle>
+						<GroupStyle>
+							<GroupStyle.HeaderTemplate>
+								<DataTemplate>
+									<TextBlock
+										FontWeight="Bold"
+										FontSize="14"
+										Text="{Binding Name}" />
+								</DataTemplate>
+							</GroupStyle.HeaderTemplate>
+						</GroupStyle>
+					</ItemsControl.GroupStyle>
+				</ListView>
+			</DataTemplate>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="30" />
+			<RowDefinition
+				Height="8.5*" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="1">
+			<Viewbox
+				Name="NoAccountsMessage">
+				<StackPanel
+					Orientation="Vertical">
+					<TextBlock
+						TextAlignment="Center">No accounts found.</TextBlock>
+					<TextBlock
+						TextAlignment="Center">Please see the right sidebar in the control panel to add an account.</TextBlock>
+				</StackPanel>
+			</Viewbox>
+			<TabControl
+				Name="MainTabs"
+				ItemsSource="{Binding BotControllers.ObsColl}">
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{x:Type TabControl}">
+						<Style.Triggers>
+							<DataTrigger
+								Value="0"
+								Binding="{Binding Items.Count, RelativeSource={RelativeSource Self}}">
+								<Setter
+									Property="Visibility"
+									Value="Hidden" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<TextBlock
+							Text="{Binding Context.Account.BotName}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+				<TabControl.ContentTemplate>
+					<DataTemplate
+						x:Name="MainContent">
+						<Grid
+							DataContext="{Binding Context}">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="5*" />
+								<ColumnDefinition
+									Width="5*" />
+							</Grid.ColumnDefinitions>
+							<Grid
+								Column="0">
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="7*" />
+									<RowDefinition
+										Height="1.25*" />
+									<RowDefinition
+										Height="1.25*" />
+									<RowDefinition
+										Height="0.5*" />
+								</Grid.RowDefinitions>
+								<local:MapControl
+									Name="MapControl"
+									Grid.Row="0"
+									DataContext="{Binding}" />
+								<Grid
+									Row="1">
+									<local:ShipSummaryControl
+										DataContext="{Binding Game.Hero}" />
+								</Grid>
+								<Grid
+									Row="2">
+									<local:ShipSummaryControl
+										DataContext="{Binding Game.Map.SelectedShip}" />
+								</Grid>
+								<StackPanel
+									Orientation="Horizontal"
+									Grid.Row="3">
+									<FrameworkElement.Resources>
+										<ResourceDictionary>
+											<Style
+												TargetType="{x:Type TextBlock}"
+												x:Key="{x:Type TextBlock}">
+												<Setter
+													Property="Margin"
+													Value="0 0 10 0" />
+											</Style>
+										</ResourceDictionary>
+									</FrameworkElement.Resources>
+									<TextBlock
+										Text="{Binding Scheduler.Module}">
+										<FrameworkElement.Style>
+											<Style
+												TargetType="{x:Type TextBlock}">
+												<Setter
+													Property="Margin"
+													Value="0 0 10 0" />
+												<Style.Triggers>
+													<DataTrigger
+														Value="{x:Static bot:ModuleState.Started}"
+														Binding="{Binding Scheduler.Module.State}">
+														<Setter
+															Property="Foreground"
+															Value="#FF008000" />
+													</DataTrigger>
+													<DataTrigger
+														Value="{x:Static bot:ModuleState.Stopping}"
+														Binding="{Binding Scheduler.Module.State}">
+														<Setter
+															Property="Foreground"
+															Value="#FFFFA500" />
+													</DataTrigger>
+													<DataTrigger
+														Value="{x:Static bot:ModuleState.Stopped}"
+														Binding="{Binding Scheduler.Module.State}">
+														<Setter
+															Property="Foreground"
+															Value="#FFFF0000" />
+													</DataTrigger>
+												</Style.Triggers>
+											</Style>
+										</FrameworkElement.Style>
+									</TextBlock>
+									<TextBlock
+										Text="{Binding State}" />
+									<!--Unknown connection ID: 5-->
+									<TextBlock
+										Text="{Binding Game.Hero.Config, StringFormat=CFG: {0}}" />
+									<TextBlock
+										Text="{Binding Game.Connection.PingMs, StringFormat=Ping: {0} ms}" />
+									<TextBlock
+										Name="ErrorMessage"
+										Foreground="#FFFF0000"
+										FontWeight="Bold"
+										Text="{Binding LastDisconnectReason}">
+										<FrameworkElement.Style>
+											<Style
+												TargetType="{x:Type TextBlock}">
+												<Style.Triggers>
+													<Trigger
+														Property="Text"
+														Value="Unknown">
+														<Setter
+															Property="Visibility"
+															Value="Hidden" />
+													</Trigger>
+												</Style.Triggers>
+											</Style>
+										</FrameworkElement.Style>
+									</TextBlock>
+								</StackPanel>
+							</Grid>
+							<!--Unknown connection ID: 6-->
+							<TabControl
+								Grid.Column="1">
+								<TabItem
+									Header="Stats">
+									<StackPanel>
+										<GroupBox
+											Header="Current">
+											<UniformGrid
+												Columns="3">
+												<TextBlock
+													Text="{Binding Game.Hero.Credits, StringFormat=Credits: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.Uridium, StringFormat=Uridium: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.Experience, StringFormat=EXP: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.Honor, StringFormat=Honor: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoX1, StringFormat=X1: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoX2, StringFormat=X2: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoX3, StringFormat=X3: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoHS1, StringFormat=ECO-10: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoR1, StringFormat=R-310: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoR2, StringFormat=PLT-2026: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoR3, StringFormat=PLT-2021: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Game.Hero.AmmoR4, StringFormat=PLT-3030: {0:N0}}" />
+											</UniformGrid>
+										</GroupBox>
+										<GroupBox
+											Header="Earned">
+											<UniformGrid
+												Columns="3"
+												DataContext="{Binding Stats}">
+												<TextBlock
+													Text="{Binding EarnedCredits, StringFormat=Credits: {0:N0}}" />
+												<TextBlock
+													Text="{Binding EarnedUridium, StringFormat=Uridium: {0:N0}}" />
+												<TextBlock
+													Text="{Binding EarnedExp, StringFormat=EXP: {0:N0}}" />
+												<TextBlock
+													Text="{Binding EarnedHonor, StringFormat=Honor: {0:N0}}" />
+												<TextBlock
+													Text="{Binding EarnedEnergy, StringFormat=Energy: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Boxes, StringFormat=Boxes: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Deaths, StringFormat=Deaths: {0:N0}}" />
+												<TextBlock
+													Text="{Binding Spins, StringFormat=Spins: {0:N0}}" />
+												<TextBlock
+													Text="{Binding RunTime, StringFormat=Runtime: {0:hh\:mm\:ss}}" />
+											</UniformGrid>
+										</GroupBox>
+										<GroupBox
+											Header="Hourly">
+											<UniformGrid
+												Columns="2"
+												DataContext="{Binding Stats}">
+												<TextBlock
+													Text="{Binding CreditsHourly, StringFormat=Credits: {0:N0}/h}" />
+												<TextBlock
+													Text="{Binding UridiumHourly, StringFormat=Uridium: {0:N0}/h}" />
+											</UniformGrid>
+										</GroupBox>
+										<Button
+											Command="{x:Static commands:ResetStatsCommand.Instance}"
+											CommandParameter="{Binding Stats}">
+											<TextBlock
+												Text="Reset" />
+										</Button>
+										<GroupBox
+											Header="Controls">
+											<UniformGrid
+												Margin="0 10 0 0"
+												Columns="5">
+												<!--Unknown connection ID: 7-->
+												<Button
+													IsEnabled="True">
+													<TextBlock
+														Text="Start" />
+												</Button>
+												<!--Unknown connection ID: 8-->
+												<Button
+													IsEnabled="{Binding IsPaused, Converter={StaticResource BoolNegation}, FallbackValue=False}">
+													<TextBlock
+														Text="Pause" />
+												</Button>
+												<!--Unknown connection ID: 9-->
+												<Button
+													IsEnabled="True">
+													<TextBlock
+														Text="Stop" />
+												</Button>
+												<!--Unknown connection ID: 10-->
+												<Button
+													IsEnabled="True">
+													<TextBlock
+														Text="Disconnect" />
+												</Button>
+												<!--Unknown connection ID: 11-->
+												<Button
+													Name="BrowserButton"
+													IsEnabled="{Binding Game.Web.IsLoggedIn, FallbackValue=False}">
+													<TextBlock
+														Text="Browser" />
+												</Button>
+												<!--Unknown connection ID: 12-->
+												<Button
+													Name="DebugButton">
+													<FrameworkElement.Style>
+														<Style
+															TargetType="{x:Type Button}">
+															<Setter
+																Property="Visibility"
+																Value="Hidden" />
+															<Style.Triggers>
+																<DataTrigger
+																	Value="True"
+																	Binding="{Binding DataContext.Debug, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
+																	<Setter
+																		Property="Visibility"
+																		Value="Visible" />
+																</DataTrigger>
+															</Style.Triggers>
+														</Style>
+													</FrameworkElement.Style>
+													<TextBlock
+														Text="Debug" />
+												</Button>
+											</UniformGrid>
+										</GroupBox>
+									</StackPanel>
+								</TabItem>
+								<TabItem
+									Header="Hero">
+									<Grid>
+										<ContentPresenter
+											Content="{Binding Stats.HeroStats}" />
+									</Grid>
+								</TabItem>
+								<TabItem
+									Header="Pet">
+									<Grid>
+										<ContentPresenter
+											Content="{Binding Stats.PetStats}" />
+									</Grid>
+								</TabItem>
+								<TabItem
+									Header="GG">
+									<Grid>
+										<ContentPresenter
+											Content="{Binding Stats.GgStats}" />
+									</Grid>
+								</TabItem>
+								<TabItem
+									Header="NPCs">
+									<Grid>
+										<ContentPresenter
+											Content="{Binding Stats.NpcStats}" />
+									</Grid>
+								</TabItem>
+								<TabItem
+									Header="Boxes">
+									<Grid>
+										<ContentPresenter
+											Content="{Binding Stats.BoxStats}" />
+									</Grid>
+								</TabItem>
+							</TabControl>
+						</Grid>
+					</DataTemplate>
+				</TabControl.ContentTemplate>
+			</TabControl>
+		</Grid>
+		<DockPanel
+			Grid.Row="0">
+			<FrameworkElement.Resources>
+				<ResourceDictionary>
+					<Style
+						TargetType="{x:Type Button}"
+						x:Key="{x:Type Button}">
+						<Setter
+							Property="Margin"
+							Value="5 2 5 2" />
+					</Style>
+				</ResourceDictionary>
+			</FrameworkElement.Resources>
+			<StackPanel
+				Orientation="Horizontal"
+				DockPanel.Dock="Left">
+				<!--Unknown connection ID: 13-->
+				<Button>
+					<TextBlock
+						Text="Start all" />
+				</Button>
+				<!--Unknown connection ID: 14-->
+				<Button>
+					<TextBlock
+						Text="Pause all" />
+				</Button>
+				<!--Unknown connection ID: 15-->
+				<Button>
+					<TextBlock
+						Text="Stop all" />
+				</Button>
+				<TextBlock
+					Text="A new version of DOPE is available!"
+					Foreground="#FFFF8C00"
+					FontWeight="Bold"
+					VerticalAlignment="Center">
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{x:Type TextBlock}">
+							<Setter
+								Property="Visibility"
+								Value="Hidden" />
+							<Style.Triggers>
+								<DataTrigger
+									Value="true"
+									Binding="{Binding Path=DataContext.Controller.ServiceStatus.ClientOutOfDate, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
+									<Setter
+										Property="Visibility"
+										Value="Visible" />
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</FrameworkElement.Style>
+				</TextBlock>
+			</StackPanel>
+			<StackPanel
+				Orientation="Horizontal"
+				DockPanel.Dock="Right"
+				HorizontalAlignment="Right">
+				<!--Unknown connection ID: 16-->
+				<Button>
+					<TextBlock
+						Text="Control panel" />
+				</Button>
+				<!--Unknown connection ID: 17-->
+				<Button>
+					<TextBlock
+						Text="PErkava" />
+				</Button>
+				<!--Unknown connection ID: 18-->
+				<Button>
+					<FrameworkElement.Style>
+						<Style
+							TargetType="{x:Type Button}">
+							<Style.Triggers>
+								<DataTrigger xmlns:wrcfmekllc13jibmgdg="clr-namespace:WrcFMekllc13jIBMgdg"
+									Value="{x:Static wrcfmekllc13jibmgdg:wwZ4utkwdjb0LSb75i0.Connecting}"
+									Binding="{Binding Controller.Status}">
+									<Setter
+										Property="Background"
+										Value="#FFFF8C00" />
+								</DataTrigger>
+								<DataTrigger
+									Value="{x:Static :wwZ4utkwdjb0LSb75i0.Connected}"
+									Binding="{Binding Controller.Status}">
+									<Setter
+										Property="Background"
+										Value="#FF228B22" />
+								</DataTrigger>
+								<DataTrigger
+									Value="{x:Static :wwZ4utkwdjb0LSb75i0.Disconnected}"
+									Binding="{Binding Controller.Status}">
+									<Setter
+										Property="Background"
+										Value="#FFCD5C5C" />
+								</DataTrigger>
+							</Style.Triggers>
+							<Setter
+								Property="Margin"
+								Value="5 2 5 2" />
+						</Style>
+					</FrameworkElement.Style>
+					<TextBlock
+						Text="Connection" />
+				</Button>
+			</StackPanel>
+		</DockPanel>
+	</Grid>
+</Window>
