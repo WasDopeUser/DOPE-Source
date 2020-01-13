@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass579 : GClass573, GInterface0
+public class GClass579 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 21013;
+			return 2838;
 		}
 	}
 
@@ -16,47 +16,71 @@ public class GClass579 : GClass573, GInterface0
 	{
 		get
 		{
-			return 6;
+			return 20;
 		}
 	}
 
-	public GClass579(string string_1 = "", string string_2 = "")
+	public GClass579(int int_5 = 0, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
-		base..ctor(string_1);
-		this.string_0 = string_2;
+		Class13.tMHx78BzgCM8j();
+		base..ctor();
+		this.int_1 = int_5;
+		this.int_4 = int_6;
+		this.int_0 = int_7;
+		this.int_3 = int_8;
+		this.int_2 = int_9;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 21013;
+		return 2838;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 6;
+		return 20;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 6 | U.smethod_0(this.int_1, 26));
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (U.smethod_0(this.int_2, 15) | this.int_2 << 17);
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (U.smethod_0(this.int_3, 4) | this.int_3 << 28);
+		this.int_4 = binaryStream_0.smethod_0();
+		this.int_4 = (U.smethod_0(this.int_4, 1) | this.int_4 << 31);
 		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(21013);
+		binaryStream_0.smethod_7(2838);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(10493);
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_4(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 6) | this.int_1 << 26);
+		binaryStream_0.smethod_4(this.int_2 << 15 | U.smethod_0(this.int_2, 17));
+		binaryStream_0.smethod_4(this.int_3 << 4 | U.smethod_0(this.int_3, 28));
+		binaryStream_0.smethod_4(this.int_4 << 1 | U.smethod_0(this.int_4, 31));
+		binaryStream_0.smethod_7(6668);
+		binaryStream_0.smethod_7(-18819);
 	}
 
-	public string string_0;
+	public int int_0;
+
+	public int int_1;
+
+	public int int_2;
+
+	public int int_3;
+
+	public int int_4;
 }

@@ -13,7 +13,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
-using DarkorbitAPI;
 using DarkorbitAPI.CommonStructures;
 using DarkorbitAPI.Structures;
 using DarkorbitAPI.Structures.Pathing;
@@ -30,17 +29,17 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass810 Context
+		public GClass822 Context
 		{
 			get
 			{
-				return base.DataContext as GClass810;
+				return base.DataContext as GClass822;
 			}
 		}
 
 		public MapControl()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this.Timer = new Timer();
 			this.LastRender = DateTime.Now;
 			base..ctor();
@@ -49,82 +48,53 @@ namespace DOPE.UI
 			this.InitializeComponent();
 		}
 
-		private bool method_0(object object_0, MouseButtonEventArgs mouseButtonEventArgs_0, out int int_0, out int int_1)
+		private bool method_0(object object_0, MouseButtonEventArgs mouseButtonEventArgs_0, out float float_0, out float float_1)
 		{
-			int_1 = 0;
-			int_0 = 0;
+			float num = 0f;
+			float num2 = 0f;
+			float_1 = num;
+			float_0 = num2;
 			if (this.Map == null)
 			{
 				return false;
 			}
-			double num = (double)this.Map.MapSize.Width / base.ActualWidth;
-			double num2 = (double)this.Map.MapSize.Height / base.ActualHeight;
 			System.Windows.Point position = mouseButtonEventArgs_0.GetPosition(this);
-			int_0 = (int)(position.X * num);
-			int_1 = (int)(position.Y * num2);
+			float_0 = (float)(position.X / base.ActualWidth);
+			float_1 = (float)(position.Y / base.ActualHeight);
 			return position.X <= base.ActualWidth && position.Y <= base.ActualHeight;
 		}
 
 		private void MapControl_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
 		{
-			int int_;
-			int int_2;
-			if (this.method_0(sender, e, out int_, out int_2))
+			float float_;
+			float float_2;
+			if (this.method_0(sender, e, out float_, out float_2))
 			{
-				e.Handled = this.method_2(int_, int_2);
+				e.Handled = this.method_1(float_, float_2);
 			}
 		}
 
 		private void MapControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
-			int int_;
-			int int_2;
-			if (this.method_0(sender, e, out int_, out int_2))
+			float float_;
+			float float_2;
+			if (this.method_0(sender, e, out float_, out float_2))
 			{
-				e.Handled = this.method_1(int_, int_2);
+				e.Handled = this.mIiotefXk0(float_, float_2);
 			}
 		}
 
-		private bool method_1(int int_0, int int_1)
+		private bool mIiotefXk0(float float_0, float float_1)
 		{
-			MapControl.<>c__DisplayClass9_0 CS$<>8__locals1 = new MapControl.<>c__DisplayClass9_0();
-			CS$<>8__locals1.<>4__this = this;
-			CS$<>8__locals1.x = int_0;
-			CS$<>8__locals1.y = int_1;
-			if (this.Map.Grid.method_8((float)CS$<>8__locals1.x, (float)CS$<>8__locals1.y))
-			{
-				return true;
-			}
-			if (this.Context.Run)
-			{
-				bool isPaused = this.Context.IsPaused;
-			}
-			if (Map.Navigators.method_4(new Action<MapNavigator>(CS$<>8__locals1.method_0), -1) && this.Context.CurrentPath != null)
-			{
-				Vector2 vector = this.Context.CurrentPath.Path.Skip(1).FirstOrDefault<Vector2>();
-				this.Map.Game.Connection.Server.method_5(vector.X, vector.Y, true);
-			}
-			return true;
+			return this.Context.Controller.method_4(float_0, float_1, "left").Result;
 		}
 
-		private bool method_2(int int_0, int int_1)
+		private bool method_1(float float_0, float float_1)
 		{
-			SecurityManager security = this.Map.Game.Security;
-			Vector2 vector2_ = new Vector2((float)int_0, (float)int_1);
-			Gate gate = this.Map.method_5<Gate>(vector2_, null, null, 0);
-			if (gate == null)
-			{
-				return false;
-			}
-			if (security.method_18(vector2_, gate.Position, 0) && security.method_18(gate.Position, this.Map.Hero.Position, 0))
-			{
-				this.Map.Game.Connection.Server.method_2(gate.Id);
-				return true;
-			}
-			return false;
+			return this.Context.Controller.method_4(float_0, float_1, "right").Result;
 		}
 
-		private void method_3(object sender, ElapsedEventArgs e)
+		private void method_2(object sender, ElapsedEventArgs e)
 		{
 			if (this.LastRender.Cooldown(50))
 			{
@@ -145,21 +115,16 @@ namespace DOPE.UI
 				float float_2 = (float)base.ActualHeight / (float)map.MapSize.Height;
 				try
 				{
-					this.method_4(drawingContext, float_, float_2, this.Map);
+					this.method_3(drawingContext, float_, float_2, this.Map);
 				}
 				catch
 				{
 				}
-				this.method_5(drawingContext, float_, float_2, this.Map);
-				string text = this.Map.method_1() ?? "";
+				this.method_4(drawingContext, float_, float_2, this.Map);
+				string text = string.Join("\r\n", this.Context.method_70());
 				if (!string.IsNullOrWhiteSpace(text))
 				{
 					this.Progress.Visibility = Visibility.Visible;
-					NpcShip npcShip = this.Map.SelectedShip as NpcShip;
-					if (npcShip != null)
-					{
-						int range = npcShip.Range;
-					}
 					this.Progress.Text = (text ?? "");
 				}
 				foreach (KeyValuePair<int, Gate> keyValuePair in map.Gates)
@@ -176,15 +141,19 @@ namespace DOPE.UI
 					DarkorbitAPI.CommonStructures.Size mapSize = this.Map.MapSize;
 					if (position.X <= (float)mapSize.Width && position.Y <= (float)mapSize.Height && position.X >= 0f && position.Y >= 0f)
 					{
-						this.method_7(drawingContext, float_, float_2, keyValuePair3.Value);
+						this.method_6(drawingContext, float_, float_2, keyValuePair3.Value);
 					}
+				}
+				foreach (KeyValuePair<int, GroupManager.GroupMember> keyValuePair4 in this.Map.Hero.Group.Members)
+				{
+					this.method_7(drawingContext, float_, float_2, keyValuePair4.Value);
 				}
 				Vector2 position2 = this.Map.Hero.Position;
 				DarkorbitAPI.CommonStructures.Size mapSize2 = this.Map.MapSize;
 				bool flag;
 				if (flag = (position2.X <= (float)mapSize2.Width && position2.Y <= (float)mapSize2.Height && position2.X >= 0f && position2.Y >= 0f))
 				{
-					this.method_6(drawingContext, float_, float_2, this.Map.Hero);
+					this.method_5(drawingContext, float_, float_2, this.Map.Hero);
 				}
 				if (this.Context != null && flag)
 				{
@@ -194,7 +163,7 @@ namespace DOPE.UI
 			}
 		}
 
-		public void method_4(DrawingContext drawingContext_0, float float_0, float float_1, Map map_0)
+		public void method_3(DrawingContext drawingContext_0, float float_0, float float_1, Map map_0)
 		{
 			SolidColorBrush lime = System.Windows.Media.Brushes.Lime;
 			System.Windows.Media.Color cyan = Colors.Cyan;
@@ -247,11 +216,11 @@ namespace DOPE.UI
 			}
 		}
 
-		public void method_5(DrawingContext drawingContext_0, float float_0, float float_1, Map map_0)
+		public void method_4(DrawingContext drawingContext_0, float float_0, float float_1, Map map_0)
 		{
 			foreach (KeyValuePair<int, Asset> keyValuePair in map_0.Assets)
 			{
-				System.Drawing.Color color = MapUtils.smethod_12(map_0, keyValuePair.Value);
+				System.Drawing.Color color = MapUtils.smethod_14(map_0, keyValuePair.Value);
 				drawingContext_0.DrawEllipse(new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B)), new System.Windows.Media.Pen(System.Windows.Media.Brushes.DarkGray, 1.0), new System.Windows.Point((double)((float)keyValuePair.Value.PosX * float_0), (double)((float)keyValuePair.Value.PosY * float_1)), 3.0, 3.0);
 			}
 			if (map_0.Battlestation != null)
@@ -273,7 +242,7 @@ namespace DOPE.UI
 			return new Rect(double_0 - double_2 / 2.0, double_1 - double_3 / 2.0, double_2, double_3);
 		}
 
-		public void method_6(DrawingContext drawingContext_0, float float_0, float float_1, Hero hero_0)
+		public void method_5(DrawingContext drawingContext_0, float float_0, float float_1, Hero hero_0)
 		{
 			Vector2 position = hero_0.Position;
 			Vector2? movementDestination = hero_0.MovementDestination;
@@ -288,19 +257,10 @@ namespace DOPE.UI
 			drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.DarkCyan, null, MapControl.smethod_0((double)(position.X * float_0), (double)(position.Y * float_1), 6.0, 6.0));
 		}
 
-		public void method_7(DrawingContext drawingContext_0, float float_0, float float_1, Ship ship_0)
+		public void method_6(DrawingContext drawingContext_0, float float_0, float float_1, Ship ship_0)
 		{
 			Vector2 position = ship_0.Position;
-			System.Drawing.Color color = MapUtils.smethod_12(this.Context.Map, ship_0);
-			NpcShip npcShip = ship_0 as NpcShip;
-			if (npcShip != null)
-			{
-				GClass820 gclass = this.Context.Behavior ?? this.Context.gclass820_0;
-				if (!gclass.vmethod_6(npcShip) || !gclass.vmethod_5(npcShip))
-				{
-					color = System.Drawing.Color.Gray;
-				}
-			}
+			System.Drawing.Color color = MapUtils.smethod_14(this.Context.Map, ship_0);
 			System.Windows.Media.Pen pen = null;
 			if (this.Map.SelectedShip == ship_0)
 			{
@@ -311,9 +271,24 @@ namespace DOPE.UI
 			drawingContext_0.DrawText(new FormattedText(ship_0.Name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 9.0, solidColorBrush, 1.25), new System.Windows.Point((double)((float)ship_0.PosX * float_0), (double)((float)ship_0.PosY * float_1)));
 		}
 
+		public void method_7(DrawingContext drawingContext_0, float float_0, float float_1, GroupManager.GroupMember groupMember_0)
+		{
+			if (this.Map.method_4(groupMember_0.Id) == null)
+			{
+				if (groupMember_0.MapId == this.Map.MapId)
+				{
+					Vector2 position = groupMember_0.Position;
+					SolidColorBrush solidColorBrush = new SolidColorBrush(Colors.Lime);
+					drawingContext_0.DrawRectangle(solidColorBrush, null, MapControl.smethod_0((double)(position.X * float_0), (double)(position.Y * float_1), 4.0, 4.0));
+					drawingContext_0.DrawText(new FormattedText(groupMember_0.Name, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Arial"), 9.0, solidColorBrush, 1.25), new System.Windows.Point((double)(position.X * float_0), (double)(position.Y * float_1)));
+					return;
+				}
+			}
+		}
+
 		public void method_8(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
 		{
-			System.Drawing.Color color = MapUtils.smethod_12(this.Map, gate_0);
+			System.Drawing.Color color = MapUtils.smethod_14(this.Map, gate_0);
 			SolidColorBrush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1), 3.0, 3.0));
 			drawingContext_0.DrawEllipse(null, new System.Windows.Media.Pen(brush, 2.0), new System.Windows.Point((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1)), 10.0, 10.0);
@@ -321,25 +296,25 @@ namespace DOPE.UI
 
 		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
 		{
-			System.Drawing.Color color = MapUtils.smethod_12(this.Map, collectible_0);
+			System.Drawing.Color color = MapUtils.smethod_14(this.Map, collectible_0);
 			System.Windows.Media.Brush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)collectible_0.PosX * float_0), (double)((float)collectible_0.PosY * float_1), 3.0, 3.0));
 		}
 
-		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, GClass810 gclass810_0)
+		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, GClass822 gclass822_0)
 		{
-			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass810_0.DormantTargets)
+			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass822_0.DormantTargets)
 			{
 				Collectible value = keyValuePair.Value;
 				drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.Pink, null, MapControl.smethod_0((double)(value.Position.X * float_0), (double)(value.Position.Y * float_1), 2.0, 2.0));
 			}
-			if (gclass810_0.RoamTarget != Vector2.Zero)
+			if (gclass822_0.RoamTarget != Vector2.Zero)
 			{
-				Vector2 roamTarget = gclass810_0.RoamTarget;
+				Vector2 roamTarget = gclass822_0.RoamTarget;
 				drawingContext_0.DrawEllipse(System.Windows.Media.Brushes.Magenta, null, new System.Windows.Point((double)(roamTarget.X * float_0), (double)(roamTarget.Y * float_1)), 6.0, 6.0);
 			}
-			GClass820 behavior = gclass810_0.Behavior;
-			List<Rectangle> list = (behavior != null) ? behavior.vmethod_13() : null;
+			GClass835 behavior = gclass822_0.Behavior;
+			List<Rectangle> list = (behavior != null) ? behavior.vmethod_17() : null;
 			if (list != null)
 			{
 				foreach (Rectangle rectangle in list)

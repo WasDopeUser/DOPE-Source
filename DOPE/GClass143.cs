@@ -8,7 +8,7 @@ public class GClass143 : GInterface0
 	{
 		get
 		{
-			return 18593;
+			return 8288;
 		}
 	}
 
@@ -16,56 +16,57 @@ public class GClass143 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 12;
 		}
 	}
 
-	public GClass143(string string_1 = "", int int_1 = 0, uint uint_1 = 0U)
+	public GClass143(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.string_0 = string_1;
-		this.int_0 = int_1;
-		this.uint_0 = uint_1;
+		this.Id = int_2;
+		this.int_0 = int_3;
+		this.int_1 = int_4;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 18593;
+		return 8288;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 6) | this.int_1 << 26);
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (U.smethod_0(this.Id, 11) | this.Id << 21);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(18593);
+		binaryStream_0.smethod_7(8288);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(6360);
-		binaryStream_0.lwAiiEjwcUm(this.uint_0);
-		binaryStream_0.fUeiimuocMk(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(-24685);
+		binaryStream_0.smethod_4(this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_4(this.int_1 << 6 | U.smethod_0(this.int_1, 26));
+		binaryStream_0.smethod_4(this.Id << 11 | U.smethod_0(this.Id, 21));
 	}
-
-	public uint uint_0;
 
 	public int int_0;
 
-	public string string_0;
+	public int int_1;
+
+	public int Id;
 }

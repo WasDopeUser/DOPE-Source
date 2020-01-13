@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass385 : GClass381, GInterface0
+public class GClass385 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 19519;
+			return 18195;
 		}
 	}
 
@@ -20,35 +20,38 @@ public class GClass385 : GClass381, GInterface0
 		}
 	}
 
-	public GClass385()
+	public GClass385(uint uint_1 = 0U)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
+		this.uint_0 = uint_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 19519;
+		return 18195;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
 		return 0;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(19519);
+		binaryStream_0.smethod_7(18195);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(this.uint_0);
 	}
+
+	public uint uint_0;
 }

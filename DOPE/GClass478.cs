@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass478 : GClass476, GInterface0
+public class GClass478 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 24088;
+			return 25409;
 		}
 	}
 
@@ -20,43 +20,61 @@ public class GClass478 : GClass476, GInterface0
 		}
 	}
 
-	public GClass478(int int_1 = 0)
+	public GClass478(Vector<int> vector_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<int>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 24088;
+		return 25409;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
 		return 4;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			int num3 = binaryStream_0.smethod_0();
+			num3 = (U.smethod_0(num3, 1) | num3 << 31);
+			this.vector_0.method_0(num3);
+			num++;
+		}
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(24088);
+		binaryStream_0.smethod_7(25409);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(26198);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_7(18388);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (int num in this.vector_0)
+		{
+			binaryStream_0.smethod_4(num << 1 | U.smethod_0(num, 31));
+		}
 	}
 
-	public int int_0;
+	public Vector<int> vector_0;
 }

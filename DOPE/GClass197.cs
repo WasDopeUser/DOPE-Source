@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass197 : GClass187, GInterface0
+public class GClass197 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12560;
+			return 26975;
 		}
 	}
 
@@ -16,48 +16,37 @@ public class GClass197 : GClass187, GInterface0
 	{
 		get
 		{
-			return 1;
+			return 0;
 		}
 	}
 
-	public GClass197(bool bool_1 = false)
+	public GClass197()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.bool_0 = bool_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 12560;
+		return 26975;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 1;
+		return 0;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(12560);
+		binaryStream_0.smethod_7(26975);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(17263);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_5(27558);
 	}
-
-	public bool bool_0;
 }

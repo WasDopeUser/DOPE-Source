@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass422 : GInterface0
+public class GClass422 : GClass421, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 2988;
+			return 7753;
 		}
 	}
 
@@ -16,65 +16,87 @@ public class GClass422 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 25;
 		}
 	}
 
-	public GClass422(Vector<int> vector_1 = null)
+	public GClass422(string string_2 = "", bool bool_1 = false, GClass359 gclass359_1 = null, string string_3 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0, bool bool_2 = false, GClass359 gclass359_2 = null)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		if (vector_1 == null)
+		Class13.tMHx78BzgCM8j();
+		this.string_1 = "";
+		base..ctor(string_2, bool_1, gclass359_1);
+		this.string_1 = string_3;
+		this.int_0 = int_3;
+		this.int_2 = int_4;
+		this.Width = int_5;
+		this.int_1 = int_6;
+		this.bool_0 = bool_2;
+		if (gclass359_2 == null)
 		{
-			this.vector_0 = new Vector<int>();
+			this.gclass359_0 = new GClass359(null);
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.gclass359_0 = gclass359_2;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 2988;
+		return 7753;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 25;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (U.smethod_0(num3, 4) | num3 << 28);
-			this.vector_0.method_0(num3);
-			num++;
-		}
+		base.imethod_1(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		this.Width = binaryStream_0.smethod_0();
+		this.Width = (this.Width << 5 | U.smethod_0(this.Width, 27));
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
+		this.gclass359_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass359);
+		this.gclass359_0.imethod_1(binaryStream_0);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 7 | U.smethod_0(this.int_2, 25));
+		this.string_1 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(2988);
+		binaryStream_0.smethod_7(7753);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (int num in this.vector_0)
-		{
-			binaryStream_0.fUeiimuocMk(num << 4 | U.smethod_0(num, 28));
-		}
-		binaryStream_0.smethod_5(29140);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.smethod_4(U.smethod_0(this.Width, 5) | this.Width << 27);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(964);
+		this.gclass359_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 7) | this.int_2 << 25);
+		binaryStream_0.smethod_3(this.string_1);
 	}
 
-	public Vector<int> vector_0;
+	public int int_0;
+
+	public int int_1;
+
+	public int Width;
+
+	public bool bool_0;
+
+	public GClass359 gclass359_0;
+
+	public int int_2;
+
+	public string string_1;
 }

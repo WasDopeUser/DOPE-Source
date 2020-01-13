@@ -3,18 +3,14 @@ using DarkorbitAPI;
 
 public class GClass114 : GInterface4
 {
-	public void Run(GClass232 e)
+	public void Run(GClass244 e)
 	{
-		ConnectionManager value = ConnectionManager.Instance.Value;
-		foreach (GClass230 gclass230_ in e.Items)
-		{
-			value.Game.Hero.method_14(gclass230_);
-		}
+		ConnectionManager.Instance.Value.Game.Hero.method_14(e.gclass243_0);
 	}
 
 	public GClass114()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

@@ -27,32 +27,32 @@ public class GClass93
 
 	public string Host { get; private set; }
 
-	public bool BdaNsdwBbq()
+	public bool method_2()
 	{
 		GClass91 socket = this.Socket;
 		return socket != null && socket.method_0();
 	}
 
 	[CompilerGenerated]
-	public bool method_2()
+	public bool method_3()
 	{
 		return this.bool_0;
 	}
 
 	[CompilerGenerated]
-	private void method_3(bool bool_2)
+	private void method_4(bool bool_2)
 	{
 		this.bool_0 = bool_2;
 	}
 
 	[CompilerGenerated]
-	public GClass84<GClass778> method_4()
+	public GClass84<GClass788> method_5()
 	{
 		return this.gclass84_0;
 	}
 
 	[CompilerGenerated]
-	private void method_5(GClass84<GClass778> gclass84_1)
+	private void method_6(GClass84<GClass788> gclass84_1)
 	{
 		this.gclass84_0 = gclass84_1;
 	}
@@ -61,33 +61,33 @@ public class GClass93
 
 	public GClass93(ConnectionManager connectionManager_1)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		this.object_0 = new object();
 		this.bool_1 = true;
 		base..ctor();
 		this.Connection = connectionManager_1;
-		this.method_5(new GClass84<GClass778>(connectionManager_1));
-		this.method_4().method_1(new Action<GInterface0>(GClass82.smethod_3));
+		this.method_6(new GClass84<GClass788>(connectionManager_1));
+		this.method_5().method_1(new Action<GInterface0>(GClass82.smethod_3));
 		GClass82.smethod_2();
 	}
 
-	public void method_6()
+	public void method_7()
 	{
-		this.method_3(true);
+		this.method_4(true);
 	}
 
-	public void method_7(string string_1, int int_1)
+	public void Connect(string host, int port, bool forceNonLoopback = true, ProxySettings proxy = null)
 	{
 		object obj = this.object_0;
 		lock (obj)
 		{
-			this.Host = string_1;
-			this.method_1(int_1);
-			this.method_8();
+			this.Host = host;
+			this.method_1(port);
+			this.method_8(forceNonLoopback, proxy);
 		}
 	}
 
-	private void method_8()
+	private void method_8(bool bool_2, ProxySettings proxySettings_0)
 	{
 		if (this.Socket != null && this.Socket.method_0())
 		{
@@ -100,14 +100,14 @@ public class GClass93
 			this.Socket = new GClass91();
 			this.method_13();
 			this.method_9();
-			this.Socket.method_7(this.Host, this.method_0(), true);
+			this.Socket.Connect(this.Host, this.method_0(), bool_2, proxySettings_0);
 		}
 		catch (Exception)
 		{
 			GClass91 socket = this.Socket;
 			if (socket != null)
 			{
-				socket.method_10();
+				socket.method_8();
 			}
 		}
 	}
@@ -136,9 +136,9 @@ public class GClass93
 
 	private void method_11(GClass91 gclass91_1, BinaryStream binaryStream_0, byte[] byte_0, int int_1)
 	{
-		if (!this.method_2())
+		if (!this.method_3())
 		{
-			this.method_4().method_12(binaryStream_0, byte_0, int_1);
+			this.method_5().method_12(binaryStream_0, byte_0, int_1);
 		}
 	}
 
@@ -165,7 +165,7 @@ public class GClass93
 
 	private void method_13()
 	{
-		this.method_4().method_9(this.Socket, new GClass779());
+		this.method_5().method_9(this.Socket, new GClass789());
 	}
 
 	public void Disconnect(ErrorReason reason, Exception ex = null, bool fromEvent = false)
@@ -179,7 +179,7 @@ public class GClass93
 		GClass91 socket = this.Socket;
 		if (socket != null)
 		{
-			socket.method_10();
+			socket.method_8();
 		}
 		if (!fromEvent)
 		{
@@ -201,9 +201,9 @@ public class GClass93
 
 	public void method_15(GInterface0 ginterface0_0)
 	{
-		if (this.BdaNsdwBbq())
+		if (this.method_2())
 		{
-			this.method_4().SendMessage(ginterface0_0);
+			this.method_5().SendMessage(ginterface0_0);
 		}
 	}
 
@@ -220,7 +220,7 @@ public class GClass93
 	private bool bool_0;
 
 	[CompilerGenerated]
-	private GClass84<GClass778> gclass84_0;
+	private GClass84<GClass788> gclass84_0;
 
 	[CompilerGenerated]
 	private ConnectionManager connectionManager_0;

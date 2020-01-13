@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass205 : GInterface0
+public class GClass205 : GClass197, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 24240;
+			return 2650;
 		}
 	}
 
@@ -16,50 +16,69 @@ public class GClass205 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 2;
 		}
 	}
 
-	public GClass205(ByteArray byteArray_1 = null)
+	public GClass205(GClass207 gclass207_1 = null, string string_0 = "", GClass198 gclass198_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.Name = "";
 		base..ctor();
-		this.byteArray_0 = new ByteArray();
-		if (byteArray_1 != null)
+		if (gclass207_1 == null)
 		{
-			this.byteArray_0 = byteArray_1;
+			this.gclass207_0 = new GClass207(0U);
 		}
+		else
+		{
+			this.gclass207_0 = gclass207_1;
+		}
+		this.Name = string_0;
+		if (gclass198_1 == null)
+		{
+			this.gclass198_0 = new GClass198(0, 0, 0, 0, 0, 0);
+			return;
+		}
+		this.gclass198_0 = gclass198_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 24240;
+		return 2650;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 0;
+		return 2;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.byteArray_0.Clear();
-		binaryStream_0.smethod_9(this.byteArray_0, 0, binaryStream_0.smethod_0());
-		binaryStream_0.smethod_1();
+		base.imethod_1(binaryStream_0);
+		this.Name = binaryStream_0.smethod_2();
+		this.gclass207_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
+		this.gclass207_0.imethod_1(binaryStream_0);
+		this.gclass198_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass198);
+		this.gclass198_0.imethod_1(binaryStream_0);
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(24240);
+		binaryStream_0.smethod_7(2650);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.byteArray_0.Length);
-		binaryStream_0.smethod_10(this.byteArray_0, 0, this.byteArray_0.Length);
-		binaryStream_0.smethod_5(-25862);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.Name);
+		this.gclass207_0.imethod_2(binaryStream_0);
+		this.gclass198_0.imethod_2(binaryStream_0);
 	}
 
-	public ByteArray byteArray_0;
+	public string Name;
+
+	public GClass207 gclass207_0;
+
+	public GClass198 gclass198_0;
 }

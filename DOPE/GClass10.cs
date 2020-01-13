@@ -18,7 +18,7 @@ public static class GClass10
 
 		public GClass11()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -48,7 +48,7 @@ public static class GClass10
 
 		public GClass12()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -84,7 +84,7 @@ public static class GClass10
 
 		public GClass13()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -120,7 +120,7 @@ public static class GClass10
 
 		public GClass14()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -152,7 +152,7 @@ public static class GClass10
 		public int Int32_3 { get; set; }
 
 		[JsonProperty("masque")]
-		public int PsDableajR { get; set; }
+		public int fbmaprxeJC { get; set; }
 
 		[JsonProperty("prometheus")]
 		public int Int32_4 { get; set; }
@@ -162,7 +162,7 @@ public static class GClass10
 
 		public GClass15()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -198,7 +198,7 @@ public static class GClass10
 
 		public GClass16()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -231,7 +231,7 @@ public static class GClass10
 
 		public GClass17()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -251,7 +251,7 @@ public static class GClass10
 		private GClass10.GClass15 gclass15_0;
 
 		[CompilerGenerated]
-		private GClass10.GClass16 cRlavtjhfN;
+		private GClass10.GClass16 gclass16_0;
 	}
 
 	public class GClass18
@@ -270,7 +270,7 @@ public static class GClass10
 
 		public GClass18()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -318,12 +318,9 @@ public static class GClass10
 
 		public GClass19()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
-
-		[CompilerGenerated]
-		private string NxuexLlcUr;
 
 		[CompilerGenerated]
 		private string string_0;
@@ -342,6 +339,9 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_5;
+
+		[CompilerGenerated]
+		private string string_6;
 
 		[CompilerGenerated]
 		private int int_0;
@@ -366,7 +366,7 @@ public static class GClass10
 
 		public GClass20()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -396,7 +396,7 @@ public static class GClass10
 
 		public GClass21()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -420,7 +420,7 @@ public static class GClass10
 
 		public GClass22()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -443,110 +443,110 @@ public static class GClass10
 		public string String_2 { get; set; }
 
 		[JsonProperty("maxNanohull")]
-		public string String_3 { get; set; }
+		public string cJirCfhbp2 { get; set; }
 
 		[JsonProperty("repairVoucher")]
-		public string String_4 { get; set; }
+		public string String_3 { get; set; }
 
 		[JsonProperty("jumpVoucher")]
-		public string String_5 { get; set; }
+		public string String_4 { get; set; }
 
 		[JsonProperty("bootyKey")]
-		public string String_6 { get; set; }
+		public string String_5 { get; set; }
 
 		[JsonProperty("laser")]
-		public string String_7 { get; set; }
+		public string String_6 { get; set; }
 
 		[JsonProperty("laserAmmo")]
-		public string String_8 { get; set; }
+		public string String_7 { get; set; }
 
 		[JsonProperty("rockets")]
-		public string String_9 { get; set; }
+		public string String_8 { get; set; }
 
 		[JsonProperty("speedGenerator")]
-		public string String_10 { get; set; }
+		public string String_9 { get; set; }
 
 		[JsonProperty("maxSpeed")]
-		public string QolWvInxVG { get; set; }
+		public string KuwrkrbkXN { get; set; }
 
 		[JsonProperty("shieldGenerator")]
-		public string String_11 { get; set; }
+		public string String_10 { get; set; }
 
 		[JsonProperty("shieldSpread")]
-		public string String_12 { get; set; }
+		public string String_11 { get; set; }
 
 		[JsonProperty("shieldHull")]
-		public string String_13 { get; set; }
+		public string String_12 { get; set; }
 
 		[JsonProperty("drones")]
-		public string String_14 { get; set; }
+		public string String_13 { get; set; }
 
 		[JsonProperty("flax")]
-		public string String_15 { get; set; }
+		public string String_14 { get; set; }
 
 		[JsonProperty("iris")]
-		public string String_16 { get; set; }
+		public string String_15 { get; set; }
 
 		[JsonProperty("apis")]
-		public string String_17 { get; set; }
+		public string String_16 { get; set; }
 
 		[JsonProperty("zeus")]
-		public string String_18 { get; set; }
+		public string String_17 { get; set; }
 
 		[JsonProperty("level")]
 		public string level { get; set; }
 
 		[JsonProperty("damage")]
-		public string String_19 { get; set; }
+		public string tKtulsckZi { get; set; }
 
 		[JsonProperty("points")]
-		public string String_20 { get; set; }
+		public string String_18 { get; set; }
 
 		[JsonProperty("nextLevel")]
-		public string String_21 { get; set; }
+		public string String_19 { get; set; }
 
 		[JsonProperty("noDrones")]
-		public string String_22 { get; set; }
+		public string String_20 { get; set; }
 
 		[JsonProperty("fuel")]
-		public string String_23 { get; set; }
+		public string String_21 { get; set; }
 
 		[JsonProperty("experience")]
-		public string String_24 { get; set; }
+		public string String_22 { get; set; }
 
 		[JsonProperty("noPet")]
-		public string String_25 { get; set; }
+		public string String_23 { get; set; }
 
 		[JsonProperty("name")]
-		public string String_26 { get; set; }
+		public string String_24 { get; set; }
 
 		[JsonProperty("shopSpeed")]
-		public string String_27 { get; set; }
+		public string String_25 { get; set; }
 
 		[JsonProperty("shopLoad")]
-		public string String_28 { get; set; }
+		public string RmWuewLlqb { get; set; }
 
 		[JsonProperty("shopLaser")]
-		public string String_29 { get; set; }
+		public string String_26 { get; set; }
 
 		[JsonProperty("shopGenerator")]
-		public string String_30 { get; set; }
+		public string String_27 { get; set; }
 
 		[JsonProperty("shopBatteries")]
-		public string String_31 { get; set; }
+		public string String_28 { get; set; }
 
 		[JsonProperty("shopHitpoints")]
-		public string String_32 { get; set; }
+		public string String_29 { get; set; }
 
 		[JsonProperty("shopRockets")]
-		public string String_33 { get; set; }
+		public string String_30 { get; set; }
 
 		[JsonProperty("shopSpecials")]
-		public string String_34 { get; set; }
+		public string String_31 { get; set; }
 
 		public GClass23()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -623,9 +623,6 @@ public static class GClass10
 		private string string_23;
 
 		[CompilerGenerated]
-		private string vPoTnAvUy4;
-
-		[CompilerGenerated]
 		private string string_24;
 
 		[CompilerGenerated]
@@ -660,12 +657,15 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_35;
+
+		[CompilerGenerated]
+		private string string_36;
 	}
 
 	public class GClass24
 	{
 		[JsonProperty("shipView")]
-		public GClass10.GClass17 GClass17_0 { get; set; }
+		public GClass10.GClass17 hLoXsgKwaX { get; set; }
 
 		[JsonProperty("droneView")]
 		public GClass10.GClass21 GClass21_0 { get; set; }
@@ -678,7 +678,7 @@ public static class GClass10
 
 		public GClass24()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -698,14 +698,14 @@ public static class GClass10
 	public class GClass25
 	{
 		[JsonProperty("uridium")]
-		public string BnKbiUfobV { get; set; }
+		public string String_0 { get; set; }
 
 		[JsonProperty("credits")]
 		public string credits { get; set; }
 
 		public GClass25()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -726,7 +726,7 @@ public static class GClass10
 
 		public GClass26()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -740,14 +740,14 @@ public static class GClass10
 	public class GClass27
 	{
 		[JsonProperty("isError")]
-		public int Int32_0 { get; set; }
+		public int vnvgtguDjs { get; set; }
 
 		[JsonProperty("data")]
 		public GClass10.GClass26 data { get; set; }
 
 		public GClass27()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 

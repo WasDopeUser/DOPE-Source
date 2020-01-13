@@ -8,7 +8,7 @@ public class GClass765 : GInterface0
 	{
 		get
 		{
-			return 20171;
+			return 18175;
 		}
 	}
 
@@ -16,37 +16,52 @@ public class GClass765 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 24;
 		}
 	}
 
-	public GClass765()
+	public GClass765(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
+		this.double_1 = double_3;
+		this.double_2 = double_4;
+		this.double_0 = double_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20171;
+		return 18175;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 24;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
+		this.double_2 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(20171);
+		binaryStream_0.smethod_7(18175);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.WriteDouble(this.double_2);
 	}
+
+	public double double_0;
+
+	public double double_1;
+
+	public double double_2;
 }

@@ -1,94 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass782 : GClass781
+public class GClass782 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass789 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass789_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass789 gclass789_2)
-	{
-		this.gclass789_0 = gclass789_2;
-	}
-
-	[CompilerGenerated]
-	public GClass789 method_2()
-	{
-		return this.gclass789_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass789 gclass789_2)
-	{
-		this.gclass789_1 = gclass789_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		byte[] array = new byte[int_1];
-		byte[] array2 = new byte[int_1];
-		Buffer.BlockCopy(byte_0, int_0, array, 0, int_1);
-		using (MemoryStream memoryStream = new MemoryStream(array))
+		get
 		{
-			using (MemoryStream memoryStream2 = new MemoryStream(array2))
-			{
-				ByteArray byteArray_ = new ByteArray(memoryStream);
-				ByteArray byteArray_2 = new ByteArray(memoryStream2);
-				this.method_2().vmethod_0(byteArray_, byteArray_2);
-				Buffer.BlockCopy(array2, 0, byte_0, int_0, int_1);
-			}
+			return 19845;
 		}
 	}
 
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		byte[] array = new byte[int_1];
-		byte[] array2 = new byte[int_1];
-		Buffer.BlockCopy(byte_0, int_0, array, 0, int_1);
-		using (MemoryStream memoryStream = new MemoryStream(array))
+		get
 		{
-			using (MemoryStream memoryStream2 = new MemoryStream(array2))
-			{
-				ByteArray byteArray_ = new ByteArray(memoryStream);
-				ByteArray byteArray_2 = new ByteArray(memoryStream2);
-				this.method_0().vmethod_0(byteArray_, byteArray_2);
-				Buffer.BlockCopy(array2, 0, byte_0, int_0, int_1);
-			}
+			return 0;
 		}
 	}
 
-	public override void Init(List<byte[]> list_0)
+	public GClass782(uint uint_1 = 0U)
 	{
-		if (list_0.Count != 2)
-		{
-			throw new Exception();
-		}
-		ByteArray byteArray = new ByteArray(list_0[0]);
-		ByteArray byteArray2 = new ByteArray(list_0[1]);
-		this.method_1(new GClass789(new ByteArray(byteArray), new ByteArray(byteArray2)));
-		this.method_3(new GClass789(byteArray, byteArray2));
-	}
-
-	public GClass782()
-	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
+		this.uint_0 = uint_1;
 	}
 
-	[CompilerGenerated]
-	private GClass789 gclass789_0;
+	public virtual int vmethod_0()
+	{
+		return 19845;
+	}
 
-	[CompilerGenerated]
-	private GClass789 gclass789_1;
+	public virtual int vmethod_1()
+	{
+		return 0;
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+	}
+
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(19845);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(18252);
+	}
+
+	public uint uint_0;
 }

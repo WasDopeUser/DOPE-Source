@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
 using DarkorbitAPI.Packets.Static;
@@ -23,7 +24,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsEnabled>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_32);
+				this.method_10(Class5.propertyChangedEventArgs_5);
+				this.method_10(Class5.propertyChangedEventArgs_40);
 			}
 		}
 
@@ -42,7 +44,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsRepairNeeded>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_37);
+				this.method_10(Class5.propertyChangedEventArgs_46);
 			}
 		}
 
@@ -61,26 +63,47 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsAvailable>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_30);
+				this.method_10(Class5.propertyChangedEventArgs_37);
 			}
 		}
 
 		public bool IsControlDisabled
 		{
+			get
+			{
+				return this._isControlDisabled;
+			}
+			set
+			{
+				if (this._isControlDisabled == value)
+				{
+					return;
+				}
+				this._isControlDisabled = value;
+				this.method_10(Class5.propertyChangedEventArgs_39);
+				if (value)
+				{
+					this.LastControlDisabled = DateTimeOffset.Now;
+				}
+			}
+		}
+
+		public DateTimeOffset LastControlDisabled
+		{
 			[CompilerGenerated]
 			get
 			{
-				return this.<IsControlDisabled>k__BackingField;
+				return this.<LastControlDisabled>k__BackingField;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (this.<IsControlDisabled>k__BackingField == value)
+				if (DateTimeOffset.Equals(this.<LastControlDisabled>k__BackingField, value))
 				{
 					return;
 				}
-				this.<IsControlDisabled>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_31);
+				this.<LastControlDisabled>k__BackingField = value;
+				this.method_10(Class5.propertyChangedEventArgs_53);
 			}
 		}
 
@@ -99,7 +122,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Fuel>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_19);
+				this.method_10(Class5.propertyChangedEventArgs_24);
 			}
 		}
 
@@ -118,7 +141,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Experience>k__BackingField = value;
-				this.method_11(Class1.Experience);
+				this.method_10(Class5.Experience);
 			}
 		}
 
@@ -137,11 +160,30 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Mode>k__BackingField = value;
-				this.method_11(Class1.Mode);
+				this.method_10(Class5.Mode);
 			}
 		}
 
-		public Dictionary<PetMode, GClass243> Modes
+		public int ModeExtra
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<ModeExtra>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<ModeExtra>k__BackingField == value)
+				{
+					return;
+				}
+				this.<ModeExtra>k__BackingField = value;
+				this.method_10(Class5.propertyChangedEventArgs_73);
+			}
+		}
+
+		public Dictionary<PetMode, HeroPet.PetModeData> Modes
 		{
 			[CompilerGenerated]
 			get
@@ -156,7 +198,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Modes>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_59);
+				this.method_10(Class5.propertyChangedEventArgs_5);
+				this.method_10(Class5.propertyChangedEventArgs_74);
 			}
 		}
 
@@ -175,7 +218,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Cooldowns>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_11);
+				this.method_10(Class5.propertyChangedEventArgs_5);
+				this.method_10(Class5.propertyChangedEventArgs_13);
 			}
 		}
 
@@ -194,11 +238,51 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<EnabledSince>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_14);
+				this.method_10(Class5.propertyChangedEventArgs_16);
 			}
 		}
 
-		public void method_13()
+		public HeroPet.EnemyLocatorResult EnemyLocated
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<EnemyLocated>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (object.Equals(this.<EnemyLocated>k__BackingField, value))
+				{
+					return;
+				}
+				this.<EnemyLocated>k__BackingField = value;
+				this.method_10(Class5.propertyChangedEventArgs_17);
+			}
+		}
+
+		public bool CanKamikaze
+		{
+			get
+			{
+				bool flag = this.Cooldowns.method_0(HeroPet.CooldownType.Kamikaze);
+				if (this.IsEnabled)
+				{
+					flag &= (this.method_14(PetMode.Kamikaze) && base.HpPercentage <= 10f);
+				}
+				return flag;
+			}
+		}
+
+		public HeroPet()
+		{
+			Class13.tMHx78BzgCM8j();
+			this.<Modes>k__BackingField = new Dictionary<PetMode, HeroPet.PetModeData>();
+			this.<Cooldowns>k__BackingField = new CooldownTracker<HeroPet.CooldownType>();
+			base..ctor();
+		}
+
+		public void method_12()
 		{
 			if (this.IsEnabled && this.EnabledSince == null)
 			{
@@ -211,55 +295,92 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void AjDviCwchL(GClass213 gclass213_0)
+		public void method_13(GClass223 gclass223_0)
 		{
-			base.ClanTag = gclass213_0.string_0;
-			base.FactionId = gclass213_0.int_2;
-			base.Id = gclass213_0.emTnBfukst;
-			base.OwnerId = gclass213_0.int_5;
-			base.Name = gclass213_0.Name;
-			base.Level = gclass213_0.int_1;
-			this.PosX = gclass213_0.int_3;
-			this.PosY = gclass213_0.XnanpDfuYR;
+			base.ClanTag = gclass223_0.string_0;
+			base.FactionId = gclass223_0.int_2;
+			base.Id = gclass223_0.int_5;
+			base.OwnerId = gclass223_0.int_4;
+			base.Name = gclass223_0.Name;
+			base.Level = gclass223_0.int_7;
+			this.PosX = gclass223_0.int_1;
+			this.PosY = gclass223_0.int_9;
 		}
 
 		public bool method_14(PetMode petMode_0)
 		{
-			GClass243 gclass;
-			return this.Modes.TryGetValue(petMode_0, out gclass) && gclass.Enabled;
+			HeroPet.PetModeData petModeData;
+			return this.Modes.TryGetValue(petMode_0, out petModeData) && petModeData.Data.Enabled;
 		}
 
-		public void method_15(GClass216 gclass216_0)
+		public void method_15(GClass228 gclass228_0)
 		{
 			this.IsAvailable = true;
-			this.Mode = (PetMode)gclass216_0.Mode.Mode;
+			if ((long)this.Mode != (long)((ulong)gclass228_0.Mode.Mode))
+			{
+				this.ModeExtra = 0;
+			}
+			this.Mode = (PetMode)gclass228_0.Mode.Mode;
 		}
 
-		public void method_16(GClass210 gclass210_0)
+		public void method_16(GClass220 gclass220_0)
 		{
 			this.IsAvailable = true;
-			this.Fuel = gclass210_0.int_0;
-			base.Hp = gclass210_0.int_1;
+			this.Fuel = gclass220_0.nyoBmcMxhj;
+			base.Hp = gclass220_0.int_0;
 		}
 
-		public void method_17(GClass242 gclass242_0)
+		public void method_17(GClass256 gclass256_0)
 		{
 			this.IsAvailable = true;
 			this.IsEnabled = true;
-			base.Hp = gclass242_0.int_2;
-			base.HpMax = gclass242_0.int_5;
-			base.Shield = gclass242_0.int_6;
-			base.ShieldMax = gclass242_0.int_7;
-			base.Level = gclass242_0.int_4;
-			this.Experience = gclass242_0.Experience;
-			this.Fuel = gclass242_0.int_8;
-			base.Name = gclass242_0.Name;
-			base.Id = gclass242_0.int_3;
+			base.Hp = gclass256_0.int_0;
+			base.HpMax = gclass256_0.int_1;
+			base.Shield = gclass256_0.int_7;
+			base.ShieldMax = gclass256_0.int_3;
+			base.Level = gclass256_0.int_2;
+			this.Experience = gclass256_0.Experience;
+			this.Fuel = gclass256_0.int_5;
+			base.Name = gclass256_0.Name;
+			base.Id = gclass256_0.int_8;
+		}
+
+		public void method_18(GClass257 gclass257_0)
+		{
+			PetMode mode = (PetMode)gclass257_0.gclass258_0.Mode;
+			HeroPet.PetModeData petModeData;
+			if (!this.Modes.TryGetValue(mode, out petModeData))
+			{
+				petModeData = (this.Modes[mode] = new HeroPet.PetModeData(gclass257_0, mode));
+			}
+			petModeData.Data = gclass257_0;
+		}
+
+		public void method_19(GClass226 gclass226_0)
+		{
+			PetMode mode = (PetMode)gclass226_0.Mode.Mode;
+			HeroPet.PetModeData petModeData;
+			if (!this.Modes.TryGetValue(mode, out petModeData))
+			{
+				return;
+			}
+			petModeData.Extra = gclass226_0.vector_0;
+		}
+
+		public bool method_20(PetMode petMode_0, int int_0)
+		{
+			HeroPet.PetModeData petModeData;
+			return this.Modes.TryGetValue(petMode_0, out petModeData) && petModeData.Extra.Contains(int_0);
+		}
+
+		internal void method_21(GClass225 gclass225_0)
+		{
+			this.EnemyLocated = new HeroPet.EnemyLocatorResult((this.Mode == PetMode.EnemyLocator) ? this.ModeExtra : 0, gclass225_0);
 		}
 
 		public event Action KamikazeDeath;
 
-		internal void method_18()
+		internal void method_22()
 		{
 			Action kamikazeDeath = this.KamikazeDeath;
 			if (kamikazeDeath == null)
@@ -276,20 +397,62 @@ namespace DarkorbitAPI.Structures
 			this.IsControlDisabled = false;
 			this.Modes.Clear();
 			this.Mode = PetMode.Off;
+			this.ModeExtra = 0;
 			this.IsRepairNeeded = false;
 		}
 
-		public HeroPet()
-		{
-			Class8.xDph7tozmh5WD();
-			this.<Modes>k__BackingField = new Dictionary<PetMode, GClass243>();
-			this.<Cooldowns>k__BackingField = new CooldownTracker<HeroPet.CooldownType>();
-			base..ctor();
-		}
+		private bool _isControlDisabled;
 
 		public enum CooldownType
 		{
 			Kamikaze = 5
+		}
+
+		public class PetModeData
+		{
+			public PetMode Mode { get; set; }
+
+			public List<int> Extra { get; set; }
+
+			public GClass257 Data { get; set; }
+
+			public PetModeData(GClass257 gclass257_0, PetMode petMode_0)
+			{
+				Class13.tMHx78BzgCM8j();
+				base..ctor();
+				this.Extra = new List<int>();
+				this.Data = gclass257_0;
+				this.Mode = petMode_0;
+			}
+		}
+
+		public class EnemyLocatorResult
+		{
+			public DateTimeOffset Timestamp { get; private set; }
+
+			public Vector2 Position { get; protected set; }
+
+			public int Id { get; private set; }
+
+			public NpcUtils.NpcType Type
+			{
+				get
+				{
+					return NpcUtils.NpcType.smethod_1(this.Id);
+				}
+			}
+
+			public EnemyLocatorResult(int int_0, GClass225 gclass225_0)
+			{
+				Class13.tMHx78BzgCM8j();
+				base..ctor();
+				this.Timestamp = DateTimeOffset.Now;
+				if (gclass225_0.int_0 != -1 || gclass225_0.int_1 != -1)
+				{
+					this.Position = new Vector2((float)gclass225_0.int_0, (float)gclass225_0.int_1);
+					this.Id = int_0;
+				}
+			}
 		}
 	}
 }

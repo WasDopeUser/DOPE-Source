@@ -18,7 +18,7 @@ public sealed class GAttribute60 : Attribute
 
 	public GAttribute60(bool bool_1)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.method_1(bool_1);
 	}

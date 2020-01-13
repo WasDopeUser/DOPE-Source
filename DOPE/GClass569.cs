@@ -8,7 +8,7 @@ public class GClass569 : GInterface0
 	{
 		get
 		{
-			return 8325;
+			return 8203;
 		}
 	}
 
@@ -16,71 +16,51 @@ public class GClass569 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 6;
 		}
 	}
 
-	public GClass569(int int_1 = 0, Vector<GClass439> vector_1 = null)
+	public GClass569(string string_1 = "", int int_1 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
 		base..ctor();
+		this.string_0 = string_1;
 		this.int_0 = int_1;
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass439>();
-			return;
-		}
-		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8325;
+		return 8203;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass439 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass439;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 6 | U.smethod_0(this.int_0, 26));
+		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(8325);
+		binaryStream_0.smethod_7(8203);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (GClass439 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_5(-3727);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 6) | this.int_0 << 26);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(-20739);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
 	}
 
-	public Vector<GClass439> vector_0;
+	public string string_0;
 
 	public int int_0;
 }

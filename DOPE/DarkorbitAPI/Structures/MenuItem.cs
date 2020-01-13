@@ -26,29 +26,29 @@ namespace DarkorbitAPI.Structures
 
 		public DateTimeOffset NextUsable { get; set; }
 
-		internal void method_0(GClass262 gclass262_0)
+		internal void method_0(GClass276 gclass276_0)
 		{
-			this.Id = gclass262_0.Id;
-			this.Available = gclass262_0.wkAjkMgydL;
-			this.Buyable = gclass262_0.bool_1;
-			this.CounterValue = gclass262_0.double_1;
-			this.MaxCounterValue = gclass262_0.double_0;
-			this.LootId = gclass262_0.string_0;
-			this.Activatable = gclass262_0.bool_2;
-			this.Visible = gclass262_0.Visible;
-			this.Blocked = gclass262_0.bool_0;
-			this.Selected = gclass262_0.bool_3;
+			this.Id = gclass276_0.Id;
+			this.Available = gclass276_0.bool_0;
+			this.Buyable = gclass276_0.bool_1;
+			this.CounterValue = gclass276_0.double_0;
+			this.MaxCounterValue = gclass276_0.double_1;
+			this.LootId = gclass276_0.string_0;
+			this.Activatable = gclass276_0.bool_4;
+			this.Visible = gclass276_0.Visible;
+			this.Blocked = gclass276_0.bool_3;
+			this.Selected = gclass276_0.bool_2;
 		}
 
-		internal void method_1(GClass263 gclass263_0)
+		internal void method_1(GClass277 gclass277_0)
 		{
-			this.Activatable = gclass263_0.bool_0;
-			this.NextUsable = DateTimeOffset.Now.AddMilliseconds(gclass263_0.double_0);
+			this.Activatable = gclass277_0.bool_0;
+			this.NextUsable = DateTimeOffset.Now.AddMilliseconds(gclass277_0.LxgYoPoDrH);
 		}
 
 		public MenuItem()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 	}

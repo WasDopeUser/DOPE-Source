@@ -8,7 +8,7 @@ public class GClass525 : GInterface0
 	{
 		get
 		{
-			return 31654;
+			return 7973;
 		}
 	}
 
@@ -20,17 +20,24 @@ public class GClass525 : GInterface0
 		}
 	}
 
-	public GClass525(int int_1 = 0, bool bool_1 = false)
+	public GClass525(Vector<GClass327> vector_1 = null, bool bool_1 = false)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass327>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
 		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 31654;
+		return 7973;
 	}
 
 	public virtual int vmethod_1()
@@ -40,24 +47,43 @@ public class GClass525 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_1();
 		this.bool_0 = binaryStream_0.ReadBoolean();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass327 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass327;
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(31654);
+		binaryStream_0.smethod_7(7973);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		binaryStream_0.smethod_7(16039);
 		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass327 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+		binaryStream_0.smethod_7(-31348);
 	}
 
-	public int int_0;
-
 	public bool bool_0;
+
+	public Vector<GClass327> vector_0;
 }

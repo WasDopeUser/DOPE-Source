@@ -1,16 +1,23 @@
 ﻿using System;
 using DarkorbitAPI;
+using DarkorbitAPI.Packets.Static;
 
 public class GClass119 : GInterface4
 {
-	public void Run(GClass255 cmd)
+	public void Run(GClass259 e)
 	{
-		ConnectionManager.Instance.Value.Game.method_9(cmd);
+		ConnectionManager value = ConnectionManager.Instance.Value;
+		value.Game.Hero.Pet.Mode = PetMode.Off;
+		value.Game.Hero.Pet.IsEnabled = false;
+		if (e.Enabled)
+		{
+			value.Game.Hero.Pet.IsRepairNeeded = true;
+		}
 	}
 
 	public GClass119()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

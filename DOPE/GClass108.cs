@@ -1,20 +1,16 @@
 ﻿using System;
 using DarkorbitAPI;
-using DarkorbitAPI.Structures;
 
 public class GClass108 : GInterface4
 {
-	public void Run(GClass218 e)
+	public void Run(GClass229 e)
 	{
-		Hero hero = ConnectionManager.Instance.Value.Game.Hero;
-		hero.Shield = e.int_0;
-		hero.ShieldMax = e.int_1;
-		hero.LastStatUpdate = DateTimeOffset.Now;
+		GameManager.Instance.Value.Hero.method_29(e);
 	}
 
 	public GClass108()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

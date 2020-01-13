@@ -8,7 +8,7 @@ public class GClass737 : GInterface0
 	{
 		get
 		{
-			return 32762;
+			return 8766;
 		}
 	}
 
@@ -16,73 +16,48 @@ public class GClass737 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass737(int int_1 = 0, Vector<int> vector_1 = null)
+	public GClass737(GClass196 gclass196_0 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
-		if (vector_1 == null)
+		if (gclass196_0 == null)
 		{
-			this.vector_0 = new Vector<int>();
+			this.Mode = new GClass196(0U);
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.Mode = gclass196_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32762;
+		return 8766;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 16 | U.smethod_0(num3, 16));
-			this.vector_0.method_0(num3);
-			num++;
-		}
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 16) | this.int_0 << 16);
+		this.Mode = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass196);
+		this.Mode.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(32762);
+		binaryStream_0.smethod_7(8766);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(-5249);
-		binaryStream_0.smethod_5(4996);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (int num in this.vector_0)
-		{
-			binaryStream_0.fUeiimuocMk(U.smethod_0(num, 16) | num << 16);
-		}
-		binaryStream_0.fUeiimuocMk(this.int_0 << 16 | U.smethod_0(this.int_0, 16));
+		this.Mode.imethod_2(binaryStream_0);
 	}
 
-	public Vector<int> vector_0;
-
-	public int int_0;
+	public GClass196 Mode;
 }

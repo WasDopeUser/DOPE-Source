@@ -1,6 +1,8 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace DOPE.Common.Models.Bot.Stats
@@ -22,9 +24,9 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Key>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_41);
+				this.<>OnPropertyChanged(Class7.Group);
 				this.OnKeyChanged();
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_50);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_54);
 			}
 		}
 
@@ -49,7 +51,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<First>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_28);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_28);
 			}
 		}
 
@@ -68,7 +70,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Group>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_41);
+				this.<>OnPropertyChanged(Class7.Group);
 			}
 		}
 
@@ -87,7 +89,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Order>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_63);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_68);
 			}
 		}
 
@@ -148,6 +150,8 @@ namespace DOPE.Common.Models.Bot.Stats
 			this.Dispose(true);
 		}
 
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

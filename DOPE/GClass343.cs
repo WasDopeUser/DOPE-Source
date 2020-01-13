@@ -8,7 +8,7 @@ public class GClass343 : GInterface0
 	{
 		get
 		{
-			return 12942;
+			return 21891;
 		}
 	}
 
@@ -16,65 +16,57 @@ public class GClass343 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 1;
 		}
 	}
 
-	public GClass343(Vector<GClass420> vector_1 = null)
+	public GClass343(GClass347 gclass347_1 = null, bool bool_1 = false)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (vector_1 == null)
+		if (gclass347_1 == null)
 		{
-			this.vector_0 = new Vector<GClass420>();
-			return;
+			this.gclass347_0 = new GClass347(0U);
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.gclass347_0 = gclass347_1;
+		}
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12942;
+		return 21891;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass420 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass420;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.gclass347_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass347);
+		this.gclass347_0.imethod_1(binaryStream_0);
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(12942);
+		binaryStream_0.smethod_7(21891);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(-6101);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (GClass420 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_7(13010);
+		this.gclass347_0.imethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public Vector<GClass420> vector_0;
+	public GClass347 gclass347_0;
+
+	public bool bool_0;
 }

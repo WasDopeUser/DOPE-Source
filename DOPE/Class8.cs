@@ -2,9 +2,5 @@
 
 internal class Class8
 {
-	internal static void xDph7tozmh5WD()
-	{
-	}
-
-	private static bool bool_0;
+	internal const string PropertyChanged = "3.2.3.0";
 }

@@ -8,7 +8,7 @@ public class GClass564 : GInterface0
 	{
 		get
 		{
-			return 13498;
+			return 3080;
 		}
 	}
 
@@ -16,64 +16,52 @@ public class GClass564 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 10;
 		}
 	}
 
-	public GClass564(GClass772 gclass772_1 = null, int int_2 = 0, int int_3 = 0)
+	public GClass564(double double_1 = 0.0, string string_0 = "")
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.ivRsywZcBC = "";
 		base..ctor();
-		if (gclass772_1 == null)
-		{
-			this.gclass772_0 = new GClass772(0U);
-		}
-		else
-		{
-			this.gclass772_0 = gclass772_1;
-		}
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.double_0 = double_1;
+		this.ivRsywZcBC = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13498;
+		return 3080;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 10;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 1) | this.int_1 << 31);
-		this.gclass772_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass772);
-		this.gclass772_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
+		this.double_0 = binaryStream_0.ReadDouble();
+		binaryStream_0.smethod_1();
+		this.ivRsywZcBC = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(13498);
+		binaryStream_0.smethod_7(3080);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
-		binaryStream_0.fUeiimuocMk(this.int_1 << 1 | U.smethod_0(this.int_1, 31));
-		this.gclass772_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(-9791);
+		binaryStream_0.smethod_7(-114);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(-17275);
+		binaryStream_0.smethod_3(this.ivRsywZcBC);
 	}
 
-	public int int_0;
+	public double double_0;
 
-	public int int_1;
-
-	public GClass772 gclass772_0;
+	public string ivRsywZcBC;
 }

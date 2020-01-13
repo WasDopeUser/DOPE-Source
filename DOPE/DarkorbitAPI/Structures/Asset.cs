@@ -42,22 +42,30 @@ namespace DarkorbitAPI.Structures
 
 		protected Rectangle Hitbox { get; set; }
 
+		public CollidableType Type
+		{
+			get
+			{
+				return CollidableType.None;
+			}
+		}
+
 		public Asset(int int_0, int int_1)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(int_0, int_1);
 		}
 
-		public void method_0(GClass122 gclass122_0)
+		public void method_0(GClass126 gclass126_0)
 		{
-			this.PosX = gclass122_0.int_3;
-			this.PosY = gclass122_0.int_0;
-			this.Id = gclass122_0.int_1;
-			this.Name = gclass122_0.string_0;
-			this.ClanTag = gclass122_0.string_1;
-			this.FactionId = gclass122_0.int_5;
-			this.ClanDiplomacy = (int)gclass122_0.gclass135_0.uint_0;
-			this.AssetType = (AssetType)gclass122_0.gclass126_0.uint_0;
+			this.PosX = gclass126_0.int_6;
+			this.PosY = gclass126_0.int_3;
+			this.Id = gclass126_0.int_0;
+			this.Name = gclass126_0.string_1;
+			this.ClanTag = gclass126_0.string_0;
+			this.FactionId = gclass126_0.int_5;
+			this.ClanDiplomacy = (int)gclass126_0.gclass139_0.uint_0;
+			this.AssetType = (AssetType)gclass126_0.gclass130_0.uint_0;
 		}
 
 		public bool method_1(Hero hero_0)

@@ -1,6 +1,6 @@
 ﻿using System;
 
-public interface GInterface8
+public interface GInterface9
 {
 	bool imethod_0();
 

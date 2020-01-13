@@ -1,49 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using System.Drawing;
+using DOPE.Common.Models.Bot;
 
-public class GClass841
+public class GClass841 : GClass838
 {
-	[DllImport("user32")]
-	[return: MarshalAs(UnmanagedType.Bool)]
-	private static extern bool EnumChildWindows(IntPtr intptr_1, GClass841.Delegate0 delegate0_0, IntPtr intptr_2);
-
-	public GClass841(IntPtr intptr_1)
+	public GClass841(GClass822 gclass822_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		this.intptr_0 = intptr_1;
+		Class13.tMHx78BzgCM8j();
+		base..ctor(gclass822_1);
 	}
 
-	public List<IntPtr> method_0()
+	public override bool vmethod_19(GClass824 gclass824_0)
 	{
-		List<IntPtr> list = new List<IntPtr>();
-		GCHandle value = GCHandle.Alloc(list);
-		IntPtr intptr_ = GCHandle.ToIntPtr(value);
-		try
-		{
-			GClass841.Delegate0 delegate0_ = new GClass841.Delegate0(this.method_1);
-			GClass841.EnumChildWindows(this.intptr_0, delegate0_, intptr_);
-		}
-		finally
-		{
-			value.Free();
-		}
-		return list;
+		return gclass824_0 is GClass826;
 	}
 
-	private bool method_1(IntPtr intptr_1, IntPtr intptr_2)
+	public override List<Rectangle> vmethod_17()
 	{
-		GCHandle gchandle = GCHandle.FromIntPtr(intptr_2);
-		if (gchandle.Target == null)
-		{
-			return false;
-		}
-		(gchandle.Target as List<IntPtr>).Add(intptr_1);
-		return true;
+		return GClass841.list_0;
 	}
 
-	private IntPtr intptr_0;
+	public override BotState vmethod_18()
+	{
+		return BotState.TradePalladium;
+	}
 
-	private delegate bool Delegate0(IntPtr hwnd, IntPtr lParam);
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass841()
+	{
+		Class13.tMHx78BzgCM8j();
+		GClass841.list_0 = new List<Rectangle>
+		{
+			new Rectangle(9950, 6550, 200, 300)
+		};
+	}
+
+	public static List<Rectangle> list_0;
 }

@@ -11,43 +11,43 @@ public class GClass95 : GInterface4
 		}
 	}
 
-	public void method_0(GClass266 gclass266_0)
+	public void method_0(GClass280 gclass280_0)
 	{
-		this.Connection.method_8(gclass266_0.bool_0, gclass266_0.int_0, gclass266_0.int_1, gclass266_0.int_2);
+		this.Connection.method_8(gclass280_0.bool_0, gclass280_0.int_0, gclass280_0.int_1, gclass280_0.int_2);
 	}
 
-	public void method_1(GClass248 gclass248_0)
+	public void KsmmMqbYg0(GClass262 gclass262_0)
 	{
-		this.Connection.method_19();
+		this.Connection.method_17();
 	}
 
-	public void method_2(GClass240 gclass240_0)
+	public void method_1(GClass254 gclass254_0)
 	{
-		this.Connection.method_9(gclass240_0.byteArray_0.Memory.ToArray(), (uint)gclass240_0.int_0);
+		this.Connection.method_9(gclass254_0.byteArray_0.Memory.ToArray(), (uint)gclass254_0.int_0);
 	}
 
-	public void method_3(GClass206 gclass206_0)
+	public void method_2(GClass216 gclass216_0)
 	{
 		ConnectionManager connection = this.Connection;
-		connection.method_13(gclass206_0.byteArray_0.Memory.ToArray());
+		connection.method_13(gclass216_0.byteArray_0.Memory.ToArray());
 		connection.method_12();
 		connection.method_16();
 		connection.IsAuthenticated = true;
 		connection.method_3();
 	}
 
-	public void method_4(GClass264 gclass264_0)
+	public void method_3(GClass278 gclass278_0)
 	{
 		ConnectionManager connection = this.Connection;
 		if (connection.Game.Settings.IsClient)
 		{
-			connection.SendMessage(gclass264_0);
+			connection.SendMessage(gclass278_0);
 		}
 	}
 
 	public GClass95()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

@@ -29,7 +29,7 @@ namespace DarkorbitAPI.Structures
 
 		public Gate(int int_0, int int_1, int int_2, int int_3, int int_4)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(int_0, int_1);
 			this.Type = int_4;
 			this.Id = int_3;

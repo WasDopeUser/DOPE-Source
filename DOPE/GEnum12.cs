@@ -1,6 +1,6 @@
 ﻿using System;
 
-public enum GEnum8
+public enum GEnum12
 {
 	Disconnected,
 	Connecting,

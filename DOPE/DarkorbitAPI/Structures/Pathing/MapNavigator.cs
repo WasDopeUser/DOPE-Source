@@ -12,7 +12,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapNavigator()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 			this.items = new MapNavigator.QueueItem[(MapUtils.LargeMapSize.Width / 100 + 1) * (MapUtils.LargeMapSize.Height / 50 + 1)];
 			this._queue = new BfsQueue<MapNavigator.QueueItem>(this.items, new MapNavigator.Comparer());
@@ -405,10 +405,10 @@ namespace DarkorbitAPI.Structures.Pathing
 				{
 					goto IL_37F;
 				}
-				CS$<>8__locals2.topIndex = CS$<>8__locals1.q.method_4();
+				CS$<>8__locals2.topIndex = CS$<>8__locals1.q.method_5();
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Distance = 1000000000;
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Visited = true;
-				CS$<>8__locals1.q.method_2(CS$<>8__locals2.topIndex);
+				CS$<>8__locals1.q.method_3(CS$<>8__locals2.topIndex);
 				this.method_2(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
 				num4++;
 				if (CS$<>8__locals2.currentX == CS$<>8__locals1.endX && CS$<>8__locals2.currentY == CS$<>8__locals1.endY)
@@ -439,7 +439,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				{
 					this.method_12(CS$<>8__locals2.currentX + 1, CS$<>8__locals2.currentY + 1, ref CS$<>8__locals1, ref CS$<>8__locals2);
 				}
-				CS$<>8__locals1.q.method_3();
+				CS$<>8__locals1.q.method_4();
 			}
 			flag = true;
 			IL_37F:
@@ -490,10 +490,10 @@ namespace DarkorbitAPI.Structures.Pathing
 				{
 					goto IL_346;
 				}
-				CS$<>8__locals2.topIndex = CS$<>8__locals1.q.method_4();
+				CS$<>8__locals2.topIndex = CS$<>8__locals1.q.method_5();
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Distance = 1000000000;
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Visited = true;
-				CS$<>8__locals1.q.method_2(CS$<>8__locals2.topIndex);
+				CS$<>8__locals1.q.method_3(CS$<>8__locals2.topIndex);
 				this.method_2(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
 				num2++;
 				CS$<>8__locals2.currentPos = CS$<>8__locals1.grid.method_5(CS$<>8__locals2.currentX, CS$<>8__locals2.currentY);
@@ -521,7 +521,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				{
 					this.method_14(CS$<>8__locals2.currentX + 1, CS$<>8__locals2.currentY + 1, ref CS$<>8__locals1, ref CS$<>8__locals2);
 				}
-				CS$<>8__locals1.q.method_3();
+				CS$<>8__locals1.q.method_4();
 			}
 			vector2_2 = CS$<>8__locals2.currentPos;
 			flag = true;
@@ -536,7 +536,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		// Note: this type is marked as 'beforefieldinit'.
 		static MapNavigator()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			MapNavigator.NULL = new ValueTuple<int, int>(-1, -1);
 		}
 
@@ -565,7 +565,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static int smethod_3(int int_0, int int_1)
+		internal static int FnUfyaYwib(int int_0, int int_1)
 		{
 			int num = int_0 * 100;
 			int num2 = int_1 * 50;
@@ -608,7 +608,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			this.items[num].Distance = num2;
 			this.items[num].Left = this.method_10(int_0, int_1, ref <>c__DisplayClass20_0_0);
 			this.items[num].Parent = <>c__DisplayClass20_1_0.topIndex;
-			<>c__DisplayClass20_0_0.q.method_2(num);
+			<>c__DisplayClass20_0_0.q.method_3(num);
 			return true;
 		}
 
@@ -625,7 +625,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static int smethod_4(int int_0, int int_1)
+		internal static int smethod_3(int int_0, int int_1)
 		{
 			int num = int_0 * 100;
 			int num2 = int_1 * 50;
@@ -644,7 +644,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				return true;
 			}
-			int num2 = <>c__DisplayClass21_1_0.current.Distance + MapNavigator.smethod_4(<>c__DisplayClass21_1_0.currentX - int_0, <>c__DisplayClass21_1_0.currentY - int_1);
+			int num2 = <>c__DisplayClass21_1_0.current.Distance + MapNavigator.smethod_3(<>c__DisplayClass21_1_0.currentX - int_0, <>c__DisplayClass21_1_0.currentY - int_1);
 			if (num2 >= this.items[num].Distance)
 			{
 				return true;
@@ -652,7 +652,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			this.items[num].Distance = num2;
 			this.items[num].Left = <>c__DisplayClass21_1_0.current.Left + this.method_13(<>c__DisplayClass21_1_0.currentPos, ref <>c__DisplayClass21_0_0);
 			this.items[num].Parent = <>c__DisplayClass21_1_0.topIndex;
-			<>c__DisplayClass21_0_0.q.method_2(num);
+			<>c__DisplayClass21_0_0.q.method_3(num);
 			return true;
 		}
 
@@ -677,7 +677,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		{
 			public QueueItem(int int_0, int int_1)
 			{
-				Class8.xDph7tozmh5WD();
+				Class13.tMHx78BzgCM8j();
 				this.Distance = int_0;
 				this.Left = int_1;
 				this.Visited = false;
@@ -702,7 +702,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 			public Comparer()
 			{
-				Class8.xDph7tozmh5WD();
+				Class13.tMHx78BzgCM8j();
 				base..ctor();
 			}
 		}

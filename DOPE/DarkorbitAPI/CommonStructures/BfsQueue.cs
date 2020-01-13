@@ -23,7 +23,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public BfsQueue(T[] gparam_0, Comparer<T> comparer_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 			this._pendingUpdates = new List<int>();
 			this._store = gparam_0;
@@ -81,7 +81,7 @@ namespace DarkorbitAPI.CommonStructures
 			return num;
 		}
 
-		public void QjqiiDdsoYg(int int_0)
+		public void method_2(int int_0)
 		{
 			int i = this.method_1(int_0);
 			for (i /= 2; i > 0; i /= 2)
@@ -97,16 +97,16 @@ namespace DarkorbitAPI.CommonStructures
 			}
 		}
 
-		public void method_2(int int_0)
+		public void method_3(int int_0)
 		{
 			this._pendingUpdates.Add(int_0);
 		}
 
-		public void method_3()
+		public void method_4()
 		{
 			if (this._pendingUpdates.Count == 1)
 			{
-				this.QjqiiDdsoYg(this._pendingUpdates[0]);
+				this.method_2(this._pendingUpdates[0]);
 				this._pendingUpdates.Clear();
 				return;
 			}
@@ -156,7 +156,7 @@ namespace DarkorbitAPI.CommonStructures
 			this._pendingUpdates.Clear();
 		}
 
-		public int method_4()
+		public int method_5()
 		{
 			return this._tree[1];
 		}

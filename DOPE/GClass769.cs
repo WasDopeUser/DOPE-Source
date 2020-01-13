@@ -8,7 +8,7 @@ public class GClass769 : GInterface0
 	{
 		get
 		{
-			return 2258;
+			return 31664;
 		}
 	}
 
@@ -16,71 +16,49 @@ public class GClass769 : GInterface0
 	{
 		get
 		{
-			return 9;
+			return 16;
 		}
 	}
 
-	public GClass769(GClass331 gclass331_1 = null, int int_2 = 0, int int_3 = 0, bool bool_1 = false)
+	public GClass769(double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (gclass331_1 == null)
-		{
-			this.gclass331_0 = new GClass331(0U);
-		}
-		else
-		{
-			this.gclass331_0 = gclass331_1;
-		}
-		this.int_1 = int_2;
-		this.int_0 = int_3;
-		this.bool_0 = bool_1;
+		this.double_1 = double_2;
+		this.double_0 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2258;
+		return 31664;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 9;
+		return 16;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass331_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass331);
-		this.gclass331_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 7 | U.smethod_0(this.int_1, 25));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(2258);
+		binaryStream_0.smethod_7(31664);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		binaryStream_0.smethod_5(-9032);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		this.gclass331_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(-13235);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_1, 7) | this.int_1 << 25);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_7(30599);
 	}
 
-	public int int_0;
+	public double double_0;
 
-	public bool bool_0;
-
-	public GClass331 gclass331_0;
-
-	public int int_1;
+	public double double_1;
 }

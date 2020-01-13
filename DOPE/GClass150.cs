@@ -8,7 +8,7 @@ public class GClass150 : GInterface0
 	{
 		get
 		{
-			return 27455;
+			return 25091;
 		}
 	}
 
@@ -16,53 +16,45 @@ public class GClass150 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 4;
 		}
 	}
 
-	public GClass150(int int_1 = 0, int int_2 = 0)
+	public GClass150(int int_0 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
-		this.Ntylhkodnu = int_2;
+		this.FromId = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 27455;
+		return 25091;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.FromId = binaryStream_0.smethod_0();
+		this.FromId = (this.FromId << 1 | U.smethod_0(this.FromId, 31));
 		binaryStream_0.smethod_1();
-		this.Ntylhkodnu = binaryStream_0.smethod_0();
-		this.Ntylhkodnu = (this.Ntylhkodnu << 13 | U.smethod_0(this.Ntylhkodnu, 19));
-		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(27455);
+		binaryStream_0.smethod_7(25091);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(6477);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.Ntylhkodnu, 13) | this.Ntylhkodnu << 19);
-		binaryStream_0.smethod_5(16226);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
+		binaryStream_0.smethod_4(U.smethod_0(this.FromId, 1) | this.FromId << 31);
+		binaryStream_0.smethod_7(30849);
 	}
 
-	public int Ntylhkodnu;
-
-	public int int_0;
+	public int FromId;
 }

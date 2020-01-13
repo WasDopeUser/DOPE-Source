@@ -1,5 +1,7 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace DOPE.UI.Models
@@ -127,11 +129,13 @@ namespace DOPE.UI.Models
 
 		public CommandViewModel()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this.PropertyChanged = new PropertyChangedEventHandler(CommandViewModel.<>c.<>9.method_0);
 			base..ctor();
 		}
 
+		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_0(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

@@ -1,12 +1,12 @@
 ﻿using System;
 
-[Obsolete("Use [ContractAnnotation('=> halt')] instead")]
 [AttributeUsage(AttributeTargets.Method)]
+[Obsolete("Use [ContractAnnotation('=> halt')] instead")]
 public sealed class GAttribute48 : Attribute
 {
 	public GAttribute48()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

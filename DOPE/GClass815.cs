@@ -1,59 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using DOPE.Common;
-using DOPE.Common.Models;
+using DOPE.Common.Models.Bot.Stats;
 
-public abstract class GClass815 : GClass812
+public class GClass815 : StatisticsCategory
 {
-	public TargetMap Map
+	public Dictionary<string, int> Count
 	{
 		[CompilerGenerated]
 		get
 		{
-			return this.targetMap_0;
+			return this.dictionary_0;
 		}
 		[CompilerGenerated]
-		protected set
+		private set
 		{
-			if (this.targetMap_0 == value)
+			if (object.Equals(this.dictionary_0, value))
 			{
 				return;
 			}
-			this.targetMap_0 = value;
-			this.method_0(Class5.Map);
+			this.dictionary_0 = value;
+			this.<>OnPropertyChanged(Class10.Count);
 		}
 	}
 
-	public GClass815(GClass810 gclass810_1, TargetMap targetMap_1, string string_1, int int_2 = -2147483648)
+	public GClass815(string string_0, Dictionary<string, int> dictionary_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1, string_1 + "_" + targetMap_1.GetName(), int_2);
-		this.Map = targetMap_1;
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		GClass815.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass815.<>c__DisplayClass5_0();
-		CS$<>8__locals1.targetMap_0 = this.Map;
-		if (botProfile_1 == null)
+		Class13.tMHx78BzgCM8j();
+		base..ctor(string_0, new string[]
 		{
-			return null;
-		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(CS$<>8__locals1.method_0));
+			"Name",
+			"Count"
+		}, null);
+		this.Count = dictionary_1;
 	}
 
-	public override string ToString()
+	public override void Rebuild()
 	{
-		return this.Map.GetName() ?? "";
+	}
+
+	public override void Update()
+	{
+		Dictionary<string, int> count = this.Count;
+		lock (count)
+		{
+			foreach (KeyValuePair<string, int> keyValuePair in this.Count)
+			{
+				GClass815.<>c__DisplayClass6_0 CS$<>8__locals1 = new GClass815.<>c__DisplayClass6_0();
+				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
+				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.method_0));
+				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value);
+				rowEntry.Order = -keyValuePair.Value;
+			}
+		}
+		base.Update();
 	}
 
 	[CompilerGenerated]
-	private TargetMap targetMap_0;
+	private Dictionary<string, int> dictionary_0;
 }

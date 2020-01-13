@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass577 : GClass573, GInterface0
+public class GClass577 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 13018;
+			return 20221;
 		}
 	}
 
@@ -16,48 +16,42 @@ public class GClass577 : GClass573, GInterface0
 	{
 		get
 		{
-			return 12;
+			return 8;
 		}
 	}
 
-	public GClass577(string string_0 = "", double double_0 = 0.0)
+	public GClass577(double double_1 = 0.0)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(string_0);
-		this.Value = double_0;
+		Class13.tMHx78BzgCM8j();
+		base..ctor();
+		this.double_0 = double_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 13018;
+		return 20221;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 12;
+		return 8;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.Value = binaryStream_0.ReadDouble();
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(13018);
+		binaryStream_0.smethod_7(20221);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(-30037);
-		binaryStream_0.smethod_5(27548);
-		binaryStream_0.WriteDouble(this.Value);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public double Value;
+	public double double_0;
 }

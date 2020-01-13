@@ -8,7 +8,7 @@ public class GClass248 : GInterface0
 	{
 		get
 		{
-			return 7722;
+			return 19267;
 		}
 	}
 
@@ -16,37 +16,43 @@ public class GClass248 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 2;
 		}
 	}
 
-	public GClass248()
+	public GClass248(string string_0 = "")
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.Name = "";
 		base..ctor();
+		this.Name = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 7722;
+		return 19267;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.Name = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(7722);
+		binaryStream_0.smethod_7(19267);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_3(this.Name);
 	}
+
+	public string Name;
 }

@@ -1,78 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI;
+using System.Runtime.CompilerServices;
 using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
-using DOPE.UI.Models;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass819 : GClass818
+public class GClass819 : StatisticsCategory
 {
-	public GClass819(GClass810 gclass810_1)
-	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1, TargetMap.GG_VoT);
-	}
+	public HeroPet Pet { get; }
 
-	protected override void OnBind()
-	{
-		base.C.Game.LogMessage += this.method_1;
-	}
+	public GClass814 Stats { get; }
 
-	protected override void OnUnbind()
+	public GClass819(HeroPet heroPet_1, GClass814 gclass814_1)
 	{
-		base.C.Game.LogMessage -= this.method_1;
-	}
-
-	private void method_1(GameManager gameManager_0, GClass255 gclass255_0)
-	{
-		string[] source;
-		if (GClass90.smethod_1(gclass255_0.string_0, out source, new string[]
+		Class13.tMHx78BzgCM8j();
+		base..ctor("Pet", new string[]
 		{
-			"n",
-			"MSG",
-			"1",
-			"0",
-			"msg_galaxy_gate_cooldown_active"
-		}) && source.FirstOrDefault<string>() != null)
+			"Name",
+			"Value"
+		}, null);
+		this.Pet = heroPet_1;
+		this.Stats = gclass814_1;
+		base.Subscribe<HeroPet>(this.Pet);
+		base.Subscribe<GClass814>(this.Stats);
+	}
+
+	public override void Update()
+	{
+		GClass819.<>c__DisplayClass7_0 CS$<>8__locals1;
+		CS$<>8__locals1.gclass819_0 = this;
+		List<IRowEntry> list = new List<IRowEntry>();
+		list.Add(this.method_0("Available", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_0), ref CS$<>8__locals1));
+		CS$<>8__locals1.list_0 = list;
+		if (this.Pet.IsAvailable)
 		{
-			Dictionary<string, string> dictionary = GClass90.smethod_0(source.FirstOrDefault<string>());
-			string s;
-			string s2;
-			int num;
-			int num2;
-			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
-			{
-				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
-				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
-			}
+			this.method_1("Enabled", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_1), ref CS$<>8__locals1);
+			this.method_1("Name", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_2), ref CS$<>8__locals1);
+			this.method_1("Fuel", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_3), ref CS$<>8__locals1);
+			this.method_1("Level", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_4), ref CS$<>8__locals1);
+			this.method_1("Experience", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_5), ref CS$<>8__locals1);
+			this.method_1("HP", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_6), ref CS$<>8__locals1);
+			this.method_1("Shield", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_7), ref CS$<>8__locals1);
+			this.method_1("Mode", new Func<HeroPet, string>(GClass819.<>c.<>c_0.method_8), ref CS$<>8__locals1);
+			List<IRowEntry> list_ = CS$<>8__locals1.list_0;
+			string key = "Deaths";
+			IValueWrapper<string>[] array = new IValueWrapper<string>[1];
+			array[0] = base.L<GClass814>(new Func<GClass814, string>(GClass819.<>c.<>c_0.method_9));
+			list_.Add(StatisticsCategory.WithName(key, array));
 		}
-	}
-
-	protected override bool vmethod_0()
-	{
-		return this.dateTimeOffset_2.Cooldown(0);
-	}
-
-	public override bool vmethod_1()
-	{
-		return false;
-	}
-
-	public override SelectedNpcModel vmethod_2()
-	{
-		Ship selectedShip = base.C.Map.SelectedShip;
-		if (selectedShip == null)
+		int num = 0;
+		foreach (IRowEntry rowEntry in CS$<>8__locals1.list_0)
 		{
-			return null;
+			rowEntry.Order = num++;
+			base.Add(rowEntry);
 		}
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile == null)
-		{
-			return null;
-		}
-		return mapProfile.GetModel(selectedShip, base.C.Map, null, 0);
+		base.Update();
 	}
 
-	public DateTimeOffset dateTimeOffset_2;
+	[CompilerGenerated]
+	private IRowEntry method_0(string string_0, Func<HeroPet, string> func_0, ref GClass819.<>c__DisplayClass7_0 <>c__DisplayClass7_0_0)
+	{
+		return StatisticsCategory.WithName(string_0, new IValueWrapper<string>[]
+		{
+			base.L<HeroPet>(func_0)
+		});
+	}
+
+	[CompilerGenerated]
+	private void method_1(string string_0, Func<HeroPet, string> func_0, ref GClass819.<>c__DisplayClass7_0 <>c__DisplayClass7_0_0)
+	{
+		<>c__DisplayClass7_0_0.list_0.Add(this.method_0(string_0, func_0, ref <>c__DisplayClass7_0_0));
+	}
+
+	[CompilerGenerated]
+	private readonly HeroPet heroPet_0;
+
+	[CompilerGenerated]
+	private readonly GClass814 gclass814_0;
 }

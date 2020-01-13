@@ -1,7 +1,11 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
+[DebuggerNonUserCode]
+[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 [StructLayout(LayoutKind.Auto, CharSet = CharSet.Auto)]
 internal static class <>PropertyChangedEventArgs
 {
@@ -32,6 +36,14 @@ internal static class <>PropertyChangedEventArgs
 	internal static readonly PropertyChangedEventArgs Filtered = new PropertyChangedEventArgs("Filtered");
 
 	internal static readonly PropertyChangedEventArgs FilterReceived = new PropertyChangedEventArgs("FilterReceived");
+
+	internal static readonly PropertyChangedEventArgs GroupAcceptInviteCommand = new PropertyChangedEventArgs("GroupAcceptInviteCommand");
+
+	internal static readonly PropertyChangedEventArgs GroupDeclineInviteCommand = new PropertyChangedEventArgs("GroupDeclineInviteCommand");
+
+	internal static readonly PropertyChangedEventArgs GroupInviteCommand = new PropertyChangedEventArgs("GroupInviteCommand");
+
+	internal static readonly PropertyChangedEventArgs GroupKickCommand = new PropertyChangedEventArgs("GroupKickCommand");
 
 	internal static readonly PropertyChangedEventArgs Id = new PropertyChangedEventArgs("Id");
 

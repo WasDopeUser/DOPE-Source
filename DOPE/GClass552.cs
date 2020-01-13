@@ -8,7 +8,7 @@ public class GClass552 : GInterface0
 	{
 		get
 		{
-			return 17335;
+			return 5173;
 		}
 	}
 
@@ -16,50 +16,44 @@ public class GClass552 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 0;
 		}
 	}
 
-	public GClass552(double double_1 = 0.0, string string_1 = "")
+	public GClass552(uint uint_1 = 0U)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.double_0 = double_1;
-		this.string_0 = string_1;
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17335;
+		return 5173;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(17335);
+		binaryStream_0.smethod_7(5173);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_5(-13862);
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(-25710);
+		binaryStream_0.smethod_6(this.uint_0);
 	}
 
-	public double double_0;
-
-	public string string_0;
+	public uint uint_0;
 }

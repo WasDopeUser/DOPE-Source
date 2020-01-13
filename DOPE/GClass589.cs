@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass589 : GInterface0
+public class GClass589 : GClass585, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12159;
+			return 32306;
 		}
 	}
 
@@ -16,58 +16,44 @@ public class GClass589 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 12;
 		}
 	}
 
-	public GClass589(GClass247 gclass247_1 = null, int int_1 = 0)
+	public GClass589(string string_0 = "", double double_0 = 0.0)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		if (gclass247_1 == null)
-		{
-			this.gclass247_0 = new GClass247(0U);
-		}
-		else
-		{
-			this.gclass247_0 = gclass247_1;
-		}
-		this.int_0 = int_1;
+		Class13.tMHx78BzgCM8j();
+		base..ctor(string_0);
+		this.Value = double_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 12159;
+		return 32306;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 12;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass247_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass247);
-		this.gclass247_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
+		base.imethod_1(binaryStream_0);
+		this.Value = binaryStream_0.ReadDouble();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(12159);
+		binaryStream_0.smethod_7(32306);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass247_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(-24686);
-		binaryStream_0.fUeiimuocMk(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.WriteDouble(this.Value);
 	}
 
-	public GClass247 gclass247_0;
-
-	public int int_0;
+	public double Value;
 }

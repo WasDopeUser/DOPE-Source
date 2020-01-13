@@ -8,7 +8,7 @@ public class GClass131 : GInterface0
 	{
 		get
 		{
-			return 29942;
+			return 30382;
 		}
 	}
 
@@ -16,55 +16,45 @@ public class GClass131 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 4;
 		}
 	}
 
-	public GClass131(GClass247 gclass247_1 = null, double double_0 = 0.0)
+	public GClass131(int int_1 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (gclass247_1 == null)
-		{
-			this.gclass247_0 = new GClass247(0U);
-		}
-		else
-		{
-			this.gclass247_0 = gclass247_1;
-		}
-		this.Count = double_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29942;
+		return 30382;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Count = binaryStream_0.ReadDouble();
-		this.gclass247_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass247);
-		this.gclass247_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(29942);
+		binaryStream_0.smethod_7(30382);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteDouble(this.Count);
-		this.gclass247_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(1575);
+		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
 	}
 
-	public double Count;
-
-	public GClass247 gclass247_0;
+	public int int_0;
 }

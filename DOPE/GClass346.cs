@@ -8,7 +8,7 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return 11037;
+			return 2720;
 		}
 	}
 
@@ -16,54 +16,62 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 16;
 		}
 	}
 
-	public GClass346(uint uint_1 = 0U, int int_2 = 0, int int_3 = 0)
+	public GClass346(string string_2 = "", string string_3 = "", double double_0 = 0.0, int int_1 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		this.uint_0 = uint_1;
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		this.Id = double_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 11037;
+		return 2720;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 16;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.Id = binaryStream_0.ReadDouble();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 7) | this.int_1 << 25);
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		this.string_1 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(11037);
+		binaryStream_0.smethod_7(2720);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-		binaryStream_0.lwAiiEjwcUm(this.uint_0);
-		binaryStream_0.fUeiimuocMk(this.int_1 << 7 | U.smethod_0(this.int_1, 25));
+		binaryStream_0.WriteDouble(this.Id);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(-2440);
+		binaryStream_0.smethod_3(this.string_1);
 	}
+
+	public double Id;
 
 	public int int_0;
 
-	public uint uint_0;
+	public string string_0;
 
-	public int int_1;
+	public string string_1;
 }

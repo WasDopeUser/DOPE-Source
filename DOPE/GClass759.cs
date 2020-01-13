@@ -8,7 +8,7 @@ public class GClass759 : GInterface0
 	{
 		get
 		{
-			return 20365;
+			return 18909;
 		}
 	}
 
@@ -16,47 +16,42 @@ public class GClass759 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 0;
 		}
 	}
 
-	public GClass759(double double_2 = 0.0, double double_3 = 0.0)
+	public GClass759(uint uint_1 = 0U)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.double_1 = double_2;
-		this.double_0 = double_3;
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20365;
+		return 18909;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.double_1 = binaryStream_0.ReadDouble();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(20365);
+		binaryStream_0.smethod_7(18909);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_6(this.uint_0);
 	}
 
-	public double double_0;
-
-	public double double_1;
+	public uint uint_0;
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace DOPE.Common.Models.Bot.Stats
@@ -51,7 +53,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Value>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.Value);
+				this.<>OnPropertyChanged(Class7.Value);
 			}
 		}
 
@@ -62,6 +64,8 @@ namespace DOPE.Common.Models.Bot.Stats
 			this.Bind(default(TSource));
 		}
 
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

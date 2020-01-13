@@ -16,6 +16,7 @@ using DarkorbitAPI;
 using DOPE.Common;
 using DOPE.Common.Models.Bot.Stats;
 using DOPE.Core;
+using DOPE.UI.Commands;
 using PErkava;
 
 namespace DOPE.UI
@@ -45,7 +46,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Controller>k__BackingField = value;
-				this.method_21(<>PropertyChangedEventArgs.Controller);
+				this.method_31(<>PropertyChangedEventArgs.Controller);
 			}
 		}
 
@@ -78,26 +79,154 @@ namespace DOPE.UI
 
 		public MainWindow()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this._lock = new object();
-			this.<BotControllers>k__BackingField = new GClass4<GClass835>();
+			this.<BotControllers>k__BackingField = new GClass4<GClass852>();
 			base..ctor();
 			Application.Current.MainWindow = this;
 			MainWindow.Instance = this;
-			this.CellTextBlock_SizeChangedHandler = new SizeChangedEventHandler(this.method_19);
+			this.CellTextBlock_SizeChangedHandler = new SizeChangedEventHandler(this.method_27);
 			this.Controller = new Controller("dope", Constants.VersionString);
 			this.Controller.Control.method_4(this.BotControllers);
-			this.BotControllers.method_0(new GDelegate0(this.method_2));
+			this.BotControllers.method_0(new GDelegate0(this.method_8));
 			base.DataContext = this;
 			this.InitializeComponent();
 			this.Controller.Key = this.method_0();
 			this.Controller.method_7(this.Controller.Key);
-			this.MapRendererThread = new Thread(new ThreadStart(this.zEtixWwtpo));
+			this.MapRendererThread = new Thread(new ThreadStart(this.method_9));
 			this.MapRendererThread.IsBackground = true;
 			this.MapRendererThread.Start();
 			base.Closed += this.MainWindow_Closed;
 			this._tray = new TrayHelper(this);
 			base.Title = "DOPE " + Constants.VersionString + " by PowerOfDark";
+			this.method_2();
+		}
+
+		public RelayCommand GroupInviteCommand
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<GroupInviteCommand>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<GroupInviteCommand>k__BackingField, value))
+				{
+					return;
+				}
+				this.<GroupInviteCommand>k__BackingField = value;
+				this.method_31(<>PropertyChangedEventArgs.GroupInviteCommand);
+			}
+		}
+
+		public RelayCommand GroupKickCommand
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<GroupKickCommand>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<GroupKickCommand>k__BackingField, value))
+				{
+					return;
+				}
+				this.<GroupKickCommand>k__BackingField = value;
+				this.method_31(<>PropertyChangedEventArgs.GroupKickCommand);
+			}
+		}
+
+		public RelayCommand GroupAcceptInviteCommand
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<GroupAcceptInviteCommand>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<GroupAcceptInviteCommand>k__BackingField, value))
+				{
+					return;
+				}
+				this.<GroupAcceptInviteCommand>k__BackingField = value;
+				this.method_31(<>PropertyChangedEventArgs.GroupAcceptInviteCommand);
+			}
+		}
+
+		public RelayCommand GroupDeclineInviteCommand
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<GroupDeclineInviteCommand>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<GroupDeclineInviteCommand>k__BackingField, value))
+				{
+					return;
+				}
+				this.<GroupDeclineInviteCommand>k__BackingField = value;
+				this.method_31(<>PropertyChangedEventArgs.GroupDeclineInviteCommand);
+			}
+		}
+
+		private void method_2()
+		{
+			this.GroupInviteCommand = new RelayCommand(new Action<object>(this.method_4), null);
+			this.GroupKickCommand = new RelayCommand(new Action<object>(this.method_5), null);
+			this.GroupAcceptInviteCommand = new RelayCommand(new Action<object>(this.method_6), null);
+			this.GroupDeclineInviteCommand = new RelayCommand(new Action<object>(this.method_7), null);
+		}
+
+		private void method_3(Action<GClass852> action_0, bool bool_0 = false)
+		{
+			GClass852 selected = this.Selected;
+			if (selected != null && (!bool_0 || selected.Context.Hero.IsInitialized))
+			{
+				action_0(selected);
+			}
+		}
+
+		private void method_4(object object_0)
+		{
+			MainWindow.<>c__DisplayClass38_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass38_0();
+			ComboBox comboBox = (ComboBox)object_0;
+			CS$<>8__locals1.name = comboBox.Text;
+			if (string.IsNullOrWhiteSpace(CS$<>8__locals1.name))
+			{
+				return;
+			}
+			comboBox.Text = "";
+			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), true);
+		}
+
+		private void method_5(object object_0)
+		{
+			MainWindow.<>c__DisplayClass39_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass39_0();
+			CS$<>8__locals1.id = (int)object_0;
+			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
+		}
+
+		private void method_6(object object_0)
+		{
+			MainWindow.<>c__DisplayClass40_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass40_0();
+			CS$<>8__locals1.id = (int)object_0;
+			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
+		}
+
+		private void method_7(object object_0)
+		{
+			MainWindow.<>c__DisplayClass41_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass41_0();
+			CS$<>8__locals1.id = (int)object_0;
+			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
 		}
 
 		private void MainWindow_Closed(object sender, EventArgs e)
@@ -111,7 +240,7 @@ namespace DOPE.UI
 			Application.Current.Shutdown();
 		}
 
-		private void method_2(object sender, NotifyCollectionChangedEventArgs e)
+		private void method_8(object sender, NotifyCollectionChangedEventArgs e)
 		{
 			if (e.NewItems == null)
 			{
@@ -119,14 +248,14 @@ namespace DOPE.UI
 			}
 			foreach (object obj in e.NewItems)
 			{
-				GClass835 gclass = (GClass835)obj;
+				GClass852 gclass = (GClass852)obj;
 				PErkava.smethod_0()[int.Parse(gclass.Context.Account.UserId)] = gclass.Context;
 			}
 		}
 
 		public static MainWindow Instance { get; set; }
 
-		public GClass4<GClass835> BotControllers
+		public GClass4<GClass852> BotControllers
 		{
 			[CompilerGenerated]
 			get
@@ -141,12 +270,12 @@ namespace DOPE.UI
 					return;
 				}
 				this.<BotControllers>k__BackingField = value;
-				this.method_21(<>PropertyChangedEventArgs.Selected);
-				this.method_21(<>PropertyChangedEventArgs.BotControllers);
+				this.method_31(<>PropertyChangedEventArgs.Selected);
+				this.method_31(<>PropertyChangedEventArgs.BotControllers);
 			}
 		}
 
-		public GClass835 Selected
+		public GClass852 Selected
 		{
 			get
 			{
@@ -167,7 +296,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		private void zEtixWwtpo()
+		private void method_9()
 		{
 			while (!this._closing)
 			{
@@ -175,7 +304,7 @@ namespace DOPE.UI
 				this.LastRender = DateTimeOffset.Now.AddDays(1.0);
 				try
 				{
-					base.Dispatcher.Invoke(new Action(this.method_3));
+					base.Dispatcher.Invoke(new Action(this.method_10));
 				}
 				catch
 				{
@@ -183,11 +312,11 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_3()
+		private void method_10()
 		{
 			try
 			{
-				MainWindow.<>c__DisplayClass38_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass38_0();
+				MainWindow.<>c__DisplayClass60_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass60_0();
 				CS$<>8__locals1.selected = this.Selected;
 				if (CS$<>8__locals1.selected != null)
 				{
@@ -208,13 +337,13 @@ namespace DOPE.UI
 					{
 						lastMapControl.InvalidateVisual();
 					}
-					GClass835 lastSelected = this._lastSelected;
+					GClass852 lastSelected = this._lastSelected;
 					if (lastSelected != null)
 					{
-						GClass810 context = lastSelected.Context;
+						GClass822 context = lastSelected.Context;
 						if (context != null)
 						{
-							GClass803 stats = context.Stats;
+							GClass814 stats = context.Stats;
 							if (stats != null)
 							{
 								stats.method_3();
@@ -230,51 +359,51 @@ namespace DOPE.UI
 			this.LastRender = DateTimeOffset.Now;
 		}
 
-		private void method_4(object sender, RoutedEventArgs e)
+		private void method_11(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass835 gclass in this.BotControllers)
+			foreach (GClass852 gclass in this.BotControllers)
 			{
 				gclass.Start();
 			}
 		}
 
-		private void method_5(object sender, RoutedEventArgs e)
+		private void method_12(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Start();
 		}
 
-		private void method_6(object sender, RoutedEventArgs e)
+		private void method_13(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass835 gclass in this.BotControllers)
+			foreach (GClass852 gclass in this.BotControllers)
 			{
 				gclass.Pause();
 			}
 		}
 
-		private void method_7(object sender, RoutedEventArgs e)
+		private void method_14(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Pause();
 		}
 
-		private void method_8(object sender, RoutedEventArgs e)
+		private void method_15(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass835 gclass in this.BotControllers)
+			foreach (GClass852 gclass in this.BotControllers)
 			{
 				gclass.Stop();
 			}
 		}
 
-		private void method_9(object sender, RoutedEventArgs e)
+		private void method_16(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Stop();
 		}
 
-		private void method_10(object sender, RoutedEventArgs e)
+		private void method_17(object sender, RoutedEventArgs e)
 		{
 			this.Selected.ForceStop();
 		}
 
-		private void method_11(object sender, RoutedEventArgs e)
+		private void method_18(object sender, RoutedEventArgs e)
 		{
 			if (this.Selected != null && this.Selected.Context.Game.Web.IsLoggedIn)
 			{
@@ -285,7 +414,7 @@ namespace DOPE.UI
 			}
 		}
 
-		private void kUgiodgPlo(object sender, RoutedEventArgs e)
+		private void method_19(object sender, RoutedEventArgs e)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged == null)
@@ -295,7 +424,7 @@ namespace DOPE.UI
 			propertyChanged(sender, new PropertyChangedEventArgs("Selected"));
 		}
 
-		private void method_12(object sender, RoutedEventArgs e)
+		private void method_20(object sender, RoutedEventArgs e)
 		{
 			new SettingsWindow(this.Controller).ShowDialog();
 			this.method_1();
@@ -311,40 +440,40 @@ namespace DOPE.UI
 			base.Activate();
 		}
 
-		private void method_13(object sender, RoutedEventArgs e)
+		private void method_21(object sender, RoutedEventArgs e)
 		{
 			if (!this.Debug)
 			{
 				return;
 			}
 			DebugWindow debugWindow = new DebugWindow();
-			debugWindow.method_0<GClass778>(this._lastSelected.Context.Game.Connection.Socket.method_4());
+			debugWindow.method_1<GClass788>(this._lastSelected.Context.Game.Connection.Socket.method_5());
 			debugWindow.Show();
 		}
 
-		private void method_14(object sender, RoutedEventArgs e)
+		private void method_22(object sender, RoutedEventArgs e)
 		{
 			if (this.PerkavaWindow != null && this.PerkavaWindow.IsLoaded)
 			{
 				this.PerkavaWindow.Focus();
 				return;
 			}
-			this.PerkavaWindow = new GClass837();
+			this.PerkavaWindow = new GClass854();
 			if (this.PerkavaWindow.method_5())
 			{
 				this.PerkavaWindow.Show();
 			}
 		}
 
-		private void method_15(object sender, RoutedEventArgs e)
+		private void method_23(object sender, RoutedEventArgs e)
 		{
 			Process.Start("https://powerofdark.space");
 		}
 
-		private void method_16(object sender, MouseButtonEventArgs e)
+		private void method_24(object sender, MouseButtonEventArgs e)
 		{
-			GClass835 selected = this.Selected;
-			if (selected != null && selected.Context.Game.Connection.Socket.BdaNsdwBbq())
+			GClass852 selected = this.Selected;
+			if (selected != null && selected.Context.Game.Connection.Socket.method_2())
 			{
 				int config = selected.Context.Hero.Config;
 				selected.Context.Server.method_3((config == 1) ? 2 : 1);
@@ -352,19 +481,19 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_17(object sender, EventArgs e)
+		private void method_25(object sender, EventArgs e)
 		{
 			object dataContext = (sender as TabControl).DataContext;
 		}
 
-		private void method_18(object sender, EventArgs e)
+		private void method_26(object sender, EventArgs e)
 		{
 			ListView listView = (ListView)sender;
 			StatisticsCategory statisticsCategory_ = listView.DataContext as StatisticsCategory;
-			this.method_20(listView, statisticsCategory_);
+			this.method_28(listView, statisticsCategory_);
 		}
 
-		private void method_19(object sender, SizeChangedEventArgs e)
+		private void method_27(object sender, SizeChangedEventArgs e)
 		{
 			TextBlock textBlock = (TextBlock)sender;
 			GridViewColumn gridViewColumn = (GridViewColumn)textBlock.Tag;
@@ -372,7 +501,7 @@ namespace DOPE.UI
 			gridViewColumn.SetValue(GridViewColumn.WidthProperty, double.NaN);
 		}
 
-		private void method_20(ListView listView_0, StatisticsCategory statisticsCategory_0)
+		private void method_28(ListView listView_0, StatisticsCategory statisticsCategory_0)
 		{
 			if (statisticsCategory_0 != null)
 			{
@@ -415,57 +544,77 @@ namespace DOPE.UI
 			}
 		}
 
-		private void DqRizjfng3(object sender, DependencyPropertyChangedEventArgs e)
+		private void method_29(object sender, DependencyPropertyChangedEventArgs e)
 		{
 			ListView listView_ = (ListView)sender;
 			StatisticsCategory statisticsCategory_ = e.NewValue as StatisticsCategory;
-			this.method_20(listView_, statisticsCategory_);
+			this.method_28(listView_, statisticsCategory_);
 		}
 
-		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+		private void method_30(object sender, EventArgs e)
+		{
+			ComboBox comboBox = sender as ComboBox;
+			comboBox.Items.Clear();
+			foreach (GClass852 gclass in this.BotControllers)
+			{
+				string userName = gclass.Context.Game.Web.UserName;
+				if (!string.IsNullOrEmpty(userName))
+				{
+					comboBox.Items.Add(userName);
+				}
+			}
+		}
+
 		[DebuggerNonUserCode]
+		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			switch (connectionId)
 			{
 			case 2:
-				((ListView)target).DataContextChanged += this.DqRizjfng3;
-				((ListView)target).Initialized += this.method_18;
+				((ListView)target).DataContextChanged += this.method_29;
+				((ListView)target).Initialized += this.method_26;
 				return;
 			case 3:
 			case 4:
-				break;
 			case 5:
-				((TextBlock)target).MouseLeftButtonUp += this.method_16;
-				return;
+				break;
 			case 6:
-				((TabControl)target).Initialized += this.method_17;
+				((TextBlock)target).MouseLeftButtonUp += this.method_24;
 				return;
 			case 7:
-				((Button)target).Click += this.method_5;
+				((TabControl)target).Initialized += this.method_25;
 				return;
 			case 8:
-				((Button)target).Click += this.method_7;
+				((Button)target).Click += this.method_12;
 				return;
 			case 9:
-				((Button)target).Click += this.method_9;
+				((Button)target).Click += this.method_14;
 				return;
 			case 10:
-				((Button)target).Click += this.method_10;
+				((Button)target).Click += this.method_16;
 				return;
 			case 11:
-				((Button)target).Click += this.method_11;
+				((Button)target).Click += this.method_17;
 				return;
 			case 12:
-				((Button)target).Click += this.method_13;
+				((Button)target).Click += this.method_18;
+				return;
+			case 13:
+				((Button)target).Click += this.method_21;
+				return;
+			case 14:
+				((ComboBox)target).DropDownOpened += this.method_30;
 				break;
 			default:
 				return;
 			}
 		}
 
-		protected void method_21(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		protected void method_31(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
@@ -476,7 +625,7 @@ namespace DOPE.UI
 
 		private MapControl _lastMapControl;
 
-		private GClass835 _lastSelected;
+		private GClass852 _lastSelected;
 
 		private readonly object _lock;
 
@@ -484,7 +633,7 @@ namespace DOPE.UI
 
 		public Thread MapRendererThread;
 
-		public GClass837 PerkavaWindow;
+		public GClass854 PerkavaWindow;
 
 		private volatile bool _closing;
 

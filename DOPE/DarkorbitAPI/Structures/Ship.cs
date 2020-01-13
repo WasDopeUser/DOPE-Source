@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.Packets.Static;
@@ -10,14 +11,15 @@ namespace DarkorbitAPI.Structures
 	{
 		public Ship(int int_0, int int_1)
 		{
-			Class8.xDph7tozmh5WD();
-			this.Modifiers = new ConcurrentDictionary<uint, GClass179>();
+			Class13.tMHx78BzgCM8j();
+			this.Modifiers = new ConcurrentDictionary<uint, GClass186>();
+			this.Effects = new HashSet<string>();
 			base..ctor(int_0, int_1);
 		}
 
 		public Ship()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this..ctor(0, 0);
 		}
 
@@ -36,7 +38,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Id>k__BackingField = value;
-				this.method_11(Class1.Id);
+				this.method_10(Class5.Id);
 			}
 		}
 
@@ -55,8 +57,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsNpc>k__BackingField = value;
-				this.method_11(Class1.ShieldPercentage);
-				this.method_11(Class1.propertyChangedEventArgs_36);
+				this.method_10(Class5.ShieldPercentage);
+				this.method_10(Class5.propertyChangedEventArgs_45);
 			}
 		}
 
@@ -65,6 +67,14 @@ namespace DarkorbitAPI.Structures
 			get
 			{
 				return true;
+			}
+		}
+
+		public override bool CanMove
+		{
+			get
+			{
+				return !this.Effects.Contains("ICY_CUBE");
 			}
 		}
 
@@ -83,7 +93,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<FactionId>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_16);
+				this.method_10(Class5.propertyChangedEventArgs_19);
 			}
 		}
 
@@ -102,7 +112,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Name>k__BackingField = value;
-				this.method_11(Class1.Name);
+				this.method_10(Class5.Name);
 			}
 		}
 
@@ -121,7 +131,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Cloaked>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_8);
+				this.method_10(Class5.propertyChangedEventArgs_10);
 			}
 		}
 
@@ -140,7 +150,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<ClanTag>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_7);
+				this.method_10(Class5.propertyChangedEventArgs_9);
 			}
 		}
 
@@ -159,7 +169,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<TypeId>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_88);
+				this.method_10(Class5.propertyChangedEventArgs_109);
 			}
 		}
 
@@ -178,7 +188,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<ClanDiplomacy>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_6);
+				this.method_10(Class5.propertyChangedEventArgs_8);
 			}
 		}
 
@@ -197,7 +207,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastStatUpdate>k__BackingField = value;
-				this.method_11(Class1.eksiVioaupG);
+				this.method_10(Class5.propertyChangedEventArgs_59);
 			}
 		}
 
@@ -216,7 +226,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastTookDamage>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_48);
+				this.method_10(Class5.propertyChangedEventArgs_60);
 			}
 		}
 
@@ -235,7 +245,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastTookDamageHero>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_50);
+				this.method_10(Class5.propertyChangedEventArgs_63);
 			}
 		}
 
@@ -254,7 +264,26 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastAttacked>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_41);
+				this.method_10(Class5.propertyChangedEventArgs_49);
+			}
+		}
+
+		public int LastTookDamageFrom
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<LastTookDamageFrom>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<LastTookDamageFrom>k__BackingField == value)
+				{
+					return;
+				}
+				this.<LastTookDamageFrom>k__BackingField = value;
+				this.method_10(Class5.propertyChangedEventArgs_62);
 			}
 		}
 
@@ -273,7 +302,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastAttackedHero>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_42);
+				this.method_10(Class5.propertyChangedEventArgs_50);
 			}
 		}
 
@@ -292,7 +321,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastAttackedHeroDamage>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_43);
+				this.method_10(Class5.propertyChangedEventArgs_51);
 			}
 		}
 
@@ -311,7 +340,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastTookDamageEnemy>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_49);
+				this.method_10(Class5.propertyChangedEventArgs_61);
 			}
 		}
 
@@ -330,9 +359,9 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<ShieldMax>k__BackingField = value;
-				this.method_11(Class1.ShieldPercentage);
-				this.method_11(Class1.ShieldDisplay);
-				this.method_11(Class1.propertyChangedEventArgs_82);
+				this.method_10(Class5.ShieldPercentage);
+				this.method_10(Class5.ShieldDisplay);
+				this.method_10(Class5.propertyChangedEventArgs_100);
 			}
 		}
 
@@ -351,9 +380,9 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Shield>k__BackingField = value;
-				this.method_11(Class1.ShieldPercentage);
-				this.method_11(Class1.ShieldDisplay);
-				this.method_11(Class1.propertyChangedEventArgs_81);
+				this.method_10(Class5.ShieldPercentage);
+				this.method_10(Class5.ShieldDisplay);
+				this.method_10(Class5.propertyChangedEventArgs_99);
 			}
 		}
 
@@ -372,9 +401,9 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<HpMax>k__BackingField = value;
-				this.method_11(Class1.HpPercentage);
-				this.method_11(Class1.HpDisplay);
-				this.method_11(Class1.propertyChangedEventArgs_25);
+				this.method_10(Class5.HpPercentage);
+				this.method_10(Class5.HpDisplay);
+				this.method_10(Class5.propertyChangedEventArgs_30);
 			}
 		}
 
@@ -393,9 +422,9 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Hp>k__BackingField = value;
-				this.method_11(Class1.HpPercentage);
-				this.method_11(Class1.HpDisplay);
-				this.method_11(Class1.propertyChangedEventArgs_24);
+				this.method_10(Class5.HpPercentage);
+				this.method_10(Class5.HpDisplay);
+				this.method_10(Class5.propertyChangedEventArgs_29);
 			}
 		}
 
@@ -439,106 +468,112 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public bool IsTaken
+		public int TargetId
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.<IsTaken>k__BackingField;
+				return this.<TargetId>k__BackingField;
 			}
 			[CompilerGenerated]
 			internal set
 			{
-				if (this.<IsTaken>k__BackingField == value)
+				if (this.<TargetId>k__BackingField == value)
 				{
 					return;
 				}
-				this.<IsTaken>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_38);
+				this.<TargetId>k__BackingField = value;
+				this.method_10(Class5.propertyChangedEventArgs_107);
 			}
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public virtual void Init(GClass251 gclass251_0)
+		public virtual void Init(GClass265 gclass265_0)
 		{
-			this.PosX = gclass251_0.int_4;
-			this.PosY = gclass251_0.int_1;
-			this.IsNpc = gclass251_0.bool_1;
-			this.FactionId = gclass251_0.int_7;
-			this.Id = gclass251_0.int_8;
-			this.TypeId = gclass251_0.string_3;
-			this.ClanTag = gclass251_0.string_0;
-			this.Cloaked = gclass251_0.bool_2;
-			this.Name = gclass251_0.string_1;
-			this.ClanDiplomacy = (int)gclass251_0.OgZjSfgjs8.uint_0;
+			this.PosX = gclass265_0.int_8;
+			this.PosY = gclass265_0.int_1;
+			this.IsNpc = gclass265_0.bool_2;
+			this.FactionId = gclass265_0.int_5;
+			this.Id = gclass265_0.int_2;
+			this.TypeId = gclass265_0.string_0;
+			this.ClanTag = gclass265_0.string_3;
+			this.Cloaked = gclass265_0.bool_1;
+			this.Name = gclass265_0.string_2;
+			this.ClanDiplomacy = (int)gclass265_0.gclass139_0.uint_0;
 			this.Modifiers.Clear();
-			foreach (GClass179 gclass179_ in gclass251_0.vector_0)
+			this.Effects.Clear();
+			foreach (GClass186 gclass186_ in gclass265_0.vector_0)
 			{
-				this.ApplyModifier(gclass179_);
+				this.ApplyModifier(gclass186_);
 			}
 			this.LastStatUpdate = DateTimeOffset.Now;
 		}
 
-		public virtual void ApplyModifier(GClass179 gclass179_0)
+		public virtual void ApplyModifier(GClass186 gclass186_0)
 		{
-			this.Modifiers[gclass179_0.uint_0] = gclass179_0;
+			this.Modifiers[gclass186_0.uint_0] = gclass186_0;
 		}
 
-		public virtual bool HasModifier(uint uint_0, out GClass179 gclass179_0)
+		public virtual void StartEffect(string string_0)
 		{
-			return this.Modifiers.TryGetValue(uint_0, out gclass179_0) && gclass179_0.Count > 0 && gclass179_0.bool_0;
+			this.Effects.Add(string_0);
+			if (string_0 == "ICY_CUBE")
+			{
+				base.Reset();
+			}
 		}
 
-		public virtual bool HasModifier(EntityModifierType entityModifierType_0, out GClass179 gclass179_0)
+		public virtual void EndEffect(string string_0)
 		{
-			return this.HasModifier((uint)entityModifierType_0, out gclass179_0);
+			this.Effects.Remove(string_0);
 		}
 
-		public virtual void Init(GClass209 gclass209_0)
+		public virtual bool HasModifier(uint uint_0, out GClass186 gclass186_0)
 		{
-			this.PosX = gclass209_0.VbQnreasOv;
-			this.PosY = gclass209_0.int_8;
+			return this.Modifiers.TryGetValue(uint_0, out gclass186_0) && gclass186_0.Count > 0 && gclass186_0.bool_0;
+		}
+
+		public virtual bool HasModifier(EntityModifierType entityModifierType_0, out GClass186 gclass186_0)
+		{
+			return this.HasModifier((uint)entityModifierType_0, out gclass186_0);
+		}
+
+		public virtual void Init(GClass219 gclass219_0)
+		{
+			this.PosX = gclass219_0.int_14;
+			this.PosY = gclass219_0.int_9;
 			this.IsNpc = false;
-			this.FactionId = gclass209_0.int_5;
-			this.Id = gclass209_0.int_6;
-			this.TypeId = gclass209_0.string_1;
-			this.ClanTag = gclass209_0.string_2;
-			this.Cloaked = gclass209_0.bool_2;
-			this.Hp = gclass209_0.int_2;
-			this.HpMax = gclass209_0.int_13;
-			this.Shield = gclass209_0.int_4;
-			this.ShieldMax = gclass209_0.int_7;
-			this.Name = gclass209_0.string_0;
-			foreach (GClass179 gclass179_ in gclass209_0.vector_0)
+			this.FactionId = gclass219_0.ehrBvdyNv2;
+			this.Id = gclass219_0.int_15;
+			this.TypeId = gclass219_0.string_1;
+			this.ClanTag = gclass219_0.string_2;
+			this.Cloaked = gclass219_0.bool_1;
+			this.Hp = gclass219_0.int_4;
+			this.HpMax = gclass219_0.int_7;
+			this.Shield = gclass219_0.int_13;
+			this.ShieldMax = gclass219_0.int_12;
+			this.Name = gclass219_0.string_0;
+			this.Modifiers.Clear();
+			this.Effects.Clear();
+			foreach (GClass186 gclass186_ in gclass219_0.vector_0)
 			{
-				this.ApplyModifier(gclass179_);
+				this.ApplyModifier(gclass186_);
 			}
 			this.LastStatUpdate = DateTimeOffset.Now;
+		}
+
+		public bool method_7(Hero hero_0)
+		{
+			return this.IsPlayer && ((this.FactionId != hero_0.FactionId && this.ClanDiplomacy != 1 && this.ClanDiplomacy != 2) || this.ClanDiplomacy == 3) && !hero_0.Group.urkOoRqUjU(this.Id);
 		}
 
 		public bool method_8(Hero hero_0)
 		{
-			if (this.IsPlayer)
-			{
-				if (this.FactionId != hero_0.FactionId && this.ClanDiplomacy != 1)
-				{
-					if (this.ClanDiplomacy != 2)
-					{
-						return true;
-					}
-				}
-				return this.ClanDiplomacy == 3;
-			}
-			return false;
+			return this.IsNpc || this.method_7(hero_0);
 		}
 
-		public bool method_9(Hero hero_0)
-		{
-			return this.IsNpc || this.method_8(hero_0);
-		}
-
-		internal void method_10(Map map_0, Ship ship_0, Ship ship_1, int int_0, uint uint_0)
+		internal void method_9(Map map_0, Ship ship_0, Ship ship_1, int int_0, uint uint_0)
 		{
 			Map.Delegates.ShipAttackHandler shipAttacked = this.ShipAttacked;
 			if (shipAttacked == null)
@@ -548,7 +583,7 @@ namespace DarkorbitAPI.Structures
 			shipAttacked(map_0, ship_0, ship_1, int_0, uint_0);
 		}
 
-		protected void method_11(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_10(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged == null)
@@ -563,12 +598,14 @@ namespace DarkorbitAPI.Structures
 		// Note: this type is marked as 'beforefieldinit'.
 		static Ship()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			Ship.Default = new Ship();
 		}
 
 		public static Ship Default;
 
-		public readonly ConcurrentDictionary<uint, GClass179> Modifiers;
+		public readonly ConcurrentDictionary<uint, GClass186> Modifiers;
+
+		public readonly HashSet<string> Effects;
 	}
 }

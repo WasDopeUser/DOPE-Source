@@ -1,20 +1,42 @@
 ﻿using System;
+using System.Linq;
 using DarkorbitAPI;
 using DarkorbitAPI.Structures;
 
 public class GClass104 : GInterface4
 {
-	public void Run(GClass214 e)
+	public HeroPet Pet
 	{
-		HeroPet pet = ConnectionManager.Instance.Value.Game.Hero.Pet;
-		pet.Hp = e.opInfZiQoO;
-		pet.HpMax = e.int_0;
-		pet.IsRepairNeeded = (pet.Hp == 0);
+		get
+		{
+			return ConnectionManager.Instance.Value.Game.Hero.Pet;
+		}
+	}
+
+	public void method_0(GClass222 gclass222_0)
+	{
+		HeroPet.CooldownType int_ = (HeroPet.CooldownType)gclass222_0.int_0;
+		if (gclass222_0.State == 0U)
+		{
+			this.Pet.Cooldowns.method_1(int_, (double)(gclass222_0.vector_0.FirstOrDefault<int>() * 1000));
+			return;
+		}
+		this.Pet.Cooldowns.Clear(int_);
+	}
+
+	public void method_1(GClass226 gclass226_0)
+	{
+		this.Pet.method_19(gclass226_0);
+	}
+
+	public void method_2(GClass225 gclass225_0)
+	{
+		this.Pet.method_21(gclass225_0);
 	}
 
 	public GClass104()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

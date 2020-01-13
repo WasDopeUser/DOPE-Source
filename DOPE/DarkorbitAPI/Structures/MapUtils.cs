@@ -31,29 +31,29 @@ namespace DarkorbitAPI.Structures
 			{
 				if (int_0 == 16 || int_0 == 29)
 				{
-					goto IL_23;
+					goto IL_41;
 				}
 			}
-			else
+			else if (int_0 == 91 || int_0 == 93)
 			{
-				if (int_0 == 91)
-				{
-					goto IL_23;
-				}
-				if (int_0 == 93)
-				{
-					goto IL_23;
-				}
+				goto IL_41;
 			}
-			return MapUtils.DefaultMapSize;
-			IL_23:
+			if (int_0 < 430 || int_0 > 445)
+			{
+				if (int_0 != 229)
+				{
+					return MapUtils.DefaultMapSize;
+				}
+				return MapUtils.HalfSize;
+			}
+			IL_41:
 			return MapUtils.LargeMapSize;
 		}
 
 		public static Vector2 smethod_2(int int_0)
 		{
 			DarkorbitAPI.CommonStructures.Size size = MapUtils.smethod_1(int_0);
-			return new Vector2((float)(size.Width / 2), (float)(size.Height / 2));
+			return new Vector2((float)size.Width / 2f, (float)size.Height / 2f);
 		}
 
 		public static string smethod_3(int int_0)
@@ -135,6 +135,9 @@ namespace DarkorbitAPI.Structures
 						return "GG Lambda";
 					case 76:
 						return "GG Kronos";
+					case 77:
+					case 78:
+						return "GG Cold Wave";
 					default:
 						if (int_0 == 200)
 						{
@@ -179,33 +182,44 @@ namespace DarkorbitAPI.Structures
 			{
 				return string.Format("BL-{0}", num9 - 305);
 			}
+			int num10 = int_0;
+			if (num10 >= 430 && num10 <= 445)
+			{
+				return "FL " + MapUtils.LabirynthMaps[num10];
+			}
 			return int_0.ToString();
-		}
-
-		public static bool IsGG(int mapId)
-		{
-			return MapUtils.smethod_6(mapId) > GEnum5.None;
 		}
 
 		public static bool smethod_4(int int_0)
 		{
-			GEnum5 genum = MapUtils.smethod_6(int_0);
-			return genum != GEnum5.None && genum != (GEnum5)227;
+			return MapUtils.smethod_8(int_0) > GEnum5.None;
 		}
 
-		internal static void smethod_5(DarkOrbitWebAPI.spacemap spacemap_0)
+		public static bool smethod_5(int int_0)
+		{
+			GEnum5 genum = MapUtils.smethod_8(int_0);
+			return !MapUtils.Events.Contains(genum) && genum != GEnum5.None && genum != (GEnum5)227 && genum != (GEnum5)77;
+		}
+
+		public static bool smethod_6(int int_0)
+		{
+			GEnum5 item = MapUtils.smethod_8(int_0);
+			return MapUtils.Events.Contains(item);
+		}
+
+		internal static void smethod_7(DarkOrbitWebAPI.spacemap spacemap_0)
 		{
 			if (MapUtils._init)
 			{
 				return;
 			}
 			MapUtils._init = true;
-			MapUtils.smethod_7(spacemap_0.jumpgates.Select(new Func<DarkOrbitWebAPI.spacemapJumpgate, MapUtils.PortalEdge>(MapUtils.<>c.<>9.method_0)).ToList<MapUtils.PortalEdge>());
+			MapUtils.smethod_9(spacemap_0.jumpgates.Select(new Func<DarkOrbitWebAPI.spacemapJumpgate, MapUtils.PortalEdge>(MapUtils.<>c.<>9.method_0)).ToList<MapUtils.PortalEdge>());
 		}
 
-		public static GEnum5 smethod_6(int int_0)
+		public static GEnum5 smethod_8(int int_0)
 		{
-			if (int_0 <= 76)
+			if (int_0 <= 78)
 			{
 				switch (int_0)
 				{
@@ -234,6 +248,9 @@ namespace DarkorbitAPI.Structures
 						return (GEnum5)75;
 					case 76:
 						return (GEnum5)76;
+					case 77:
+					case 78:
+						return (GEnum5)77;
 					}
 					break;
 				}
@@ -266,7 +283,7 @@ namespace DarkorbitAPI.Structures
 			return GEnum5.None;
 		}
 
-		private static void smethod_7(List<MapUtils.PortalEdge> list_0)
+		private static void smethod_9(List<MapUtils.PortalEdge> list_0)
 		{
 			MapUtils.SpaceGraph.Clear();
 			foreach (MapUtils.PortalEdge portalEdge in list_0)
@@ -281,7 +298,7 @@ namespace DarkorbitAPI.Structures
 			}
 			foreach (KeyValuePair<int, MapUtils.PortalEdge> keyValuePair in MapUtils.Portals)
 			{
-				MapUtils.<>c__DisplayClass13_0 CS$<>8__locals1 = new MapUtils.<>c__DisplayClass13_0();
+				MapUtils.<>c__DisplayClass17_0 CS$<>8__locals1 = new MapUtils.<>c__DisplayClass17_0();
 				CS$<>8__locals1.p = keyValuePair.Value;
 				if (CS$<>8__locals1.p.OtherSide == null)
 				{
@@ -297,9 +314,78 @@ namespace DarkorbitAPI.Structures
 
 		static MapUtils()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			MapUtils.LargeMapSize = new DarkorbitAPI.CommonStructures.Size(42000, 27000);
 			MapUtils.DefaultMapSize = new DarkorbitAPI.CommonStructures.Size(21000, 13500);
+			MapUtils.HalfSize = new DarkorbitAPI.CommonStructures.Size(10500, 6750);
+			MapUtils.LabirynthMaps = new Dictionary<int, string>
+			{
+				{
+					430,
+					"ATLAS A"
+				},
+				{
+					431,
+					"ATLAS B"
+				},
+				{
+					432,
+					"ATLAS C"
+				},
+				{
+					433,
+					"Cygni"
+				},
+				{
+					434,
+					"Helvetios"
+				},
+				{
+					435,
+					"Eridani"
+				},
+				{
+					436,
+					"Sirius"
+				},
+				{
+					437,
+					"Sadatoni"
+				},
+				{
+					438,
+					"Persei"
+				},
+				{
+					439,
+					"Volantis"
+				},
+				{
+					440,
+					"Alcyone"
+				},
+				{
+					441,
+					"Auriga"
+				},
+				{
+					442,
+					"Bootes"
+				},
+				{
+					443,
+					"Aquila"
+				},
+				{
+					444,
+					"Orion"
+				},
+				{
+					445,
+					"Maia"
+				}
+			};
+			MapUtils.Events = new List<GEnum5>();
 			MapUtils._init = false;
 			MapUtils.DefaultMapCheckpointComparer = Comparer<MapUtils.MapCheckpoint>.Create(new Comparison<MapUtils.MapCheckpoint>(MapUtils.<>c.<>9.method_1));
 			MapUtils.Portals = new Dictionary<int, MapUtils.PortalEdge>();
@@ -308,7 +394,7 @@ namespace DarkorbitAPI.Structures
 			MapUtils.SpaceGraph = new Dictionary<int, List<MapUtils.PortalEdge>>();
 			List<string> list = new List<string>();
 			MapUtils.Maps = list;
-			for (int i = 1; i < 400; i++)
+			for (int i = 1; i < 500; i++)
 			{
 				string text = MapUtils.smethod_3(i);
 				int num;
@@ -323,10 +409,10 @@ namespace DarkorbitAPI.Structures
 
 		public static bool IsX1(Map map)
 		{
-			return map.MapId == MapUtils.smethod_8(1, map.Hero.FactionId);
+			return map.MapId == MapUtils.smethod_10(1, map.Hero.FactionId);
 		}
 
-		public static int smethod_8(int int_0, int int_1)
+		public static int smethod_10(int int_0, int int_1)
 		{
 			int result;
 			if (!MapUtils.MapIdByName.TryGetValue(string.Format("{0}-{1}", int_1, int_0), out result))
@@ -338,12 +424,12 @@ namespace DarkorbitAPI.Structures
 
 		public static bool IsX1(int faction, int mapId)
 		{
-			return MapUtils.smethod_8(1, faction) == mapId;
+			return MapUtils.smethod_10(1, faction) == mapId;
 		}
 
-		public static int smethod_9(GEnum5 genum5_0)
+		public static int smethod_11(GEnum5 genum5_0)
 		{
-			if (genum5_0 <= (GEnum5)76)
+			if (genum5_0 <= (GEnum5)77)
 			{
 				if (genum5_0 == GEnum5.None)
 				{
@@ -374,16 +460,25 @@ namespace DarkorbitAPI.Structures
 						return 71;
 					case (GEnum5)76:
 						return 72;
+					case (GEnum5)77:
+						return 22;
 					}
 					break;
 				}
 			}
-			else
+			else if (genum5_0 <= (GEnum5)229)
 			{
 				if (genum5_0 == (GEnum5)227)
 				{
 					return 81;
 				}
+				if (genum5_0 == (GEnum5)229)
+				{
+					return 84;
+				}
+			}
+			else
+			{
 				if (genum5_0 == (GEnum5)300)
 				{
 					return 82;
@@ -396,46 +491,56 @@ namespace DarkorbitAPI.Structures
 			return 1;
 		}
 
-		public static int smethod_10(GEnum5 genum5_0, int int_0)
+		public static int smethod_12(GEnum5 genum5_0, int int_0)
 		{
-			if (genum5_0 == (GEnum5)227)
+			if (genum5_0 == (GEnum5)229)
 			{
-				return MapUtils.smethod_8(4, int_0);
+				return MapUtils.smethod_10(7, int_0);
 			}
-			if (genum5_0 != GEnum5.None)
+			if (genum5_0 != (GEnum5)77)
 			{
-				return MapUtils.smethod_8(1, int_0);
+				if (genum5_0 != (GEnum5)227)
+				{
+					if (genum5_0 != GEnum5.None)
+					{
+						return MapUtils.smethod_10(1, int_0);
+					}
+					return 0;
+				}
 			}
-			return 0;
+			return MapUtils.smethod_10(4, int_0);
 		}
 
-		public static Gate smethod_11(Map map_0, Vector2 vector2_0, int int_0)
+		public static Gate smethod_13(Map map_0, Vector2 vector2_0, int int_0)
 		{
-			MapUtils.<>c__DisplayClass22_0 CS$<>8__locals1 = new MapUtils.<>c__DisplayClass22_0();
+			MapUtils.<>c__DisplayClass26_0 CS$<>8__locals1 = new MapUtils.<>c__DisplayClass26_0();
 			CS$<>8__locals1.map = map_0;
-			CS$<>8__locals1.curGg = MapUtils.smethod_6(CS$<>8__locals1.map.MapId);
-			GEnum5 genum = MapUtils.smethod_6(int_0);
-			CS$<>8__locals1.gateType = MapUtils.smethod_9(genum);
-			if (CS$<>8__locals1.curGg != GEnum5.None)
+			GEnum5 genum = MapUtils.smethod_8(CS$<>8__locals1.map.MapId);
+			GEnum5 genum2 = MapUtils.smethod_8(int_0);
+			CS$<>8__locals1.gateType = MapUtils.smethod_11(genum2);
+			if (genum != GEnum5.None)
 			{
+				MapUtils.<>c__DisplayClass26_1 CS$<>8__locals2 = new MapUtils.<>c__DisplayClass26_1();
+				CS$<>8__locals2.CS$<>8__locals1 = CS$<>8__locals1;
 				bool flag = false;
-				if (genum != GEnum5.None && CS$<>8__locals1.curGg == genum)
+				if (genum2 != GEnum5.None && genum == genum2)
 				{
 					flag = true;
 				}
+				CS$<>8__locals2.curGgType = MapUtils.smethod_11(genum);
 				if (flag)
 				{
-					Gate value = CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_0)).Value;
+					Gate value = CS$<>8__locals2.CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals2.method_0)).Value;
 					if (value != null)
 					{
 						return value;
 					}
 				}
-				return CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_1)).Value;
+				return CS$<>8__locals2.CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals2.method_1)).Value;
 			}
-			if (genum != GEnum5.None && MapUtils.smethod_10(genum, CS$<>8__locals1.map.Hero.FactionId) == CS$<>8__locals1.map.MapId)
+			if (genum2 != GEnum5.None && MapUtils.smethod_12(genum2, CS$<>8__locals1.map.Hero.FactionId) == CS$<>8__locals1.map.MapId)
 			{
-				return CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_2)).Value;
+				return CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.peMkfLmunf)).Value;
 			}
 			if (CS$<>8__locals1.map.MapId != int_0 && CS$<>8__locals1.map.MapId != 0 && MapUtils.SpaceGraph.ContainsKey(CS$<>8__locals1.map.MapId))
 			{
@@ -444,9 +549,9 @@ namespace DarkorbitAPI.Structures
 				MinHeap<MapUtils.MapCheckpoint> minHeap = new MinHeap<MapUtils.MapCheckpoint>(MapUtils.DefaultMapCheckpointComparer);
 				bool flag2 = false;
 				MapUtils.MapCheckpoint mapCheckpoint = null;
-				if (genum != GEnum5.None)
+				if (genum2 != GEnum5.None)
 				{
-					int_0 = MapUtils.smethod_10(genum, CS$<>8__locals1.map.Hero.FactionId);
+					int_0 = MapUtils.smethod_12(genum2, CS$<>8__locals1.map.Hero.FactionId);
 				}
 				int mapId = CS$<>8__locals1.map.MapId;
 				minHeap.method_0(new MapUtils.MapCheckpoint
@@ -476,7 +581,7 @@ namespace DarkorbitAPI.Structures
 					{
 						flag2 = true;
 						mapCheckpoint = mapCheckpoint2;
-						IL_3DF:
+						IL_409:
 						if (!flag2)
 						{
 							return null;
@@ -503,32 +608,37 @@ namespace DarkorbitAPI.Structures
 					}
 					else
 					{
+						if (!MapUtils.SpaceGraph.ContainsKey(mapId2))
+						{
+							return null;
+						}
 						using (List<MapUtils.PortalEdge>.Enumerator enumerator = MapUtils.SpaceGraph[mapId2].GetEnumerator())
 						{
 							while (enumerator.MoveNext())
 							{
-								MapUtils.<>c__DisplayClass22_1 CS$<>8__locals2 = new MapUtils.<>c__DisplayClass22_1();
-								CS$<>8__locals2.port = enumerator.Current;
-								if (!hashSet.Contains(CS$<>8__locals2.port.Id))
+								MapUtils.<>c__DisplayClass26_2 CS$<>8__locals3 = new MapUtils.<>c__DisplayClass26_2();
+								CS$<>8__locals3.port = enumerator.Current;
+								if (!hashSet.Contains(CS$<>8__locals3.port.Id))
 								{
-									Gate gate = (mapId2 == mapId) ? CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals2.method_0)).Value : null;
-									if (CS$<>8__locals1.map.Hero.method_26(CS$<>8__locals2.port, gate) && (gate == null || !CS$<>8__locals1.map.Grid.method_7(gate.Position)))
+									Gate gate = (mapId2 == mapId) ? CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals3.method_0)).Value : null;
+									if (CS$<>8__locals1.map.Hero.method_26(CS$<>8__locals3.port, gate) && (gate == null || !CS$<>8__locals1.map.Grid.method_7(gate.Position)))
 									{
-										bool flag3 = !CS$<>8__locals1.map.Hero.method_27(CS$<>8__locals2.port, gate);
+										bool flag3 = !CS$<>8__locals1.map.Hero.method_27(CS$<>8__locals3.port, gate);
 										if (mapId2 != mapId || gate != null)
 										{
-											Vector2 value2 = (gate != null) ? gate.Position : CS$<>8__locals2.port.Position;
-											Vector2 position = (CS$<>8__locals2.port.OtherSide != null) ? CS$<>8__locals2.port.OtherSide.Position : MapUtils.smethod_2(CS$<>8__locals2.port.ToMapId);
-											MapUtils.MapCheckpoint giJNWPqd8aSPGd64pYV = new MapUtils.MapCheckpoint
+											Vector2 value2 = (gate != null) ? gate.Position : CS$<>8__locals3.port.Position;
+											MapUtils.PortalEdge otherSide = CS$<>8__locals3.port.OtherSide;
+											Vector2 position = (otherSide != null) ? otherSide.Position : MapUtils.smethod_2(CS$<>8__locals3.port.ToMapId);
+											MapUtils.MapCheckpoint fD2kGAxvu9FQ4JEfe1a = new MapUtils.MapCheckpoint
 											{
 												Parent = mapCheckpoint2,
 												Distance = mapCheckpoint2.Distance + Vector2.Distance(mapCheckpoint2.Position, value2) + 1200f,
 												Position = position,
 												NeutralJumps = mapCheckpoint2.NeutralJumps + (flag3 ? 1 : 0),
-												Edge = CS$<>8__locals2.port,
-												MapId = (short)CS$<>8__locals2.port.ToMapId
+												Edge = CS$<>8__locals3.port,
+												MapId = (short)CS$<>8__locals3.port.ToMapId
 											};
-											minHeap.method_0(giJNWPqd8aSPGd64pYV);
+											minHeap.method_0(fD2kGAxvu9FQ4JEfe1a);
 										}
 									}
 								}
@@ -536,13 +646,14 @@ namespace DarkorbitAPI.Structures
 						}
 					}
 				}
-				goto IL_3DF;
+				goto IL_409;
 			}
 			return null;
 		}
 
-		public static Color smethod_12(Map map_0, Entity entity_0)
+		public static Color smethod_14(Map map_0, Entity entity_0)
 		{
+			Hero hero = map_0.Hero;
 			Ship ship = entity_0 as Ship;
 			if (ship != null)
 			{
@@ -570,15 +681,15 @@ namespace DarkorbitAPI.Structures
 				{
 					return Color.Coral;
 				}
-				if (ship.FactionId != map_0.Hero.FactionId)
+				if (hero.Group.urkOoRqUjU(ship.Id))
+				{
+					return Color.Lime;
+				}
+				if (ship.method_7(hero))
 				{
 					return Color.Red;
 				}
-				if (ship.FactionId == map_0.Hero.FactionId)
-				{
-					return Color.DodgerBlue;
-				}
-				return Color.White;
+				return Color.DodgerBlue;
 			}
 			else
 			{
@@ -641,7 +752,7 @@ namespace DarkorbitAPI.Structures
 		public static IReadOnlyList<string> Maps { get; private set; }
 
 		[CompilerGenerated]
-		internal static int skZvzdpkRe(string string_0)
+		internal static int smethod_15(string string_0)
 		{
 			string text = string_0.ToLowerInvariant();
 			if (text != null)
@@ -666,9 +777,15 @@ namespace DarkorbitAPI.Structures
 
 		public static readonly DarkorbitAPI.CommonStructures.Size DefaultMapSize;
 
+		public static readonly DarkorbitAPI.CommonStructures.Size HalfSize;
+
+		public static Dictionary<int, string> LabirynthMaps;
+
+		public static readonly List<GEnum5> Events;
+
 		private static volatile bool _init;
 
-		public static Comparer<MapUtils.MapCheckpoint> DefaultMapCheckpointComparer;
+		public static readonly Comparer<MapUtils.MapCheckpoint> DefaultMapCheckpointComparer;
 
 		public static readonly Dictionary<int, MapUtils.PortalEdge> Portals;
 
@@ -678,23 +795,23 @@ namespace DarkorbitAPI.Structures
 
 		public class PortalEdge
 		{
-			public int Id { get; set; }
+			public int Id { get; }
 
-			public int FromMapId { get; set; }
+			public int FromMapId { get; }
 
-			public int ToMapId { get; set; }
+			public int ToMapId { get; }
 
-			public int FactionId { get; set; }
+			public int FactionId { get; }
 
-			public bool SelfFactionOnly { get; set; }
+			public bool SelfFactionOnly { get; }
 
-			public Vector2 Position { get; set; }
+			public Vector2 Position { get; }
 
 			public MapUtils.PortalEdge OtherSide { get; set; }
 
 			public PortalEdge(int int_0, int int_1, int int_2, int int_3, bool bool_0, int int_4, int int_5)
 			{
-				Class8.xDph7tozmh5WD();
+				Class13.tMHx78BzgCM8j();
 				base..ctor();
 				this.Id = int_0;
 				this.FromMapId = int_1;
@@ -709,7 +826,7 @@ namespace DarkorbitAPI.Structures
 		{
 			public MapCheckpoint()
 			{
-				Class8.xDph7tozmh5WD();
+				Class13.tMHx78BzgCM8j();
 				base..ctor();
 			}
 

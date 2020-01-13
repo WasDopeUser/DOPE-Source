@@ -25,7 +25,7 @@ namespace DOPE.UI.Converters
 
 		public MapNameIdConverter()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 	}

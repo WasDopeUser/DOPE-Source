@@ -8,7 +8,7 @@ public class GClass221 : GInterface0
 	{
 		get
 		{
-			return 28426;
+			return 25298;
 		}
 	}
 
@@ -16,53 +16,44 @@ public class GClass221 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 1;
 		}
 	}
 
-	public GClass221(int int_1 = 0, int int_2 = 0)
+	public GClass221(bool bool_1 = false)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.Unknown = int_1;
-		this.int_0 = int_2;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28426;
+		return 25298;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
-		binaryStream_0.smethod_1();
-		this.Unknown = binaryStream_0.smethod_0();
-		this.Unknown = (this.Unknown << 15 | U.smethod_0(this.Unknown, 17));
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(28426);
+		binaryStream_0.smethod_7(25298);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
-		binaryStream_0.smethod_5(12744);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.Unknown, 15) | this.Unknown << 17);
-		binaryStream_0.smethod_5(30353);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(32094);
 	}
 
-	public int int_0;
-
-	public int Unknown;
+	public bool bool_0;
 }

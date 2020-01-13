@@ -7,31 +7,31 @@ namespace DarkorbitAPI.CommonStructures
 	{
 		public MinHeap()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this..ctor(Comparer<T>.Default);
 		}
 
 		public MinHeap(Comparer<T> comparer_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(comparer_0);
 		}
 
 		public MinHeap(IEnumerable<T> ienumerable_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(ienumerable_0);
 		}
 
 		public MinHeap(IEnumerable<T> ienumerable_0, Comparer<T> comparer_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(ienumerable_0, comparer_0);
 		}
 
-		protected override bool Dominates(T wT3VIiqe1XUXJwRGOav, T e56Jj6q7wSdkaLNPedk)
+		protected override bool Dominates(T Y7DB1WxtaIwVJR2YOHm, T nbuoRrx0sQ29qVNaFOh)
 		{
-			return base.Comparer.Compare(wT3VIiqe1XUXJwRGOav, e56Jj6q7wSdkaLNPedk) <= 0;
+			return base.Comparer.Compare(Y7DB1WxtaIwVJR2YOHm, nbuoRrx0sQ29qVNaFOh) <= 0;
 		}
 	}
 }

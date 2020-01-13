@@ -76,7 +76,7 @@ public static class GClass82
 		{
 			try
 			{
-				gclass.method_4(ginterface0_0);
+				gclass.Gltldiebke(ginterface0_0);
 			}
 			catch
 			{
@@ -87,7 +87,7 @@ public static class GClass82
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass82()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 	}
 
 	[CompilerGenerated]
@@ -123,7 +123,7 @@ public static class GClass82
 			this.ginterface4_0 = ginterface4_1;
 		}
 
-		public void method_4(GInterface0 ginterface0_0)
+		public void Gltldiebke(GInterface0 ginterface0_0)
 		{
 			this.method_0()(this.method_2(), new object[]
 			{
@@ -133,7 +133,7 @@ public static class GClass82
 
 		public GClass83()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 

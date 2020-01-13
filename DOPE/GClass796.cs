@@ -1,24 +1,77 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
 
-public static class GClass796
+public class GClass796 : GClass791
 {
-	public static Kl37hiqXVetPTTEdPff smethod_0<Kl37hiqXVetPTTEdPff>(this Enum enum_0) where Kl37hiqXVetPTTEdPff : Attribute
+	[CompilerGenerated]
+	public GClass803 method_0()
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(Kl37hiqXVetPTTEdPff), false);
-		if (customAttributes.Length == 0)
-		{
-			return default(Kl37hiqXVetPTTEdPff);
-		}
-		return (Kl37hiqXVetPTTEdPff)((object)customAttributes[0]);
+		return this.gclass803_0;
 	}
 
-	public static fc5xM5qi4pGAOGL2tlI smethod_1<fc5xM5qi4pGAOGL2tlI>(this Enum enum_0) where fc5xM5qi4pGAOGL2tlI : Attribute
+	[CompilerGenerated]
+	private void method_1(GClass803 gclass803_2)
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(fc5xM5qi4pGAOGL2tlI), false);
-		if (customAttributes.Length == 0)
-		{
-			return default(fc5xM5qi4pGAOGL2tlI);
-		}
-		return (fc5xM5qi4pGAOGL2tlI)((object)customAttributes[0]);
+		this.gclass803_0 = gclass803_2;
 	}
+
+	[CompilerGenerated]
+	public GClass803 method_2()
+	{
+		return this.gclass803_1;
+	}
+
+	[CompilerGenerated]
+	private void method_3(GClass803 gclass803_2)
+	{
+		this.gclass803_1 = gclass803_2;
+	}
+
+	public override void imethod_2()
+	{
+	}
+
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_2().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_0().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void Init(List<byte[]> list_0)
+	{
+		if (list_0.Count != 2)
+		{
+			throw new Exception();
+		}
+		Vector<uint> vector = new Vector<uint>();
+		Vector<uint> vector2 = new Vector<uint>();
+		foreach (byte item in list_0[0])
+		{
+			vector.Add((uint)item);
+		}
+		foreach (byte item2 in list_0[1])
+		{
+			vector2.Add((uint)item2);
+		}
+		this.method_1(new GClass803(new Vector<uint>(vector), new Vector<uint>(vector2)));
+		this.method_3(new GClass803(vector, vector2));
+	}
+
+	public GClass796()
+	{
+		Class13.tMHx78BzgCM8j();
+		base..ctor();
+	}
+
+	[CompilerGenerated]
+	private GClass803 gclass803_0;
+
+	[CompilerGenerated]
+	private GClass803 gclass803_1;
 }

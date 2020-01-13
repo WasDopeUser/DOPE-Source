@@ -1,7 +1,7 @@
 ﻿using System;
 
 [Flags]
-public enum GEnum9 : uint
+public enum GEnum13 : uint
 {
 	None = 0U
 }

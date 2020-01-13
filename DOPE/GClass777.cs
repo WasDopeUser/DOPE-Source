@@ -1,34 +1,71 @@
 ﻿using System;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass777<TskYdMJTD6rBh8tCq0D> : GClass776<TskYdMJTD6rBh8tCq0D> where TskYdMJTD6rBh8tCq0D : GInterface6
+public class GClass777 : GInterface0
 {
-	public GClass777()
+	short GInterface0.Id
 	{
-		Class8.xDph7tozmh5WD();
+		get
+		{
+			return 7874;
+		}
+	}
+
+	int GInterface0.SizeBytes
+	{
+		get
+		{
+			return 14;
+		}
+	}
+
+	public GClass777(string string_1 = "", double double_1 = 0.0, int int_1 = 0)
+	{
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
 		base..ctor();
-		this.gclass775_0 = new GClass775(null);
-		this.gclass775_1 = new GClass775(null);
+		this.string_0 = string_1;
+		this.double_0 = double_1;
+		this.int_0 = int_1;
 	}
 
-	public void method_0(byte[] byte_0)
+	public virtual int vmethod_0()
 	{
-		this.gclass775_0.method_0(byte_0);
-		this.gclass775_1.method_0(byte_0);
+		return 7874;
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public virtual int vmethod_1()
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-		this.gclass775_1.method_2(byte_0, int_0, int_1);
+		return 14;
 	}
 
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass775_0.method_2(byte_0, int_0, int_1);
-		base.imethod_0(byte_0, int_0, int_1);
+		this.double_0 = binaryStream_0.ReadDouble();
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	private GClass775 gclass775_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(7874);
+		this.vmethod_2(binaryStream_0);
+	}
 
-	private GClass775 gclass775_1;
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(-4453);
+		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		binaryStream_0.smethod_3(this.string_0);
+	}
+
+	public double double_0;
+
+	public int int_0;
+
+	public string string_0;
 }

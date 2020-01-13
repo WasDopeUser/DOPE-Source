@@ -8,7 +8,7 @@ public class GClass411 : GInterface0
 	{
 		get
 		{
-			return 10869;
+			return 31307;
 		}
 	}
 
@@ -16,50 +16,76 @@ public class GClass411 : GInterface0
 	{
 		get
 		{
-			return 3;
+			return 4;
 		}
 	}
 
-	public GClass411(string string_1 = "", bool bool_1 = false)
+	public GClass411(Vector<GClass375> vector_0 = null, GClass521 gclass521_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.string_0 = string_1;
-		this.bool_0 = bool_1;
+		if (vector_0 == null)
+		{
+			this.rirGpPaDv5 = new Vector<GClass375>();
+		}
+		else
+		{
+			this.rirGpPaDv5 = vector_0;
+		}
+		if (gclass521_1 == null)
+		{
+			this.gclass521_0 = new GClass521(0U, 0, 0);
+			return;
+		}
+		this.gclass521_0 = gclass521_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 10869;
+		return 31307;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 3;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		while (this.rirGpPaDv5.Length > 0)
+		{
+			this.rirGpPaDv5.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass375 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass375;
+			gclass.imethod_1(binaryStream_0);
+			this.rirGpPaDv5.method_0(gclass);
+			num++;
+		}
+		this.gclass521_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass521);
+		this.gclass521_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(10869);
+		binaryStream_0.smethod_7(31307);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(-31294);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(this.rirGpPaDv5.Length);
+		foreach (GClass375 gclass in this.rirGpPaDv5)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+		this.gclass521_0.imethod_2(binaryStream_0);
 	}
 
-	public string string_0;
+	public Vector<GClass375> rirGpPaDv5;
 
-	public bool bool_0;
+	public GClass521 gclass521_0;
 }

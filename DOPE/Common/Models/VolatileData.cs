@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models
 {
-	[DataContract]
 	[Guid("057F555B-E0F8-4B7A-AA84-D48C61BFD8AB")]
+	[DataContract]
 	public class VolatileData
 	{
 		[DataMember(Order = 1)]

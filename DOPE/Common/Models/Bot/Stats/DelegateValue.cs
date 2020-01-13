@@ -1,5 +1,7 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace DOPE.Common.Models.Bot.Stats
 {
@@ -20,6 +22,8 @@ namespace DOPE.Common.Models.Bot.Stats
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
+		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

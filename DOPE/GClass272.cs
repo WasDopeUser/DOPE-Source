@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass272 : GInterface0
+public class GClass272 : GClass271, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 24050;
+			return 22019;
 		}
 	}
 
@@ -16,56 +16,47 @@ public class GClass272 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass272(int int_1 = 0, GClass467 gclass467_1 = null)
+	public GClass272(string string_1 = "", int int_0 = 0)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		this.int_0 = int_1;
-		if (gclass467_1 == null)
-		{
-			this.gclass467_0 = new GClass467(false, 0);
-			return;
-		}
-		this.gclass467_0 = gclass467_1;
+		Class13.tMHx78BzgCM8j();
+		base..ctor(string_1);
+		this.Value = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 24050;
+		return 22019;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 2) | this.int_0 << 30);
+		base.imethod_1(binaryStream_0);
+		this.Value = binaryStream_0.smethod_0();
+		this.Value = (U.smethod_0(this.Value, 9) | this.Value << 23);
 		binaryStream_0.smethod_1();
-		this.gclass467_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass467);
-		this.gclass467_0.imethod_1(binaryStream_0);
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(24050);
+		binaryStream_0.smethod_7(22019);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		binaryStream_0.smethod_5(-3436);
-		this.gclass467_0.imethod_2(binaryStream_0);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.Value << 9 | U.smethod_0(this.Value, 23));
+		binaryStream_0.smethod_7(29179);
 	}
 
-	public int int_0;
-
-	public GClass467 gclass467_0;
+	public int Value;
 }

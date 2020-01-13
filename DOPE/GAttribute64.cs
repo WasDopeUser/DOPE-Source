@@ -6,14 +6,14 @@ public sealed class GAttribute64 : Attribute
 {
 	public GAttribute64([GAttribute1] string baseType)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.String_0 = baseType;
 	}
 
 	public GAttribute64([GAttribute1] string baseType, string string_2)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.String_0 = baseType;
 		this.String_1 = string_2;

@@ -1,103 +1,182 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI;
 using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
-using DOPE.UI.Models;
+using DOPE.Common;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass818 : GClass815
+public class GClass818 : StatisticsCategory
 {
-	public GEnum5 GalaxyGateType
+	public Hero Hero { get; }
+
+	public GClass814 Stats { get; }
+
+	public GClass818(Hero hero_1, GClass814 gclass814_1)
 	{
-		[CompilerGenerated]
-		get
+		Class13.tMHx78BzgCM8j();
+		base..ctor("Hero", new string[]
 		{
-			return this.genum5_0;
-		}
-		[CompilerGenerated]
-		set
+			"Name",
+			"Value"
+		}, null);
+		this.Hero = hero_1;
+		this.Stats = gclass814_1;
+		base.Subscribe<Hero>(this.Hero);
+		base.Subscribe<GClass814>(this.Stats);
+	}
+
+	private void method_0(List<IRowEntry> list_2)
+	{
+		List<IRowEntry> list = new List<IRowEntry>();
+		using (IEnumerator<KeyValuePair<string, double>> enumerator = this.Hero.Ammo.GetEnumerator())
 		{
-			if (this.genum5_0 == value)
+			while (enumerator.MoveNext())
 			{
-				return;
-			}
-			this.genum5_0 = value;
-			this.method_0(Class5.propertyChangedEventArgs_18);
-		}
-	}
-
-	public GClass818(GClass810 gclass810_1, TargetMap targetMap_1)
-	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1, targetMap_1, "G", int.MinValue);
-		this.GalaxyGateType = MapUtils.smethod_6((int)targetMap_1);
-	}
-
-	public override bool CheckStopped()
-	{
-		return !base.C.Map.IsGG;
-	}
-
-	protected virtual bool vmethod_0()
-	{
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(this.GalaxyGateType) : null;
-		if (jumpgateGate == null)
-		{
-			return false;
-		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?((int)base.Map), 0) : null;
-		if (selectedNpcModel != null && selectedNpcModel.Enabled)
-		{
-			if (jumpgateGate.prepared && jumpgateGate.currentWave != jumpgateGate.totalWave)
-			{
-				if (base.Context.Account.JumpGGLastLife || jumpgateGate.livesLeft != 1)
+				GClass818.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass818.<>c__DisplayClass9_0();
+				CS$<>8__locals1.keyValuePair_0 = enumerator.Current;
+				list.Add(StatisticsCategory.WithName(CS$<>8__locals1.keyValuePair_0.Key.ToPascal(), new IValueWrapper<string>[]
 				{
-					return true;
-				}
+					base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0))
+				}));
 			}
-			return false;
 		}
-		return false;
+		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, double>(GClass818.<>c.<>c_0.method_0)).ThenBy(new Func<IRowEntry, string>(GClass818.<>c.<>c_0.method_1)))
+		{
+			list_2.Add(item);
+		}
 	}
 
-	public override int UpdatePriority()
+	private void method_1(List<IRowEntry> list_2)
 	{
-		int result = base.UpdatePriority();
-		DopeServiceStatus serviceStatus = base.C.Controller.Parent.ServiceStatus;
-		if (serviceStatus != null && serviceStatus.EnabledGG && this.vmethod_0())
+		List<IRowEntry> list = new List<IRowEntry>();
+		foreach (string text in GClass818.list_0)
 		{
-			return result;
+			string text2 = "resource_" + text;
+			if (this.Hero.Resources.ContainsKey(text2))
+			{
+				list_2.Add(StatisticsCategory.WithName("Cargo_" + text.ToPascal(), new IValueWrapper<string>[]
+				{
+					this.method_2(text2)
+				}));
+			}
 		}
-		return int.MinValue;
+		foreach (KeyValuePair<string, double> keyValuePair in this.Hero.Resources)
+		{
+			if (!GClass818.list_0.Contains(keyValuePair.Key.Replace("resource_", "")))
+			{
+				list.Add(StatisticsCategory.WithName(keyValuePair.Key.Replace("resource_collectable", "Materials").ToPascal(), new IValueWrapper<string>[]
+				{
+					this.method_2(keyValuePair.Key)
+				}));
+			}
+		}
+		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, string>(GClass818.<>c.<>c_0.method_2)))
+		{
+			list_2.Add(item);
+		}
 	}
 
-	public virtual bool vmethod_1()
+	public override void Update()
 	{
-		int mapId = base.Context.Map.MapId;
-		GEnum5 galaxyGateType = this.GalaxyGateType;
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		if (((ggInfo != null) ? ggInfo.GetGate(galaxyGateType) : null) == null)
+		List<IRowEntry> list = new List<IRowEntry>();
+		list.Add(this.method_3("In game", new Func<Hero, string>(GClass818.<>c.<>c_0.method_3)));
+		list.Add(this.method_3("Name", new Func<Hero, string>(GClass818.<>c.<>c_0.method_4)));
+		list.Add(this.method_3("Clan", new Func<Hero, string>(GClass818.<>c.<>c_0.method_5)));
+		list.Add(this.method_3("Credits", new Func<Hero, string>(GClass818.<>c.<>c_0.method_6)));
+		list.Add(this.method_3("Uridium", new Func<Hero, string>(GClass818.<>c.<>c_0.method_7)));
+		list.Add(this.method_3("Level", new Func<Hero, string>(GClass818.<>c.<>c_0.method_8)));
+		list.Add(this.method_3("Experience", new Func<Hero, string>(GClass818.<>c.<>c_0.method_9)));
+		list.Add(this.method_3("Honor", new Func<Hero, string>(GClass818.<>c.<>c_0.method_10)));
+		list.Add(this.method_3("Booty keys", new Func<Hero, string>(GClass818.<>c.<>c_0.method_11)));
+		list.Add(this.method_3("Map", new Func<Hero, string>(GClass818.<>c.<>c_0.method_12)));
+		list.Add(this.method_4("TypeId", new Func<Hero, string>(GClass818.<>c.<>c_0.method_13)));
+		list.Add(this.method_4("Cloaked", new Func<Hero, string>(GClass818.<>c.<>c_0.method_14)));
+		list.Add(this.method_4("Speed", new Func<Hero, string>(GClass818.<>c.<>c_0.method_15)));
+		list.Add(this.method_4("HP", new Func<Hero, string>(GClass818.<>c.<>c_0.method_16)));
+		list.Add(this.method_4("Shield", new Func<Hero, string>(GClass818.<>c.<>c_0.method_17)));
+		list.Add(this.method_4("Config", new Func<Hero, string>(GClass818.<>c.<>c_0.method_18)));
+		list.Add(this.method_4("Formation", new Func<Hero, string>(GClass818.<>c.<>c_0.method_19)));
+		list.Add(this.method_4("Cargo", new Func<Hero, string>(GClass818.<>c.<>c_0.method_20)));
+		List<IRowEntry> list2 = list;
+		this.method_0(list2);
+		this.method_1(list2);
+		int num = 0;
+		foreach (IRowEntry rowEntry in list2)
 		{
-			return false;
+			rowEntry.Order = num++;
+			base.Add(rowEntry);
 		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?(mapId), 0) : null;
-		return selectedNpcModel != null && mapProfile.NpcWhitelist.LastOrDefault<SelectedNpcModel>() == selectedNpcModel;
+		base.Update();
 	}
 
-	public virtual SelectedNpcModel vmethod_2()
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass818()
 	{
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile == null)
+		Class13.tMHx78BzgCM8j();
+		GClass818.list_0 = new List<string>
 		{
-			return null;
-		}
-		return mapProfile.GetModel(Ship.Default, base.C.Map, null, 0);
+			"prometium",
+			"endurium",
+			"terbium",
+			"duranium",
+			"prometid",
+			"promerium",
+			"seprom",
+			"xenomit",
+			"palladium"
+		};
+		GClass818.list_1 = new List<string>
+		{
+			"ammunition_laser_lcb-10",
+			"ammunition_laser_mcb-25",
+			"ammunition_laser_mcb-50",
+			"ammunition_laser_ucb-100",
+			"ammunition_laser_job-100",
+			"ammunition_laser_sab-50",
+			"ammunition_rocket_r-310",
+			"ammunition_rocket_plt-2026",
+			"ammunition_rocket_plt-2021",
+			"ammunition_rocket_plt-3030",
+			"ammunition_rocketlauncher_eco-10",
+			"ammunition_rocketlauncher_hstrm-01",
+			"ammunition_rocketlauncher_ubr-100"
+		};
 	}
 
 	[CompilerGenerated]
-	private GEnum5 genum5_0;
+	private LazyBindingValue<string, Hero> method_2(string string_0)
+	{
+		GClass818.<>c__DisplayClass10_0 CS$<>8__locals1 = new GClass818.<>c__DisplayClass10_0();
+		CS$<>8__locals1.string_0 = string_0;
+		return base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0));
+	}
+
+	[CompilerGenerated]
+	private IRowEntry method_3(string string_0, Func<Hero, string> func_0)
+	{
+		return StatisticsCategory.WithName(string_0, new IValueWrapper<string>[]
+		{
+			base.L<Hero>(func_0)
+		});
+	}
+
+	[CompilerGenerated]
+	private IRowEntry method_4(string string_0, Func<Hero, string> func_0)
+	{
+		return StatisticsCategory.WithName("Ship_" + string_0, new IValueWrapper<string>[]
+		{
+			base.L<Hero>(func_0)
+		});
+	}
+
+	[CompilerGenerated]
+	private readonly Hero hero_0;
+
+	[CompilerGenerated]
+	private readonly GClass814 gclass814_0;
+
+	public static readonly List<string> list_0;
+
+	public static readonly List<string> list_1;
 }

@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 
-public class GClass1<biqvvvVnS8i9l0oUiJ> : IEnumerator<biqvvvVnS8i9l0oUiJ>, IDisposable, IEnumerator
+public class GClass1<HJmLgGJ7fhoLjk15uR> : IEnumerator<HJmLgGJ7fhoLjk15uR>, IDisposable, IEnumerator
 {
-	public biqvvvVnS8i9l0oUiJ Current
+	public HJmLgGJ7fhoLjk15uR Current
 	{
 		get
 		{
@@ -31,9 +31,9 @@ public class GClass1<biqvvvVnS8i9l0oUiJ> : IEnumerator<biqvvvVnS8i9l0oUiJ>, IDis
 		this.ienumerator_0.Reset();
 	}
 
-	public GClass1(IEnumerator<biqvvvVnS8i9l0oUiJ> ienumerator_1, object object_1)
+	public GClass1(IEnumerator<HJmLgGJ7fhoLjk15uR> ienumerator_1, object object_1)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		if (ienumerator_1 == null || object_1 == null)
 		{
@@ -72,7 +72,7 @@ public class GClass1<biqvvvVnS8i9l0oUiJ> : IEnumerator<biqvvvVnS8i9l0oUiJ>, IDis
 		}
 	}
 
-	private IEnumerator<biqvvvVnS8i9l0oUiJ> ienumerator_0;
+	private IEnumerator<HJmLgGJ7fhoLjk15uR> ienumerator_0;
 
 	private object object_0;
 

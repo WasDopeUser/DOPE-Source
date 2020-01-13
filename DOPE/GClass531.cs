@@ -8,7 +8,7 @@ public class GClass531 : GInterface0
 	{
 		get
 		{
-			return 18035;
+			return 25038;
 		}
 	}
 
@@ -16,49 +16,37 @@ public class GClass531 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass531(string string_1 = "", string string_2 = "")
+	public GClass531()
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
-		this.Value = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.string_0 = string_1;
-		this.Value = string_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 18035;
+		return 25038;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.Value = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(18035);
+		binaryStream_0.smethod_7(25038);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_3(this.Value);
 	}
-
-	public string string_0;
-
-	public string Value;
 }

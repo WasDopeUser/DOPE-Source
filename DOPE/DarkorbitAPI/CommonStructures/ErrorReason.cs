@@ -13,6 +13,7 @@ namespace DarkorbitAPI.CommonStructures
 		NoLicense,
 		RemoteServiceFailure,
 		CantLogin,
-		LoggedOut
+		LoggedOut,
+		ProxyError
 	}
 }

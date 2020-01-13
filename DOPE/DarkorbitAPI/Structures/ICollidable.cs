@@ -11,6 +11,8 @@ namespace DarkorbitAPI.Structures
 
 		bool Active { get; set; }
 
+		CollidableType Type { get; }
+
 		CollidableType imethod_0(Map map_0);
 
 		Rectangle imethod_1();

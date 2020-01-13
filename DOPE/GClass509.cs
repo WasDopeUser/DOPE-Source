@@ -8,7 +8,7 @@ public class GClass509 : GInterface0
 	{
 		get
 		{
-			return 22332;
+			return 10813;
 		}
 	}
 
@@ -16,54 +16,53 @@ public class GClass509 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 12;
 		}
 	}
 
-	public GClass509(uint uint_0 = 0U, int int_2 = 0, int int_3 = 0)
+	public GClass509(uint uint_0 = 0U, double double_1 = 0.0, int int_1 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.Status = uint_0;
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.Mode = uint_0;
+		this.double_0 = double_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22332;
+		return 10813;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.double_0 = binaryStream_0.ReadDouble();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
-		this.Status = (uint)binaryStream_0.smethod_1();
+		this.int_0 = (U.smethod_0(this.int_0, 2) | this.int_0 << 30);
+		this.Mode = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(22332);
+		binaryStream_0.smethod_7(10813);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		binaryStream_0.fUeiimuocMk(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		binaryStream_0.lwAiiEjwcUm(this.Status);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_4(this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		binaryStream_0.smethod_6(this.Mode);
 	}
+
+	public double double_0;
 
 	public int int_0;
 
-	public int int_1;
-
-	public uint Status;
+	public uint Mode;
 }

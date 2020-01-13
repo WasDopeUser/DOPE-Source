@@ -1,95 +1,155 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
+using DarkorbitAPI;
+using DarkorbitAPI.Structures;
+using DOPE.Common;
+using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
 
-public class GClass834 : GClass829
+public class GClass834 : GClass832
 {
-	public override int Cooldown
+	public GClass845 Behavior
 	{
+		[CompilerGenerated]
 		get
 		{
-			if (!this.method_2())
+			return this.gclass845_0;
+		}
+		[CompilerGenerated]
+		private set
+		{
+			if (object.Equals(this.gclass845_0, value))
 			{
-				return 300000;
+				return;
 			}
-			return 60000;
+			this.gclass845_0 = value;
+			this.method_0(Class10.propertyChangedEventArgs_2);
 		}
+	}
+
+	public int FailedJumpCount
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.int_2;
+		}
+		[CompilerGenerated]
+		private set
+		{
+			if (this.int_2 == value)
+			{
+				return;
+			}
+			this.int_2 = value;
+			this.method_0(Class10.propertyChangedEventArgs_19);
+		}
+	}
+
+	public int method_3()
+	{
+		MenuItem menuItem;
+		return (int)(base.C.Hero.MenuItems.TryGetValue("ammunition_ggportal_quarantine-zone-cpu", out menuItem) ? menuItem.CounterValue : 0.0);
+	}
+
+	public GClass834(GClass822 gclass822_1)
+	{
+		Class13.tMHx78BzgCM8j();
+		base..ctor(gclass822_1, TargetMap.GG_QZ);
+		this.Behavior = new GClass845(gclass822_1, this);
+	}
+
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	{
+		if (botProfile_1 == null)
+		{
+			return null;
+		}
+		List<MapProfile> maps = botProfile_1.Maps;
+		if (maps == null)
+		{
+			return null;
+		}
+		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass834.<>c.<>c_0.method_0));
+	}
+
+	public override int UpdatePriority()
+	{
+		MapProfile mapProfile = base.MapProfile;
+		if (mapProfile != null)
+		{
+			int qz_GroupSize = mapProfile.QZ_GroupSize;
+		}
+		int num = this.method_3();
+		if ((base.C.Hero.IsInitialized || base.C.Hero.LastStatUpdate.smethod_0(3600000)) && (num == 0 || base.C.Hero.Group.Members.Count < 2))
+		{
+			return int.MinValue;
+		}
+		return base.UpdatePriority();
+	}
+
+	protected override void OnBind()
+	{
+		base.OnBind();
+		base.C.Game.LogMessage += this.method_4;
+	}
+
+	protected override void OnUnbind()
+	{
+		base.OnUnbind();
+		base.C.Game.LogMessage -= this.method_4;
+	}
+
+	private void method_4(GameManager gameManager_0, GClass269 gclass269_0)
+	{
+		if (gclass269_0.string_0 == "0|A|STM|jumpgate_failed_no_key_activated" && this.method_3() > 0)
+		{
+			base.C.Server.method_14("ammunition_ggportal_quarantine-zone-cpu", false, false);
+			return;
+		}
+	}
+
+	public override GClass835 GetBehavior()
+	{
+		if (base.C.Map.MapId == 229)
+		{
+			return this.Behavior;
+		}
+		return base.GetBehavior();
+	}
+
+	public override void ClearStats()
+	{
+		base.ClearStats();
+		this.FailedJumpCount = 0;
+	}
+
+	public override bool TrySwitchMap(out int int_3)
+	{
+		if (!base.C.IsStopping)
+		{
+			if (base.State == ModuleState.Started)
+			{
+				int_3 = MapUtils.smethod_0(base.C.MapProfile.TargetMap.GetName(), base.C.Hero.FactionId);
+				return int_3 != base.C.Map.MapId;
+			}
+		}
+		int_3 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
+		return true;
+	}
+
+	public override void HandleError(GClass824.GEnum10 genum10_0)
+	{
+		TimeSpan value = TimeSpan.FromMinutes(3.0);
+		base.C.Timeout = new DateTime?(DateTime.Now.Add(value));
+		base.C.method_13(true, false);
 	}
 
 	[CompilerGenerated]
-	public bool method_2()
-	{
-		return this.bool_1;
-	}
+	private GClass845 gclass845_0;
 
 	[CompilerGenerated]
-	public void method_3(bool bool_2)
-	{
-		this.bool_1 = bool_2;
-	}
-
-	public GClass834(GClass810 gclass810_1)
-	{
-		Class8.xDph7tozmh5WD();
-		this.bool_1 = true;
-		base..ctor(gclass810_1, "SkylabWorker");
-	}
-
-	public void method_4()
-	{
-		this.method_3(true);
-		GClass78 skylab = base.Context.Game.Web.Skylab;
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.Hangar;
-		DateTimeOffset? dateTimeOffset = skylab.method_0().method_3();
-		skylab.method_1().GetAwaiter().GetResult();
-		DateTimeOffset? dateTimeOffset2 = skylab.method_0().method_3();
-		if (dateTimeOffset != null && dateTimeOffset2 == null)
-		{
-			base.Log.Info("Transfer complete. Refreshing");
-			base.Context.QrIiaYslyyT<GClass833>().imethod_1();
-			return;
-		}
-		if (dateTimeOffset2 != null)
-		{
-			base.Log.Info<DateTimeOffset>("Transfer in progress. Complete at {time}", dateTimeOffset2.Value);
-			return;
-		}
-		int num = (int)base.Context.Hero.ResourcePromerium;
-		int num2 = (int)base.Context.Hero.ResourceSeprom;
-		if (!base.Context.Game.Connection.Socket.BdaNsdwBbq() || !base.Context.Hero.IsInitialized)
-		{
-			num = hangar.method_2("resource_ore_promerium");
-			num2 = hangar.method_2("resource_ore_seprom");
-		}
-		int skylab_KeepPromerium = base.Context.Account.Skylab_KeepPromerium;
-		int skylab_KeepSeprom = base.Context.Account.Skylab_KeepSeprom;
-		int num3 = Math.Min(Math.Max(0, skylab_KeepPromerium - num), skylab.method_0().method_2("resource_ore_promerium"));
-		int num4 = Math.Min(Math.Max(0, skylab_KeepSeprom - num2), skylab.method_0().method_2("resource_ore_seprom"));
-		base.Log.Info<int, int>("Need to transfer {promerium} promerium & {seprom} seprom", num3, num4);
-		num4 = Math.Min(num4, 90);
-		int val = 100 - num4;
-		num3 = Math.Min(num3, val);
-		if (num3 + num4 == 0)
-		{
-			return;
-		}
-		Thread.Sleep(2000);
-		base.Log.Info<int, int>("Transferring a batch of {promerium} promerium & {seprom} seprom", num3, num4);
-		bool result = skylab.method_2(num3, num4).GetAwaiter().GetResult();
-		this.method_3(result);
-		base.Log.Info("Transfer state: {state}", result);
-	}
-
-	public override void Execute()
-	{
-		this.method_4();
-	}
-
-	public override bool vmethod_0()
-	{
-		return base.Context.Game.Web.Equipment.Hangar != null && base.Context.Account.Skylab_KeepPromerium + base.Context.Account.Skylab_KeepSeprom > 0;
-	}
-
-	[CompilerGenerated]
-	private bool bool_1;
+	private int int_2;
 }

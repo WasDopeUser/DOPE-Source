@@ -1,7 +1,9 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -32,7 +34,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Name>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.Name);
+				this.<>OnPropertyChanged(Class7.Name);
 			}
 		}
 
@@ -52,7 +54,15 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Maps>k__BackingField = value;
-				this.<>OnPropertyChanged(Class3.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
+			}
+		}
+
+		private void OnMapAdded(MapProfile map)
+		{
+			if (map.TargetMap == TargetMap.P52)
+			{
+				map.FleeFromEnemySeen = false;
 			}
 		}
 
@@ -68,7 +78,7 @@ namespace DOPE.Common.Models
 				if (map != 0 && fieldInfo.GetCustomAttribute<NotMappedAttribute>() == null)
 				{
 					mapSet.Add(map);
-					bool flag = MapUtils.IsGG(map);
+					bool flag = MapUtils.smethod_4(map);
 					MapProfile mapProfile = this.Maps.FirstOrDefault((MapProfile t) => t.TargetMap == (TargetMap)map);
 					if (mapProfile == null)
 					{
@@ -78,16 +88,15 @@ namespace DOPE.Common.Models
 						mapProfile2.Priority = (flag ? 999 : 0);
 						mapProfile = mapProfile2;
 						maps.Add(mapProfile2);
-						if (map == 92)
-						{
-							mapProfile.FleeFromEnemySeen = false;
-						}
+						this.OnMapAdded(mapProfile);
 					}
 					mapProfile.Fill(null);
 				}
 			}
 			this.AddPalladiumModule();
 			this.AddCubikonsModule();
+			this.AddFrozenLabirynthModule();
+			this.AddQuarantineZone();
 			this.Maps = (from t in this.Maps
 			where mapSet.Contains((int)t.TargetMap) || t.ModuleType > ModuleType.Default
 			orderby t.ModuleType, t.TargetMap
@@ -118,7 +127,7 @@ namespace DOPE.Common.Models
 				npc.Enabled = true;
 				npc.Priority = -1;
 			});
-			int battlerayId = NpcUtils.NpcType.smethod_1("Battleray").Id;
+			int battlerayId = NpcUtils.NpcType.smethod_3("Battleray").Id;
 			mapProfile.NpcWhitelist.First((SelectedNpcModel t) => t.NpcId == battlerayId).Enabled = false;
 		}
 
@@ -134,7 +143,7 @@ namespace DOPE.Common.Models
 				maps.Add(mapProfile2);
 			}
 			mapProfile.TargetMap = TargetMap.X6;
-			int cubikonId = NpcUtils.NpcType.smethod_1("Cubikon").Id;
+			int cubikonId = NpcUtils.NpcType.smethod_3("Cubikon").Id;
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;
@@ -142,7 +151,80 @@ namespace DOPE.Common.Models
 				if (npc.NpcId == cubikonId)
 				{
 					npc.Priority = 10;
+					npc.IgnoreOwnership = true;
 				}
+			});
+		}
+
+		private void AddFrozenLabirynthModule()
+		{
+			bool frozenLabirynthEnabled = Constants.FrozenLabirynthEnabled;
+			MapProfile mapProfile = this.Maps.FirstOrDefault((MapProfile t) => t.ModuleType == ModuleType.FrozenLabirynth);
+			if (!frozenLabirynthEnabled)
+			{
+				if (mapProfile != null)
+				{
+					this.Maps.Remove(mapProfile);
+				}
+				return;
+			}
+			if (mapProfile == null)
+			{
+				List<MapProfile> maps = this.Maps;
+				MapProfile mapProfile2 = new MapProfile();
+				mapProfile2.ModuleType = ModuleType.FrozenLabirynth;
+				mapProfile2.FleeFromEnemySeen = false;
+				mapProfile = mapProfile2;
+				maps.Add(mapProfile2);
+			}
+			mapProfile.TargetMap = TargetMap.FL_ATLAS_A;
+			mapProfile.Fill(delegate(SelectedNpcModel npc)
+			{
+				npc.Enabled = true;
+			});
+		}
+
+		private void AddQuarantineZone()
+		{
+			MapProfile mapProfile = this.Maps.FirstOrDefault((MapProfile t) => t.ModuleType == ModuleType.QuarantineZone);
+			if (mapProfile == null)
+			{
+				List<MapProfile> maps = this.Maps;
+				MapProfile mapProfile2 = new MapProfile();
+				mapProfile2.ModuleType = ModuleType.QuarantineZone;
+				mapProfile2.MinHp = 15;
+				mapProfile = mapProfile2;
+				maps.Add(mapProfile2);
+			}
+			mapProfile.TargetMap = TargetMap.GG_QZ;
+			mapProfile.FleeFromEnemySeen = false;
+			int kristallonId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Viral, NpcUtils.N_Kristallon).Id;
+			int bossId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_GygerimOverlord).Id;
+			int rocketId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_PlagueRocket).Id;
+			mapProfile.Fill(delegate(SelectedNpcModel npc)
+			{
+				npc.Enabled = true;
+				if (npc.NpcId == kristallonId || npc.NpcId == bossId)
+				{
+					npc.GroupAttackMode = GroupAttackMode.Assist;
+				}
+				if (npc.NpcId == rocketId)
+				{
+					npc.Priority = 80;
+					return;
+				}
+				if (npc.NpcId == kristallonId)
+				{
+					npc.Priority = 40;
+					npc.CircleRange = 580;
+					return;
+				}
+				if (npc.NpcId == bossId)
+				{
+					npc.Priority = 0;
+					return;
+				}
+				npc.Priority = 60;
 			});
 		}
 
@@ -157,6 +239,8 @@ namespace DOPE.Common.Models
 			base..ctor();
 		}
 
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

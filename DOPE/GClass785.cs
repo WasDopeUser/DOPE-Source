@@ -1,84 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using DarkorbitAPI.CommonStructures;
 
-public class GClass785 : GClass781
+public class GClass785
 {
-	[CompilerGenerated]
-	public GClass792 method_0()
+	public GClass785(byte[] byte_0 = null)
 	{
-		return this.gclass792_0;
-	}
-
-	[CompilerGenerated]
-	private void ivazqjrfMn(GClass792 gclass792_2)
-	{
-		this.gclass792_0 = gclass792_2;
-	}
-
-	[CompilerGenerated]
-	public GClass792 method_1()
-	{
-		return this.gclass792_1;
-	}
-
-	[CompilerGenerated]
-	private void method_2(GClass792 gclass792_2)
-	{
-		this.gclass792_1 = gclass792_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_1().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
-		{
-			throw new Exception();
-		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		if (vector.Length != 12)
-		{
-			Vector<uint> vector3 = vector2;
-			Vector<uint> vector4 = vector;
-			vector = vector3;
-			vector2 = vector4;
-		}
-		this.ivazqjrfMn(new GClass792(new Vector<uint>(vector), new Vector<uint>(vector2)));
-		this.method_2(new GClass792(new Vector<uint>(vector), new Vector<uint>(vector2)));
-	}
-
-	public GClass785()
-	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
+		this.int_1 = 0;
+		this.int_0 = 0;
+		if (byte_0 != null)
+		{
+			this.method_0(byte_0);
+		}
 	}
 
-	[CompilerGenerated]
-	private GClass792 gclass792_0;
+	public void method_0(byte[] byte_0)
+	{
+		this.State = new byte[256];
+		int i;
+		for (i = 0; i < 256; i++)
+		{
+			this.State[i] = (byte)i;
+		}
+		int num = 0;
+		i = 0;
+		int num2 = num;
+		while (i < 256)
+		{
+			num2 = (num2 + (int)this.State[i] + (int)byte_0[i % byte_0.Length] & 255);
+			int num3 = (int)this.State[i];
+			this.State[i] = this.State[num2];
+			this.State[num2] = (byte)(num3 & 255);
+			i++;
+		}
+		this.int_1 = 0;
+		this.int_0 = 0;
+	}
 
-	[CompilerGenerated]
-	private GClass792 gclass792_1;
+	public uint method_1()
+	{
+		this.int_0 = (this.int_0 + 1 & 255);
+		this.int_1 = (this.int_1 + (int)this.State[this.int_0] & 255);
+		int num = (int)this.State[this.int_0];
+		this.State[this.int_0] = this.State[this.int_1];
+		this.State[this.int_1] = (byte)(num & 255);
+		return (uint)this.State[num + (int)this.State[this.int_0] & 255];
+	}
+
+	public void method_2(byte[] byte_0, int int_2, int int_3)
+	{
+		if (this.State == null)
+		{
+			return;
+		}
+		uint num = 0U;
+		while ((ulong)num < (ulong)((long)int_3))
+		{
+			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.method_1()) & 255U);
+			num += 1U;
+		}
+	}
+
+	public byte[] State;
+
+	public int int_0;
+
+	public int int_1;
 }

@@ -8,7 +8,7 @@ public class GClass687 : GInterface0
 	{
 		get
 		{
-			return 4388;
+			return 2495;
 		}
 	}
 
@@ -16,74 +16,45 @@ public class GClass687 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass687(GClass271 gclass271_1 = null, GClass530 gclass530_1 = null, GClass417 gclass417_1 = null)
+	public GClass687(int int_1 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (gclass271_1 == null)
-		{
-			this.gclass271_0 = new GClass271(null);
-		}
-		else
-		{
-			this.gclass271_0 = gclass271_1;
-		}
-		if (gclass530_1 == null)
-		{
-			this.gclass530_0 = new GClass530(false, false, false, false);
-		}
-		else
-		{
-			this.gclass530_0 = gclass530_1;
-		}
-		if (gclass417_1 == null)
-		{
-			this.gclass417_0 = new GClass417(false);
-			return;
-		}
-		this.gclass417_0 = gclass417_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 4388;
+		return 2495;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass530_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass530);
-		this.gclass530_0.imethod_1(binaryStream_0);
-		this.gclass417_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass417);
-		this.gclass417_0.imethod_1(binaryStream_0);
-		this.gclass271_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass271);
-		this.gclass271_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(4388);
+		binaryStream_0.smethod_7(2495);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass530_0.imethod_2(binaryStream_0);
-		this.gclass417_0.imethod_2(binaryStream_0);
-		this.gclass271_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-4812);
+		binaryStream_0.smethod_4(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
 	}
 
-	public GClass530 gclass530_0;
-
-	public GClass417 gclass417_0;
-
-	public GClass271 gclass271_0;
+	public int int_0;
 }

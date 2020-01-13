@@ -8,7 +8,7 @@ public class GClass317 : GInterface0
 	{
 		get
 		{
-			return 17243;
+			return 3428;
 		}
 	}
 
@@ -16,63 +16,64 @@ public class GClass317 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass317(GClass446 gclass446_1 = null, GClass469 gclass469_1 = null)
+	public GClass317(string string_2 = "", string string_3 = "", GClass334 gclass334_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		if (gclass446_1 == null)
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		if (gclass334_1 == null)
 		{
-			this.gclass446_0 = new GClass446(0U);
-		}
-		else
-		{
-			this.gclass446_0 = gclass446_1;
-		}
-		if (gclass469_1 == null)
-		{
-			this.gclass469_0 = new GClass469(0, null, null, null, null, "", "");
+			this.gclass334_0 = new GClass334(0U);
 			return;
 		}
-		this.gclass469_0 = gclass469_1;
+		this.gclass334_0 = gclass334_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17243;
+		return 3428;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass446_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass446);
-		this.gclass446_0.imethod_1(binaryStream_0);
+		this.gclass334_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass334);
+		this.gclass334_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
-		this.gclass469_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass469);
-		this.gclass469_0.imethod_1(binaryStream_0);
+		this.string_1 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(17243);
+		binaryStream_0.smethod_7(3428);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass446_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(-9675);
-		this.gclass469_0.imethod_2(binaryStream_0);
+		this.gclass334_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(5028);
+		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_7(-23835);
 	}
 
-	public GClass446 gclass446_0;
+	public GClass334 gclass334_0;
 
-	public GClass469 gclass469_0;
+	public string string_0;
+
+	public string string_1;
 }

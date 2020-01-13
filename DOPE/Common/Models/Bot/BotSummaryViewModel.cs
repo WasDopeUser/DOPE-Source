@@ -5,8 +5,8 @@ using DarkorbitAPI.Structures;
 
 namespace DOPE.Common.Models.Bot
 {
-	[Guid("9EB44B2F-6E4B-4E0C-B015-3C4E1265CF14")]
 	[DataContract]
+	[Guid("9EB44B2F-6E4B-4E0C-B015-3C4E1265CF14")]
 	public class BotSummaryViewModel
 	{
 		[DataMember(Order = 1)]

@@ -11,6 +11,6 @@ namespace DOPE.Common.Models
 
 		void DetachPErkava();
 
-		bool AttachPErkava(GClass228 obj);
+		bool AttachPErkava(GClass241 obj);
 	}
 }

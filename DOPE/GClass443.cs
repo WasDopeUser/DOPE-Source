@@ -8,7 +8,7 @@ public class GClass443 : GInterface0
 	{
 		get
 		{
-			return 8032;
+			return 16761;
 		}
 	}
 
@@ -16,65 +16,57 @@ public class GClass443 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 12;
 		}
 	}
 
-	public GClass443(Vector<int> vector_1 = null)
+	public GClass443(int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<int>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.int_2 = int_3;
+		this.int_0 = int_4;
+		this.int_1 = int_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8032;
+		return 16761;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
 		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 15 | U.smethod_0(num3, 17));
-			this.vector_0.method_0(num3);
-			num++;
-		}
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 15 | U.smethod_0(this.int_2, 17));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(8032);
+		binaryStream_0.smethod_7(16761);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(19720);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (int num in this.vector_0)
-		{
-			binaryStream_0.fUeiimuocMk(U.smethod_0(num, 15) | num << 17);
-		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_4(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		binaryStream_0.smethod_7(-31863);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 15) | this.int_2 << 17);
 	}
 
-	public Vector<int> vector_0;
+	public int int_0;
+
+	public int int_1;
+
+	public int int_2;
 }

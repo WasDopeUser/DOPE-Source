@@ -8,7 +8,7 @@ public class GClass632 : GInterface0
 	{
 		get
 		{
-			return 12195;
+			return 20384;
 		}
 	}
 
@@ -16,47 +16,64 @@ public class GClass632 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 8;
 		}
 	}
 
-	public GClass632(string string_1 = "")
+	public GClass632(GClass201 gclass201_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.string_0 = string_1;
+		if (gclass201_1 == null)
+		{
+			this.gclass201_0 = new GClass201(0U);
+		}
+		else
+		{
+			this.gclass201_0 = gclass201_1;
+		}
+		this.int_1 = int_2;
+		this.int_0 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12195;
+		return 20384;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
+		this.gclass201_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(12195);
+		binaryStream_0.smethod_7(20384);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(-7471);
-		binaryStream_0.smethod_5(-32403);
-		binaryStream_0.smethod_3(this.string_0);
+		this.gclass201_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-6572);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
 	}
 
-	public string string_0;
+	public GClass201 gclass201_0;
+
+	public int int_0;
+
+	public int int_1;
 }

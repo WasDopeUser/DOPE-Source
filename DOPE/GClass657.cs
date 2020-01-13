@@ -8,7 +8,7 @@ public class GClass657 : GInterface0
 	{
 		get
 		{
-			return 32065;
+			return 13802;
 		}
 	}
 
@@ -16,80 +16,55 @@ public class GClass657 : GInterface0
 	{
 		get
 		{
-			return 13;
+			return 0;
 		}
 	}
 
-	public GClass657(int int_1 = 0, int int_2 = 0, bool bool_1 = false, Vector<GClass721> vector_1 = null)
+	public GClass657(GClass761 gclass761_1 = null, uint uint_0 = 0U)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
-		this.Uridium = int_2;
-		this.bool_0 = bool_1;
-		if (vector_1 == null)
+		if (gclass761_1 == null)
 		{
-			this.vector_0 = new Vector<GClass721>();
-			return;
+			this.gclass761_0 = new GClass761(0U);
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.gclass761_0 = gclass761_1;
+		}
+		this.TrtIsyIhcr = uint_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32065;
+		return 13802;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 13;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass721 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass721;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-		this.Uridium = binaryStream_0.smethod_0();
-		this.Uridium = (this.Uridium << 7 | U.smethod_0(this.Uridium, 25));
+		this.TrtIsyIhcr = (uint)binaryStream_0.smethod_1();
+		this.gclass761_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass761);
+		this.gclass761_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(32065);
+		binaryStream_0.smethod_7(13802);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (GClass721 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.Uridium, 7) | this.Uridium << 25);
+		binaryStream_0.smethod_6(this.TrtIsyIhcr);
+		this.gclass761_0.imethod_2(binaryStream_0);
 	}
 
-	public int int_0;
+	public uint TrtIsyIhcr;
 
-	public bool bool_0;
-
-	public Vector<GClass721> vector_0;
-
-	public int Uridium;
+	public GClass761 gclass761_0;
 }

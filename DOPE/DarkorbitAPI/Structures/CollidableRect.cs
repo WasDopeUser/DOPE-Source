@@ -10,7 +10,7 @@ namespace DarkorbitAPI.Structures
 
 		public CollidableRect(string string_0, bool bool_0, int int_0, int int_1, int int_2, int int_3, CollidableType collidableType_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(collidableType_0, 2, string_0);
 			base.Shape = 2;
 			base.Active = bool_0;

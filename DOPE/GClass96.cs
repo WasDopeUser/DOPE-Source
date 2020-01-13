@@ -1,60 +1,31 @@
 ﻿using System;
 using DarkorbitAPI;
-using DarkorbitAPI.Structures;
 
 public class GClass96 : GInterface4
 {
-	public GroupManager Group
+	public GameManager Game
 	{
 		get
 		{
-			return ConnectionManager.Instance.Value.Game.Hero.Group;
+			return ConnectionManager.Instance.Value.Game;
 		}
 	}
 
-	public void method_0(GClass185 gclass185_0)
+	public void method_0(GClass188 gclass188_0)
 	{
-		this.Group.method_0(gclass185_0);
-	}
-
-	public void method_1(GClass203 gclass203_0)
-	{
-		this.Group.method_1(gclass203_0);
-	}
-
-	public void method_2(GClass182 gclass182_0)
-	{
-		this.Group.method_4(gclass182_0);
-	}
-
-	public void method_3(GClass183 gclass183_0)
-	{
-		this.Group.method_3(gclass183_0);
-	}
-
-	public void method_4(GClass184 gclass184_0)
-	{
-		this.Group.method_2(gclass184_0);
-	}
-
-	public void method_5(GClass201 gclass201_0)
-	{
-		this.Group.zqvcnxOcgC(gclass201_0);
-	}
-
-	public void method_6(GClass202 gclass202_0)
-	{
-		this.Group.method_5(gclass202_0);
-	}
-
-	public void method_7(GClass204 gclass204_0)
-	{
-		this.Group.method_6(gclass204_0);
+		this.Game.Hero.method_23("resource_labirynth-keys", (double)gclass188_0.int_0);
+		this.Game.FrozenLabirynthOpening = DateTimeOffset.Now.AddSeconds(gclass188_0.gclass189_0.double_0);
+		if (gclass188_0.gclass189_0.double_1 > 1.0)
+		{
+			this.Game.FrozenLabirynthClosing = DateTimeOffset.Now.AddSeconds(gclass188_0.gclass189_0.double_1);
+			return;
+		}
+		this.Game.FrozenLabirynthClosing = DateTimeOffset.Now.AddSeconds(-1.0);
 	}
 
 	public GClass96()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

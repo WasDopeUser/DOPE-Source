@@ -1,77 +1,60 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass776<a5p1kIJcfy7TtMh71PH> : GInterface6 where a5p1kIJcfy7TtMh71PH : GInterface6
+public class GClass776 : GInterface0
 {
-	[CompilerGenerated]
-	public virtual a5p1kIJcfy7TtMh71PH vmethod_0()
+	short GInterface0.Id
 	{
-		return this.gparam_0;
-	}
-
-	[CompilerGenerated]
-	public virtual void vmethod_1(a5p1kIJcfy7TtMh71PH eKFsudJrrsKBRN26L1K)
-	{
-		this.gparam_0 = eKFsudJrrsKBRN26L1K;
-	}
-
-	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH = this.vmethod_0();
-		ref a5p1kIJcfy7TtMh71PH ptr = ref a5p1kIJcfy7TtMh71PH;
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH2 = default(a5p1kIJcfy7TtMh71PH);
-		if (a5p1kIJcfy7TtMh71PH2 == null)
+		get
 		{
-			a5p1kIJcfy7TtMh71PH2 = a5p1kIJcfy7TtMh71PH;
-			ptr = ref a5p1kIJcfy7TtMh71PH2;
-			if (a5p1kIJcfy7TtMh71PH2 == null)
-			{
-				return;
-			}
+			return 7102;
 		}
-		ptr.imethod_0(byte_0, int_0, int_1);
 	}
 
-	public virtual void imethod_1(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH = this.vmethod_0();
-		ref a5p1kIJcfy7TtMh71PH ptr = ref a5p1kIJcfy7TtMh71PH;
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH2 = default(a5p1kIJcfy7TtMh71PH);
-		if (a5p1kIJcfy7TtMh71PH2 == null)
+		get
 		{
-			a5p1kIJcfy7TtMh71PH2 = a5p1kIJcfy7TtMh71PH;
-			ptr = ref a5p1kIJcfy7TtMh71PH2;
-			if (a5p1kIJcfy7TtMh71PH2 == null)
-			{
-				return;
-			}
+			return 4;
 		}
-		ptr.imethod_1(byte_0, int_0, int_1);
 	}
 
-	public virtual void imethod_2()
+	public GClass776(int int_1 = 0)
 	{
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH = this.vmethod_0();
-		ref a5p1kIJcfy7TtMh71PH ptr = ref a5p1kIJcfy7TtMh71PH;
-		a5p1kIJcfy7TtMh71PH a5p1kIJcfy7TtMh71PH2 = default(a5p1kIJcfy7TtMh71PH);
-		if (a5p1kIJcfy7TtMh71PH2 == null)
-		{
-			a5p1kIJcfy7TtMh71PH2 = a5p1kIJcfy7TtMh71PH;
-			ptr = ref a5p1kIJcfy7TtMh71PH2;
-			if (a5p1kIJcfy7TtMh71PH2 == null)
-			{
-				return;
-			}
-		}
-		ptr.imethod_2();
-	}
-
-	protected GClass776()
-	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
+		this.int_0 = int_1;
 	}
 
-	[CompilerGenerated]
-	private a5p1kIJcfy7TtMh71PH gparam_0;
+	public virtual int vmethod_0()
+	{
+		return 7102;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 4;
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+	}
+
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(7102);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-31182);
+		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+	}
+
+	public int int_0;
 }

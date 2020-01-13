@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass650 : GClass649, GInterface0
+public class GClass650 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 6771;
+			return 32254;
 		}
 	}
 
@@ -16,45 +16,54 @@ public class GClass650 : GClass649, GInterface0
 	{
 		get
 		{
-			return 8;
+			return 10;
 		}
 	}
 
-	public GClass650(string string_1 = "", int int_1 = 0)
+	public GClass650(double double_1 = 0.0, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(string_1);
-		this.int_0 = int_1;
+		Class13.tMHx78BzgCM8j();
+		base..ctor();
+		this.double_0 = double_1;
+		this.bool_0 = bool_2;
+		this.bool_1 = bool_3;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 6771;
+		return 32254;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 8;
+		return 10;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(6771);
+		binaryStream_0.smethod_7(32254);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.fUeiimuocMk(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_7(20214);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public int int_0;
+	public bool bool_0;
+
+	public bool bool_1;
+
+	public double double_0;
 }

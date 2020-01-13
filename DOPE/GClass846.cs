@@ -1,79 +1,75 @@
 ﻿using System;
-using System.Net;
-using System.Net.Sockets;
 using System.Runtime.CompilerServices;
-using System.Threading;
-using PErkava;
+using NLog;
 
-public class GClass846
+public abstract class GClass846 : GInterface9
 {
+	public GClass822 Context { get; }
+
+	public Logger Log { get; set; }
+
 	[CompilerGenerated]
-	public TcpListener method_0()
+	public DateTimeOffset method_0()
 	{
-		return this.tcpListener_0;
+		return this.dateTimeOffset_0;
 	}
 
 	[CompilerGenerated]
-	public void method_1(TcpListener tcpListener_1)
+	public void method_1(DateTimeOffset dateTimeOffset_1)
 	{
-		this.tcpListener_0 = tcpListener_1;
+		this.dateTimeOffset_0 = dateTimeOffset_1;
 	}
 
-	[CompilerGenerated]
-	public Thread method_2()
-	{
-		return this.zDbiPxarGoA;
-	}
+	public abstract int Cooldown { get; }
 
-	[CompilerGenerated]
-	public void method_3(Thread thread_0)
+	public GClass846(GClass822 gclass822_1, string string_0)
 	{
-		this.zDbiPxarGoA = thread_0;
-	}
-
-	public GClass846()
-	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.method_1(new TcpListener(IPAddress.Any, 8080));
-		this.method_3(new Thread(new ThreadStart(this.method_4)));
-		this.method_2().IsBackground = true;
+		this.Context = gclass822_1;
+		this.Log = this.Context.method_71("BackgroundLogic-" + string_0);
 	}
 
-	private void method_4()
+	void GInterface9.Execute()
 	{
+		this.bool_0 = true;
 		try
 		{
-			this.method_0().Start();
+			this.Execute();
 		}
-		catch
+		catch (Exception ex)
 		{
-			PErkava.IsSupported = false;
-			return;
+			this.Log.Error("Error executing background task {exception}", ex.ToString());
 		}
-		try
+		finally
 		{
-			IL_17:
-			TcpClient parameter = this.method_0().AcceptTcpClient();
-			new Thread(new ParameterizedThreadStart(GClass846.<>c.<>c_0.method_0))
-			{
-				IsBackground = true
-			}.Start(parameter);
+			this.bool_0 = false;
+			this.method_1(DateTimeOffset.Now);
 		}
-		catch
-		{
-		}
-		goto IL_17;
 	}
 
-	public void Start()
+	public abstract void Execute();
+
+	public abstract bool vmethod_0();
+
+	bool GInterface9.pHJPCQQcatL()
 	{
-		this.method_2().Start();
+		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
+	}
+
+	public virtual void imethod_1()
+	{
+		this.method_1(DateTimeOffset.MinValue);
 	}
 
 	[CompilerGenerated]
-	private TcpListener tcpListener_0;
+	private readonly GClass822 gclass822_0;
 
 	[CompilerGenerated]
-	private Thread zDbiPxarGoA;
+	private Logger logger_0;
+
+	[CompilerGenerated]
+	private DateTimeOffset dateTimeOffset_0;
+
+	private volatile bool bool_0;
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DOPE.UI.Models;
 
@@ -91,7 +93,7 @@ namespace DOPE.UI.Controls
 
 		public TreeHeaderNode(CommandViewModel commandViewModel_0, DateTime dateTime_0, bool bool_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this.PropertyChanged = new PropertyChangedEventHandler(TreeHeaderNode.<>c.<>9.method_0);
 			base..ctor();
 			this.Command = commandViewModel_0;
@@ -105,6 +107,8 @@ namespace DOPE.UI.Controls
 			this.Command = this.Command;
 		}
 
+		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_1(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

@@ -8,7 +8,7 @@ public class GClass301 : GInterface0
 	{
 		get
 		{
-			return 27126;
+			return 20888;
 		}
 	}
 
@@ -16,54 +16,39 @@ public class GClass301 : GInterface0
 	{
 		get
 		{
-			return 3;
+			return 0;
 		}
 	}
 
-	public GClass301(bool bool_3 = false, bool bool_4 = false, bool bool_5 = false)
+	public GClass301()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.bool_0 = bool_3;
-		this.bool_1 = bool_4;
-		this.bool_2 = bool_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 27126;
+		return 20888;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 3;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.bool_1 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
-		this.bool_2 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(27126);
+		binaryStream_0.smethod_7(20888);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.smethod_5(-9029);
-		binaryStream_0.WriteBoolean(this.bool_2);
+		binaryStream_0.smethod_7(-5524);
 	}
-
-	public bool bool_0;
-
-	public bool bool_1;
-
-	public bool bool_2;
 }

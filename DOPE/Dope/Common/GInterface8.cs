@@ -10,7 +10,7 @@ using DOPE.Common.Models.Bot;
 namespace Dope.Common
 {
 	[Guid("47C49A79-0412-44F6-81AD-83B365ED9084")]
-	public interface GInterface7 : INotifyPropertyChanged
+	public interface GInterface8 : INotifyPropertyChanged
 	{
 		string Type { get; }
 
@@ -55,5 +55,7 @@ namespace Dope.Common
 		Task<BotDetailedViewModel> GetBotDetailedView(string id, CancellationToken? token = null);
 
 		Task<BotDetailedViewModel> GetBotDetailedView(string id, int lastMapId, bool includeCachable, CancellationToken? token = null);
+
+		Task OnSpacemapClicked(string botId, float x, float y, string mode);
 	}
 }

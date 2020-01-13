@@ -1,75 +1,173 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
 using System.Runtime.CompilerServices;
-using NLog;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
 
-public abstract class GClass829 : GInterface8
+public class GClass829 : GClass828
 {
-	public GClass810 Context { get; }
-
-	public Logger Log { get; set; }
-
 	[CompilerGenerated]
-	public DateTimeOffset method_0()
+	protected Dictionary<Vector2, DateTimeOffset> method_1()
 	{
-		return this.dateTimeOffset_0;
+		return this.dictionary_0;
 	}
 
-	[CompilerGenerated]
-	public void method_1(DateTimeOffset dateTimeOffset_1)
+	private GClass843 Behavior { get; }
+
+	public GClass829(GClass822 gclass822_1)
 	{
-		this.dateTimeOffset_0 = dateTimeOffset_1;
+		Class13.tMHx78BzgCM8j();
+		base..ctor(gclass822_1, TargetMap.X6);
+		GClass829.<>c__DisplayClass7_0 CS$<>8__locals1 = new GClass829.<>c__DisplayClass7_0();
+		CS$<>8__locals1.random_0 = base.C.Game.Random;
+		this.dictionary_0 = GClass829.list_0.ToDictionary(new Func<Vector2, Vector2>(CS$<>8__locals1.method_0), new Func<Vector2, DateTimeOffset>(GClass829.<>c.<>c_0.method_0));
+		this.Behavior = new GClass843(gclass822_1, this);
 	}
 
-	public abstract int Cooldown { get; }
-
-	public GClass829(GClass810 gclass810_1, string string_0)
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		this.Context = gclass810_1;
-		this.Log = this.Context.uhYieiJtWf2("BackgroundLogic-" + string_0);
-	}
-
-	void GInterface8.Execute()
-	{
-		this.bool_0 = true;
-		try
+		if (botProfile_1 == null)
 		{
-			this.Execute();
+			return null;
 		}
-		catch (Exception ex)
+		List<MapProfile> maps = botProfile_1.Maps;
+		if (maps == null)
 		{
-			this.Log.Error("Error executing background task {exception}", ex.ToString());
+			return null;
 		}
-		finally
+		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass829.<>c.<>c_0.method_1));
+	}
+
+	protected override void OnBind()
+	{
+		base.C.Game.Map.ShipDestroyed += this.method_3;
+		base.OnBind();
+	}
+
+	protected override void OnUnbind()
+	{
+		base.C.Game.Map.ShipDestroyed -= this.method_3;
+		base.OnUnbind();
+	}
+
+	public override void UpdateState()
+	{
+		Vector2 vector = this.method_2();
+		DateTimeOffset now = DateTimeOffset.Now;
+		DateTimeOffset right = this.method_1()[vector];
+		if (vector != this.BestSpawn)
 		{
-			this.bool_0 = false;
-			this.method_1(DateTimeOffset.Now);
+			this.BestSpawn = vector;
+		}
+		else if (base.C.Hero.Position == vector && (now - right).TotalSeconds > 15.0)
+		{
+			this.method_1()[vector] = GClass829.smethod_0(this.method_1()[vector], now.AddSeconds(300.0));
+		}
+		base.UpdateState();
+	}
+
+	public Vector2 BestSpawn
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.vector2_0;
+		}
+		[CompilerGenerated]
+		private set
+		{
+			if (this.vector2_0 == value)
+			{
+				return;
+			}
+			this.vector2_0 = value;
+			this.method_0(Class10.propertyChangedEventArgs_4);
+			this.method_0(Class10.propertyChangedEventArgs_3);
 		}
 	}
 
-	public abstract void Execute();
-
-	public abstract bool vmethod_0();
-
-	bool GInterface8.J1PPSKVTUK8()
+	public DateTimeOffset BestSpawnTime
 	{
-		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
+		get
+		{
+			DateTimeOffset result;
+			if (!this.method_1().TryGetValue(this.BestSpawn, out result))
+			{
+				return default(DateTimeOffset);
+			}
+			return result;
+		}
 	}
 
-	public virtual void imethod_1()
+	private Vector2 method_2()
 	{
-		this.method_1(DateTimeOffset.MinValue);
+		return this.method_1().OrderBy(new Func<KeyValuePair<Vector2, DateTimeOffset>, DateTimeOffset>(GClass829.<>c.<>c_0.method_2)).First<KeyValuePair<Vector2, DateTimeOffset>>().Key;
+	}
+
+	private void method_3(Map map_0, Ship ship_1)
+	{
+		NpcShip npcShip = ship_1 as NpcShip;
+		if (npcShip != null)
+		{
+			NpcUtils.NpcType type = npcShip.Type;
+			if (((type != null) ? type.Class : null) == NpcUtils.N_Cubikon)
+			{
+				GClass829.<>c__DisplayClass20_0 CS$<>8__locals1 = new GClass829.<>c__DisplayClass20_0();
+				CS$<>8__locals1.vector2_0 = ship_1.Position;
+				Vector2 vector = this.method_1().Keys.OrderBy(new Func<Vector2, float>(CS$<>8__locals1.method_0)).First<Vector2>();
+				this.method_1()[vector] = DateTimeOffset.Now.AddSeconds(300.0);
+				base.Log.Info<Vector2>("Cubikon at spawn {position} destroyed", vector);
+			}
+		}
+	}
+
+	public override GClass835 GetBehavior()
+	{
+		if (MapUtils.smethod_10(6, base.C.Hero.FactionId) == base.C.Map.MapId)
+		{
+			return this.Behavior;
+		}
+		return base.GetBehavior();
+	}
+
+	public override string ToString()
+	{
+		return "Cubikons";
+	}
+
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass829()
+	{
+		Class13.tMHx78BzgCM8j();
+		GClass829.list_0 = new List<Vector2>
+		{
+			new Vector2(7500f, 3900f),
+			new Vector2(13400f, 3900f),
+			new Vector2(13400f, 7900f),
+			new Vector2(7500f, 7900f)
+		};
 	}
 
 	[CompilerGenerated]
-	private readonly GClass810 gclass810_0;
+	internal static DateTimeOffset smethod_0(DateTimeOffset dateTimeOffset_2, DateTimeOffset dateTimeOffset_3)
+	{
+		if (!(dateTimeOffset_2 > dateTimeOffset_3))
+		{
+			return dateTimeOffset_3;
+		}
+		return dateTimeOffset_2;
+	}
+
+	public static List<Vector2> list_0;
 
 	[CompilerGenerated]
-	private Logger lycirFySfg9;
+	private readonly Dictionary<Vector2, DateTimeOffset> dictionary_0;
 
 	[CompilerGenerated]
-	private DateTimeOffset dateTimeOffset_0;
+	private readonly GClass843 gclass843_0;
 
-	private volatile bool bool_0;
+	[CompilerGenerated]
+	private Vector2 vector2_0;
 }

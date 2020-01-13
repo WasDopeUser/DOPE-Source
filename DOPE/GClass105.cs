@@ -1,16 +1,20 @@
 ﻿using System;
 using DarkorbitAPI;
+using DarkorbitAPI.Structures;
 
 public class GClass105 : GInterface4
 {
-	public void Run(GClass215 e)
+	public void Run(GClass224 e)
 	{
-		ConnectionManager.Instance.Value.Game.Hero.Pet.Modes.Clear();
+		HeroPet pet = ConnectionManager.Instance.Value.Game.Hero.Pet;
+		pet.Hp = e.int_1;
+		pet.HpMax = e.int_0;
+		pet.IsRepairNeeded = (pet.Hp == 0);
 	}
 
 	public GClass105()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

@@ -1,35 +1,84 @@
 ﻿using System;
-using System.Linq;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass778 : GClass776<GInterface6>
+public class GClass778 : GInterface0
 {
-	public static byte[] smethod_0(string string_0)
+	short GInterface0.Id
 	{
-		GClass778.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass778.<>c__DisplayClass0_0();
-		CS$<>8__locals1.string_0 = string_0;
-		return Enumerable.Range(0, CS$<>8__locals1.string_0.Length).Where(new Func<int, bool>(GClass778.<>c.<>c_0.method_0)).Select(new Func<int, byte>(CS$<>8__locals1.method_0)).ToArray<byte>();
+		get
+		{
+			return 5124;
+		}
 	}
 
-	public abstract void vmethod_2(byte[] byte_0);
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		base.imethod_0(byte_0, int_0, int_1);
+		get
+		{
+			return 6;
+		}
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public GClass778(string string_1 = "", Vector<GClass375> vector_0 = null)
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-	}
-
-	public abstract void vmethod_3(DollConfig dollConfig_0, Action action_0);
-
-	public abstract byte[] vmethod_4();
-
-	protected GClass778()
-	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
 		base..ctor();
+		this.string_0 = string_1;
+		if (vector_0 == null)
+		{
+			this.Items = new Vector<GClass375>();
+			return;
+		}
+		this.Items = vector_0;
 	}
+
+	public virtual int vmethod_0()
+	{
+		return 5124;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 6;
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		while (this.Items.Length > 0)
+		{
+			this.Items.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass375 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass375;
+			gclass.imethod_1(binaryStream_0);
+			this.Items.method_0(gclass);
+			num++;
+		}
+		this.string_0 = binaryStream_0.smethod_2();
+	}
+
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(5124);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_4(this.Items.Length);
+		foreach (GClass375 gclass in this.Items)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+		binaryStream_0.smethod_3(this.string_0);
+	}
+
+	public Vector<GClass375> Items;
+
+	public string string_0;
 }

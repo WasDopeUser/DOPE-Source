@@ -8,7 +8,7 @@ public class GClass614 : GInterface0
 	{
 		get
 		{
-			return 28506;
+			return 14439;
 		}
 	}
 
@@ -16,37 +16,83 @@ public class GClass614 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 17;
 		}
 	}
 
-	public GClass614()
+	public GClass614(int int_1 = 0, double double_1 = 0.0, double double_2 = 0.0, string string_2 = "", string string_3 = "", GClass708 gclass708_0 = null, bool bool_1 = false)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
+		this.int_0 = int_1;
+		this.double_0 = double_1;
+		this.EhlEugrGfW = double_2;
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		if (gclass708_0 == null)
+		{
+			this.State = new GClass708(null);
+		}
+		else
+		{
+			this.State = gclass708_0;
+		}
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28506;
+		return 14439;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 17;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.string_0 = binaryStream_0.smethod_2();
+		this.State = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass708);
+		this.State.imethod_1(binaryStream_0);
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.string_1 = binaryStream_0.smethod_2();
+		this.EhlEugrGfW = (double)binaryStream_0.smethod_10();
+		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(28506);
+		binaryStream_0.smethod_7(14439);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_3(this.string_0);
+		this.State.imethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_9(this.EhlEugrGfW);
+		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
 	}
+
+	public string string_0;
+
+	public GClass708 State;
+
+	public bool bool_0;
+
+	public string string_1;
+
+	public double EhlEugrGfW;
+
+	public double double_0;
+
+	public int int_0;
 }

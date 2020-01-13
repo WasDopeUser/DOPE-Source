@@ -25,23 +25,23 @@ namespace DarkorbitAPI.CommonStructures
 
 		private protected Comparer<T> Comparer { protected get; private set; }
 
-		protected abstract bool Dominates(T fxPAMTqYiu4y3IBZmfF, T M3GMdBqTLH0rtnFecSh);
+		protected abstract bool Dominates(T Rj0k4JxjkuRXNxF4ZVQ, T cVAeWYxnX5RcHW0JWpj);
 
 		protected Heap()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this..ctor(Comparer<T>.Default);
 		}
 
 		protected Heap(Comparer<T> comparer_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this..ctor(Enumerable.Empty<T>(), comparer_0);
 		}
 
 		protected Heap(IEnumerable<T> ienumerable_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this..ctor(ienumerable_0, Comparer<T>.Default);
 		}
 
@@ -49,7 +49,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		protected Heap(IEnumerable<T> ienumerable_0, Comparer<T> comparer_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this._heap = new T[0];
 			base..ctor();
 			if (ienumerable_0 == null)
@@ -65,7 +65,7 @@ namespace DarkorbitAPI.CommonStructures
 			{
 				if (this.Count == this.Capacity)
 				{
-					this.method_7();
+					this.method_8();
 				}
 				T[] heap = this._heap;
 				int tail = this._tail;
@@ -78,18 +78,18 @@ namespace DarkorbitAPI.CommonStructures
 			}
 		}
 
-		public void method_0(T giJNWPqd8aSPGd64pYV)
+		public void method_0(T fD2kGAxvu9FQ4JEfe1a)
 		{
 			int num = this.Insertions;
 			this.Insertions = num + 1;
 			if (this.Count == this.Capacity)
 			{
-				this.method_7();
+				this.method_8();
 			}
 			T[] heap = this._heap;
 			num = this._tail;
 			this._tail = num + 1;
-			heap[num] = giJNWPqd8aSPGd64pYV;
+			heap[num] = fD2kGAxvu9FQ4JEfe1a;
 			this.method_1(this._tail - 1);
 		}
 
@@ -97,7 +97,7 @@ namespace DarkorbitAPI.CommonStructures
 		{
 			if (int_0 != 0 && !this.Dominates(this._heap[Heap<T>.Parent(int_0)], this._heap[int_0]))
 			{
-				this.method_6(int_0, Heap<T>.Parent(int_0));
+				this.method_7(int_0, Heap<T>.Parent(int_0));
 				this.method_1(Heap<T>.Parent(int_0));
 				return;
 			}
@@ -120,7 +120,7 @@ namespace DarkorbitAPI.CommonStructures
 			}
 			T result = this._heap[0];
 			this._tail--;
-			this.method_6(this._tail, 0);
+			this.method_7(this._tail, 0);
 			this.method_4(0);
 			return result;
 		}
@@ -132,17 +132,17 @@ namespace DarkorbitAPI.CommonStructures
 			{
 				return;
 			}
-			this.method_6(int_0, num);
+			this.method_7(int_0, num);
 			this.method_4(num);
 		}
 
 		private int method_5(int int_0)
 		{
-			int int_ = this.snGiiGeyaZA(Heap<T>.smethod_0(int_0), int_0);
-			return this.snGiiGeyaZA(Heap<T>.smethod_1(int_0), int_);
+			int int_ = this.method_6(Heap<T>.smethod_0(int_0), int_0);
+			return this.method_6(Heap<T>.smethod_1(int_0), int_);
 		}
 
-		private int snGiiGeyaZA(int int_0, int int_1)
+		private int method_6(int int_0, int int_1)
 		{
 			if (int_0 < this._tail && !this.Dominates(this._heap[int_1], this._heap[int_0]))
 			{
@@ -151,7 +151,7 @@ namespace DarkorbitAPI.CommonStructures
 			return int_1;
 		}
 
-		private void method_6(int int_0, int int_1)
+		private void method_7(int int_0, int int_1)
 		{
 			T t = this._heap[int_0];
 			this._heap[int_0] = this._heap[int_1];
@@ -173,7 +173,7 @@ namespace DarkorbitAPI.CommonStructures
 			return Heap<T>.smethod_0(int_0) + 1;
 		}
 
-		private void method_7()
+		private void method_8()
 		{
 			int num = this._capacity * 2 + 1;
 			T[] array = new T[num];

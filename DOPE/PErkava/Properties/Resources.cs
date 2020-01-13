@@ -9,14 +9,14 @@ using System.Runtime.CompilerServices;
 
 namespace PErkava.Properties
 {
+	[DebuggerNonUserCode]
 	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
 	[CompilerGenerated]
-	[DebuggerNonUserCode]
 	public class Resources
 	{
 		internal Resources()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 

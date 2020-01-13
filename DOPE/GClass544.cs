@@ -8,7 +8,7 @@ public class GClass544 : GInterface0
 	{
 		get
 		{
-			return 17505;
+			return 10838;
 		}
 	}
 
@@ -16,52 +16,66 @@ public class GClass544 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 8;
 		}
 	}
 
-	public GClass544(int int_1 = 0, bool bool_1 = false)
+	public GClass544(GClass201 gclass201_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
-		this.bool_0 = bool_1;
+		if (gclass201_1 == null)
+		{
+			this.gclass201_0 = new GClass201(0U);
+		}
+		else
+		{
+			this.gclass201_0 = gclass201_1;
+		}
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17505;
+		return 10838;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
+		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
+		this.gclass201_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 7) | this.int_1 << 25);
 		binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(17505);
+		binaryStream_0.smethod_7(10838);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
-		binaryStream_0.smethod_5(23825);
-		binaryStream_0.smethod_5(235);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
+		this.gclass201_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(3488);
+		binaryStream_0.smethod_4(this.int_1 << 7 | U.smethod_0(this.int_1, 25));
+		binaryStream_0.smethod_7(25775);
 	}
 
 	public int int_0;
 
-	public bool bool_0;
+	public GClass201 gclass201_0;
+
+	public int int_1;
 }

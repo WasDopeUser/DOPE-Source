@@ -8,7 +8,7 @@ public class GClass755 : GInterface0
 	{
 		get
 		{
-			return 26857;
+			return 18031;
 		}
 	}
 
@@ -16,76 +16,45 @@ public class GClass755 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 2;
 		}
 	}
 
-	public GClass755(GClass752 gclass752_1 = null, Vector<GClass131> vector_1 = null)
+	public GClass755(string string_1 = "")
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
+		this.string_0 = "";
 		base..ctor();
-		if (gclass752_1 == null)
-		{
-			this.gclass752_0 = new GClass752(0U);
-		}
-		else
-		{
-			this.gclass752_0 = gclass752_1;
-		}
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass131>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26857;
+		return 18031;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass752_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass752);
-		this.gclass752_0.imethod_1(binaryStream_0);
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass131 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass131;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		binaryStream_0.smethod_1();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(26857);
+		binaryStream_0.smethod_7(18031);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass752_0.imethod_2(binaryStream_0);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (GClass131 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_7(6069);
+		binaryStream_0.smethod_3(this.string_0);
 	}
 
-	public GClass752 gclass752_0;
-
-	public Vector<GClass131> vector_0;
+	public string string_0;
 }

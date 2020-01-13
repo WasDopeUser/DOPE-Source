@@ -8,7 +8,7 @@ public class GClass752 : GInterface0
 	{
 		get
 		{
-			return 32365;
+			return 18359;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass752 : GInterface0
 
 	public GClass752(uint uint_1 = 0U)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32365;
+		return 18359;
 	}
 
 	public virtual int vmethod_1()
@@ -41,18 +41,20 @@ public class GClass752 : GInterface0
 	{
 		binaryStream_0.smethod_1();
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(32365);
+		binaryStream_0.smethod_7(18359);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(25247);
-		binaryStream_0.lwAiiEjwcUm(this.uint_0);
+		binaryStream_0.smethod_7(-15757);
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(-10794);
 	}
 
 	public uint uint_0;

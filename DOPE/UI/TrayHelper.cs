@@ -11,7 +11,7 @@ namespace DOPE.UI
 	{
 		public TrayHelper(MainWindow mainWindow_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 			this.mainWindow = mainWindow_0;
 			mainWindow_0.StateChanged += this.method_0;

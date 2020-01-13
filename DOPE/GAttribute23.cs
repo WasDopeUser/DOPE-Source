@@ -6,13 +6,13 @@ public sealed class GAttribute23 : Attribute
 {
 	public GAttribute23([GAttribute1] string format)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.gdfydtMiae = format;
+		this.String_0 = format;
 	}
 
 	[GAttribute1]
-	public string gdfydtMiae { get; private set; }
+	public string String_0 { get; private set; }
 
 	[CompilerGenerated]
 	private string string_0;

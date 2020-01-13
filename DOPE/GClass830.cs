@@ -1,51 +1,61 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using DarkorbitAPI;
+using DarkorbitAPI.Structures;
 using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
 
-public class GClass830 : GClass829
+public class GClass830 : GClass828
 {
-	public GClass830(GClass810 gclass810_1)
+	public GClass830(GClass822 gclass822_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1, "DroneRepair");
+		Class13.tMHx78BzgCM8j();
+		base..ctor(gclass822_1, TargetMap.FL_ATLAS_A);
 	}
 
-	public override int Cooldown
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
 	{
-		get
+		if (botProfile_1 == null)
 		{
-			return 120000;
+			return null;
 		}
+		List<MapProfile> maps = botProfile_1.Maps;
+		if (maps == null)
+		{
+			return null;
+		}
+		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass830.<>c.<>c_0.method_0));
 	}
 
-	public void method_2(DarkOrbitWebAPI darkOrbitWebAPI_0)
+	public override bool TrySwitchMap(out int int_2)
 	{
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.Hangar;
-		foreach (GClass49.GClass52 gclass in hangar.data.ret.hangars.First<GClass49.GClass54>().GClass53_0.IList_0)
+		if (!base.C.IsStopping)
 		{
-			int num = int.Parse(gclass.HP.TrimEnd(new char[]
+			if (base.State == ModuleState.Started)
 			{
-				'%'
-			}));
-			if (num >= 90)
-			{
-				Thread.Sleep(5000);
-				base.Log.Info("Repairing drone at {damage}% damage.", num);
-				darkOrbitWebAPI_0.Equipment.RepairDrone(hangar.data, gclass);
+				int_2 = 430;
+				return base.C.Map.MapId < 430 || base.C.Map.MapId > 445;
 			}
 		}
+		int_2 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
+		return int_2 != base.C.Map.MapId;
 	}
 
-	public override void Execute()
+	public override int UpdatePriority()
 	{
-		this.method_2(base.Context.Game.Web);
+		DateTimeOffset frozenLabirynthOpening = base.C.Game.FrozenLabirynthOpening;
+		DateTimeOffset frozenLabirynthClosing = base.C.Game.FrozenLabirynthClosing;
+		bool flag = frozenLabirynthOpening == default(DateTimeOffset) || frozenLabirynthClosing == default(DateTimeOffset);
+		DateTimeOffset now = DateTimeOffset.Now;
+		if (!flag && !(frozenLabirynthOpening < now) && !(frozenLabirynthClosing > now))
+		{
+			return int.MinValue;
+		}
+		return base.UpdatePriority();
 	}
 
-	public override bool vmethod_0()
+	public override string ToString()
 	{
-		AccountSettings account = base.Context.Account;
-		return account != null && account.RepairDrones && base.Context.Game.Web.Equipment.Hangar != null;
+		return "Frozen Labirynth";
 	}
 }

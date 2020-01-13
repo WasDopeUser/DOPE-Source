@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass384 : GClass381, GInterface0
+public class GClass384 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 2617;
+			return 14474;
 		}
 	}
 
@@ -16,55 +16,54 @@ public class GClass384 : GClass381, GInterface0
 	{
 		get
 		{
-			return 8;
+			return 12;
 		}
 	}
 
-	public GClass384(int int_2 = 0, int int_3 = 0)
+	public GClass384(int int_0 = 0, int int_1 = 0, double double_1 = 0.0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.Credits = int_0;
+		this.Uridium = int_1;
+		this.double_0 = double_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 2617;
+		return 14474;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 8;
+		return 12;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 16) | this.int_1 << 16);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.Credits = binaryStream_0.smethod_0();
+		this.Credits = (U.smethod_0(this.Credits, 8) | this.Credits << 24);
+		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.Uridium = binaryStream_0.smethod_0();
+		this.Uridium = (U.smethod_0(this.Uridium, 9) | this.Uridium << 23);
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(2617);
+		binaryStream_0.smethod_7(14474);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-		binaryStream_0.fUeiimuocMk(this.int_1 << 16 | U.smethod_0(this.int_1, 16));
-		binaryStream_0.smethod_5(-18819);
-		binaryStream_0.smethod_5(22837);
+		binaryStream_0.smethod_4(this.Credits << 8 | U.smethod_0(this.Credits, 24));
+		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_4(this.Uridium << 9 | U.smethod_0(this.Uridium, 23));
 	}
 
-	public int int_0;
+	public int Credits;
 
-	public int int_1;
+	public double double_0;
+
+	public int Uridium;
 }

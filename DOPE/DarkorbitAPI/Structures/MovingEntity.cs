@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Structures
 	{
 		protected MovingEntity(int int_0, int int_1)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(int_0, int_1);
 		}
 
@@ -43,7 +43,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return new Vector2((float)this._posX, (float)this._posY);
 			}
 		}
@@ -52,7 +52,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return this._posX;
 			}
 			protected set
@@ -66,7 +66,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return this._posY;
 			}
 			protected set
@@ -78,18 +78,26 @@ namespace DarkorbitAPI.Structures
 
 		public void Reset()
 		{
-			this.method_7();
+			this.method_6();
 			this.TargetPosition = null;
 		}
 
-		protected void method_0(GClass217 gclass217_0)
+		protected void method_0(GClass229 gclass229_0)
 		{
 			if (!(this is Hero))
 			{
 				return;
 			}
-			if (gclass217_0.int_3 == gclass217_0.int_0)
+			if (gclass229_0.int_0 == gclass229_0.int_3)
 			{
+			}
+		}
+
+		public virtual bool CanMove
+		{
+			get
+			{
+				return true;
 			}
 		}
 
@@ -155,7 +163,7 @@ namespace DarkorbitAPI.Structures
 			return this.method_2(int_0, int_1, this.method_3(int_0, int_1, (float)int_2 * 0.97f));
 		}
 
-		public void method_5(int int_0, int int_1, int int_2, int int_3, int int_4)
+		public void eoFcuFbgDt(int int_0, int int_1, int int_2, int int_3, int int_4)
 		{
 			object syncRoot = this.SyncRoot;
 			lock (syncRoot)
@@ -167,9 +175,9 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		protected void method_6()
+		protected void method_5()
 		{
-			this.method_7();
+			this.method_6();
 			if (this.TargetPosition != null)
 			{
 				Vector2 value = this.TargetPosition.Value;
@@ -177,7 +185,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void method_7()
+		public void method_6()
 		{
 			object syncRoot = this.SyncRoot;
 			lock (syncRoot)
@@ -213,7 +221,7 @@ namespace DarkorbitAPI.Structures
 
 		public override void vmethod_0(out int int_0, out int int_1, out int int_2, out int int_3, out int int_4)
 		{
-			this.method_7();
+			this.method_6();
 			int_0 = this._posX;
 			int_1 = this._posY;
 			if (this.TargetPosition == null)

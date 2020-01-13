@@ -15,7 +15,7 @@ namespace DarkorbitAPI.Structures
 
 		public Battlestation(int int_0, int int_1)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor(int_0, int_1);
 			base.Hitbox = MapGrid.smethod_2(int_0 - 600, int_1 - 600, 1200, 1200);
 		}

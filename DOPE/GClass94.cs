@@ -6,15 +6,15 @@ using DarkorbitAPI.Structures;
 
 public class GClass94 : GInterface4
 {
-	public void Run(GClass132 e)
+	public void Run(GClass136 e)
 	{
 		Hero hero = ConnectionManager.Instance.Value.Game.Hero;
 		int num = hero.CargoCapacity;
 		HashSet<int> hashSet = new HashSet<int>();
-		foreach (GClass131 gclass in e.vector_0)
+		foreach (GClass135 gclass in e.vector_0)
 		{
-			hashSet.Add((int)gclass.gclass247_0.uint_0);
-			ResourceType uint_ = (ResourceType)gclass.gclass247_0.uint_0;
+			hashSet.Add((int)gclass.gclass261_0.uint_0);
+			ResourceType uint_ = (ResourceType)gclass.gclass261_0.uint_0;
 			if (uint_ != ResourceType.XENOMIT)
 			{
 				num -= (int)gclass.Count;
@@ -34,7 +34,7 @@ public class GClass94 : GInterface4
 
 	public GClass94()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

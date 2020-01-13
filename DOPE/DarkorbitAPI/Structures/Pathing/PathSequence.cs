@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using GsujcHxgAhWnFmvxchc;
 
 namespace DarkorbitAPI.Structures.Pathing
 {
@@ -15,7 +16,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public PathSequence(Vector2 vector2_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 			this.Path = new List<Vector2>();
 			this.Destination = vector2_0;
@@ -49,7 +50,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				return Vector2.Distance(vector2_0, this.Path.FirstOrDefault<Vector2>()) < (float)int_1;
 			}
 			int num = int_0 + 1;
-			return num < this.Path.Count && GClass799.smethod_12(this.Path[int_0], this.Path[num], vector2_0, true) < (double)int_1;
+			return num < this.Path.Count && GClass810.smethod_13(this.Path[int_0], this.Path[num], vector2_0, true) < (double)int_1;
 		}
 
 		public bool method_2(Vector2 vector2_0, Action<Vector2> action_0, MapGrid mapGrid_0, int int_0 = 30)

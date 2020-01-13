@@ -8,7 +8,7 @@ public class GClass325 : GInterface0
 	{
 		get
 		{
-			return 12926;
+			return 29615;
 		}
 	}
 
@@ -20,21 +20,29 @@ public class GClass325 : GInterface0
 		}
 	}
 
-	public GClass325(Vector<int> vector_1 = null)
+	public GClass325(Vector<GClass342> vector_1 = null, GClass342 gclass342_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<int>();
+			this.vector_0 = new Vector<GClass342>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		if (gclass342_1 == null)
+		{
+			this.gclass342_0 = new GClass342(0, "", "", 0);
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.gclass342_0 = gclass342_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12926;
+		return 29615;
 	}
 
 	public virtual int vmethod_1()
@@ -44,6 +52,7 @@ public class GClass325 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -52,27 +61,33 @@ public class GClass325 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 2 | U.smethod_0(num3, 30));
-			this.vector_0.method_0(num3);
+			GClass342 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass342;
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
 			num++;
 		}
+		this.gclass342_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass342);
+		this.gclass342_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(12926);
+		binaryStream_0.smethod_7(29615);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (int num in this.vector_0)
+		binaryStream_0.smethod_7(-23170);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass342 gclass in this.vector_0)
 		{
-			binaryStream_0.fUeiimuocMk(U.smethod_0(num, 2) | num << 30);
+			gclass.imethod_2(binaryStream_0);
 		}
+		this.gclass342_0.imethod_2(binaryStream_0);
 	}
 
-	public Vector<int> vector_0;
+	public Vector<GClass342> vector_0;
+
+	public GClass342 gclass342_0;
 }

@@ -3,14 +3,30 @@ using DarkorbitAPI;
 
 public class GClass100 : GInterface4
 {
-	public void Run(GClass210 e)
+	public void Run(GClass219 cmd)
 	{
-		ConnectionManager.Instance.Value.Game.Hero.Pet.method_16(e);
+		ConnectionManager value = ConnectionManager.Instance.Value;
+		if (!value.method_19())
+		{
+			return;
+		}
+		if (cmd.Reset)
+		{
+			value.Game.Hero.Clear();
+			value.Game.Map.Clear();
+		}
+		value.Game.method_5(cmd);
+		value.SendMessage(new GClass158());
+		if (cmd.Reset)
+		{
+			value.SendMessage(new GClass172(value.Game.Security.method_0(), value.Game.Settings.Use3D ? 1U : 0U));
+			value.SendMessage(new GClass172(value.Game.Security.method_0(), 2U));
+		}
 	}
 
 	public GClass100()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 }

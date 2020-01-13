@@ -8,7 +8,7 @@ public class GClass441 : GInterface0
 	{
 		get
 		{
-			return 267;
+			return 15744;
 		}
 	}
 
@@ -16,43 +16,48 @@ public class GClass441 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 5;
 		}
 	}
 
-	public GClass441(int int_1 = 0)
+	public GClass441(int int_1 = 0, bool bool_1 = false)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.int_0 = int_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 267;
+		return 15744;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 5;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(267);
+		binaryStream_0.smethod_7(15744);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
 	public int int_0;
+
+	public bool bool_0;
 }

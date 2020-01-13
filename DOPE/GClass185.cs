@@ -8,7 +8,7 @@ public class GClass185 : GInterface0
 	{
 		get
 		{
-			return 5988;
+			return 19795;
 		}
 	}
 
@@ -16,87 +16,81 @@ public class GClass185 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 5;
 		}
 	}
 
-	public GClass185(int int_2 = 0, string string_2 = "", GClass195 gclass195_2 = null, int int_3 = 0, string string_3 = "", GClass195 gclass195_3 = null)
+	public GClass185(int int_0 = 0, uint uint_0 = 0U, bool bool_1 = false, GClass359 gclass359_0 = null, GClass771 gclass771_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
-		this.string_1 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_1 = int_2;
-		this.string_1 = string_2;
-		if (gclass195_2 == null)
+		this.Id = int_0;
+		this.State = uint_0;
+		this.bool_0 = bool_1;
+		if (gclass359_0 == null)
 		{
-			this.gclass195_0 = new GClass195(0U);
+			this.ToolTip = new GClass359(null);
 		}
 		else
 		{
-			this.gclass195_0 = gclass195_2;
+			this.ToolTip = gclass359_0;
 		}
-		this.int_0 = int_3;
-		this.string_0 = string_3;
-		if (gclass195_3 == null)
+		if (gclass771_1 == null)
 		{
-			this.gclass195_1 = new GClass195(0U);
+			this.gclass771_0 = new GClass771();
 			return;
 		}
-		this.gclass195_1 = gclass195_3;
+		this.gclass771_0 = gclass771_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 5988;
+		return 19795;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 5;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.string_1 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-		this.gclass195_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass195);
-		this.gclass195_0.imethod_1(binaryStream_0);
-		this.gclass195_1 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass195);
-		this.gclass195_1.imethod_1(binaryStream_0);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 11 | U.smethod_0(this.int_1, 21));
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (this.Id << 13 | U.smethod_0(this.Id, 19));
+		binaryStream_0.smethod_1();
+		this.ToolTip = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass359);
+		this.ToolTip.imethod_1(binaryStream_0);
+		this.State = (uint)binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.gclass771_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass771);
+		this.gclass771_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(5988);
+		binaryStream_0.smethod_7(19795);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_5(-10927);
-		binaryStream_0.fUeiimuocMk(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
-		this.gclass195_0.imethod_2(binaryStream_0);
-		this.gclass195_1.imethod_2(binaryStream_0);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_1, 11) | this.int_1 << 21);
+		binaryStream_0.smethod_7(29451);
+		binaryStream_0.smethod_4(U.smethod_0(this.Id, 13) | this.Id << 19);
+		binaryStream_0.smethod_7(-32191);
+		this.ToolTip.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(this.State);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		this.gclass771_0.imethod_2(binaryStream_0);
 	}
 
-	public string string_0;
+	public int Id;
 
-	public string string_1;
+	public GClass359 ToolTip;
 
-	public int int_0;
+	public uint State;
 
-	public GClass195 gclass195_0;
+	public bool bool_0;
 
-	public GClass195 gclass195_1;
-
-	public int int_1;
+	public GClass771 gclass771_0;
 }

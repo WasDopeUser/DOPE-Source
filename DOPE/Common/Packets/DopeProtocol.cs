@@ -18,7 +18,7 @@ namespace DOPE.Common.Packets
 
 		public DopeProtocol()
 		{
-			base.ReadAsync = false;
+			base.ReadAsync = true;
 		}
 
 		protected override void Initialize()

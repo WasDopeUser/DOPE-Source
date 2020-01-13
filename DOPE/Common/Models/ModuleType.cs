@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DOPE.Common.Models
 {
@@ -6,6 +7,10 @@ namespace DOPE.Common.Models
 	{
 		Default,
 		Palladium,
-		Cubikons
+		Cubikons,
+		[Display(Name = "Frozen Labirynth")]
+		FrozenLabirynth,
+		[Display(Name = "Quarantine Zone")]
+		QuarantineZone
 	}
 }

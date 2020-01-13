@@ -8,7 +8,7 @@ public class GClass341 : GInterface0
 	{
 		get
 		{
-			return 19773;
+			return 23087;
 		}
 	}
 
@@ -16,55 +16,63 @@ public class GClass341 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 4;
 		}
 	}
 
-	public GClass341(string string_1 = "", int int_2 = 0, int int_3 = 0)
+	public GClass341(Vector<GClass779> vector_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
-		this.string_0 = "";
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.string_0 = string_1;
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass779>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 19773;
+		return 23087;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 4) | this.int_0 << 28);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
-		this.string_0 = binaryStream_0.smethod_2();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass779 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass779;
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(19773);
+		binaryStream_0.smethod_7(23087);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 4 | U.smethod_0(this.int_0, 28));
-		binaryStream_0.fUeiimuocMk(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass779 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
 	}
 
-	public int int_0;
-
-	public int int_1;
-
-	public string string_0;
+	public Vector<GClass779> vector_0;
 }

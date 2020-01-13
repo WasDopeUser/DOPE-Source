@@ -1,89 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using DOPE.Common;
+using DarkorbitAPI;
 using DOPE.Common.Models;
 
-public class GClass833 : GClass829
+public class GClass833 : GClass832
 {
-	public GClass833(GClass810 gclass810_1)
+	public GClass833(GClass822 gclass822_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1, "HangarInfoProvider");
+		Class13.tMHx78BzgCM8j();
+		base..ctor(gclass822_1, TargetMap.GG_VoT);
 	}
 
-	public override int Cooldown
+	protected override void OnBind()
 	{
-		get
+		base.C.Game.LogMessage += this.method_3;
+	}
+
+	protected override void OnUnbind()
+	{
+		base.C.Game.LogMessage -= this.method_3;
+	}
+
+	private void method_3(GameManager gameManager_0, GClass269 gclass269_0)
+	{
+		string[] source;
+		if (GClass90.smethod_1(gclass269_0.string_0, out source, new string[]
 		{
-			if (base.Context.Game.Web.Equipment.Hangars != null)
-			{
-				return 60000;
-			}
-			return 2000;
-		}
-	}
-
-	[CompilerGenerated]
-	public DateTimeOffset method_2()
-	{
-		return this.dateTimeOffset_1;
-	}
-
-	[CompilerGenerated]
-	public void method_3(DateTimeOffset dateTimeOffset_2)
-	{
-		this.dateTimeOffset_1 = dateTimeOffset_2;
-	}
-
-	public override void Execute()
-	{
-		GClass28.GClass48 hangarList = base.Context.Game.Web.Equipment.GetHangarList();
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.GetHangar();
-		IDopeService service = base.Context.Controller.Parent.Service;
-		List<string> list = hangarList.data.ret.hangars.Select(new Func<GClass28.GClass32, string>(GClass833.<>c.<>c_0.method_0)).ToList<string>();
-		if (list != null && list.Any<string>() && hangar != null)
+			"n",
+			"MSG",
+			"1",
+			"0",
+			"msg_galaxy_gate_cooldown_active"
+		}) && source.FirstOrDefault<string>() != null)
 		{
-			VolatileData volatileData = new VolatileData();
-			volatileData.LastUpdated = DateTimeOffset.Now;
-			volatileData.Hangars = list;
-			VolatileData volatileData2 = volatileData;
-			GClass28.GClass32 gclass = hangarList.data.ret.hangars.FirstOrDefault(new Func<GClass28.GClass32, bool>(GClass833.<>c.<>c_0.method_1));
-			string activeHangar;
-			if (gclass == null)
+			Dictionary<string, string> dictionary = GClass90.smethod_0(source.FirstOrDefault<string>());
+			string s;
+			string s2;
+			int num;
+			int num2;
+			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
 			{
-				activeHangar = null;
-			}
-			else
-			{
-				GClass28.GClass31 gclass31_ = gclass.GClass31_0;
-				if (gclass31_ == null)
-				{
-					activeHangar = null;
-				}
-				else
-				{
-					GClass28.GClass30 gclass30_ = gclass31_.GClass30_0;
-					activeHangar = ((gclass30_ != null) ? gclass30_.String_0 : null);
-				}
-			}
-			volatileData2.ActiveHangar = activeHangar;
-			volatileData.Fill();
-			base.Context.Account.Volatile = volatileData;
-			if (this.method_2().Cooldown(120000))
-			{
-				service.UpdateVolatile(base.Context.Account.BotId, volatileData);
-				this.method_3(DateTimeOffset.Now);
+				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
+				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
 			}
 		}
 	}
 
-	public override bool vmethod_0()
+	protected override bool vmethod_0()
 	{
-		return true;
+		return this.dateTimeOffset_2.Cooldown(0);
 	}
 
-	[CompilerGenerated]
-	private DateTimeOffset dateTimeOffset_1;
+	public DateTimeOffset dateTimeOffset_2;
 }

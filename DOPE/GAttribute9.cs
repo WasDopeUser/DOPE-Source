@@ -6,13 +6,13 @@ public sealed class GAttribute9 : Attribute
 {
 	public GAttribute9()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		this..ctor(true);
 	}
 
 	public GAttribute9(bool bool_1)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.method_1(bool_1);
 	}

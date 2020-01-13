@@ -1,77 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI.CommonStructures;
 
-public class GClass786 : GClass781
+public abstract class GClass786<LWabHqE5Gf11C8g1iZi> : GInterface7 where LWabHqE5Gf11C8g1iZi : GInterface7
 {
 	[CompilerGenerated]
-	public GClass793 method_0()
+	public virtual LWabHqE5Gf11C8g1iZi vmethod_0()
 	{
-		return this.gclass793_0;
+		return this.gparam_0;
 	}
 
 	[CompilerGenerated]
-	private void method_1(GClass793 gclass793_2)
+	public virtual void vmethod_1(LWabHqE5Gf11C8g1iZi jwNOHKEZg8RoacT6pGw)
 	{
-		this.gclass793_0 = gclass793_2;
+		this.gparam_0 = jwNOHKEZg8RoacT6pGw;
 	}
 
-	[CompilerGenerated]
-	public GClass793 method_2()
+	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
 	{
-		return this.gclass793_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass793 gclass793_2)
-	{
-		this.gclass793_1 = gclass793_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		LWabHqE5Gf11C8g1iZi lwabHqE5Gf11C8g1iZi = this.vmethod_0();
+		if (lwabHqE5Gf11C8g1iZi == null)
 		{
-			throw new Exception();
+			return;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		this.method_1(new GClass793(new Vector<uint>(vector), new Vector<uint>(vector2)));
-		this.method_3(new GClass793(vector, vector2));
+		lwabHqE5Gf11C8g1iZi.imethod_0(byte_0, int_0, int_1);
 	}
 
-	public GClass786()
+	public virtual void imethod_1(byte[] byte_0, int int_0, int int_1)
 	{
-		Class8.xDph7tozmh5WD();
+		LWabHqE5Gf11C8g1iZi lwabHqE5Gf11C8g1iZi = this.vmethod_0();
+		if (lwabHqE5Gf11C8g1iZi == null)
+		{
+			return;
+		}
+		lwabHqE5Gf11C8g1iZi.imethod_1(byte_0, int_0, int_1);
+	}
+
+	public virtual void imethod_2()
+	{
+		LWabHqE5Gf11C8g1iZi lwabHqE5Gf11C8g1iZi = this.vmethod_0();
+		if (lwabHqE5Gf11C8g1iZi == null)
+		{
+			return;
+		}
+		lwabHqE5Gf11C8g1iZi.imethod_2();
+	}
+
+	protected GClass786()
+	{
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 	}
 
 	[CompilerGenerated]
-	private GClass793 gclass793_0;
-
-	[CompilerGenerated]
-	private GClass793 gclass793_1;
+	private LWabHqE5Gf11C8g1iZi gparam_0;
 }

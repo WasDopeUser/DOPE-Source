@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 
 namespace DarkorbitAPI.Structures
@@ -20,26 +21,28 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Type>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_87);
+				this.method_10(Class5.propertyChangedEventArgs_108);
 			}
 		}
 
 		public int LeashedBy
 		{
-			[CompilerGenerated]
 			get
 			{
-				return this.<LeashedBy>k__BackingField;
+				if (this._leashedBy == 0 && base.LastTookDamage.smethod_0(5000))
+				{
+					return base.LastTookDamageFrom;
+				}
+				return this._leashedBy;
 			}
-			[CompilerGenerated]
 			set
 			{
-				if (this.<LeashedBy>k__BackingField == value)
+				if (this._leashedBy == value)
 				{
 					return;
 				}
-				this.<LeashedBy>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_51);
+				this._leashedBy = value;
+				this.method_10(Class5.propertyChangedEventArgs_64);
 			}
 		}
 
@@ -58,7 +61,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Range>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_65);
+				this.method_10(Class5.propertyChangedEventArgs_82);
 			}
 		}
 
@@ -77,7 +80,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<RangeFix>k__BackingField = value;
-				this.method_11(Class1.propertyChangedEventArgs_66);
+				this.method_10(Class5.propertyChangedEventArgs_83);
 			}
 		}
 
@@ -96,7 +99,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastDistance>k__BackingField = value;
-				this.method_11(Class1.jjEiuzciDnu);
+				this.method_10(Class5.propertyChangedEventArgs_56);
 			}
 		}
 
@@ -108,20 +111,30 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public override void Init(GClass251 gclass251_0)
+		public Vector2 MovementSource
 		{
-			base.Init(gclass251_0);
-			if (gclass251_0.bool_1)
+			get
 			{
-				this.Type = NpcUtils.NpcType.smethod_1(base.Name);
+				return base.StartPosition;
+			}
+		}
+
+		public override void Init(GClass265 gclass265_0)
+		{
+			base.Init(gclass265_0);
+			if (gclass265_0.bool_2)
+			{
+				this.Type = NpcUtils.NpcType.smethod_3(base.Name);
 			}
 			this.Range = SecurityManager.smethod_3(this);
 		}
 
 		public NpcShip()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
+
+		private int _leashedBy;
 	}
 }

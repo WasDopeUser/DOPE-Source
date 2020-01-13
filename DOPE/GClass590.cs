@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass590 : GInterface0
+public class GClass590 : GClass585, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 27538;
+			return 3868;
 		}
 	}
 
@@ -16,65 +16,44 @@ public class GClass590 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 5;
 		}
 	}
 
-	public GClass590(Vector<GClass133> vector_0 = null)
+	public GClass590(string string_0 = "", bool bool_0 = false)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor();
-		if (vector_0 == null)
-		{
-			this.Commands = new Vector<GClass133>();
-			return;
-		}
-		this.Commands = vector_0;
+		Class13.tMHx78BzgCM8j();
+		base..ctor(string_0);
+		this.Value = bool_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 27538;
+		return 3868;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 5;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.Commands.Length > 0)
-		{
-			this.Commands.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass133 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass133;
-			gclass.imethod_1(binaryStream_0);
-			this.Commands.method_0(gclass);
-			num++;
-		}
-		binaryStream_0.smethod_1();
+		base.imethod_1(binaryStream_0);
+		this.Value = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(27538);
+		binaryStream_0.smethod_7(3868);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.Commands.Length);
-		foreach (GClass133 gclass in this.Commands)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_5(-5928);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.Value);
 	}
 
-	public Vector<GClass133> Commands;
+	public bool Value;
 }

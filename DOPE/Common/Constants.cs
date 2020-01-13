@@ -1,15 +1,38 @@
 ﻿using System;
-using chuvRxphSdnfhBmwTy3;
 
 namespace DOPE.Common
 {
 	public static class Constants
 	{
+		public static string Endpoint
+		{
+			get
+			{
+				return new Uri("https://powerofdark.space").Host;
+			}
+		}
+
 		public static string VersionString
 		{
 			get
 			{
-				return string.Format("{0}.{1}.3", 0, 43);
+				return string.Format("{0}.{1}.0-EXPERIMENTAL", 0, 45);
+			}
+		}
+
+		public static bool FrozenLabirynthEnabled
+		{
+			get
+			{
+				return false;
+			}
+		}
+
+		public static bool ColdWaveEnabled
+		{
+			get
+			{
+				return false;
 			}
 		}
 
@@ -17,7 +40,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				GClass265 gclass = new GClass265(0, 145, 1);
+				GClass279 gclass = new GClass279(0, 146, 1);
 				return string.Format("{0}.{1}.{2}", gclass.int_0, gclass.int_1, gclass.int_2);
 			}
 		}
@@ -42,5 +65,7 @@ namespace DOPE.Common
 			int num4 = int.Parse(array2[1]);
 			return num > num3 || (num == num3 && num2 > num4);
 		}
+
+		public static bool bool_0;
 	}
 }

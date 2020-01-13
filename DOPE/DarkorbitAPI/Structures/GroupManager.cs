@@ -1,20 +1,149 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 namespace DarkorbitAPI.Structures
 {
-	public class GroupManager
+	public class GroupManager : INotifyPropertyChanged
 	{
-		public Hero Hero { get; private set; }
+		internal void method_0(GClass249 gclass249_0)
+		{
+			Vector2 value = new Vector2((float)gclass249_0.int_0, (float)gclass249_0.int_1);
+			foreach (GroupManager.GroupMember groupMember in this.method_9())
+			{
+				if (Vector2.Distance(groupMember.Position, value) < 1200f)
+				{
+					groupMember.LastPinged = DateTimeOffset.Now;
+				}
+			}
+		}
 
-		public ConcurrentDictionary<int, GClass185> Invites { get; private set; }
+		public bool urkOoRqUjU(int int_0)
+		{
+			return this.Members.ContainsKey(int_0);
+		}
 
-		public ConcurrentDictionary<int, GroupManager.GroupMember> Members { get; private set; }
+		public Hero Hero
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Hero>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<Hero>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Hero>k__BackingField = value;
+				this.gOgOpetFni(Class5.IsOwner);
+				this.gOgOpetFni(Class5.Hero);
+			}
+		}
 
-		public bool IsInitialized { get; private set; }
+		public ConcurrentDictionary<int, GroupManager.GroupInvite> Invites
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Invites>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<Invites>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Invites>k__BackingField = value;
+				this.gOgOpetFni(Class5.InviteList);
+				this.gOgOpetFni(Class5.propertyChangedEventArgs_34);
+			}
+		}
 
-		public int OwnerId { get; set; }
+		public ConcurrentDictionary<int, GroupManager.GroupMember> Members
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Members>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (object.Equals(this.<Members>k__BackingField, value))
+				{
+					return;
+				}
+				this.<Members>k__BackingField = value;
+				this.gOgOpetFni(Class5.MemberList);
+				this.gOgOpetFni(Class5.propertyChangedEventArgs_72);
+			}
+		}
+
+		public ICollection<GroupManager.GroupMember> MemberList
+		{
+			get
+			{
+				return this.Members.Values;
+			}
+		}
+
+		public ICollection<GroupManager.GroupInvite> InviteList
+		{
+			get
+			{
+				return this.Invites.Values.Where(new Func<GroupManager.GroupInvite, bool>(GroupManager.<>c.<>9.method_0)).ToList<GroupManager.GroupInvite>();
+			}
+		}
+
+		public bool IsInitialized
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<IsInitialized>k__BackingField;
+			}
+			[CompilerGenerated]
+			private set
+			{
+				if (this.<IsInitialized>k__BackingField == value)
+				{
+					return;
+				}
+				this.<IsInitialized>k__BackingField = value;
+				this.gOgOpetFni(Class5.IsOwner);
+				this.gOgOpetFni(Class5.propertyChangedEventArgs_43);
+			}
+		}
+
+		public int OwnerId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<OwnerId>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<OwnerId>k__BackingField == value)
+				{
+					return;
+				}
+				this.<OwnerId>k__BackingField = value;
+				this.gOgOpetFni(Class5.IsOwner);
+				this.gOgOpetFni(Class5.propertyChangedEventArgs_77);
+			}
+		}
 
 		public bool IsOwner
 		{
@@ -24,86 +153,122 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public int Id { get; set; }
+		public int Id
+		{
+			[CompilerGenerated]
+			get
+			{
+				return this.<Id>k__BackingField;
+			}
+			[CompilerGenerated]
+			set
+			{
+				if (this.<Id>k__BackingField == value)
+				{
+					return;
+				}
+				this.<Id>k__BackingField = value;
+				this.gOgOpetFni(Class5.Id);
+			}
+		}
 
 		public GroupManager(Hero hero_0)
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 			this.Hero = hero_0;
-			this.Invites = new ConcurrentDictionary<int, GClass185>();
+			this.Invites = new ConcurrentDictionary<int, GroupManager.GroupInvite>();
 			this.Members = new ConcurrentDictionary<int, GroupManager.GroupMember>();
 		}
 
-		internal void method_0(GClass185 gclass185_0)
+		private void method_1()
 		{
-			this.Invites[gclass185_0.int_0] = gclass185_0;
-			EventHandler<GClass185> inviteAdded = this.InviteAdded;
+			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+			if (propertyChanged != null)
+			{
+				propertyChanged(this, new PropertyChangedEventArgs("InviteList"));
+			}
+			PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
+			if (propertyChanged2 == null)
+			{
+				return;
+			}
+			propertyChanged2(this, new PropertyChangedEventArgs("MemberList"));
+		}
+
+		public void method_2(GClass195 gclass195_0)
+		{
+			this.Invites[gclass195_0.FromId] = new GroupManager.GroupInvite(gclass195_0, gclass195_0.int_0 == this.Hero.Id);
+			this.method_1();
+			EventHandler<GClass195> inviteAdded = this.InviteAdded;
 			if (inviteAdded == null)
 			{
 				return;
 			}
-			inviteAdded(this, gclass185_0);
+			inviteAdded(this, gclass195_0);
 		}
 
-		internal void method_1(GClass203 gclass203_0)
+		public void method_3(GClass213 gclass213_0)
 		{
-			GClass185 gclass;
-			if (this.Invites.TryRemove(gclass203_0.int_1, out gclass))
+			GroupManager.GroupInvite groupInvite;
+			if (this.Invites.TryRemove(gclass213_0.FromId, out groupInvite))
 			{
-				EventHandler<GClass203> inviteRemoved = this.InviteRemoved;
+				this.method_1();
+				EventHandler<GClass213> inviteRemoved = this.InviteRemoved;
 				if (inviteRemoved == null)
 				{
 					return;
 				}
-				inviteRemoved(this, gclass203_0);
+				inviteRemoved(this, gclass213_0);
 			}
 		}
 
-		internal void method_2(GClass184 gclass184_0)
+		public void method_4(GClass194 gclass194_0)
 		{
 			GroupManager.GroupMember groupMember;
-			if (!this.Members.TryGetValue(gclass184_0.Id, out groupMember))
+			if (!this.Members.TryGetValue(gclass194_0.Id, out groupMember))
 			{
-				groupMember = new GroupManager.GroupMember();
+				groupMember = (this.Members[gclass194_0.Id] = new GroupManager.GroupMember());
 			}
-			groupMember.method_1(gclass184_0);
+			groupMember.method_1(gclass194_0);
+			this.method_1();
 		}
 
-		internal void method_3(GClass183 gclass183_0)
+		public void method_5(GClass193 gclass193_0)
 		{
 			this.Clear();
-			this.OwnerId = gclass183_0.int_0;
+			this.OwnerId = gclass193_0.int_0;
 			this.IsInitialized = true;
-			foreach (GClass184 gclass184_ in gclass183_0.vector_0)
+			foreach (GClass194 gclass194_ in gclass193_0.vector_0)
 			{
-				this.method_2(gclass184_);
+				this.method_4(gclass194_);
 			}
 		}
 
-		internal void zqvcnxOcgC(GClass201 gclass201_0)
+		public void method_6(GClass211 gclass211_0)
 		{
 			GroupManager.GroupMember groupMember;
-			if (this.Members.TryGetValue(gclass201_0.int_0, out groupMember))
+			if (this.Members.TryGetValue(gclass211_0.int_0, out groupMember))
 			{
-				groupMember.method_2(gclass201_0);
+				groupMember.method_2(gclass211_0);
 			}
 		}
 
-		internal void method_4(GClass182 gclass182_0)
+		public void dHwOrswsKe(GClass192 gclass192_0)
 		{
 			this.Clear();
 		}
 
-		internal void method_5(GClass202 gclass202_0)
+		public void method_7(GClass212 gclass212_0)
 		{
 			GroupManager.GroupMember groupMember;
-			this.Members.TryRemove(gclass202_0.int_0, out groupMember);
+			this.Members.TryRemove(gclass212_0.int_0, out groupMember);
+			this.method_1();
 		}
 
-		internal void method_6(GClass204 gclass204_0)
+		public void method_8(GClass214 gclass214_0)
 		{
-			this.OwnerId = gclass204_0.int_0;
+			this.OwnerId = gclass214_0.int_0;
 		}
 
 		public void Clear()
@@ -111,21 +276,114 @@ namespace DarkorbitAPI.Structures
 			this.IsInitialized = false;
 			this.Invites.Clear();
 			this.Members.Clear();
+			this.method_1();
 		}
 
-		public event EventHandler<GClass185> InviteAdded;
-
-		public event EventHandler<GClass203> InviteRemoved;
-
-		public class GroupMember : Entity
+		public IEnumerable<GroupManager.GroupMember> method_9()
 		{
-			public int Id { get; set; }
+			GroupManager.<>c__DisplayClass45_0 CS$<>8__locals1 = new GroupManager.<>c__DisplayClass45_0();
+			CS$<>8__locals1.<>4__this = this;
+			CS$<>8__locals1.hPos = this.Hero.Position;
+			CS$<>8__locals1.map = this.Hero.Game.Map.MapId;
+			return this.Members.Values.Where(new Func<GroupManager.GroupMember, bool>(CS$<>8__locals1.method_0)).OrderBy(new Func<GroupManager.GroupMember, float>(CS$<>8__locals1.method_1));
+		}
 
-			public string Name { get; set; }
+		public event EventHandler<GClass195> InviteAdded;
 
-			public bool IsInitialized { get; set; }
+		public event EventHandler<GClass213> InviteRemoved;
 
-			public GClass193 Location { get; set; }
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
+		protected void gOgOpetFni(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		{
+			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+			if (propertyChanged != null)
+			{
+				propertyChanged(this, propertyChangedEventArgs_0);
+			}
+		}
+
+		public class GroupMember : Entity, INotifyPropertyChanged
+		{
+			public int Id
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<Id>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<Id>k__BackingField == value)
+					{
+						return;
+					}
+					this.<Id>k__BackingField = value;
+					this.method_7(Class5.Id);
+				}
+			}
+
+			public string Name
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<Name>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (string.Equals(this.<Name>k__BackingField, value, StringComparison.Ordinal))
+					{
+						return;
+					}
+					this.<Name>k__BackingField = value;
+					this.method_7(Class5.Name);
+				}
+			}
+
+			public bool IsInitialized
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<IsInitialized>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<IsInitialized>k__BackingField == value)
+					{
+						return;
+					}
+					this.<IsInitialized>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_43);
+				}
+			}
+
+			public GClass204 Location
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<Location>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (object.Equals(this.<Location>k__BackingField, value))
+					{
+						return;
+					}
+					this.<Location>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_78);
+					this.method_7(Class5.MapId);
+					this.method_7(Class5.propertyChangedEventArgs_68);
+				}
+			}
 
 			public override Vector2 Position
 			{
@@ -133,7 +391,7 @@ namespace DarkorbitAPI.Structures
 				{
 					if (this.Location != null)
 					{
-						return new Vector2((float)this.Location.int_2, (float)this.Location.int_1);
+						return new Vector2((float)this.Location.int_1, (float)this.Location.int_0);
 					}
 					return default(Vector2);
 				}
@@ -159,34 +417,159 @@ namespace DarkorbitAPI.Structures
 			{
 				get
 				{
-					GClass193 location = this.Location;
+					GClass204 location = this.Location;
 					if (location == null)
 					{
 						return 0;
 					}
-					return location.int_0;
+					return location.MapId;
 				}
 			}
 
-			public GClass188 ShipInfo { get; set; }
-
-			public GClass194 Target { get; set; }
-
-			public int FactionId { get; set; }
-
-			public bool IsCloaked { get; set; }
-
-			public bool IsActive { get; set; }
-
-			public bool method_0(out GClass194 gclass194_0)
+			public GClass198 ShipInfo
 			{
-				gclass194_0 = this.Target;
-				return gclass194_0 != null && gclass194_0.gclass195_0.uint_0 > 0U;
+				[CompilerGenerated]
+				get
+				{
+					return this.<ShipInfo>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (object.Equals(this.<ShipInfo>k__BackingField, value))
+					{
+						return;
+					}
+					this.<ShipInfo>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_101);
+				}
+			}
+
+			public GClass205 Target
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<Target>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (object.Equals(this.<Target>k__BackingField, value))
+					{
+						return;
+					}
+					this.<Target>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_106);
+				}
+			}
+
+			public int FactionId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<FactionId>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<FactionId>k__BackingField == value)
+					{
+						return;
+					}
+					this.<FactionId>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_19);
+				}
+			}
+
+			public bool IsCloaked
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<IsCloaked>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<IsCloaked>k__BackingField == value)
+					{
+						return;
+					}
+					this.<IsCloaked>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_38);
+				}
+			}
+
+			public bool IsActive
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<IsActive>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<IsActive>k__BackingField == value)
+					{
+						return;
+					}
+					this.<IsActive>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_35);
+				}
+			}
+
+			public bool IsFighting
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<IsFighting>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (this.<IsFighting>k__BackingField == value)
+					{
+						return;
+					}
+					this.<IsFighting>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_41);
+				}
+			}
+
+			public DateTimeOffset LastPinged
+			{
+				[CompilerGenerated]
+				get
+				{
+					return this.<LastPinged>k__BackingField;
+				}
+				[CompilerGenerated]
+				set
+				{
+					if (DateTimeOffset.Equals(this.<LastPinged>k__BackingField, value))
+					{
+						return;
+					}
+					this.<LastPinged>k__BackingField = value;
+					this.method_7(Class5.propertyChangedEventArgs_58);
+				}
+			}
+
+			public event PropertyChangedEventHandler PropertyChanged;
+
+			public bool method_0(out GClass205 gclass205_0)
+			{
+				gclass205_0 = this.Target;
+				return gclass205_0 != null && gclass205_0.gclass207_0.uint_0 > 0U;
 			}
 
 			public GroupMember()
 			{
-				Class8.xDph7tozmh5WD();
+				Class13.tMHx78BzgCM8j();
 				base..ctor(0, 0);
 			}
 
@@ -200,61 +583,108 @@ namespace DarkorbitAPI.Structures
 				this.Target = null;
 			}
 
-			public void method_1(GClass184 gclass184_0)
+			public void method_1(GClass194 gclass194_0)
 			{
 				this.Clear();
 				this.IsInitialized = true;
-				this.method_4(gclass184_0.gclass193_0);
-				this.Id = gclass184_0.Id;
-				this.Name = gclass184_0.Name;
-				this.method_5(gclass184_0.gclass194_0);
-				this.IsCloaked = gclass184_0.bool_0;
-				this.IsActive = gclass184_0.bool_3;
-				this.method_6(gclass184_0.gclass191_0);
+				this.method_4(gclass194_0.gclass204_0);
+				this.Id = gclass194_0.Id;
+				this.Name = gclass194_0.Name;
+				this.method_5(gclass194_0.VdSideOtGf);
+				this.IsCloaked = gclass194_0.bool_3;
+				this.IsActive = !gclass194_0.bool_4;
+				this.method_6(gclass194_0.gclass201_0);
 			}
 
-			public void method_2(GClass201 gclass201_0)
+			public void method_2(GClass211 gclass211_0)
 			{
-				foreach (GClass187 gclass187_ in gclass201_0.vector_0)
+				foreach (GClass197 gclass197_ in gclass211_0.vector_0)
 				{
-					this.method_3(gclass187_);
+					this.method_3(gclass197_);
 				}
 			}
 
-			public void method_3(GClass187 gclass187_0)
+			public void method_3(GClass197 gclass197_0)
 			{
-				GClass193 gclass = gclass187_0 as GClass193;
+				GClass204 gclass = gclass197_0 as GClass204;
 				if (gclass != null)
 				{
 					this.method_4(gclass);
 					return;
 				}
-				GClass194 gclass2 = gclass187_0 as GClass194;
+				GClass205 gclass2 = gclass197_0 as GClass205;
 				if (gclass2 != null)
 				{
 					this.method_5(gclass2);
 					return;
 				}
-				GClass191 gclass3 = gclass187_0 as GClass191;
+				GClass201 gclass3 = gclass197_0 as GClass201;
 				if (gclass3 != null)
 				{
 					this.method_6(gclass3);
+					return;
+				}
+				GClass202 gclass4 = gclass197_0 as GClass202;
+				if (gclass4 != null)
+				{
+					this.IsFighting = gclass4.adIiHaIywk;
+					return;
+				}
+				GClass206 gclass5 = gclass197_0 as GClass206;
+				if (gclass5 != null)
+				{
+					this.IsActive = !gclass5.bool_0;
 				}
 			}
 
-			public void method_4(GClass193 gclass193_0)
+			public void method_4(GClass204 gclass204_0)
 			{
-				this.Location = gclass193_0;
+				this.Location = gclass204_0;
 			}
 
-			public void method_5(GClass194 gclass194_0)
+			public void method_5(GClass205 gclass205_0)
 			{
-				this.Target = gclass194_0;
+				this.Target = gclass205_0;
 			}
 
-			public void method_6(GClass191 gclass191_0)
+			public void method_6(GClass201 gclass201_0)
 			{
-				this.FactionId = (int)gclass191_0.uint_0;
+				this.FactionId = (int)gclass201_0.uint_0;
+			}
+
+			[DebuggerNonUserCode]
+			[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+			protected void method_7(PropertyChangedEventArgs propertyChangedEventArgs_0)
+			{
+				PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+				if (propertyChanged != null)
+				{
+					propertyChanged(this, propertyChangedEventArgs_0);
+				}
+			}
+		}
+
+		public class GroupInvite
+		{
+			public string FromName { get; private set; }
+
+			public int FromId { get; private set; }
+
+			public string ToName { get; private set; }
+
+			public int ToId { get; private set; }
+
+			public bool ToMe { get; private set; }
+
+			public GroupInvite(GClass195 gclass195_0, bool bool_0)
+			{
+				Class13.tMHx78BzgCM8j();
+				base..ctor();
+				this.FromId = gclass195_0.FromId;
+				this.FromName = gclass195_0.FromName;
+				this.ToId = gclass195_0.int_0;
+				this.ToName = gclass195_0.string_0;
+				this.ToMe = bool_0;
 			}
 		}
 	}

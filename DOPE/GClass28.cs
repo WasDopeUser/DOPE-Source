@@ -17,23 +17,23 @@ public static class GClass28
 		public IList<int> IList_2 { get; set; }
 
 		[JsonProperty("ammunition")]
-		public IList<int> IList_3 { get; set; }
+		public IList<int> rqNgiTfrdw { get; set; }
 
 		[JsonProperty("resources")]
-		public IList<int> IList_4 { get; set; }
+		public IList<int> IList_3 { get; set; }
 
 		[JsonProperty("drone_related")]
-		public IList<int> IList_5 { get; set; }
+		public IList<int> IList_4 { get; set; }
 
 		[JsonProperty("modules")]
-		public IList<int> IList_6 { get; set; }
+		public IList<int> IList_5 { get; set; }
 
 		[JsonProperty("pet_related")]
-		public IList<int> IList_7 { get; set; }
+		public IList<int> IList_6 { get; set; }
 
 		public GClass29()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -47,10 +47,10 @@ public static class GClass28
 		private IList<int> ilist_2;
 
 		[CompilerGenerated]
-		private IList<int> ilist_3;
+		private IList<int> wOxgsfQkim;
 
 		[CompilerGenerated]
-		private IList<int> UcebEmYsSZ;
+		private IList<int> ilist_3;
 
 		[CompilerGenerated]
 		private IList<int> ilist_4;
@@ -81,7 +81,7 @@ public static class GClass28
 
 		public GClass30()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -108,7 +108,7 @@ public static class GClass28
 
 		public GClass31()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -129,7 +129,7 @@ public static class GClass28
 
 		public GClass32()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -153,7 +153,7 @@ public static class GClass28
 
 		public GClass33()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -174,7 +174,7 @@ public static class GClass28
 
 		public GClass34()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -195,7 +195,7 @@ public static class GClass28
 
 		public GClass35()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -216,7 +216,7 @@ public static class GClass28
 
 		public GClass36()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -243,7 +243,7 @@ public static class GClass28
 
 		public GClass37()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -267,7 +267,7 @@ public static class GClass28
 
 		public GClass38()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -278,20 +278,20 @@ public static class GClass28
 	public class GClass39
 	{
 		[JsonProperty("30x30")]
-		public string IuCgSaHevj { get; set; }
-
-		[JsonProperty("63x63")]
 		public string String_0 { get; set; }
 
-		[JsonProperty("100x100")]
+		[JsonProperty("63x63")]
 		public string String_1 { get; set; }
 
-		[JsonProperty("top")]
+		[JsonProperty("100x100")]
 		public string String_2 { get; set; }
+
+		[JsonProperty("top")]
+		public string String_3 { get; set; }
 
 		public GClass39()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -321,7 +321,7 @@ public static class GClass28
 
 		public GClass40()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -351,7 +351,7 @@ public static class GClass28
 
 		public GClass41()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -365,7 +365,7 @@ public static class GClass28
 		private int int_1;
 
 		[CompilerGenerated]
-		private string WwPgcAvYy3;
+		private string string_1;
 	}
 
 	public class GClass42
@@ -381,7 +381,7 @@ public static class GClass28
 
 		public GClass42()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -423,7 +423,7 @@ public static class GClass28
 
 		public GClass43()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -459,7 +459,7 @@ public static class GClass28
 
 		public GClass44()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -480,7 +480,7 @@ public static class GClass28
 
 		public GClass45()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -504,7 +504,7 @@ public static class GClass28
 
 		public GClass46()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -525,7 +525,7 @@ public static class GClass28
 
 		public Map()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -542,14 +542,14 @@ public static class GClass28
 		public GClass28.GClass45 ret { get; set; }
 
 		[JsonProperty("money")]
-		public GClass28.GClass46 GClass46_0 { get; set; }
+		public GClass28.GClass46 Tnxtunfsjg { get; set; }
 
 		[JsonProperty("map")]
 		public GClass28.Map Map_0 { get; set; }
 
 		public GClass47()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 
@@ -573,7 +573,7 @@ public static class GClass28
 
 		public GClass48()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			base..ctor();
 		}
 

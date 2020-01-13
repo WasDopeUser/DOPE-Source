@@ -8,7 +8,7 @@ public class GClass435 : GInterface0
 	{
 		get
 		{
-			return 11529;
+			return 28851;
 		}
 	}
 
@@ -16,54 +16,46 @@ public class GClass435 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 16;
 		}
 	}
 
-	public GClass435(GClass469 gclass469_0 = null, Vector<GClass622> vector_1 = null, GClass622 gclass622_1 = null)
+	public GClass435(int int_2 = 0, Vector<GClass632> vector_2 = null, Vector<GClass544> vector_3 = null, int int_3 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		if (gclass469_0 == null)
+		this.int_1 = int_2;
+		if (vector_2 == null)
 		{
-			this.vmDqpkiZlr = new GClass469(0, null, null, null, null, "", "");
+			this.vector_0 = new Vector<GClass632>();
 		}
 		else
 		{
-			this.vmDqpkiZlr = gclass469_0;
+			this.vector_0 = vector_2;
 		}
-		if (vector_1 == null)
+		if (vector_3 == null)
 		{
-			this.vector_0 = new Vector<GClass622>();
+			this.vector_1 = new Vector<GClass544>();
 		}
 		else
 		{
-			this.vector_0 = vector_1;
+			this.vector_1 = vector_3;
 		}
-		if (gclass622_1 == null)
-		{
-			this.gclass622_0 = new GClass622("", "", 0, 0, 0);
-			return;
-		}
-		this.gclass622_0 = gclass622_1;
+		this.int_0 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 11529;
+		return 28851;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 16;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.gclass622_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass622);
-		this.gclass622_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -72,37 +64,59 @@ public class GClass435 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			GClass622 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass622;
+			GClass632 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass632;
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		this.vmDqpkiZlr = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass469);
-		this.vmDqpkiZlr.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		while (this.vector_1.Length > 0)
+		{
+			this.vector_1.method_1();
+		}
+		num = 0;
+		num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass544 gclass2 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass544;
+			gclass2.imethod_1(binaryStream_0);
+			this.vector_1.method_0(gclass2);
+			num++;
+		}
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 4 | U.smethod_0(this.int_1, 28));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(11529);
+		binaryStream_0.smethod_7(28851);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(8371);
-		this.gclass622_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(25509);
-		binaryStream_0.fUeiimuocMk(this.vector_0.Length);
-		foreach (GClass622 gclass in this.vector_0)
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass632 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		this.vmDqpkiZlr.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(16489);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_4(this.vector_1.Length);
+		foreach (GClass544 gclass2 in this.vector_1)
+		{
+			gclass2.imethod_2(binaryStream_0);
+		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 4) | this.int_1 << 28);
 	}
 
-	public GClass622 gclass622_0;
+	public Vector<GClass632> vector_0;
 
-	public Vector<GClass622> vector_0;
+	public int int_0;
 
-	public GClass469 vmDqpkiZlr;
+	public Vector<GClass544> vector_1;
+
+	public int int_1;
 }

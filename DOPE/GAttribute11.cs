@@ -7,7 +7,7 @@ public sealed class GAttribute11 : Attribute
 {
 	public GAttribute11([GAttribute1] Type baseType)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
 		this.Type_0 = baseType;
 	}

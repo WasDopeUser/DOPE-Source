@@ -73,20 +73,20 @@ public class GClass91
 	[CompilerGenerated]
 	public Thread method_5()
 	{
-		return this.OioNuhLrqs;
+		return this.thread_0;
 	}
 
 	[CompilerGenerated]
-	private void method_6(Thread thread_0)
+	private void method_6(Thread thread_1)
 	{
-		this.OioNuhLrqs = thread_0;
+		this.thread_0 = thread_1;
 	}
 
 	public GClass91()
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.method_6(new Thread(new ThreadStart(this.method_9)));
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
 		this.method_5().IsBackground = true;
 	}
 
@@ -97,43 +97,62 @@ public class GClass91
 		tcpClient.Close();
 	}
 
-	public void method_7(string string_0, int int_0, bool bool_0 = true)
+	public void Connect(string host, int port, bool forceNonLoopback = true, ProxySettings proxySettings = null)
 	{
-		this.method_10();
+		this.method_8();
 		this.method_4(new TcpClient());
-		if (bool_0)
+		if (proxySettings != null)
+		{
+			try
+			{
+				GClass124 gclass = new GClass124(proxySettings.Host, proxySettings.Port, proxySettings.User, proxySettings.Password);
+				this.method_4(gclass.imethod_6(host, port));
+				goto IL_AC;
+			}
+			catch (Exception exception)
+			{
+				GClass91.GClass92.GDelegate6 disconnected = this.Disconnected;
+				if (disconnected != null)
+				{
+					disconnected(this, ErrorReason.ProxyError, exception);
+				}
+				return;
+			}
+		}
+		if (forceNonLoopback)
 		{
 			this.method_3().Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 			GClass91.smethod_0(this.method_3().Client);
 		}
 		try
 		{
-			this.method_3().Connect(string_0, int_0);
+			this.method_3().Connect(host, port);
 		}
-		catch (Exception exception)
+		catch (Exception exception2)
 		{
-			GClass91.GClass92.GDelegate6 disconnected = this.Disconnected;
-			if (disconnected != null)
+			GClass91.GClass92.GDelegate6 disconnected2 = this.Disconnected;
+			if (disconnected2 != null)
 			{
-				disconnected(this, ErrorReason.ConnectionLost, exception);
+				disconnected2(this, ErrorReason.ConnectionLost, exception2);
 			}
 			return;
 		}
-		this.method_6(new Thread(new ThreadStart(this.method_9)));
+		IL_AC:
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
 		this.method_5().IsBackground = true;
 		this.method_5().Start();
 	}
 
-	public void method_8(TcpClient tcpClient_1)
+	public void Connect(TcpClient client)
 	{
-		this.method_10();
-		this.method_4(tcpClient_1);
-		this.method_6(new Thread(new ThreadStart(this.method_9)));
+		this.method_8();
+		this.method_4(client);
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
 		this.method_5().IsBackground = true;
 		this.method_5().Start();
 	}
 
-	private void method_9()
+	private void method_7()
 	{
 		try
 		{
@@ -225,7 +244,7 @@ public class GClass91
 		disconnected4(this, ErrorReason.ConnectionLost, null);
 	}
 
-	public void method_10()
+	public void method_8()
 	{
 		try
 		{
@@ -247,7 +266,7 @@ public class GClass91
 	private TcpClient tcpClient_0;
 
 	[CompilerGenerated]
-	private Thread OioNuhLrqs;
+	private Thread thread_0;
 
 	public static class GClass92
 	{

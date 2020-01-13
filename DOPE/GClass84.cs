@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using NLog;
 using Syroot.BinaryData;
 
-public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG4W : GInterface6
+public class GClass84<eLOjBoJ2jNiB3iUGUbm> : GInterface5 where eLOjBoJ2jNiB3iUGUbm : GInterface7
 {
 	private Logger Log
 	{
@@ -23,8 +23,8 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 
 	public GClass84(ConnectionManager connectionManager_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
-		this.dictionary_0 = new Dictionary<int, GInterface0>();
+		Class13.tMHx78BzgCM8j();
+		this.iQmlcoUymF = new Dictionary<int, GInterface0>();
 		this.object_0 = new object();
 		base..ctor();
 		this.Connection = connectionManager_1;
@@ -121,15 +121,15 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 	}
 
 	[CompilerGenerated]
-	public rHsue1V8I7SHijltG4W method_4()
+	public eLOjBoJ2jNiB3iUGUbm method_4()
 	{
 		return this.gparam_0;
 	}
 
 	[CompilerGenerated]
-	private void method_5(rHsue1V8I7SHijltG4W c7GtUOVL1dN03oCuFdI)
+	private void method_5(eLOjBoJ2jNiB3iUGUbm tXhmk6JskkyYvgIbfE3)
 	{
-		this.gparam_0 = c7GtUOVL1dN03oCuFdI;
+		this.gparam_0 = tXhmk6JskkyYvgIbfE3;
 	}
 
 	[CompilerGenerated]
@@ -148,7 +148,7 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 	{
 		short_0 = binaryStream_2.ReadInt16();
 		GInterface0 ginterface;
-		if (!this.dictionary_0.TryGetValue((int)short_0, out ginterface))
+		if (!this.iQmlcoUymF.TryGetValue((int)short_0, out ginterface))
 		{
 			ginterface = GClass86.smethod_2((int)short_0);
 			if (ginterface == null)
@@ -193,36 +193,27 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 		return ginterface;
 	}
 
-	public void method_9(GClass91 gclass91_1, rHsue1V8I7SHijltG4W ArxJeVVgtv2E7Q0qcL1)
+	public void method_9(GClass91 gclass91_1, eLOjBoJ2jNiB3iUGUbm O9sRVlJf6tyEhAEcWvH)
 	{
 		this.method_11();
 		this.Socket = gclass91_1;
 		try
 		{
-			rHsue1V8I7SHijltG4W rHsue1V8I7SHijltG4W = this.method_4();
-			ref rHsue1V8I7SHijltG4W ptr = ref rHsue1V8I7SHijltG4W;
-			rHsue1V8I7SHijltG4W rHsue1V8I7SHijltG4W2 = default(rHsue1V8I7SHijltG4W);
-			if (rHsue1V8I7SHijltG4W2 == null)
+			eLOjBoJ2jNiB3iUGUbm eLOjBoJ2jNiB3iUGUbm = this.method_4();
+			if (eLOjBoJ2jNiB3iUGUbm != null)
 			{
-				rHsue1V8I7SHijltG4W2 = rHsue1V8I7SHijltG4W;
-				ptr = ref rHsue1V8I7SHijltG4W2;
-				if (rHsue1V8I7SHijltG4W2 == null)
-				{
-					goto IL_44;
-				}
+				eLOjBoJ2jNiB3iUGUbm.imethod_2();
 			}
-			ptr.imethod_2();
-			IL_44:;
 		}
 		catch
 		{
 		}
-		this.method_5(ArxJeVVgtv2E7Q0qcL1);
+		this.method_5(O9sRVlJf6tyEhAEcWvH);
 	}
 
 	public void method_10(string string_1)
 	{
-		this.SendMessage(new GClass255(string_1));
+		this.SendMessage(new GClass269(string_1));
 	}
 
 	public void SendMessage(GInterface0 ginterface0_0)
@@ -248,8 +239,8 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 				this.method_6().Position = 0L;
 				this.method_6().Write((short)num);
 			}
-			rHsue1V8I7SHijltG4W rHsue1V8I7SHijltG4W = this.method_4();
-			rHsue1V8I7SHijltG4W.imethod_0(this.byte_0, 0, num + num2);
+			eLOjBoJ2jNiB3iUGUbm eLOjBoJ2jNiB3iUGUbm = this.method_4();
+			eLOjBoJ2jNiB3iUGUbm.imethod_0(this.byte_0, 0, num + num2);
 			try
 			{
 				this.Socket.method_3().GetStream().Write(this.byte_0, 0, num + num2);
@@ -277,66 +268,66 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 		this.func_0 = new Func<BinaryStream, int, bool>(this.method_14);
 	}
 
-	public void method_12(BinaryStream binaryStream_2, byte[] byte_1, int int_5)
+	public void method_12(BinaryStream binaryStream_2, byte[] byte_1, int int_6)
 	{
-		this.DfFhYonEwY = int_5;
+		this.int_2 = int_6;
 		this.int_0 = 0;
-		rHsue1V8I7SHijltG4W rHsue1V8I7SHijltG4W = this.method_4();
-		rHsue1V8I7SHijltG4W.imethod_1(byte_1, 0, int_5);
-		while (this.func_0(binaryStream_2, int_5))
+		eLOjBoJ2jNiB3iUGUbm eLOjBoJ2jNiB3iUGUbm = this.method_4();
+		eLOjBoJ2jNiB3iUGUbm.imethod_1(byte_1, 0, int_6);
+		while (this.func_0(binaryStream_2, int_6))
 		{
 			this.method_7().Position = 0L;
 		}
 		binaryStream_2.Position = 0L;
 	}
 
-	private bool method_13(BinaryStream binaryStream_2, int int_5)
+	private bool method_13(BinaryStream binaryStream_2, int int_6)
 	{
-		if (this.DfFhYonEwY == 0)
+		if (this.int_2 == 0)
 		{
 			return false;
 		}
 		if (this.int_1 > 0)
 		{
-			int num = Math.Min(this.int_1, this.DfFhYonEwY);
-			GClass800.smethod_0(binaryStream_2, this.method_7(), num);
+			int num = Math.Min(this.int_1, this.int_2);
+			GClass811.smethod_0(binaryStream_2, this.method_7(), num);
 			this.int_1 -= num;
-			this.DfFhYonEwY -= num;
+			this.int_2 -= num;
 			this.int_0 += num;
 		}
 		return this.int_1 == 0;
 	}
 
-	private bool method_14(BinaryStream binaryStream_2, int int_5)
+	private bool method_14(BinaryStream binaryStream_2, int int_6)
 	{
-		if (!this.method_13(binaryStream_2, int_5))
+		if (!this.method_13(binaryStream_2, int_6))
 		{
 			return false;
 		}
 		this.method_7().Position = 0L;
-		if (this.int_2 == 65535)
+		if (this.int_3 == 65535)
 		{
-			this.int_2 = (int)this.method_7().ReadUInt32();
+			this.int_3 = (int)this.method_7().ReadUInt32();
 		}
 		else
 		{
-			this.int_2 = (int)this.method_7().ReadUInt16();
-			if (this.int_2 == 65535)
+			this.int_3 = (int)this.method_7().ReadUInt16();
+			if (this.int_3 == 65535)
 			{
 				this.func_0 = new Func<BinaryStream, int, bool>(this.method_14);
 				this.int_1 = 4;
 				return true;
 			}
 		}
-		this.int_1 = this.int_2;
-		this.method_7().SetLength((long)this.int_2);
+		this.int_1 = this.int_3;
+		this.method_7().SetLength((long)this.int_3);
 		this.func_0 = new Func<BinaryStream, int, bool>(this.method_15);
 		return true;
 	}
 
-	private bool method_15(BinaryStream binaryStream_2, int int_5)
+	private bool method_15(BinaryStream binaryStream_2, int int_6)
 	{
-		if (!this.method_13(binaryStream_2, int_5))
+		if (!this.method_13(binaryStream_2, int_6))
 		{
 			return false;
 		}
@@ -344,11 +335,11 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 		this.method_7().Position = 0L;
 		short num;
 		GInterface0 ginterface = this.method_8(this.method_7(), out num);
-		this.int_4++;
+		this.int_5++;
 		ConnectionManager connection = this.Connection;
 		if (connection != null)
 		{
-			connection.method_20();
+			connection.method_18();
 		}
 		if (ginterface != null)
 		{
@@ -379,7 +370,7 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 		return true;
 	}
 
-	public readonly Dictionary<int, GInterface0> dictionary_0;
+	public readonly Dictionary<int, GInterface0> iQmlcoUymF;
 
 	private readonly byte[] byte_0;
 
@@ -402,7 +393,7 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 	private string string_0;
 
 	[CompilerGenerated]
-	private rHsue1V8I7SHijltG4W gparam_0;
+	private eLOjBoJ2jNiB3iUGUbm gparam_0;
 
 	[CompilerGenerated]
 	private readonly BinaryStream binaryStream_0;
@@ -416,13 +407,13 @@ public class GClass84<rHsue1V8I7SHijltG4W> : GInterface5 where rHsue1V8I7SHijltG
 
 	private int int_1;
 
-	private int DfFhYonEwY;
-
 	private int int_2;
-
-	private Func<BinaryStream, int, bool> func_0;
 
 	private int int_3;
 
+	private Func<BinaryStream, int, bool> func_0;
+
 	private int int_4;
+
+	private int int_5;
 }

@@ -1,40 +1,94 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using DOPE.Common.Models.Bot;
+using System.Linq;
+using DOPE.Common.Models;
 
-public class GClass825 : GClass822
+public class GClass825 : GClass824
 {
-	public GClass825(GClass810 gclass810_1)
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
 	{
-		Class8.xDph7tozmh5WD();
-		base..ctor(gclass810_1);
+		return null;
 	}
 
-	public override bool vmethod_15(GClass812 gclass812_0)
+	public override bool ShouldBeInGame()
 	{
-		return gclass812_0 is GClass814;
+		return false;
 	}
 
-	public override List<Rectangle> vmethod_13()
+	public override int UpdatePriority()
 	{
-		return GClass825.list_0;
+		return -1;
 	}
 
-	public override BotState vmethod_14()
+	public override void UpdateState()
 	{
-		return BotState.TradePalladium;
+		base.UpdateState();
+	}
+
+	public override MapProfile GetMapProfile()
+	{
+		return base.Context.MapProfile ?? this.mapProfile_1;
+	}
+
+	public GClass825(GClass822 gclass822_1)
+	{
+		Class13.tMHx78BzgCM8j();
+		this.mapProfile_1 = new MapProfile
+		{
+			TargetMap = TargetMap.X1
+		};
+		base..ctor(gclass822_1, "Idle", -1);
+		base.MapProfile = null;
+	}
+
+	public override bool ShouldChangeHangar(out string string_1)
+	{
+		string_1 = null;
+		AccountSettings account = base.C.Account;
+		if (account != null && account.Spinner_UsePhoenix)
+		{
+			AccountSettings account2 = base.C.Account;
+			if (((account2 != null) ? account2.HangarDefault : null) != null && base.Started.Cooldown(30000))
+			{
+				GClass825.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass825.<>c__DisplayClass8_0();
+				GClass849 gclass = base.Context.method_62<GClass849>();
+				GClass825.<>c__DisplayClass8_0 CS$<>8__locals2 = CS$<>8__locals1;
+				AccountSettings account3 = base.C.Account;
+				List<string> list;
+				if (account3 == null)
+				{
+					list = null;
+				}
+				else
+				{
+					VolatileData @volatile = account3.Volatile;
+					list = ((@volatile != null) ? @volatile.Hangars : null);
+				}
+				CS$<>8__locals2.list_0 = list;
+				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass825.list_0.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
+				return string_1 != null && gclass.method_15() > 0;
+			}
+		}
+		return false;
+	}
+
+	public override string ToString()
+	{
+		return "Idle";
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass825()
 	{
-		Class8.xDph7tozmh5WD();
-		GClass825.list_0 = new List<Rectangle>
+		Class13.tMHx78BzgCM8j();
+		GClass825.list_0 = new List<string>
 		{
-			new Rectangle(9950, 6550, 200, 300)
+			"ship_phoenix",
+			"ship_liberator"
 		};
 	}
 
-	public static List<Rectangle> list_0;
+	private MapProfile mapProfile_1;
+
+	public static List<string> list_0;
 }

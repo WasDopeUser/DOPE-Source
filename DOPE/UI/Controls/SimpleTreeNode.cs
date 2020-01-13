@@ -1,6 +1,8 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace DOPE.UI.Controls
@@ -66,13 +68,15 @@ namespace DOPE.UI.Controls
 
 		public SimpleTreeNode()
 		{
-			Class8.xDph7tozmh5WD();
+			Class13.tMHx78BzgCM8j();
 			this.<Children>k__BackingField = new List<SimpleTreeNode>();
 			base..ctor();
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void method_0(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

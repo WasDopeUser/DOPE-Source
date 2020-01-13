@@ -42,9 +42,15 @@ namespace DOPE.Common.Models
 		GG_Lambda,
 		[Display(Name = "GG Kronos")]
 		GG_Kronos,
-		[Display(Name = "GG VoT")]
 		[NotMapped]
+		[Display(Name = "GG VoT")]
 		GG_VoT = 227,
+		[NotMapped]
+		[Display(Name = "GG QZ")]
+		GG_QZ = 229,
+		[NotMapped]
+		[Display(Name = "GG Cold Wave")]
+		GG_ColdWave = 77,
 		[Display(Name = "GG Kuiper")]
 		GG_Kuiper = 300,
 		[Display(Name = "4-1")]
@@ -57,8 +63,8 @@ namespace DOPE.Common.Models
 		W44,
 		[Display(Name = "4-5")]
 		W45 = 29,
-		[NotMapped]
 		[Display(Name = "5-1")]
+		[NotMapped]
 		P51 = 91,
 		[Display(Name = "5-2")]
 		P52,
@@ -70,6 +76,9 @@ namespace DOPE.Common.Models
 		[Display(Name = "BL-2")]
 		BL2,
 		[Display(Name = "BL-3")]
-		BL3
+		BL3,
+		[NotMapped]
+		[Display(Name = "FL ATLAS A")]
+		FL_ATLAS_A = 430
 	}
 }

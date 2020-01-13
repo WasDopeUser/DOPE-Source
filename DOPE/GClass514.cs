@@ -8,7 +8,7 @@ public class GClass514 : GInterface0
 	{
 		get
 		{
-			return 30674;
+			return 31557;
 		}
 	}
 
@@ -16,47 +16,63 @@ public class GClass514 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass514(int int_1 = 0)
+	public GClass514(GClass498 gclass498_1 = null, GClass453 gclass453_1 = null)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.int_0 = int_1;
+		if (gclass498_1 == null)
+		{
+			this.gclass498_0 = new GClass498(0, false, false, false, 0, null);
+		}
+		else
+		{
+			this.gclass498_0 = gclass498_1;
+		}
+		if (gclass453_1 == null)
+		{
+			this.gclass453_0 = new GClass453(0, null, 0U, 0U, 0.0, false, null, null);
+			return;
+		}
+		this.gclass453_0 = gclass453_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 30674;
+		return 31557;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		binaryStream_0.smethod_1();
+		this.gclass498_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass498);
+		this.gclass498_0.imethod_1(binaryStream_0);
+		this.gclass453_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass453);
+		this.gclass453_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(30674);
+		binaryStream_0.smethod_7(31557);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.fUeiimuocMk(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		binaryStream_0.smethod_5(-18600);
-		binaryStream_0.smethod_5(-25040);
+		this.gclass498_0.imethod_2(binaryStream_0);
+		this.gclass453_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(17651);
 	}
 
-	public int int_0;
+	public GClass498 gclass498_0;
+
+	public GClass453 gclass453_0;
 }

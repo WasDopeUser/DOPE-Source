@@ -8,7 +8,7 @@ public class GClass497 : GInterface0
 	{
 		get
 		{
-			return 25279;
+			return 19909;
 		}
 	}
 
@@ -16,55 +16,45 @@ public class GClass497 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 4;
 		}
 	}
 
-	public GClass497(uint uint_0 = 0U, double double_1 = 0.0, int int_1 = 0)
+	public GClass497(int int_0 = 0)
 	{
-		Class8.xDph7tozmh5WD();
+		Class13.tMHx78BzgCM8j();
 		base..ctor();
-		this.Mode = uint_0;
-		this.double_0 = double_1;
-		this.int_0 = int_1;
+		this.MapId = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 25279;
+		return 19909;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		this.Mode = (uint)binaryStream_0.smethod_1();
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 16) | this.MapId << 16);
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(25279);
+		binaryStream_0.smethod_7(19909);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.fUeiimuocMk(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		binaryStream_0.lwAiiEjwcUm(this.Mode);
-		binaryStream_0.smethod_5(-27794);
+		binaryStream_0.smethod_4(this.MapId << 16 | U.smethod_0(this.MapId, 16));
+		binaryStream_0.smethod_7(-16545);
 	}
 
-	public double double_0;
-
-	public int int_0;
-
-	public uint Mode;
+	public int MapId;
 }
