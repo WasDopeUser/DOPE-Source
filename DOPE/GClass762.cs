@@ -22,7 +22,7 @@ public class GClass762 : GInterface0
 
 	public GClass762(int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0, int int_18 = 0, int int_19 = 0, int int_20 = 0, int int_21 = 0, int int_22 = 0, int int_23 = 0, int int_24 = 0, int int_25 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_9 = int_13;
 		this.int_1 = int_14;

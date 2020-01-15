@@ -22,7 +22,7 @@ public class GClass424 : GInterface0
 
 	public GClass424(uint uint_1 = 0U, GClass318 gclass318_1 = null, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		if (gclass318_1 == null)

@@ -22,7 +22,7 @@ public class GClass498 : GInterface0
 
 	public GClass498(int int_1 = 0, bool bool_3 = false, bool bool_4 = false, bool bool_5 = false, int int_2 = 0, Vector<GClass514> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Id = int_1;
 		this.bool_1 = bool_3;

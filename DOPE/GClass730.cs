@@ -22,7 +22,7 @@ public class GClass730 : GInterface0
 
 	public GClass730(uint uint_1 = 0U, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0, int int_18 = 0, int int_19 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.int_5 = int_10;

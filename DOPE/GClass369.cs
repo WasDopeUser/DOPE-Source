@@ -22,7 +22,7 @@ public class GClass369 : GInterface0
 
 	public GClass369(Vector<GClass284> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

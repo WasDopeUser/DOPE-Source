@@ -11,7 +11,7 @@ namespace DarkorbitAPI.Structures
 	{
 		public Ship(int int_0, int int_1)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.Modifiers = new ConcurrentDictionary<uint, GClass186>();
 			this.Effects = new HashSet<string>();
 			base..ctor(int_0, int_1);
@@ -19,7 +19,7 @@ namespace DarkorbitAPI.Structures
 
 		public Ship()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this..ctor(0, 0);
 		}
 
@@ -541,18 +541,18 @@ namespace DarkorbitAPI.Structures
 
 		public virtual void Init(GClass219 gclass219_0)
 		{
-			this.PosX = gclass219_0.int_14;
-			this.PosY = gclass219_0.int_9;
+			this.PosX = gclass219_0.int_13;
+			this.PosY = gclass219_0.int_7;
 			this.IsNpc = false;
-			this.FactionId = gclass219_0.ehrBvdyNv2;
-			this.Id = gclass219_0.int_15;
+			this.FactionId = gclass219_0.int_12;
+			this.Id = gclass219_0.int_14;
 			this.TypeId = gclass219_0.string_1;
 			this.ClanTag = gclass219_0.string_2;
 			this.Cloaked = gclass219_0.bool_1;
-			this.Hp = gclass219_0.int_4;
-			this.HpMax = gclass219_0.int_7;
-			this.Shield = gclass219_0.int_13;
-			this.ShieldMax = gclass219_0.int_12;
+			this.Hp = gclass219_0.lmvcWfReej;
+			this.HpMax = gclass219_0.int_5;
+			this.Shield = gclass219_0.int_11;
+			this.ShieldMax = gclass219_0.int_10;
 			this.Name = gclass219_0.string_0;
 			this.Modifiers.Clear();
 			this.Effects.Clear();
@@ -565,7 +565,7 @@ namespace DarkorbitAPI.Structures
 
 		public bool method_7(Hero hero_0)
 		{
-			return this.IsPlayer && ((this.FactionId != hero_0.FactionId && this.ClanDiplomacy != 1 && this.ClanDiplomacy != 2) || this.ClanDiplomacy == 3) && !hero_0.Group.urkOoRqUjU(this.Id);
+			return this.IsPlayer && ((this.FactionId != hero_0.FactionId && this.ClanDiplomacy != 1 && this.ClanDiplomacy != 2) || this.ClanDiplomacy == 3) && !hero_0.Group.method_1(this.Id);
 		}
 
 		public bool method_8(Hero hero_0)
@@ -598,7 +598,7 @@ namespace DarkorbitAPI.Structures
 		// Note: this type is marked as 'beforefieldinit'.
 		static Ship()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			Ship.Default = new Ship();
 		}
 

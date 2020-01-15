@@ -22,7 +22,7 @@ public class GClass719 : GInterface0
 
 	public GClass719(Vector<GClass710> vector_3 = null, Vector<GClass632> vector_4 = null, Vector<GClass544> vector_5 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_3 == null)
 		{

@@ -22,7 +22,7 @@ public class GClass558 : GInterface0
 
 	public GClass558(GClass260 gclass260_1 = null, GClass628 gclass628_1 = null, bool bool_1 = false, int int_1 = 0, GClass500 gclass500_4 = null, GClass500 gclass500_5 = null, GClass500 gclass500_6 = null, GClass500 gclass500_7 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass260_1 == null)
 		{

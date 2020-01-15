@@ -20,16 +20,16 @@ public class GClass198 : GClass197, GInterface0
 		}
 	}
 
-	public GClass198(int int_5 = 0, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0, int int_10 = 0)
+	public GClass198(int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.int_0 = int_5;
-		this.int_4 = int_6;
-		this.int_1 = int_7;
-		this.int_3 = int_8;
-		this.PpKipIxvnM = int_9;
-		this.int_2 = int_10;
+		this.int_0 = int_6;
+		this.int_4 = int_7;
+		this.int_1 = int_8;
+		this.int_3 = int_9;
+		this.int_5 = int_10;
+		this.int_2 = int_11;
 	}
 
 	public override int vmethod_0()
@@ -55,8 +55,8 @@ public class GClass198 : GClass197, GInterface0
 		this.int_3 = (U.smethod_0(this.int_3, 10) | this.int_3 << 22);
 		this.int_4 = binaryStream_0.smethod_0();
 		this.int_4 = (U.smethod_0(this.int_4, 2) | this.int_4 << 30);
-		this.PpKipIxvnM = binaryStream_0.smethod_0();
-		this.PpKipIxvnM = (U.smethod_0(this.PpKipIxvnM, 5) | this.PpKipIxvnM << 27);
+		this.int_5 = binaryStream_0.smethod_0();
+		this.int_5 = (U.smethod_0(this.int_5, 5) | this.int_5 << 27);
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
@@ -73,7 +73,7 @@ public class GClass198 : GClass197, GInterface0
 		binaryStream_0.smethod_4(this.int_2 << 15 | U.smethod_0(this.int_2, 17));
 		binaryStream_0.smethod_4(this.int_3 << 10 | U.smethod_0(this.int_3, 22));
 		binaryStream_0.smethod_4(this.int_4 << 2 | U.smethod_0(this.int_4, 30));
-		binaryStream_0.smethod_4(this.PpKipIxvnM << 5 | U.smethod_0(this.PpKipIxvnM, 27));
+		binaryStream_0.smethod_4(this.int_5 << 5 | U.smethod_0(this.int_5, 27));
 	}
 
 	public int int_0;
@@ -86,5 +86,5 @@ public class GClass198 : GClass197, GInterface0
 
 	public int int_4;
 
-	public int PpKipIxvnM;
+	public int int_5;
 }

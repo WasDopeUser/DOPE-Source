@@ -22,7 +22,7 @@ public class GClass422 : GClass421, GInterface0
 
 	public GClass422(string string_2 = "", bool bool_1 = false, GClass359 gclass359_1 = null, string string_3 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0, bool bool_2 = false, GClass359 gclass359_2 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_1 = "";
 		base..ctor(string_2, bool_1, gclass359_1);
 		this.string_1 = string_3;

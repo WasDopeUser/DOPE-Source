@@ -22,7 +22,7 @@ public class GClass271 : GInterface0
 
 	public GClass271(string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

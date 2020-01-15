@@ -22,7 +22,7 @@ public class GClass505 : GInterface0
 
 	public GClass505(string string_4 = "", string string_5 = "", string string_6 = "", string string_7 = "", Vector<GClass377> vector_1 = null, int int_1 = 0, GClass425 gclass425_1 = null, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";

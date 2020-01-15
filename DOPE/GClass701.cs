@@ -22,7 +22,7 @@ public class GClass701 : GInterface0
 
 	public GClass701(int int_1 = 0, string string_1 = "", bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.int_0 = int_1;

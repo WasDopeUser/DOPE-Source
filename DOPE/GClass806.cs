@@ -17,4 +17,10 @@ public static class GClass806
 		DateTimeOffset now = DateTimeOffset.Now;
 		return !(dateTimeOffset_0 > now) && (now - dateTimeOffset_0).TotalMilliseconds <= (double)int_0;
 	}
+
+	public static bool smethod_1(this DateTimeOffset dateTimeOffset_0, TimeSpan timeSpan_0)
+	{
+		DateTimeOffset now = DateTimeOffset.Now;
+		return !(dateTimeOffset_0 > now) && now - dateTimeOffset_0 <= timeSpan_0;
+	}
 }

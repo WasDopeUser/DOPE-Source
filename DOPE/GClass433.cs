@@ -22,7 +22,7 @@ public class GClass433 : GInterface0
 
 	public GClass433(int int_1 = 0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		this.uint_0 = uint_1;

@@ -18,7 +18,7 @@ public class GClass102 : GInterface4
 			GClass102.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass102.<>c__DisplayClass0_0();
 			if (isControlDisabled)
 			{
-				value.Game.Hero.Pet.method_22();
+				value.Game.Hero.Pet.method_21();
 			}
 			HeroPet.PetModeData petModeData;
 			if (!value.Game.Hero.Pet.Modes.TryGetValue(PetMode.Kamikaze, out petModeData))
@@ -39,7 +39,7 @@ public class GClass102 : GInterface4
 
 	public GClass102()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

@@ -22,7 +22,7 @@ public class GClass523 : GInterface0
 
 	public GClass523(int int_1 = 0, string string_13 = "", string string_14 = "", string string_15 = "", string string_16 = "", string string_17 = "", string string_18 = "", string string_19 = "", string string_20 = "", string string_21 = "", string string_22 = "", string string_23 = "", string string_24 = "", string string_25 = "", bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";

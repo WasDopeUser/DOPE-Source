@@ -22,7 +22,7 @@ public class GClass125 : GInterface0
 
 	public GClass125(Vector<GClass739> vector_3 = null, Vector<GClass660> vector_4 = null, Vector<GClass660> vector_5 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_3 == null)
 		{

@@ -129,13 +129,13 @@ namespace DOPE.UI.Models
 
 		public CommandViewModel()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.PropertyChanged = new PropertyChangedEventHandler(CommandViewModel.<>c.<>9.method_0);
 			base..ctor();
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void method_0(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

@@ -22,7 +22,7 @@ public class GClass413 : GInterface0
 
 	public GClass413()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

@@ -22,7 +22,7 @@ public class GClass223 : GInterface0
 
 	public GClass223(int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, string string_1 = "", int int_14 = 0, int int_15 = 0, int int_16 = 0, string string_2 = "", int int_17 = 0, int int_18 = 0, int int_19 = 0, GClass759 gclass759_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		this.string_0 = "";
 		base..ctor();

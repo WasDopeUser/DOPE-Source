@@ -20,11 +20,11 @@ public class GClass480 : GInterface0
 		}
 	}
 
-	public GClass480(int int_1 = 0)
+	public GClass480(int int_0 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.int_0 = int_1;
+		this.seEizkrePO = int_0;
 	}
 
 	public virtual int vmethod_0()
@@ -39,8 +39,8 @@ public class GClass480 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		this.seEizkrePO = binaryStream_0.smethod_0();
+		this.seEizkrePO = (U.smethod_0(this.seEizkrePO, 11) | this.seEizkrePO << 21);
 		binaryStream_0.smethod_1();
 	}
 
@@ -52,9 +52,9 @@ public class GClass480 : GInterface0
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_4(this.seEizkrePO << 11 | U.smethod_0(this.seEizkrePO, 21));
 		binaryStream_0.smethod_7(22408);
 	}
 
-	public int int_0;
+	public int seEizkrePO;
 }

@@ -29,7 +29,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Connection>k__BackingField = value;
-				this.method_8(Class5.Connection);
+				this.method_10(Class5.Connection);
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Hero>k__BackingField = value;
-				this.method_8(Class5.Hero);
+				this.method_10(Class5.Hero);
 			}
 		}
 
@@ -67,7 +67,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Map>k__BackingField = value;
-				this.method_8(Class5.Map);
+				this.method_10(Class5.Map);
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Security>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_96);
+				this.method_10(Class5.propertyChangedEventArgs_96);
 			}
 		}
 
@@ -105,7 +105,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Web>k__BackingField = value;
-				this.method_8(Class5.Web);
+				this.method_10(Class5.Web);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Settings>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_98);
+				this.method_10(Class5.propertyChangedEventArgs_98);
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<NextMapId>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_75);
+				this.method_10(Class5.propertyChangedEventArgs_75);
 			}
 		}
 
@@ -162,7 +162,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LastJumped>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_57);
+				this.method_10(Class5.propertyChangedEventArgs_57);
 			}
 		}
 
@@ -181,7 +181,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LastDied>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_55);
+				this.method_10(Class5.propertyChangedEventArgs_55);
 			}
 		}
 
@@ -200,7 +200,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LastDailyLogin>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_54);
+				this.method_10(Class5.propertyChangedEventArgs_54);
 			}
 		}
 
@@ -219,7 +219,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<FrozenLabirynthOpening>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_23);
+				this.method_10(Class5.propertyChangedEventArgs_23);
 			}
 		}
 
@@ -238,7 +238,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<FrozenLabirynthClosing>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_22);
+				this.method_10(Class5.propertyChangedEventArgs_22);
 			}
 		}
 
@@ -257,7 +257,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LicenseState>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_67);
+				this.method_10(Class5.propertyChangedEventArgs_67);
 			}
 		}
 
@@ -276,7 +276,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LicenseExpiration>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_66);
+				this.method_10(Class5.propertyChangedEventArgs_66);
 			}
 		}
 
@@ -295,7 +295,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Dope>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_15);
+				this.method_10(Class5.propertyChangedEventArgs_15);
 			}
 		}
 
@@ -314,8 +314,8 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<LogManager>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_69);
-				this.method_8(Class5.propertyChangedEventArgs_70);
+				this.method_10(Class5.propertyChangedEventArgs_69);
+				this.method_10(Class5.propertyChangedEventArgs_70);
 			}
 		}
 
@@ -342,7 +342,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<IsLoggedIn>k__BackingField = value;
-				this.method_8(Class5.IsLoggedIn);
+				this.method_10(Class5.IsLoggedIn);
 			}
 		}
 
@@ -361,7 +361,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<IsLoggedOut>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_44);
+				this.method_10(Class5.propertyChangedEventArgs_44);
 			}
 		}
 
@@ -382,18 +382,18 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<ProxySettings>k__BackingField = value;
-				this.method_8(Class5.propertyChangedEventArgs_80);
+				this.method_10(Class5.propertyChangedEventArgs_80);
 			}
 		}
 
 		public GameManager(IDopeServiceProxy idopeServiceProxy_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			GameManager.Instance.Value = this;
 			this.Connection = new ConnectionManager(this);
-			this.Connection.Socket.Connected += this.VtovzppyPq;
-			this.Connection.Socket.Disconnected += this.method_0;
+			this.Connection.Socket.Connected += this.method_0;
+			this.Connection.Socket.Disconnected += this.method_1;
 			this.Hero = new Hero(this);
 			this.Map = new Map(this);
 			this.Security = new SecurityManager(this);
@@ -404,18 +404,18 @@ namespace DarkorbitAPI
 			this.Random = new Random();
 		}
 
-		private void VtovzppyPq(GClass91 gclass91_0)
+		private void method_0(GClass91 gclass91_0)
 		{
 			this.IsLoggedOut = false;
 		}
 
-		private void method_0(GClass91 gclass91_0, ErrorReason errorReason_0, Exception exception_0 = null)
+		private void method_1(GClass91 gclass91_0, ErrorReason errorReason_0, Exception exception_0 = null)
 		{
 			this.Hero.Clear();
 			this.Map.Clear();
 		}
 
-		public void method_1()
+		public void method_2()
 		{
 			this.Settings = (this.Settings ?? new Settings());
 			this.Settings.MapHosts = this.Web.GetMapHosts();
@@ -438,7 +438,7 @@ namespace DarkorbitAPI
 			}
 		}
 
-		public void method_2()
+		public void method_3()
 		{
 			if (this.IsLoggedIn)
 			{
@@ -450,24 +450,24 @@ namespace DarkorbitAPI
 			}
 		}
 
-		public bool method_3(string string_0, string string_1, string string_2, ProxySettings proxySettings_0 = null)
+		public bool method_4(string string_0, string string_1, string string_2, ProxySettings proxySettings_0 = null)
 		{
 			if (!this.Web.Login(string_0, string_1, string_2, proxySettings_0))
 			{
 				this.IsLoggedIn = false;
 				return false;
 			}
+			this.method_3();
 			this.method_2();
-			this.method_1();
 			this.Settings.FlashSettings = this.Web.GetFlashSettings();
 			this.IsLoggedIn = true;
 			return true;
 		}
 
-		public bool method_4(string string_0)
+		public bool method_5(string string_0)
 		{
 			this.Web.Server = string_0;
-			this.method_1();
+			this.method_2();
 			this.Settings.IsClient = false;
 			return true;
 		}
@@ -501,7 +501,7 @@ namespace DarkorbitAPI
 			this.Connection.Connect(num2, this.ProxySettings);
 		}
 
-		internal void method_5(GClass219 gclass219_0)
+		internal void method_6(GClass219 gclass219_0)
 		{
 			this.Hero.Init(gclass219_0);
 			GameManager.GClass77.GDelegate1 heroInit = this.HeroInit;
@@ -512,7 +512,7 @@ namespace DarkorbitAPI
 			heroInit(this, this.Hero);
 		}
 
-		internal void method_6(GClass217 gclass217_0)
+		internal void method_7(GClass217 gclass217_0)
 		{
 			bool isInitialized = this.Hero.IsInitialized;
 			this.Hero.Hp = 0;
@@ -528,7 +528,7 @@ namespace DarkorbitAPI
 			heroDied(this, this.Hero, gclass217_0, isInitialized);
 		}
 
-		internal void MjJdaDajSZ(bool bool_0 = false)
+		internal void method_8(bool bool_0 = false)
 		{
 			if (bool_0 || (this.Settings.MapHosts.ContainsKey(this.Map.MapId) && this.Settings.MapHosts.ContainsKey(this.NextMapId) && this.Settings.MapHosts[this.NextMapId] != this.Settings.MapHosts[this.Map.MapId]))
 			{
@@ -537,7 +537,7 @@ namespace DarkorbitAPI
 			}
 		}
 
-		public void method_7(GClass269 gclass269_0)
+		public void method_9(GClass269 gclass269_0)
 		{
 			string[] array = gclass269_0.string_0.Split(new char[]
 			{
@@ -717,7 +717,7 @@ namespace DarkorbitAPI
 					{
 						this.NextMapId = int.Parse(array[2]);
 						this.Connection.SendMessage(new GClass146(true));
-						this.MjJdaDajSZ(false);
+						this.method_8(false);
 					}
 				}
 			}
@@ -743,13 +743,13 @@ namespace DarkorbitAPI
 		// Note: this type is marked as 'beforefieldinit'.
 		static GameManager()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			GameManager.Instance = new ThreadLocal<GameManager>();
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_8(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		protected void method_10(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
@@ -764,7 +764,7 @@ namespace DarkorbitAPI
 		{
 			public GClass77()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 

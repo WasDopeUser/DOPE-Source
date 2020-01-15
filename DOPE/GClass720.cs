@@ -22,7 +22,7 @@ public class GClass720 : GInterface0
 
 	public GClass720(Vector<GClass366> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

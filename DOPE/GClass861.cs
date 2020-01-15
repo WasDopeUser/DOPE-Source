@@ -91,7 +91,7 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 
 	public GClass861()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "Wait...";
 		base..ctor();
 		this.InitializeComponent();
@@ -130,11 +130,11 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		base.Dispatcher.Invoke(new Action(this.method_0));
 	}
 
-	protected void method_4<WfRA1E410OYWSgOr1bS>(ref WfRA1E410OYWSgOr1bS gparam_0, WfRA1E410OYWSgOr1bS KYGS8h4mQCwATfUZ2Vf, [CallerMemberName] string name = null)
+	protected void method_4<znDTlHfjAB79NkeOONn>(ref znDTlHfjAB79NkeOONn gparam_0, znDTlHfjAB79NkeOONn TMCHhEfgCxC5IKYsiRH, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<WfRA1E410OYWSgOr1bS>.Default.Equals(gparam_0, KYGS8h4mQCwATfUZ2Vf))
+		if (!EqualityComparer<znDTlHfjAB79NkeOONn>.Default.Equals(gparam_0, TMCHhEfgCxC5IKYsiRH))
 		{
-			gparam_0 = KYGS8h4mQCwATfUZ2Vf;
+			gparam_0 = TMCHhEfgCxC5IKYsiRH;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged == null)
 			{

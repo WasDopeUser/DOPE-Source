@@ -22,7 +22,7 @@ public class GClass276 : GInterface0
 
 	public GClass276(bool bool_5 = false, bool bool_6 = false, string string_1 = "", GClass359 gclass359_2 = null, GClass359 gclass359_3 = null, bool bool_7 = false, double double_2 = 0.0, double double_3 = 0.0, uint uint_1 = 0U, string string_2 = "", bool bool_8 = false, bool bool_9 = false, bool bool_10 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Id = "";
 		this.string_0 = "";
 		base..ctor();

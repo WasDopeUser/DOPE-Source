@@ -53,19 +53,19 @@ namespace DarkorbitAPI.Structures
 
 		public void method_11(GClass255 gclass255_0)
 		{
-			this.OwnerId = gclass255_0.int_9;
-			base.Id = gclass255_0.int_6;
+			this.OwnerId = gclass255_0.int_8;
+			base.Id = gclass255_0.int_5;
 			this.Level = gclass255_0.int_1;
 			base.Name = gclass255_0.Name;
-			this.PosX = gclass255_0.int_7;
-			this.PosY = gclass255_0.int_2;
+			this.PosX = gclass255_0.int_6;
+			this.PosY = gclass255_0.WlmLyVaFrU;
 			base.ClanTag = gclass255_0.string_0;
-			base.FactionId = gclass255_0.int_8;
+			base.FactionId = gclass255_0.int_7;
 		}
 
 		public Pet()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 	}

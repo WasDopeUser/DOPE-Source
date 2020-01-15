@@ -22,7 +22,7 @@ public class GClass244 : GInterface0
 
 	public GClass244(GClass243 gclass243_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass243_1 == null)
 		{

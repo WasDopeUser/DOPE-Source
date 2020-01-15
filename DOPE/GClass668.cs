@@ -20,12 +20,12 @@ public class GClass668 : GInterface0
 		}
 	}
 
-	public GClass668(int int_1 = 0, int int_2 = 0, bool bool_1 = false, Vector<GClass731> vector_1 = null)
+	public GClass668(int int_0 = 0, int int_1 = 0, bool bool_1 = false, Vector<GClass731> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.int_0 = int_1;
-		this.Uridium = int_2;
+		this.NkiTleFcpv = int_0;
+		this.Uridium = int_1;
 		this.bool_0 = bool_1;
 		if (vector_1 == null)
 		{
@@ -61,8 +61,8 @@ public class GClass668 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 4) | this.int_0 << 28);
+		this.NkiTleFcpv = binaryStream_0.smethod_0();
+		this.NkiTleFcpv = (U.smethod_0(this.NkiTleFcpv, 4) | this.NkiTleFcpv << 28);
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
 		this.Uridium = binaryStream_0.smethod_0();
@@ -83,7 +83,7 @@ public class GClass668 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_4(this.int_0 << 4 | U.smethod_0(this.int_0, 28));
+		binaryStream_0.smethod_4(this.NkiTleFcpv << 4 | U.smethod_0(this.NkiTleFcpv, 28));
 		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_7(27905);
 		binaryStream_0.smethod_4(U.smethod_0(this.Uridium, 13) | this.Uridium << 19);
@@ -91,7 +91,7 @@ public class GClass668 : GInterface0
 
 	public Vector<GClass731> vector_0;
 
-	public int int_0;
+	public int NkiTleFcpv;
 
 	public bool bool_0;
 

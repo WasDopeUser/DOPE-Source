@@ -22,7 +22,7 @@ public class GClass689 : GInterface0
 
 	public GClass689(GClass782 gclass782_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass782_1 == null)
 		{

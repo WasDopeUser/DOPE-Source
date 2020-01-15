@@ -84,7 +84,7 @@ public class GClass91
 
 	public GClass91()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.method_6(new Thread(new ThreadStart(this.method_7)));
 		this.method_5().IsBackground = true;
@@ -106,7 +106,7 @@ public class GClass91
 			try
 			{
 				GClass124 gclass = new GClass124(proxySettings.Host, proxySettings.Port, proxySettings.User, proxySettings.Password);
-				this.method_4(gclass.imethod_6(host, port));
+				this.method_4(gclass.imethod_7(host, port));
 				goto IL_AC;
 			}
 			catch (Exception exception)

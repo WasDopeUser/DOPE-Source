@@ -4,8 +4,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Packets
 {
-	[DataContract]
 	[Guid("D951C853-BAE5-4729-9650-F7E0F876A553")]
+	[DataContract]
 	public class C2S_DollRequest
 	{
 		[DataMember(Order = 1)]

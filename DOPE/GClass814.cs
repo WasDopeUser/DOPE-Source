@@ -78,13 +78,13 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 				return;
 			}
 			this.dictionary_2 = value;
-			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_16);
+			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_17);
 		}
 	}
 
 	public GClass814(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Context = gclass822_1;
 		base.HeroStats = (this.gclass818_0 = new GClass818(gclass822_1.Hero, this));
@@ -189,7 +189,7 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 			string text = array[3];
 			if (text != null)
 			{
-				uint num3 = <PrivateImplementationDetails>{27BFE17E-78D3-454E-AB41-CA904B2A5383}.ComputeStringHash(text);
+				uint num3 = <PrivateImplementationDetails>{D4A823AF-60BA-43E7-B7F8-9E33A60497F9}.ComputeStringHash(text);
 				if (num3 <= 1746879935U)
 				{
 					if (num3 != 583800688U)
@@ -421,7 +421,7 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass814()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass814.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("RunTime");
 		GClass814.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("UridiumHourly");
 		GClass814.propertyChangedEventArgs_2 = new PropertyChangedEventArgs("CreditsHourly");

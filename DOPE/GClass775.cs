@@ -22,7 +22,7 @@ public class GClass775 : GInterface0
 
 	public GClass775()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

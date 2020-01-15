@@ -22,7 +22,7 @@ public class GClass457 : GInterface0
 
 	public GClass457(double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_1 = double_2;
 		this.double_0 = double_3;

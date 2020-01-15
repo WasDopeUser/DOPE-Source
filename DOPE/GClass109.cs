@@ -8,13 +8,13 @@ public class GClass109 : GInterface4
 	{
 		Hero hero = ConnectionManager.Instance.Value.Game.Hero;
 		hero.Shield = e.int_0;
-		hero.ShieldMax = e.eiaBfDdiqn;
+		hero.ShieldMax = e.int_1;
 		hero.LastStatUpdate = DateTimeOffset.Now;
 	}
 
 	public GClass109()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

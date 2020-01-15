@@ -12,8 +12,8 @@ using DOPE.Common.Models;
 
 namespace DOPE.UI.Models
 {
-	[DataContract]
 	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
+	[DataContract]
 	public class SelectedNpcModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -60,8 +60,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 3)]
 		[Layout(Description = "$Name")]
+		[DataMember(Order = 3)]
 		public bool Enabled
 		{
 			[CompilerGenerated]
@@ -81,9 +81,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Parent = "Enabled", Description = "Laser")]
-		[DataMember(Order = 4)]
 		[Category("Ammo")]
+		[DataMember(Order = 4)]
+		[Layout(Parent = "Enabled", Description = "Laser")]
 		public virtual LaserType Laser
 		{
 			[CompilerGenerated]
@@ -104,8 +104,8 @@ namespace DOPE.UI.Models
 		}
 
 		[Layout(Parent = "Enabled", Description = "Rocket")]
-		[Category("Ammo")]
 		[DataMember(Order = 5)]
+		[Category("Ammo")]
 		public virtual RocketType Rocket
 		{
 			[CompilerGenerated]
@@ -125,9 +125,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Parent = "Enabled", Description = "Hellstorm")]
-		[Category("Ammo")]
 		[DataMember(Order = 6)]
+		[Category("Ammo")]
+		[Layout(Parent = "Enabled", Description = "Hellstorm")]
 		public virtual HellstormType Hellstorm
 		{
 			[CompilerGenerated]
@@ -147,8 +147,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Override drone formation", Parent = "Enabled")]
 		[DataMember(Order = 8)]
+		[Layout(Description = "Override drone formation", Parent = "Enabled")]
 		public GEnum4 DroneFormation
 		{
 			[CompilerGenerated]
@@ -168,9 +168,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
+		[Layout(Description = "Config", Parent = "Enabled", RightDescription = "Set 0 to use the attack config")]
 		[DataMember(Order = 9)]
 		[Range(0, 2)]
-		[Layout(Description = "Config", Parent = "Enabled", RightDescription = "Set 0 to use the attack config")]
 		public int Config
 		{
 			[CompilerGenerated]
@@ -190,8 +190,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Range(-1, 100)]
 		[Layout(Description = "Priority", Parent = "Enabled")]
+		[Range(-1, 100)]
 		[DataMember(Order = 10)]
 		public int Priority
 		{
@@ -212,9 +212,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
+		[Layout(Description = "Circle range", Parent = "Enabled", RightDescription = "Set below 350 to disable circling")]
 		[DataMember(Order = 11)]
 		[Range(300, 675)]
-		[Layout(Description = "Circle range", Parent = "Enabled", RightDescription = "Set below 350 to disable circling")]
 		public int CircleRange
 		{
 			[CompilerGenerated]
@@ -255,8 +255,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 13)]
 		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
+		[DataMember(Order = 13)]
 		public LaserType GgCornerLaser
 		{
 			[CompilerGenerated]
@@ -297,8 +297,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Use SAB-50", Parent = "Enabled")]
 		[DataMember(Order = 15)]
+		[Layout(Description = "Use SAB-50", Parent = "Enabled")]
 		public bool UseSab
 		{
 			[CompilerGenerated]
@@ -339,8 +339,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 17)]
 		[Layout(Description = "Use PET locator", Parent = "Enabled", RightDescription = "PET has to be already running", CustomVisibility = "(obj,p) => p === undefined || !p.Name.startsWith('GG ')")]
+		[DataMember(Order = 17)]
 		public bool UsePetLocator
 		{
 			[CompilerGenerated]
@@ -406,7 +406,7 @@ namespace DOPE.UI.Models
 		{
 			if (this.CircleRange < 300 || this.CircleRange > 675)
 			{
-				this.CircleRange = SecurityManager.smethod_1(NpcUtils.NpcType.smethod_3(this.Name));
+				this.CircleRange = SecurityManager.smethod_1(NpcUtils.NpcType.smethod_2(this.Name));
 			}
 		}
 

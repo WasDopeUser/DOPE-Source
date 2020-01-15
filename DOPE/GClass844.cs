@@ -11,19 +11,18 @@ using DarkorbitAPI.Structures.Pathing;
 using DOPE.Common.Models;
 using DOPE.Common.Models.Bot;
 using DOPE.UI.Models;
-using GsujcHxgAhWnFmvxchc;
 
 public class GClass844 : GClass835
 {
 	public GClass844(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1);
 	}
 
-	public override bool vmethod_26()
+	public override bool vmethod_25()
 	{
-		return base.vmethod_26() && !base.Map.Gates.Any<KeyValuePair<int, Gate>>();
+		return base.vmethod_25() && !base.Map.Gates.Any<KeyValuePair<int, Gate>>();
 	}
 
 	public override bool vmethod_3(NpcShip npcShip_0)
@@ -53,14 +52,14 @@ public class GClass844 : GClass835
 	public override bool vmethod_12(NpcShip npcShip_0)
 	{
 		bool flag;
-		return npcShip_0 != null && (npcShip_0.HpPercentage <= 24.75f || base.Map.method_7(npcShip_0, out flag));
+		return npcShip_0 != null && (npcShip_0.HpPercentage <= 24.75f || base.Map.method_8(npcShip_0, out flag));
 	}
 
 	protected virtual bool vmethod_50(Ship ship_0, Ship ship_1)
 	{
 		int num = this.vmethod_49();
 		bool flag = ship_1 != null && this.vmethod_12(ship_0 as NpcShip) && !this.vmethod_12(ship_1 as NpcShip);
-		double num2 = (this.method_22() || flag) ? 0.0 : Math.Abs(GClass805.smethod_4(ship_0.Position - base.Context.HeroPosition, ship_1.Position - base.Context.HeroPosition));
+		double num2 = (this.method_26() || flag) ? 0.0 : Math.Abs(GClass805.smethod_4(ship_0.Position - base.Context.HeroPosition, ship_1.Position - base.Context.HeroPosition));
 		return (flag || Vector2.Distance(ship_1.Position, ship_0.Position) > (float)num) && num2 < 1.0;
 	}
 
@@ -86,7 +85,7 @@ public class GClass844 : GClass835
 				return true;
 			}
 		}
-		if (base.C.AttackingId == ship_0.Id && this.vmethod_48(ship_0 as NpcShip) && ship_0.HpPercentage < 24.75f && base.C.float_0 >= 24.75f && base.C.method_75().Any(new Func<NpcShip, bool>(this.method_32)))
+		if (base.C.AttackingId == ship_0.Id && this.vmethod_48(ship_0 as NpcShip) && ship_0.HpPercentage < 24.75f && base.C.float_0 >= 24.75f && base.C.method_75().Any(new Func<NpcShip, bool>(this.method_36)))
 		{
 			base.C.NpcLockout.method_1(ship_0.Id, 1428.0);
 			return true;
@@ -94,14 +93,14 @@ public class GClass844 : GClass835
 		return false;
 	}
 
-	public bool method_16()
+	public bool method_20()
 	{
-		return base.C.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(this.method_33)) && !this.vmethod_4(true, false);
+		return base.C.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(this.method_37)) && !this.vmethod_4(true, false);
 	}
 
 	public override bool vmethod_13(Collectible collectible_0)
 	{
-		return base.vmethod_13(collectible_0) && !this.method_16();
+		return base.vmethod_13(collectible_0) && !this.method_20();
 	}
 
 	public override bool vmethod_15()
@@ -109,14 +108,14 @@ public class GClass844 : GClass835
 		return !base.C.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(GClass844.<>c.<>c_0.method_0)) && base.C.Map.Gates.Any<KeyValuePair<int, Gate>>() && !base.C.method_77() && base.C.DormantTargets.Count == 0 && base.C.Game.Web.GgInfo != null;
 	}
 
-	public override bool vmethod_24(out Vector2? nullable_0)
+	public override bool vmethod_23(out Vector2? nullable_0)
 	{
 		if (!base.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(GClass844.<>c.<>c_0.method_1)) && !base.Map.Collectibles.Any<KeyValuePair<string, Collectible>>() && !base.Map.Gates.Any<KeyValuePair<int, Gate>>())
 		{
 			nullable_0 = null;
 			return true;
 		}
-		return base.vmethod_24(out nullable_0);
+		return base.vmethod_23(out nullable_0);
 	}
 
 	public override bool vmethod_16()
@@ -131,15 +130,15 @@ public class GClass844 : GClass835
 		{
 			return true;
 		}
-		if (base.Context.Map.method_2(heroPosition, 100) && !base.Map.Collectibles.Any(new Func<KeyValuePair<string, Collectible>, bool>(this.method_34)))
+		if (base.Context.Map.method_2(heroPosition, 100) && !base.Map.Collectibles.Any(new Func<KeyValuePair<string, Collectible>, bool>(this.method_38)))
 		{
 			return false;
 		}
-		Ship ship = base.C.Map.ekkOzLkslS<Ship>(heroPosition, new Func<Ship, bool>(GClass844.<>c.<>c_0.method_2), null, 0);
+		Ship ship = base.C.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(GClass844.<>c.<>c_0.method_2), null, 0);
 		return ship == null || Vector2.Distance(heroPosition, ship.Position) >= 2000f;
 	}
 
-	public override bool vmethod_19(GClass824 gclass824_0)
+	public override bool vmethod_18(GClass824 gclass824_0)
 	{
 		if (!base.Context.Map.Gates.Any<KeyValuePair<int, Gate>>())
 		{
@@ -149,7 +148,7 @@ public class GClass844 : GClass835
 		return true;
 	}
 
-	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_7 = false, bool bool_8 = true)
+	public override Vector2? vmethod_19(Vector2 vector2_1, out Gate gate_0, bool bool_7 = false, bool bool_8 = true)
 	{
 		GClass844.<>c__DisplayClass16_0 CS$<>8__locals1 = new GClass844.<>c__DisplayClass16_0();
 		Map map = base.C.Map;
@@ -163,19 +162,19 @@ public class GClass844 : GClass835
 		return new Vector2?(gate.Position);
 	}
 
-	public override Vector2? vmethod_21(bool bool_7)
+	public override Vector2? vmethod_20(bool bool_7)
 	{
 		GClass844.<>c__DisplayClass17_0 CS$<>8__locals1 = new GClass844.<>c__DisplayClass17_0();
 		CS$<>8__locals1.gclass844_0 = this;
 		Vector2? vector = null;
 		CS$<>8__locals1.vector2_0 = base.C.HeroPosition;
-		if (base.C.Map.ekkOzLkslS<Ship>(CS$<>8__locals1.vector2_0, new Func<Ship, bool>(GClass844.<>c.<>c_0.method_3), null, 0) == null)
+		if (base.C.Map.method_5<Ship>(CS$<>8__locals1.vector2_0, new Func<Ship, bool>(GClass844.<>c.<>c_0.method_3), null, 0) == null)
 		{
 			vector = new Vector2?(base.C.Map.Center);
 		}
-		else if (this.method_22())
+		else if (this.method_26())
 		{
-			vector = this.vmethod_37(CS$<>8__locals1.vector2_0, base.C.Map.Center, (float)base.C.Map.MapSize.Height * 0.4f, null, this.method_24() ? -0.5f : 0.5f);
+			vector = this.vmethod_37(CS$<>8__locals1.vector2_0, base.C.Map.Center, (float)base.C.Map.MapSize.Height * 0.4f, null, this.method_28() ? -0.5f : 0.5f);
 		}
 		else
 		{
@@ -190,7 +189,7 @@ public class GClass844 : GClass835
 			PathSequence pathSequence_ = CS$<>8__locals1.pathSequence_0;
 			vector = ((pathSequence_ != null) ? new Vector2?(pathSequence_.Destination) : null);
 		}
-		return new Vector2?(vector ?? base.C.Game.Security.method_4(base.Map, this.vmethod_17()));
+		return new Vector2?(vector ?? base.C.Game.Security.method_5(base.Map, this.vmethod_17()));
 	}
 
 	public override bool vmethod_6(NpcShip npcShip_0)
@@ -208,7 +207,7 @@ public class GClass844 : GClass835
 	{
 		int num = base.vmethod_9(npcShip_0);
 		bool flag;
-		if (num > -100 && base.Map.method_7(npcShip_0, out flag))
+		if (num > -100 && base.Map.method_8(npcShip_0, out flag))
 		{
 			return -100;
 		}
@@ -270,12 +269,12 @@ public class GClass844 : GClass835
 		return gclass.vmethod_2(ship_0);
 	}
 
-	private bool method_17(NpcShip npcShip_0, Vector2 vector2_1)
+	private bool method_21(NpcShip npcShip_0, Vector2 vector2_1)
 	{
 		return !this.vmethod_12(npcShip_0) && Vector2.Distance(npcShip_0.method_1(50), vector2_1) < Vector2.Distance(npcShip_0.MovementSource, vector2_1);
 	}
 
-	public override bool vmethod_30()
+	public override bool vmethod_29()
 	{
 		GClass844.<>c__DisplayClass29_0 CS$<>8__locals1 = new GClass844.<>c__DisplayClass29_0();
 		CS$<>8__locals1.gclass844_0 = this;
@@ -292,22 +291,22 @@ public class GClass844 : GClass835
 			int attackingId = base.C.AttackingId;
 			int? num = (enemyTarget != null) ? new int?(enemyTarget.Id) : null;
 			bool flag2;
-			if ((attackingId == num.GetValueOrDefault() & num != null) && base.Map.method_7(enemyTarget, out flag2))
+			if ((attackingId == num.GetValueOrDefault() & num != null) && base.Map.method_8(enemyTarget, out flag2))
 			{
 				flag = true;
 			}
 		}
-		return flag & (this.method_28() || base.Map.All<NpcShip>(CS$<>8__locals1.vector2_0, new Func<NpcShip, bool>(CS$<>8__locals1.method_0), null, 0).Any<NpcShip>());
+		return flag & (this.method_32() || base.Map.All<NpcShip>(CS$<>8__locals1.vector2_0, new Func<NpcShip, bool>(CS$<>8__locals1.method_0), null, 0).Any<NpcShip>());
 	}
 
 	[CompilerGenerated]
-	protected DateTimeOffset method_18()
+	protected DateTimeOffset method_22()
 	{
 		return this.dateTimeOffset_0;
 	}
 
 	[CompilerGenerated]
-	protected void method_19(DateTimeOffset dateTimeOffset_2)
+	protected void method_23(DateTimeOffset dateTimeOffset_2)
 	{
 		this.dateTimeOffset_0 = dateTimeOffset_2;
 	}
@@ -316,26 +315,26 @@ public class GClass844 : GClass835
 	{
 		GClass844.<>c__DisplayClass34_0 CS$<>8__locals1 = new GClass844.<>c__DisplayClass34_0();
 		CS$<>8__locals1.gclass844_0 = this;
-		if ((double)base.C.method_15() * 2.75 > (double)(base.Hero.Hp + base.Hero.Shield) || (base.Hero.Shield == 0 && base.Hero.HpPercentage < 80f))
+		if ((double)base.C.method_15() * 2.6 > (double)(base.Hero.Hp + base.Hero.Shield))
 		{
 			return false;
 		}
 		CS$<>8__locals1.vector2_0 = base.Hero.Position;
-		Func<NpcShip, bool> selector = this.method_30() ? new Func<NpcShip, bool>(CS$<>8__locals1.method_1) : new Func<NpcShip, bool>(CS$<>8__locals1.method_0);
+		Func<NpcShip, bool> selector = this.method_34() ? new Func<NpcShip, bool>(CS$<>8__locals1.method_1) : new Func<NpcShip, bool>(CS$<>8__locals1.method_0);
 		return base.Map.All<NpcShip>(CS$<>8__locals1.vector2_0, selector, null, 0).Count<NpcShip>() > 2;
 	}
 
-	protected override KamikazeState vmethod_29()
+	protected override KamikazeState vmethod_28()
 	{
-		KamikazeState kamikazeState = base.vmethod_29();
+		KamikazeState kamikazeState = base.vmethod_28();
 		if (kamikazeState == KamikazeState.Activating)
 		{
-			if (base.method_9() != KamikazeState.PullingEnemies && this.method_18().Cooldown(25000))
+			if (base.method_9() != KamikazeState.PullingEnemies && this.method_22().Cooldown(25000))
 			{
-				this.method_19(DateTimeOffset.Now);
+				this.method_23(DateTimeOffset.Now);
 			}
-			int int_ = this.method_30() ? 45000 : 10000;
-			if (this.method_28() && this.method_18().smethod_0(int_))
+			int int_ = this.method_34() ? 45000 : 10000;
+			if (this.method_32() && this.method_22().smethod_0(int_))
 			{
 				kamikazeState = KamikazeState.PullingEnemies;
 			}
@@ -343,7 +342,7 @@ public class GClass844 : GClass835
 		return kamikazeState;
 	}
 
-	public override bool vmethod_31(out int int_1)
+	public override bool vmethod_30(out int int_1)
 	{
 		int_1 = 0;
 		return false;
@@ -351,7 +350,7 @@ public class GClass844 : GClass835
 
 	public override Vector2? vmethod_44(Vector2 vector2_1, NpcShip npcShip_0, Vector2? nullable_0 = null, float float_0 = 0.5f)
 	{
-		if (!this.method_20())
+		if (!this.method_24())
 		{
 			return base.vmethod_44(vector2_1, npcShip_0, nullable_0, float_0);
 		}
@@ -359,14 +358,14 @@ public class GClass844 : GClass835
 		Vector2 vector2;
 		int num = this.vmethod_41(vector2_1, npcShip_0, out vector2);
 		Vector2 center = base.Map.Center;
-		if (vector != null && this.method_26().Cooldown(10000))
+		if (vector != null && this.method_30().Cooldown(10000))
 		{
 			Vector2 value = vector.Value;
-			bool flag = this.method_24();
-			this.method_25(GClass805.smethod_2(vector2_1.Y - center.Y, vector2_1.X - center.X, value.Y - center.Y, value.X - center.X));
-			if (flag != this.method_24())
+			bool flag = this.method_28();
+			this.method_29(GClass805.smethod_2(vector2_1.Y - center.Y, vector2_1.X - center.X, value.Y - center.Y, value.X - center.X));
+			if (flag != this.method_28())
 			{
-				this.method_27(DateTimeOffset.Now);
+				this.method_31(DateTimeOffset.Now);
 			}
 		}
 		float_0 = 0f;
@@ -381,30 +380,30 @@ public class GClass844 : GClass835
 		}
 		else
 		{
-			num4 = Math.Atan2((double)(vector2.X - center.X), (double)(vector2.Y - center.Y)) + (double)(this.method_24() ? -0.5f : 0.5f);
+			num4 = Math.Atan2((double)(vector2.X - center.X), (double)(vector2.Y - center.Y)) + (double)(this.method_28() ? -0.5f : 0.5f);
 		}
 		Vector2 value2 = GClass805.smethod_8(center, num2, (float)num4);
 		if (num3 != 0)
 		{
-			this.method_23(true);
+			this.method_27(true);
 			return new Vector2?(value2);
 		}
-		this.method_23(false);
+		this.method_27(false);
 		if (npcShip_0.TemporarySpeed > 0f)
 		{
 			return base.vmethod_44(vector2_1, npcShip_0, new Vector2?(value2), 0.5f);
 		}
-		return base.vmethod_42(vector2_1, npcShip_0, null);
+		return base.vmethod_44(vector2_1, npcShip_0, null, 0.5f);
 	}
 
 	[CompilerGenerated]
-	public bool method_20()
+	public bool method_24()
 	{
 		return this.bool_2;
 	}
 
 	[CompilerGenerated]
-	protected void method_21(bool bool_7)
+	protected void method_25(bool bool_7)
 	{
 		this.bool_2 = bool_7;
 	}
@@ -432,69 +431,69 @@ public class GClass844 : GClass835
 	}
 
 	[CompilerGenerated]
-	public bool method_22()
+	public bool method_26()
 	{
 		return this.bool_3;
 	}
 
 	[CompilerGenerated]
-	protected void method_23(bool bool_7)
+	protected void method_27(bool bool_7)
 	{
 		this.bool_3 = bool_7;
 	}
 
 	[CompilerGenerated]
-	public bool method_24()
+	public bool method_28()
 	{
 		return this.bool_4;
 	}
 
 	[CompilerGenerated]
-	protected void method_25(bool bool_7)
+	protected void method_29(bool bool_7)
 	{
 		this.bool_4 = bool_7;
 	}
 
 	[CompilerGenerated]
-	public DateTimeOffset method_26()
+	public DateTimeOffset method_30()
 	{
 		return this.dateTimeOffset_1;
 	}
 
 	[CompilerGenerated]
-	protected void method_27(DateTimeOffset dateTimeOffset_2)
+	protected void method_31(DateTimeOffset dateTimeOffset_2)
 	{
 		this.dateTimeOffset_1 = dateTimeOffset_2;
 	}
 
 	[CompilerGenerated]
-	public bool method_28()
+	public bool method_32()
 	{
 		return this.bool_5;
 	}
 
 	[CompilerGenerated]
-	protected void method_29(bool bool_7)
+	protected void method_33(bool bool_7)
 	{
 		this.bool_5 = bool_7;
 	}
 
-	public bool method_30()
+	public bool method_34()
 	{
 		return this.bool_6;
 	}
 
-	internal void method_31(bool bool_7)
+	internal void method_35(bool bool_7)
 	{
 		this.bool_6 = bool_7;
 	}
 
 	public override void Update()
 	{
-		this.method_29(this.vmethod_52());
+		this.method_33(this.vmethod_52());
 		base.Update();
-		this.method_21(this.vmethod_53());
-		this.method_23(this.method_22() & this.method_20());
+		this.method_25(this.vmethod_53());
+		this.method_27(this.method_26() & this.method_24());
 		if (!base.Map.Gates.Any<KeyValuePair<int, Gate>>() && base.C.State == BotState.Roam && base.C.StateIters > 6000)
 		{
 			base.C.method_71("GG-Behavior").Warn("Resetting connection because stuck in 'Roam' for >5 mins.");
@@ -506,7 +505,7 @@ public class GClass844 : GClass835
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass844()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass844.dictionary_0 = new Dictionary<NpcUtils.NpcClass, int>
 		{
 			{
@@ -528,21 +527,21 @@ public class GClass844 : GClass835
 	}
 
 	[CompilerGenerated]
-	private bool method_32(NpcShip npcShip_0)
+	private bool method_36(NpcShip npcShip_0)
 	{
 		bool flag;
-		return npcShip_0.HpPercentage > 24.75f && !base.C.Map.method_7(npcShip_0, out flag) && Vector2.Distance(base.C.HeroPosition, npcShip_0.Position) < 1200f;
+		return npcShip_0.HpPercentage > 24.75f && !base.C.Map.method_8(npcShip_0, out flag) && Vector2.Distance(base.C.HeroPosition, npcShip_0.Position) < 1200f;
 	}
 
 	[CompilerGenerated]
-	private bool method_33(KeyValuePair<int, Ship> keyValuePair_0)
+	private bool method_37(KeyValuePair<int, Ship> keyValuePair_0)
 	{
 		bool flag;
-		return keyValuePair_0.Value.IsNpc && keyValuePair_0.Value.HpPercentage > 24.75f && !base.C.Map.method_7(keyValuePair_0.Value, out flag);
+		return keyValuePair_0.Value.IsNpc && keyValuePair_0.Value.HpPercentage > 24.75f && !base.C.Map.method_8(keyValuePair_0.Value, out flag);
 	}
 
 	[CompilerGenerated]
-	private bool method_34(KeyValuePair<string, Collectible> keyValuePair_0)
+	private bool method_38(KeyValuePair<string, Collectible> keyValuePair_0)
 	{
 		return Vector2.Distance(keyValuePair_0.Value.Position, base.Hero.Position) < 500f;
 	}

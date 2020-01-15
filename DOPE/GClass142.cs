@@ -22,7 +22,7 @@ public class GClass142 : GInterface0
 
 	public GClass142(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Id = int_2;
 		this.int_1 = int_3;

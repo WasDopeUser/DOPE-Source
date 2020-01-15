@@ -22,7 +22,7 @@ public class GClass360 : GInterface0
 
 	public GClass360(uint uint_1 = 0U, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.int_0 = int_2;

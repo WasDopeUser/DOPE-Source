@@ -22,7 +22,7 @@ public class GClass186 : GInterface0
 
 	public GClass186(int int_2 = 0, uint uint_1 = 0U, int int_3 = 0, string string_1 = "", int int_4 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.int_1 = int_2;

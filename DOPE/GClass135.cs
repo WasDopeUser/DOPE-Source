@@ -22,7 +22,7 @@ public class GClass135 : GInterface0
 
 	public GClass135(GClass261 gclass261_1 = null, double double_0 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass261_1 == null)
 		{

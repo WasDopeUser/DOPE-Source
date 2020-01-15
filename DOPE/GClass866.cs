@@ -6,12 +6,12 @@ using System.Net.NetworkInformation;
 
 public class GClass866 : Interface0
 {
-	private static z4JKPx4PxgIAEw5am3F smethod_0<z4JKPx4PxgIAEw5am3F>(ManagementObject managementObject_0, string string_0)
+	private static JUeELSfbmt5TvkM4bVv smethod_0<JUeELSfbmt5TvkM4bVv>(ManagementObject managementObject_0, string string_0)
 	{
-		GClass866.<>c__DisplayClass0_0<z4JKPx4PxgIAEw5am3F> CS$<>8__locals1 = new GClass866.<>c__DisplayClass0_0<z4JKPx4PxgIAEw5am3F>();
+		GClass866.<>c__DisplayClass0_0<JUeELSfbmt5TvkM4bVv> CS$<>8__locals1 = new GClass866.<>c__DisplayClass0_0<JUeELSfbmt5TvkM4bVv>();
 		CS$<>8__locals1.property = string_0;
 		PropertyData propertyData = managementObject_0.Properties.Cast<PropertyData>().FirstOrDefault(new Func<PropertyData, bool>(CS$<>8__locals1.method_0));
-		return (z4JKPx4PxgIAEw5am3F)((object)((propertyData != null) ? propertyData.Value : null));
+		return (JUeELSfbmt5TvkM4bVv)((object)((propertyData != null) ? propertyData.Value : null));
 	}
 
 	public static bool smethod_1(string string_0, TimeSpan timeSpan_0)
@@ -90,7 +90,7 @@ public class GClass866 : Interface0
 
 	public GClass866()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

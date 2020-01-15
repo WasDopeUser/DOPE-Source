@@ -20,20 +20,20 @@ public class GClass483 : GInterface0
 		}
 	}
 
-	public GClass483(int int_0 = 0, Vector<GClass575> vector_2 = null, GClass498 gclass498_1 = null, Vector<GClass569> vector_3 = null, Vector<GClass694> vector_4 = null, string string_2 = "", string string_3 = "")
+	public GClass483(int int_0 = 0, Vector<GClass575> vector_3 = null, GClass498 gclass498_1 = null, Vector<GClass569> vector_4 = null, Vector<GClass694> vector_5 = null, string string_2 = "", string string_3 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
 		this.Id = int_0;
-		if (vector_2 == null)
+		if (vector_3 == null)
 		{
-			this.siUqashEbG = new Vector<GClass575>();
+			this.vector_1 = new Vector<GClass575>();
 		}
 		else
 		{
-			this.siUqashEbG = vector_2;
+			this.vector_1 = vector_3;
 		}
 		if (gclass498_1 == null)
 		{
@@ -43,21 +43,21 @@ public class GClass483 : GInterface0
 		{
 			this.gclass498_0 = gclass498_1;
 		}
-		if (vector_3 == null)
+		if (vector_4 == null)
 		{
 			this.vector_0 = new Vector<GClass569>();
 		}
 		else
 		{
-			this.vector_0 = vector_3;
+			this.vector_0 = vector_4;
 		}
-		if (vector_4 == null)
+		if (vector_5 == null)
 		{
-			this.vector_1 = new Vector<GClass694>();
+			this.vector_2 = new Vector<GClass694>();
 		}
 		else
 		{
-			this.vector_1 = vector_4;
+			this.vector_2 = vector_5;
 		}
 		this.string_0 = string_2;
 		this.string_1 = string_3;
@@ -92,21 +92,6 @@ public class GClass483 : GInterface0
 		}
 		this.Id = binaryStream_0.smethod_0();
 		this.Id = (U.smethod_0(this.Id, 2) | this.Id << 30);
-		while (this.siUqashEbG.Length > 0)
-		{
-			this.siUqashEbG.method_1();
-		}
-		num = 0;
-		num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass575 gclass2 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass575;
-			gclass2.imethod_1(binaryStream_0);
-			this.siUqashEbG.method_0(gclass2);
-			num++;
-		}
-		this.gclass498_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass498);
-		this.gclass498_0.imethod_1(binaryStream_0);
 		while (this.vector_1.Length > 0)
 		{
 			this.vector_1.method_1();
@@ -115,9 +100,24 @@ public class GClass483 : GInterface0
 		num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
+			GClass575 gclass2 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass575;
+			gclass2.imethod_1(binaryStream_0);
+			this.vector_1.method_0(gclass2);
+			num++;
+		}
+		this.gclass498_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass498);
+		this.gclass498_0.imethod_1(binaryStream_0);
+		while (this.vector_2.Length > 0)
+		{
+			this.vector_2.method_1();
+		}
+		num = 0;
+		num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
 			GClass694 gclass3 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass694;
 			gclass3.imethod_1(binaryStream_0);
-			this.vector_1.method_0(gclass3);
+			this.vector_2.method_0(gclass3);
 			num++;
 		}
 		this.string_1 = binaryStream_0.smethod_2();
@@ -139,14 +139,14 @@ public class GClass483 : GInterface0
 			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.smethod_4(this.Id << 2 | U.smethod_0(this.Id, 30));
-		binaryStream_0.smethod_4(this.siUqashEbG.Length);
-		foreach (GClass575 gclass2 in this.siUqashEbG)
+		binaryStream_0.smethod_4(this.vector_1.Length);
+		foreach (GClass575 gclass2 in this.vector_1)
 		{
 			gclass2.imethod_2(binaryStream_0);
 		}
 		this.gclass498_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(this.vector_1.Length);
-		foreach (GClass694 gclass3 in this.vector_1)
+		binaryStream_0.smethod_4(this.vector_2.Length);
+		foreach (GClass694 gclass3 in this.vector_2)
 		{
 			gclass3.imethod_2(binaryStream_0);
 		}
@@ -159,11 +159,11 @@ public class GClass483 : GInterface0
 
 	public int Id;
 
-	public Vector<GClass575> siUqashEbG;
+	public Vector<GClass575> vector_1;
 
 	public GClass498 gclass498_0;
 
-	public Vector<GClass694> vector_1;
+	public Vector<GClass694> vector_2;
 
 	public string string_1;
 }

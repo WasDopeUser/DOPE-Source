@@ -19,15 +19,15 @@ public static class GClass784
 
 	public static byte[] smethod_2(byte[] byte_0, byte[] byte_1)
 	{
-		return GClass784.smethod_4(byte_0, byte_1).ToArray<byte>();
+		return GClass784.smethod_5(byte_0, byte_1).ToArray<byte>();
 	}
 
 	public static byte[] smethod_3(byte[] byte_0, byte[] byte_1)
 	{
-		return GClass784.smethod_4(byte_0, byte_1).ToArray<byte>();
+		return GClass784.smethod_5(byte_0, byte_1).ToArray<byte>();
 	}
 
-	private static byte[] diWfdHoiQd(byte[] byte_0)
+	private static byte[] smethod_4(byte[] byte_0)
 	{
 		byte[] array = Enumerable.Range(0, 256).Select(new Func<int, byte>(GClass784.<>c.<>c_0.method_0)).ToArray<byte>();
 		int i = 0;
@@ -35,22 +35,22 @@ public static class GClass784
 		while (i < 256)
 		{
 			num = (num + (int)byte_0[i % byte_0.Length] + (int)array[i] & 255);
-			GClass784.smethod_5(array, i, num);
+			GClass784.smethod_6(array, i, num);
 			i++;
 		}
 		return array;
 	}
 
-	private static IEnumerable<byte> smethod_4(byte[] byte_0, IEnumerable<byte> ienumerable_0)
+	private static IEnumerable<byte> smethod_5(byte[] byte_0, IEnumerable<byte> ienumerable_0)
 	{
 		GClass784.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass784.<>c__DisplayClass5_0();
-		CS$<>8__locals1.byte_0 = GClass784.diWfdHoiQd(byte_0);
+		CS$<>8__locals1.iPbucdLpap = GClass784.smethod_4(byte_0);
 		CS$<>8__locals1.int_0 = 0;
-		CS$<>8__locals1.int_1 = 0;
+		CS$<>8__locals1.awxunKghw9 = 0;
 		return ienumerable_0.Select(new Func<byte, byte>(CS$<>8__locals1.method_0));
 	}
 
-	private static void smethod_5(byte[] byte_0, int int_0, int int_1)
+	private static void smethod_6(byte[] byte_0, int int_0, int int_1)
 	{
 		byte b = byte_0[int_0];
 		byte_0[int_0] = byte_0[int_1];

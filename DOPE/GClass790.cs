@@ -75,7 +75,7 @@ public class GClass790
 
 	public GClass790(BigInteger bigInteger_3, BigInteger bigInteger_4, BigInteger bigInteger_5)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.method_1(bigInteger_3);
 		this.method_3(bigInteger_4);

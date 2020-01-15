@@ -145,7 +145,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 
 	public GClass853(Guid guid_0, InterfaceDescriptor interfaceDescriptor_0, ICommon icommon_0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.BotControllers = new ConcurrentDictionary<string, GClass852>();
 		this.concurrentDictionary_0 = new ConcurrentDictionary<string, BotProfile>();
 		base..ctor(guid_0, interfaceDescriptor_0, icommon_0);
@@ -319,12 +319,12 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 		bots.Clear();
 	}
 
-	private Task<ttYOlTbA5GIB0gCEJfS> method_5<ttYOlTbA5GIB0gCEJfS>(string string_2, Func<GClass852, Task<ttYOlTbA5GIB0gCEJfS>> func_0)
+	private Task<VM1alAfLjZp3r1Ajq1A> method_5<VM1alAfLjZp3r1Ajq1A>(string string_2, Func<GClass852, Task<VM1alAfLjZp3r1Ajq1A>> func_0)
 	{
 		GClass852 gclass = this.Bot(string_2);
 		if (gclass == null)
 		{
-			return Task.FromResult<ttYOlTbA5GIB0gCEJfS>(default(ttYOlTbA5GIB0gCEJfS));
+			return Task.FromResult<VM1alAfLjZp3r1Ajq1A>(default(VM1alAfLjZp3r1Ajq1A));
 		}
 		return func_0(gclass);
 	}
@@ -588,7 +588,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass853()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass853.logger_0 = LogManager.GetLogger("Core-MainBotController");
 	}
 

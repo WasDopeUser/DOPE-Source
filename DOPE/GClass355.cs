@@ -22,7 +22,7 @@ public class GClass355 : GClass354, GInterface0
 
 	public GClass355(GClass434 gclass434_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass434_1 == null)
 		{

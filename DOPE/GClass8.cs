@@ -13,13 +13,13 @@ public class GClass8 : GInterface4
 		if (hero.MovementDestination != null)
 		{
 			Vector2 value = hero.MovementDestination.Value;
-			hero.method_4((int)value.X, (int)value.Y, hero.Speed);
+			hero.method_3((int)value.X, (int)value.Y, hero.Speed);
 		}
 	}
 
 	public GClass8()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

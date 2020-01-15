@@ -22,7 +22,7 @@ public class GClass210 : GClass197, GInterface0
 
 	public GClass210(bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}

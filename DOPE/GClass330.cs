@@ -20,15 +20,15 @@ public class GClass330 : GInterface0
 		}
 	}
 
-	public GClass330(int int_2 = 0, int int_3 = 0, int int_4 = 0, uint uint_0 = 0U, double double_1 = 0.0, string string_2 = "", string string_3 = "", GClass201 gclass201_1 = null)
+	public GClass330(int int_1 = 0, int int_2 = 0, int int_3 = 0, uint uint_0 = 0U, double double_1 = 0.0, string string_2 = "", string string_3 = "", GClass201 gclass201_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
-		this.MapId = int_2;
-		this.int_1 = int_3;
-		this.int_0 = int_4;
+		this.MapId = int_1;
+		this.SmhhaLrNn2 = int_2;
+		this.int_0 = int_3;
 		this.Status = uint_0;
 		this.double_0 = double_1;
 		this.string_0 = string_2;
@@ -61,8 +61,8 @@ public class GClass330 : GInterface0
 		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 4 | U.smethod_0(this.int_0, 28));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 12 | U.smethod_0(this.int_1, 20));
+		this.SmhhaLrNn2 = binaryStream_0.smethod_0();
+		this.SmhhaLrNn2 = (this.SmhhaLrNn2 << 12 | U.smethod_0(this.SmhhaLrNn2, 20));
 		this.string_0 = binaryStream_0.smethod_2();
 		this.MapId = binaryStream_0.smethod_0();
 		this.MapId = (U.smethod_0(this.MapId, 15) | this.MapId << 17);
@@ -83,7 +83,7 @@ public class GClass330 : GInterface0
 		binaryStream_0.smethod_6(this.Status);
 		binaryStream_0.smethod_7(27431);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 4) | this.int_0 << 28);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 12) | this.int_1 << 20);
+		binaryStream_0.smethod_4(U.smethod_0(this.SmhhaLrNn2, 12) | this.SmhhaLrNn2 << 20);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.smethod_4(this.MapId << 15 | U.smethod_0(this.MapId, 17));
 		binaryStream_0.smethod_3(this.string_1);
@@ -97,7 +97,7 @@ public class GClass330 : GInterface0
 
 	public int int_0;
 
-	public int int_1;
+	public int SmhhaLrNn2;
 
 	public string string_0;
 

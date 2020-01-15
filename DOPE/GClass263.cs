@@ -20,28 +20,28 @@ public class GClass263 : GInterface0
 		}
 	}
 
-	public GClass263(bool bool_20 = false, bool bool_21 = false, bool bool_22 = false, bool bool_23 = false, bool bool_24 = false, bool bool_25 = false, bool bool_26 = false, bool bool_27 = false, bool bool_28 = false, bool bool_29 = false, bool bool_30 = false, bool bool_31 = false, bool bool_32 = false, bool bool_33 = false, bool bool_34 = false, bool bool_35 = false, bool bool_36 = false, bool bool_37 = false, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, bool bool_38 = false, bool bool_39 = false, bool bool_40 = false, bool bool_41 = false, bool bool_42 = false)
+	public GClass263(bool bool_23 = false, bool bool_24 = false, bool bool_25 = false, bool bool_26 = false, bool bool_27 = false, bool bool_28 = false, bool bool_29 = false, bool bool_30 = false, bool bool_31 = false, bool bool_32 = false, bool bool_33 = false, bool bool_34 = false, bool bool_35 = false, bool bool_36 = false, bool bool_37 = false, bool bool_38 = false, bool bool_39 = false, bool bool_40 = false, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, bool bool_41 = false, bool bool_42 = false, bool bool_43 = false, bool bool_44 = false, bool bool_45 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.bool_0 = bool_20;
-		this.bool_9 = bool_21;
-		this.bool_1 = bool_22;
-		this.bool_8 = bool_23;
-		this.bool_18 = bool_24;
-		this.bool_14 = bool_25;
-		this.bool_10 = bool_26;
-		this.bool_11 = bool_27;
+		this.bool_0 = bool_23;
+		this.bool_9 = bool_24;
+		this.bool_1 = bool_25;
+		this.bool_8 = bool_26;
+		this.bool_21 = bool_27;
 		this.bool_15 = bool_28;
-		this.bool_4 = bool_29;
-		this.bool_16 = bool_30;
-		this.ygLhOhiqCH = bool_31;
-		this.bool_2 = bool_32;
-		this.bool_17 = bool_33;
-		this.bool_5 = bool_34;
-		this.bool_19 = bool_35;
-		this.bool_12 = bool_36;
-		this.bool_6 = bool_37;
+		this.bool_10 = bool_29;
+		this.bool_11 = bool_30;
+		this.bool_16 = bool_31;
+		this.bool_4 = bool_32;
+		this.bool_19 = bool_33;
+		this.bool_17 = bool_34;
+		this.bool_2 = bool_35;
+		this.bool_20 = bool_36;
+		this.bool_5 = bool_37;
+		this.bool_22 = bool_38;
+		this.bool_12 = bool_39;
+		this.bool_6 = bool_40;
 		this.int_1 = int_8;
 		this.int_6 = int_9;
 		this.int_0 = int_10;
@@ -50,11 +50,11 @@ public class GClass263 : GInterface0
 		this.int_2 = int_13;
 		this.int_7 = int_14;
 		this.int_3 = int_15;
-		this.bool_3 = bool_38;
-		this.bool_7 = bool_39;
-		this.JlAhkkEgeX = bool_40;
-		this.BlMheImbaa = bool_41;
-		this.bool_13 = bool_42;
+		this.bool_3 = bool_41;
+		this.bool_7 = bool_42;
+		this.bool_18 = bool_43;
+		this.bool_13 = bool_44;
+		this.bool_14 = bool_45;
 	}
 
 	public virtual int vmethod_0()
@@ -90,22 +90,22 @@ public class GClass263 : GInterface0
 		this.bool_10 = binaryStream_0.ReadBoolean();
 		this.bool_11 = binaryStream_0.ReadBoolean();
 		this.bool_12 = binaryStream_0.ReadBoolean();
-		this.BlMheImbaa = binaryStream_0.ReadBoolean();
 		this.bool_13 = binaryStream_0.ReadBoolean();
 		this.bool_14 = binaryStream_0.ReadBoolean();
+		this.bool_15 = binaryStream_0.ReadBoolean();
 		this.int_4 = binaryStream_0.smethod_0();
 		this.int_4 = (this.int_4 << 1 | U.smethod_0(this.int_4, 31));
-		this.bool_15 = binaryStream_0.ReadBoolean();
-		this.ygLhOhiqCH = binaryStream_0.ReadBoolean();
-		this.JlAhkkEgeX = binaryStream_0.ReadBoolean();
 		this.bool_16 = binaryStream_0.ReadBoolean();
 		this.bool_17 = binaryStream_0.ReadBoolean();
 		this.bool_18 = binaryStream_0.ReadBoolean();
+		this.bool_19 = binaryStream_0.ReadBoolean();
+		this.bool_20 = binaryStream_0.ReadBoolean();
+		this.bool_21 = binaryStream_0.ReadBoolean();
 		this.int_5 = binaryStream_0.smethod_0();
 		this.int_5 = (this.int_5 << 12 | U.smethod_0(this.int_5, 20));
 		this.int_6 = binaryStream_0.smethod_0();
 		this.int_6 = (this.int_6 << 15 | U.smethod_0(this.int_6, 17));
-		this.bool_19 = binaryStream_0.ReadBoolean();
+		this.bool_22 = binaryStream_0.ReadBoolean();
 		this.int_7 = binaryStream_0.smethod_0();
 		this.int_7 = (U.smethod_0(this.int_7, 5) | this.int_7 << 27);
 	}
@@ -135,19 +135,19 @@ public class GClass263 : GInterface0
 		binaryStream_0.WriteBoolean(this.bool_10);
 		binaryStream_0.WriteBoolean(this.bool_11);
 		binaryStream_0.WriteBoolean(this.bool_12);
-		binaryStream_0.WriteBoolean(this.BlMheImbaa);
 		binaryStream_0.WriteBoolean(this.bool_13);
 		binaryStream_0.WriteBoolean(this.bool_14);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 1) | this.int_4 << 31);
 		binaryStream_0.WriteBoolean(this.bool_15);
-		binaryStream_0.WriteBoolean(this.ygLhOhiqCH);
-		binaryStream_0.WriteBoolean(this.JlAhkkEgeX);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 1) | this.int_4 << 31);
 		binaryStream_0.WriteBoolean(this.bool_16);
 		binaryStream_0.WriteBoolean(this.bool_17);
 		binaryStream_0.WriteBoolean(this.bool_18);
+		binaryStream_0.WriteBoolean(this.bool_19);
+		binaryStream_0.WriteBoolean(this.bool_20);
+		binaryStream_0.WriteBoolean(this.bool_21);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_5, 12) | this.int_5 << 20);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_6, 15) | this.int_6 << 17);
-		binaryStream_0.WriteBoolean(this.bool_19);
+		binaryStream_0.WriteBoolean(this.bool_22);
 		binaryStream_0.smethod_4(this.int_7 << 5 | U.smethod_0(this.int_7, 27));
 	}
 
@@ -185,19 +185,13 @@ public class GClass263 : GInterface0
 
 	public bool bool_12;
 
-	public bool BlMheImbaa;
-
 	public bool bool_13;
 
 	public bool bool_14;
 
-	public int int_4;
-
 	public bool bool_15;
 
-	public bool ygLhOhiqCH;
-
-	public bool JlAhkkEgeX;
+	public int int_4;
 
 	public bool bool_16;
 
@@ -205,11 +199,17 @@ public class GClass263 : GInterface0
 
 	public bool bool_18;
 
+	public bool bool_19;
+
+	public bool bool_20;
+
+	public bool bool_21;
+
 	public int int_5;
 
 	public int int_6;
 
-	public bool bool_19;
+	public bool bool_22;
 
 	public int int_7;
 }

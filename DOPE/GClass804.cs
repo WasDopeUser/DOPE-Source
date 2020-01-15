@@ -5,7 +5,7 @@ public class GClass804
 {
 	public GClass804(Vector<uint> vector_5, Vector<uint> vector_6)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.vector_0 = new Vector<uint>(512);
 		this.vector_1 = new Vector<uint>(512);

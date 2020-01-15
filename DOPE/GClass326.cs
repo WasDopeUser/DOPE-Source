@@ -22,7 +22,7 @@ public class GClass326 : GInterface0
 
 	public GClass326(bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_2;
 		this.bool_1 = bool_3;

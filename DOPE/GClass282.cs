@@ -22,7 +22,7 @@ public class GClass282 : GInterface0
 
 	public GClass282(bool bool_10 = false, bool bool_11 = false, bool bool_12 = false, bool bool_13 = false, bool bool_14 = false, bool bool_15 = false, bool bool_16 = false, bool bool_17 = false, bool bool_18 = false, bool bool_19 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_2 = bool_10;
 		this.bool_3 = bool_11;

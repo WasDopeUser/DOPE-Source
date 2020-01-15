@@ -22,7 +22,7 @@ public class GClass406 : GClass402, GInterface0
 
 	public GClass406(string string_2 = "", string string_3 = "", int int_2 = 0, int int_3 = 0, GClass548 gclass548_1 = null, GClass433 gclass433_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();

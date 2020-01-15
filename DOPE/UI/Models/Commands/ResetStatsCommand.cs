@@ -21,7 +21,7 @@ namespace DOPE.UI.Models.Commands
 
 		public ResetStatsCommand()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.CanExecuteChanged = new EventHandler(ResetStatsCommand.<>c.<>9.method_0);
 			base..ctor();
 		}
@@ -29,7 +29,7 @@ namespace DOPE.UI.Models.Commands
 		// Note: this type is marked as 'beforefieldinit'.
 		static ResetStatsCommand()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			ResetStatsCommand.Instance = new ResetStatsCommand();
 		}
 

@@ -22,7 +22,7 @@ public class GClass749 : GInterface0
 
 	public GClass749(int int_3 = 0, int int_4 = 0, int int_5 = 0, Vector<GClass746> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_2 = int_3;
 		this.int_0 = int_4;

@@ -10,7 +10,7 @@ public class GClass121 : GInterface4
 
 	public GClass121()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

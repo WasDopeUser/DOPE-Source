@@ -22,7 +22,7 @@ public class GClass185 : GInterface0
 
 	public GClass185(int int_0 = 0, uint uint_0 = 0U, bool bool_1 = false, GClass359 gclass359_0 = null, GClass771 gclass771_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Id = int_0;
 		this.State = uint_0;

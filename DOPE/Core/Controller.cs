@@ -28,7 +28,7 @@ namespace DOPE.Core
 	{
 		public Controller(string string_2, string string_3)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
 			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
@@ -77,8 +77,8 @@ namespace DOPE.Core
 					return;
 				}
 				this.idopeService_0 = value;
-				this.method_18(Class10.propertyChangedEventArgs_15);
-				this.method_18(Class10.propertyChangedEventArgs_52);
+				this.method_18(Class10.propertyChangedEventArgs_16);
+				this.method_18(Class10.propertyChangedEventArgs_54);
 			}
 		}
 
@@ -155,7 +155,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.gclass853_0 = value;
-				this.method_18(Class10.propertyChangedEventArgs_10);
+				this.method_18(Class10.propertyChangedEventArgs_11);
 			}
 		}
 
@@ -182,7 +182,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.string_1 = value;
-				this.method_18(Class10.propertyChangedEventArgs_29);
+				this.method_18(Class10.propertyChangedEventArgs_31);
 			}
 		}
 
@@ -446,7 +446,7 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
@@ -494,8 +494,8 @@ namespace DOPE.Core
 			}
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void method_18(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

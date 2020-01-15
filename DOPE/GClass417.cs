@@ -22,7 +22,7 @@ public class GClass417 : GInterface0
 
 	public GClass417(bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, bool bool_10 = false, bool bool_11 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_3 = bool_6;
 		this.bool_0 = bool_7;

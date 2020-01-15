@@ -24,7 +24,7 @@ namespace DarkorbitAPI
 	{
 		static DarkOrbitWebAPI()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			DarkOrbitWebAPI.randomizer = new Random();
 			DarkOrbitWebAPI.place_bet_btn = "BID";
 			DarkOrbitWebAPI.ServerInstances = null;
@@ -212,7 +212,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI(GameManager game)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.BootyArray = new string[3];
 			this.HourAuctionItems = new List<DarkOrbitWebAPI.Item>();
 			this.MyOffers = new List<DarkOrbitWebAPI.Item>();
@@ -503,12 +503,12 @@ namespace DarkorbitAPI
 				}
 				else if (proxy == null)
 				{
-					gclass.method_5();
+					gclass.kvprjiTfrj();
 					this._handler.Proxy = null;
 				}
 				else
 				{
-					gclass.method_2(new ProxySettings[]
+					gclass.method_3(new ProxySettings[]
 					{
 						proxy
 					});
@@ -836,13 +836,13 @@ namespace DarkorbitAPI
 			}
 			new
 			{
-				oFNhoUHv3vUlS06b7dv = "hour",
-				ANtncVHy0QrICyiohNB = "bid",
-				N2uG5xHuYcO9jnai3uA = item.lootId,
-				ftriWNHtCRgS3w8IIVs = item.itemId,
-				rFtimjH0SCMKsjOGqcE = credits,
-				UIfWuiHDwDOFLxSRKOk = DarkOrbitWebAPI.place_bet_btn,
-				hn4nKlH5eSYWTBN8XqB = reloadToken2
+				oEENhKLWVwWCCgQrCPY = "hour",
+				N08i2PLXjgIkqTAmZXo = "bid",
+				xpd57GLpu0PtEHuotaE = item.lootId,
+				aDshSMLEhFTqEM4NTTu = item.itemId,
+				FRAc4bLJDLooVfRZc1H = credits,
+				WmhreYLoXVOMTs9ieVX = DarkOrbitWebAPI.place_bet_btn,
+				atQ387LeUJvb4iPwHsh = reloadToken2
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -927,12 +927,12 @@ namespace DarkorbitAPI
 		{
 			new
 			{
-				nAfebCHaB0qI8YF7vUe = "purchase",
-				X3psoCHCNaeHswCewYI = category,
-				j2GTjSHKtlo42RC9jjJ = itemId,
-				KV2rmTH3QFet2FsZnyD = amount,
-				GJ9vwkHcxq0xRKvnqp2 = level,
-				wNHZtcHM2EfLqTDtrYF = selectedName
+				suRNUWL9lSecS6dGiqp = "purchase",
+				F29AWqLmJZMRNGXWoZS = category,
+				MfOPqvLlnHn14qOAtHT = itemId,
+				xNLy3LLjWUaOfs3RbI9 = amount,
+				uttaK6Lgfetilf6MM0q = level,
+				KF2y4ZLc9K2S4icXm3E = selectedName
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -1047,7 +1047,7 @@ namespace DarkorbitAPI
 		{
 			public Response(Uri uri, string response, HttpResponseMessage data)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Uri = uri;
 				this.Content = response;
@@ -1065,7 +1065,7 @@ namespace DarkorbitAPI
 		{
 			public Credentials(string Username, string Password, string server, bool Auto, bool IsTemplate = false)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Username = Username;
 				this.Password = Password;
@@ -1076,7 +1076,7 @@ namespace DarkorbitAPI
 
 			protected Credentials()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1095,7 +1095,7 @@ namespace DarkorbitAPI
 		{
 			public BasicItem(string Name, DarkOrbitWebAPI.ItemType type, string itemId, string lootId, int Uridium, int Credits)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Name = Name;
 				this.Type = type;
@@ -1107,7 +1107,7 @@ namespace DarkorbitAPI
 
 			protected BasicItem()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1128,7 +1128,7 @@ namespace DarkorbitAPI
 		{
 			public Item(string Name, DarkOrbitWebAPI.ItemType Type, string itemId, string lootId, int Uridium, int Credits, int LocalCredits, string Winner, string Image, bool Winning = false)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Type = Type;
 				this.itemId = itemId;
@@ -1144,7 +1144,7 @@ namespace DarkorbitAPI
 
 			protected Item()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1422,7 +1422,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfo()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1488,7 +1488,7 @@ namespace DarkorbitAPI
 
 			public jumpgateEnergy_cost()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1543,7 +1543,7 @@ namespace DarkorbitAPI
 
 			public jumpgateMultiplier()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1587,7 +1587,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbability()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1629,7 +1629,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbabilityCat()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1791,7 +1791,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGate()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -1862,7 +1862,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGateGatebuilders()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2027,7 +2027,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfoUpdate()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2232,7 +2232,7 @@ namespace DarkorbitAPI
 
 			public jumpgateItem()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2272,7 +2272,7 @@ namespace DarkorbitAPI
 
 			public ServerInstanceList()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 		}
@@ -2298,7 +2298,7 @@ namespace DarkorbitAPI
 
 			public maps()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2337,7 +2337,7 @@ namespace DarkorbitAPI
 
 			public mapsMap()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2380,7 +2380,7 @@ namespace DarkorbitAPI
 
 			public spacemap()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2482,7 +2482,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgate()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2534,7 +2534,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgatePosition()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2576,7 +2576,7 @@ namespace DarkorbitAPI
 
 			public spacemapMap()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2605,7 +2605,7 @@ namespace DarkorbitAPI
 
 			public spacemapMapNpc()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2633,7 +2633,7 @@ namespace DarkorbitAPI
 
 			public NpcConstants()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 
@@ -2673,7 +2673,7 @@ namespace DarkorbitAPI
 
 			public resourceItem()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 

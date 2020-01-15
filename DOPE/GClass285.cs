@@ -22,7 +22,7 @@ public class GClass285 : GInterface0
 
 	public GClass285(int int_1 = 0, GClass481 gclass481_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		if (gclass481_1 == null)

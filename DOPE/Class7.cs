@@ -12,7 +12,7 @@ internal static class Class7
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class7()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		Class7.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("AttackConfig");
 		Class7.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("AttackFormation");
 		Class7.propertyChangedEventArgs_2 = new PropertyChangedEventArgs("AutoRefine");

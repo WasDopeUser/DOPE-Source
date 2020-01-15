@@ -22,7 +22,7 @@ public class GClass472 : GInterface0
 
 	public GClass472(double double_1 = 0.0, int int_2 = 0, int int_3 = 0, string string_1 = "", Vector<GClass645> vector_2 = null, Vector<GClass645> vector_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.double_0 = double_1;

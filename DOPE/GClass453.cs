@@ -22,7 +22,7 @@ public class GClass453 : GInterface0
 
 	public GClass453(int int_0 = 0, Vector<string> vector_2 = null, uint uint_2 = 0U, uint uint_3 = 0U, double double_1 = 0.0, bool bool_1 = false, GClass650 gclass650_0 = null, Vector<GClass453> vector_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Id = int_0;
 		if (vector_2 == null)
@@ -75,8 +75,8 @@ public class GClass453 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			string uQ82vWxZQTAEiugOken = binaryStream_0.smethod_2();
-			this.vector_0.method_0(uQ82vWxZQTAEiugOken);
+			string hLgS6JqKTiiSdPhAGUn = binaryStream_0.smethod_2();
+			this.vector_0.method_0(hLgS6JqKTiiSdPhAGUn);
 			num++;
 		}
 		this.Id = binaryStream_0.smethod_0();

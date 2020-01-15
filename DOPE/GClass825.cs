@@ -32,7 +32,7 @@ public class GClass825 : GClass824
 
 	public GClass825(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.mapProfile_1 = new MapProfile
 		{
 			TargetMap = TargetMap.X1
@@ -80,7 +80,7 @@ public class GClass825 : GClass824
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass825()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass825.list_0 = new List<string>
 		{
 			"ship_phoenix",

@@ -8,13 +8,13 @@ public class GClass124 : GInterface6
 {
 	public GClass124()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 
 	public GClass124(TcpClient tcpClient_2)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (tcpClient_2 == null)
 		{
@@ -25,7 +25,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -37,7 +37,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -53,7 +53,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, string string_4, string string_5)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -75,7 +75,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1, string string_4, string string_5)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -111,7 +111,7 @@ public class GClass124 : GInterface6
 		this.int_0 = int_1;
 	}
 
-	public string hfoPmbYmhj9()
+	public string imethod_4()
 	{
 		return "SOCKS5";
 	}
@@ -136,17 +136,17 @@ public class GClass124 : GInterface6
 		this.string_2 = string_3;
 	}
 
-	public TcpClient imethod_4()
+	public TcpClient imethod_5()
 	{
 		return this.tcpClient_1;
 	}
 
-	public void imethod_5(TcpClient tcpClient_2)
+	public void imethod_6(TcpClient tcpClient_2)
 	{
 		this.tcpClient_1 = tcpClient_2;
 	}
 
-	public TcpClient imethod_6(string string_3, int int_1)
+	public TcpClient imethod_7(string string_3, int int_1)
 	{
 		if (string.IsNullOrEmpty(string_3))
 		{

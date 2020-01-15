@@ -22,7 +22,7 @@ public class GClass670 : GInterface0
 
 	public GClass670(uint uint_1 = 0U, GClass347 gclass347_1 = null, int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		if (gclass347_1 == null)

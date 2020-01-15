@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using DarkorbitAPI;
 using DarkorbitAPI.CommonStructures;
+using DarkorbitAPI.CommonStructures.Containers;
 using DarkorbitAPI.Licensing;
 using DarkorbitAPI.NativeWrappers;
 using DarkorbitAPI.Packets.Static;
@@ -41,7 +42,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.collectible_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_8);
+			this.method_94(Class10.propertyChangedEventArgs_9);
 		}
 	}
 
@@ -67,7 +68,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		MenuItem menuItem;
 		if (this.Hero.MenuItems.TryGetValue("equipment_extra_cpu_cl04k", out menuItem) && menuItem.Activatable && !menuItem.Selected)
 		{
-			this.Server.method_14(menuItem.Id, true, false);
+			this.Server.pJeMiKmRli(menuItem.Id, true, false);
 			return;
 		}
 		if (this.Game.Hero.Uridium >= 500.0)
@@ -76,9 +77,9 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 	}
 
-	public bool method_1(Vector2 vector2_2, int int_12 = 300, bool bool_13 = false)
+	public bool method_1(Vector2 vector2_2, int int_11 = 300, bool bool_13 = false)
 	{
-		if (this.Cooldowns.method_2(BotAction.Move, (double)int_12))
+		if (this.Cooldowns.method_2(BotAction.Move, (double)int_11))
 		{
 			this.Game.Connection.Server.method_5(vector2_2.X, vector2_2.Y, false);
 			return true;
@@ -86,7 +87,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		return false;
 	}
 
-	public void method_2(int int_12 = 0)
+	public void method_2(int int_11 = 0)
 	{
 		if (!this.Game.LastJumped.Cooldown(5000))
 		{
@@ -94,7 +95,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		if (this.Cooldowns.method_2(BotAction.Jump, 600.0))
 		{
-			this.Game.Connection.Server.method_2(int_12);
+			this.Game.Connection.Server.method_2(int_11);
 		}
 	}
 
@@ -102,31 +103,26 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (this.Game.Security.HashBlockList.method_0(collectible_1.Hash) && this.Cooldowns.method_2(BotAction.Collect, 600.0))
 		{
-			if (this.string_0 != collectible_1.Hash)
-			{
-				this.string_0 = collectible_1.Hash;
-				this.int_0 = 0;
-			}
-			this.Log.Debug<string, int>("Collecting {boxType} tries={tries}", collectible_1.Type, this.int_0);
+			this.string_0 = collectible_1.Hash;
+			UsageCounter<string>.UsageEntry usageEntry = this.BoxTracker.method_2(collectible_1.Hash, TimeSpan.FromSeconds(60000.0), true);
+			this.Log.Debug<string, int>("Collecting {boxType} tries={tries}", collectible_1.Type, usageEntry.Count);
 			Collectible collectible;
 			this.DormantTargets.TryRemove(collectible_1.Hash, out collectible);
 			this.Game.Connection.Server.method_13(collectible_1);
 			this.IsCollecting = true;
-			int num = this.int_0 + 1;
-			this.int_0 = num;
-			if (num > 3)
+			if (usageEntry.Count > 3)
 			{
 				this.Game.Security.HashBlockList.method_2(collectible_1.Hash, 120000.0);
 			}
 		}
 	}
 
-	public bool method_4(Vector2 vector2_2, int int_12, int int_13 = 300, bool bool_13 = false, int int_14 = 640, int int_15 = 360, int int_16 = 0, int int_17 = 0, int int_18 = 0, bool bool_14 = false, int int_19 = 0, Action action_0 = null)
+	public bool method_4(Vector2 vector2_2, int int_11, int int_12 = 300, bool bool_13 = false, int int_13 = 640, int int_14 = 360, int int_15 = 0, int int_16 = 0, int int_17 = 0, bool bool_14 = false, int int_18 = 0, Action action_0 = null)
 	{
-		GClass822.<>c__DisplayClass14_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass14_0();
+		GClass822.<>c__DisplayClass13_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass13_0();
 		CS$<>8__locals1.vector2_0 = vector2_2;
 		CS$<>8__locals1.vector2_0 = Vector2.Clamp(CS$<>8__locals1.vector2_0, Vector2.Zero, this.Map.MapSize.Vector);
-		if (Vector2.Distance(CS$<>8__locals1.vector2_0, this.HeroPosition) <= (float)int_12)
+		if (Vector2.Distance(CS$<>8__locals1.vector2_0, this.HeroPosition) <= (float)int_11)
 		{
 			if (bool_13)
 			{
@@ -138,7 +134,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			if (!bool_14 && this.Map.Grid.method_3(this.HeroPosition, CS$<>8__locals1.vector2_0))
 			{
-				PathSequence pathSequence = this.Map.Grid.method_14(this.HeroPosition, CS$<>8__locals1.vector2_0, 30, int_18);
+				PathSequence pathSequence = this.Map.Grid.method_14(this.HeroPosition, CS$<>8__locals1.vector2_0, 30, int_17);
 				if (pathSequence == null)
 				{
 					this.Log.Warn<Vector2, Vector2>("No path from {p1} to {p2}", this.HeroPosition, CS$<>8__locals1.vector2_0);
@@ -153,16 +149,16 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					pathSequence.method_2(this.HeroPosition, new Action<Vector2>(CS$<>8__locals1.method_0), this.Map.Grid, 30);
 				}
 				int num = 0;
-				int_17 = 0;
-				int_16 = num;
+				int_16 = 0;
+				int_15 = num;
 			}
-			Vector2 vector2_3 = this.Game.Security.method_8(this.HeroPosition, (int)CS$<>8__locals1.vector2_0.X, (int)CS$<>8__locals1.vector2_0.Y, int_14, int_15, int_16, int_17, int_19);
-			this.method_1(vector2_3, int_13, false);
+			Vector2 vector2_3 = this.Game.Security.method_9(this.HeroPosition, (int)CS$<>8__locals1.vector2_0.X, (int)CS$<>8__locals1.vector2_0.Y, int_13, int_14, int_15, int_16, int_18);
+			this.method_1(vector2_3, int_12, false);
 		}
 		return false;
 	}
 
-	public bool method_5(PathSequence pathSequence_1, int int_12 = 300, bool bool_13 = false, int int_13 = 640, int int_14 = 360, int int_15 = 0, int int_16 = 0, int int_17 = 0)
+	public bool method_5(PathSequence pathSequence_1, int int_11 = 300, bool bool_13 = false, int int_12 = 640, int int_13 = 360, int int_14 = 0, int int_15 = 0, int int_16 = 0)
 	{
 		return true;
 	}
@@ -187,32 +183,32 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			this.EnemyTarget = null;
 			return;
 		}
-		while (laserType > LaserType.LCB_10 && this.Hero.method_20(Ammo.smethod_0(laserType)) < 100.0)
+		while (laserType > LaserType.LCB_10 && this.Hero.method_19(Ammo.smethod_1(laserType)) < 100.0)
 		{
 			laserType--;
 		}
-		while (rocketType > RocketType.PLT_2026 && this.Hero.method_20(Ammo.smethod_1(rocketType)) < 10.0)
+		while (rocketType > RocketType.PLT_2026 && this.Hero.method_19(Ammo.smethod_2(rocketType)) < 10.0)
 		{
 			rocketType--;
 		}
-		while (hellstormType > HellstormType.ECO_10 && this.Hero.method_20(Ammo.smethod_2(hellstormType)) < 10.0)
+		while (hellstormType > HellstormType.ECO_10 && this.Hero.method_19(Ammo.smethod_3(hellstormType)) < 10.0)
 		{
 			hellstormType--;
 		}
-		string selectedAmmo = Ammo.smethod_0(laserType);
-		string text = Ammo.smethod_1(rocketType);
-		string text2 = Ammo.smethod_2(hellstormType);
-		this.Server.method_15(this.SelectedAmmo = selectedAmmo, true);
+		string selectedAmmo = Ammo.smethod_1(laserType);
+		string text = Ammo.smethod_2(rocketType);
+		string text2 = Ammo.smethod_3(hellstormType);
+		this.Server.method_14(this.SelectedAmmo = selectedAmmo, true);
 		if (this.Hero.method_15("equipment_extra_cpu_arol-x"))
 		{
-			this.Server.method_15("equipment_extra_cpu_arol-x", text != null);
+			this.Server.method_14("equipment_extra_cpu_arol-x", text != null);
 		}
 		if (this.Hero.method_15("equipment_extra_cpu_rllb-x"))
 		{
-			this.Server.method_15("equipment_extra_cpu_rllb-x", text2 != null);
+			this.Server.method_14("equipment_extra_cpu_rllb-x", text2 != null);
 		}
-		this.Server.method_15(this.SelectedRockets = text, true);
-		this.Server.method_15(this.SelectedHS = text2, true);
+		this.Server.method_14(this.SelectedRockets = text, true);
+		this.Server.method_14(this.SelectedHS = text2, true);
 	}
 
 	public bool IsAttacking
@@ -230,7 +226,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_25);
+			this.method_94(Class10.propertyChangedEventArgs_27);
 		}
 	}
 
@@ -249,7 +245,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_26);
+			this.method_94(Class10.propertyChangedEventArgs_28);
 		}
 	}
 
@@ -258,16 +254,16 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		[CompilerGenerated]
 		get
 		{
-			return this.int_1;
+			return this.int_0;
 		}
 		[CompilerGenerated]
 		set
 		{
-			if (this.int_1 == value)
+			if (this.int_0 == value)
 			{
 				return;
 			}
-			this.int_1 = value;
+			this.int_0 = value;
 			this.method_94(Class10.propertyChangedEventArgs_0);
 		}
 	}
@@ -287,7 +283,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				this.method_7(ship_1);
 				if (ship_1.LastTookDamageHero.smethod_0(3000) && this.Behavior.vmethod_5(ship_1).GroupAttackMode == GroupAttackMode.Assist && this.Cooldowns.method_2(BotAction.PingLocation, 3000.0))
 				{
-					this.Server.method_26(this.HeroPosition);
+					this.Server.method_25(this.HeroPosition);
 				}
 			}
 		}
@@ -316,17 +312,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			return;
 		}
-		if (this.SelectedAmmo == "ammunition_laser_lcb-10" && this.Hero.method_20(this.SelectedAmmo) < 1900.0)
+		if (this.SelectedAmmo == "ammunition_laser_lcb-10" && this.Hero.method_19(this.SelectedAmmo) < 1900.0)
 		{
 			this.Log.Debug("Buying {ammoType}", this.SelectedAmmo);
-			this.Server.method_14("buy_" + this.SelectedAmmo, true, false);
+			this.Server.pJeMiKmRli("buy_" + this.SelectedAmmo, true, false);
 		}
-		if ((this.SelectedRockets == "ammunition_rocket_r-310" || this.SelectedRockets == "ammunition_rocket_plt-2026") && this.Hero.method_20(this.SelectedRockets) < 90.0)
+		if ((this.SelectedRockets == "ammunition_rocket_r-310" || this.SelectedRockets == "ammunition_rocket_plt-2026") && this.Hero.method_19(this.SelectedRockets) < 90.0)
 		{
 			this.Log.Debug("Buying {ammoType}", this.SelectedAmmo);
-			this.Server.method_14("buy_" + this.SelectedRockets, true, false);
+			this.Server.pJeMiKmRli("buy_" + this.SelectedRockets, true, false);
 		}
-		if (this.SelectedHS == "ammunition_rocketlauncher_eco-10" && this.Hero.method_20(this.SelectedHS) < 90.0)
+		if (this.SelectedHS == "ammunition_rocketlauncher_eco-10" && this.Hero.method_19(this.SelectedHS) < 90.0)
 		{
 			this.Log.Debug("Buying {ammoType}", this.SelectedHS);
 			bool flag;
@@ -334,13 +330,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 	}
 
-	public bool method_10<NV7PDtxYKpMDsfbXeZt>(string string_4, Func<DarkOrbitWebAPI, NV7PDtxYKpMDsfbXeZt> func_0, out NV7PDtxYKpMDsfbXeZt gparam_0)
+	public bool method_10<smiX9eqx6oDfTDGGqec>(string string_4, Func<DarkOrbitWebAPI, smiX9eqx6oDfTDGGqec> func_0, out smiX9eqx6oDfTDGGqec gparam_0)
 	{
-		GClass822.<>c__DisplayClass34_0<NV7PDtxYKpMDsfbXeZt> CS$<>8__locals1 = new GClass822.<>c__DisplayClass34_0<NV7PDtxYKpMDsfbXeZt>();
+		GClass822.<>c__DisplayClass33_0<smiX9eqx6oDfTDGGqec> CS$<>8__locals1 = new GClass822.<>c__DisplayClass33_0<smiX9eqx6oDfTDGGqec>();
 		CS$<>8__locals1.f = func_0;
 		CS$<>8__locals1.<>4__this = this;
 		CS$<>8__locals1.key = string_4;
-		gparam_0 = default(NV7PDtxYKpMDsfbXeZt);
+		gparam_0 = default(smiX9eqx6oDfTDGGqec);
 		object obj;
 		if (!this.concurrentDictionary_0.TryGetValue(CS$<>8__locals1.key, out obj))
 		{
@@ -349,22 +345,22 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			this.BackgroundQueue.Enqueue(item);
 			return false;
 		}
-		if (obj is NV7PDtxYKpMDsfbXeZt)
+		if (obj is smiX9eqx6oDfTDGGqec)
 		{
-			NV7PDtxYKpMDsfbXeZt nv7PDtxYKpMDsfbXeZt = (NV7PDtxYKpMDsfbXeZt)((object)obj);
+			smiX9eqx6oDfTDGGqec smiX9eqx6oDfTDGGqec = (smiX9eqx6oDfTDGGqec)((object)obj);
 			object obj2;
 			this.concurrentDictionary_0.TryRemove(CS$<>8__locals1.key, out obj2);
-			gparam_0 = nv7PDtxYKpMDsfbXeZt;
+			gparam_0 = smiX9eqx6oDfTDGGqec;
 			return true;
 		}
 		return false;
 	}
 
-	private bool method_11(int int_12)
+	private bool method_11(int int_11)
 	{
-		if (this.Hero.Config != int_12 && this.Cooldowns.method_2(BotAction.SetConfig, 5250.0))
+		if (this.Hero.Config != int_11 && this.Cooldowns.method_2(BotAction.SetConfig, 5250.0))
 		{
-			this.Server.method_3(int_12);
+			this.Server.method_3(int_11);
 			return true;
 		}
 		return false;
@@ -405,15 +401,15 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				{
 					genum3 = GEnum4.Veteran;
 				}
-				else if (this.MapProfile.UseMothToKillCorners && this.Hero.method_15(GEnum4.Moth.jNambvWvYx()) && this.method_86())
+				else if (this.MapProfile.UseMothToKillCorners && this.Hero.method_15(GEnum4.Moth.smethod_0()) && this.method_86())
 				{
 					genum3 = GEnum4.Moth;
 				}
 			}
 			MenuItem menuItem;
-			if (this.Hero.MenuItems.TryGetValue(genum3.jNambvWvYx(), out menuItem) && menuItem.Activatable && !menuItem.Selected && this.Hero.ItemCooldown.method_0(CooldownType.DroneFormation) && this.Cooldowns.method_2(BotAction.SwitchDroneFormation, 500.0))
+			if (this.Hero.MenuItems.TryGetValue(genum3.smethod_0(), out menuItem) && menuItem.Activatable && !menuItem.Selected && this.Hero.ItemCooldown.method_0(CooldownType.DroneFormation) && this.Cooldowns.method_2(BotAction.SwitchDroneFormation, 500.0))
 			{
-				this.Server.method_15(genum3.jNambvWvYx(), true);
+				this.Server.method_14(genum3.smethod_0(), true);
 			}
 		}
 		if (this.Hero.Config != num3)
@@ -429,14 +425,14 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			bool_13 = false;
 		}
 		Gate gate_;
-		Vector2? vector = this.Behavior.vmethod_20(this.Map.Hero.Position, out gate_, bool_14, bool_13);
+		Vector2? vector = this.Behavior.vmethod_19(this.Map.Hero.Position, out gate_, bool_14, bool_13);
 		if (vector == null)
 		{
 			return false;
 		}
 		if (!bool_13 && Vector2.Distance(vector.Value, this.Hero.Position) < 30f)
 		{
-			vector = this.Behavior.vmethod_20(this.Map.Hero.Position, out gate_, bool_14, bool_13);
+			vector = this.Behavior.vmethod_19(this.Map.Hero.Position, out gate_, bool_14, bool_13);
 		}
 		return vector != null && this.method_37(vector.Value, gate_, 15, bool_14);
 	}
@@ -449,10 +445,10 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		foreach (ResourceType resourceType in GClass822.resourceType_0)
 		{
-			int num = this.Hero.method_25(resourceType);
+			int num = this.Hero.method_24(resourceType);
 			if (num > 0)
 			{
-				this.Server.method_20(resourceType, (double)num);
+				this.Server.method_19(resourceType, (double)num);
 				this.Cooldowns.method_1(BotAction.AutoRefine, 500.0);
 				return;
 			}
@@ -476,21 +472,21 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public int method_15()
 	{
-		return this.int_8 + this.maxStack_0.Sum();
+		return this.int_7 + this.maxStack_0.Sum();
 	}
 
 	public void method_16()
 	{
 		if (this.dateTimeOffset_0.Cooldown(200))
 		{
-			this.maxStack_0.method_0(this.int_8);
-			this.int_8 = 0;
+			this.maxStack_0.method_0(this.int_7);
+			this.int_7 = 0;
 			this.dateTimeOffset_0 = DateTimeOffset.Now;
 		}
-		if (this.Map.IsGG && this.Behavior.vmethod_27())
+		if (this.Map.IsGG && this.Behavior.vmethod_26())
 		{
 			int num = this.method_15();
-			if ((double)num > Math.Min((double)this.Hero.HpMax * 0.1, 20000.0) && (double)(this.Hero.Hp + this.Hero.Shield) - Math.Min((double)this.Hero.HpMax * 0.25, 60000.0) < 2.2 * (double)num)
+			if ((double)num > Math.Min((double)this.Hero.HpMax * 0.1, 20000.0) && (double)(this.Hero.Hp + this.Hero.Shield) - Math.Min((double)this.Hero.HpMax * 0.25, 60000.0) < 2.1 * (double)num)
 			{
 				this.Log.Warn("Took {damage} in the last second. Fleeing.", num);
 				this.method_20();
@@ -550,7 +546,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (this.method_18(GClass822.list_0) == "ability_solace")
 		{
-			using (IEnumerator<GroupManager.GroupMember> enumerator = this.Hero.Group.method_9().GetEnumerator())
+			using (IEnumerator<GroupManager.GroupMember> enumerator = this.Hero.Group.method_10().GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
@@ -576,12 +572,12 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public bool method_23()
 	{
-		Ship ship = this.Map.ekkOzLkslS<Ship>(this.HeroPosition, new Func<Ship, bool>(this.method_87), null, 0);
+		Ship ship = this.Map.method_5<Ship>(this.HeroPosition, new Func<Ship, bool>(this.method_87), null, 0);
 		GClass88 server = this.Server;
 		string text = "ability_tartarus_speed-boost";
 		bool flag = true;
 		bool flag2 = true;
-		server.method_15(text, flag);
+		server.method_14(text, flag);
 		if ((float)this.MapProfile.MinHealHp >= this.Hero.HpPercentage)
 		{
 			flag2 |= this.method_19();
@@ -610,7 +606,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 						string text3 = text2;
 						bool flag3 = true;
 						flag2 = true;
-						server2.method_14(text3, flag3, false);
+						server2.pJeMiKmRli(text3, flag3, false);
 					}
 				}
 				else if (text2 == "ability_venom")
@@ -621,7 +617,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 						string text4 = text2;
 						bool flag4 = true;
 						flag2 = true;
-						server3.method_14(text4, flag4, false);
+						server3.pJeMiKmRli(text4, flag4, false);
 					}
 				}
 				else if (text2 != null && selectedShip.Hp > 25000)
@@ -630,7 +626,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					string text5 = text2;
 					bool flag5 = true;
 					flag2 = true;
-					server4.method_14(text5, flag5, false);
+					server4.pJeMiKmRli(text5, flag5, false);
 				}
 			}
 		}
@@ -668,7 +664,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.mapProfile_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_38);
+			this.method_94(Class10.propertyChangedEventArgs_40);
 		}
 	}
 
@@ -687,8 +683,8 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.accountSettings_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_22);
-			this.method_94(Class10.propertyChangedEventArgs_35);
+			this.method_94(Class10.propertyChangedEventArgs_24);
+			this.method_94(Class10.propertyChangedEventArgs_37);
 			this.method_94(Class10.Account);
 		}
 	}
@@ -717,17 +713,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		[CompilerGenerated]
 		get
 		{
-			return this.int_2;
+			return this.int_1;
 		}
 		[CompilerGenerated]
 		set
 		{
-			if (this.int_2 == value)
+			if (this.int_1 == value)
 			{
 				return;
 			}
-			this.int_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_43);
+			this.int_1 = value;
+			this.method_94(Class10.propertyChangedEventArgs_45);
 		}
 	}
 
@@ -746,7 +742,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.dateTime_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_32);
+			this.method_94(Class10.propertyChangedEventArgs_34);
 		}
 	}
 
@@ -765,7 +761,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.dateTime_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_33);
+			this.method_94(Class10.propertyChangedEventArgs_35);
 		}
 	}
 
@@ -784,7 +780,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_27);
+			this.method_94(Class10.propertyChangedEventArgs_29);
 		}
 	}
 
@@ -803,7 +799,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_3 = value;
-			this.method_94(Class10.propertyChangedEventArgs_46);
+			this.method_94(Class10.propertyChangedEventArgs_48);
 		}
 	}
 
@@ -822,7 +818,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_4 = value;
-			this.method_94(Class10.propertyChangedEventArgs_28);
+			this.method_94(Class10.propertyChangedEventArgs_30);
 		}
 	}
 
@@ -897,7 +893,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.task_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_30);
+			this.method_94(Class10.propertyChangedEventArgs_32);
 		}
 	}
 
@@ -916,7 +912,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.task_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_31);
+			this.method_94(Class10.propertyChangedEventArgs_33);
 		}
 	}
 
@@ -942,13 +938,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		if (this.Cooldowns.method_2(BotAction.SwitchPetState, 2000.0))
 		{
-			this.Server.method_18(petState_0);
+			this.Server.method_17(petState_0);
 			return true;
 		}
 		return false;
 	}
 
-	private bool method_28(PetMode petMode_0, int int_12 = 0)
+	private bool method_28(PetMode petMode_0, int int_11 = 0)
 	{
 		if (this.Hero.Pet.IsControlDisabled)
 		{
@@ -956,11 +952,30 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		if (this.Cooldowns.method_2(BotAction.SwitchPetMode, 2000.0))
 		{
-			this.Server.method_19(petMode_0, int_12);
+			this.Server.method_18(petMode_0, int_11);
 			this.dateTimeOffset_1 = DateTimeOffset.Now;
 			return true;
 		}
 		return false;
+	}
+
+	public UsageCounter<int> EnemyLocated
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.usageCounter_0;
+		}
+		[CompilerGenerated]
+		protected set
+		{
+			if (object.Equals(this.usageCounter_0, value))
+			{
+				return;
+			}
+			this.usageCounter_0 = value;
+			this.method_94(Class10.propertyChangedEventArgs_19);
+		}
 	}
 
 	public void method_29()
@@ -1008,7 +1023,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			if (this.Cooldowns.method_2(BotAction.RepairPet, 120000.0))
 			{
-				this.Server.method_18(PetState.Repair);
+				this.Server.method_17(PetState.Repair);
 			}
 			return;
 		}
@@ -1074,7 +1089,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				this.method_67(BotState.Flee);
 			}
 		}
-		else if (this.Game.Hero.HpPercentage < (float)this.MapProfile.MinHp && this.Behavior.vmethod_27() && GClass822.botState_2.HasFlag(this.State))
+		else if (this.Game.Hero.HpPercentage < (float)this.MapProfile.MinHp && this.Behavior.vmethod_26() && GClass822.botState_2.HasFlag(this.State))
 		{
 			this.method_67(BotState.Repair);
 		}
@@ -1096,7 +1111,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.ship_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_18);
+			this.method_94(Class10.propertyChangedEventArgs_20);
 		}
 	}
 
@@ -1139,7 +1154,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (this.StateIters <= 1)
 		{
-			this.int_3 = 0;
+			this.int_2 = 0;
 		}
 		if (this.Map.IsGG && this.Map.Gates.Any<KeyValuePair<int, Gate>>())
 		{
@@ -1156,7 +1171,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			return;
 		}
-		if (this.Behavior.vmethod_26() && ((this.Game.Hero.HpPercentage < 98f && this.Hero.method_15("equipment_extra_repbot_rep")) || (!this.ignoreShields && this.Game.Hero.ShieldPercentage < 90f)) && this.dateTimeOffset_3.Cooldown(10000))
+		if (this.Behavior.vmethod_25() && ((this.Game.Hero.HpPercentage < 98f && this.Hero.method_15("equipment_extra_repbot_rep")) || (!this.ignoreShields && this.Game.Hero.ShieldPercentage < 90f)) && this.dateTimeOffset_3.Cooldown(10000))
 		{
 			this.method_67(BotState.Repair);
 			return;
@@ -1189,17 +1204,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		if (!this.method_78(out num))
 		{
 			this.Clear();
-			this.method_67(this.Behavior.vmethod_18());
+			this.method_67(this.Behavior.nmrrblkfndb());
 			return;
 		}
-		Gate gate = this.Behavior.vmethod_25(num);
+		Gate gate = this.Behavior.vmethod_24(num);
 		if (gate != null)
 		{
 			this.method_37(gate.Position, gate, 15, false);
 			return;
 		}
-		int num2 = this.int_3;
-		this.int_3 = num2 + 1;
+		int num2 = this.int_2;
+		this.int_2 = num2 + 1;
 		if (num2 > 400)
 		{
 			this.method_65((GClass824.GEnum10)2);
@@ -1222,14 +1237,14 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.nullable_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_55);
+			this.method_94(Class10.propertyChangedEventArgs_57);
 		}
 	}
 
 	private bool method_33(GEnum4 genum4_0)
 	{
 		MenuItem menuItem;
-		return this.Hero.MenuItems.TryGetValue(genum4_0.jNambvWvYx(), out menuItem) && menuItem.Selected;
+		return this.Hero.MenuItems.TryGetValue(genum4_0.smethod_0(), out menuItem) && menuItem.Selected;
 	}
 
 	private bool ignoreShields
@@ -1244,12 +1259,12 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (this.StateIters == 0)
 		{
-			this.int_5 = 0;
+			this.int_4 = 0;
 			this.nullable_1 = null;
 			this.bool_6 = false;
 			this.bool_7 = false;
 		}
-		if (!this.Behavior.vmethod_27())
+		if (!this.Behavior.vmethod_26())
 		{
 			this.method_68();
 			return;
@@ -1259,16 +1274,16 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			this.Game.Connection.method_14();
 			return;
 		}
-		if (this.int_5 > 6)
+		if (this.int_4 > 6)
 		{
 			this.method_68();
 			return;
 		}
 		bool bool_ = this.MapProfile.FleeFormation == GEnum4.Wheel || this.MapProfile.FleeFormation == GEnum4.Moth;
 		MenuItem menuItem;
-		if (this.ignoreShields && this.Hero.MenuItems.TryGetValue(GEnum4.Default.jNambvWvYx(), out menuItem) && menuItem.Activatable && !menuItem.Selected && this.Hero.ItemCooldown.method_0(CooldownType.DroneFormation) && this.Cooldowns.method_2(BotAction.SwitchDroneFormation, 1000.0))
+		if (this.ignoreShields && this.Hero.MenuItems.TryGetValue(GEnum4.Default.smethod_0(), out menuItem) && menuItem.Activatable && !menuItem.Selected && this.Hero.ItemCooldown.method_0(CooldownType.DroneFormation) && this.Cooldowns.method_2(BotAction.SwitchDroneFormation, 1000.0))
 		{
-			this.Server.method_15(GEnum4.Default.jNambvWvYx(), true);
+			this.Server.method_14(GEnum4.Default.smethod_0(), true);
 		}
 		bool flag = this.Game.Hero.LastConfigSwitched.Cooldown(1000);
 		bool flag2 = this.Game.Hero.ShieldPercentage >= 90f && flag;
@@ -1288,7 +1303,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		this.CollectibleTarget = null;
 		if (!this.Behavior.vmethod_4(true, false))
 		{
-			NpcShip npcShip = this.Map.ekkOzLkslS<NpcShip>(this.HeroPosition, null, null, 0);
+			NpcShip npcShip = this.Map.method_5<NpcShip>(this.HeroPosition, null, null, 0);
 			if (!this.Map.IsGG || (npcShip != null && Vector2.Distance(npcShip.Position, this.HeroPosition) < 900f))
 			{
 				this.method_12(false, bool_);
@@ -1296,7 +1311,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			if (this.Map.IsGG || !this.method_13(false, false))
 			{
 				Vector2? vector = this.nullable_1;
-				this.nullable_1 = ((vector != null) ? vector : this.Behavior.vmethod_21(false));
+				this.nullable_1 = ((vector != null) ? vector : this.Behavior.vmethod_20(false));
 				if (this.nullable_1 != null && this.method_4(this.nullable_1.Value, 50, 300, false, 640, 360, 0, 0, 0, false, 0, new Action(this.method_88)))
 				{
 					this.nullable_1 = null;
@@ -1305,7 +1320,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		if ((this.bool_6 ^ this.bool_7) && this.method_11(this.bool_6 ? 2 : 1))
 		{
-			this.int_5++;
+			this.int_4++;
 		}
 	}
 
@@ -1331,17 +1346,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			if (this.StateIters == 1)
 			{
 				this.Server.method_5(this.HeroPosition.X, this.HeroPosition.Y, false);
-				this.Server.method_17();
+				this.Server.method_16();
 				return;
 			}
 			if (this.StateIters > num / 50)
 			{
 				this.method_67(BotState.Default);
-				int num2 = this.int_6 + 1;
-				this.int_6 = num2;
+				int num2 = this.int_5 + 1;
+				this.int_5 = num2;
 				if (num2 > 5)
 				{
-					this.int_6 = 0;
+					this.int_5 = 0;
 					this.Game.Connection.method_14();
 				}
 			}
@@ -1363,7 +1378,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			}
 			this.bool_8 = false;
 			this.vector2_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_45);
+			this.method_94(Class10.propertyChangedEventArgs_47);
 		}
 	}
 
@@ -1394,7 +1409,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		bool flag = this.RoamTarget == this.HeroPosition || this.RoamTarget == Vector2.Zero;
 		Vector2? vector;
-		if (!this.Behavior.vmethod_24(out vector))
+		if (!this.Behavior.vmethod_23(out vector))
 		{
 			Collectible collectible = this.method_79(this.HeroPosition);
 			if (collectible != null)
@@ -1404,7 +1419,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			}
 			else if (flag)
 			{
-				this.RoamTarget = this.Game.Security.method_4(this.Game.Map, this.Behavior.vmethod_17());
+				this.RoamTarget = this.Game.Security.method_5(this.Game.Map, this.Behavior.vmethod_17());
 			}
 		}
 		else
@@ -1433,7 +1448,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.nullable_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_58);
+			this.method_94(Class10.propertyChangedEventArgs_60);
 		}
 	}
 
@@ -1450,13 +1465,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.pathSequence_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_13);
+			this.method_94(Class10.propertyChangedEventArgs_14);
 		}
 	}
 
-	public bool method_37(Vector2 vector2_2, Gate gate_1 = null, int int_12 = 15, bool bool_13 = false)
+	public bool method_37(Vector2 vector2_2, Gate gate_1 = null, int int_11 = 15, bool bool_13 = false)
 	{
-		GClass822.<>c__DisplayClass170_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass170_0();
+		GClass822.<>c__DisplayClass173_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass173_0();
 		CS$<>8__locals1.gclass822_0 = this;
 		CS$<>8__locals1.vector2_0 = vector2_2;
 		if (gate_1 != null)
@@ -1479,7 +1494,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			this.TravelTarget = new Vector2?(CS$<>8__locals1.vector2_0);
 			this.bool_9 = bool_13;
 			this.gate_0 = gate_1;
-			this.int_7 = int_12;
+			this.int_6 = int_11;
 			this.Map.Grid.method_15(this.pathSequence_0);
 			this.method_67(BotState.Travel);
 		}
@@ -1490,7 +1505,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (this.StateIters <= 1)
 		{
-			this.int_4 = 0;
+			this.int_3 = 0;
 		}
 		if (this.LastStates.method_2() != BotState.Logout && this.method_69())
 		{
@@ -1501,7 +1516,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			if (this.TravelTarget != null)
 			{
 				Vector2 value = this.TravelTarget.Value;
-				if (Vector2.Distance(value, this.HeroPosition) > (float)this.int_7)
+				if (Vector2.Distance(value, this.HeroPosition) > (float)this.int_6)
 				{
 					PathSequence pathSequence = this.pathSequence_0;
 					int? num;
@@ -1517,7 +1532,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					int? num2 = num;
 					if (num2.GetValueOrDefault() != 0)
 					{
-						if (this.method_4(value, this.int_7, 300, false, 640, 360, 0, 0, 0, false, 0, new Action(this.method_90)))
+						if (this.method_4(value, this.int_6, 300, false, 640, 360, 0, 0, 0, false, 0, new Action(this.method_90)))
 						{
 							this.TravelTarget = null;
 							goto IL_139;
@@ -1563,6 +1578,25 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		this.method_68();
 	}
 
+	public UsageCounter<string> BoxTracker
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.usageCounter_1;
+		}
+		[CompilerGenerated]
+		private set
+		{
+			if (object.Equals(this.usageCounter_1, value))
+			{
+				return;
+			}
+			this.usageCounter_1 = value;
+			this.method_94(Class10.propertyChangedEventArgs_7);
+		}
+	}
+
 	public void method_39()
 	{
 		if (this.IsCollecting && this.StateIters < 200)
@@ -1580,7 +1614,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			this.method_68();
 			return;
 		}
-		if (!this.Game.Security.method_6(this.CollectibleTarget, false))
+		if (!this.Game.Security.method_7(this.CollectibleTarget, false))
 		{
 			this.CollectibleTarget = null;
 			return;
@@ -1605,7 +1639,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				this.method_68();
 				return;
 			}
-			if (this.Behavior.vmethod_27())
+			if (this.Behavior.vmethod_26())
 			{
 				this.method_67(BotState.Repair);
 				return;
@@ -1634,7 +1668,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public void method_42()
 	{
-		GClass822.<>c__DisplayClass178_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass178_0();
+		GClass822.<>c__DisplayClass185_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass185_0();
 		CS$<>8__locals1.gclass822_0 = this;
 		if (!this.MapProfile.Hunter)
 		{
@@ -1737,14 +1771,14 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			foreach (ResourceType resourceType in GClass822.list_3)
 			{
-				double num = this.Hero.method_24(resourceType);
+				double num = this.Hero.method_23(resourceType);
 				int num2 = (resourceType == ResourceType.PALLADIUM) ? 15 : 1;
 				if (num >= (double)num2)
 				{
 					this.Cooldowns.method_2(BotAction.TradeOre, 500.0);
 					this.Server.method_0(value.Id);
 					this.Server.method_1();
-					this.Server.method_21(resourceType, num);
+					this.Server.method_20(resourceType, num);
 					return;
 				}
 			}
@@ -1780,7 +1814,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.vector2_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_23);
+			this.method_94(Class10.propertyChangedEventArgs_25);
 		}
 	}
 
@@ -1812,7 +1846,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.gclass852_0 = value;
-			this.method_94(Class10.propertyChangedEventArgs_37);
+			this.method_94(Class10.propertyChangedEventArgs_39);
 			this.method_94(Class10.Controller);
 		}
 	}
@@ -1832,7 +1866,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.task_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_36);
+			this.method_94(Class10.propertyChangedEventArgs_38);
 		}
 	}
 
@@ -1964,11 +1998,11 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	{
 		if (gclass195_0.int_0 == this.Hero.Id)
 		{
-			GClass822.<>c__DisplayClass197_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass197_0();
+			GClass822.<>c__DisplayClass204_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass204_0();
 			CS$<>8__locals1.string_0 = gclass195_0.FromId.ToString();
 			if (this.MainController.Bots.Any(new Func<GClass852, bool>(CS$<>8__locals1.method_0)))
 			{
-				this.Server.method_22(gclass195_0.FromId);
+				this.Server.method_21(gclass195_0.FromId);
 			}
 		}
 	}
@@ -2008,7 +2042,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				{
 					ResourceType resourceType = (ResourceType)num2;
 					this.method_93(string.Format("Attempting to sell {0} of {1}", num3, num2));
-					this.Server.method_21(resourceType, num3);
+					this.Server.method_20(resourceType, num3);
 					return;
 				}
 				if (array.Length == 2 && array[1] == "help")
@@ -2024,15 +2058,15 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					GInterface5 proxySocket = this.Game.Connection.ProxySocket;
 					for (int i = 1; i < 100; i++)
 					{
-						int num4 = i % 30 * 500;
-						int int_ = i / 30 * 1500;
+						int int_ = i % 30 * 500;
+						int int_2 = i / 30 * 1500;
 						if (proxySocket != null)
 						{
-							proxySocket.SendMessage(new GClass190(15151515 + i, 0, i, num4, int_, false, false, null));
+							proxySocket.SendMessage(new GClass190(15151515 + i, 0, i, int_, int_2, false, false, null));
 						}
 						if (proxySocket != null)
 						{
-							proxySocket.SendMessage(new GClass265(15161615 + i, "ship_goliath", 0, "", string.Format("{0}", i), num4, int_, 0, 0, 0, false, null, 0, false, true, false, 0, 0, "", null, null));
+							proxySocket.SendMessage(new GClass265(15161615 + i, "ship_goliath", 0, "", string.Format("{0}", i), int_, int_2, 0, 0, 0, false, null, 0, false, true, false, 0, 0, "", null, null));
 						}
 					}
 					return;
@@ -2042,10 +2076,10 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					this.method_93(this.Game.Hero.Position.ToString());
 					return;
 				}
-				int num5;
-				if (array.Length == 3 && array[1] == "close" && int.TryParse(array[2], out num5))
+				int num4;
+				if (array.Length == 3 && array[1] == "close" && int.TryParse(array[2], out num4))
 				{
-					this.Game.Connection.SendMessage(new GClass146(num5 > 0));
+					this.Game.Connection.SendMessage(new GClass146(num4 > 0));
 					return;
 				}
 				if (array.Length == 4 && array[1] == "box")
@@ -2098,13 +2132,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 					}
 					if (array.Length == 3 && array[1] == "distance" && array[2] == "gate")
 					{
-						Gate gate = this.Map.ekkOzLkslS<Gate>(this.Hero.Position, null, null, 0);
+						Gate gate = this.Map.method_5<Gate>(this.Hero.Position, null, null, 0);
 						if (gate == null)
 						{
 							return;
 						}
-						float num6 = Vector2.Distance(this.Hero.Position, gate.Position);
-						this.method_93(string.Format("Gate #{0} dist={1:0.00} active={2}", gate.Id, num6, gate.Activatable));
+						float num5 = Vector2.Distance(this.Hero.Position, gate.Position);
+						this.method_93(string.Format("Gate #{0} dist={1:0.00} active={2}", gate.Id, num5, gate.Activatable));
 					}
 				}
 			}
@@ -2133,7 +2167,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private void method_49(Map map_0, Ship ship_1, GClass267 gclass267_0)
 	{
-		GClass822.<>c__DisplayClass200_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass200_0();
+		GClass822.<>c__DisplayClass207_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass207_0();
 		CS$<>8__locals1.gclass822_0 = this;
 		CS$<>8__locals1.ship_0 = ship_1;
 		if (CS$<>8__locals1.ship_0.IsNpc)
@@ -2149,12 +2183,12 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		{
 			return;
 		}
-		CS$<>8__locals1.collectible_0 = this.Map.ekkOzLkslS<Collectible>(CS$<>8__locals1.nullable_0.Value, new Func<Collectible, bool>(CS$<>8__locals1.method_0), null, 0);
+		CS$<>8__locals1.collectible_0 = this.Map.method_5<Collectible>(CS$<>8__locals1.nullable_0.Value, new Func<Collectible, bool>(CS$<>8__locals1.method_0), null, 0);
 		if (CS$<>8__locals1.collectible_0 == null)
 		{
 			if (CS$<>8__locals1.ship_0 is Pet)
 			{
-				Collectible collectible = this.Map.ekkOzLkslS<Collectible>(CS$<>8__locals1.nullable_0.Value, null, null, 0);
+				Collectible collectible = this.Map.method_5<Collectible>(CS$<>8__locals1.nullable_0.Value, null, null, 0);
 				if (collectible != null && Vector2.Distance(collectible.Position, CS$<>8__locals1.nullable_0.Value) < 75f)
 				{
 					CS$<>8__locals1.collectible_0 = collectible;
@@ -2191,7 +2225,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private void method_51(Map map_0, Ship ship_1)
 	{
-		GClass822.<>c__DisplayClass202_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass202_0();
+		GClass822.<>c__DisplayClass209_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass209_0();
 		CS$<>8__locals1.gclass822_0 = this;
 		CS$<>8__locals1.ship_0 = ship_1;
 		if (CS$<>8__locals1.ship_0.method_7(this.Hero))
@@ -2213,13 +2247,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 	}
 
-	public bool method_52(int int_12)
+	public bool method_52(int int_11)
 	{
 		CachedDictionary<int, bool> obj = this.cachedDictionary_0;
 		bool orDefault;
 		lock (obj)
 		{
-			orDefault = this.cachedDictionary_0.GetOrDefault(int_12);
+			orDefault = this.cachedDictionary_0.GetOrDefault(int_11);
 		}
 		return orDefault;
 	}
@@ -2236,7 +2270,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 	}
 
-	private void method_54(Map map_0, Ship ship_1, Ship ship_2, int int_12, uint uint_0)
+	private void method_54(Map map_0, Ship ship_1, Ship ship_2, int int_11, uint uint_0)
 	{
 		if (ship_1 != null && ship_2 != null)
 		{
@@ -2257,7 +2291,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				}
 				if (ship_1.IsNpc)
 				{
-					this.int_8 += int_12;
+					this.int_7 += int_11;
 				}
 				object obj = this.object_0;
 				lock (obj)
@@ -2309,11 +2343,11 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		DateTime now = DateTime.Now;
 		if (!this.dateTimeOffset_4.Cooldown(60000))
 		{
-			this.int_9++;
+			this.int_8++;
 		}
 		else
 		{
-			this.int_9 = 0;
+			this.int_8 = 0;
 		}
 		this.dateTimeOffset_4 = now;
 		if (errorReason_1 == ErrorReason.LoggedOut)
@@ -2328,7 +2362,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		this.LastDisconnectReason = errorReason_1;
 		this.Log.Warn<ErrorReason>("Disconnected from game server, {errorReason}", errorReason_1);
 		this.dateTime_2 = now;
-		if (this.int_9 > 4)
+		if (this.int_8 > 4)
 		{
 			this.dateTime_2 = now.AddMinutes(5.0);
 			this.dateTimeOffset_4 = this.dateTime_2;
@@ -2358,7 +2392,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private void method_59(GameManager gameManager_1, Hero hero_0, GClass217 gclass217_0, bool bool_13)
 	{
-		GClass822.<>c__DisplayClass217_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass217_0();
+		GClass822.<>c__DisplayClass224_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass224_0();
 		CS$<>8__locals1.gameManager_0 = gameManager_1;
 		CS$<>8__locals1.gclass822_0 = this;
 		CS$<>8__locals1.bool_0 = bool_13;
@@ -2414,11 +2448,11 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			}
 			this.gameManager_0 = value;
 			this.method_94(Class10.Hero);
-			this.method_94(Class10.propertyChangedEventArgs_24);
-			this.method_94(Class10.propertyChangedEventArgs_51);
+			this.method_94(Class10.propertyChangedEventArgs_26);
+			this.method_94(Class10.propertyChangedEventArgs_53);
 			this.method_94(Class10.Map);
-			this.method_94(Class10.propertyChangedEventArgs_17);
-			this.method_94(Class10.propertyChangedEventArgs_52);
+			this.method_94(Class10.propertyChangedEventArgs_18);
+			this.method_94(Class10.propertyChangedEventArgs_54);
 			this.method_94(Class10.Game);
 		}
 	}
@@ -2513,7 +2547,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.botState_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_44);
+			this.method_94(Class10.propertyChangedEventArgs_46);
 		}
 	}
 
@@ -2532,7 +2566,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.maxStack_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_34);
+			this.method_94(Class10.propertyChangedEventArgs_36);
 		}
 	}
 
@@ -2551,7 +2585,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.cooldownTracker_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_12);
+			this.method_94(Class10.propertyChangedEventArgs_13);
 		}
 	}
 
@@ -2576,7 +2610,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_10 = value;
-			this.method_94(Class10.propertyChangedEventArgs_53);
+			this.method_94(Class10.propertyChangedEventArgs_55);
 		}
 	}
 
@@ -2595,7 +2629,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.bool_11 = value;
-			this.method_94(Class10.propertyChangedEventArgs_20);
+			this.method_94(Class10.propertyChangedEventArgs_22);
 		}
 	}
 
@@ -2676,9 +2710,11 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public GClass822(IDopeServiceProxy idopeServiceProxy_0, AccountSettings accountSettings_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.concurrentDictionary_0 = new ConcurrentDictionary<string, object>();
 		this.maxStack_0 = new MaxStack<int>(7);
+		this.usageCounter_0 = new UsageCounter<int>();
+		this.usageCounter_1 = new UsageCounter<string>();
 		this.cooldownTracker_0 = new CooldownTracker<int>();
 		this.cachedDictionary_0 = new CachedDictionary<int, bool>(3600000);
 		this.dateTime_2 = DateTime.Now;
@@ -2715,9 +2751,9 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		this.method_64();
 	}
 
-	public sPAhHRxP3xLYyHVjNy1 method_62<sPAhHRxP3xLYyHVjNy1>() where sPAhHRxP3xLYyHVjNy1 : GClass846
+	public UXhXMFqbN9B1XAZ072v method_62<UXhXMFqbN9B1XAZ072v>() where UXhXMFqbN9B1XAZ072v : GClass846
 	{
-		return this.method_61().First(new Func<GInterface9, bool>(GClass822.<>c__288<sPAhHRxP3xLYyHVjNy1>.<>9.method_0)) as sPAhHRxP3xLYyHVjNy1;
+		return this.method_61().First(new Func<GInterface9, bool>(GClass822.<>c__295<UXhXMFqbN9B1XAZ072v>.<>9.method_0)) as UXhXMFqbN9B1XAZ072v;
 	}
 
 	public void method_63()
@@ -2737,7 +2773,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				this.Log.Info("Logging in with proxy {proxy}", (proxySettings != null) ? proxySettings.ToString() : null);
 				try
 				{
-					this.Game.method_3(account.Username, account.Password, account.Server, proxySettings);
+					this.Game.method_4(account.Username, account.Password, account.Server, proxySettings);
 				}
 				catch (Exception ex)
 				{
@@ -2755,7 +2791,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		}
 		if (this.Game.Web.IsLoggedIn && this.Game.LastDailyLogin.Cooldown(14400000))
 		{
-			this.Game.method_2();
+			this.Game.method_3();
 		}
 	}
 
@@ -2805,7 +2841,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		if (!this.Game.Web.IsLoggedIn)
 		{
 			this.Game.Web.LoginBySid(game.Settings.FlashSettings.sessionID, this.GameServer, true);
-			this.Game.method_1();
+			this.Game.method_2();
 		}
 		object obj2 = this.object_0;
 		lock (obj2)
@@ -2893,12 +2929,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		this.LastStates.Clear();
 		this.IsCollecting = false;
 		this.IsAttacking = false;
+		this.int_2 = 0;
 		this.int_3 = 0;
-		this.int_4 = 0;
-		this.int_6 = 0;
+		this.int_5 = 0;
 		this.Game.Security.HashBlockList.Cooldowns.Clear();
-		this.int_8 = 0;
+		this.int_7 = 0;
 		this.dateTimeOffset_0 = DateTimeOffset.MinValue;
+		this.BoxTracker.Clear();
 	}
 
 	public void method_66()
@@ -2984,17 +3021,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		[CompilerGenerated]
 		get
 		{
-			return this.int_10;
+			return this.int_9;
 		}
 		[CompilerGenerated]
 		set
 		{
-			if (this.int_10 == value)
+			if (this.int_9 == value)
 			{
 				return;
 			}
-			this.int_10 = value;
-			this.method_94(Class10.propertyChangedEventArgs_54);
+			this.int_9 = value;
+			this.method_94(Class10.propertyChangedEventArgs_56);
 		}
 	}
 
@@ -3036,7 +3073,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public IEnumerable<string> method_70()
 	{
-		GClass822.<GetStatusText>d__305 <GetStatusText>d__ = new GClass822.<GetStatusText>d__305(-2);
+		GClass822.<GetStatusText>d__312 <GetStatusText>d__ = new GClass822.<GetStatusText>d__312(-2);
 		<GetStatusText>d__.<>4__this = this;
 		return <GetStatusText>d__;
 	}
@@ -3072,7 +3109,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.cooldownTracker_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_40);
+			this.method_94(Class10.propertyChangedEventArgs_42);
 		}
 	}
 
@@ -3091,7 +3128,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.string_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_47);
+			this.method_94(Class10.propertyChangedEventArgs_49);
 		}
 	}
 
@@ -3110,7 +3147,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.string_2 = value;
-			this.method_94(Class10.propertyChangedEventArgs_49);
+			this.method_94(Class10.propertyChangedEventArgs_51);
 		}
 	}
 
@@ -3129,7 +3166,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.string_3 = value;
-			this.method_94(Class10.propertyChangedEventArgs_48);
+			this.method_94(Class10.propertyChangedEventArgs_50);
 		}
 	}
 
@@ -3163,14 +3200,14 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		return genum;
 	}
 
-	public NpcShip method_73(int int_12 = 0)
+	public NpcShip method_73(int int_11 = 0)
 	{
-		return this.Map.method_5(this.HeroPosition, new Func<NpcShip, bool>(this.Behavior.vmethod_8), new Func<NpcShip, int>(this.Behavior.vmethod_9), int_12);
+		return this.Map.method_6(this.HeroPosition, new Func<NpcShip, bool>(this.Behavior.vmethod_8), new Func<NpcShip, int>(this.Behavior.vmethod_9), int_11);
 	}
 
 	public bool method_74()
 	{
-		return this.Map.method_6<NpcShip>(this.HeroPosition, new Func<NpcShip, bool>(this.Behavior.vmethod_10), new Func<NpcShip, int>(this.Behavior.vmethod_9), 0).Any(new Func<ValueTuple<NpcShip, float, int>, bool>(GClass822.<>c.<>c_0.method_5));
+		return this.Map.method_7<NpcShip>(this.HeroPosition, new Func<NpcShip, bool>(this.Behavior.vmethod_10), new Func<NpcShip, int>(this.Behavior.vmethod_9), 0).Any(new Func<ValueTuple<NpcShip, float, int>, bool>(GClass822.<>c.<>c_0.method_5));
 	}
 
 	public IEnumerable<NpcShip> method_75()
@@ -3190,7 +3227,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public bool method_77()
 	{
-		GClass822.<>c__DisplayClass330_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass330_0();
+		GClass822.<>c__DisplayClass337_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass337_0();
 		CS$<>8__locals1.gclass822_0 = this;
 		if (!this.MapProfile.Collector)
 		{
@@ -3209,21 +3246,21 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		return this.CollectibleTarget != null;
 	}
 
-	public bool method_78(out int int_12)
+	public bool method_78(out int int_11)
 	{
-		int_12 = 0;
-		return this.Behavior.vmethod_15() && this.Module.TrySwitchMap(out int_12);
+		int_11 = 0;
+		return this.Behavior.vmethod_15() && this.Module.TrySwitchMap(out int_11);
 	}
 
 	public ConcurrentDictionary<string, Collectible> DormantTargets
 	{
 		get
 		{
-			if (this.int_11 != this.Map.MapId)
+			if (this.int_10 != this.Map.MapId)
 			{
 				this.concurrentDictionary_1.Clear();
 			}
-			this.int_11 = this.Map.MapId;
+			this.int_10 = this.Map.MapId;
 			return this.concurrentDictionary_1;
 		}
 		set
@@ -3233,13 +3270,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 				return;
 			}
 			this.concurrentDictionary_1 = value;
-			this.method_94(Class10.propertyChangedEventArgs_17);
+			this.method_94(Class10.propertyChangedEventArgs_18);
 		}
 	}
 
 	public Collectible method_79(Vector2 vector2_2)
 	{
-		GClass822.<>c__DisplayClass337_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass337_0();
+		GClass822.<>c__DisplayClass344_0 CS$<>8__locals1 = new GClass822.<>c__DisplayClass344_0();
 		CS$<>8__locals1.vector2_0 = vector2_2;
 		if (!this.DormantTargets.Any<KeyValuePair<string, Collectible>>())
 		{
@@ -3261,9 +3298,9 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 		return null;
 	}
 
-	public Gate method_80(int int_12)
+	public Gate method_80(int int_11)
 	{
-		return this.Behavior.vmethod_25(int_12);
+		return this.Behavior.vmethod_24(int_11);
 	}
 
 	public bool method_81(Ship ship_1)
@@ -3297,7 +3334,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass822()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass822.resourceType_0 = new ResourceType[]
 		{
 			ResourceType.PROMETID,
@@ -3353,7 +3390,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 			{
 				num++;
 				bool flag;
-				if (!this.Map.method_7(keyValuePair.Value, out flag))
+				if (!this.Map.method_8(keyValuePair.Value, out flag))
 				{
 					return false;
 				}
@@ -3371,7 +3408,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	[CompilerGenerated]
 	private void method_88()
 	{
-		this.nullable_1 = new Vector2?(this.Game.Security.method_4(this.Map, this.Behavior.vmethod_17()));
+		this.nullable_1 = new Vector2?(this.Game.Security.method_5(this.Map, this.Behavior.vmethod_17()));
 	}
 
 	[CompilerGenerated]
@@ -3389,8 +3426,8 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	[CompilerGenerated]
 	private void method_91()
 	{
-		int num = this.int_4;
-		this.int_4 = num + 1;
+		int num = this.int_3;
+		this.int_3 = num + 1;
 		if (num > 500)
 		{
 			this.method_65((GClass824.GEnum10)1);
@@ -3428,8 +3465,6 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	[CompilerGenerated]
 	private Collectible collectible_0;
 
-	public int int_0;
-
 	public string string_0;
 
 	[CompilerGenerated]
@@ -3439,7 +3474,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	private bool bool_1;
 
 	[CompilerGenerated]
-	private int int_1;
+	private int int_0;
 
 	public readonly ConcurrentDictionary<string, object> concurrentDictionary_0;
 
@@ -3468,7 +3503,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	private GClass820 gclass820_0;
 
 	[CompilerGenerated]
-	private int int_2;
+	private int int_1;
 
 	[CompilerGenerated]
 	private DateTime dateTime_0;
@@ -3501,14 +3536,17 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private DateTimeOffset dateTimeOffset_1;
 
+	[CompilerGenerated]
+	private UsageCounter<int> usageCounter_0;
+
 	private DateTimeOffset dateTimeOffset_2;
 
 	[CompilerGenerated]
 	private Ship ship_0;
 
-	private int int_3;
+	private int int_2;
 
-	private int int_4;
+	private int int_3;
 
 	[CompilerGenerated]
 	private DateTime? nullable_0;
@@ -3517,13 +3555,13 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private bool bool_7;
 
-	private int int_5;
+	private int int_4;
 
 	private DateTimeOffset dateTimeOffset_3;
 
 	private Vector2? nullable_1;
 
-	private int int_6;
+	private int int_5;
 
 	private bool bool_8;
 
@@ -3538,7 +3576,10 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private PathSequence pathSequence_0;
 
-	private int int_7;
+	[CompilerGenerated]
+	private UsageCounter<string> usageCounter_1;
+
+	private int int_6;
 
 	public float float_0;
 
@@ -3557,7 +3598,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	private readonly CachedDictionary<int, bool> cachedDictionary_0;
 
-	public int int_8;
+	public int int_7;
 
 	public DateTime dateTime_2;
 
@@ -3565,7 +3606,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 
 	public DateTimeOffset dateTimeOffset_4;
 
-	public int int_9;
+	public int int_8;
 
 	[CompilerGenerated]
 	private GameManager gameManager_0;
@@ -3618,7 +3659,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	private GClass835 gclass835_1;
 
 	[CompilerGenerated]
-	private int int_10;
+	private int int_9;
 
 	[CompilerGenerated]
 	private CooldownTracker<int> cooldownTracker_2;
@@ -3632,7 +3673,7 @@ public class GClass822 : INotifyPropertyChanged, ILogManager, IPErkavaBotControl
 	[CompilerGenerated]
 	private string string_3;
 
-	private int int_11;
+	private int int_10;
 
 	private ConcurrentDictionary<string, Collectible> concurrentDictionary_1;
 }

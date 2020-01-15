@@ -43,7 +43,7 @@ public class GClass855
 
 	public GClass855(int int_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.method_1(int_1);
 	}

@@ -22,7 +22,7 @@ public class GClass650 : GInterface0
 
 	public GClass650(double double_1 = 0.0, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_0 = double_1;
 		this.bool_0 = bool_2;

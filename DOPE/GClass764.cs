@@ -22,7 +22,7 @@ public class GClass764 : GInterface0
 
 	public GClass764(GClass761 gclass761_1 = null, Vector<GClass135> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass761_1 == null)
 		{

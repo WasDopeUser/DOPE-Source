@@ -22,7 +22,7 @@ public class GClass443 : GInterface0
 
 	public GClass443(int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_2 = int_3;
 		this.int_0 = int_4;

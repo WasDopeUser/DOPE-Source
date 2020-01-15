@@ -22,7 +22,7 @@ public class GClass293 : GInterface0
 
 	public GClass293(GClass402 gclass402_1 = null, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass402_1 == null)
 		{

@@ -22,7 +22,7 @@ public class GClass256 : GInterface0
 
 	public GClass256(int int_9 = 0, int int_10 = 0, double double_1 = 0.0, double double_2 = 0.0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0, string string_0 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		base..ctor();
 		this.int_8 = int_9;

@@ -22,7 +22,7 @@ public class GClass232 : GInterface0
 
 	public GClass232(GClass488 gclass488_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass488_1 == null)
 		{

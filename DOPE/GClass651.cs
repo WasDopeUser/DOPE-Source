@@ -22,7 +22,7 @@ public class GClass651 : GInterface0
 
 	public GClass651()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

@@ -22,7 +22,7 @@ public class GClass742 : GInterface0
 
 	public GClass742(GClass554 gclass554_1 = null, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass554_1 == null)
 		{

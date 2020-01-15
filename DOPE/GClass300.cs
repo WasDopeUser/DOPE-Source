@@ -22,7 +22,7 @@ public class GClass300 : GInterface0
 
 	public GClass300(GClass509 gclass509_0 = null, int int_1 = 0, string string_1 = "", Vector<GClass645> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass509_0 == null)

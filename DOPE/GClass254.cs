@@ -22,7 +22,7 @@ public class GClass254 : GInterface0
 
 	public GClass254(int int_1 = 0, ByteArray byteArray_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.byteArray_0 = new ByteArray();
 		this.int_0 = int_1;

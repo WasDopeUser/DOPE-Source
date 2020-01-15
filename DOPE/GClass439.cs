@@ -22,7 +22,7 @@ public class GClass439 : GInterface0
 
 	public GClass439(Vector<GClass584> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

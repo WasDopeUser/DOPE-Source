@@ -20,18 +20,18 @@ public class GClass757 : GInterface0
 		}
 	}
 
-	public GClass757(Vector<GClass757> vector_0 = null, string string_0 = "", GClass585 gclass585_0 = null)
+	public GClass757(Vector<GClass757> vector_1 = null, string string_0 = "", GClass585 gclass585_0 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		base..ctor();
-		if (vector_0 == null)
+		if (vector_1 == null)
 		{
-			this.MncLujQyKf = new Vector<GClass757>();
+			this.vector_0 = new Vector<GClass757>();
 		}
 		else
 		{
-			this.MncLujQyKf = vector_0;
+			this.vector_0 = vector_1;
 		}
 		this.Name = string_0;
 		if (gclass585_0 == null)
@@ -58,9 +58,9 @@ public class GClass757 : GInterface0
 		this.Value = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass585);
 		this.Value.imethod_1(binaryStream_0);
 		this.Name = binaryStream_0.smethod_2();
-		while (this.MncLujQyKf.Length > 0)
+		while (this.vector_0.Length > 0)
 		{
-			this.MncLujQyKf.method_1();
+			this.vector_0.method_1();
 		}
 		int num = 0;
 		uint num2 = (uint)binaryStream_0.smethod_0();
@@ -68,7 +68,7 @@ public class GClass757 : GInterface0
 		{
 			GClass757 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass757;
 			gclass.imethod_1(binaryStream_0);
-			this.MncLujQyKf.method_0(gclass);
+			this.vector_0.method_0(gclass);
 			num++;
 		}
 	}
@@ -84,8 +84,8 @@ public class GClass757 : GInterface0
 		binaryStream_0.smethod_7(-3303);
 		this.Value.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_3(this.Name);
-		binaryStream_0.smethod_4(this.MncLujQyKf.Length);
-		foreach (GClass757 gclass in this.MncLujQyKf)
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass757 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
@@ -95,5 +95,5 @@ public class GClass757 : GInterface0
 
 	public string Name;
 
-	public Vector<GClass757> MncLujQyKf;
+	public Vector<GClass757> vector_0;
 }

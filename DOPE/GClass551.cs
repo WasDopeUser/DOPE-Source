@@ -22,7 +22,7 @@ public class GClass551 : GInterface0
 
 	public GClass551(bool bool_1 = false, GClass365 gclass365_2 = null, GClass365 gclass365_3 = null, GClass512 gclass512_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_1;
 		if (gclass365_2 == null)

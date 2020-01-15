@@ -22,7 +22,7 @@ public class GClass591 : GClass585, GInterface0
 
 	public GClass591(string string_1 = "", string string_2 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor(string_1);
 		this.string_0 = string_2;

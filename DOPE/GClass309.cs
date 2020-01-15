@@ -22,7 +22,7 @@ public class GClass309 : GClass307, GInterface0
 
 	public GClass309(GClass139 gclass139_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass139_1 == null)
 		{

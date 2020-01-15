@@ -5,7 +5,7 @@ public class GClass800
 {
 	public GClass800(Vector<uint> vector_6, Vector<uint> vector_7)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.uint_0 = 16U;
 		base..ctor();
 		this.vector_1 = new Vector<uint>((int)this.uint_0);
@@ -156,7 +156,7 @@ public class GClass800
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass800()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass800.vector_0 = new Vector<uint>
 		{
 			35U,

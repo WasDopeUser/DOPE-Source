@@ -24,7 +24,7 @@ public class GClass849 : GClass846
 
 	public GClass849(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1, "GgSpinner");
 	}
 
@@ -348,7 +348,7 @@ public class GClass849 : GClass846
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass849()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass849.dictionary_0 = new Dictionary<int, string>
 		{
 			{

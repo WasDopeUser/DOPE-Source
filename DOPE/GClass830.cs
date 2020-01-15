@@ -9,7 +9,7 @@ public class GClass830 : GClass828
 {
 	public GClass830(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1, TargetMap.FL_ATLAS_A);
 	}
 

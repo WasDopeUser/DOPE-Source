@@ -3,7 +3,7 @@ using System.Reflection;
 
 internal class Class12
 {
-	internal static void rGhx78BB2w27q(int typemdt)
+	internal static void wmvas2eeeCgKh(int typemdt)
 	{
 		Type type = Class12.module_0.ResolveType(33554432 + typemdt);
 		foreach (FieldInfo fieldInfo in type.GetFields())
@@ -15,14 +15,14 @@ internal class Class12
 
 	public Class12()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class12()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		Class12.module_0 = typeof(Class12).Assembly.ManifestModule;
 	}
 

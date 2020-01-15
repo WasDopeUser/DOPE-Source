@@ -107,6 +107,10 @@ namespace DOPE.Common
 					LogLevel.Info
 				},
 				{
+					"Core-Behavior*",
+					LogLevel.Info
+				},
+				{
 					"Base-Net-ServerCommands*",
 					LogLevel.Trace
 				}

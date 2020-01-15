@@ -22,7 +22,7 @@ public class GClass514 : GInterface0
 
 	public GClass514(GClass498 gclass498_1 = null, GClass453 gclass453_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass498_1 == null)
 		{

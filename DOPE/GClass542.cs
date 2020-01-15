@@ -22,7 +22,7 @@ public class GClass542 : GInterface0
 
 	public GClass542(bool bool_4 = false, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_4;
 		this.bool_1 = bool_5;

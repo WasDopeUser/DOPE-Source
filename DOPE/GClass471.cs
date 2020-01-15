@@ -22,7 +22,7 @@ public class GClass471 : GInterface0
 
 	public GClass471(GClass630 gclass630_1 = null, string string_1 = "", GClass580 gclass580_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass630_1 == null)

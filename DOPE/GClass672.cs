@@ -22,7 +22,7 @@ public class GClass672 : GInterface0
 
 	public GClass672(uint uint_2 = 0U, uint uint_3 = 0U, int int_1 = 0, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.uint_1 = uint_2;

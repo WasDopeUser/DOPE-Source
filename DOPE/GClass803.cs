@@ -65,7 +65,7 @@ public class GClass803
 
 	public GClass803(Vector<uint> vector_2, Vector<uint> vector_3)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.vector_1 = new Vector<uint>(10);
 		if (vector_2 != null)
@@ -86,7 +86,7 @@ public class GClass803
 		}
 	}
 
-	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
+	public virtual void lAbrFunAvWi(byte[] byte_0, int int_0, int int_1)
 	{
 		for (int i = 0; i < int_1; i++)
 		{

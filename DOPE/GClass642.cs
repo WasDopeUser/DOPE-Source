@@ -22,7 +22,7 @@ public class GClass642 : GInterface0
 
 	public GClass642(int int_0 = 0, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.MapId = int_0;

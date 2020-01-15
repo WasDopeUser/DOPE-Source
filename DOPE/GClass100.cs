@@ -15,18 +15,18 @@ public class GClass100 : GInterface4
 			value.Game.Hero.Clear();
 			value.Game.Map.Clear();
 		}
-		value.Game.method_5(cmd);
+		value.Game.method_6(cmd);
 		value.SendMessage(new GClass158());
 		if (cmd.Reset)
 		{
-			value.SendMessage(new GClass172(value.Game.Security.method_0(), value.Game.Settings.Use3D ? 1U : 0U));
-			value.SendMessage(new GClass172(value.Game.Security.method_0(), 2U));
+			value.SendMessage(new GClass172(value.Game.Security.method_1(), value.Game.Settings.Use3D ? 1U : 0U));
+			value.SendMessage(new GClass172(value.Game.Security.method_1(), 2U));
 		}
 	}
 
 	public GClass100()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

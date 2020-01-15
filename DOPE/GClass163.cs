@@ -22,7 +22,7 @@ public class GClass163 : GInterface0
 
 	public GClass163(GClass258 gclass258_1 = null, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass258_1 == null)
 		{

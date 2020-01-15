@@ -22,7 +22,7 @@ public class GClass267 : GInterface0
 
 	public GClass267(int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_2 = int_4;
 		this.int_3 = int_5;

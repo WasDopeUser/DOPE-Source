@@ -22,7 +22,7 @@ public class GClass448 : GInterface0
 
 	public GClass448(GClass483 gclass483_1 = null, Vector<GClass634> vector_1 = null, GClass634 gclass634_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass483_1 == null)
 		{

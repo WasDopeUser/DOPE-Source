@@ -22,7 +22,7 @@ public class GClass492 : GClass488, GInterface0
 
 	public GClass492()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

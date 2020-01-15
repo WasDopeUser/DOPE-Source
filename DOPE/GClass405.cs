@@ -22,7 +22,7 @@ public class GClass405 : GClass402, GInterface0
 
 	public GClass405(int int_1 = 0, GClass363 gclass363_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		if (gclass363_1 == null)

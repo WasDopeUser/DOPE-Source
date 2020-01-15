@@ -42,11 +42,11 @@ public class GClass820 : INotifyPropertyChanged
 			}
 			this.gclass822_0 = value;
 			this.method_13(Class10.Controller);
-			this.method_13(Class10.propertyChangedEventArgs_14);
+			this.method_13(Class10.propertyChangedEventArgs_15);
 			this.method_13(Class10.propertyChangedEventArgs_5);
-			this.method_13(Class10.propertyChangedEventArgs_57);
-			this.method_13(Class10.propertyChangedEventArgs_35);
-			this.method_13(Class10.propertyChangedEventArgs_56);
+			this.method_13(Class10.propertyChangedEventArgs_59);
+			this.method_13(Class10.propertyChangedEventArgs_37);
+			this.method_13(Class10.propertyChangedEventArgs_58);
 			this.method_13(Class10.Context);
 		}
 	}
@@ -117,7 +117,7 @@ public class GClass820 : INotifyPropertyChanged
 				return;
 			}
 			this.string_0 = value;
-			this.method_13(Class10.propertyChangedEventArgs_39);
+			this.method_13(Class10.propertyChangedEventArgs_41);
 		}
 	}
 
@@ -200,7 +200,7 @@ public class GClass820 : INotifyPropertyChanged
 
 	public GClass820(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.dictionary_0 = new Dictionary<string, DateTimeOffset>();
 		this.random_0 = new Random();
 		this.list_0 = new List<GClass824>();
@@ -348,7 +348,7 @@ public class GClass820 : INotifyPropertyChanged
 		GClass824 gclass = null;
 		foreach (GClass824 gclass2 in this.list_0)
 		{
-			if (gclass835_0.vmethod_19(gclass2) && (gclass2.Priority > num || gclass == null))
+			if (gclass835_0.vmethod_18(gclass2) && (gclass2.Priority > num || gclass == null))
 			{
 				num = gclass2.Priority;
 				gclass = gclass2;
@@ -361,12 +361,12 @@ public class GClass820 : INotifyPropertyChanged
 	{
 		GClass824 gclass = this.method_8();
 		GClass835 behavior = gclass.GetBehavior();
-		while (!behavior.vmethod_19(gclass))
+		while (!behavior.vmethod_18(gclass))
 		{
 			gclass = this.method_9(behavior);
 			behavior = gclass.GetBehavior();
 		}
-		if (!this.Module.GetBehavior().vmethod_19(this.Module))
+		if (!this.Module.GetBehavior().vmethod_18(this.Module))
 		{
 			this.Module.ForceStop();
 		}
@@ -412,8 +412,8 @@ public class GClass820 : INotifyPropertyChanged
 		return module;
 	}
 
-	[DebuggerNonUserCode]
 	[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+	[DebuggerNonUserCode]
 	protected void method_13(PropertyChangedEventArgs propertyChangedEventArgs_0)
 	{
 		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

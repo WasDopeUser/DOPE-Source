@@ -22,7 +22,7 @@ public class GClass641 : GInterface0
 
 	public GClass641(Vector<GClass666> vector_1 = null, bool bool_1 = false, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

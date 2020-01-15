@@ -22,7 +22,7 @@ public class GClass633 : GInterface0
 
 	public GClass633(string string_0 = "", int int_1 = 0, int int_2 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Id = "";
 		base..ctor();
 		this.Id = string_0;

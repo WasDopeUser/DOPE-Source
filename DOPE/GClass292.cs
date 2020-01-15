@@ -22,7 +22,7 @@ public class GClass292 : GInterface0
 
 	public GClass292(Vector<GClass605> vector_3 = null, Vector<GClass605> vector_4 = null, Vector<GClass605> vector_5 = null, GClass605 gclass605_1 = null, GClass201 gclass201_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_3 == null)
 		{

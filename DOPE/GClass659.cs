@@ -20,11 +20,11 @@ public class GClass659 : GInterface0
 		}
 	}
 
-	public GClass659(int int_0 = 0)
+	public GClass659(int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.nnmIenwrct = int_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
@@ -39,8 +39,8 @@ public class GClass659 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.nnmIenwrct = binaryStream_0.smethod_0();
-		this.nnmIenwrct = (this.nnmIenwrct << 14 | U.smethod_0(this.nnmIenwrct, 18));
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -51,8 +51,8 @@ public class GClass659 : GInterface0
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.nnmIenwrct, 14) | this.nnmIenwrct << 18);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
 	}
 
-	public int nnmIenwrct;
+	public int int_0;
 }

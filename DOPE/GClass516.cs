@@ -20,15 +20,15 @@ public class GClass516 : GInterface0
 		}
 	}
 
-	public GClass516(bool bool_2 = false, int int_9 = 0, int int_10 = 0, int int_11 = 0, bool bool_3 = false, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0)
+	public GClass516(bool bool_1 = false, int int_9 = 0, int int_10 = 0, int int_11 = 0, bool bool_2 = false, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.bool_1 = bool_2;
+		this.bool_0 = bool_1;
 		this.int_5 = int_9;
 		this.int_6 = int_10;
 		this.int_3 = int_11;
-		this.bool_0 = bool_3;
+		this.nMutEyvCvI = bool_2;
 		this.int_1 = int_12;
 		this.int_0 = int_13;
 		this.int_7 = int_14;
@@ -51,7 +51,7 @@ public class GClass516 : GInterface0
 	{
 		this.int_0 = (int)binaryStream_0.smethod_1();
 		this.int_1 = (int)binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.nMutEyvCvI = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
 		this.int_2 = (int)binaryStream_0.smethod_1();
 		this.int_3 = (int)binaryStream_0.smethod_1();
@@ -60,7 +60,7 @@ public class GClass516 : GInterface0
 		this.int_5 = (int)binaryStream_0.smethod_1();
 		this.int_6 = (int)binaryStream_0.smethod_1();
 		this.int_7 = (int)binaryStream_0.smethod_1();
-		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.int_8 = (int)binaryStream_0.smethod_1();
 	}
 
@@ -74,7 +74,7 @@ public class GClass516 : GInterface0
 	{
 		binaryStream_0.smethod_7(this.int_0);
 		binaryStream_0.smethod_7(this.int_1);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.nMutEyvCvI);
 		binaryStream_0.smethod_7(8460);
 		binaryStream_0.smethod_7(this.int_2);
 		binaryStream_0.smethod_7(this.int_3);
@@ -83,7 +83,7 @@ public class GClass516 : GInterface0
 		binaryStream_0.smethod_7(this.int_5);
 		binaryStream_0.smethod_7(this.int_6);
 		binaryStream_0.smethod_7(this.int_7);
-		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_7(this.int_8);
 	}
 
@@ -91,7 +91,7 @@ public class GClass516 : GInterface0
 
 	public int int_1;
 
-	public bool bool_0;
+	public bool nMutEyvCvI;
 
 	public int int_2;
 
@@ -105,7 +105,7 @@ public class GClass516 : GInterface0
 
 	public int int_7;
 
-	public bool bool_1;
+	public bool bool_0;
 
 	public int int_8;
 }

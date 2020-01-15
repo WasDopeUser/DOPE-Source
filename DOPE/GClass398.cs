@@ -22,7 +22,7 @@ public class GClass398 : GClass396, GInterface0
 
 	public GClass398(GClass589 gclass589_2 = null, GClass589 gclass589_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass589_2 == null)
 		{

@@ -20,11 +20,11 @@ public class GClass468 : GInterface0
 		}
 	}
 
-	public GClass468(uint uint_1 = 0U)
+	public GClass468(uint uint_0 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.uint_0 = uint_1;
+		this.wgSirVurVo = uint_0;
 	}
 
 	public virtual int vmethod_0()
@@ -39,7 +39,7 @@ public class GClass468 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.wgSirVurVo = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -50,8 +50,8 @@ public class GClass468 : GInterface0
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_6(this.wgSirVurVo);
 	}
 
-	public uint uint_0;
+	public uint wgSirVurVo;
 }

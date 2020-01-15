@@ -22,7 +22,7 @@ public class GClass530 : GInterface0
 
 	public GClass530(int int_2 = 0, string string_1 = "", bool bool_1 = false, Vector<string> vector_1 = null, int int_3 = 0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.int_0 = int_2;
@@ -63,8 +63,8 @@ public class GClass530 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			string uQ82vWxZQTAEiugOken = binaryStream_0.smethod_2();
-			this.vector_0.method_0(uQ82vWxZQTAEiugOken);
+			string hLgS6JqKTiiSdPhAGUn = binaryStream_0.smethod_2();
+			this.vector_0.method_0(hLgS6JqKTiiSdPhAGUn);
 			num++;
 		}
 		binaryStream_0.smethod_1();

@@ -22,7 +22,7 @@ public class GClass415 : GInterface0
 
 	public GClass415(Vector<GClass375> vector_1 = null, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

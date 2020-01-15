@@ -20,18 +20,18 @@ public class GClass222 : GInterface0
 		}
 	}
 
-	public GClass222(uint uint_0 = 0U, int int_1 = 0, Vector<int> vector_1 = null)
+	public GClass222(uint uint_0 = 0U, int int_1 = 0, Vector<int> vector_0 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.State = uint_0;
 		this.int_0 = int_1;
-		if (vector_1 == null)
+		if (vector_0 == null)
 		{
-			this.vector_0 = new Vector<int>();
+			this.GpbcoInvRv = new Vector<int>();
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.GpbcoInvRv = vector_0;
 	}
 
 	public virtual int vmethod_0()
@@ -48,9 +48,9 @@ public class GClass222 : GInterface0
 	{
 		this.int_0 = (int)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
+		while (this.GpbcoInvRv.Length > 0)
 		{
-			this.vector_0.method_1();
+			this.GpbcoInvRv.method_1();
 		}
 		int num = 0;
 		uint num2 = (uint)binaryStream_0.smethod_0();
@@ -58,7 +58,7 @@ public class GClass222 : GInterface0
 		{
 			int num3 = binaryStream_0.smethod_0();
 			num3 = (num3 << 14 | U.smethod_0(num3, 18));
-			this.vector_0.method_0(num3);
+			this.GpbcoInvRv.method_0(num3);
 			num++;
 		}
 		this.State = (uint)binaryStream_0.smethod_1();
@@ -74,8 +74,8 @@ public class GClass222 : GInterface0
 	{
 		binaryStream_0.smethod_7(this.int_0);
 		binaryStream_0.smethod_7(-25729);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (int num in this.vector_0)
+		binaryStream_0.smethod_4(this.GpbcoInvRv.Length);
+		foreach (int num in this.GpbcoInvRv)
 		{
 			binaryStream_0.smethod_4(U.smethod_0(num, 14) | num << 18);
 		}
@@ -84,7 +84,7 @@ public class GClass222 : GInterface0
 
 	public int int_0;
 
-	public Vector<int> vector_0;
+	public Vector<int> GpbcoInvRv;
 
 	public uint State;
 }

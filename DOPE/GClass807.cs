@@ -2,23 +2,23 @@
 
 public static class GClass807
 {
-	public static P77I3hEU7kMSsbeGTK8 smethod_0<P77I3hEU7kMSsbeGTK8>(this Enum enum_0) where P77I3hEU7kMSsbeGTK8 : Attribute
+	public static V0TIQ3PI8Zsi6oCXr7Y smethod_0<V0TIQ3PI8Zsi6oCXr7Y>(this Enum enum_0) where V0TIQ3PI8Zsi6oCXr7Y : Attribute
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(P77I3hEU7kMSsbeGTK8), false);
+		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(V0TIQ3PI8Zsi6oCXr7Y), false);
 		if (customAttributes.Length == 0)
 		{
-			return default(P77I3hEU7kMSsbeGTK8);
+			return default(V0TIQ3PI8Zsi6oCXr7Y);
 		}
-		return (P77I3hEU7kMSsbeGTK8)((object)customAttributes[0]);
+		return (V0TIQ3PI8Zsi6oCXr7Y)((object)customAttributes[0]);
 	}
 
-	public static Eq7mZyEAC6WUrr6jCgD smethod_1<Eq7mZyEAC6WUrr6jCgD>(this Enum enum_0) where Eq7mZyEAC6WUrr6jCgD : Attribute
+	public static oFvlO4PRI4mEYYQ6IM4 smethod_1<oFvlO4PRI4mEYYQ6IM4>(this Enum enum_0) where oFvlO4PRI4mEYYQ6IM4 : Attribute
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(Eq7mZyEAC6WUrr6jCgD), false);
+		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(oFvlO4PRI4mEYYQ6IM4), false);
 		if (customAttributes.Length == 0)
 		{
-			return default(Eq7mZyEAC6WUrr6jCgD);
+			return default(oFvlO4PRI4mEYYQ6IM4);
 		}
-		return (Eq7mZyEAC6WUrr6jCgD)((object)customAttributes[0]);
+		return (oFvlO4PRI4mEYYQ6IM4)((object)customAttributes[0]);
 	}
 }

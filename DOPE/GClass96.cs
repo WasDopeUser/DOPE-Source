@@ -13,7 +13,7 @@ public class GClass96 : GInterface4
 
 	public void method_0(GClass188 gclass188_0)
 	{
-		this.Game.Hero.method_23("resource_labirynth-keys", (double)gclass188_0.int_0);
+		this.Game.Hero.method_22("resource_labirynth-keys", (double)gclass188_0.ltHouNfase);
 		this.Game.FrozenLabirynthOpening = DateTimeOffset.Now.AddSeconds(gclass188_0.gclass189_0.double_0);
 		if (gclass188_0.gclass189_0.double_1 > 1.0)
 		{
@@ -25,7 +25,7 @@ public class GClass96 : GInterface4
 
 	public GClass96()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

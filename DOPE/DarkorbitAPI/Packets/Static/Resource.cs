@@ -6,7 +6,7 @@ namespace DarkorbitAPI.Packets.Static
 	{
 		public Resource()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 
@@ -14,7 +14,7 @@ namespace DarkorbitAPI.Packets.Static
 		{
 			public Ore()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 		}

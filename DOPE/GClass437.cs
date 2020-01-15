@@ -22,7 +22,7 @@ public class GClass437 : GInterface0
 
 	public GClass437(int int_1 = 0, int int_2 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		this.MapId = int_2;

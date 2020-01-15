@@ -22,7 +22,7 @@ public class GClass747 : GInterface0
 
 	public GClass747(int int_1 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		if (vector_1 == null)

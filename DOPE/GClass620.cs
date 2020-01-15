@@ -22,7 +22,7 @@ public class GClass620 : GInterface0
 
 	public GClass620(GClass761 gclass761_1 = null, GClass318 gclass318_1 = null, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass761_1 == null)
 		{

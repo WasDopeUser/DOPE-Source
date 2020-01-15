@@ -22,7 +22,7 @@ public class GClass259 : GInterface0
 
 	public GClass259(bool bool_0 = false, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Enabled = bool_0;
 		this.int_0 = int_1;

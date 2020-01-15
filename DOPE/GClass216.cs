@@ -22,7 +22,7 @@ public class GClass216 : GInterface0
 
 	public GClass216(ByteArray byteArray_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.byteArray_0 = new ByteArray();
 		if (byteArray_1 != null)

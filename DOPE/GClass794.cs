@@ -67,7 +67,7 @@ public class GClass794 : GClass791
 
 	public GClass794()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

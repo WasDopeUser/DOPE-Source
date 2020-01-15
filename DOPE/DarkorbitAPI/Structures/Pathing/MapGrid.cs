@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
-using GsujcHxgAhWnFmvxchc;
 
 namespace DarkorbitAPI.Structures.Pathing
 {
@@ -87,7 +86,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapGrid(Map map_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this._lock = new object();
 			base..ctor();
 			this.Map = map_0;
@@ -201,7 +200,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				if (this.Collidables.Remove(icollidable_0))
 				{
 					Rectangle rectangle_ = icollidable_0.imethod_1();
-					this.method_6(rectangle_, new Action<int, int>(this.dGkcEokpe4));
+					this.method_6(rectangle_, new Action<int, int>(this.method_18));
 					return true;
 				}
 			}
@@ -221,7 +220,7 @@ namespace DarkorbitAPI.Structures.Pathing
 						this.method_10(icollidable_0);
 					}
 					Rectangle rectangle_ = icollidable_0.imethod_1();
-					this.method_6(rectangle_, new Action<int, int>(this.method_18));
+					this.method_6(rectangle_, new Action<int, int>(this.method_19));
 					this.Collidables.Add(icollidable_0);
 				}
 				return;
@@ -373,13 +372,13 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		private void dGkcEokpe4(int int_0, int int_1)
+		private void method_18(int int_0, int int_1)
 		{
 			this.Blocks[int_0, int_1] = (byte)Math.Max(0, (int)(this.Blocks[int_0, int_1] - 1));
 		}
 
 		[CompilerGenerated]
-		private void method_18(int int_0, int int_1)
+		private void method_19(int int_0, int int_1)
 		{
 			this.Blocks[int_0, int_1] = (byte)Math.Min(254, (int)(this.Blocks[int_0, int_1] + 1));
 		}

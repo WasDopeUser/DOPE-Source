@@ -54,7 +54,7 @@ namespace PErkava
 
 		static PErkava()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			PErkava.IsSupported = false;
 			PErkava.concurrentDictionary_0 = new ConcurrentDictionary<IntPtr, GClass862>();
 			PErkava.concurrentDictionary_1 = new ConcurrentDictionary<int, IPErkavaBotController>();

@@ -22,7 +22,7 @@ public class GClass678 : GInterface0
 
 	public GClass678(GClass318 gclass318_1 = null, uint uint_1 = 0U, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass318_1 == null)
 		{

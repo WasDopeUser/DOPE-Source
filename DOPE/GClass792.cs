@@ -25,7 +25,7 @@ public class GClass792 : GClass791
 	}
 
 	[CompilerGenerated]
-	private void veYzvjioJN(GClass799 gclass799_2)
+	private void method_3(GClass799 gclass799_2)
 	{
 		this.gclass799_1 = gclass799_2;
 	}
@@ -77,12 +77,12 @@ public class GClass792 : GClass791
 		ByteArray byteArray = new ByteArray(list_0[0]);
 		ByteArray byteArray2 = new ByteArray(list_0[1]);
 		this.method_1(new GClass799(new ByteArray(byteArray), new ByteArray(byteArray2)));
-		this.veYzvjioJN(new GClass799(byteArray, byteArray2));
+		this.method_3(new GClass799(byteArray, byteArray2));
 	}
 
 	public GClass792()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

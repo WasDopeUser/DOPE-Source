@@ -22,7 +22,7 @@ public class GClass612 : GInterface0
 
 	public GClass612(int int_2 = 0, Vector<int> vector_1 = null, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_1 = int_2;
 		if (vector_1 == null)

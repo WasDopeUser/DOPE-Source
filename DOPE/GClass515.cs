@@ -22,7 +22,7 @@ public class GClass515 : GInterface0
 
 	public GClass515(int int_1 = 0, GClass650 gclass650_0 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		if (gclass650_0 == null)

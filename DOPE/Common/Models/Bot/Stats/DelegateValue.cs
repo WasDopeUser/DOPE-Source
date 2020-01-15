@@ -22,8 +22,8 @@ namespace DOPE.Common.Models.Bot.Stats
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

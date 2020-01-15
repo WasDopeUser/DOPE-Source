@@ -22,7 +22,7 @@ public class GClass717 : GInterface0
 
 	public GClass717(int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0, Vector<GClass316> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_3 = int_4;
 		this.int_2 = int_5;

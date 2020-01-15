@@ -22,7 +22,7 @@ public class GClass252 : GInterface0
 
 	public GClass252(int int_1 = 0, GClass276 gclass276_0 = null, GClass277 gclass277_1 = null, GClass178 gclass178_1 = null, uint uint_2 = 0U, uint uint_3 = 0U, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		if (gclass276_0 == null)

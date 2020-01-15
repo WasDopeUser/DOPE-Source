@@ -14,7 +14,7 @@ public class GClass9 : GInterface4
 
 	public GClass9()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

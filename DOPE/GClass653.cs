@@ -22,7 +22,7 @@ public class GClass653 : GClass651, GInterface0
 
 	public GClass653(GClass201 gclass201_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass201_1 == null)
 		{

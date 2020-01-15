@@ -22,7 +22,7 @@ public class GClass706 : GInterface0
 
 	public GClass706(uint uint_1 = 0U, int int_2 = 0, int int_3 = 0, GClass201 gclass201_2 = null, GClass201 gclass201_3 = null, Vector<GClass501> vector_3 = null, Vector<GClass501> vector_4 = null, Vector<GClass377> vector_5 = null, GClass773 gclass773_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.int_0 = int_2;

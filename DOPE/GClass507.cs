@@ -22,7 +22,7 @@ public class GClass507 : GInterface0
 
 	public GClass507(uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}

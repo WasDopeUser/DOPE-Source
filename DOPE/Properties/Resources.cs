@@ -8,14 +8,14 @@ using System.Runtime.CompilerServices;
 
 namespace DOPE.Properties
 {
-	[DebuggerNonUserCode]
 	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
 	[CompilerGenerated]
+	[DebuggerNonUserCode]
 	internal class Resources
 	{
 		internal Resources()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 

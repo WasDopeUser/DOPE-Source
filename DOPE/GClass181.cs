@@ -22,7 +22,7 @@ public class GClass181 : GClass179, GInterface0
 
 	public GClass181(string string_1 = "", int int_2 = 0, int int_3 = 0, GClass261 gclass261_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(string_1, int_2, int_3);
 		if (gclass261_1 == null)
 		{

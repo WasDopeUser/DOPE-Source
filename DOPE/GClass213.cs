@@ -22,7 +22,7 @@ public class GClass213 : GInterface0
 
 	public GClass213(int int_1 = 0, int int_2 = 0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.FromId = int_1;
 		this.int_0 = int_2;

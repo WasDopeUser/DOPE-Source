@@ -26,13 +26,13 @@ public class GClass831 : GClass827
 				return;
 			}
 			this.genum5_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_21);
+			this.method_0(Class10.propertyChangedEventArgs_23);
 		}
 	}
 
 	public GClass831(GClass822 gclass822_1, TargetMap targetMap_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1, targetMap_1, "G", int.MinValue);
 		this.GalaxyGateType = MapUtils.smethod_8((int)targetMap_1);
 	}
@@ -59,7 +59,7 @@ public class GClass831 : GClass827
 			GClass844 gclass = behavior as GClass844;
 			if (gclass != null)
 			{
-				gclass.method_31(false);
+				gclass.method_35(false);
 			}
 		}
 	}
@@ -70,10 +70,10 @@ public class GClass831 : GClass827
 		if (ship_0.IsNpc)
 		{
 			GClass844 gclass = behavior as GClass844;
-			if (gclass != null && !gclass.method_30())
+			if (gclass != null && !gclass.method_34())
 			{
 				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass831.<>c.<>c_0.method_0)) == 1;
-				gclass.method_31(flag);
+				gclass.method_35(flag);
 				if (flag)
 				{
 					base.Log.Info("New wave -- {ship}", ship_0.Name);

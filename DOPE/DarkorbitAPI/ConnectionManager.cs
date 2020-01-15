@@ -231,7 +231,7 @@ namespace DarkorbitAPI
 
 		public ConnectionManager(GameManager gameManager_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.Port = 8080;
 			this.CommandQueue = new Queue<GInterface0>();
 			this._lastKeepAlive = DateTime.Now;
@@ -394,7 +394,7 @@ namespace DarkorbitAPI
 			string hash = "";
 			using (MD5 md = MD5.Create())
 			{
-				hash = new string(md.ComputeHash(byte_0).SelectMany(new Func<byte, IEnumerable<char>>(ConnectionManager.<>c.<>c_0.method_0)).ToArray<char>());
+				hash = new string(md.ComputeHash(byte_0).SelectMany(new Func<byte, IEnumerable<char>>(ConnectionManager.<>c.<>c_0.jSilxtnXpu)).ToArray<char>());
 			}
 			try
 			{
@@ -531,10 +531,10 @@ namespace DarkorbitAPI
 		internal void method_17()
 		{
 			this._lastKeepAlive = DateTime.Now;
-			int qpjc3jxD7xkPwuXmgfh = (int)(this._lastKeepAlive - this._lastSentPing).TotalMilliseconds;
+			int lOHS3sqoh2PvjZbtulZ = (int)(this._lastKeepAlive - this._lastSentPing).TotalMilliseconds;
 			if (this._keepAlive)
 			{
-				this.PingMeasurements.method_0(qpjc3jxD7xkPwuXmgfh);
+				this.PingMeasurements.method_0(lOHS3sqoh2PvjZbtulZ);
 			}
 			this._receivedPings++;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -555,7 +555,7 @@ namespace DarkorbitAPI
 			FlashSettings flashSettings = this.Game.Settings.FlashSettings;
 			DateTimeOffset licenseExpiration;
 			GClass783.GEnum9 licenseState;
-			if (!GClass783.ioefQoajwi(flashSettings.pid, flashSettings.userID, this.Game.Dope.Key, out licenseExpiration, out licenseState, "basic"))
+			if (!GClass783.smethod_0(flashSettings.pid, flashSettings.userID, this.Game.Dope.Key, out licenseExpiration, out licenseState, "basic"))
 			{
 				GClass93 socket = this.Socket;
 				if (socket != null)
@@ -572,7 +572,7 @@ namespace DarkorbitAPI
 		// Note: this type is marked as 'beforefieldinit'.
 		static ConnectionManager()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			ConnectionManager.Instance = new ThreadLocal<ConnectionManager>();
 		}
 

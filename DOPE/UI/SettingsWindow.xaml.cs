@@ -72,7 +72,7 @@ namespace DOPE.UI
 
 		public SettingsWindow(Controller controller_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.PropertyChanged = new PropertyChangedEventHandler(SettingsWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();

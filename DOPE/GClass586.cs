@@ -22,7 +22,7 @@ public class GClass586 : GClass585, GInterface0
 
 	public GClass586(string string_0 = "", string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Value = "";
 		base..ctor(string_0);
 		this.Value = string_1;

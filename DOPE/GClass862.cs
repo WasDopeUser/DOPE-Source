@@ -90,11 +90,11 @@ public class GClass862 : INotifyPropertyChanged
 		}
 	}
 
-	protected void method_3<r408Nf4KuLed8CmHCKw>(ref r408Nf4KuLed8CmHCKw gparam_0, r408Nf4KuLed8CmHCKw JUw2Et435Q90RemyhFf, string string_1 = null, [CallerMemberName] string name = null)
+	protected void method_3<FPRHpJfqtWiycaWbRWX>(ref FPRHpJfqtWiycaWbRWX gparam_0, FPRHpJfqtWiycaWbRWX k5E40ffaVwXh7rPRhaU, string string_1 = null, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<r408Nf4KuLed8CmHCKw>.Default.Equals(gparam_0, JUw2Et435Q90RemyhFf))
+		if (!EqualityComparer<FPRHpJfqtWiycaWbRWX>.Default.Equals(gparam_0, k5E40ffaVwXh7rPRhaU))
 		{
-			gparam_0 = JUw2Et435Q90RemyhFf;
+			gparam_0 = k5E40ffaVwXh7rPRhaU;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
 			{
@@ -453,7 +453,7 @@ public class GClass862 : INotifyPropertyChanged
 
 	public GClass862()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.random_0 = new Random();
 		base..ctor();
 	}
@@ -485,7 +485,7 @@ public class GClass862 : INotifyPropertyChanged
 		{
 			this.bool_2 = false;
 			string str = gclass147_0.string_0.Substring(5).Trim();
-			this.Game.method_7(new GClass269("69|" + str));
+			this.Game.method_9(new GClass269("69|" + str));
 			this.method_0().SendMessage(new GClass656());
 			return;
 		}
@@ -511,7 +511,7 @@ public class GClass862 : INotifyPropertyChanged
 	[CompilerGenerated]
 	private void method_24(GClass161 gclass161_0)
 	{
-		this.Game.Hero.eoFcuFbgDt(gclass161_0.int_2, gclass161_0.int_1, gclass161_0.int_3, gclass161_0.int_0, this.Game.Hero.Speed);
+		this.Game.Hero.method_4(gclass161_0.int_2, gclass161_0.int_1, gclass161_0.int_3, gclass161_0.int_0, this.Game.Hero.Speed);
 	}
 
 	[CompilerGenerated]

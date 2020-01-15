@@ -5,7 +5,7 @@ public class GClass801
 {
 	public GClass801(ByteArray byteArray_1, ByteArray byteArray_2)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.uint_1 = 15U;
 		base..ctor();
 		this.vector_0 = new Vector<int>(8);

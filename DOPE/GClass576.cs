@@ -22,7 +22,7 @@ public class GClass576 : GInterface0
 
 	public GClass576(GClass782 gclass782_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass782_1 == null)
 		{

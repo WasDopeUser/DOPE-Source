@@ -20,11 +20,11 @@ public class GClass517 : GInterface0
 		}
 	}
 
-	public GClass517(uint uint_1 = 0U, GClass532 gclass532_1 = null, int int_1 = 0, bool bool_1 = false)
+	public GClass517(uint uint_0 = 0U, GClass532 gclass532_1 = null, int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.uint_0 = uint_1;
+		this.AkothaunWs = uint_0;
 		if (gclass532_1 == null)
 		{
 			this.gclass532_0 = new GClass532(0U);
@@ -54,7 +54,7 @@ public class GClass517 : GInterface0
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.AkothaunWs = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -68,7 +68,7 @@ public class GClass517 : GInterface0
 		this.gclass532_0.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
-		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_6(this.AkothaunWs);
 	}
 
 	public GClass532 gclass532_0;
@@ -77,5 +77,5 @@ public class GClass517 : GInterface0
 
 	public int int_0;
 
-	public uint uint_0;
+	public uint AkothaunWs;
 }

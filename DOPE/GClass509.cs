@@ -22,7 +22,7 @@ public class GClass509 : GInterface0
 
 	public GClass509(uint uint_0 = 0U, double double_1 = 0.0, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Mode = uint_0;
 		this.double_0 = double_1;

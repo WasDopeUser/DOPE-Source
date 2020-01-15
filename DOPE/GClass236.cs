@@ -22,7 +22,7 @@ public class GClass236 : GInterface0
 
 	public GClass236(Vector<GClass251> vector_2 = null, string string_1 = "", Vector<GClass416> vector_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (vector_2 == null)

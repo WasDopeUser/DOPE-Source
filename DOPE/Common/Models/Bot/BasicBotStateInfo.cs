@@ -8,8 +8,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Bot
 {
-	[DataContract]
 	[Guid("7CDB6E89-CAFE-4CA7-B212-CD514925AEC9")]
+	[DataContract]
 	public class BasicBotStateInfo : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -256,8 +256,8 @@ namespace DOPE.Common.Models.Bot
 			}
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

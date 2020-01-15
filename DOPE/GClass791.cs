@@ -13,7 +13,7 @@ public abstract class GClass791 : GInterface7
 
 	protected GClass791()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

@@ -22,7 +22,7 @@ public class GClass521 : GInterface0
 
 	public GClass521(uint uint_0 = 0U, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Status = uint_0;
 		this.int_1 = int_2;

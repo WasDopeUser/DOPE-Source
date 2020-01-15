@@ -22,7 +22,7 @@ public class GClass765 : GInterface0
 
 	public GClass765(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_1 = double_3;
 		this.double_2 = double_4;

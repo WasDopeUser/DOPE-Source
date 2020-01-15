@@ -12,7 +12,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapNavigator()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			this.items = new MapNavigator.QueueItem[(MapUtils.LargeMapSize.Width / 100 + 1) * (MapUtils.LargeMapSize.Height / 50 + 1)];
 			this._queue = new BfsQueue<MapNavigator.QueueItem>(this.items, new MapNavigator.Comparer());
@@ -536,7 +536,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		// Note: this type is marked as 'beforefieldinit'.
 		static MapNavigator()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			MapNavigator.NULL = new ValueTuple<int, int>(-1, -1);
 		}
 
@@ -565,7 +565,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static int FnUfyaYwib(int int_0, int int_1)
+		internal static int smethod_3(int int_0, int int_1)
 		{
 			int num = int_0 * 100;
 			int num2 = int_1 * 50;
@@ -625,7 +625,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static int smethod_3(int int_0, int int_1)
+		internal static int smethod_4(int int_0, int int_1)
 		{
 			int num = int_0 * 100;
 			int num2 = int_1 * 50;
@@ -644,7 +644,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				return true;
 			}
-			int num2 = <>c__DisplayClass21_1_0.current.Distance + MapNavigator.smethod_3(<>c__DisplayClass21_1_0.currentX - int_0, <>c__DisplayClass21_1_0.currentY - int_1);
+			int num2 = <>c__DisplayClass21_1_0.current.Distance + MapNavigator.smethod_4(<>c__DisplayClass21_1_0.currentX - int_0, <>c__DisplayClass21_1_0.currentY - int_1);
 			if (num2 >= this.items[num].Distance)
 			{
 				return true;
@@ -677,7 +677,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		{
 			public QueueItem(int int_0, int int_1)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				this.Distance = int_0;
 				this.Left = int_1;
 				this.Visited = false;
@@ -702,7 +702,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 			public Comparer()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 			}
 		}

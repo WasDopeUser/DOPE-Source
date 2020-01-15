@@ -22,7 +22,7 @@ public class GClass196 : GInterface0
 
 	public GClass196(uint uint_0 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Mode = uint_0;
 	}

@@ -1,7 +1,7 @@
-<pyhafz4qe9cnxho6pw8:Ol4Zdr491LcsqHBJEPe xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:PErkava"
+<sgw7apflktjtp8shgcg:P8BewkfmpZ0aPPavclN xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:PErkava"
 	Window.Title="PErkava server selector"
 	FrameworkElement.Height="200"
-	FrameworkElement.Width="300" xmlns:pyhafz4qe9cnxho6pw8="clr-namespace:PyHAFZ4Qe9cNxHo6pw8">
+	FrameworkElement.Width="300" xmlns:sgw7apflktjtp8shgcg="clr-namespace:Sgw7ApflKtJtP8ShGcg">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition
@@ -89,4 +89,4 @@
 			</Viewbox>
 		</Grid>
 	</Grid>
-</pyhafz4qe9cnxho6pw8:Ol4Zdr491LcsqHBJEPe>
+</sgw7apflktjtp8shgcg:P8BewkfmpZ0aPPavclN>

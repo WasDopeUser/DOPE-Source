@@ -12,7 +12,7 @@ public class GClass819 : StatisticsCategory
 
 	public GClass819(HeroPet heroPet_1, GClass814 gclass814_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor("Pet", new string[]
 		{
 			"Name",

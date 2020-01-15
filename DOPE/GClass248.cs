@@ -22,7 +22,7 @@ public class GClass248 : GInterface0
 
 	public GClass248(string string_0 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		base..ctor();
 		this.Name = string_0;

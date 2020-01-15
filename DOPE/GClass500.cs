@@ -22,7 +22,7 @@ public class GClass500 : GInterface0
 
 	public GClass500(string string_1 = "", GClass334 gclass334_1 = null, Vector<GClass317> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

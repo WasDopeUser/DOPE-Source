@@ -14,21 +14,21 @@ namespace DarkorbitAPI.CommonStructures
 			}
 		}
 
-		public int method_0(T uQ82vWxZQTAEiugOken)
+		public int method_0(T hLgS6JqKTiiSdPhAGUn)
 		{
-			base.Add(uQ82vWxZQTAEiugOken);
+			base.Add(hLgS6JqKTiiSdPhAGUn);
 			return 1;
 		}
 
 		public Vector()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 
 		public Vector(int int_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			for (int i = 0; i < int_0; i++)
 			{
@@ -38,7 +38,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public Vector(Vector<T> vector_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			for (int i = 0; i < vector_0.Length; i++)
 			{

@@ -235,7 +235,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 
 	public GClass852(Guid guid_0, InterfaceDescriptor interfaceDescriptor_0, ICommon icommon_0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(guid_0, interfaceDescriptor_0, icommon_0);
 	}
 
@@ -309,12 +309,12 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 		GClass822 context = this.Context;
 		SecurityManager security = context.Map.Game.Security;
 		Vector2 vector2_ = new Vector2(float_0, float_1);
-		Gate gate = context.Map.ekkOzLkslS<Gate>(vector2_, null, null, 0);
+		Gate gate = context.Map.method_5<Gate>(vector2_, null, null, 0);
 		if (gate == null)
 		{
 			return false;
 		}
-		if (security.method_2(vector2_, gate.Position, 0) && security.method_2(gate.Position, context.Map.Hero.Position, 0))
+		if (security.method_3(vector2_, gate.Position, 0) && security.method_3(gate.Position, context.Map.Hero.Position, 0))
 		{
 			context.Map.Game.Connection.Server.method_2(gate.Id);
 			return true;

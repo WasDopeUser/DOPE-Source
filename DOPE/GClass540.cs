@@ -22,7 +22,7 @@ public class GClass540 : GInterface0
 
 	public GClass540(string string_1 = "", double double_1 = 0.0, Vector<GClass778> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

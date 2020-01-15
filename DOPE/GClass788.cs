@@ -29,7 +29,7 @@ public abstract class GClass788 : GClass786<GInterface7>
 
 	protected GClass788()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

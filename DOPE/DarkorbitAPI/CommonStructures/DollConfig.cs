@@ -17,7 +17,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public DollConfig()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 	}

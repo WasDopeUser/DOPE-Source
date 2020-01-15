@@ -22,7 +22,7 @@ public class GClass654 : GClass651, GInterface0
 
 	public GClass654(int int_0 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Value = int_0;
 	}

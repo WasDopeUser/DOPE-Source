@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using GsujcHxgAhWnFmvxchc;
 
 namespace DarkorbitAPI.Structures.Pathing
 {
@@ -16,7 +15,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public PathSequence(Vector2 vector2_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			this.Path = new List<Vector2>();
 			this.Destination = vector2_0;

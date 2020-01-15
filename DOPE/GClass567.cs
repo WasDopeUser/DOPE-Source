@@ -20,15 +20,15 @@ public class GClass567 : GInterface0
 		}
 	}
 
-	public GClass567(string string_1 = "", int int_2 = 0, int int_3 = 0, int int_4 = 0)
+	public GClass567(string string_1 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
-		this.cxqsTcybv1 = int_2;
-		this.int_0 = int_3;
-		this.int_1 = int_4;
+		this.int_2 = int_3;
+		this.int_0 = int_4;
+		this.int_1 = int_5;
 	}
 
 	public virtual int vmethod_0()
@@ -48,8 +48,8 @@ public class GClass567 : GInterface0
 		this.int_1 = binaryStream_0.smethod_0();
 		this.int_1 = (this.int_1 << 8 | U.smethod_0(this.int_1, 24));
 		this.string_0 = binaryStream_0.smethod_2();
-		this.cxqsTcybv1 = binaryStream_0.smethod_0();
-		this.cxqsTcybv1 = (this.cxqsTcybv1 << 12 | U.smethod_0(this.cxqsTcybv1, 20));
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 12 | U.smethod_0(this.int_2, 20));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -63,7 +63,7 @@ public class GClass567 : GInterface0
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 8) | this.int_1 << 24);
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.cxqsTcybv1, 12) | this.cxqsTcybv1 << 20);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 12) | this.int_2 << 20);
 	}
 
 	public int int_0;
@@ -72,5 +72,5 @@ public class GClass567 : GInterface0
 
 	public string string_0;
 
-	public int cxqsTcybv1;
+	public int int_2;
 }

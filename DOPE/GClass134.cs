@@ -22,7 +22,7 @@ public class GClass134 : GInterface0
 
 	public GClass134(double double_1 = 0.0, Vector<GClass330> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_0 = double_1;
 		if (vector_1 == null)

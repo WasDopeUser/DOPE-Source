@@ -22,7 +22,7 @@ public class GClass590 : GClass585, GInterface0
 
 	public GClass590(string string_0 = "", bool bool_0 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(string_0);
 		this.Value = bool_0;
 	}

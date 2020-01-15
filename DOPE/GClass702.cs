@@ -22,7 +22,7 @@ public class GClass702 : GInterface0
 
 	public GClass702(uint uint_2 = 0U, uint uint_3 = 0U, GClass354 gclass354_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_2;
 		this.uint_1 = uint_3;

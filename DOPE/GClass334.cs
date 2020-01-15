@@ -22,7 +22,7 @@ public class GClass334 : GInterface0
 
 	public GClass334(uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}

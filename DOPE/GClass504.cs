@@ -22,7 +22,7 @@ public class GClass504 : GInterface0
 
 	public GClass504(bool bool_1 = false, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.bool_0 = bool_1;

@@ -22,7 +22,7 @@ public class GClass698 : GInterface0
 
 	public GClass698(GClass761 gclass761_1 = null, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass761_1 == null)

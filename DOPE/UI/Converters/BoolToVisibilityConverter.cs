@@ -14,7 +14,7 @@ namespace DOPE.UI.Converters
 
 		public BoolToVisibilityConverter()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			this.TrueValue = Visibility.Visible;
 			this.FalseValue = Visibility.Collapsed;

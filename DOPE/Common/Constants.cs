@@ -16,7 +16,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return string.Format("{0}.{1}.0-EXPERIMENTAL", 0, 45);
+				return string.Format("{0}.{1}.1-EXPERIMENTAL", 0, 45);
 			}
 		}
 

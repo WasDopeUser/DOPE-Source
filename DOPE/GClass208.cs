@@ -22,7 +22,7 @@ public class GClass208 : GClass197, GInterface0
 
 	public GClass208(bool bool_1 = false, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_1;
 		this.int_0 = int_1;

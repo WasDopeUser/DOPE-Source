@@ -22,7 +22,7 @@ public class GClass682 : GInterface0
 
 	public GClass682(bool bool_1 = false, Vector<GClass682> vector_1 = null, string string_0 = "", GClass396 gclass396_1 = null, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		this.ToolTip = "";
 		base..ctor();

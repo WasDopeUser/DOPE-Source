@@ -8,7 +8,7 @@ public class GClass847 : GClass846
 {
 	public GClass847(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1, "DroneRepair");
 	}
 

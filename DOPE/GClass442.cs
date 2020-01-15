@@ -22,7 +22,7 @@ public class GClass442 : GInterface0
 
 	public GClass442(uint uint_1 = 0U, int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.int_1 = int_4;

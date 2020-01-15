@@ -5,12 +5,12 @@ public class GClass103 : GInterface4
 {
 	public void Run(GClass223 e)
 	{
-		ConnectionManager.Instance.Value.Game.Map.method_19(e);
+		ConnectionManager.Instance.Value.Game.Map.method_20(e);
 	}
 
 	public GClass103()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

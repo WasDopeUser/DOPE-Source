@@ -22,7 +22,7 @@ public class GClass623 : GClass621, GInterface0
 
 	public GClass623()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

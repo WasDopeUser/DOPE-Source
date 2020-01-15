@@ -20,13 +20,13 @@ public class GClass816 : StatisticsCategory
 				return;
 			}
 			this.dictionary_0 = value;
-			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_16);
+			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_17);
 		}
 	}
 
 	public GClass816(Dictionary<string, GClass816.GStruct0> dictionary_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor("Deaths", new string[]
 		{
 			"Killer",

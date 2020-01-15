@@ -59,7 +59,7 @@ public class GClass860
 
 	public GClass860(byte[] byte_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.method_3(byte_1);
 		this.method_1(new int[byte_1.Length]);

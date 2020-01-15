@@ -22,7 +22,7 @@ public class GClass537 : GInterface0
 
 	public GClass537(int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_1;
 		this.bool_0 = bool_1;

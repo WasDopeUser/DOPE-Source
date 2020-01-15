@@ -61,8 +61,8 @@ public class GClass93
 
 	public GClass93(ConnectionManager connectionManager_1)
 	{
-		Class13.tMHx78BzgCM8j();
-		this.object_0 = new object();
+		Class13.nIxas2ezryi9b();
+		this.ecaEuGwKdW = new object();
 		this.bool_1 = true;
 		base..ctor();
 		this.Connection = connectionManager_1;
@@ -78,7 +78,7 @@ public class GClass93
 
 	public void Connect(string host, int port, bool forceNonLoopback = true, ProxySettings proxy = null)
 	{
-		object obj = this.object_0;
+		object obj = this.ecaEuGwKdW;
 		lock (obj)
 		{
 			this.Host = host;
@@ -225,7 +225,7 @@ public class GClass93
 	[CompilerGenerated]
 	private ConnectionManager connectionManager_0;
 
-	private readonly object object_0;
+	private readonly object ecaEuGwKdW;
 
 	private volatile bool bool_1;
 }

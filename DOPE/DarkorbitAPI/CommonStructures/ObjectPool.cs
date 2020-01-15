@@ -10,7 +10,7 @@ namespace DarkorbitAPI.CommonStructures
 	{
 		public ObjectPool(string string_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			this._items = new ConcurrentBag<T>();
 			this._lock = new SemaphoreSlim(0);
@@ -33,15 +33,15 @@ namespace DarkorbitAPI.CommonStructures
 			return this._lock.Wait(int_0) && this._items.TryTake(out gparam_0);
 		}
 
-		protected void method_2(T tJPN69x5U7Tnb3TD8CE)
+		protected void method_2(T LkU3BEqewOZEqoGI5iD)
 		{
-			this._items.Add(tJPN69x5U7Tnb3TD8CE);
+			this._items.Add(LkU3BEqewOZEqoGI5iD);
 			this._lock.Release();
 		}
 
-		public void method_3(T SkbgaRxLm70HlqitPLf)
+		public void method_3(T p2C2laqUXePjNVJ1kFd)
 		{
-			this.method_2(SkbgaRxLm70HlqitPLf);
+			this.method_2(p2C2laqUXePjNVJ1kFd);
 		}
 
 		public bool method_4(Action<T> action_0, int int_0 = 0)

@@ -22,7 +22,7 @@ public class GClass242 : GInterface0
 
 	public GClass242(uint uint_1 = 0U, uint uint_2 = 0U, GClass500 gclass500_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Visibility = uint_1;
 		this.uint_0 = uint_2;

@@ -22,7 +22,7 @@ public class GClass482 : GInterface0
 
 	public GClass482(Vector<GClass375> vector_1 = null, int int_1 = 0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

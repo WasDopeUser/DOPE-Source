@@ -22,7 +22,7 @@ public class GClass511 : GInterface0
 
 	public GClass511(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_2 = double_3;
 		this.double_0 = double_4;

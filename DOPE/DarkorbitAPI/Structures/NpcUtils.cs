@@ -44,7 +44,7 @@ namespace DarkorbitAPI.Structures
 
 		static NpcUtils()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			NpcUtils.Groups = new List<NpcUtils.NpcGroup>();
 			NpcUtils.G_Regular = new NpcUtils.NpcGroup("Regular", "");
 			NpcUtils.G_Boss = new NpcUtils.NpcGroup("Boss", null);
@@ -355,7 +355,7 @@ namespace DarkorbitAPI.Structures
 				List<NpcUtils.NpcType> list = NpcUtils.NpcsByMap[keyValuePair.Key] = new List<NpcUtils.NpcType>();
 				foreach (string string_ in keyValuePair.Value)
 				{
-					list.Add(NpcUtils.NpcType.smethod_3(string_));
+					list.Add(NpcUtils.NpcType.smethod_2(string_));
 				}
 			}
 			Dictionary<int, List<NpcUtils.NpcType>> dictionary2 = new Dictionary<int, List<NpcUtils.NpcType>>();
@@ -366,7 +366,7 @@ namespace DarkorbitAPI.Structures
 				NpcUtils.GG_Gamma
 			})
 			{
-				dictionary2[(int)npcGroup.method_0()] = new List<NpcUtils.NpcType>
+				dictionary2[(int)npcGroup.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 				{
 					new NpcUtils.GGWaveType(NpcUtils.N_Streuner, npcGroup, 0, null),
 					new NpcUtils.GGWaveType(NpcUtils.N_Lordakia, npcGroup, 4, null),
@@ -380,7 +380,7 @@ namespace DarkorbitAPI.Structures
 					new NpcUtils.GGWaveType(NpcUtils.N_Protegit, npcGroup, 36, null)
 				};
 			}
-			dictionary2[(int)NpcUtils.GG_Lambda.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Lambda.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_Lordakia, NpcUtils.GG_Lambda, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Saimon, NpcUtils.GG_Lambda, 3, null),
@@ -390,7 +390,7 @@ namespace DarkorbitAPI.Structures
 				new NpcUtils.GGWaveType(NpcUtils.N_Kristallin, NpcUtils.GG_Lambda, 15, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Kristallin, NpcUtils.GG_Lambda, 18, null)
 			};
-			dictionary2[(int)NpcUtils.GG_Delta.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Delta.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_Saimon, NpcUtils.GG_Delta, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Streuner, NpcUtils.GG_Delta, 3, null),
@@ -403,7 +403,7 @@ namespace DarkorbitAPI.Structures
 				new NpcUtils.GGWaveType(NpcUtils.N_Protegit, NpcUtils.GG_Delta, 24, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_demaNeR, NpcUtils.GG_Delta, 27, null)
 			};
-			dictionary2[(int)NpcUtils.GG_Epsilon.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Epsilon.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_Vagrant, NpcUtils.GG_Epsilon, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Marauder, NpcUtils.GG_Epsilon, 3, null),
@@ -417,7 +417,7 @@ namespace DarkorbitAPI.Structures
 				new NpcUtils.GGWaveType(NpcUtils.N_Convict, NpcUtils.GG_Epsilon, 27, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Ravager, NpcUtils.GG_Epsilon, 28, null)
 			};
-			dictionary2[(int)NpcUtils.GG_Zeta.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Zeta.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_Infernal, NpcUtils.GG_Zeta, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Scorcher, NpcUtils.GG_Zeta, 3, null),
@@ -430,7 +430,7 @@ namespace DarkorbitAPI.Structures
 				new NpcUtils.GGWaveType(NpcUtils.N_Devourer, NpcUtils.GG_Zeta, 24, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Devourer, NpcUtils.GG_Zeta, 26, null)
 			};
-			dictionary2[(int)NpcUtils.GG_Kappa.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Kappa.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_Infernal, NpcUtils.GG_Kappa, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_Scorcher, NpcUtils.GG_Kappa, 3, null),
@@ -470,8 +470,8 @@ namespace DarkorbitAPI.Structures
 				"Streuner",
 				"Uber Kristallin"
 			};
-			dictionary2[(int)NpcUtils.GG_VoT.method_0()] = source.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.<>c.<>9.method_0)).ToList<NpcUtils.NpcType>();
-			dictionary2[(int)NpcUtils.GG_Kronos.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_VoT.zYnDvwuuVK()] = source.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.<>c.<>9.method_0)).ToList<NpcUtils.NpcType>();
+			dictionary2[(int)NpcUtils.GG_Kronos.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(null, NpcUtils.GG_Kronos, 0, "Phoenix/Yamato"),
 				new NpcUtils.GGWaveType(null, NpcUtils.GG_Kronos, 3, "Defcom/Liberator"),
@@ -488,7 +488,7 @@ namespace DarkorbitAPI.Structures
 				new NpcUtils.GGWaveType(null, NpcUtils.GG_Kronos, 48, "Clone/Iris"),
 				new NpcUtils.GGWaveType(null, NpcUtils.GG_Kronos, 50, "Rewards")
 			};
-			dictionary2[(int)NpcUtils.GG_Kuiper.method_0()] = new List<NpcUtils.NpcType>
+			dictionary2[(int)NpcUtils.GG_Kuiper.zYnDvwuuVK()] = new List<NpcUtils.NpcType>
 			{
 				new NpcUtils.GGWaveType(NpcUtils.N_StreuneR, NpcUtils.GG_Kuiper, 0, null),
 				new NpcUtils.GGWaveType(NpcUtils.N_StreuneR, NpcUtils.GG_Kuiper, 3, null),
@@ -504,7 +504,7 @@ namespace DarkorbitAPI.Structures
 				"Skolls Icy",
 				"Skoll"
 			};
-			dictionary2[(int)NpcUtils.GG_ColdWave.method_0()] = source2.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_3)).ToList<NpcUtils.NpcType>();
+			dictionary2[(int)NpcUtils.GG_ColdWave.zYnDvwuuVK()] = source2.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_2)).ToList<NpcUtils.NpcType>();
 			List<string> source3 = new List<string>
 			{
 				"Viral Kristallon",
@@ -512,7 +512,7 @@ namespace DarkorbitAPI.Structures
 				"Viral Gygerthrall",
 				"Gygerim Overlord"
 			};
-			dictionary2[(int)NpcUtils.GG_QZ.method_0()] = source3.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_3)).ToList<NpcUtils.NpcType>();
+			dictionary2[(int)NpcUtils.GG_QZ.zYnDvwuuVK()] = source3.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_2)).ToList<NpcUtils.NpcType>();
 			foreach (KeyValuePair<int, List<NpcUtils.NpcType>> keyValuePair2 in dictionary2)
 			{
 				NpcUtils.NpcsByMap[keyValuePair2.Key] = keyValuePair2.Value;
@@ -721,7 +721,7 @@ namespace DarkorbitAPI.Structures
 
 			public GGWaveType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, int int_0, string string_0 = null)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor(npcClass_0, npcGroup_0, false);
 				this.WaveNumber = int_0;
 				this.Description = string_0;
@@ -747,7 +747,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static GGWaveType()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				NpcUtils.GGWaveType.LastGGId = 2146483647;
 			}
 
@@ -767,7 +767,7 @@ namespace DarkorbitAPI.Structures
 
 			protected NpcType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, bool bool_0 = true)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Class = npcClass_0;
 				this.Group = npcGroup_0;
@@ -783,22 +783,22 @@ namespace DarkorbitAPI.Structures
 				return new string(string_0.Replace("-x-", "").Where(new Func<char, bool>(NpcUtils.NpcType.<>c.<>9.method_0)).ToArray<char>()).Trim();
 			}
 
-			public static NpcUtils.NpcType smethod_1(int int_0)
+			public static NpcUtils.NpcType obrDmrAwam(int int_0)
 			{
 				string string_;
 				if (NpcUtils.XmlNpcs.TryGetValue(int_0, out string_))
 				{
-					return NpcUtils.NpcType.smethod_3(string_);
+					return NpcUtils.NpcType.smethod_2(string_);
 				}
 				return null;
 			}
 
-			public static NpcUtils.NpcType smethod_2(NpcUtils.NpcGroup npcGroup_0, NpcUtils.NpcClass npcClass_0)
+			public static NpcUtils.NpcType smethod_1(NpcUtils.NpcGroup npcGroup_0, NpcUtils.NpcClass npcClass_0)
 			{
-				return NpcUtils.NpcType.smethod_3(npcGroup_0.ToString() + " " + npcClass_0.ToString());
+				return NpcUtils.NpcType.smethod_2(npcGroup_0.ToString() + " " + npcClass_0.ToString());
 			}
 
-			public static NpcUtils.NpcType smethod_3(string string_0)
+			public static NpcUtils.NpcType smethod_2(string string_0)
 			{
 				NpcUtils.NpcType.<>c__DisplayClass17_0 CS$<>8__locals1 = new NpcUtils.NpcType.<>c__DisplayClass17_0();
 				CS$<>8__locals1.sanitized = NpcUtils.NpcType.smethod_0(string_0);
@@ -872,7 +872,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcType()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 			}
 
 			public static int LastId;
@@ -887,7 +887,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcClass(string string_0)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Name = string_0;
 				NpcUtils.Classes.Add(this);
@@ -912,7 +912,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcClass()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				NpcUtils.NpcClass.LastId = 1;
 			}
 
@@ -931,7 +931,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcGroup(string string_0, string string_1 = null)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				if (string_1 == null)
 				{
@@ -943,7 +943,7 @@ namespace DarkorbitAPI.Structures
 				this.Id = (short)Interlocked.Increment(ref NpcUtils.NpcGroup.LastId);
 			}
 
-			public GEnum5 method_0()
+			public GEnum5 zYnDvwuuVK()
 			{
 				if (this == NpcUtils.GG_Alpha)
 				{
@@ -1008,7 +1008,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcGroup()
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				NpcUtils.NpcGroup.LastId = 1;
 			}
 

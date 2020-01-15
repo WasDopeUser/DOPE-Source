@@ -33,7 +33,7 @@ public class GClass863
 
 	public GClass863()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.method_1(new TcpListener(IPAddress.Any, 8080));
 		this.method_3(new Thread(new ThreadStart(this.method_4)));

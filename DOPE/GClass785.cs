@@ -4,7 +4,7 @@ public class GClass785
 {
 	public GClass785(byte[] byte_0 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_1 = 0;
 		this.int_0 = 0;

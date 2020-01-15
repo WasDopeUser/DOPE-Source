@@ -13,12 +13,12 @@ public class GClass845 : GClass844
 
 	public GClass845(GClass822 gclass822_1, GClass834 gclass834_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1);
 		this.Module = gclass834_1;
 	}
 
-	public override bool vmethod_27()
+	public override bool vmethod_26()
 	{
 		return !base.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(GClass845.<>c.<>c_0.method_0));
 	}
@@ -40,7 +40,7 @@ public class GClass845 : GClass844
 		return false;
 	}
 
-	protected override IEnumerable<Vector2> vmethod_23()
+	protected override IEnumerable<Vector2> vmethod_22()
 	{
 		GClass845.<GetRoamTargets>d__11 <GetRoamTargets>d__ = new GClass845.<GetRoamTargets>d__11(-2);
 		<GetRoamTargets>d__.<>4__this = this;
@@ -82,13 +82,13 @@ public class GClass845 : GClass844
 
 	public GClass845.GEnum11 State { get; protected set; }
 
-	public GClass845.GEnum11 method_35()
+	public GClass845.GEnum11 method_39()
 	{
 		if (!base.Map.Gates.Any<KeyValuePair<int, Gate>>())
 		{
 			return (GClass845.GEnum11)2;
 		}
-		int num = base.C.Hero.Group.method_9().Count<GroupManager.GroupMember>() + 1;
+		int num = base.C.Hero.Group.method_10().Count<GroupManager.GroupMember>() + 1;
 		MapProfile mapProfile = base.C.MapProfile;
 		if (((mapProfile != null) ? mapProfile.QZ_GroupSize : 2) > num)
 		{
@@ -116,7 +116,7 @@ public class GClass845 : GClass844
 	public override void Update()
 	{
 		base.Update();
-		this.State = this.method_35();
+		this.State = this.method_39();
 	}
 
 	public override IEnumerable<string> vmethod_47()
@@ -126,16 +126,16 @@ public class GClass845 : GClass844
 		return <GetStatusText>d__;
 	}
 
-	[DebuggerHidden]
 	[CompilerGenerated]
-	private IEnumerable<Vector2> method_36()
+	[DebuggerHidden]
+	private IEnumerable<Vector2> method_40()
 	{
-		return base.vmethod_23();
+		return base.vmethod_22();
 	}
 
 	[DebuggerHidden]
 	[CompilerGenerated]
-	private IEnumerable<string> method_37()
+	private IEnumerable<string> method_41()
 	{
 		return base.vmethod_47();
 	}

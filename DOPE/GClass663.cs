@@ -22,7 +22,7 @@ public class GClass663 : GClass660, GInterface0
 
 	public GClass663(string string_1 = "", double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(string_1);
 		this.double_0 = double_1;
 	}

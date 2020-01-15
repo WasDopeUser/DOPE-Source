@@ -24,7 +24,7 @@ public abstract class GClass846 : GInterface9
 
 	public GClass846(GClass822 gclass822_1, string string_0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Context = gclass822_1;
 		this.Log = this.Context.method_71("BackgroundLogic-" + string_0);
@@ -52,7 +52,7 @@ public abstract class GClass846 : GInterface9
 
 	public abstract bool vmethod_0();
 
-	bool GInterface9.pHJPCQQcatL()
+	bool GInterface9.Ip8rBcXNA2g()
 	{
 		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
 	}

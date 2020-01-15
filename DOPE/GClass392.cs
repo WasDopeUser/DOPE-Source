@@ -22,7 +22,7 @@ public class GClass392 : GInterface0
 
 	public GClass392(bool bool_2 = false, int int_3 = 0, int int_4 = 0, int int_5 = 0, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_1 = bool_2;
 		this.int_1 = int_3;

@@ -22,7 +22,7 @@ public class GClass377 : GClass375, GInterface0
 
 	public GClass377(string string_1 = "", int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

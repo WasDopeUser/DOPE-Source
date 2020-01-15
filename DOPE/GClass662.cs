@@ -22,7 +22,7 @@ public class GClass662 : GClass660, GInterface0
 
 	public GClass662(string string_1 = "", int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(string_1);
 		this.int_0 = int_1;
 	}

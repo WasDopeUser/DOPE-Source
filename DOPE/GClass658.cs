@@ -22,7 +22,7 @@ public class GClass658 : GInterface0
 
 	public GClass658(uint uint_1 = 0U, int int_0 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.MapId = int_0;

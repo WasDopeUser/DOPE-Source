@@ -22,7 +22,7 @@ public class GClass710 : GInterface0
 
 	public GClass710(GClass201 gclass201_1 = null, GClass473 gclass473_1 = null, double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass201_1 == null)
 		{

@@ -43,12 +43,12 @@ namespace DarkorbitAPI.Structures
 		internal void method_1(GClass277 gclass277_0)
 		{
 			this.Activatable = gclass277_0.bool_0;
-			this.NextUsable = DateTimeOffset.Now.AddMilliseconds(gclass277_0.LxgYoPoDrH);
+			this.NextUsable = DateTimeOffset.Now.AddMilliseconds(gclass277_0.double_0);
 		}
 
 		public MenuItem()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 	}

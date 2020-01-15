@@ -12,7 +12,7 @@ using System.Windows;
 using System.Windows.Threading;
 
 [CollectionDataContract(Namespace = "")]
-public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnumerable<EO7mWD9YUpZxmymouh>, IReadOnlyList<EO7mWD9YUpZxmymouh>, IReadOnlyCollection<EO7mWD9YUpZxmymouh>, IEnumerable, ICollection
+public class GClass4<QfgHoDVieLt45ZK0Um> : ICollection<QfgHoDVieLt45ZK0Um>, IEnumerable<QfgHoDVieLt45ZK0Um>, IReadOnlyList<QfgHoDVieLt45ZK0Um>, IReadOnlyCollection<QfgHoDVieLt45ZK0Um>, IEnumerable, ICollection
 {
 	[CompilerGenerated]
 	public void method_0(GDelegate0 gdelegate0_1)
@@ -54,7 +54,7 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		this.dispatcher_0 = dispatcher_1;
 	}
 
-	public ObservableCollection<EO7mWD9YUpZxmymouh> ObsColl
+	public ObservableCollection<QfgHoDVieLt45ZK0Um> ObsColl
 	{
 		get
 		{
@@ -64,12 +64,12 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 
 	public GClass4()
 	{
-		Class13.tMHx78BzgCM8j();
-		this.list_0 = new List<EO7mWD9YUpZxmymouh>();
-		this.list_1 = new List<EO7mWD9YUpZxmymouh>();
+		Class13.nIxas2ezryi9b();
+		this.list_0 = new List<QfgHoDVieLt45ZK0Um>();
+		this.GTGBTRBRZ = new List<QfgHoDVieLt45ZK0Um>();
 		this.object_0 = new object();
-		this.list_2 = new List<EO7mWD9YUpZxmymouh>();
-		this.observableCollection_0 = new ObservableCollection<EO7mWD9YUpZxmymouh>();
+		this.list_1 = new List<QfgHoDVieLt45ZK0Um>();
+		this.observableCollection_0 = new ObservableCollection<QfgHoDVieLt45ZK0Um>();
 		this.concurrentQueue_0 = new ConcurrentQueue<NotifyCollectionChangedEventArgs>();
 		base..ctor();
 		this.method_3(Application.Current.Dispatcher);
@@ -85,23 +85,23 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		this.bool_0 = bool_1;
 	}
 
-	public Tuple<List<EO7mWD9YUpZxmymouh>, List<EO7mWD9YUpZxmymouh>> method_6()
+	public Tuple<List<QfgHoDVieLt45ZK0Um>, List<QfgHoDVieLt45ZK0Um>> nZiwbljls()
 	{
 		object obj = this.object_0;
-		Tuple<List<EO7mWD9YUpZxmymouh>, List<EO7mWD9YUpZxmymouh>> result;
+		Tuple<List<QfgHoDVieLt45ZK0Um>, List<QfgHoDVieLt45ZK0Um>> result;
 		lock (obj)
 		{
-			result = new Tuple<List<EO7mWD9YUpZxmymouh>, List<EO7mWD9YUpZxmymouh>>(this.list_0, this.list_1);
-			this.list_0 = new List<EO7mWD9YUpZxmymouh>();
-			this.list_1 = new List<EO7mWD9YUpZxmymouh>();
+			result = new Tuple<List<QfgHoDVieLt45ZK0Um>, List<QfgHoDVieLt45ZK0Um>>(this.list_0, this.GTGBTRBRZ);
+			this.list_0 = new List<QfgHoDVieLt45ZK0Um>();
+			this.GTGBTRBRZ = new List<QfgHoDVieLt45ZK0Um>();
 		}
 		return result;
 	}
 
-	public EO7mWD9YUpZxmymouh[] method_7()
+	public QfgHoDVieLt45ZK0Um[] method_6()
 	{
 		object obj = this.object_0;
-		EO7mWD9YUpZxmymouh[] result;
+		QfgHoDVieLt45ZK0Um[] result;
 		lock (obj)
 		{
 			result = this.list_0.ToArray();
@@ -109,24 +109,24 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		return result;
 	}
 
-	public EO7mWD9YUpZxmymouh[] method_8()
+	public QfgHoDVieLt45ZK0Um[] method_7()
 	{
 		object obj = this.object_0;
-		EO7mWD9YUpZxmymouh[] result;
+		QfgHoDVieLt45ZK0Um[] result;
 		lock (obj)
 		{
-			result = this.list_1.ToArray();
+			result = this.GTGBTRBRZ.ToArray();
 		}
 		return result;
 	}
 
-	private void method_9(NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_0)
+	private void method_8(NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_0)
 	{
 		this.concurrentQueue_0.Enqueue(notifyCollectionChangedEventArgs_0);
-		this.method_2().BeginInvoke(new Action(this.method_10), Array.Empty<object>());
+		this.method_2().BeginInvoke(new Action(this.method_9), Array.Empty<object>());
 	}
 
-	private void method_10()
+	private void method_9()
 	{
 		if (!this.method_2().CheckAccess())
 		{
@@ -145,7 +145,7 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 					while (enumerator.MoveNext())
 					{
 						object obj = enumerator.Current;
-						EO7mWD9YUpZxmymouh item = (EO7mWD9YUpZxmymouh)((object)obj);
+						QfgHoDVieLt45ZK0Um item = (QfgHoDVieLt45ZK0Um)((object)obj);
 						this.ObsColl.Insert(notifyCollectionChangedEventArgs.NewStartingIndex + num, item);
 						num++;
 					}
@@ -176,7 +176,7 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 				while (enumerator.MoveNext())
 				{
 					object obj2 = enumerator.Current;
-					EO7mWD9YUpZxmymouh item2 = (EO7mWD9YUpZxmymouh)((object)obj2);
+					QfgHoDVieLt45ZK0Um item2 = (QfgHoDVieLt45ZK0Um)((object)obj2);
 					this.ObsColl.Remove(item2);
 				}
 				continue;
@@ -192,138 +192,138 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 			{
 				throw new ArgumentException("Both argument Old and New item should be IList in a replace action.");
 			}
-			this.ObsColl[notifyCollectionChangedEventArgs.NewStartingIndex] = (EO7mWD9YUpZxmymouh)((object)newItems[0]);
+			this.ObsColl[notifyCollectionChangedEventArgs.NewStartingIndex] = (QfgHoDVieLt45ZK0Um)((object)newItems[0]);
 		}
 	}
 
-	public List<EO7mWD9YUpZxmymouh> method_11()
+	public List<QfgHoDVieLt45ZK0Um> method_10()
 	{
-		List<EO7mWD9YUpZxmymouh> result = null;
+		List<QfgHoDVieLt45ZK0Um> result = null;
 		object obj = this.object_0;
 		lock (obj)
 		{
-			result = new List<EO7mWD9YUpZxmymouh>(this.list_2);
+			result = new List<QfgHoDVieLt45ZK0Um>(this.list_1);
 		}
 		return result;
 	}
 
-	public void method_12(IList ilist_0)
+	public void method_11(IList ilist_0)
 	{
-		GClass4<EO7mWD9YUpZxmymouh>.<>c__DisplayClass26_0 CS$<>8__locals1 = new GClass4<EO7mWD9YUpZxmymouh>.<>c__DisplayClass26_0();
+		GClass4<QfgHoDVieLt45ZK0Um>.<>c__DisplayClass26_0 CS$<>8__locals1 = new GClass4<QfgHoDVieLt45ZK0Um>.<>c__DisplayClass26_0();
 		CS$<>8__locals1.list = ilist_0;
 		object obj = this.object_0;
 		lock (obj)
 		{
-			this.list_2.smethod_4(new Action<EO7mWD9YUpZxmymouh>(CS$<>8__locals1.method_0));
+			this.list_1.smethod_4(new Action<QfgHoDVieLt45ZK0Um>(CS$<>8__locals1.method_0));
 		}
 	}
 
-	public virtual IEnumerator<EO7mWD9YUpZxmymouh> GetEnumerator()
+	public virtual IEnumerator<QfgHoDVieLt45ZK0Um> GetEnumerator()
 	{
-		return this.method_11().GetEnumerator();
+		return this.method_10().GetEnumerator();
 	}
 
-	public virtual IEnumerator<EO7mWD9YUpZxmymouh> GetBlockingEnumerator()
+	public virtual IEnumerator<QfgHoDVieLt45ZK0Um> GetBlockingEnumerator()
 	{
-		return new GClass1<EO7mWD9YUpZxmymouh>(this.list_2.GetEnumerator(), this.object_0);
+		return new GClass1<QfgHoDVieLt45ZK0Um>(this.list_1.GetEnumerator(), this.object_0);
 	}
 
 	IEnumerator IEnumerable.GetEnumerator()
 	{
-		return this.method_11().GetEnumerator();
+		return this.method_10().GetEnumerator();
 	}
 
-	public void method_13(EO7mWD9YUpZxmymouh p3Q61x1pC4bYD7mJ3A)
+	public void method_12(QfgHoDVieLt45ZK0Um GBuCEi4AYDDtbQgBIL)
 	{
 		object obj = this.object_0;
 		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_;
 		lock (obj)
 		{
-			this.list_2.Insert(0, p3Q61x1pC4bYD7mJ3A);
-			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, p3Q61x1pC4bYD7mJ3A, 0);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			this.list_1.Insert(0, GBuCEi4AYDDtbQgBIL);
+			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, GBuCEi4AYDDtbQgBIL, 0);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	public void Add(EO7mWD9YUpZxmymouh yqjwjomKXFr6yak4nf)
+	public void Add(QfgHoDVieLt45ZK0Um woPWYy85A4axAnCE3U)
 	{
 		object obj = this.object_0;
 		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_;
 		lock (obj)
 		{
-			this.list_2.Add(yqjwjomKXFr6yak4nf);
+			this.list_1.Add(woPWYy85A4axAnCE3U);
 			if (this.bool_0)
 			{
-				this.list_0.Add(yqjwjomKXFr6yak4nf);
+				this.list_0.Add(woPWYy85A4axAnCE3U);
 			}
-			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, yqjwjomKXFr6yak4nf, this.list_2.Count - 1);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, woPWYy85A4axAnCE3U, this.list_1.Count - 1);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	public void method_14(IList<EO7mWD9YUpZxmymouh> ilist_0)
+	public void method_13(IList<QfgHoDVieLt45ZK0Um> ilist_0)
 	{
 		object obj = this.object_0;
 		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_;
 		lock (obj)
 		{
-			int count = this.list_2.Count;
-			this.list_2.AddRange(ilist_0);
+			int count = this.list_1.Count;
+			this.list_1.AddRange(ilist_0);
 			if (this.bool_0)
 			{
 				this.list_0.AddRange(ilist_0);
 			}
 			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, ilist_0 as IList, count);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	public bool method_15(EO7mWD9YUpZxmymouh gju8DFatqgXxIJd9LS)
+	public bool method_14(QfgHoDVieLt45ZK0Um xr3hKo9AMXg67tRUQf)
 	{
 		bool result = false;
 		object obj = this.object_0;
 		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_;
 		lock (obj)
 		{
-			result = this.list_2.Remove(gju8DFatqgXxIJd9LS);
+			result = this.list_1.Remove(xr3hKo9AMXg67tRUQf);
 			if (this.bool_0)
 			{
-				this.list_0.Add(gju8DFatqgXxIJd9LS);
+				this.list_0.Add(xr3hKo9AMXg67tRUQf);
 			}
-			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, gju8DFatqgXxIJd9LS);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, xr3hKo9AMXg67tRUQf);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 		return result;
 	}
 
-	public void method_16(EO7mWD9YUpZxmymouh casHNDCKvbstghtXGs, EO7mWD9YUpZxmymouh aDY9VMKTv9CQe60CSo)
+	public void method_15(QfgHoDVieLt45ZK0Um NptB2amK5cqPxk8iXQ, QfgHoDVieLt45ZK0Um rynsVMl6KQOjgERuEH)
 	{
 		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = null;
 		object obj = this.object_0;
 		lock (obj)
 		{
-			int num = this.list_2.IndexOf(casHNDCKvbstghtXGs);
-			if (num < 0 || num >= this.list_2.Count)
+			int num = this.list_1.IndexOf(NptB2amK5cqPxk8iXQ);
+			if (num < 0 || num >= this.list_1.Count)
 			{
 				throw new ArgumentException("Invalid old value");
 			}
 			if (this.bool_0)
 			{
-				this.list_0.Add(aDY9VMKTv9CQe60CSo);
-				this.list_1.Add(casHNDCKvbstghtXGs);
+				this.list_0.Add(rynsVMl6KQOjgERuEH);
+				this.GTGBTRBRZ.Add(NptB2amK5cqPxk8iXQ);
 			}
-			this.list_2[num] = aDY9VMKTv9CQe60CSo;
-			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace, aDY9VMKTv9CQe60CSo, casHNDCKvbstghtXGs, num);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			this.list_1[num] = rynsVMl6KQOjgERuEH;
+			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace, rynsVMl6KQOjgERuEH, NptB2amK5cqPxk8iXQ, num);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	private void method_17(NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_0)
+	private void method_16(NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_0)
 	{
 		if (this.gdelegate0_0 != null && notifyCollectionChangedEventArgs_0 != null)
 		{
@@ -331,50 +331,50 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		}
 	}
 
-	public EO7mWD9YUpZxmymouh method_18(int int_0)
+	public QfgHoDVieLt45ZK0Um method_17(int int_0)
 	{
-		return this.list_2[int_0];
+		return this.list_1[int_0];
 	}
 
-	public EO7mWD9YUpZxmymouh method_19(int int_0, EO7mWD9YUpZxmymouh ujkGAx352fAHsQ938p)
+	public QfgHoDVieLt45ZK0Um method_18(int int_0, QfgHoDVieLt45ZK0Um k0ywaUj3XVqgy1rcgC)
 	{
-		EO7mWD9YUpZxmymouh eo7mWD9YUpZxmymouh = this.list_2[int_0];
+		QfgHoDVieLt45ZK0Um qfgHoDVieLt45ZK0Um = this.list_1[int_0];
 		if (this.bool_0)
 		{
-			this.list_0.Add(ujkGAx352fAHsQ938p);
-			this.list_1.Add(eo7mWD9YUpZxmymouh);
+			this.list_0.Add(k0ywaUj3XVqgy1rcgC);
+			this.GTGBTRBRZ.Add(qfgHoDVieLt45ZK0Um);
 		}
-		this.list_2[int_0] = ujkGAx352fAHsQ938p;
-		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace, ujkGAx352fAHsQ938p, eo7mWD9YUpZxmymouh, int_0);
-		this.method_9(notifyCollectionChangedEventArgs_);
-		this.method_17(notifyCollectionChangedEventArgs_);
-		return eo7mWD9YUpZxmymouh;
+		this.list_1[int_0] = k0ywaUj3XVqgy1rcgC;
+		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace, k0ywaUj3XVqgy1rcgC, qfgHoDVieLt45ZK0Um, int_0);
+		this.method_8(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
+		return qfgHoDVieLt45ZK0Um;
 	}
 
-	public void method_20(int int_0, EO7mWD9YUpZxmymouh ih1Nntcqube58D5Sm8)
+	public void method_19(int int_0, QfgHoDVieLt45ZK0Um WOA2jbg5F7o245DSXv)
 	{
 		if (this.bool_0)
 		{
-			this.list_0.Add(ih1Nntcqube58D5Sm8);
+			this.list_0.Add(WOA2jbg5F7o245DSXv);
 		}
-		this.list_2.Insert(int_0, ih1Nntcqube58D5Sm8);
-		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, ih1Nntcqube58D5Sm8, int_0);
-		this.method_9(notifyCollectionChangedEventArgs_);
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.list_1.Insert(int_0, WOA2jbg5F7o245DSXv);
+		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, WOA2jbg5F7o245DSXv, int_0);
+		this.method_8(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	public EO7mWD9YUpZxmymouh method_21(int int_0)
+	public QfgHoDVieLt45ZK0Um method_20(int int_0)
 	{
-		EO7mWD9YUpZxmymouh eo7mWD9YUpZxmymouh = this.list_2[int_0];
+		QfgHoDVieLt45ZK0Um qfgHoDVieLt45ZK0Um = this.list_1[int_0];
 		if (this.bool_0)
 		{
-			this.list_1.Add(eo7mWD9YUpZxmymouh);
+			this.GTGBTRBRZ.Add(qfgHoDVieLt45ZK0Um);
 		}
-		this.list_2.RemoveAt(int_0);
-		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, eo7mWD9YUpZxmymouh, int_0);
-		this.method_9(notifyCollectionChangedEventArgs_);
-		this.method_17(notifyCollectionChangedEventArgs_);
-		return eo7mWD9YUpZxmymouh;
+		this.list_1.RemoveAt(int_0);
+		NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, qfgHoDVieLt45ZK0Um, int_0);
+		this.method_8(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
+		return qfgHoDVieLt45ZK0Um;
 	}
 
 	public virtual void Clear()
@@ -385,32 +385,32 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		{
 			if (this.bool_0)
 			{
-				this.list_1.AddRange(this.list_2);
+				this.GTGBTRBRZ.AddRange(this.list_1);
 			}
-			this.list_2.Clear();
+			this.list_1.Clear();
 			notifyCollectionChangedEventArgs_ = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset);
-			this.method_9(notifyCollectionChangedEventArgs_);
+			this.method_8(notifyCollectionChangedEventArgs_);
 		}
-		this.method_17(notifyCollectionChangedEventArgs_);
+		this.method_16(notifyCollectionChangedEventArgs_);
 	}
 
-	public bool Contains(EO7mWD9YUpZxmymouh eQZesaMbQrSGZ3rriq)
+	public bool Contains(QfgHoDVieLt45ZK0Um sn8qTVcTKdofUQrK5h)
 	{
 		object obj = this.object_0;
 		bool result;
 		lock (obj)
 		{
-			result = this.list_2.Contains(eQZesaMbQrSGZ3rriq);
+			result = this.list_1.Contains(sn8qTVcTKdofUQrK5h);
 		}
 		return result;
 	}
 
-	public void CopyTo(EO7mWD9YUpZxmymouh[] array, int arrayIndex)
+	public void CopyTo(QfgHoDVieLt45ZK0Um[] array, int arrayIndex)
 	{
 		object obj = this.object_0;
 		lock (obj)
 		{
-			this.list_2.CopyTo(array, arrayIndex);
+			this.list_1.CopyTo(array, arrayIndex);
 		}
 	}
 
@@ -422,20 +422,20 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 			int count;
 			lock (obj)
 			{
-				count = this.list_2.Count;
+				count = this.list_1.Count;
 			}
 			return count;
 		}
 	}
 
-	public void method_22(object object_1)
+	public void method_21(object object_1)
 	{
-		this.method_15((EO7mWD9YUpZxmymouh)((object)object_1));
+		this.method_14((QfgHoDVieLt45ZK0Um)((object)object_1));
 	}
 
-	public int method_23(object object_1)
+	public int method_22(object object_1)
 	{
-		return this.method_23((EO7mWD9YUpZxmymouh)((object)object_1));
+		return this.method_22((QfgHoDVieLt45ZK0Um)((object)object_1));
 	}
 
 	public object SyncRoot
@@ -446,22 +446,22 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		}
 	}
 
-	public bool method_24(IEnumerable<EO7mWD9YUpZxmymouh> ienumerable_0)
+	public bool method_23(IEnumerable<QfgHoDVieLt45ZK0Um> ienumerable_0)
 	{
-		if (this.Count != ienumerable_0.Count<EO7mWD9YUpZxmymouh>())
+		if (this.Count != ienumerable_0.Count<QfgHoDVieLt45ZK0Um>())
 		{
 			return false;
 		}
 		object obj = this.object_0;
 		lock (obj)
 		{
-			IEnumerator<EO7mWD9YUpZxmymouh> enumerator = this.GetEnumerator();
+			IEnumerator<QfgHoDVieLt45ZK0Um> enumerator = this.GetEnumerator();
 			enumerator.Reset();
-			foreach (EO7mWD9YUpZxmymouh eo7mWD9YUpZxmymouh in ienumerable_0)
+			foreach (QfgHoDVieLt45ZK0Um qfgHoDVieLt45ZK0Um in ienumerable_0)
 			{
 				enumerator.MoveNext();
-				EO7mWD9YUpZxmymouh eo7mWD9YUpZxmymouh2 = enumerator.Current;
-				if (eo7mWD9YUpZxmymouh2.Equals(eo7mWD9YUpZxmymouh))
+				QfgHoDVieLt45ZK0Um qfgHoDVieLt45ZK0Um2 = enumerator.Current;
+				if (qfgHoDVieLt45ZK0Um2.Equals(qfgHoDVieLt45ZK0Um))
 				{
 					return false;
 				}
@@ -471,20 +471,20 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		return true;
 	}
 
-	private void method_25()
+	private void method_24()
 	{
-		if (!this.method_24(this.ObsColl))
+		if (!this.method_23(this.ObsColl))
 		{
-			this.TlOhoMoLh();
+			this.method_25();
 		}
 	}
 
-	private void TlOhoMoLh()
+	private void method_25()
 	{
 		object obj = this.object_0;
 		lock (obj)
 		{
-			IEnumerator enumerator = this.list_2.GetEnumerator();
+			IEnumerator enumerator = this.list_1.GetEnumerator();
 			IEnumerator enumerator2 = this.ObsColl.GetEnumerator();
 			enumerator.Reset();
 			enumerator2.Reset();
@@ -528,52 +528,52 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 	{
 	}
 
-	public EO7mWD9YUpZxmymouh this[int index]
+	public QfgHoDVieLt45ZK0Um this[int index]
 	{
 		get
 		{
-			return this.list_2[index];
+			return this.list_1[index];
 		}
 	}
 
-	public void method_30(EO7mWD9YUpZxmymouh cNRErVEj7JF8qR1rA1)
+	public void method_30(QfgHoDVieLt45ZK0Um IPEoo7PBD6CRs6Pnl3)
 	{
-		this.Add(cNRErVEj7JF8qR1rA1);
+		this.Add(IPEoo7PBD6CRs6Pnl3);
 	}
 
-	public bool method_31(out EO7mWD9YUpZxmymouh gparam_0)
+	public bool method_31(out QfgHoDVieLt45ZK0Um gparam_0)
 	{
 		object obj = this.object_0;
 		lock (obj)
 		{
-			int count = this.list_2.Count;
+			int count = this.list_1.Count;
 			if (count > 0)
 			{
-				gparam_0 = this.method_21(count - 1);
+				gparam_0 = this.method_20(count - 1);
 				return true;
 			}
 		}
-		gparam_0 = default(EO7mWD9YUpZxmymouh);
+		gparam_0 = default(QfgHoDVieLt45ZK0Um);
 		return false;
 	}
 
-	public void method_32(EO7mWD9YUpZxmymouh VskZK9xnjM67WoaATb)
+	public void method_32(QfgHoDVieLt45ZK0Um XeRl2bqpYUwuFkYlwZ)
 	{
-		this.Add(VskZK9xnjM67WoaATb);
+		this.Add(XeRl2bqpYUwuFkYlwZ);
 	}
 
-	public bool method_33(out EO7mWD9YUpZxmymouh gparam_0)
+	public bool method_33(out QfgHoDVieLt45ZK0Um gparam_0)
 	{
 		object obj = this.object_0;
 		lock (obj)
 		{
-			if (this.list_2.Count > 0)
+			if (this.list_1.Count > 0)
 			{
-				gparam_0 = this.method_21(0);
+				gparam_0 = this.method_20(0);
 				return true;
 			}
 		}
-		gparam_0 = default(EO7mWD9YUpZxmymouh);
+		gparam_0 = default(QfgHoDVieLt45ZK0Um);
 		return false;
 	}
 
@@ -585,9 +585,9 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		}
 	}
 
-	bool ICollection<EO7mWD9YUpZxmymouh>.Remove(EO7mWD9YUpZxmymouh RwF9MBby2siyQq0jpU)
+	bool ICollection<QfgHoDVieLt45ZK0Um>.Remove(QfgHoDVieLt45ZK0Um dGdPgkauhwODEne2vb)
 	{
-		return this.method_15(RwF9MBby2siyQq0jpU);
+		return this.method_14(dGdPgkauhwODEne2vb);
 	}
 
 	public void CopyTo(Array array, int index)
@@ -595,9 +595,9 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		object obj = this.object_0;
 		lock (obj)
 		{
-			foreach (EO7mWD9YUpZxmymouh eo7mWD9YUpZxmymouh in this.list_2)
+			foreach (QfgHoDVieLt45ZK0Um qfgHoDVieLt45ZK0Um in this.list_1)
 			{
-				array.SetValue(eo7mWD9YUpZxmymouh, index++);
+				array.SetValue(qfgHoDVieLt45ZK0Um, index++);
 			}
 		}
 	}
@@ -610,17 +610,17 @@ public class GClass4<EO7mWD9YUpZxmymouh> : ICollection<EO7mWD9YUpZxmymouh>, IEnu
 		}
 	}
 
-	private List<EO7mWD9YUpZxmymouh> list_0;
+	private List<QfgHoDVieLt45ZK0Um> list_0;
 
-	private List<EO7mWD9YUpZxmymouh> list_1;
+	private List<QfgHoDVieLt45ZK0Um> GTGBTRBRZ;
 
 	private bool bool_0;
 
 	private readonly object object_0;
 
-	protected List<EO7mWD9YUpZxmymouh> list_2;
+	protected List<QfgHoDVieLt45ZK0Um> list_1;
 
-	private readonly ObservableCollection<EO7mWD9YUpZxmymouh> observableCollection_0;
+	private readonly ObservableCollection<QfgHoDVieLt45ZK0Um> observableCollection_0;
 
 	private readonly ConcurrentQueue<NotifyCollectionChangedEventArgs> concurrentQueue_0;
 

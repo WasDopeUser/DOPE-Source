@@ -22,7 +22,7 @@ public class GClass573 : GInterface0
 
 	public GClass573(string string_1 = "", GClass201 gclass201_1 = null, Vector<GClass201> vector_1 = null, int int_1 = 0, double double_1 = 0.0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

@@ -19,7 +19,7 @@ namespace DOPE.UI.Converters
 
 		public BoolNegationConverter()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 	}

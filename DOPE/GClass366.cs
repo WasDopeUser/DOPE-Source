@@ -22,7 +22,7 @@ public class GClass366 : GInterface0
 
 	public GClass366(int int_13 = 0, int int_14 = 0, int int_15 = 0, uint uint_1 = 0U, int int_16 = 0, int int_17 = 0, int int_18 = 0, int int_19 = 0, int int_20 = 0, string string_1 = "", int int_21 = 0, int int_22 = 0, int int_23 = 0, int int_24 = 0, int int_25 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.int_8 = int_13;

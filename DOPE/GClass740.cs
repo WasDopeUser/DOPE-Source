@@ -22,7 +22,7 @@ public class GClass740 : GInterface0
 
 	public GClass740(int int_5 = 0, int int_6 = 0, string string_2 = "", string string_3 = "", GClass201 gclass201_1 = null, GClass549 gclass549_0 = null, GClass720 gclass720_1 = null, int int_7 = 0, int int_8 = 0, int int_9 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();

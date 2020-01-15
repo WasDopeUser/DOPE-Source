@@ -22,7 +22,7 @@ public class GClass150 : GInterface0
 
 	public GClass150(int int_0 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.FromId = int_0;
 	}

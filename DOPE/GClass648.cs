@@ -22,7 +22,7 @@ public class GClass648 : GInterface0
 
 	public GClass648(Vector<GClass534> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (vector_1 == null)
 		{

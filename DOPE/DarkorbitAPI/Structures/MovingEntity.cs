@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Structures
 	{
 		protected MovingEntity(int int_0, int int_1)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor(int_0, int_1);
 		}
 
@@ -153,17 +153,17 @@ namespace DarkorbitAPI.Structures
 			return (int)Math.Round((double)(Vector2.Distance(new Vector2((float)int_0, (float)int_1), new Vector2((float)int_2, (float)int_3)) * 1000f / float_0));
 		}
 
-		public int method_3(int int_0, int int_1, float float_0)
+		public int gxuDygkmcP(int int_0, int int_1, float float_0)
 		{
 			return (int)Math.Round((double)(Vector2.Distance(this.Position, new Vector2((float)int_0, (float)int_1)) * 1000f / float_0));
 		}
 
-		public int method_4(int int_0, int int_1, int int_2)
+		public int method_3(int int_0, int int_1, int int_2)
 		{
-			return this.method_2(int_0, int_1, this.method_3(int_0, int_1, (float)int_2 * 0.97f));
+			return this.method_2(int_0, int_1, this.gxuDygkmcP(int_0, int_1, (float)int_2 * 0.97f));
 		}
 
-		public void eoFcuFbgDt(int int_0, int int_1, int int_2, int int_3, int int_4)
+		public void method_4(int int_0, int int_1, int int_2, int int_3, int int_4)
 		{
 			object syncRoot = this.SyncRoot;
 			lock (syncRoot)
@@ -171,7 +171,7 @@ namespace DarkorbitAPI.Structures
 				this.Reset();
 				this._posX = int_0;
 				this._posY = int_1;
-				this.method_4(int_2, int_3, int_4);
+				this.method_3(int_2, int_3, int_4);
 			}
 		}
 

@@ -22,7 +22,7 @@ public class GClass652 : GClass651, GInterface0
 
 	public GClass652(int int_0 = 0, uint uint_1 = 0U)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.MapId = int_0;
 		this.uint_0 = uint_1;

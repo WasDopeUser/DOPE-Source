@@ -22,7 +22,7 @@ public class GClass636 : GInterface0
 
 	public GClass636(GClass761 gclass761_1 = null, int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass761_1 == null)
 		{

@@ -22,7 +22,7 @@ public class GClass273 : GClass271, GInterface0
 
 	public GClass273(string string_1 = "", string string_2 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Value = "";
 		base..ctor(string_1);
 		this.Value = string_2;

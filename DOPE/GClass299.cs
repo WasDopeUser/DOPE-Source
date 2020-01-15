@@ -22,7 +22,7 @@ public class GClass299 : GInterface0
 
 	public GClass299(uint uint_1 = 0U, double double_2 = 0.0, double double_3 = 0.0, Vector<GClass550> vector_2 = null, Vector<GClass550> vector_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.double_1 = double_2;

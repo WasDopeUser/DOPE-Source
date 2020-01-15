@@ -22,7 +22,7 @@ public class GClass655 : GInterface0
 
 	public GClass655(uint uint_1 = 0U, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.bool_0 = bool_1;

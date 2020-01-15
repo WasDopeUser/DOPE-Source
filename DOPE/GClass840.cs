@@ -11,7 +11,7 @@ public class GClass840 : GClass838
 {
 	public GClass840(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(gclass822_1);
 		this.list_1 = new List<Rectangle>
 		{
@@ -19,7 +19,7 @@ public class GClass840 : GClass838
 		};
 	}
 
-	public override bool vmethod_19(GClass824 gclass824_0)
+	public override bool vmethod_18(GClass824 gclass824_0)
 	{
 		return gclass824_0 is GClass826;
 	}
@@ -47,10 +47,10 @@ public class GClass840 : GClass838
 		return this.vmethod_17()[0].Contains((int)position.X, (int)position.Y) && base.vmethod_8(npcShip_0);
 	}
 
-	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_2 = false, bool bool_3 = true)
+	public override Vector2? vmethod_19(Vector2 vector2_1, out Gate gate_0, bool bool_2 = false, bool bool_3 = true)
 	{
 		gate_0 = null;
-		List<KeyValuePair<int, Gate>> list = base.C.Map.Gates.Where(new Func<KeyValuePair<int, Gate>, bool>(this.method_17)).OrderBy(new Func<KeyValuePair<int, Gate>, int>(GClass840.<>c.<>c_0.method_0)).ToList<KeyValuePair<int, Gate>>();
+		List<KeyValuePair<int, Gate>> list = base.C.Map.Gates.Where(new Func<KeyValuePair<int, Gate>, bool>(this.method_21)).OrderBy(new Func<KeyValuePair<int, Gate>, int>(GClass840.<>c.<>c_0.method_0)).ToList<KeyValuePair<int, Gate>>();
 		if (list.Count != 2)
 		{
 			return null;
@@ -81,7 +81,7 @@ public class GClass840 : GClass838
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass840()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass840.list_0 = new List<Rectangle>
 		{
 			new Rectangle(12000, 18200, 20350, 7300)
@@ -89,7 +89,7 @@ public class GClass840 : GClass838
 	}
 
 	[CompilerGenerated]
-	private bool method_17(KeyValuePair<int, Gate> keyValuePair_0)
+	private bool method_21(KeyValuePair<int, Gate> keyValuePair_0)
 	{
 		return keyValuePair_0.Value.FactionId == base.C.Hero.FactionId;
 	}

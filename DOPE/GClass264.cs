@@ -22,7 +22,7 @@ public class GClass264 : GInterface0
 
 	public GClass264(GClass132 gclass132_1 = null, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, bool bool_0 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass132_1 == null)
 		{

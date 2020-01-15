@@ -10,12 +10,12 @@ public static class GClass783
 {
 	static GClass783()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		GClass783.httpClient_0 = new HttpClient();
 		GClass783.httpClient_0.DefaultRequestHeaders.ConnectionClose = new bool?(true);
 	}
 
-	public static bool ioefQoajwi(int int_0, int int_1, string string_0, out DateTimeOffset dateTimeOffset_0, out GClass783.GEnum9 genum9_0, string string_1 = "basic")
+	public static bool smethod_0(int int_0, int int_1, string string_0, out DateTimeOffset dateTimeOffset_0, out GClass783.GEnum9 genum9_0, string string_1 = "basic")
 	{
 		genum9_0 = GClass783.GEnum9.Unknown;
 		dateTimeOffset_0 = DateTimeOffset.MaxValue;
@@ -62,7 +62,7 @@ public static class GClass783
 				{
 					result3 = false;
 				}
-				else if (!GClass783.smethod_0(byte_2, byte_))
+				else if (!GClass783.smethod_1(byte_2, byte_))
 				{
 					result3 = false;
 				}
@@ -84,7 +84,7 @@ public static class GClass783
 		return result3;
 	}
 
-	private static bool smethod_0(byte[] byte_0, byte[] byte_1)
+	private static bool smethod_1(byte[] byte_0, byte[] byte_1)
 	{
 		bool result;
 		using (RSACryptoServiceProvider rsacryptoServiceProvider = new RSACryptoServiceProvider())

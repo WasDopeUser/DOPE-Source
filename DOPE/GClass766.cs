@@ -22,7 +22,7 @@ public class GClass766 : GClass765, GInterface0
 
 	public GClass766(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0, int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(double_3, double_4, double_5);
 		this.int_1 = int_3;
 		this.int_0 = int_4;

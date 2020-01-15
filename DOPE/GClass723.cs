@@ -22,7 +22,7 @@ public class GClass723 : GClass722, GInterface0
 
 	public GClass723(double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_0 = double_1;
 	}

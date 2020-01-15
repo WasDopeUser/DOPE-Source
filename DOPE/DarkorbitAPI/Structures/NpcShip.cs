@@ -124,14 +124,14 @@ namespace DarkorbitAPI.Structures
 			base.Init(gclass265_0);
 			if (gclass265_0.bool_2)
 			{
-				this.Type = NpcUtils.NpcType.smethod_3(base.Name);
+				this.Type = NpcUtils.NpcType.smethod_2(base.Name);
 			}
 			this.Range = SecurityManager.smethod_3(this);
 		}
 
 		public NpcShip()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 		}
 

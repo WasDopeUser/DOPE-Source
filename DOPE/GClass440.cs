@@ -20,17 +20,17 @@ public class GClass440 : GInterface0
 		}
 	}
 
-	public GClass440(GClass761 gclass761_1 = null, uint uint_1 = 0U, double double_1 = 0.0)
+	public GClass440(GClass761 gclass761_0 = null, uint uint_1 = 0U, double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		if (gclass761_1 == null)
+		if (gclass761_0 == null)
 		{
-			this.gclass761_0 = new GClass761(0U);
+			this.mRaZmxoyOa = new GClass761(0U);
 		}
 		else
 		{
-			this.gclass761_0 = gclass761_1;
+			this.mRaZmxoyOa = gclass761_0;
 		}
 		this.uint_0 = uint_1;
 		this.double_0 = double_1;
@@ -51,8 +51,8 @@ public class GClass440 : GInterface0
 		binaryStream_0.smethod_1();
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		this.double_0 = binaryStream_0.ReadDouble();
-		this.gclass761_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass761);
-		this.gclass761_0.imethod_1(binaryStream_0);
+		this.mRaZmxoyOa = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass761);
+		this.mRaZmxoyOa.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -66,12 +66,12 @@ public class GClass440 : GInterface0
 		binaryStream_0.smethod_7(-26824);
 		binaryStream_0.smethod_6(this.uint_0);
 		binaryStream_0.WriteDouble(this.double_0);
-		this.gclass761_0.imethod_2(binaryStream_0);
+		this.mRaZmxoyOa.imethod_2(binaryStream_0);
 	}
 
 	public uint uint_0;
 
 	public double double_0;
 
-	public GClass761 gclass761_0;
+	public GClass761 mRaZmxoyOa;
 }

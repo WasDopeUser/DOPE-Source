@@ -22,7 +22,7 @@ public class GClass391 : GInterface0
 
 	public GClass391(GClass425 gclass425_1 = null, bool bool_2 = false, bool bool_3 = false, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass425_1 == null)

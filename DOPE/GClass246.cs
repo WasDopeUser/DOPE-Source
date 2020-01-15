@@ -22,7 +22,7 @@ public class GClass246 : GInterface0
 
 	public GClass246(string string_1 = "", GClass141 gclass141_1 = null, string string_2 = "", GClass684 gclass684_1 = null, uint uint_1 = 0U, Vector<int> vector_1 = null, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.Name = "";
 		base..ctor();

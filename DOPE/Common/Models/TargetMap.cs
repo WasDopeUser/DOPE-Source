@@ -45,11 +45,11 @@ namespace DOPE.Common.Models
 		[NotMapped]
 		[Display(Name = "GG VoT")]
 		GG_VoT = 227,
-		[NotMapped]
 		[Display(Name = "GG QZ")]
-		GG_QZ = 229,
 		[NotMapped]
+		GG_QZ = 229,
 		[Display(Name = "GG Cold Wave")]
+		[NotMapped]
 		GG_ColdWave = 77,
 		[Display(Name = "GG Kuiper")]
 		GG_Kuiper = 300,
@@ -63,8 +63,8 @@ namespace DOPE.Common.Models
 		W44,
 		[Display(Name = "4-5")]
 		W45 = 29,
-		[Display(Name = "5-1")]
 		[NotMapped]
+		[Display(Name = "5-1")]
 		P51 = 91,
 		[Display(Name = "5-2")]
 		P52,

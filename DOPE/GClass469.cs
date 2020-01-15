@@ -22,7 +22,7 @@ public class GClass469 : GInterface0
 
 	public GClass469(string string_1 = "", double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

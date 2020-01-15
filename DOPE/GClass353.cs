@@ -20,13 +20,13 @@ public class GClass353 : GInterface0
 		}
 	}
 
-	public GClass353(int int_3 = 0, int int_4 = 0, bool bool_1 = false, int int_5 = 0, GClass318 gclass318_1 = null)
+	public GClass353(int int_3 = 0, int int_4 = 0, bool bool_0 = false, int int_5 = 0, GClass318 gclass318_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_3;
 		this.int_1 = int_4;
-		this.bool_0 = bool_1;
+		this.cushpfCta3 = bool_0;
 		this.int_2 = int_5;
 		if (gclass318_1 == null)
 		{
@@ -57,7 +57,7 @@ public class GClass353 : GInterface0
 		binaryStream_0.smethod_1();
 		this.int_2 = binaryStream_0.smethod_0();
 		this.int_2 = (this.int_2 << 8 | U.smethod_0(this.int_2, 24));
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.cushpfCta3 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -73,7 +73,7 @@ public class GClass353 : GInterface0
 		binaryStream_0.smethod_4(this.int_1 << 13 | U.smethod_0(this.int_1, 19));
 		binaryStream_0.smethod_7(4071);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 8) | this.int_2 << 24);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.cushpfCta3);
 	}
 
 	public int int_0;
@@ -84,5 +84,5 @@ public class GClass353 : GInterface0
 
 	public int int_2;
 
-	public bool bool_0;
+	public bool cushpfCta3;
 }

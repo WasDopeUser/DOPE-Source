@@ -22,7 +22,7 @@ public class GClass137 : GInterface0
 
 	public GClass137(string string_0 = "", string string_1 = "", bool bool_1 = false, Vector<GClass682> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		this.ToolTip = "";
 		base..ctor();

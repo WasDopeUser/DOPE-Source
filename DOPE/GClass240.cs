@@ -22,7 +22,7 @@ public class GClass240 : GInterface0
 
 	public GClass240(int int_4 = 0, int int_5 = 0, int int_6 = 0, bool bool_2 = false, bool bool_3 = false, int int_7 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_2 = int_4;
 		this.int_0 = int_5;

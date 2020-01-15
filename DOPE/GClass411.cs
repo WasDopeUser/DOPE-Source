@@ -20,17 +20,17 @@ public class GClass411 : GInterface0
 		}
 	}
 
-	public GClass411(Vector<GClass375> vector_0 = null, GClass521 gclass521_1 = null)
+	public GClass411(Vector<GClass375> vector_1 = null, GClass521 gclass521_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		if (vector_0 == null)
+		if (vector_1 == null)
 		{
-			this.rirGpPaDv5 = new Vector<GClass375>();
+			this.vector_0 = new Vector<GClass375>();
 		}
 		else
 		{
-			this.rirGpPaDv5 = vector_0;
+			this.vector_0 = vector_1;
 		}
 		if (gclass521_1 == null)
 		{
@@ -52,9 +52,9 @@ public class GClass411 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.rirGpPaDv5.Length > 0)
+		while (this.vector_0.Length > 0)
 		{
-			this.rirGpPaDv5.method_1();
+			this.vector_0.method_1();
 		}
 		int num = 0;
 		uint num2 = (uint)binaryStream_0.smethod_0();
@@ -62,7 +62,7 @@ public class GClass411 : GInterface0
 		{
 			GClass375 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass375;
 			gclass.imethod_1(binaryStream_0);
-			this.rirGpPaDv5.method_0(gclass);
+			this.vector_0.method_0(gclass);
 			num++;
 		}
 		this.gclass521_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass521);
@@ -77,15 +77,15 @@ public class GClass411 : GInterface0
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.rirGpPaDv5.Length);
-		foreach (GClass375 gclass in this.rirGpPaDv5)
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass375 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
 		this.gclass521_0.imethod_2(binaryStream_0);
 	}
 
-	public Vector<GClass375> rirGpPaDv5;
+	public Vector<GClass375> vector_0;
 
 	public GClass521 gclass521_0;
 }

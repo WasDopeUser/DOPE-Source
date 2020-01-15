@@ -20,9 +20,9 @@ public class GClass217 : GInterface0
 		}
 	}
 
-	public GClass217(string string_3 = "", string string_4 = "", string string_5 = "", GClass616 gclass616_1 = null, Vector<GClass558> vector_1 = null)
+	public GClass217(string string_3 = "", string string_4 = "", string string_5 = "", GClass616 gclass616_0 = null, Vector<GClass558> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";
@@ -30,13 +30,13 @@ public class GClass217 : GInterface0
 		this.string_0 = string_3;
 		this.string_1 = string_4;
 		this.string_2 = string_5;
-		if (gclass616_1 == null)
+		if (gclass616_0 == null)
 		{
-			this.gclass616_0 = new GClass616(0U);
+			this.oycnjfslHJ = new GClass616(0U);
 		}
 		else
 		{
-			this.gclass616_0 = gclass616_1;
+			this.oycnjfslHJ = gclass616_0;
 		}
 		if (vector_1 == null)
 		{
@@ -74,8 +74,8 @@ public class GClass217 : GInterface0
 			num++;
 		}
 		this.string_2 = binaryStream_0.smethod_2();
-		this.gclass616_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass616);
-		this.gclass616_0.imethod_1(binaryStream_0);
+		this.oycnjfslHJ = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass616);
+		this.oycnjfslHJ.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
 	}
 
@@ -95,7 +95,7 @@ public class GClass217 : GInterface0
 			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.smethod_3(this.string_2);
-		this.gclass616_0.imethod_2(binaryStream_0);
+		this.oycnjfslHJ.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_7(-10354);
 	}
 
@@ -107,5 +107,5 @@ public class GClass217 : GInterface0
 
 	public string string_2;
 
-	public GClass616 gclass616_0;
+	public GClass616 oycnjfslHJ;
 }

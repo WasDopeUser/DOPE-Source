@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using DarkorbitAPI.CommonStructures.Containers;
 using DarkorbitAPI.Packets.Static;
 
 namespace DarkorbitAPI.Structures
@@ -261,6 +262,8 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
+		public EnemyLocatorResultCollection EnemyLocatedList { get; }
+
 		public bool CanKamikaze
 		{
 			get
@@ -276,9 +279,10 @@ namespace DarkorbitAPI.Structures
 
 		public HeroPet()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.<Modes>k__BackingField = new Dictionary<PetMode, HeroPet.PetModeData>();
 			this.<Cooldowns>k__BackingField = new CooldownTracker<HeroPet.CooldownType>();
+			this.EnemyLocatedList = new EnemyLocatorResultCollection();
 			base..ctor();
 		}
 
@@ -326,7 +330,7 @@ namespace DarkorbitAPI.Structures
 		public void method_16(GClass220 gclass220_0)
 		{
 			this.IsAvailable = true;
-			this.Fuel = gclass220_0.nyoBmcMxhj;
+			this.Fuel = gclass220_0.int_1;
 			base.Hp = gclass220_0.int_0;
 		}
 
@@ -373,14 +377,23 @@ namespace DarkorbitAPI.Structures
 			return this.Modes.TryGetValue(petMode_0, out petModeData) && petModeData.Extra.Contains(int_0);
 		}
 
-		internal void method_21(GClass225 gclass225_0)
+		internal void pIpVfbHlqe(GClass225 gclass225_0)
 		{
 			this.EnemyLocated = new HeroPet.EnemyLocatorResult((this.Mode == PetMode.EnemyLocator) ? this.ModeExtra : 0, gclass225_0);
+			this.EnemyLocatedList.method_0(this.EnemyLocated);
+			Action<HeroPet, HeroPet.EnemyLocatorResult> enemyLocatorTick = this.EnemyLocatorTick;
+			if (enemyLocatorTick == null)
+			{
+				return;
+			}
+			enemyLocatorTick(this, this.EnemyLocated);
 		}
 
 		public event Action KamikazeDeath;
 
-		internal void method_22()
+		public event Action<HeroPet, HeroPet.EnemyLocatorResult> EnemyLocatorTick;
+
+		internal void method_21()
 		{
 			Action kamikazeDeath = this.KamikazeDeath;
 			if (kamikazeDeath == null)
@@ -418,7 +431,7 @@ namespace DarkorbitAPI.Structures
 
 			public PetModeData(GClass257 gclass257_0, PetMode petMode_0)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Extra = new List<int>();
 				this.Data = gclass257_0;
@@ -434,23 +447,26 @@ namespace DarkorbitAPI.Structures
 
 			public int Id { get; private set; }
 
+			public bool Found { get; private set; }
+
 			public NpcUtils.NpcType Type
 			{
 				get
 				{
-					return NpcUtils.NpcType.smethod_1(this.Id);
+					return NpcUtils.NpcType.obrDmrAwam(this.Id);
 				}
 			}
 
 			public EnemyLocatorResult(int int_0, GClass225 gclass225_0)
 			{
-				Class13.tMHx78BzgCM8j();
+				Class13.nIxas2ezryi9b();
 				base..ctor();
 				this.Timestamp = DateTimeOffset.Now;
+				this.Id = int_0;
 				if (gclass225_0.int_0 != -1 || gclass225_0.int_1 != -1)
 				{
 					this.Position = new Vector2((float)gclass225_0.int_0, (float)gclass225_0.int_1);
-					this.Id = int_0;
+					this.Found = true;
 				}
 			}
 		}

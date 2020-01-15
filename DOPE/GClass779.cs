@@ -22,7 +22,7 @@ public class GClass779 : GInterface0
 
 	public GClass779(GClass347 gclass347_1 = null, int int_2 = 0, int int_3 = 0, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass347_1 == null)
 		{

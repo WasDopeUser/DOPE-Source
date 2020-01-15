@@ -22,7 +22,7 @@ public class GClass781 : GInterface0
 
 	public GClass781(GClass387 gclass387_1 = null, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass387_1 == null)
 		{

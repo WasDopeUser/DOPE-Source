@@ -22,7 +22,7 @@ public class GClass170 : GInterface0
 
 	public GClass170()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

@@ -12,7 +12,7 @@ internal static class Class5
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class5()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		Class5.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("Ammo");
 		Class5.AmmoHS1 = new PropertyChangedEventArgs("AmmoHS1");
 		Class5.AmmoR1 = new PropertyChangedEventArgs("AmmoR1");

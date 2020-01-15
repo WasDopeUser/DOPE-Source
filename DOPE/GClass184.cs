@@ -20,13 +20,13 @@ public class GClass184 : GClass179, GInterface0
 		}
 	}
 
-	public GClass184(string string_1 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, bool bool_1 = false, bool bool_2 = false)
+	public GClass184(string string_1 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor(string_1, int_3, int_4);
 		this.int_2 = int_5;
-		this.UuyEpOojKU = bool_1;
 		this.bool_0 = bool_2;
+		this.bool_1 = bool_3;
 	}
 
 	public override int vmethod_0()
@@ -42,8 +42,8 @@ public class GClass184 : GClass179, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.UuyEpOojKU = binaryStream_0.ReadBoolean();
 		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
 		this.int_2 = binaryStream_0.smethod_0();
 		this.int_2 = (this.int_2 << 15 | U.smethod_0(this.int_2, 17));
 	}
@@ -57,14 +57,14 @@ public class GClass184 : GClass179, GInterface0
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.WriteBoolean(this.UuyEpOojKU);
 		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 15) | this.int_2 << 17);
 	}
 
-	public bool UuyEpOojKU;
-
 	public bool bool_0;
+
+	public bool bool_1;
 
 	public int int_2;
 }

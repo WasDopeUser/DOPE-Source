@@ -13,7 +13,7 @@ public class GClass789 : GClass788
 
 	public GClass789()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.random_0 = new Random();
 		base..ctor();
 		this.vmethod_1(new GClass787<GClass791>());
@@ -35,8 +35,8 @@ public class GClass789 : GClass788
 
 	public override void vmethod_3(DollConfig dollConfig_0, Action action_0)
 	{
-		GClass791 jwNOHKEZg8RoacT6pGw = GClass798.smethod_0(dollConfig_0);
-		this.method_0().vmethod_1(jwNOHKEZg8RoacT6pGw);
+		GClass791 kfsUB6PKgWkEDarQ9cV = GClass798.smethod_0(dollConfig_0);
+		this.method_0().vmethod_1(kfsUB6PKgWkEDarQ9cV);
 		if (action_0 != null)
 		{
 			action_0();

@@ -6,7 +6,7 @@ public sealed class GAttribute63 : Attribute
 {
 	public GAttribute63([GAttribute1] string directive)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.String_0 = directive;
 	}

@@ -22,7 +22,7 @@ public class GClass724 : GClass722, GInterface0
 
 	public GClass724(bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}

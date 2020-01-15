@@ -22,7 +22,7 @@ public class GClass280 : GInterface0
 
 	public GClass280(int int_3 = 0, int int_4 = 146, int int_5 = 1, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_3;
 		this.int_1 = int_4;

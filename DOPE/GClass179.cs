@@ -22,7 +22,7 @@ public class GClass179 : GInterface0
 
 	public GClass179(string string_1 = "", int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;

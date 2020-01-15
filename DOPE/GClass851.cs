@@ -30,7 +30,7 @@ public class GClass851 : GClass846
 
 	public GClass851(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.bool_1 = true;
 		base..ctor(gclass822_1, "SkylabWorker");
 	}

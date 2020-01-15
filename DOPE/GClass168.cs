@@ -22,7 +22,7 @@ public class GClass168 : GInterface0
 
 	public GClass168(int int_5 = 0, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.int_0 = int_5;
 		this.int_3 = int_6;

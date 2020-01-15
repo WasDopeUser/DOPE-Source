@@ -18,7 +18,7 @@ public class GClass104 : GInterface4
 		HeroPet.CooldownType int_ = (HeroPet.CooldownType)gclass222_0.int_0;
 		if (gclass222_0.State == 0U)
 		{
-			this.Pet.Cooldowns.method_1(int_, (double)(gclass222_0.vector_0.FirstOrDefault<int>() * 1000));
+			this.Pet.Cooldowns.method_1(int_, (double)(gclass222_0.GpbcoInvRv.FirstOrDefault<int>() * 1000));
 			return;
 		}
 		this.Pet.Cooldowns.Clear(int_);
@@ -31,12 +31,12 @@ public class GClass104 : GInterface4
 
 	public void method_2(GClass225 gclass225_0)
 	{
-		this.Pet.method_21(gclass225_0);
+		this.Pet.pIpVfbHlqe(gclass225_0);
 	}
 
 	public GClass104()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 }

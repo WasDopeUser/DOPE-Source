@@ -22,7 +22,7 @@ public class GClass463 : GInterface0
 
 	public GClass463(GClass761 gclass761_1 = null, double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass761_1 == null)
 		{

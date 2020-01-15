@@ -22,7 +22,7 @@ public class GClass304 : GInterface0
 
 	public GClass304(GClass201 gclass201_2 = null, GClass201 gclass201_3 = null, int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass201_2 == null)
 		{

@@ -11,34 +11,19 @@ namespace DOPE.UI.Collections
 	{
 		public AsyncObservableCollection()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this._synchronizationContext = SynchronizationContext.Current;
 			base..ctor();
 		}
 
 		public AsyncObservableCollection(IEnumerable<T> ienumerable_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this._synchronizationContext = SynchronizationContext.Current;
 			base..ctor(ienumerable_0);
 		}
 
 		protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
-		{
-			if (SynchronizationContext.Current == this._synchronizationContext)
-			{
-				this.XtnoIugbWC(e);
-				return;
-			}
-			this._synchronizationContext.Send(new SendOrPostCallback(this.XtnoIugbWC), e);
-		}
-
-		private void XtnoIugbWC(object object_0)
-		{
-			base.OnCollectionChanged((NotifyCollectionChangedEventArgs)object_0);
-		}
-
-		protected override void OnPropertyChanged(PropertyChangedEventArgs e)
 		{
 			if (SynchronizationContext.Current == this._synchronizationContext)
 			{
@@ -49,6 +34,21 @@ namespace DOPE.UI.Collections
 		}
 
 		private void method_0(object object_0)
+		{
+			base.OnCollectionChanged((NotifyCollectionChangedEventArgs)object_0);
+		}
+
+		protected override void OnPropertyChanged(PropertyChangedEventArgs e)
+		{
+			if (SynchronizationContext.Current == this._synchronizationContext)
+			{
+				this.method_1(e);
+				return;
+			}
+			this._synchronizationContext.Send(new SendOrPostCallback(this.method_1), e);
+		}
+
+		private void method_1(object object_0)
 		{
 			base.OnPropertyChanged((PropertyChangedEventArgs)object_0);
 		}

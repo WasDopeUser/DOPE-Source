@@ -22,7 +22,7 @@ public class GClass416 : GInterface0
 
 	public GClass416(string string_3 = "", Vector<GClass688> vector_1 = null, string string_4 = "", string string_5 = "", bool bool_0 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";

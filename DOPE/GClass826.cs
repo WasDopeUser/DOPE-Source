@@ -23,7 +23,7 @@ public class GClass826 : GClass824
 				return;
 			}
 			this.mapProfile_1 = value;
-			this.method_0(Class10.propertyChangedEventArgs_9);
+			this.method_0(Class10.propertyChangedEventArgs_10);
 		}
 	}
 
@@ -42,13 +42,13 @@ public class GClass826 : GClass824
 				return;
 			}
 			this.mapProfile_2 = value;
-			this.method_0(Class10.propertyChangedEventArgs_50);
+			this.method_0(Class10.propertyChangedEventArgs_52);
 		}
 	}
 
 	public GClass826(GClass822 gclass822_1)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.bool_0 = true;
 		base..ctor(gclass822_1, "Palladium", int.MinValue);
 		this.gclass840_0 = new GClass840(gclass822_1);

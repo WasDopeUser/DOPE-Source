@@ -22,7 +22,7 @@ public class GClass753 : GInterface0
 
 	public GClass753(uint uint_1 = 0U, GClass770 gclass770_2 = null, GClass770 gclass770_3 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		if (gclass770_2 == null)

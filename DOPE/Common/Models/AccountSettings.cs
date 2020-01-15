@@ -59,9 +59,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Layout(GroupName = "Account", Description = "Repair drones at >90% damage")]
 		[DefaultValue(true)]
 		[DataMember(Order = 15)]
-		[Layout(GroupName = "Account", Description = "Repair drones at >90% damage")]
 		public bool RepairDrones
 		{
 			[CompilerGenerated]
@@ -103,9 +103,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Layout(Description = "5-3 Palladium collector hangar", GroupName = "Account_Hangars")]
 		[DataMember(Order = 35)]
 		[ComboBox("$Volatile.Hangars", "$Volatile.Hangars")]
-		[Layout(Description = "5-3 Palladium collector hangar", GroupName = "Account_Hangars")]
 		public string HangarPalladiumCollect
 		{
 			[CompilerGenerated]
@@ -171,8 +171,8 @@ namespace DOPE.Common.Models
 		}
 
 		[Layout(GroupName = "Account_Credentials", Style = "password", Description = "Password")]
-		[DataMember(Order = 3)]
 		[Category("Credentials")]
+		[DataMember(Order = 3)]
 		public string Password
 		{
 			[CompilerGenerated]
@@ -192,9 +192,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Layout(GroupName = "Account_Credentials", Description = "Server (eg. int1)", Style = "readonly")]
 		[Category("Credentials")]
 		[DataMember(Order = 4)]
-		[Layout(GroupName = "Account_Credentials", Description = "Server (eg. int1)", Style = "readonly")]
 		public string Server
 		{
 			[CompilerGenerated]
@@ -215,8 +215,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 5, EmitDefaultValue = true)]
 		[Layout(GroupName = "Account_Credentials", Description = "Browser UserAgent", Style = "readonly")]
+		[DataMember(Order = 5, EmitDefaultValue = true)]
 		public string UserAgent
 		{
 			[CompilerGenerated]
@@ -236,8 +236,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 45)]
 		[Layout(GroupName = "Account_Credentials", Description = "Proxy", RightDescription = "SOCKS5 connection string\n[user:pass@]host:port\nLeave empty to disable")]
+		[DataMember(Order = 45)]
 		public string ProxyString
 		{
 			[CompilerGenerated]
@@ -277,8 +277,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Account_Resources", Description = "Collect green pirate booty")]
 		[DataMember(Order = 7)]
+		[Layout(GroupName = "Account_Resources", Description = "Collect green pirate booty")]
 		public bool CollectGreenBooty
 		{
 			[CompilerGenerated]
@@ -298,8 +298,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 8)]
 		[Layout(GroupName = "Account_Resources", Description = "Collect golden pirate booty")]
+		[DataMember(Order = 8)]
 		public bool CollectGoldBooty
 		{
 			[CompilerGenerated]
@@ -320,8 +320,8 @@ namespace DOPE.Common.Models
 		}
 
 		[DefaultValue(true)]
-		[DataMember(Order = 14, EmitDefaultValue = true)]
 		[Layout(GroupName = "Account_Resources", Description = "Automatically refine resources")]
+		[DataMember(Order = 14, EmitDefaultValue = true)]
 		public bool AutoRefine
 		{
 			[CompilerGenerated]
@@ -341,10 +341,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(60)]
-		[DataMember(Order = 38, EmitDefaultValue = true)]
-		[Range(10, 100)]
 		[Layout(GroupName = "Account_Resources", Description = "Palladium collection area width", RightDescription = "By default 60%. Increasing this number might result in your ship respawning on the left-side portal on 5-3")]
+		[DataMember(Order = 38, EmitDefaultValue = true)]
+		[DefaultValue(60)]
+		[Range(10, 100)]
 		public int PalladiumCollectionAreaWidth
 		{
 			[CompilerGenerated]
@@ -364,9 +364,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Range(0, 3000)]
 		[DataMember(Order = 41)]
 		[Layout(GroupName = "Account_Skylab", Description = "Keep X Promerium on ship")]
-		[Range(0, 3000)]
 		public int Skylab_KeepPromerium
 		{
 			[CompilerGenerated]
@@ -387,8 +387,8 @@ namespace DOPE.Common.Models
 		}
 
 		[Layout(GroupName = "Account_Skylab", Description = "Keep X Seprom on ship")]
-		[Range(0, 3000)]
 		[DataMember(Order = 42)]
+		[Range(0, 3000)]
 		public int Skylab_KeepSeprom
 		{
 			[CompilerGenerated]
@@ -450,10 +450,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(250)]
-		[Layout(GroupName = "Account_GG Spinner", Description = "Spin delay (ms)")]
 		[DataMember(Order = 40)]
 		[Range(0, 2000)]
+		[DefaultValue(250)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Spin delay (ms)")]
 		public int Spinner_SpinDelay
 		{
 			[CompilerGenerated]
@@ -515,8 +515,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Minimum Uridium", RightDescription = "Leave 0 to only use Free Energy")]
 		[DataMember(Order = 19)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Minimum Uridium", RightDescription = "Leave 0 to only use Free Energy")]
 		public int Spinner_UseUridium
 		{
 			[CompilerGenerated]
@@ -536,8 +536,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Place gates on X-1")]
 		[DataMember(Order = 20)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Place gates on X-1")]
 		public bool Spinner_PlaceGates
 		{
 			[CompilerGenerated]
@@ -620,8 +620,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Stop when either of ABG is built")]
 		[DataMember(Order = 32)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Stop when either of ABG is built")]
 		public bool Spinner_StopABG
 		{
 			[CompilerGenerated]
@@ -683,8 +683,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 24)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Zeta")]
+		[DataMember(Order = 24)]
 		public bool Spinner_Zeta
 		{
 			[CompilerGenerated]
@@ -704,8 +704,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Kappa")]
 		[DataMember(Order = 25)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Kappa")]
 		public bool Spinner_Kappa
 		{
 			[CompilerGenerated]
@@ -725,8 +725,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 26)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Lambda")]
+		[DataMember(Order = 26)]
 		public bool Spinner_Lambda
 		{
 			[CompilerGenerated]
@@ -1023,8 +1023,8 @@ namespace DOPE.Common.Models
 			base..ctor();
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

@@ -14,8 +14,8 @@ using DOPE.UI.Models;
 
 namespace DOPE.Common.Models
 {
-	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	[DataContract]
+	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	public class BotProfile : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -127,7 +127,7 @@ namespace DOPE.Common.Models
 				npc.Enabled = true;
 				npc.Priority = -1;
 			});
-			int battlerayId = NpcUtils.NpcType.smethod_3("Battleray").Id;
+			int battlerayId = NpcUtils.NpcType.smethod_2("Battleray").Id;
 			mapProfile.NpcWhitelist.First((SelectedNpcModel t) => t.NpcId == battlerayId).Enabled = false;
 		}
 
@@ -143,7 +143,7 @@ namespace DOPE.Common.Models
 				maps.Add(mapProfile2);
 			}
 			mapProfile.TargetMap = TargetMap.X6;
-			int cubikonId = NpcUtils.NpcType.smethod_3("Cubikon").Id;
+			int cubikonId = NpcUtils.NpcType.smethod_2("Cubikon").Id;
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;
@@ -198,9 +198,9 @@ namespace DOPE.Common.Models
 			}
 			mapProfile.TargetMap = TargetMap.GG_QZ;
 			mapProfile.FleeFromEnemySeen = false;
-			int kristallonId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Viral, NpcUtils.N_Kristallon).Id;
-			int bossId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_GygerimOverlord).Id;
-			int rocketId = NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_PlagueRocket).Id;
+			int kristallonId = NpcUtils.NpcType.smethod_1(NpcUtils.G_Viral, NpcUtils.N_Kristallon).Id;
+			int bossId = NpcUtils.NpcType.smethod_1(NpcUtils.G_Regular, NpcUtils.N_GygerimOverlord).Id;
+			int rocketId = NpcUtils.NpcType.smethod_1(NpcUtils.G_Regular, NpcUtils.N_PlagueRocket).Id;
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;

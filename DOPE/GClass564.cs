@@ -20,13 +20,13 @@ public class GClass564 : GInterface0
 		}
 	}
 
-	public GClass564(double double_1 = 0.0, string string_0 = "")
+	public GClass564(double double_1 = 0.0, string string_1 = "")
 	{
-		Class13.tMHx78BzgCM8j();
-		this.ivRsywZcBC = "";
+		Class13.nIxas2ezryi9b();
+		this.string_0 = "";
 		base..ctor();
 		this.double_0 = double_1;
-		this.ivRsywZcBC = string_0;
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
@@ -44,7 +44,7 @@ public class GClass564 : GInterface0
 		binaryStream_0.smethod_1();
 		this.double_0 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
-		this.ivRsywZcBC = binaryStream_0.smethod_2();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
@@ -58,10 +58,10 @@ public class GClass564 : GInterface0
 		binaryStream_0.smethod_7(-114);
 		binaryStream_0.WriteDouble(this.double_0);
 		binaryStream_0.smethod_7(-17275);
-		binaryStream_0.smethod_3(this.ivRsywZcBC);
+		binaryStream_0.smethod_3(this.string_0);
 	}
 
 	public double double_0;
 
-	public string ivRsywZcBC;
+	public string string_0;
 }

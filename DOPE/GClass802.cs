@@ -5,7 +5,7 @@ public class GClass802
 {
 	public GClass802(Vector<uint> vector_5, Vector<uint> vector_6)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.uint_1 = 4U;
 		base..ctor();
 		if (vector_5 != null)

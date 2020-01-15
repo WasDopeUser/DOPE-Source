@@ -26,7 +26,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.string_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_35);
+			this.method_0(Class10.propertyChangedEventArgs_37);
 			this.method_0(Class10.Name);
 		}
 	}
@@ -46,8 +46,8 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.gclass822_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_7);
-			this.method_0(Class10.propertyChangedEventArgs_35);
+			this.method_0(Class10.propertyChangedEventArgs_8);
+			this.method_0(Class10.propertyChangedEventArgs_37);
 			this.method_0(Class10.Context);
 		}
 	}
@@ -75,7 +75,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.botProfile_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_42);
+			this.method_0(Class10.propertyChangedEventArgs_44);
 		}
 	}
 
@@ -94,7 +94,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.mapProfile_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_38);
+			this.method_0(Class10.propertyChangedEventArgs_40);
 		}
 	}
 
@@ -113,7 +113,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.int_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_41);
+			this.method_0(Class10.propertyChangedEventArgs_43);
 		}
 	}
 
@@ -170,7 +170,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 				return;
 			}
 			this.dateTimeOffset_1 = value;
-			this.method_0(Class10.propertyChangedEventArgs_11);
+			this.method_0(Class10.propertyChangedEventArgs_12);
 		}
 	}
 
@@ -203,7 +203,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 
 	public GClass824(GClass822 gclass822_1, string string_1, int int_2 = -2147483648)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Name = string_1;
 		this.Context = gclass822_1;
@@ -406,8 +406,8 @@ public abstract class GClass824 : INotifyPropertyChanged
 		this.C.method_67(BotState.Default);
 	}
 
-	[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 	[DebuggerNonUserCode]
+	[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 	protected void method_0(PropertyChangedEventArgs propertyChangedEventArgs_0)
 	{
 		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

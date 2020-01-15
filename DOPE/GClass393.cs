@@ -22,7 +22,7 @@ public class GClass393 : GInterface0
 
 	public GClass393(double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.double_0 = double_1;
 	}

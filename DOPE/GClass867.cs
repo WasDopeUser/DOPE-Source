@@ -8,11 +8,11 @@ using PErkava;
 
 public class GClass867 : INotifyPropertyChanged
 {
-	protected void method_0<wdsUew4RW6CVEwtxwRD>(ref wdsUew4RW6CVEwtxwRD gparam_0, wdsUew4RW6CVEwtxwRD KDXoXb4pv4OHve2wGE7, [CallerMemberName] string name = null)
+	protected void method_0<fOY3RQfNLe4bkcTrNrk>(ref fOY3RQfNLe4bkcTrNrk gparam_0, fOY3RQfNLe4bkcTrNrk Bn2BMUfnMorSK9xFWWg, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<wdsUew4RW6CVEwtxwRD>.Default.Equals(gparam_0, KDXoXb4pv4OHve2wGE7))
+		if (!EqualityComparer<fOY3RQfNLe4bkcTrNrk>.Default.Equals(gparam_0, Bn2BMUfnMorSK9xFWWg))
 		{
-			gparam_0 = KDXoXb4pv4OHve2wGE7;
+			gparam_0 = Bn2BMUfnMorSK9xFWWg;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
 			{
@@ -20,7 +20,7 @@ public class GClass867 : INotifyPropertyChanged
 			}
 			if (name == "Enabled")
 			{
-				if ((bool)((object)KDXoXb4pv4OHve2wGE7))
+				if ((bool)((object)Bn2BMUfnMorSK9xFWWg))
 				{
 					PErkava.smethod_5(this);
 					return;
@@ -98,7 +98,7 @@ public class GClass867 : INotifyPropertyChanged
 
 	public GClass867()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Servers = new HashSet<string>();
 		this.dictionary_0 = new Dictionary<int, string>();
 		base..ctor();

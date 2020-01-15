@@ -46,7 +46,7 @@ namespace DarkorbitAPI
 			return 540;
 		}
 
-		public bool vqjdpyGic1(Map map_0, Entity entity_0)
+		public bool method_0(Map map_0, Entity entity_0)
 		{
 			return entity_0.PosX >= 0 && entity_0.PosX <= map_0.MapSize.Width && entity_0.PosY >= 0 && entity_0.PosY <= map_0.MapSize.Height;
 		}
@@ -56,7 +56,7 @@ namespace DarkorbitAPI
 			return SecurityManager.smethod_0(ship_0);
 		}
 
-		public string method_0()
+		public string method_1()
 		{
 			string text = this.Game.Settings.Use3D ? "3D" : "2D";
 			return string.Format("{0} {1}x{2} {3}", new object[]
@@ -70,7 +70,7 @@ namespace DarkorbitAPI
 
 		public SecurityManager(GameManager gameManager_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.HashBlockList = new CooldownTracker<string>();
 			this.Random = new Random();
 			base..ctor();
@@ -79,33 +79,33 @@ namespace DarkorbitAPI
 
 		public GameManager Game { get; }
 
-		public bool method_1(Vector2 vector2_0, int int_0, int int_1, int int_2 = 0)
+		public bool method_2(Vector2 vector2_0, int int_0, int int_1, int int_2 = 0)
 		{
 			int num = (int)vector2_0.X;
 			int num2 = (int)vector2_0.Y;
 			return Math.Abs(num - int_0) < 960 - (75 + int_2) && Math.Abs(num2 - int_1) < 540 - (50 + int_2);
 		}
 
-		public bool method_2(Vector2 vector2_0, Vector2 vector2_1, int int_0 = 0)
+		public bool method_3(Vector2 vector2_0, Vector2 vector2_1, int int_0 = 0)
 		{
-			return this.method_1(vector2_0, (int)vector2_1.X, (int)vector2_1.Y, 0);
+			return this.method_2(vector2_0, (int)vector2_1.X, (int)vector2_1.Y, 0);
 		}
 
 		public int LastChunkX { get; set; }
 
 		public int LastChunkY { get; set; }
 
-		public Vector2 method_3(Map map_0, Rectangle rectangle_0)
+		public Vector2 method_4(Map map_0, Rectangle rectangle_0)
 		{
-			return this.method_5(map_0, this.LastChunkX = (this.LastChunkX + this.Random.Next(1, 5)) % 5, this.LastChunkY = (this.LastChunkY + this.Random.Next(0, 4)) % 4, rectangle_0);
+			return this.method_6(map_0, this.LastChunkX = (this.LastChunkX + this.Random.Next(1, 5)) % 5, this.LastChunkY = (this.LastChunkY + this.Random.Next(0, 4)) % 4, rectangle_0);
 		}
 
-		public Vector2 method_4(Map map_0, List<Rectangle> list_0)
+		public Vector2 method_5(Map map_0, List<Rectangle> list_0)
 		{
-			return this.method_3(map_0, list_0[this.Random.Next(0, list_0.Count)]);
+			return this.method_4(map_0, list_0[this.Random.Next(0, list_0.Count)]);
 		}
 
-		public Vector2 method_5(Map map_0, int int_0, int int_1, Rectangle rectangle_0)
+		public Vector2 method_6(Map map_0, int int_0, int int_1, Rectangle rectangle_0)
 		{
 			SecurityManager.<>c__DisplayClass32_0 CS$<>8__locals1 = new SecurityManager.<>c__DisplayClass32_0();
 			CS$<>8__locals1.int_1 = int_0;
@@ -114,7 +114,7 @@ namespace DarkorbitAPI
 			CS$<>8__locals1.int_2 = rectangle_0.Height / 4;
 			if (map_0.Gates.Any(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_0)))
 			{
-				return this.method_3(map_0, rectangle_0);
+				return this.method_4(map_0, rectangle_0);
 			}
 			int num = this.Random.Next(0, CS$<>8__locals1.int_0) + rectangle_0.X;
 			int num2 = this.Random.Next(0, CS$<>8__locals1.int_2) + rectangle_0.Y;
@@ -123,7 +123,7 @@ namespace DarkorbitAPI
 			Vector2 vector = new Vector2((float)num3, (float)num4);
 			if (map_0.Grid.method_7(vector))
 			{
-				return this.method_3(map_0, rectangle_0);
+				return this.method_4(map_0, rectangle_0);
 			}
 			return vector;
 		}
@@ -132,7 +132,7 @@ namespace DarkorbitAPI
 
 		static SecurityManager()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			SecurityManager.NpcRangesRegular = new Dictionary<NpcUtils.NpcClass, int>
 			{
 				{
@@ -357,7 +357,7 @@ namespace DarkorbitAPI
 			};
 		}
 
-		public bool method_6(Collectible collectible_0, bool bool_0 = false)
+		public bool method_7(Collectible collectible_0, bool bool_0 = false)
 		{
 			DateTime now = DateTime.Now;
 			string hash = collectible_0.Hash;
@@ -371,15 +371,15 @@ namespace DarkorbitAPI
 			return false;
 		}
 
-		public bool method_7(int int_0)
+		public bool method_8(int int_0)
 		{
 			return this.Random.Next(0, int_0) == 0;
 		}
 
-		public Vector2 method_8(Vector2 vector2_0, int int_0, int int_1, int int_2 = 640, int int_3 = 360, int int_4 = 25, int int_5 = 25, int int_6 = 7)
+		public Vector2 method_9(Vector2 vector2_0, int int_0, int int_1, int int_2 = 640, int int_3 = 360, int int_4 = 25, int int_5 = 25, int int_6 = 7)
 		{
 			Vector2 vector = new Vector2((float)int_0, (float)int_1);
-			if (!this.method_1(vector2_0, int_0, int_1, 0))
+			if (!this.method_2(vector2_0, int_0, int_1, 0))
 			{
 				int num = (int)((float)int_0 - vector2_0.X);
 				int num2 = (int)((float)int_1 - vector2_0.Y);
@@ -400,39 +400,39 @@ namespace DarkorbitAPI
 					num6 = (int)((float)num6 * ((float)int_2 / (float)num5));
 					num5 = int_2;
 				}
-				return this.method_10(new Vector2(vector2_0.X + (float)(num5 * num3), vector2_0.Y + (float)(num6 * num4)), int_4, int_5);
+				return this.method_11(new Vector2(vector2_0.X + (float)(num5 * num3), vector2_0.Y + (float)(num6 * num4)), int_4, int_5);
 			}
-			if (int_6 > 0 && this.method_7(int_6))
+			if (int_6 > 0 && this.method_8(int_6))
 			{
-				return this.method_10(vector, int_4, int_5);
+				return this.method_11(vector, int_4, int_5);
 			}
 			return vector;
 		}
 
-		public Vector2 method_9(Vector2 vector2_0, int int_0, int int_1)
+		public Vector2 method_10(Vector2 vector2_0, int int_0, int int_1)
 		{
 			Vector2 vector = new Vector2((float)int_0, (float)int_1);
-			if (!this.method_1(vector2_0, int_0, int_1, 0))
+			if (!this.method_2(vector2_0, int_0, int_1, 0))
 			{
 				int num = (int)((float)int_0 - vector2_0.X);
 				int num2 = (int)((float)int_1 - vector2_0.Y);
 				int num3 = Math.Min(Math.Abs(num), 640) * ((num >= 0) ? 1 : -1);
 				int num4 = Math.Min(Math.Abs(num2), 360) * ((num2 >= 0) ? 1 : -1);
-				return this.method_10(new Vector2(vector2_0.X + (float)num3, vector2_0.Y + (float)num4), 25, 25);
+				return this.method_11(new Vector2(vector2_0.X + (float)num3, vector2_0.Y + (float)num4), 25, 25);
 			}
-			if (this.method_7(15))
+			if (this.method_8(15))
 			{
-				return this.method_10(vector, 50, 50);
+				return this.method_11(vector, 50, 50);
 			}
 			return vector;
 		}
 
-		public Vector2 method_10(Vector2 vector2_0, int int_0 = 50, int int_1 = 50)
+		public Vector2 method_11(Vector2 vector2_0, int int_0 = 50, int int_1 = 50)
 		{
-			return this.method_11((int)vector2_0.X, (int)vector2_0.Y, int_0, int_1);
+			return this.method_12((int)vector2_0.X, (int)vector2_0.Y, int_0, int_1);
 		}
 
-		public Vector2 method_11(int int_0, int int_1, int int_2 = 50, int int_3 = 50)
+		public Vector2 method_12(int int_0, int int_1, int int_2 = 50, int int_3 = 50)
 		{
 			int num;
 			int num2;

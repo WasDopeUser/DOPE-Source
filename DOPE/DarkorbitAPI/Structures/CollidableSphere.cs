@@ -13,7 +13,7 @@ namespace DarkorbitAPI.Structures
 
 		public CollidableSphere(CollidableType collidableType_0, string string_0, Vector2 vector2_0, int int_0)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor(collidableType_0, 0, string_0);
 			this.Center = vector2_0;
 			this.Radius = int_0;

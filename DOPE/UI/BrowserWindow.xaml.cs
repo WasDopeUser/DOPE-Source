@@ -81,7 +81,7 @@ namespace DOPE.UI
 
 		public BrowserWindow(string string_0, string string_1, string string_2)
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();

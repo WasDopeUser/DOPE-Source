@@ -14,7 +14,7 @@ public sealed class GClass859 : IDisposable
 
 	public GClass859()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.window_0 = new GClass859.Window();
 		base..ctor();
 		this.window_0.method_0(new EventHandler<GEventArgs0>(this.method_3));
@@ -86,7 +86,7 @@ public sealed class GClass859 : IDisposable
 	{
 		public Window()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			base..ctor();
 			this.CreateHandle(new CreateParams());
 		}
@@ -141,7 +141,7 @@ public sealed class GClass859 : IDisposable
 		// Note: this type is marked as 'beforefieldinit'.
 		static Window()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			GClass859.Window.int_0 = 786;
 		}
 

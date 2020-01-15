@@ -22,7 +22,7 @@ public class GClass560 : GInterface0
 
 	public GClass560(string string_3 = "", int int_2 = 0, string string_4 = "", int int_3 = 0, string string_5 = "")
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";

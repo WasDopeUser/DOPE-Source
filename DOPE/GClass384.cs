@@ -22,7 +22,7 @@ public class GClass384 : GInterface0
 
 	public GClass384(int int_0 = 0, int int_1 = 0, double double_1 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Credits = int_0;
 		this.Uridium = int_1;

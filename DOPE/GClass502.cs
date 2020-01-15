@@ -22,7 +22,7 @@ public class GClass502 : GInterface0
 
 	public GClass502(int int_5 = 0, int int_6 = 0, string string_1 = "", GClass614 gclass614_0 = null, GClass720 gclass720_1 = null, int int_7 = 0, int int_8 = 0, int int_9 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		this.int_1 = int_5;

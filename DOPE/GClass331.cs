@@ -22,7 +22,7 @@ public class GClass331 : GInterface0
 
 	public GClass331(int int_1 = 0, int int_2 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.Id = int_1;
 		this.int_0 = int_2;

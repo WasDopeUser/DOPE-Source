@@ -79,7 +79,7 @@ namespace DOPE.UI
 
 		public MainWindow()
 		{
-			Class13.tMHx78BzgCM8j();
+			Class13.nIxas2ezryi9b();
 			this._lock = new object();
 			this.<BotControllers>k__BackingField = new GClass4<GClass852>();
 			base..ctor();

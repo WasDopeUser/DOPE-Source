@@ -22,7 +22,7 @@ public class GClass513 : GInterface0
 
 	public GClass513(GClass486 gclass486_1 = null, Vector<GClass645> vector_2 = null, Vector<GClass645> vector_3 = null, double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass486_1 == null)
 		{

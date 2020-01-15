@@ -20,12 +20,12 @@ public class GClass230 : GInterface0
 		}
 	}
 
-	public GClass230(int int_1 = 0, int int_2 = 0)
+	public GClass230(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
-		this.int_0 = int_1;
-		this.eiaBfDdiqn = int_2;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
@@ -42,8 +42,8 @@ public class GClass230 : GInterface0
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
-		this.eiaBfDdiqn = binaryStream_0.smethod_0();
-		this.eiaBfDdiqn = (this.eiaBfDdiqn << 12 | U.smethod_0(this.eiaBfDdiqn, 20));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 12 | U.smethod_0(this.int_1, 20));
 		binaryStream_0.smethod_1();
 	}
 
@@ -56,11 +56,11 @@ public class GClass230 : GInterface0
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		binaryStream_0.smethod_4(U.smethod_0(this.eiaBfDdiqn, 12) | this.eiaBfDdiqn << 20);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 12) | this.int_1 << 20);
 		binaryStream_0.smethod_7(7541);
 	}
 
 	public int int_0;
 
-	public int eiaBfDdiqn;
+	public int int_1;
 }

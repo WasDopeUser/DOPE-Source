@@ -22,7 +22,7 @@ public class GClass348 : GInterface0
 
 	public GClass348(string string_0 = "", Vector<GClass757> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.Name = "";
 		base..ctor();
 		this.Name = string_0;

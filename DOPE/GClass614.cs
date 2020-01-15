@@ -20,15 +20,15 @@ public class GClass614 : GInterface0
 		}
 	}
 
-	public GClass614(int int_1 = 0, double double_1 = 0.0, double double_2 = 0.0, string string_2 = "", string string_3 = "", GClass708 gclass708_0 = null, bool bool_1 = false)
+	public GClass614(int int_1 = 0, double double_2 = 0.0, double double_3 = 0.0, string string_2 = "", string string_3 = "", GClass708 gclass708_0 = null, bool bool_1 = false)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
 		this.int_0 = int_1;
-		this.double_0 = double_1;
-		this.EhlEugrGfW = double_2;
+		this.double_1 = double_2;
+		this.double_0 = double_3;
 		this.string_0 = string_2;
 		this.string_1 = string_3;
 		if (gclass708_0 == null)
@@ -59,8 +59,8 @@ public class GClass614 : GInterface0
 		this.State.imethod_1(binaryStream_0);
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.string_1 = binaryStream_0.smethod_2();
-		this.EhlEugrGfW = (double)binaryStream_0.smethod_10();
 		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.double_1 = (double)binaryStream_0.smethod_10();
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
 	}
@@ -77,8 +77,8 @@ public class GClass614 : GInterface0
 		this.State.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_9(this.EhlEugrGfW);
 		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_9(this.double_1);
 		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
 	}
 
@@ -90,9 +90,9 @@ public class GClass614 : GInterface0
 
 	public string string_1;
 
-	public double EhlEugrGfW;
-
 	public double double_0;
+
+	public double double_1;
 
 	public int int_0;
 }

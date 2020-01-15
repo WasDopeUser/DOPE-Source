@@ -20,9 +20,9 @@ public class GClass403 : GClass402, GInterface0
 		}
 	}
 
-	public GClass403(GClass703 gclass703_1 = null, GClass635 gclass635_1 = null, GClass540 gclass540_0 = null)
+	public GClass403(GClass703 gclass703_1 = null, GClass635 gclass635_1 = null, GClass540 gclass540_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		if (gclass703_1 == null)
 		{
@@ -40,12 +40,12 @@ public class GClass403 : GClass402, GInterface0
 		{
 			this.gclass635_0 = gclass635_1;
 		}
-		if (gclass540_0 == null)
+		if (gclass540_1 == null)
 		{
-			this.enlwjTqbiV = new GClass540("", 0.0, null);
+			this.gclass540_0 = new GClass540("", 0.0, null);
 			return;
 		}
-		this.enlwjTqbiV = gclass540_0;
+		this.gclass540_0 = gclass540_1;
 	}
 
 	public override int vmethod_0()
@@ -63,8 +63,8 @@ public class GClass403 : GClass402, GInterface0
 		base.imethod_1(binaryStream_0);
 		this.gclass703_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass703);
 		this.gclass703_0.imethod_1(binaryStream_0);
-		this.enlwjTqbiV = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass540);
-		this.enlwjTqbiV.imethod_1(binaryStream_0);
+		this.gclass540_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass540);
+		this.gclass540_0.imethod_1(binaryStream_0);
 		this.gclass635_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass635);
 		this.gclass635_0.imethod_1(binaryStream_0);
 	}
@@ -79,13 +79,13 @@ public class GClass403 : GClass402, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		this.gclass703_0.imethod_2(binaryStream_0);
-		this.enlwjTqbiV.imethod_2(binaryStream_0);
+		this.gclass540_0.imethod_2(binaryStream_0);
 		this.gclass635_0.imethod_2(binaryStream_0);
 	}
 
 	public GClass703 gclass703_0;
 
-	public GClass540 enlwjTqbiV;
+	public GClass540 gclass540_0;
 
 	public GClass635 gclass635_0;
 }

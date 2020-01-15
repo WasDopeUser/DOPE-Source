@@ -22,7 +22,7 @@ public class GClass462 : GInterface0
 
 	public GClass462()
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 	}
 

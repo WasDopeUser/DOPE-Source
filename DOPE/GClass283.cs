@@ -22,7 +22,7 @@ public class GClass283 : GInterface0
 
 	public GClass283(uint uint_1 = 0U, int int_1 = 0)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		base..ctor();
 		this.uint_0 = uint_1;
 		this.int_0 = int_1;

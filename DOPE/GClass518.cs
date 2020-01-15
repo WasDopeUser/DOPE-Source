@@ -22,7 +22,7 @@ public class GClass518 : GInterface0
 
 	public GClass518(GClass631 gclass631_1 = null, string string_1 = "", Vector<GClass332> vector_1 = null)
 	{
-		Class13.tMHx78BzgCM8j();
+		Class13.nIxas2ezryi9b();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass631_1 == null)
