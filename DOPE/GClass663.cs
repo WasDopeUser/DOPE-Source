@@ -8,7 +8,7 @@ public class GClass663 : GClass660, GInterface0
 	{
 		get
 		{
-			return 28075;
+			return 16712;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass663 : GClass660, GInterface0
 
 	public GClass663(string string_1 = "", double double_1 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(string_1);
 		this.double_0 = double_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 28075;
+		return 16712;
 	}
 
 	public override int vmethod_1()
@@ -46,7 +46,7 @@ public class GClass663 : GClass660, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28075);
+		binaryStream_0.smethod_7(16712);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -54,7 +54,7 @@ public class GClass663 : GClass660, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.smethod_9(this.double_0);
-		binaryStream_0.smethod_7(-17101);
+		binaryStream_0.smethod_7(-14048);
 	}
 
 	public double double_0;

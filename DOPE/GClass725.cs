@@ -8,7 +8,7 @@ public class GClass725 : GClass722, GInterface0
 	{
 		get
 		{
-			return 17246;
+			return 16486;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass725 : GClass722, GInterface0
 
 	public GClass725(double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.double_0 = double_2;
 		this.double_1 = double_3;
@@ -30,7 +30,7 @@ public class GClass725 : GClass722, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 17246;
+		return 16486;
 	}
 
 	public override int vmethod_1()
@@ -41,23 +41,19 @@ public class GClass725 : GClass722, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.double_0 = binaryStream_0.ReadDouble();
 		this.double_1 = binaryStream_0.ReadDouble();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17246);
+		binaryStream_0.smethod_7(16486);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(11056);
-		binaryStream_0.smethod_7(7465);
 		binaryStream_0.WriteDouble(this.double_0);
 		binaryStream_0.WriteDouble(this.double_1);
 	}

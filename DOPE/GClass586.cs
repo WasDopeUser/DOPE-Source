@@ -8,7 +8,7 @@ public class GClass586 : GClass585, GInterface0
 	{
 		get
 		{
-			return 20422;
+			return 10908;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass586 : GClass585, GInterface0
 
 	public GClass586(string string_0 = "", string string_1 = "")
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.Value = "";
 		base..ctor(string_0);
 		this.Value = string_1;
@@ -30,7 +30,7 @@ public class GClass586 : GClass585, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 20422;
+		return 10908;
 	}
 
 	public override int vmethod_1()
@@ -42,21 +42,19 @@ public class GClass586 : GClass585, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.Value = binaryStream_0.smethod_2();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20422);
+		binaryStream_0.smethod_7(10908);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(9698);
-		binaryStream_0.smethod_7(-9170);
+		binaryStream_0.smethod_7(12618);
 		binaryStream_0.smethod_3(this.Value);
 	}
 

@@ -88,7 +88,7 @@ public static class GClass812
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass812()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass812.string_0 = "https://{0}.darkorbit.com";
 	}
 

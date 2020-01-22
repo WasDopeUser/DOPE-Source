@@ -8,7 +8,7 @@ public class GClass833 : GClass832
 {
 	public GClass833(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, TargetMap.GG_VoT);
 	}
 
@@ -42,15 +42,15 @@ public class GClass833 : GClass832
 			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
 			{
 				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
-				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
+				this.cnaqtdajxXl = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
 			}
 		}
 	}
 
 	protected override bool vmethod_0()
 	{
-		return this.dateTimeOffset_2.Cooldown(0);
+		return this.cnaqtdajxXl.Cooldown(0);
 	}
 
-	public DateTimeOffset dateTimeOffset_2;
+	public DateTimeOffset cnaqtdajxXl;
 }

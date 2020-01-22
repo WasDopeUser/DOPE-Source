@@ -8,7 +8,7 @@ public class GClass681 : GInterface0
 	{
 		get
 		{
-			return 18181;
+			return 5662;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass681 : GInterface0
 
 	public GClass681(GClass761 gclass761_1 = null, string string_1 = "")
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass761_1 == null)
@@ -38,7 +38,7 @@ public class GClass681 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 18181;
+		return 5662;
 	}
 
 	public virtual int vmethod_1()
@@ -49,19 +49,21 @@ public class GClass681 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 		this.gclass761_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass761);
 		this.gclass761_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18181);
+		binaryStream_0.smethod_7(5662);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(11155);
 		this.gclass761_0.imethod_2(binaryStream_0);
 	}
 

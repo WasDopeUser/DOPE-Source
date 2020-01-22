@@ -151,7 +151,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 		{
 			if (this.Context.State == BotState.Travel)
 			{
-				this.Context.method_67(BotState.Default);
+				this.Context.method_66(BotState.Default);
 			}
 		}
 	}
@@ -218,7 +218,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 		this.Context.Stop();
 		if (this.Context.Game.Connection.Socket.method_2())
 		{
-			this.Context.Game.Connection.method_14();
+			this.Context.Game.Connection.method_13();
 		}
 		return Task.FromResult<bool>(true);
 	}
@@ -235,7 +235,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 
 	public GClass852(Guid guid_0, InterfaceDescriptor interfaceDescriptor_0, ICommon icommon_0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(guid_0, interfaceDescriptor_0, icommon_0);
 	}
 
@@ -246,7 +246,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 
 	public Task<BotDetailedViewModel> method_3(int int_0, bool bool_0)
 	{
-		MapViewData spacemap = GClass823.smethod_24(this.Context, bool_0 | this.Context.Map.MapId != int_0);
+		MapViewData spacemap = GClass823.smethod_23(this.Context, bool_0 | this.Context.Map.MapId != int_0);
 		BotSummaryViewModel summary = new BotSummaryViewModel(this.Context.Hero, this.Context.Stats, this.Context.Stats.RunTime);
 		BotDetailedViewModel botDetailedViewModel = new BotDetailedViewModel();
 		botDetailedViewModel.Spacemap = spacemap;
@@ -309,7 +309,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 		GClass822 context = this.Context;
 		SecurityManager security = context.Map.Game.Security;
 		Vector2 vector2_ = new Vector2(float_0, float_1);
-		Gate gate = context.Map.method_5<Gate>(vector2_, null, null, 0);
+		Gate gate = context.Map.method_4<Gate>(vector2_, null, null, 0);
 		if (gate == null)
 		{
 			return false;
@@ -321,7 +321,7 @@ public class GClass852 : EntangledHostedObjectBase, INotifyPropertyChanged, IBot
 		}
 		if (this.Context.Run && !this.Context.IsPaused)
 		{
-			context.method_37(gate.Position, gate, 15, false);
+			context.method_36(gate.Position, gate, 15, false);
 		}
 		return false;
 	}

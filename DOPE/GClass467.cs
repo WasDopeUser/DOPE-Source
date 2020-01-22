@@ -8,7 +8,7 @@ public class GClass467 : GInterface0
 	{
 		get
 		{
-			return 1910;
+			return 4076;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass467 : GInterface0
 
 	public GClass467(GClass483 gclass483_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass483_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass467 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 1910;
+		return 4076;
 	}
 
 	public virtual int vmethod_1()
@@ -50,7 +50,7 @@ public class GClass467 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1910);
+		binaryStream_0.smethod_7(4076);
 		this.vmethod_2(binaryStream_0);
 	}
 

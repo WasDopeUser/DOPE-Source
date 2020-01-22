@@ -8,7 +8,7 @@ public class GClass622 : GClass621, GInterface0
 	{
 		get
 		{
-			return 9043;
+			return 4885;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass622 : GClass621, GInterface0
 
 	public GClass622(double double_1 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.double_0 = double_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 9043;
+		return 4885;
 	}
 
 	public override int vmethod_1()
@@ -41,12 +41,11 @@ public class GClass622 : GClass621, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		this.double_0 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9043);
+		binaryStream_0.smethod_7(4885);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -54,7 +53,6 @@ public class GClass622 : GClass621, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(2997);
 	}
 
 	public double double_0;

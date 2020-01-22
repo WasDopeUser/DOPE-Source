@@ -8,7 +8,7 @@ public class GClass388 : GClass387, GInterface0
 	{
 		get
 		{
-			return 20504;
+			return 16903;
 		}
 	}
 
@@ -20,17 +20,17 @@ public class GClass388 : GClass387, GInterface0
 		}
 	}
 
-	public GClass388(uint uint_1 = 0U, int int_1 = 0)
+	public GClass388(uint uint_0 = 0U, int int_1 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		this.uint_0 = uint_1;
+		this.fauLonwUil = uint_0;
 		this.int_0 = int_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 20504;
+		return 16903;
 	}
 
 	public override int vmethod_1()
@@ -41,29 +41,27 @@ public class GClass388 : GClass387, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		this.int_0 = (U.smethod_0(this.int_0, 4) | this.int_0 << 28);
 		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.fauLonwUil = (uint)binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20504);
+		binaryStream_0.smethod_7(16903);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(8797);
-		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		binaryStream_0.smethod_7(18591);
-		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_4(this.int_0 << 4 | U.smethod_0(this.int_0, 28));
+		binaryStream_0.smethod_7(24724);
+		binaryStream_0.smethod_6(this.fauLonwUil);
 	}
 
 	public int int_0;
 
-	public uint uint_0;
+	public uint fauLonwUil;
 }

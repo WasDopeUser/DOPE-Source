@@ -26,7 +26,7 @@ public class GClass815 : StatisticsCategory
 
 	public GClass815(string string_0, Dictionary<string, int> dictionary_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(string_0, new string[]
 		{
 			"Name",

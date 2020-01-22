@@ -37,7 +37,7 @@ public static class GClass856
 				IL_B2:
 				toRead = Math.Min((long)bufferSize, left);
 				from = (IntPtr)((long)gstruct3_0.intptr_0 + pos);
-				if (!gclass855_0.method_8(from, buf, (int)toRead))
+				if (!gclass855_0.method_6(from, buf, (int)toRead))
 				{
 					goto IL_1D1;
 				}
@@ -104,17 +104,17 @@ public static class GClass856
 		foreach (uint int_ in list2)
 		{
 			GClass855 gclass = new GClass855((int)int_);
-			if (!gclass.method_6())
+			if (!gclass.method_4())
 			{
 				MessageBox.Show("Your browser is compiled for different architecture. Please use the " + (GClass857.smethod_1() ? "64" : "32") + "-bit version of PErkava.");
 				return false;
 			}
-			foreach (GClass857.GStruct3 gstruct in gclass.method_4())
+			foreach (GClass857.GStruct3 gstruct in gclass.method_3())
 			{
 				foreach (IntPtr intptr_ in GClass856.smethod_0(gclass, gstruct, Encoding.UTF8.GetBytes("cc0306d7b0f0c671000bd655485744417a868b29dd77619e42b51f70c28e67d0bbc2caf9dd364cb0419217bcfba86c33735b543fae2b666059b59c631955962afa1f97e0f49f92bf1a5463ae89c751a661e0485c2ec6e011634abfb4a4142157")))
 				{
 					flag = true;
-					gclass.method_7(intptr_, Encoding.UTF8.GetBytes("ef09b1bcec67808eeff374b1b51fb155edaac4fcc7a78ed75d5848d6e9eaabee41dec018bb5482d01acea8ce13688bfe33076dde70f06febb80cf3b7327953fb32c08889b815587ded2cdd056d0ec9965b894751848766c27fdee32c707b6fc9"));
+					gclass.method_5(intptr_, Encoding.UTF8.GetBytes("ef09b1bcec67808eeff374b1b51fb155edaac4fcc7a78ed75d5848d6e9eaabee41dec018bb5482d01acea8ce13688bfe33076dde70f06febb80cf3b7327953fb32c08889b815587ded2cdd056d0ec9965b894751848766c27fdee32c707b6fc9"));
 				}
 				num3 += gstruct.long_0;
 				if (action_0 != null)

@@ -8,7 +8,7 @@ public class GClass355 : GClass354, GInterface0
 	{
 		get
 		{
-			return 21205;
+			return 28841;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass355 : GClass354, GInterface0
 
 	public GClass355(GClass434 gclass434_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass434_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass355 : GClass354, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 21205;
+		return 28841;
 	}
 
 	public override int vmethod_1()
@@ -51,7 +51,7 @@ public class GClass355 : GClass354, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21205);
+		binaryStream_0.smethod_7(28841);
 		this.vmethod_2(binaryStream_0);
 	}
 

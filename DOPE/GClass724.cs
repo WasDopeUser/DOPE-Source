@@ -8,7 +8,7 @@ public class GClass724 : GClass722, GInterface0
 	{
 		get
 		{
-			return 24257;
+			return 16564;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass724 : GClass722, GInterface0
 
 	public GClass724(bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 24257;
+		return 16564;
 	}
 
 	public override int vmethod_1()
@@ -41,21 +41,19 @@ public class GClass724 : GClass722, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24257);
+		binaryStream_0.smethod_7(16564);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-28237);
-		binaryStream_0.smethod_7(-18758);
+		binaryStream_0.smethod_7(12174);
 		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 

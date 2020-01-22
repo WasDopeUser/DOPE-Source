@@ -32,7 +32,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Sid>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.Sid);
+				this.method_2(<>PropertyChangedEventArgs.Sid);
 			}
 		}
 
@@ -51,7 +51,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Server>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.Server);
+				this.method_2(<>PropertyChangedEventArgs.Server);
 			}
 		}
 
@@ -70,7 +70,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<UserAgent>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.UserAgent);
+				this.method_2(<>PropertyChangedEventArgs.UserAgent);
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace DOPE.UI
 
 		public BrowserWindow(string string_0, string string_1, string string_2)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -92,7 +92,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		private void method_1(object sender, RoutedEventArgs e)
+		private void PipqBycsJt(object sender, RoutedEventArgs e)
 		{
 			this.method_0();
 			object arg = this.Browser.GetType().InvokeMember("ActiveXInstance", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.GetProperty, null, this.Browser, new object[0]);
@@ -109,14 +109,14 @@ namespace DOPE.UI
 			this.Browser.Navigate(GClass812.smethod_1(this.Server, null) ?? "");
 		}
 
-		private void method_2(object sender, EventArgs e)
+		private void method_1(object sender, EventArgs e)
 		{
 			this.Browser.Dispose();
 		}
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_3(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_2(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

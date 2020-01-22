@@ -8,7 +8,7 @@ public class GClass670 : GInterface0
 	{
 		get
 		{
-			return 11493;
+			return 8260;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass670 : GInterface0
 
 	public GClass670(uint uint_1 = 0U, GClass347 gclass347_1 = null, int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.uint_0 = uint_1;
 		if (gclass347_1 == null)
@@ -39,7 +39,7 @@ public class GClass670 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 11493;
+		return 8260;
 	}
 
 	public virtual int vmethod_1()
@@ -50,8 +50,10 @@ public class GClass670 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 4) | this.int_0 << 28);
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_1();
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		this.gclass347_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass347);
 		this.gclass347_0.imethod_1(binaryStream_0);
@@ -59,14 +61,16 @@ public class GClass670 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11493);
+		binaryStream_0.smethod_7(8260);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.int_0 << 4 | U.smethod_0(this.int_0, 28));
+		binaryStream_0.smethod_7(18057);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_7(6038);
 		binaryStream_0.smethod_6(this.uint_0);
 		this.gclass347_0.imethod_2(binaryStream_0);
 	}

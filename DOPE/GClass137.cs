@@ -8,7 +8,7 @@ public class GClass137 : GInterface0
 	{
 		get
 		{
-			return 11394;
+			return 23685;
 		}
 	}
 
@@ -22,9 +22,9 @@ public class GClass137 : GInterface0
 
 	public GClass137(string string_0 = "", string string_1 = "", bool bool_1 = false, Vector<GClass682> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
-		this.Name = "";
+		Class13.plZSWFPzBWWEZ();
 		this.ToolTip = "";
+		this.Name = "";
 		base..ctor();
 		this.Name = string_0;
 		this.ToolTip = string_1;
@@ -39,7 +39,7 @@ public class GClass137 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 11394;
+		return 23685;
 	}
 
 	public virtual int vmethod_1()
@@ -49,10 +49,6 @@ public class GClass137 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Name = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.ToolTip = binaryStream_0.smethod_2();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -66,32 +62,34 @@ public class GClass137 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
+		this.ToolTip = binaryStream_0.smethod_2();
+		this.Name = binaryStream_0.smethod_2();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11394);
+		binaryStream_0.smethod_7(23685);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.Name);
-		binaryStream_0.smethod_7(19788);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_3(this.ToolTip);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass682 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
+		binaryStream_0.smethod_3(this.ToolTip);
+		binaryStream_0.smethod_3(this.Name);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
+
+	public Vector<GClass682> vector_0;
+
+	public string ToolTip;
 
 	public string Name;
 
 	public bool bool_0;
-
-	public string ToolTip;
-
-	public Vector<GClass682> vector_0;
 }

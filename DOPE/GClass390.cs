@@ -8,7 +8,7 @@ public class GClass390 : GInterface0
 	{
 		get
 		{
-			return 17133;
+			return 1114;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass390 : GInterface0
 
 	public GClass390(Vector<GClass346> vector_1 = null, double double_0 = 0.0, int int_1 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -38,7 +38,7 @@ public class GClass390 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 17133;
+		return 1114;
 	}
 
 	public virtual int vmethod_1()
@@ -48,7 +48,11 @@ public class GClass390 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 		this.Timestamp = binaryStream_0.ReadDouble();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 4 | U.smethod_0(this.int_0, 28));
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -62,32 +66,30 @@ public class GClass390 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17133);
+		binaryStream_0.smethod_7(1114);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_7(-7198);
+		binaryStream_0.smethod_7(-22220);
 		binaryStream_0.WriteDouble(this.Timestamp);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 4) | this.int_0 << 28);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass346 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-		binaryStream_0.smethod_7(23917);
 	}
 
 	public double Timestamp;
 
-	public Vector<GClass346> vector_0;
-
 	public int int_0;
+
+	public Vector<GClass346> vector_0;
 }

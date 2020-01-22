@@ -2,12 +2,13 @@
 using System.Runtime.CompilerServices;
 using DarkorbitAPI;
 using DarkorbitAPI.Structures;
+using MtkeutgfChvicmSfwvH;
 
 public class GClass116 : GInterface4
 {
 	public GClass116()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 
@@ -29,19 +30,19 @@ public class GClass116 : GInterface4
 			{
 				if (gclass126_0.gclass130_0.uint_0 == 37U)
 				{
-					asset = new BattlestationModule(gclass126_0.int_5, gclass126_0.UaDsQsiKsT);
+					asset = new BattlestationModule(gclass126_0.int_3, gclass126_0.int_1);
 					goto IL_89;
 				}
-				asset = new Asset(gclass126_0.int_5, gclass126_0.UaDsQsiKsT);
+				asset = new Asset(gclass126_0.int_3, gclass126_0.int_1);
 				goto IL_89;
 			}
 		}
-		asset = (map.Battlestation = new Battlestation(gclass126_0.int_5, gclass126_0.UaDsQsiKsT));
+		asset = (map.Battlestation = new Battlestation(gclass126_0.int_3, gclass126_0.int_1));
 		IL_89:
 		if (asset != null)
 		{
 			asset.method_0(gclass126_0);
-			map.Assets[gclass126_0.int_0] = asset;
+			map.Assets[gclass126_0.int_2] = asset;
 			ICollidable collidable = asset;
 			if (collidable != null)
 			{
@@ -53,12 +54,12 @@ public class GClass116 : GInterface4
 
 	public void method_1(GClass190 gclass190_0)
 	{
-		this.Map.method_13(gclass190_0);
+		this.Map.method_12(gclass190_0);
 	}
 
 	public void method_2(GClass191 gclass191_0)
 	{
-		this.Map.method_14(gclass191_0);
+		this.Map.method_13(gclass191_0);
 	}
 
 	public void method_3(GClass246 gclass246_0)
@@ -73,12 +74,12 @@ public class GClass116 : GInterface4
 
 	public void method_5(GClass181 gclass181_0)
 	{
-		this.Map.method_10(gclass181_0);
+		this.Map.method_9(gclass181_0);
 	}
 
 	public void method_6(GClass268 gclass268_0)
 	{
-		this.Map.method_17(gclass268_0);
+		this.Map.method_16(gclass268_0);
 	}
 
 	public void method_7(GClass267 gclass267_0)
@@ -110,45 +111,45 @@ public class GClass116 : GInterface4
 
 	public void method_10(GClass186 gclass186_0)
 	{
-		this.Map.method_19(gclass186_0);
+		this.Map.method_18(gclass186_0);
 	}
 
-	public void cBsrhsSiu4(GClass180 gclass180_0)
+	public void method_11(GClass180 gclass180_0)
 	{
-		this.Map.method_9(gclass180_0);
+		this.Map.method_8(gclass180_0);
 	}
 
-	public void method_11(GClass140 gclass140_0)
+	public void method_12(GClass140 gclass140_0)
 	{
-		this.Map.method_12(gclass140_0);
+		this.Map.method_11(gclass140_0);
 	}
 
-	public void method_12(GClass264 gclass264_0)
+	public void method_13(GClass264 gclass264_0)
 	{
-		this.Map.method_18(gclass264_0);
+		this.Map.method_17(gclass264_0);
 	}
 
-	public void method_13(GClass266 gclass266_0)
+	public void method_14(GClass266 gclass266_0)
 	{
-		this.Map.method_16(gclass266_0);
+		this.Map.method_15(gclass266_0);
 	}
 
-	public void NcGrinjmaP(GClass265 gclass265_0)
+	public void method_15(GClass265 gclass265_0)
 	{
-		this.Map.method_15(gclass265_0);
+		this.Map.method_14(gclass265_0);
 	}
 
-	public void method_14(GClass255 gclass255_0)
+	public void method_16(GClass255 gclass255_0)
 	{
-		this.Map.bMujwOvUqA(gclass255_0);
+		this.Map.method_20(gclass255_0);
 	}
 
-	public void method_15(GClass240 gclass240_0)
+	public void method_17(GClass240 gclass240_0)
 	{
 		this.Map.method_24(gclass240_0);
 	}
 
-	public void method_16(GClass249 gclass249_0)
+	public void method_18(GClass249 gclass249_0)
 	{
 		this.Map.method_25(gclass249_0);
 		if (gclass249_0.string_0.StartsWith("group_ping"))

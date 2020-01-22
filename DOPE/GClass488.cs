@@ -8,7 +8,7 @@ public class GClass488 : GInterface0
 	{
 		get
 		{
-			return 8796;
+			return 8737;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass488 : GInterface0
 
 	public GClass488()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8796;
+		return 8737;
 	}
 
 	public virtual int vmethod_1()
@@ -38,17 +38,15 @@ public class GClass488 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8796);
+		binaryStream_0.smethod_7(8737);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-15626);
 	}
 }

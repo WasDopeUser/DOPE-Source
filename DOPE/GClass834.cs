@@ -56,7 +56,7 @@ public class GClass834 : GClass832
 
 	public GClass834(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, TargetMap.GG_QZ);
 		this.Behavior = new GClass845(gclass822_1, this);
 	}
@@ -106,7 +106,7 @@ public class GClass834 : GClass832
 	{
 		if (gclass269_0.string_0 == "0|A|STM|jumpgate_failed_no_key_activated" && this.method_3() > 0)
 		{
-			base.C.Server.pJeMiKmRli("ammunition_ggportal_quarantine-zone-cpu", false, false);
+			base.C.Server.method_14("ammunition_ggportal_quarantine-zone-cpu", false, false);
 			return;
 		}
 	}
@@ -136,7 +136,7 @@ public class GClass834 : GClass832
 				return int_3 != base.C.Map.MapId;
 			}
 		}
-		int_3 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
+		int_3 = MapUtils.smethod_9(1, base.C.Hero.FactionId);
 		return true;
 	}
 

@@ -8,7 +8,7 @@ public class GClass482 : GInterface0
 	{
 		get
 		{
-			return 30472;
+			return 3093;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass482 : GInterface0
 
 	public GClass482(Vector<GClass375> vector_1 = null, int int_1 = 0, uint uint_1 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -38,7 +38,7 @@ public class GClass482 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 30472;
+		return 3093;
 	}
 
 	public virtual int vmethod_1()
@@ -48,8 +48,8 @@ public class GClass482 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		binaryStream_0.smethod_1();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -63,31 +63,31 @@ public class GClass482 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(30472);
+		binaryStream_0.smethod_7(3093);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_7(13878);
+		binaryStream_0.smethod_6(this.uint_0);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass375 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(5468);
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 	}
 
-	public int int_0;
+	public uint uint_0;
 
 	public Vector<GClass375> vector_0;
 
-	public uint uint_0;
+	public int int_0;
 }

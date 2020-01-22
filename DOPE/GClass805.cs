@@ -10,7 +10,7 @@ public static class GClass805
 		if (nullable_0 != null)
 		{
 			Vector2 value = nullable_0.Value;
-			PointF left = GClass810.smethod_1(vector2_1.X, vector2_1.Y, float_0, new PointF(value.X, value.Y), new PointF(vector2_1.X, vector2_1.Y));
+			PointF left = GClass810.smethod_0(vector2_1.X, vector2_1.Y, float_0, new PointF(value.X, value.Y), new PointF(vector2_1.X, vector2_1.Y));
 			if (left != PointF.Empty)
 			{
 				vector = new Vector2(left.X, left.Y);

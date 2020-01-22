@@ -8,7 +8,7 @@ public class GClass584 : GInterface0
 	{
 		get
 		{
-			return 7702;
+			return 15822;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass584 : GInterface0
 
 	public GClass584(string string_1 = "", double double_1 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -31,7 +31,7 @@ public class GClass584 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 7702;
+		return 15822;
 	}
 
 	public virtual int vmethod_1()
@@ -41,20 +41,18 @@ public class GClass584 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		this.double_0 = binaryStream_0.ReadDouble();
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(7702);
+		binaryStream_0.smethod_7(15822);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-5418);
 		binaryStream_0.WriteDouble(this.double_0);
 		binaryStream_0.smethod_3(this.string_0);
 	}

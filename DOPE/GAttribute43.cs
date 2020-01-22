@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
+[AttributeUsage(AttributeTargets.Method | AttributeTargets.Parameter)]
 public sealed class GAttribute43 : Attribute
 {
-	public GAttribute43([GAttribute1] string name)
+	public GAttribute43()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		this.Name = name;
 	}
-
-	[GAttribute1]
-	public string Name { get; private set; }
-
-	[CompilerGenerated]
-	private string string_0;
 }

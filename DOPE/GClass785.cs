@@ -4,7 +4,7 @@ public class GClass785
 {
 	public GClass785(byte[] byte_0 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.int_1 = 0;
 		this.int_0 = 0;
@@ -37,7 +37,7 @@ public class GClass785
 		this.int_0 = 0;
 	}
 
-	public uint method_1()
+	public uint UstJsxnrrp()
 	{
 		this.int_0 = (this.int_0 + 1 & 255);
 		this.int_1 = (this.int_1 + (int)this.State[this.int_0] & 255);
@@ -47,7 +47,7 @@ public class GClass785
 		return (uint)this.State[num + (int)this.State[this.int_0] & 255];
 	}
 
-	public void method_2(byte[] byte_0, int int_2, int int_3)
+	public void method_1(byte[] byte_0, int int_2, int int_3)
 	{
 		if (this.State == null)
 		{
@@ -56,7 +56,7 @@ public class GClass785
 		uint num = 0U;
 		while ((ulong)num < (ulong)((long)int_3))
 		{
-			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.method_1()) & 255U);
+			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.UstJsxnrrp()) & 255U);
 			num += 1U;
 		}
 	}

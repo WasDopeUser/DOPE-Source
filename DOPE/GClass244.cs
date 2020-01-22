@@ -8,7 +8,7 @@ public class GClass244 : GInterface0
 	{
 		get
 		{
-			return 24365;
+			return 28157;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass244 : GInterface0
 
 	public GClass244(GClass243 gclass243_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass243_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass244 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 24365;
+		return 28157;
 	}
 
 	public virtual int vmethod_1()
@@ -51,13 +51,13 @@ public class GClass244 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24365);
+		binaryStream_0.smethod_7(28157);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-26752);
+		binaryStream_0.smethod_7(-4639);
 		this.gclass243_0.imethod_2(binaryStream_0);
 	}
 

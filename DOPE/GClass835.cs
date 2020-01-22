@@ -46,19 +46,19 @@ public abstract class GClass835
 	{
 		get
 		{
-			return this.Context.method_71("Behavior");
+			return this.Context.method_70("Behavior");
 		}
 	}
 
 	public GClass835(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.unknownMapObjectsTracker_0 = new UnknownMapObjectsTracker<bool>();
 		base..ctor();
 		this.Context = gclass822_1;
 	}
 
-	protected virtual bool vmethod_0(Ship ship_0, out Ship ship_1, bool bool_2 = false)
+	protected virtual bool vmethod_0(Ship ship_0, out Ship ship_1, bool bool_3 = false)
 	{
 		GClass835.<>c__DisplayClass13_0 CS$<>8__locals1;
 		CS$<>8__locals1.gclass835_0 = this;
@@ -73,7 +73,7 @@ public abstract class GClass835
 		{
 			return true;
 		}
-		bool flag = bool_2 && this.C.Map.Grid.method_7(CS$<>8__locals1.ship_0.Position) && Vector2.Distance(this.Map.Hero.Position, CS$<>8__locals1.ship_0.Position) > 1000f;
+		bool flag = bool_3 && this.C.Map.Grid.method_7(CS$<>8__locals1.ship_0.Position) && Vector2.Distance(this.Map.Hero.Position, CS$<>8__locals1.ship_0.Position) > 1000f;
 		bool flag2 = false;
 		if (this.C.AttackingId == CS$<>8__locals1.ship_0.Id)
 		{
@@ -89,7 +89,7 @@ public abstract class GClass835
 		}
 		if (flag || flag2)
 		{
-			this.method_15(1.0, ref CS$<>8__locals1);
+			this.method_17(1.0, ref CS$<>8__locals1);
 			return true;
 		}
 		return false;
@@ -111,17 +111,17 @@ public abstract class GClass835
 		return this.vmethod_2(npcShip_0) && this.C.MapProfile.SecondaryCircleNpcs;
 	}
 
-	public virtual bool vmethod_4(bool bool_2 = false, bool bool_3 = false)
+	public virtual bool vmethod_4(bool bool_3 = false, bool bool_4 = false)
 	{
 		GClass835.<>c__DisplayClass17_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass17_0();
 		CS$<>8__locals1.gclass835_0 = this;
 		CS$<>8__locals1.hero_0 = this.C.Hero;
 		Vector2 heroPosition = this.C.HeroPosition;
-		if (!bool_3 && CS$<>8__locals1.hero_0.InSafeZone)
+		if (!bool_4 && CS$<>8__locals1.hero_0.InSafeZone)
 		{
 			return true;
 		}
-		if (bool_2 && !CS$<>8__locals1.hero_0.LastTookDamage.Cooldown(5000))
+		if (bool_3 && !CS$<>8__locals1.hero_0.LastTookDamage.Cooldown(5000))
 		{
 			return false;
 		}
@@ -132,11 +132,11 @@ public abstract class GClass835
 		Ship ship;
 		if (this.C.MapProfile.FleeOnlyFromKnownEnemySeen)
 		{
-			ship = this.C.Game.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
+			ship = this.C.Game.Map.method_4<Ship>(heroPosition, new Func<Ship, bool>(CS$<>8__locals1.DxPqKzIxRuk), null, 0);
 		}
 		else
 		{
-			ship = this.C.Game.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
+			ship = this.C.Game.Map.method_4<Ship>(heroPosition, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
 		}
 		return ship == null || Vector2.Distance(heroPosition, ship.Position) > 2500f || !this.C.MapProfile.FleeFromEnemySeen;
 	}
@@ -272,28 +272,28 @@ public abstract class GClass835
 		return this.C.Map.DefaultWorkArea;
 	}
 
-	public virtual BotState nmrrblkfndb()
+	public virtual BotState vmethod_18()
 	{
 		return BotState.Roam;
 	}
 
-	public virtual bool vmethod_18(GClass824 gclass824_0)
+	public virtual bool vmethod_19(GClass824 gclass824_0)
 	{
 		return true;
 	}
 
-	public virtual Vector2? vmethod_19(Vector2 vector2_1, out Gate gate_0, bool bool_2 = false, bool bool_3 = true)
+	public virtual Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
 	{
 		GClass835.<>c__DisplayClass33_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass33_0();
 		CS$<>8__locals1.vector2_0 = vector2_1;
 		CS$<>8__locals1.map_0 = this.C.Map;
 		CS$<>8__locals1.int_0 = CS$<>8__locals1.map_0.MapId;
-		Vector2? vector = this.vmethod_21();
-		if (bool_2)
+		Vector2? vector = this.vmethod_22();
+		if (bool_3)
 		{
 			GClass835.<>c__DisplayClass33_1 CS$<>8__locals2 = new GClass835.<>c__DisplayClass33_1();
 			CS$<>8__locals2.<>c__DisplayClass33_0_0 = CS$<>8__locals1;
-			Ship ship = CS$<>8__locals2.<>c__DisplayClass33_0_0.map_0.method_5<Ship>(CS$<>8__locals2.<>c__DisplayClass33_0_0.vector2_0, new Func<Ship, bool>(CS$<>8__locals2.<>c__DisplayClass33_0_0.method_0), null, 0);
+			Ship ship = CS$<>8__locals2.<>c__DisplayClass33_0_0.map_0.method_4<Ship>(CS$<>8__locals2.<>c__DisplayClass33_0_0.vector2_0, new Func<Ship, bool>(CS$<>8__locals2.<>c__DisplayClass33_0_0.method_0), null, 0);
 			if (ship != null)
 			{
 				CS$<>8__locals2.vector2_0 = ship.Position;
@@ -347,7 +347,7 @@ public abstract class GClass835
 					continue;
 				}
 			}
-			if (bool_3)
+			if (bool_4)
 			{
 				MapUtils.PortalEdge edge = mapCheckpoint3.Edge;
 				if (edge != null)
@@ -355,7 +355,7 @@ public abstract class GClass835
 					MapUtils.PortalEdge otherSide = edge.OtherSide;
 				}
 			}
-			if (!CS$<>8__locals1.map_0.Hero.method_26(mapCheckpoint3.Edge, null))
+			if (!CS$<>8__locals1.map_0.Hero.method_24(mapCheckpoint3.Edge, null))
 			{
 				if (mapCheckpoint3.Edge != null || mapCheckpoint3.Distance == 0f)
 				{
@@ -394,7 +394,7 @@ public abstract class GClass835
 				{
 					return new Vector2?(mapCheckpoint4.Position);
 				}
-				if (!bool_3 && mapCheckpoint4 == mapCheckpoint)
+				if (!bool_4 && mapCheckpoint4 == mapCheckpoint)
 				{
 					Gate gate2;
 					if (!CS$<>8__locals1.map_0.Gates.TryGetValue(mapCheckpoint4.Edge.Id, out gate2))
@@ -419,13 +419,13 @@ public abstract class GClass835
 		goto IL_31B;
 	}
 
-	public virtual Vector2? vmethod_20(bool bool_2)
+	public virtual Vector2? vmethod_21(bool bool_3)
 	{
 		Gate gate;
-		return this.vmethod_19(this.C.Hero.Position, out gate, bool_2, false);
+		return this.vmethod_20(this.C.Hero.Position, out gate, bool_3, false);
 	}
 
-	public virtual Vector2? vmethod_21()
+	public virtual Vector2? vmethod_22()
 	{
 		GClass835.<>c__DisplayClass35_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass35_0();
 		CS$<>8__locals1.hero_0 = this.C.Hero;
@@ -437,13 +437,13 @@ public abstract class GClass835
 		return new Vector2?(value.Position);
 	}
 
-	protected virtual IEnumerable<Vector2> vmethod_22()
+	protected virtual IEnumerable<Vector2> vmethod_23()
 	{
 		if (this.method_0() == GroupAttackMode.Assist)
 		{
 			yield return this.method_2();
 		}
-		Vector2 vector = this.vmethod_31();
+		Vector2 vector = this.vmethod_33();
 		if (vector != default(Vector2))
 		{
 			yield return vector;
@@ -455,11 +455,11 @@ public abstract class GClass835
 		yield break;
 	}
 
-	public virtual bool vmethod_23(out Vector2? nullable_0)
+	public virtual bool vmethod_24(out Vector2? nullable_0)
 	{
 		nullable_0 = null;
 		Vector2 position = this.Hero.Position;
-		foreach (Vector2 vector in this.vmethod_22())
+		foreach (Vector2 vector in this.vmethod_23())
 		{
 			nullable_0 = new Vector2?(vector);
 			if (this.Map.Grid.method_14(position, vector, 30, 0) != null)
@@ -470,7 +470,7 @@ public abstract class GClass835
 		return false;
 	}
 
-	public virtual Gate vmethod_24(int int_1)
+	public virtual Gate vmethod_25(int int_1)
 	{
 		GClass835.<>c__DisplayClass38_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass38_0();
 		CS$<>8__locals1.gclass835_0 = this;
@@ -487,45 +487,45 @@ public abstract class GClass835
 			{
 				return this.Map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_1)).Value;
 			}
-			int_1 = MapUtils.smethod_10(1, this.Hero.FactionId);
+			int_1 = MapUtils.smethod_9(1, this.Hero.FactionId);
 		}
 		if (flag)
 		{
 			return this.Map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals1.method_2)).Value;
 		}
-		return MapUtils.smethod_13(this.Map, this.Hero.Position, int_1);
-	}
-
-	public virtual bool vmethod_25()
-	{
-		return this.vmethod_26();
+		return MapUtils.smethod_12(this.Map, this.Hero.Position, int_1);
 	}
 
 	public virtual bool vmethod_26()
 	{
-		return true;
+		return this.vmethod_27();
 	}
 
 	public virtual bool vmethod_27()
 	{
+		return true;
+	}
+
+	public virtual bool vmethod_28()
+	{
 		bool result = true;
 		BotState state = this.C.State;
 		int num;
-		if (state == BotState.Logout || state == BotState.Travel || state == BotState.Repair || state == BotState.Default || this.C.method_78(out num))
+		if (state == BotState.Logout || state == BotState.Travel || state == BotState.Repair || state == BotState.Default || this.C.method_76(out num))
 		{
 			result = false;
 		}
 		return result;
 	}
 
-	protected virtual KamikazeState vmethod_28()
+	protected virtual KamikazeState vmethod_29()
 	{
 		HeroPet pet = this.Hero.Pet;
 		if (pet.IsControlDisabled && pet.IsEnabled && pet.Mode == PetMode.Kamikaze)
 		{
 			return KamikazeState.Activated;
 		}
-		if (!this.vmethod_27() || !this.Hero.Pet.CanKamikaze || !this.vmethod_29())
+		if (!this.vmethod_28() || !this.Hero.Pet.CanKamikaze || !this.vmethod_30())
 		{
 			return KamikazeState.Uneligible;
 		}
@@ -536,7 +536,7 @@ public abstract class GClass835
 		return KamikazeState.Activating;
 	}
 
-	public virtual bool vmethod_29()
+	public virtual bool vmethod_30()
 	{
 		NpcShip npcShip = this.C.EnemyTarget as NpcShip;
 		if (npcShip == null)
@@ -552,32 +552,44 @@ public abstract class GClass835
 		return false;
 	}
 
-	public virtual bool vmethod_30(out int int_1)
+	public virtual bool vmethod_31(out int int_1)
 	{
+		GClass835.<>c__DisplayClass44_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass44_0();
+		CS$<>8__locals1.gclass835_0 = this;
 		int_1 = 0;
-		if (this.C.method_73(0) == null)
+		CS$<>8__locals1.vector2_0 = this.Hero.Position;
+		CS$<>8__locals1.enemyLocatorResultCollection_0 = this.Hero.Pet.EnemyLocatedList;
+		List<ValueTuple<int, int>> list = new List<ValueTuple<int, int>>();
+		using (IEnumerator<SelectedNpcModel> enumerator = this.C.MapProfile.NpcWhitelist.GetEnumerator())
 		{
-			GClass835.<>c__DisplayClass44_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass44_0();
-			CS$<>8__locals1.enemyLocatorResultCollection_0 = this.Hero.Pet.EnemyLocatedList;
-			List<ValueTuple<int, int>> list = new List<ValueTuple<int, int>>();
-			foreach (SelectedNpcModel selectedNpcModel in this.C.MapProfile.NpcWhitelist)
+			while (enumerator.MoveNext())
 			{
-				NpcUtils.NpcType npcType;
-				int item;
-				if (selectedNpcModel.Enabled && selectedNpcModel.Priority >= 0 && selectedNpcModel.UsePetLocator && NpcUtils.NpcById.TryGetValue(selectedNpcModel.NpcId, out npcType) && NpcUtils.XmlNpcIds.TryGetValue(npcType.ToString(), out item) && this.Hero.Pet.method_20(PetMode.EnemyLocator, item))
+				GClass835.<>c__DisplayClass44_1 CS$<>8__locals2 = new GClass835.<>c__DisplayClass44_1();
+				CS$<>8__locals2.<>c__DisplayClass44_0_0 = CS$<>8__locals1;
+				CS$<>8__locals2.selectedNpcModel_0 = enumerator.Current;
+				if (CS$<>8__locals2.selectedNpcModel_0.Enabled && CS$<>8__locals2.selectedNpcModel_0.Priority >= 0 && CS$<>8__locals2.selectedNpcModel_0.UsePetLocator)
 				{
-					list.Add(new ValueTuple<int, int>(item, selectedNpcModel.Priority));
+					if (this.Map.method_6<NpcShip>(CS$<>8__locals2.<>c__DisplayClass44_0_0.vector2_0, new Func<NpcShip, bool>(CS$<>8__locals2.method_0), null, 0).Any<ValueTuple<NpcShip, float, int>>())
+					{
+						return false;
+					}
+					NpcUtils.NpcType npcType;
+					int item;
+					if (NpcUtils.NpcById.TryGetValue(CS$<>8__locals2.selectedNpcModel_0.NpcId, out npcType) && NpcUtils.XmlNpcIds.TryGetValue(npcType.ToString(), out item) && this.Hero.Pet.method_18(PetMode.EnemyLocator, item))
+					{
+						list.Add(new ValueTuple<int, int>(item, CS$<>8__locals2.selectedNpcModel_0.Priority));
+					}
 				}
 			}
-			int_1 = list.OrderByDescending(new Func<ValueTuple<int, int>, bool>(CS$<>8__locals1.method_0)).ThenBy(new Func<ValueTuple<int, int>, DateTimeOffset>(CS$<>8__locals1.method_1)).ThenByDescending(new Func<ValueTuple<int, int>, int>(GClass835.<>c.<>c_0.method_1)).FirstOrDefault<ValueTuple<int, int>>().Item1;
-			return int_1 != 0;
 		}
-		return false;
+		int_1 = list.OrderByDescending(new Func<ValueTuple<int, int>, bool>(CS$<>8__locals1.method_0)).ThenBy(new Func<ValueTuple<int, int>, DateTimeOffset>(CS$<>8__locals1.method_1)).ThenByDescending(new Func<ValueTuple<int, int>, int>(GClass835.<>c.<>c_0.method_1)).FirstOrDefault<ValueTuple<int, int>>().Item1;
+		return int_1 != 0;
 	}
 
-	protected virtual Vector2 vmethod_31()
+	protected virtual bool vmethod_32()
 	{
 		GClass835.<>c__DisplayClass45_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass45_0();
+		CS$<>8__locals1.gclass835_0 = this;
 		CS$<>8__locals1.enemyLocatorResult_0 = this.Hero.Pet.EnemyLocated;
 		HeroPet.EnemyLocatorResult enemyLocatorResult_ = CS$<>8__locals1.enemyLocatorResult_0;
 		if (enemyLocatorResult_ != null && enemyLocatorResult_.Found)
@@ -585,30 +597,55 @@ public abstract class GClass835
 			HeroPet.EnemyLocatorResult enemyLocatorResult_2 = CS$<>8__locals1.enemyLocatorResult_0;
 			if (((enemyLocatorResult_2 != null) ? enemyLocatorResult_2.Type : null) != null && CS$<>8__locals1.enemyLocatorResult_0.Timestamp.smethod_0(3000))
 			{
-				CS$<>8__locals1.vector2_0 = CS$<>8__locals1.enemyLocatorResult_0.Position;
-				UnknownMapObjectsTracker<bool>.ObjectEntry<bool> objectEntry;
-				if (this.method_13().method_2(CS$<>8__locals1.vector2_0, out objectEntry, 1700))
+				CS$<>8__locals1.vector2_0 = this.Hero.Position;
+				if (this.Map.method_6<NpcShip>(CS$<>8__locals1.vector2_0, new Func<NpcShip, bool>(CS$<>8__locals1.method_0), null, 0).Any<ValueTuple<NpcShip, float, int>>())
 				{
-					this.Log.Warn<Vector2>("Ignored {pos}", CS$<>8__locals1.vector2_0);
-					objectEntry.method_1(CS$<>8__locals1.vector2_0);
-					return default(Vector2);
+					return false;
 				}
-				NpcShip npcShip = this.Map.method_5<NpcShip>(CS$<>8__locals1.vector2_0, new Func<NpcShip, bool>(CS$<>8__locals1.method_0), null, 0);
+				CS$<>8__locals1.vector2_1 = CS$<>8__locals1.enemyLocatorResult_0.Position;
+				UnknownMapObjectsTracker<bool>.ObjectEntry<bool> objectEntry;
+				if (this.method_13().method_2(CS$<>8__locals1.vector2_1, out objectEntry, 1700))
+				{
+					this.Log.Warn<Vector2>("Ignored {pos}", CS$<>8__locals1.vector2_1);
+					objectEntry.method_1(CS$<>8__locals1.vector2_1);
+					return false;
+				}
+				NpcShip npcShip = this.Map.method_4<NpcShip>(CS$<>8__locals1.vector2_1, new Func<NpcShip, bool>(CS$<>8__locals1.method_1), null, 0);
 				if (npcShip != null && (!this.vmethod_7(npcShip) || !this.vmethod_8(npcShip)))
 				{
-					this.Log.Warn<string, Vector2>("Blacklisting taken npc {npc} @{pos}", npcShip.Name, CS$<>8__locals1.vector2_0);
-					this.method_13().method_1(CS$<>8__locals1.vector2_0, 1700);
+					this.Log.Warn<string, Vector2>("Blacklisting taken npc {npc} @{pos}", npcShip.Name, CS$<>8__locals1.vector2_1);
+					this.method_13().method_1(CS$<>8__locals1.vector2_1, 1700);
+					return false;
 				}
-				return CS$<>8__locals1.enemyLocatorResult_0.Position;
+				this.method_8(true);
+				if (this.method_11() == -1)
+				{
+					this.method_12((npcShip != null) ? npcShip.Id : 0);
+				}
+				return true;
 			}
 		}
-		return default(Vector2);
+		return false;
 	}
 
-	public virtual PetMode vmethod_32(out int int_1)
+	protected virtual Vector2 vmethod_33()
+	{
+		HeroPet.EnemyLocatorResult enemyLocated = this.Hero.Pet.EnemyLocated;
+		if (!this.method_15())
+		{
+			return default(Vector2);
+		}
+		if (enemyLocated == null)
+		{
+			return default(Vector2);
+		}
+		return enemyLocated.Position;
+	}
+
+	public virtual PetMode vmethod_34(out int int_1)
 	{
 		int_1 = 0;
-		if (!this.vmethod_27())
+		if (!this.vmethod_28())
 		{
 			return PetMode.Off;
 		}
@@ -617,7 +654,7 @@ public abstract class GClass835
 		{
 			return PetMode.Kamikaze;
 		}
-		if (this.vmethod_30(out int_1))
+		if (this.vmethod_31(out int_1))
 		{
 			return PetMode.EnemyLocator;
 		}
@@ -663,7 +700,7 @@ public abstract class GClass835
 
 	protected bool method_4()
 	{
-		GClass835.<>c__DisplayClass55_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass55_0();
+		GClass835.<>c__DisplayClass56_0 CS$<>8__locals1 = new GClass835.<>c__DisplayClass56_0();
 		CS$<>8__locals1.gclass835_0 = this;
 		this.method_8(false);
 		this.method_1(GroupAttackMode.Disabled);
@@ -672,9 +709,9 @@ public abstract class GClass835
 		ValueTuple<GroupManager.GroupMember, SelectedNpcModel> valueTuple = source.FirstOrDefault(new Func<ValueTuple<GroupManager.GroupMember, SelectedNpcModel>, bool>(GClass835.<>c.<>c_0.method_3));
 		if (valueTuple.Item2 != null)
 		{
-			Ship ship = this.Map.method_4(valueTuple.Item1.Id);
+			Ship ship = this.Map.method_3(valueTuple.Item1.Id);
 			int num = (ship != null) ? ship.TargetId : 0;
-			Ship ship2 = this.Map.method_4(num);
+			Ship ship2 = this.Map.method_3(num);
 			if (ship2 != null)
 			{
 				NpcShip npcShip = ship2 as NpcShip;
@@ -701,14 +738,14 @@ public abstract class GClass835
 		return false;
 	}
 
-	protected virtual float vmethod_33(Vector2 vector2_1)
+	protected virtual float vmethod_35(Vector2 vector2_1)
 	{
 		float num = 0f;
 		if (this.Map.Grid.method_7(vector2_1))
 		{
 			num -= 1000000f;
 		}
-		float num2 = this.Map.method_3(vector2_1);
+		float num2 = this.Map.method_2(vector2_1);
 		num -= Math.Max(0f, 900f - num2);
 		if (num2 < 150f)
 		{
@@ -717,7 +754,7 @@ public abstract class GClass835
 		return num;
 	}
 
-	protected virtual float vmethod_34(Vector2 vector2_1, [TupleElementNames(new string[]
+	protected virtual float vmethod_36(Vector2 vector2_1, [TupleElementNames(new string[]
 	{
 		"pos",
 		"range"
@@ -731,7 +768,7 @@ public abstract class GClass835
 		return num;
 	}
 
-	protected virtual float vmethod_35(Vector2 vector2_1, Vector2 vector2_2, [TupleElementNames(new string[]
+	protected virtual float vmethod_37(Vector2 vector2_1, Vector2 vector2_2, [TupleElementNames(new string[]
 	{
 		"pos",
 		"range"
@@ -740,30 +777,30 @@ public abstract class GClass835
 		float num = 0f;
 		foreach (ValueTuple<Vector2, int> valueTuple in npcs)
 		{
-			float num2 = Math.Max(0f, (float)((double)valueTuple.Item2 - GClass810.smethod_13(vector2_1, vector2_2, valueTuple.Item1, true)));
+			float num2 = Math.Max(0f, (float)((double)valueTuple.Item2 - GClass810.smethod_11(vector2_1, vector2_2, valueTuple.Item1, true)));
 			num -= (float)Math.Sqrt((double)num2);
 		}
 		return num;
 	}
 
-	public virtual Vector2? vmethod_36(Vector2 vector2_1, Vector2 vector2_2, float float_0)
+	public virtual Vector2? vmethod_38(Vector2 vector2_1, Vector2 vector2_2, float float_0)
 	{
 		if (!this.Map.Grid.method_7(vector2_2) && !this.Map.Grid.method_3(vector2_1, vector2_2))
 		{
 			return new Vector2?(vector2_2);
 		}
-		return this.vmethod_45(vector2_1, vector2_2, float_0);
+		return this.vmethod_47(vector2_1, vector2_2, float_0);
 	}
 
-	public virtual Vector2? vmethod_37(Vector2 vector2_1, Vector2 vector2_2, float float_0, Vector2? nullable_0 = null, float float_1 = 0.5f)
+	public virtual Vector2? vmethod_39(Vector2 vector2_1, Vector2 vector2_2, float float_0, Vector2? nullable_0 = null, float float_1 = 0.5f)
 	{
 		Vector2 vector2_3 = GClass805.smethod_0(vector2_1, vector2_2, float_0, nullable_0, float_1);
-		return this.vmethod_36(vector2_1, vector2_3, float_0);
+		return this.vmethod_38(vector2_1, vector2_3, float_0);
 	}
 
-	public virtual int vmethod_38(Vector2 vector2_1, Vector2 vector2_2, float float_0, int int_1 = 10)
+	public virtual int vmethod_40(Vector2 vector2_1, Vector2 vector2_2, float float_0, int int_1 = 10)
 	{
-		GClass835.<>c__DisplayClass61_0 CS$<>8__locals1;
+		GClass835.<>c__DisplayClass62_0 CS$<>8__locals1;
 		CS$<>8__locals1.vector2_0 = vector2_2;
 		CS$<>8__locals1.float_0 = float_0;
 		CS$<>8__locals1.gclass835_0 = this;
@@ -777,15 +814,15 @@ public abstract class GClass835
 			NpcShip npcShip = keyValuePair.Value as NpcShip;
 			if (npcShip != null && npcShip != this.Map.SelectedShip)
 			{
-				CS$<>8__locals1.list_0.Add(new ValueTuple<Vector2, int>(npcShip.method_1(200), npcShip.Range));
+				CS$<>8__locals1.list_0.Add(new ValueTuple<Vector2, int>(npcShip.method_0(200), npcShip.Range));
 			}
 		}
-		float num4 = this.method_17(this.method_16(0f, ref CS$<>8__locals1), ref CS$<>8__locals1);
+		float num4 = this.method_19(this.method_18(0f, ref CS$<>8__locals1), ref CS$<>8__locals1);
 		int num5 = 1;
 		while (num5 <= int_1 && Math.Abs(num - num2) <= 500f)
 		{
-			num += this.method_17(this.method_16(num3 * (float)num5, ref CS$<>8__locals1), ref CS$<>8__locals1);
-			num2 += this.method_17(this.method_16(-num3 * (float)num5, ref CS$<>8__locals1), ref CS$<>8__locals1);
+			num += this.method_19(this.method_18(num3 * (float)num5, ref CS$<>8__locals1), ref CS$<>8__locals1);
+			num2 += this.method_19(this.method_18(-num3 * (float)num5, ref CS$<>8__locals1), ref CS$<>8__locals1);
 			if ((double)num <= -1000000.0 && (double)num2 <= -1000000.0)
 			{
 				return 0;
@@ -804,17 +841,17 @@ public abstract class GClass835
 		return 1;
 	}
 
-	public virtual Vector2? vmethod_39(Vector2 vector2_1, int int_1 = 1100)
+	public virtual Vector2? vmethod_41(Vector2 vector2_1, int int_1 = 1100)
 	{
 		float num = 0f;
 		float num2 = 0f;
 		int num3 = 0;
 		Vector2 position = this.Hero.Position;
-		foreach (ValueTuple<NpcShip, float, int> valueTuple in this.Map.method_7<NpcShip>(vector2_1, new Func<NpcShip, bool>(this.vmethod_10), null, 200))
+		foreach (ValueTuple<NpcShip, float, int> valueTuple in this.Map.method_6<NpcShip>(vector2_1, new Func<NpcShip, bool>(this.vmethod_10), null, 200))
 		{
 			if (valueTuple.Item2 <= (float)int_1)
 			{
-				Vector2 vector = valueTuple.Item1.method_1(200);
+				Vector2 vector = valueTuple.Item1.method_0(200);
 				num += vector.X;
 				num2 += vector.Y;
 				num3++;
@@ -827,7 +864,7 @@ public abstract class GClass835
 		return new Vector2?(new Vector2(num / (float)num3, num2 / (float)num3));
 	}
 
-	public virtual int vmethod_40(NpcShip npcShip_0)
+	public virtual int vmethod_42(NpcShip npcShip_0)
 	{
 		int val = 590;
 		int range = npcShip_0.Range;
@@ -838,13 +875,13 @@ public abstract class GClass835
 		return Math.Min(range, val);
 	}
 
-	public virtual int vmethod_41(Vector2 vector2_1, NpcShip npcShip_0, out Vector2 vector2_2)
+	public virtual int vmethod_43(Vector2 vector2_1, NpcShip npcShip_0, out Vector2 vector2_2)
 	{
-		vector2_2 = npcShip_0.method_1(Math.Min(225, 100 + this.C.Game.Connection.PingMs));
+		vector2_2 = npcShip_0.method_0(Math.Min(225, 100 + this.C.Game.Connection.PingMs));
 		float num = Vector2.Distance(vector2_1, vector2_2);
-		int num2 = this.Hero.method_27();
+		int num2 = this.Hero.method_25();
 		float num3 = (num + (float)npcShip_0.LastDistance) / 2f;
-		int num4 = this.vmethod_40(npcShip_0) + num2;
+		int num4 = this.vmethod_42(npcShip_0) + num2;
 		int num5 = num4 / 2;
 		float num6 = Math.Max(Math.Min((float)num4 - num3 + (float)npcShip_0.RangeFix, (float)(num5 + 75)), (float)(-(float)num5));
 		if (npcShip_0.TemporarySpeed <= 0f)
@@ -857,51 +894,51 @@ public abstract class GClass835
 		return result;
 	}
 
-	public virtual Vector2? vmethod_42(Vector2 vector2_1, NpcShip npcShip_0, Vector2? nullable_0 = null)
+	public virtual Vector2? vmethod_44(Vector2 vector2_1, NpcShip npcShip_0, Vector2? nullable_0 = null)
 	{
 		if (this.method_9() >= KamikazeState.PullingEnemies)
 		{
-			return this.vmethod_43(vector2_1);
+			return this.vmethod_45(vector2_1);
 		}
 		if (this.vmethod_12(npcShip_0))
 		{
 			nullable_0 = null;
 		}
-		return this.vmethod_44(vector2_1, npcShip_0, nullable_0, 0.5f);
+		return this.vmethod_46(vector2_1, npcShip_0, nullable_0, 0.5f);
 	}
 
-	public virtual Vector2? vmethod_43(Vector2 vector2_1)
+	public virtual Vector2? vmethod_45(Vector2 vector2_1)
 	{
 		if (this.method_9() == KamikazeState.PullingEnemies)
 		{
 			return null;
 		}
 		Vector2 position = this.Hero.Pet.Position;
-		Vector2 vector2_2 = this.vmethod_39(vector2_1, 1100) ?? position;
+		Vector2 vector2_2 = this.vmethod_41(vector2_1, 1100) ?? position;
 		NpcShip npcShip = this.C.EnemyTarget as NpcShip;
 		if (this.method_9() == KamikazeState.Activating && !this.Hero.LastTookDamage.smethod_0(2000))
 		{
-			Vector2? result = this.vmethod_37(vector2_1, vector2_2, 325f, null, 0.5f);
+			Vector2? result = this.vmethod_39(vector2_1, vector2_2, 325f, null, 0.5f);
 			bool flag;
-			if (npcShip != null && this.Map.method_8(npcShip, out flag))
+			if (npcShip != null && this.Map.method_7(npcShip, out flag))
 			{
-				result = this.vmethod_37(vector2_1, vector2_2, 325f, new Vector2?(this.Map.Center), 0.5f);
+				result = this.vmethod_39(vector2_1, vector2_2, 325f, new Vector2?(this.Map.Center), 0.5f);
 			}
 			return result;
 		}
 		DateTimeOffset lastControlDisabled = this.Hero.Pet.LastControlDisabled;
-		float num = 4000f - 1000f * (float)Math.Min(1, this.C.method_15() / (this.Hero.Hp / 2));
+		float num = 4000f - 1000f * (float)Math.Min(1, this.C.method_14() / (this.Hero.Hp / 2));
 		if ((lastControlDisabled > this.Hero.LastTookDamage || (this.Hero.LastTookDamage - lastControlDisabled).TotalMilliseconds <= (double)num) && (npcShip == null || !this.vmethod_12(npcShip)))
 		{
 			Vector2 vector = this.Hero.Position - position;
 			float num2 = (float)Math.Atan2((double)vector.X + 0.01, (double)vector.Y + 0.01);
 			Vector2 vector2_3 = GClass805.smethod_8(position, 100f, num2 + 0.6f);
-			return this.vmethod_36(vector2_1, vector2_3, 100f);
+			return this.vmethod_38(vector2_1, vector2_3, 100f);
 		}
-		return this.vmethod_37(vector2_1, position, 650f, null, 0.5f);
+		return this.vmethod_39(vector2_1, position, 650f, null, 0.5f);
 	}
 
-	public virtual Vector2? vmethod_44(Vector2 vector2_1, NpcShip npcShip_0, Vector2? nullable_0 = null, float float_0 = 0.5f)
+	public virtual Vector2? vmethod_46(Vector2 vector2_1, NpcShip npcShip_0, Vector2? nullable_0 = null, float float_0 = 0.5f)
 	{
 		if (npcShip_0 == null)
 		{
@@ -909,21 +946,21 @@ public abstract class GClass835
 		}
 		float num = Vector2.Distance(vector2_1, npcShip_0.Position);
 		Vector2 vector2_2;
-		int num2 = this.vmethod_41(vector2_1, npcShip_0, out vector2_2);
+		int num2 = this.vmethod_43(vector2_1, npcShip_0, out vector2_2);
 		if (float_0 != 0f)
 		{
 			if (num - (float)num2 > 50f)
 			{
 				float_0 = 0.1f;
 			}
-			float_0 *= (float)this.vmethod_38(vector2_1, vector2_2, (float)num2, 10);
+			float_0 *= (float)this.vmethod_40(vector2_1, vector2_2, (float)num2, 10);
 		}
-		return this.vmethod_37(vector2_1, vector2_2, (float)num2, nullable_0, float_0);
+		return this.vmethod_39(vector2_1, vector2_2, (float)num2, nullable_0, float_0);
 	}
 
-	public virtual Vector2? vmethod_45(Vector2 vector2_1, Vector2 vector2_2, float float_0)
+	public virtual Vector2? vmethod_47(Vector2 vector2_1, Vector2 vector2_2, float float_0)
 	{
-		GClass835.<>c__DisplayClass68_0 CS$<>8__locals1;
+		GClass835.<>c__DisplayClass69_0 CS$<>8__locals1;
 		CS$<>8__locals1.gclass835_0 = this;
 		CS$<>8__locals1.vector2_1 = vector2_1;
 		CS$<>8__locals1.list_0 = new List<ValueTuple<Vector2, int>>();
@@ -931,7 +968,7 @@ public abstract class GClass835
 		{
 			if (keyValuePair.Value.IsNpc)
 			{
-				CS$<>8__locals1.list_0.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_1(200), (keyValuePair.Value as NpcShip).Range));
+				CS$<>8__locals1.list_0.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_0(200), (keyValuePair.Value as NpcShip).Range));
 			}
 		}
 		CS$<>8__locals1.vector2_2 = default(Vector2);
@@ -950,7 +987,7 @@ public abstract class GClass835
 				num3 = num6;
 				if (!this.Map.Grid.method_9(num2, num3))
 				{
-					this.method_19(ref CS$<>8__locals1);
+					this.method_21(ref CS$<>8__locals1);
 				}
 			}
 		}
@@ -961,7 +998,7 @@ public abstract class GClass835
 		return new Vector2?(CS$<>8__locals1.vector2_2);
 	}
 
-	public virtual bool vmethod_46(NpcShip npcShip_0)
+	public virtual bool vmethod_48(NpcShip npcShip_0)
 	{
 		return this.method_9() == KamikazeState.PullingEnemies;
 	}
@@ -973,9 +1010,9 @@ public abstract class GClass835
 	}
 
 	[CompilerGenerated]
-	protected void method_6(bool bool_2)
+	protected void method_6(bool bool_3)
 	{
-		this.bool_0 = bool_2;
+		this.bool_0 = bool_3;
 	}
 
 	[CompilerGenerated]
@@ -985,9 +1022,9 @@ public abstract class GClass835
 	}
 
 	[CompilerGenerated]
-	protected void method_8(bool bool_2)
+	protected void method_8(bool bool_3)
 	{
-		this.bool_1 = bool_2;
+		this.bool_1 = bool_3;
 	}
 
 	[CompilerGenerated]
@@ -1026,16 +1063,29 @@ public abstract class GClass835
 		this.unknownMapObjectsTracker_0 = unknownMapObjectsTracker_1;
 	}
 
+	[CompilerGenerated]
+	public bool method_15()
+	{
+		return this.bool_2;
+	}
+
+	[CompilerGenerated]
+	protected void method_16(bool bool_3)
+	{
+		this.bool_2 = bool_3;
+	}
+
 	public virtual void Update()
 	{
 		this.method_12(-1);
-		this.method_6(!this.C.method_74());
+		this.method_6(!this.C.method_73());
 		this.method_4();
-		this.method_10(this.vmethod_28());
+		this.method_10(this.vmethod_29());
 		this.method_13().method_0();
+		this.method_16(this.vmethod_32());
 	}
 
-	public virtual IEnumerable<string> vmethod_47()
+	public virtual IEnumerable<string> vmethod_49()
 	{
 		if (this.method_9() != KamikazeState.Uneligible)
 		{
@@ -1049,37 +1099,37 @@ public abstract class GClass835
 	}
 
 	[CompilerGenerated]
-	private void method_15(double double_0, ref GClass835.<>c__DisplayClass13_0 <>c__DisplayClass13_0_0)
+	private void method_17(double double_0, ref GClass835.<>c__DisplayClass13_0 <>c__DisplayClass13_0_0)
 	{
-		this.C.NpcLockout.method_1(<>c__DisplayClass13_0_0.ship_0.Id, double_0 * 10000.0);
+		this.C.NpcLockout.NuEqfWytUcF(<>c__DisplayClass13_0_0.ship_0.Id, double_0 * 10000.0);
 	}
 
 	[CompilerGenerated]
-	private Vector2 method_16(float float_0, ref GClass835.<>c__DisplayClass61_0 <>c__DisplayClass61_0_0)
+	private Vector2 method_18(float float_0, ref GClass835.<>c__DisplayClass62_0 <>c__DisplayClass62_0_0)
 	{
-		return GClass805.smethod_8(<>c__DisplayClass61_0_0.vector2_0, <>c__DisplayClass61_0_0.float_0, <>c__DisplayClass61_0_0.float_1 + float_0);
+		return GClass805.smethod_8(<>c__DisplayClass62_0_0.vector2_0, <>c__DisplayClass62_0_0.float_0, <>c__DisplayClass62_0_0.float_1 + float_0);
 	}
 
 	[CompilerGenerated]
-	private float method_17(Vector2 vector2_1, ref GClass835.<>c__DisplayClass61_0 <>c__DisplayClass61_0_0)
+	private float method_19(Vector2 vector2_1, ref GClass835.<>c__DisplayClass62_0 <>c__DisplayClass62_0_0)
 	{
-		return this.vmethod_33(vector2_1) + this.vmethod_34(vector2_1, <>c__DisplayClass61_0_0.list_0);
+		return this.vmethod_35(vector2_1) + this.vmethod_36(vector2_1, <>c__DisplayClass62_0_0.list_0);
 	}
 
 	[CompilerGenerated]
-	private float method_18(ref GClass835.<>c__DisplayClass68_0 <>c__DisplayClass68_0_0)
+	private float method_20(ref GClass835.<>c__DisplayClass69_0 <>c__DisplayClass69_0_0)
 	{
-		return this.vmethod_33(<>c__DisplayClass68_0_0.vector2_0) + this.vmethod_35(<>c__DisplayClass68_0_0.vector2_1, <>c__DisplayClass68_0_0.vector2_0, <>c__DisplayClass68_0_0.list_0) - Vector2.Distance(<>c__DisplayClass68_0_0.vector2_1, <>c__DisplayClass68_0_0.vector2_0) * 2f;
+		return this.vmethod_35(<>c__DisplayClass69_0_0.vector2_0) + this.vmethod_37(<>c__DisplayClass69_0_0.vector2_1, <>c__DisplayClass69_0_0.vector2_0, <>c__DisplayClass69_0_0.list_0) - Vector2.Distance(<>c__DisplayClass69_0_0.vector2_1, <>c__DisplayClass69_0_0.vector2_0) * 2f;
 	}
 
 	[CompilerGenerated]
-	private void method_19(ref GClass835.<>c__DisplayClass68_0 <>c__DisplayClass68_0_0)
+	private void method_21(ref GClass835.<>c__DisplayClass69_0 <>c__DisplayClass69_0_0)
 	{
-		float num = this.method_18(ref <>c__DisplayClass68_0_0);
-		if (num > <>c__DisplayClass68_0_0.float_0)
+		float num = this.method_20(ref <>c__DisplayClass69_0_0);
+		if (num > <>c__DisplayClass69_0_0.float_0)
 		{
-			<>c__DisplayClass68_0_0.float_0 = num;
-			<>c__DisplayClass68_0_0.vector2_2 = <>c__DisplayClass68_0_0.vector2_0;
+			<>c__DisplayClass69_0_0.float_0 = num;
+			<>c__DisplayClass69_0_0.vector2_2 = <>c__DisplayClass69_0_0.vector2_0;
 		}
 	}
 
@@ -1106,4 +1156,7 @@ public abstract class GClass835
 
 	[CompilerGenerated]
 	private UnknownMapObjectsTracker<bool> unknownMapObjectsTracker_0;
+
+	[CompilerGenerated]
+	private bool bool_2;
 }

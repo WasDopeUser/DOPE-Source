@@ -17,12 +17,12 @@ public class GClass803
 		this.vector_1[9U] = 28672U;
 		for (int i = 0; i < 36; i++)
 		{
-			uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
-			uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
-			uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
-			num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
-			num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
-			num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
+			uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_1(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_1(this.vector_1[1U], 29));
+			uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_1(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_1(this.vector_1[4U], 20));
+			uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_1(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_1(this.vector_1[8U], 15));
+			num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_1(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_1(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_1(this.vector_1[4U], 14)));
+			num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_1(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_1(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_1(this.vector_1[7U], 23)));
+			num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_1(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_1(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_1(this.vector_1[1U], 5)));
 			this.vector_1[2U] = this.vector_1[1U];
 			this.vector_1[1U] = this.vector_1[0U];
 			this.vector_1[0U] = num3;
@@ -43,13 +43,13 @@ public class GClass803
 
 	private uint method_2()
 	{
-		uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
-		uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
-		uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
+		uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_1(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_1(this.vector_1[1U], 29));
+		uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_1(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_1(this.vector_1[4U], 20));
+		uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_1(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_1(this.vector_1[8U], 15));
 		uint result = num ^ num2 ^ num3;
-		num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
-		num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
-		num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
+		num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_1(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_1(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_1(this.vector_1[4U], 14)));
+		num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_1(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_1(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_1(this.vector_1[7U], 23)));
+		num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_1(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_1(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_1(this.vector_1[1U], 5)));
 		this.vector_1[2U] = this.vector_1[1U];
 		this.vector_1[1U] = this.vector_1[0U];
 		this.vector_1[0U] = num3;
@@ -65,7 +65,7 @@ public class GClass803
 
 	public GClass803(Vector<uint> vector_2, Vector<uint> vector_3)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.vector_1 = new Vector<uint>(10);
 		if (vector_2 != null)
@@ -86,7 +86,7 @@ public class GClass803
 		}
 	}
 
-	public virtual void lAbrFunAvWi(byte[] byte_0, int int_0, int int_1)
+	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
 	{
 		for (int i = 0; i < int_1; i++)
 		{

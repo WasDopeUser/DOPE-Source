@@ -8,7 +8,7 @@ public class GClass232 : GInterface0
 	{
 		get
 		{
-			return 29973;
+			return 5083;
 		}
 	}
 
@@ -20,21 +20,21 @@ public class GClass232 : GInterface0
 		}
 	}
 
-	public GClass232(GClass488 gclass488_1 = null)
+	public GClass232(GClass488 gclass488_0 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		if (gclass488_1 == null)
+		if (gclass488_0 == null)
 		{
-			this.gclass488_0 = new GClass488();
+			this.AieazdqBp0 = new GClass488();
 			return;
 		}
-		this.gclass488_0 = gclass488_1;
+		this.AieazdqBp0 = gclass488_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29973;
+		return 5083;
 	}
 
 	public virtual int vmethod_1()
@@ -44,24 +44,22 @@ public class GClass232 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass488_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass488);
-		this.gclass488_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.AieazdqBp0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass488);
+		this.AieazdqBp0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29973);
+		binaryStream_0.smethod_7(5083);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass488_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(12895);
-		binaryStream_0.smethod_7(6934);
+		binaryStream_0.smethod_7(19600);
+		this.AieazdqBp0.imethod_2(binaryStream_0);
 	}
 
-	public GClass488 gclass488_0;
+	public GClass488 AieazdqBp0;
 }

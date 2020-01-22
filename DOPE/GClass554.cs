@@ -8,7 +8,7 @@ public class GClass554 : GInterface0
 	{
 		get
 		{
-			return 11595;
+			return 15423;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass554 : GInterface0
 
 	public GClass554(Vector<string> vector_1 = null, uint uint_1 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass554 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 11595;
+		return 15423;
 	}
 
 	public virtual int vmethod_1()
@@ -55,16 +55,18 @@ public class GClass554 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			string hLgS6JqKTiiSdPhAGUn = binaryStream_0.smethod_2();
-			this.vector_0.method_0(hLgS6JqKTiiSdPhAGUn);
+			string a5IRDkIkudGf4iDB9w = binaryStream_0.smethod_2();
+			this.vector_0.method_0(a5IRDkIkudGf4iDB9w);
 			num++;
 		}
+		binaryStream_0.smethod_1();
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11595);
+		binaryStream_0.smethod_7(15423);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -75,7 +77,9 @@ public class GClass554 : GInterface0
 		{
 			binaryStream_0.smethod_3(string_);
 		}
+		binaryStream_0.smethod_7(26285);
 		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(-24190);
 	}
 
 	public Vector<string> vector_0;

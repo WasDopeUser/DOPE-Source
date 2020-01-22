@@ -8,7 +8,7 @@ public class GClass194 : GInterface0
 	{
 		get
 		{
-			return 8188;
+			return 32027;
 		}
 	}
 
@@ -20,9 +20,9 @@ public class GClass194 : GInterface0
 		}
 	}
 
-	public GClass194(string string_0 = "", int int_1 = 0, GClass198 gclass198_1 = null, GClass204 gclass204_0 = null, int int_2 = 0, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, GClass200 gclass200_1 = null, GClass201 gclass201_1 = null, GClass205 gclass205_1 = null, GClass207 gclass207_1 = null, GClass208 gclass208_1 = null)
+	public GClass194(string string_0 = "", int int_1 = 0, GClass198 gclass198_1 = null, GClass204 gclass204_1 = null, int int_2 = 0, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, GClass200 gclass200_1 = null, GClass201 gclass201_1 = null, GClass205 gclass205_1 = null, GClass207 gclass207_1 = null, GClass208 gclass208_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.Name = "";
 		base..ctor();
 		this.Name = string_0;
@@ -35,20 +35,20 @@ public class GClass194 : GInterface0
 		{
 			this.gclass198_0 = gclass198_1;
 		}
-		if (gclass204_0 == null)
+		if (gclass204_1 == null)
 		{
-			this.samnrvFihc = new GClass204(0, 0, 0);
+			this.gclass204_0 = new GClass204(0, 0, 0);
 		}
 		else
 		{
-			this.samnrvFihc = gclass204_0;
+			this.gclass204_0 = gclass204_1;
 		}
 		this.int_0 = int_2;
-		this.bool_4 = bool_5;
+		this.bool_2 = bool_5;
 		this.bool_3 = bool_6;
-		this.bool_1 = bool_7;
-		this.bool_2 = bool_8;
-		this.bool_0 = bool_9;
+		this.bool_0 = bool_7;
+		this.bool_4 = bool_8;
+		this.bool_1 = bool_9;
 		if (gclass200_1 == null)
 		{
 			this.gclass200_0 = new GClass200(0, "");
@@ -91,7 +91,7 @@ public class GClass194 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 8188;
+		return 32027;
 	}
 
 	public virtual int vmethod_1()
@@ -101,86 +101,88 @@ public class GClass194 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.gclass208_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass208);
 		this.gclass208_0.imethod_1(binaryStream_0);
-		this.gclass207_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
-		this.gclass207_0.imethod_1(binaryStream_0);
+		this.gclass204_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass204);
+		this.gclass204_0.imethod_1(binaryStream_0);
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (this.Id << 14 | U.smethod_0(this.Id, 18));
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
 		this.gclass205_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass205);
 		this.gclass205_0.imethod_1(binaryStream_0);
-		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
-		this.gclass201_0.imethod_1(binaryStream_0);
 		this.bool_2 = binaryStream_0.ReadBoolean();
-		this.bool_3 = binaryStream_0.ReadBoolean();
-		this.samnrvFihc = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass204);
-		this.samnrvFihc.imethod_1(binaryStream_0);
-		this.Name = binaryStream_0.smethod_2();
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (U.smethod_0(this.Id, 14) | this.Id << 18);
-		this.gclass200_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass200);
-		this.gclass200_0.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		this.gclass207_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
+		this.gclass207_0.imethod_1(binaryStream_0);
 		this.gclass198_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass198);
 		this.gclass198_0.imethod_1(binaryStream_0);
+		this.gclass200_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass200);
+		this.gclass200_0.imethod_1(binaryStream_0);
+		this.bool_3 = binaryStream_0.ReadBoolean();
+		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
+		this.gclass201_0.imethod_1(binaryStream_0);
+		this.Name = binaryStream_0.smethod_2();
 		this.bool_4 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8188);
+		binaryStream_0.smethod_7(32027);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.bool_0);
 		this.gclass208_0.imethod_2(binaryStream_0);
-		this.gclass207_0.imethod_2(binaryStream_0);
+		this.gclass204_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.Id, 14) | this.Id << 18);
+		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.smethod_7(-10118);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		binaryStream_0.smethod_7(19459);
+		binaryStream_0.smethod_7(-23237);
 		this.gclass205_0.imethod_2(binaryStream_0);
-		this.gclass201_0.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_2);
-		binaryStream_0.WriteBoolean(this.bool_3);
-		this.samnrvFihc.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.Name);
-		binaryStream_0.smethod_4(this.Id << 14 | U.smethod_0(this.Id, 18));
-		this.gclass200_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		this.gclass207_0.imethod_2(binaryStream_0);
 		this.gclass198_0.imethod_2(binaryStream_0);
+		this.gclass200_0.imethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_3);
+		this.gclass201_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.Name);
 		binaryStream_0.WriteBoolean(this.bool_4);
 	}
 
-	public bool bool_0;
-
 	public GClass208 gclass208_0;
 
-	public GClass207 gclass207_0;
-
-	public bool bool_1;
-
-	public GClass205 gclass205_0;
-
-	public GClass201 gclass201_0;
-
-	public bool bool_2;
-
-	public bool bool_3;
-
-	public GClass204 samnrvFihc;
-
-	public string Name;
+	public GClass204 gclass204_0;
 
 	public int Id;
 
-	public GClass200 gclass200_0;
+	public bool bool_0;
+
+	public bool bool_1;
 
 	public int int_0;
 
+	public GClass205 gclass205_0;
+
+	public bool bool_2;
+
+	public GClass207 gclass207_0;
+
 	public GClass198 gclass198_0;
+
+	public GClass200 gclass200_0;
+
+	public bool bool_3;
+
+	public GClass201 gclass201_0;
+
+	public string Name;
 
 	public bool bool_4;
 }

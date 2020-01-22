@@ -8,7 +8,7 @@ public class GClass274 : GInterface0
 	{
 		get
 		{
-			return 15521;
+			return 25624;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass274 : GInterface0
 
 	public GClass274(Vector<GClass271> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass274 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 15521;
+		return 25624;
 	}
 
 	public virtual int vmethod_1()
@@ -57,12 +57,11 @@ public class GClass274 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15521);
+		binaryStream_0.smethod_7(25624);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -73,7 +72,6 @@ public class GClass274 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(-29126);
 	}
 
 	public Vector<GClass271> vector_0;

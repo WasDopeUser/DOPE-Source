@@ -8,7 +8,7 @@ public class GClass653 : GClass651, GInterface0
 	{
 		get
 		{
-			return 13761;
+			return 11879;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass653 : GClass651, GInterface0
 
 	public GClass653(GClass201 gclass201_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass201_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass653 : GClass651, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 13761;
+		return 11879;
 	}
 
 	public override int vmethod_1()
@@ -52,7 +52,7 @@ public class GClass653 : GClass651, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13761);
+		binaryStream_0.smethod_7(11879);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -60,7 +60,7 @@ public class GClass653 : GClass651, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		this.gclass201_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-21106);
+		binaryStream_0.smethod_7(13805);
 	}
 
 	public GClass201 gclass201_0;

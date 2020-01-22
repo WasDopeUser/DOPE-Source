@@ -8,7 +8,7 @@ public class GClass288 : GInterface0
 	{
 		get
 		{
-			return 23096;
+			return 27124;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass288 : GInterface0
 
 	public GClass288(double double_1 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 23096;
+		return 27124;
 	}
 
 	public virtual int vmethod_1()
@@ -40,19 +40,17 @@ public class GClass288 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.double_0 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23096);
+		binaryStream_0.smethod_7(27124);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(30071);
 	}
 
 	public double double_0;

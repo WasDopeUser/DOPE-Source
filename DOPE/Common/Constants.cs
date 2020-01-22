@@ -16,7 +16,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return string.Format("{0}.{1}.1-EXPERIMENTAL", 0, 45);
+				return string.Format("{0}.{1}", 0, 46);
 			}
 		}
 
@@ -40,7 +40,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				GClass279 gclass = new GClass279(0, 146, 1);
+				GClass279 gclass = new GClass279(0, 147, 1);
 				return string.Format("{0}.{1}.{2}", gclass.int_0, gclass.int_1, gclass.int_2);
 			}
 		}
@@ -50,6 +50,10 @@ namespace DOPE.Common
 			if (localVersion == remoteVersion)
 			{
 				return false;
+			}
+			if (localVersion == "0.45.0-EXPERIMENTAL")
+			{
+				return true;
 			}
 			string[] array = remoteVersion.Split(new char[]
 			{

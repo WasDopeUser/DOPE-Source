@@ -1,11 +1,26 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
-[AttributeUsage(AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
 public sealed class GAttribute54 : Attribute
 {
-	public GAttribute54()
+	public GAttribute54([GAttribute1] string tagName, [GAttribute1] Type controlType)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
+		this.String_0 = tagName;
+		this.Type_0 = controlType;
 	}
+
+	[GAttribute1]
+	public string String_0 { get; private set; }
+
+	[GAttribute1]
+	public Type Type_0 { get; private set; }
+
+	[CompilerGenerated]
+	private string string_0;
+
+	[CompilerGenerated]
+	private Type type_0;
 }

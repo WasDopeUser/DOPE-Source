@@ -94,11 +94,11 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 	{
 		get
 		{
-			return this.gclass862_0;
+			return this.FoYqrHtykHH;
 		}
 		set
 		{
-			this.method_6<GClass862>(ref this.gclass862_0, value, "Target", "Proxy");
+			this.method_6<GClass862>(ref this.FoYqrHtykHH, value, "Target", "Proxy");
 		}
 	}
 
@@ -127,7 +127,7 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 
 	public GClass854()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.hashSet_0 = new HashSet<int>();
 		base..ctor();
 		this.InitializeComponent();
@@ -142,7 +142,7 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 
 	public void method_4()
 	{
-		this.gclass861_0.method_3();
+		this.gclass861_0.method_2();
 		this.gclass861_0.ShowDialog();
 		base.Topmost = true;
 		base.Focus();
@@ -176,7 +176,7 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 		}
 		if (this.gclass861_0 != null)
 		{
-			this.gclass861_0.method_2(true);
+			this.gclass861_0.method_1(true);
 		}
 		GClass861 gclass = this.gclass861_0;
 		if (gclass == null)
@@ -186,11 +186,11 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 		gclass.Close();
 	}
 
-	protected void method_6<VtudObfFmBOfYOE6MEv>(ref VtudObfFmBOfYOE6MEv gparam_0, VtudObfFmBOfYOE6MEv ITShrpfDxL8jYevi3vd, string string_0 = null, [CallerMemberName] string name = null)
+	protected void method_6<OO9bL2rHtAMkChTHp9f>(ref OO9bL2rHtAMkChTHp9f gparam_0, OO9bL2rHtAMkChTHp9f CQkumRrJSxKGG6RZOvD, string string_0 = null, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<VtudObfFmBOfYOE6MEv>.Default.Equals(gparam_0, ITShrpfDxL8jYevi3vd))
+		if (!EqualityComparer<OO9bL2rHtAMkChTHp9f>.Default.Equals(gparam_0, CQkumRrJSxKGG6RZOvD))
 		{
-			gparam_0 = ITShrpfDxL8jYevi3vd;
+			gparam_0 = CQkumRrJSxKGG6RZOvD;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
 			{
@@ -245,11 +245,11 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 		Ship ship;
 		if (bool_1)
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
+			ship = this.Proxy.Game.Map.method_4<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
 		}
 		else
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
+			ship = this.Proxy.Game.Map.method_4<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
 		}
 		if (ship != null)
 		{
@@ -287,8 +287,8 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 		System.Windows.Application.LoadComponent(this, resourceLocator);
 	}
 
-	[EditorBrowsable(EditorBrowsableState.Never)]
 	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+	[EditorBrowsable(EditorBrowsableState.Never)]
 	[DebuggerNonUserCode]
 	void IComponentConnector.Connect(int connectionId, object target)
 	{
@@ -312,7 +312,7 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass854()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass854.int_0 = 913376;
 	}
 
@@ -322,7 +322,7 @@ public class GClass854 : Window, INotifyPropertyChanged, IComponentConnector
 
 	private HashSet<int> hashSet_0;
 
-	private GClass862 gclass862_0;
+	private GClass862 FoYqrHtykHH;
 
 	private System.Windows.Forms.Timer timer_0;
 

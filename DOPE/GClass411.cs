@@ -8,7 +8,7 @@ public class GClass411 : GInterface0
 	{
 		get
 		{
-			return 31307;
+			return 9204;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass411 : GInterface0
 
 	public GClass411(Vector<GClass375> vector_1 = null, GClass521 gclass521_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -42,7 +42,7 @@ public class GClass411 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 31307;
+		return 9204;
 	}
 
 	public virtual int vmethod_1()
@@ -67,11 +67,12 @@ public class GClass411 : GInterface0
 		}
 		this.gclass521_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass521);
 		this.gclass521_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31307);
+		binaryStream_0.smethod_7(9204);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -83,6 +84,7 @@ public class GClass411 : GInterface0
 			gclass.imethod_2(binaryStream_0);
 		}
 		this.gclass521_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(18660);
 	}
 
 	public Vector<GClass375> vector_0;

@@ -8,7 +8,7 @@ public class GClass204 : GClass197, GInterface0
 	{
 		get
 		{
-			return 21185;
+			return 13296;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass204 : GClass197, GInterface0
 
 	public GClass204(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.MapId = int_2;
 		this.int_1 = int_3;
@@ -31,7 +31,7 @@ public class GClass204 : GClass197, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 21185;
+		return 13296;
 	}
 
 	public override int vmethod_1()
@@ -42,33 +42,31 @@ public class GClass204 : GClass197, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
 		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (this.MapId << 15 | U.smethod_0(this.MapId, 17));
-		binaryStream_0.smethod_1();
+		this.MapId = (this.MapId << 8 | U.smethod_0(this.MapId, 24));
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		this.int_1 = (U.smethod_0(this.int_1, 8) | this.int_1 << 24);
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21185);
+		binaryStream_0.smethod_7(13296);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
-		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 15) | this.MapId << 17);
-		binaryStream_0.smethod_7(-27254);
-		binaryStream_0.smethod_4(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 8) | this.MapId << 24);
+		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));
 	}
 
-	public int int_0;
-
 	public int MapId;
+
+	public int int_0;
 
 	public int int_1;
 }

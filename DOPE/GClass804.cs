@@ -5,7 +5,7 @@ public class GClass804
 {
 	public GClass804(Vector<uint> vector_5, Vector<uint> vector_6)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.vector_0 = new Vector<uint>(512);
 		this.vector_1 = new Vector<uint>(512);
@@ -39,27 +39,27 @@ public class GClass804
 			uint num4 = num >> 2;
 			vector[num4] |= num2 << (int)num3;
 		}
-		this.method_14(vector, 0U, vector, 4U, 4U);
+		this.method_13(vector, 0U, vector, 4U, 4U);
 		int num5 = 0;
 		while (num5 < this.vector_3.Length && num5 < 16)
 		{
 			vector[(num5 >> 2) + 8] = (vector[(num5 >> 2) + 8] | (this.vector_3[num5] & 255U) << 8 * (num5 & 3));
 			num5++;
 		}
-		this.method_14(vector, 8U, vector, 12U, 4U);
+		this.method_13(vector, 8U, vector, 12U, 4U);
 		for (int i = 16; i < 1280; i++)
 		{
 			vector[i] = (uint)((ulong)(this.method_3(vector[i - 2]) + vector[i - 7] + this.method_2(vector[i - 15]) + vector[i - 16]) + (ulong)((long)i));
 		}
-		this.method_14(vector, 256U, this.vector_0, 0U, 512U);
-		this.method_14(vector, 768U, this.vector_1, 0U, 512U);
+		this.method_13(vector, 256U, this.vector_0, 0U, 512U);
+		this.method_13(vector, 768U, this.vector_1, 0U, 512U);
 		for (int j = 0; j < 512; j++)
 		{
-			this.vector_0[j] = this.method_13();
+			this.vector_0[j] = this.method_12();
 		}
 		for (int k = 0; k < 512; k++)
 		{
-			this.vector_1[k] = this.method_13();
+			this.vector_1[k] = this.method_12();
 		}
 		this.uint_0 = 0U;
 	}
@@ -78,7 +78,7 @@ public class GClass804
 	{
 		if (this.uint_1 == 0U)
 		{
-			uint num = this.method_13();
+			uint num = this.method_12();
 			this.vector_4[0U] = (num & 255U);
 			num >>= 8;
 			this.vector_4[1U] = (num & 255U);
@@ -114,12 +114,12 @@ public class GClass804
 
 	private uint method_6(uint uint_2, uint uint_3)
 	{
-		return uint_2 << (int)uint_3 | (uint)U.smethod_2(uint_2, (int)(-(int)uint_3));
+		return uint_2 << (int)uint_3 | (uint)U.smethod_1(uint_2, (int)(-(int)uint_3));
 	}
 
 	private uint method_7(uint uint_2, uint uint_3)
 	{
-		return (uint)(U.smethod_1(uint_2, uint_3) | (int)((int)uint_2 << (int)(-(int)uint_3)));
+		return (uint)(U.fIdqMbRoFuU(uint_2, uint_3) | (int)((int)uint_2 << (int)(-(int)uint_3)));
 	}
 
 	private uint method_8(uint uint_2)
@@ -137,35 +137,35 @@ public class GClass804
 		return uint_2 & 1023U;
 	}
 
-	private uint method_11(uint uint_2)
+	private uint iUwqqsylxXo(uint uint_2)
 	{
 		return uint_2 & 511U;
 	}
 
-	private uint method_12(uint uint_2, uint uint_3)
+	private uint method_11(uint uint_2, uint uint_3)
 	{
-		return this.method_11(uint_2 - uint_3);
+		return this.iUwqqsylxXo(uint_2 - uint_3);
 	}
 
-	private uint method_13()
+	private uint method_12()
 	{
-		uint uint_ = this.method_11(this.uint_0);
+		uint uint_ = this.iUwqqsylxXo(this.uint_0);
 		uint result;
 		if (this.uint_0 < 512U)
 		{
-			this.vector_0[uint_] = this.vector_0[uint_] + this.method_4(this.vector_0[this.method_12(uint_, 3U)], this.vector_0[this.method_12(uint_, 10U)], this.vector_0[this.method_12(uint_, 511U)]);
-			result = (this.method_8(this.vector_0[this.method_12(uint_, 12U)]) ^ this.vector_0[uint_]);
+			this.vector_0[uint_] = this.vector_0[uint_] + this.method_4(this.vector_0[this.method_11(uint_, 3U)], this.vector_0[this.method_11(uint_, 10U)], this.vector_0[this.method_11(uint_, 511U)]);
+			result = (this.method_8(this.vector_0[this.method_11(uint_, 12U)]) ^ this.vector_0[uint_]);
 		}
 		else
 		{
-			this.vector_1[uint_] = this.vector_1[uint_] + this.method_5(this.vector_1[this.method_12(uint_, 3U)], this.vector_1[this.method_12(uint_, 10U)], this.vector_1[this.method_12(uint_, 511U)]);
-			result = (this.method_9(this.vector_1[this.method_12(uint_, 12U)]) ^ this.vector_1[uint_]);
+			this.vector_1[uint_] = this.vector_1[uint_] + this.method_5(this.vector_1[this.method_11(uint_, 3U)], this.vector_1[this.method_11(uint_, 10U)], this.vector_1[this.method_11(uint_, 511U)]);
+			result = (this.method_9(this.vector_1[this.method_11(uint_, 12U)]) ^ this.vector_1[uint_]);
 		}
 		this.uint_0 = this.method_10(this.uint_0 + 1U);
 		return result;
 	}
 
-	private void method_14(Vector<uint> vector_5, uint uint_2, Vector<uint> vector_6, uint uint_3, uint uint_4)
+	private void method_13(Vector<uint> vector_5, uint uint_2, Vector<uint> vector_6, uint uint_3, uint uint_4)
 	{
 		uint num = uint_3;
 		uint num2 = uint_4 + uint_2;

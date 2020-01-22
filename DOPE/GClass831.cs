@@ -32,9 +32,9 @@ public class GClass831 : GClass827
 
 	public GClass831(GClass822 gclass822_1, TargetMap targetMap_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, targetMap_1, "G", int.MinValue);
-		this.GalaxyGateType = MapUtils.smethod_8((int)targetMap_1);
+		this.GalaxyGateType = MapUtils.smethod_7((int)targetMap_1);
 	}
 
 	protected override void OnBind()
@@ -59,7 +59,7 @@ public class GClass831 : GClass827
 			GClass844 gclass = behavior as GClass844;
 			if (gclass != null)
 			{
-				gclass.method_35(false);
+				gclass.method_36(false);
 			}
 		}
 	}
@@ -70,10 +70,10 @@ public class GClass831 : GClass827
 		if (ship_0.IsNpc)
 		{
 			GClass844 gclass = behavior as GClass844;
-			if (gclass != null && !gclass.method_34())
+			if (gclass != null && !gclass.hvrqxuprvbv())
 			{
-				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass831.<>c.<>c_0.method_0)) == 1;
-				gclass.method_35(flag);
+				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass831.<>c.lwrqtvutsPY.method_0)) == 1;
+				gclass.method_36(flag);
 				if (flag)
 				{
 					base.Log.Info("New wave -- {ship}", ship_0.Name);
@@ -156,7 +156,7 @@ public class GClass831 : GClass827
 				return true;
 			}
 		}
-		int_2 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
+		int_2 = MapUtils.smethod_9(1, base.C.Hero.FactionId);
 		return true;
 	}
 

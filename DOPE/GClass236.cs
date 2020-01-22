@@ -8,7 +8,7 @@ public class GClass236 : GInterface0
 	{
 		get
 		{
-			return 26240;
+			return 1313;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass236 : GInterface0
 
 	public GClass236(Vector<GClass251> vector_2 = null, string string_1 = "", Vector<GClass416> vector_3 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		if (vector_2 == null)
@@ -44,7 +44,7 @@ public class GClass236 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 26240;
+		return 1313;
 	}
 
 	public virtual int vmethod_1()
@@ -54,6 +54,7 @@ public class GClass236 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
 		while (this.vector_0.Length > 0)
 		{
@@ -81,17 +82,17 @@ public class GClass236 : GInterface0
 			this.vector_1.method_0(gclass2);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26240);
+		binaryStream_0.smethod_7(1313);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_7(25097);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass416 gclass in this.vector_0)
@@ -103,7 +104,6 @@ public class GClass236 : GInterface0
 		{
 			gclass2.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(5693);
 	}
 
 	public string string_0;

@@ -8,7 +8,7 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 6699;
+			return 26306;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass595 : GInterface0
 
 	public GClass595(Vector<GClass524> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass595 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 6699;
+		return 26306;
 	}
 
 	public virtual int vmethod_1()
@@ -44,7 +44,6 @@ public class GClass595 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -62,13 +61,12 @@ public class GClass595 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6699);
+		binaryStream_0.smethod_7(26306);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(30541);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass524 gclass in this.vector_0)
 		{

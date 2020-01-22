@@ -8,7 +8,7 @@ public class GClass492 : GClass488, GInterface0
 	{
 		get
 		{
-			return 32549;
+			return 9203;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass492 : GClass488, GInterface0
 
 	public GClass492()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 
 	public override int vmethod_0()
 	{
-		return 32549;
+		return 9203;
 	}
 
 	public override int vmethod_1()
@@ -39,16 +39,18 @@ public class GClass492 : GClass488, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32549);
+		binaryStream_0.smethod_7(9203);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(637);
 	}
 }

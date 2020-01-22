@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 public static class GClass810
 {
-	public static int smethod_0(float float_0, float float_1, float float_2, float float_3, float float_4, float float_5, out PointF pointF_0, out PointF pointF_1)
+	public static int YnbqfMtTxsi(float float_0, float float_1, float float_2, float float_3, float float_4, float float_5, out PointF pointF_0, out PointF pointF_1)
 	{
 		float num = float_0 - float_3;
 		float num2 = float_1 - float_4;
@@ -41,11 +41,11 @@ public static class GClass810
 		return 2;
 	}
 
-	public static PointF smethod_1(float float_0, float float_1, float float_2, PointF pointF_0, PointF pointF_1)
+	public static PointF smethod_0(float float_0, float float_1, float float_2, PointF pointF_0, PointF pointF_1)
 	{
 		PointF pointF;
 		PointF pointF2;
-		int num = GClass810.smethod_3(float_0, float_1, float_2, pointF_0, pointF_1, out pointF, out pointF2);
+		int num = GClass810.sfoqfSbmyAW(float_0, float_1, float_2, pointF_0, pointF_1, out pointF, out pointF2);
 		if (num == 1)
 		{
 			return pointF;
@@ -54,8 +54,8 @@ public static class GClass810
 		{
 			return PointF.Empty;
 		}
-		double num2 = GClass810.smethod_2(pointF, pointF_0);
-		double num3 = GClass810.smethod_2(pointF2, pointF_0);
+		double num2 = GClass810.smethod_1(pointF, pointF_0);
+		double num3 = GClass810.smethod_1(pointF2, pointF_0);
 		if (num2 < num3)
 		{
 			return pointF;
@@ -63,12 +63,12 @@ public static class GClass810
 		return pointF2;
 	}
 
-	private static double smethod_2(PointF pointF_0, PointF pointF_1)
+	private static double smethod_1(PointF pointF_0, PointF pointF_1)
 	{
 		return Math.Sqrt(Math.Pow((double)(pointF_1.X - pointF_0.X), 2.0) + Math.Pow((double)(pointF_1.Y - pointF_0.Y), 2.0));
 	}
 
-	public static int smethod_3(float float_0, float float_1, float float_2, PointF pointF_0, PointF pointF_1, out PointF pointF_2, out PointF pointF_3)
+	public static int sfoqfSbmyAW(float float_0, float float_1, float float_2, PointF pointF_0, PointF pointF_1, out PointF pointF_2, out PointF pointF_3)
 	{
 		float num = pointF_1.X - pointF_0.X;
 		float num2 = pointF_1.Y - pointF_0.Y;
@@ -97,12 +97,12 @@ public static class GClass810
 		return 2;
 	}
 
-	public static bool smethod_4(float float_0, float float_1, float float_2)
+	public static bool smethod_2(float float_0, float float_1, float float_2)
 	{
 		return float_0 >= Math.Min(float_1, float_2) - 5f && float_0 < Math.Max(float_1, float_2) + 5f;
 	}
 
-	public static Vector2? smethod_5(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, Vector2 vector2_3)
+	public static Vector2? smethod_3(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, Vector2 vector2_3)
 	{
 		float x = vector2_0.X;
 		float y = vector2_0.Y;
@@ -121,21 +121,21 @@ public static class GClass810
 		float num3 = (x * y2 - y * x2) * (y3 - y4) - (y - y2) * (x3 * y4 - y3 * x4);
 		float num4 = num2 / num;
 		float num5 = num3 / num;
-		if (GClass810.smethod_4(num4, vector2_0.X, vector2_1.X) && GClass810.smethod_4(num4, vector2_2.X, vector2_3.X) && GClass810.smethod_4(num5, vector2_0.Y, vector2_1.Y) && GClass810.smethod_4(num5, vector2_2.Y, vector2_3.Y))
+		if (GClass810.smethod_2(num4, vector2_0.X, vector2_1.X) && GClass810.smethod_2(num4, vector2_2.X, vector2_3.X) && GClass810.smethod_2(num5, vector2_0.Y, vector2_1.Y) && GClass810.smethod_2(num5, vector2_2.Y, vector2_3.Y))
 		{
 			return new Vector2?(new Vector2(num4, num5));
 		}
 		return null;
 	}
 
-	public static bool smethod_6(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, Vector2 vector2_3, out Vector2 vector2_4)
+	public static bool smethod_4(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, Vector2 vector2_3, out Vector2 vector2_4)
 	{
-		Vector2? vector = GClass810.smethod_5(vector2_0, vector2_1, vector2_2, vector2_3);
+		Vector2? vector = GClass810.smethod_3(vector2_0, vector2_1, vector2_2, vector2_3);
 		vector2_4 = vector.GetValueOrDefault();
 		return vector != null;
 	}
 
-	public static bool smethod_7(Rectangle rectangle_0, Vector2 vector2_0, Vector2 vector2_1, out Vector2 vector2_2)
+	public static bool smethod_5(Rectangle rectangle_0, Vector2 vector2_0, Vector2 vector2_1, out Vector2 vector2_2)
 	{
 		vector2_2 = default(Vector2);
 		if (!rectangle_0.Contains(new Point((int)vector2_0.X, (int)vector2_0.Y)) && !rectangle_0.Contains(new Point((int)vector2_1.X, (int)vector2_1.Y)))
@@ -144,12 +144,12 @@ public static class GClass810
 			Vector2 vector2 = new Vector2((float)rectangle_0.Right, (float)rectangle_0.Top);
 			Vector2 vector3 = new Vector2((float)rectangle_0.Left, (float)rectangle_0.Bottom);
 			Vector2 vector4 = new Vector2((float)rectangle_0.Right, (float)rectangle_0.Bottom);
-			return GClass810.smethod_6(vector, vector2, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_6(vector2, vector4, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_6(vector4, vector3, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_6(vector3, vector, vector2_0, vector2_1, out vector2_2);
+			return GClass810.smethod_4(vector, vector2, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_4(vector2, vector4, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_4(vector4, vector3, vector2_0, vector2_1, out vector2_2) || GClass810.smethod_4(vector3, vector, vector2_0, vector2_1, out vector2_2);
 		}
 		return true;
 	}
 
-	public static Vector2? smethod_8(Rectangle rectangle_0, Vector2 vector2_0, Vector2 vector2_1)
+	public static Vector2? smethod_6(Rectangle rectangle_0, Vector2 vector2_0, Vector2 vector2_1)
 	{
 		GClass810.<>c__DisplayClass8_0 CS$<>8__locals1;
 		CS$<>8__locals1.vector2_0 = vector2_0;
@@ -158,14 +158,14 @@ public static class GClass810
 		Vector2 vector3 = new Vector2((float)rectangle_0.Left, (float)rectangle_0.Bottom);
 		Vector2 vector4 = new Vector2((float)rectangle_0.Right, (float)rectangle_0.Bottom);
 		CS$<>8__locals1.nullable_0 = null;
-		GClass810.smethod_14(GClass810.smethod_5(vector, vector2, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
-		GClass810.smethod_14(GClass810.smethod_5(vector2, vector4, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
-		GClass810.smethod_14(GClass810.smethod_5(vector4, vector3, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
-		GClass810.smethod_14(GClass810.smethod_5(vector3, vector, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
+		GClass810.smethod_12(GClass810.smethod_3(vector, vector2, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
+		GClass810.smethod_12(GClass810.smethod_3(vector2, vector4, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
+		GClass810.smethod_12(GClass810.smethod_3(vector4, vector3, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
+		GClass810.smethod_12(GClass810.smethod_3(vector3, vector, CS$<>8__locals1.vector2_0, vector2_1), ref CS$<>8__locals1);
 		return CS$<>8__locals1.nullable_0;
 	}
 
-	public static bool smethod_9(Vector2 vector2_0, Vector2 vector2_1, out float float_0, out float float_1, out float float_2)
+	public static bool smethod_7(Vector2 vector2_0, Vector2 vector2_1, out float float_0, out float float_1, out float float_2)
 	{
 		float_0 = vector2_1.Y - vector2_0.Y;
 		float_1 = -(vector2_1.X - vector2_0.X);
@@ -173,19 +173,19 @@ public static class GClass810
 		return float_0 != 0f || float_1 != 0f;
 	}
 
-	public static float smethod_10(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
+	public static float smethod_8(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
 	{
 		float num;
 		float num2;
 		float num3;
-		if (!GClass810.smethod_9(vector2_0, vector2_1, out num, out num2, out num3))
+		if (!GClass810.smethod_7(vector2_0, vector2_1, out num, out num2, out num3))
 		{
 			return 0f;
 		}
 		return (float)((double)Math.Abs(vector2_2.X * num + vector2_2.Y * num2 + num3) / Math.Sqrt((double)(num * num + num2 * num2)));
 	}
 
-	private static double smethod_11(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
+	private static double smethod_9(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
 	{
 		double num = (double)(vector2_1.X - vector2_0.X);
 		float num2 = vector2_1.Y - vector2_0.Y;
@@ -194,7 +194,7 @@ public static class GClass810
 		return num * (double)num3 + (double)(num2 * num4);
 	}
 
-	private static double smethod_12(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
+	private static double smethod_10(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2)
 	{
 		double num = (double)(vector2_1.X - vector2_0.X);
 		float num2 = vector2_1.Y - vector2_0.Y;
@@ -203,15 +203,15 @@ public static class GClass810
 		return num * (double)num4 - (double)(num2 * num3);
 	}
 
-	public static double smethod_13(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, bool bool_0)
+	public static double smethod_11(Vector2 vector2_0, Vector2 vector2_1, Vector2 vector2_2, bool bool_0)
 	{
 		if (bool_0)
 		{
-			if (GClass810.smethod_11(vector2_0, vector2_1, vector2_2) > 0.0)
+			if (GClass810.smethod_9(vector2_0, vector2_1, vector2_2) > 0.0)
 			{
 				return (double)Vector2.Distance(vector2_1, vector2_2);
 			}
-			if (GClass810.smethod_11(vector2_1, vector2_0, vector2_2) > 0.0)
+			if (GClass810.smethod_9(vector2_1, vector2_0, vector2_2) > 0.0)
 			{
 				return (double)Vector2.Distance(vector2_0, vector2_2);
 			}
@@ -221,11 +221,11 @@ public static class GClass810
 		{
 			return (double)Vector2.Distance(vector2_0, vector2_2);
 		}
-		return Math.Abs(GClass810.smethod_12(vector2_0, vector2_1, vector2_2) / (double)num);
+		return Math.Abs(GClass810.smethod_10(vector2_0, vector2_1, vector2_2) / (double)num);
 	}
 
 	[CompilerGenerated]
-	internal static void smethod_14(Vector2? nullable_0, ref GClass810.<>c__DisplayClass8_0 <>c__DisplayClass8_0_0)
+	internal static void smethod_12(Vector2? nullable_0, ref GClass810.<>c__DisplayClass8_0 <>c__DisplayClass8_0_0)
 	{
 		if (<>c__DisplayClass8_0_0.nullable_0 == null)
 		{

@@ -8,7 +8,7 @@ public class GClass631 : GInterface0
 	{
 		get
 		{
-			return 1636;
+			return 22389;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass631 : GInterface0
 
 	public GClass631(bool bool_1 = false, Vector<int> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.bool_0 = bool_1;
 		if (vector_1 == null)
@@ -35,7 +35,7 @@ public class GClass631 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 1636;
+		return 22389;
 	}
 
 	public virtual int vmethod_1()
@@ -55,7 +55,7 @@ public class GClass631 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (U.smethod_0(num3, 2) | num3 << 30);
+			num3 = (U.smethod_0(num3, 13) | num3 << 19);
 			this.vector_0.method_0(num3);
 			num++;
 		}
@@ -63,7 +63,7 @@ public class GClass631 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1636);
+		binaryStream_0.smethod_7(22389);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -73,7 +73,7 @@ public class GClass631 : GInterface0
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (int num in this.vector_0)
 		{
-			binaryStream_0.smethod_4(num << 2 | U.smethod_0(num, 30));
+			binaryStream_0.smethod_4(num << 13 | U.smethod_0(num, 19));
 		}
 	}
 

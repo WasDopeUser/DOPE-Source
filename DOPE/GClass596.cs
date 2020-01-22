@@ -8,7 +8,7 @@ public class GClass596 : GInterface0
 	{
 		get
 		{
-			return 2572;
+			return 701;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass596 : GInterface0
 
 	public GClass596(Vector<GClass777> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass596 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 2572;
+		return 701;
 	}
 
 	public virtual int vmethod_1()
@@ -57,12 +57,11 @@ public class GClass596 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2572);
+		binaryStream_0.smethod_7(701);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -73,7 +72,6 @@ public class GClass596 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(24197);
 	}
 
 	public Vector<GClass777> vector_0;

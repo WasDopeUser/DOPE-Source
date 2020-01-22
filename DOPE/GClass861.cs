@@ -41,7 +41,7 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		}
 		set
 		{
-			this.method_4<bool>(ref this.bool_0, value, "IsLoading");
+			this.method_3<bool>(ref this.bool_0, value, "IsLoading");
 		}
 	}
 
@@ -53,7 +53,7 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		}
 		set
 		{
-			this.method_4<string>(ref this.string_0, value, "LoadingStatus");
+			this.method_3<string>(ref this.string_0, value, "LoadingStatus");
 		}
 	}
 
@@ -63,20 +63,20 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 	}
 
 	[CompilerGenerated]
-	public bool method_1()
+	public bool ygDqHuElcCj()
 	{
 		return this.bool_1;
 	}
 
 	[CompilerGenerated]
-	public void method_2(bool bool_3)
+	public void method_1(bool bool_3)
 	{
 		this.bool_1 = bool_3;
 	}
 
 	protected override void OnClosing(CancelEventArgs e)
 	{
-		if (!this.method_1())
+		if (!this.ygDqHuElcCj())
 		{
 			e.Cancel = true;
 			base.Hide();
@@ -84,14 +84,14 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		base.OnClosing(e);
 	}
 
-	public void method_3()
+	public void method_2()
 	{
 		base.Focus();
 	}
 
 	public GClass861()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "Wait...";
 		base..ctor();
 		this.InitializeComponent();
@@ -121,7 +121,7 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		while (!Parallel.ForEach<GClass867>(PErkava.AllServersData, new ParallelOptions
 		{
 			MaxDegreeOfParallelism = 10
-		}, new Action<GClass867>(this.method_5)).IsCompleted)
+		}, new Action<GClass867>(this.method_4)).IsCompleted)
 		{
 			Thread.Sleep(1);
 		}
@@ -130,11 +130,11 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 		base.Dispatcher.Invoke(new Action(this.method_0));
 	}
 
-	protected void method_4<znDTlHfjAB79NkeOONn>(ref znDTlHfjAB79NkeOONn gparam_0, znDTlHfjAB79NkeOONn TMCHhEfgCxC5IKYsiRH, [CallerMemberName] string name = null)
+	protected void method_3<y3mHVBrx3vlLI2xUKru>(ref y3mHVBrx3vlLI2xUKru gparam_0, y3mHVBrx3vlLI2xUKru BnUQRorWk5qlavJVkUM, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<znDTlHfjAB79NkeOONn>.Default.Equals(gparam_0, TMCHhEfgCxC5IKYsiRH))
+		if (!EqualityComparer<y3mHVBrx3vlLI2xUKru>.Default.Equals(gparam_0, BnUQRorWk5qlavJVkUM))
 		{
-			gparam_0 = TMCHhEfgCxC5IKYsiRH;
+			gparam_0 = BnUQRorWk5qlavJVkUM;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged == null)
 			{
@@ -146,8 +146,8 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 
 	public event PropertyChangedEventHandler PropertyChanged;
 
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 	[DebuggerNonUserCode]
+	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 	public void InitializeComponent()
 	{
 		if (this.bool_2)
@@ -168,7 +168,7 @@ public class GClass861 : Window, INotifyPropertyChanged, IComponentConnector
 	}
 
 	[CompilerGenerated]
-	private void method_5(GClass867 gclass867_0)
+	private void method_4(GClass867 gclass867_0)
 	{
 		DarkOrbitWebAPI darkOrbitWebAPI = new DarkOrbitWebAPI(null);
 		darkOrbitWebAPI.Server = gclass867_0.Name;

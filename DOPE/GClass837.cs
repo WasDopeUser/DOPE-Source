@@ -11,7 +11,7 @@ public class GClass837 : GClass836
 {
 	public GClass837(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.list_0 = new List<Rectangle>();
 		base..ctor(gclass822_1);
 		this.list_0.Add(GClass837.rectangle_0);
@@ -50,13 +50,13 @@ public class GClass837 : GClass836
 		return this.list_0;
 	}
 
-	public override Vector2? vmethod_20(bool bool_2)
+	public override Vector2? vmethod_21(bool bool_3)
 	{
 		GClass837.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass837.<>c__DisplayClass9_0();
-		CS$<>8__locals1.gclass837_0 = this;
+		CS$<>8__locals1.WsbqxElPqh6 = this;
 		CS$<>8__locals1.vector2_0 = base.Hero.Position;
-		CS$<>8__locals1.vector2_1 = (this.vmethod_39(CS$<>8__locals1.vector2_0, 2250) ?? this.vmethod_17()[0].smethod_4());
-		CS$<>8__locals1.float_0 = Math.Min(Vector2.Distance(base.Hero.Position, CS$<>8__locals1.vector2_1) + 500f, 2500f);
+		CS$<>8__locals1.efoqxBuMnYu = (this.vmethod_41(CS$<>8__locals1.vector2_0, 2250) ?? this.vmethod_17()[0].smethod_4());
+		CS$<>8__locals1.float_0 = Math.Min(Vector2.Distance(base.Hero.Position, CS$<>8__locals1.efoqxBuMnYu) + 500f, 2500f);
 		CS$<>8__locals1.pathSequence_0 = null;
 		Map.Navigators.method_4(new Action<MapNavigator>(CS$<>8__locals1.method_0), 0);
 		if (CS$<>8__locals1.pathSequence_0 != null)
@@ -67,7 +67,7 @@ public class GClass837 : GClass836
 		return new Vector2?((pathSequence_ != null) ? pathSequence_.Destination : base.C.Game.Security.method_5(base.Map, this.vmethod_17()));
 	}
 
-	public override Vector2? vmethod_19(Vector2 vector2_1, out Gate gate_0, bool bool_2 = false, bool bool_3 = true)
+	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
 	{
 		gate_0 = null;
 		return null;
@@ -78,17 +78,17 @@ public class GClass837 : GClass836
 		return false;
 	}
 
-	public override bool vmethod_4(bool bool_2 = false, bool bool_3 = false)
+	public override bool vmethod_4(bool bool_3 = false, bool bool_4 = false)
 	{
 		Vector2 heroPosition = base.C.HeroPosition;
-		Ship ship = base.C.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(GClass837.<>c.<>c_0.method_0), null, 0);
+		Ship ship = base.C.Map.method_4<Ship>(heroPosition, new Func<Ship, bool>(GClass837.<>c.<>c_0.method_0), null, 0);
 		return ship == null || Vector2.Distance(heroPosition, ship.Position) >= 2000f;
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass837()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass837.size_0 = new Size(MapUtils.LargeMapSize.Width / 2, MapUtils.LargeMapSize.Height / 2);
 		GClass837.rectangle_0 = new Rectangle(new Point(0, 0), GClass837.size_0);
 		GClass837.rectangle_1 = new Rectangle(new Point(GClass837.size_0.Width, 0), GClass837.size_0);

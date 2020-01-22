@@ -48,8 +48,8 @@ namespace DOPE.Common.Models
 		[Display(Name = "GG QZ")]
 		[NotMapped]
 		GG_QZ = 229,
-		[Display(Name = "GG Cold Wave")]
 		[NotMapped]
+		[Display(Name = "GG Cold Wave")]
 		GG_ColdWave = 77,
 		[Display(Name = "GG Kuiper")]
 		GG_Kuiper = 300,
@@ -77,8 +77,8 @@ namespace DOPE.Common.Models
 		BL2,
 		[Display(Name = "BL-3")]
 		BL3,
-		[NotMapped]
 		[Display(Name = "FL ATLAS A")]
+		[NotMapped]
 		FL_ATLAS_A = 430
 	}
 }

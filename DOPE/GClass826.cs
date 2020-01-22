@@ -48,7 +48,7 @@ public class GClass826 : GClass824
 
 	public GClass826(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.bool_0 = true;
 		base..ctor(gclass822_1, "Palladium", int.MinValue);
 		this.gclass840_0 = new GClass840(gclass822_1);

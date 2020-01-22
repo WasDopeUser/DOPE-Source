@@ -8,7 +8,7 @@ public class GClass135 : GInterface0
 	{
 		get
 		{
-			return 32346;
+			return 8727;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass135 : GInterface0
 
 	public GClass135(GClass261 gclass261_1 = null, double double_0 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass261_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass135 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 32346;
+		return 8727;
 	}
 
 	public virtual int vmethod_1()
@@ -50,11 +50,12 @@ public class GClass135 : GInterface0
 		this.Count = binaryStream_0.ReadDouble();
 		this.gclass261_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass261);
 		this.gclass261_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32346);
+		binaryStream_0.smethod_7(8727);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -62,6 +63,7 @@ public class GClass135 : GInterface0
 	{
 		binaryStream_0.WriteDouble(this.Count);
 		this.gclass261_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(7841);
 	}
 
 	public double Count;

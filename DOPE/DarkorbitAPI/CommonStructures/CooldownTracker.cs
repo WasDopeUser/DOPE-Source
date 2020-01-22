@@ -19,34 +19,34 @@ namespace DarkorbitAPI.CommonStructures
 			}
 		}
 
-		public bool method_0(T k6FvPuqG3Wx7aW70lSs)
+		public bool method_0(T YB2HVgIc9KRkHvfam9E)
 		{
 			DateTimeOffset right;
-			if (!this.Cooldowns.TryGetValue(k6FvPuqG3Wx7aW70lSs, out right))
+			if (!this.Cooldowns.TryGetValue(YB2HVgIc9KRkHvfam9E, out right))
 			{
 				return true;
 			}
 			if (this.Time > right)
 			{
 				DateTimeOffset dateTimeOffset;
-				this.Cooldowns.TryRemove(k6FvPuqG3Wx7aW70lSs, out dateTimeOffset);
+				this.Cooldowns.TryRemove(YB2HVgIc9KRkHvfam9E, out dateTimeOffset);
 				return true;
 			}
 			return false;
 		}
 
-		public void method_1(T pZT8weqF5vIbdTbHcJY, double double_0)
+		public void NuEqfWytUcF(T gdDyKrIHbMAdjEVOd7I, double double_0)
 		{
-			this.Cooldowns[pZT8weqF5vIbdTbHcJY] = this.Time.AddMilliseconds(double_0);
+			this.Cooldowns[gdDyKrIHbMAdjEVOd7I] = this.Time.AddMilliseconds(double_0);
 		}
 
-		public bool method_2(T ixrpLvqDwmWowVZGrZG, double double_0)
+		public bool method_1(T LCjC8hIJUUbm4dy8oSk, double double_0)
 		{
-			if (!this.method_0(ixrpLvqDwmWowVZGrZG))
+			if (!this.method_0(LCjC8hIJUUbm4dy8oSk))
 			{
 				return false;
 			}
-			this.method_1(ixrpLvqDwmWowVZGrZG, double_0);
+			this.NuEqfWytUcF(LCjC8hIJUUbm4dy8oSk, double_0);
 			return true;
 		}
 
@@ -58,7 +58,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public CooldownTracker()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this.Cooldowns = new ConcurrentDictionary<T, DateTimeOffset>();
 			base..ctor();
 		}

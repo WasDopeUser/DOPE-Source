@@ -10,7 +10,7 @@ public class GClass98 : GInterface4
 
 	public GClass98()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

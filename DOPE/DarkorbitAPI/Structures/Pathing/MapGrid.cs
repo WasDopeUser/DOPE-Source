@@ -86,7 +86,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapGrid(Map map_0)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this._lock = new object();
 			base..ctor();
 			this.Map = map_0;
@@ -126,7 +126,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				while (enumerator.MoveNext())
 				{
 					Vector2 vector;
-					if (GClass810.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
+					if (GClass810.smethod_5(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
 					{
 						return true;
 					}
@@ -142,7 +142,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				while (enumerator.MoveNext())
 				{
-					if (GClass810.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
+					if (GClass810.smethod_5(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
 					{
 						return true;
 					}
@@ -220,7 +220,7 @@ namespace DarkorbitAPI.Structures.Pathing
 						this.method_10(icollidable_0);
 					}
 					Rectangle rectangle_ = icollidable_0.imethod_1();
-					this.method_6(rectangle_, new Action<int, int>(this.method_19));
+					this.method_6(rectangle_, new Action<int, int>(this.JyhdOimWj2));
 					this.Collidables.Add(icollidable_0);
 				}
 				return;
@@ -378,7 +378,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		private void method_19(int int_0, int int_1)
+		private void JyhdOimWj2(int int_0, int int_1)
 		{
 			this.Blocks[int_0, int_1] = (byte)Math.Min(254, (int)(this.Blocks[int_0, int_1] + 1));
 		}

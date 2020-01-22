@@ -10,7 +10,7 @@ public class GClass817 : StatisticsCategory
 
 	public GClass817(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor("GG", new string[]
 		{
 			"Name",

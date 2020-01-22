@@ -8,7 +8,7 @@ public class GClass242 : GInterface0
 	{
 		get
 		{
-			return 25970;
+			return 22027;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass242 : GInterface0
 
 	public GClass242(uint uint_1 = 0U, uint uint_2 = 0U, GClass500 gclass500_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.Visibility = uint_1;
 		this.uint_0 = uint_2;
@@ -36,7 +36,7 @@ public class GClass242 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 25970;
+		return 22027;
 	}
 
 	public virtual int vmethod_1()
@@ -46,30 +46,28 @@ public class GClass242 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.Visibility = (uint)binaryStream_0.smethod_1();
 		this.gclass500_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass500);
 		this.gclass500_0.imethod_1(binaryStream_0);
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.Visibility = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(25970);
+		binaryStream_0.smethod_7(22027);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_6(this.Visibility);
 		this.gclass500_0.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(-4364);
-		binaryStream_0.smethod_6(this.Visibility);
 	}
+
+	public uint Visibility;
 
 	public GClass500 gclass500_0;
 
 	public uint uint_0;
-
-	public uint Visibility;
 }

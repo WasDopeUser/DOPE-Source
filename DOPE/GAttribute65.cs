@@ -1,11 +1,11 @@
 ﻿using System;
 
-[AttributeUsage(AttributeTargets.Method)]
+[AttributeUsage(AttributeTargets.Property)]
 public sealed class GAttribute65 : Attribute
 {
 	public GAttribute65()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

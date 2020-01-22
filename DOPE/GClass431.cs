@@ -8,7 +8,7 @@ public class GClass431 : GInterface0
 	{
 		get
 		{
-			return 9814;
+			return 24141;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass431 : GInterface0
 
 	public GClass431(bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9814;
+		return 24141;
 	}
 
 	public virtual int vmethod_1()
@@ -44,7 +44,7 @@ public class GClass431 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9814);
+		binaryStream_0.smethod_7(24141);
 		this.vmethod_2(binaryStream_0);
 	}
 

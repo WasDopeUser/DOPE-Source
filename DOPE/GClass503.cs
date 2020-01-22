@@ -8,7 +8,7 @@ public class GClass503 : GInterface0
 	{
 		get
 		{
-			return 25548;
+			return 9249;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass503 : GInterface0
 
 	public GClass503(uint uint_1 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 25548;
+		return 9249;
 	}
 
 	public virtual int vmethod_1()
@@ -44,7 +44,7 @@ public class GClass503 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(25548);
+		binaryStream_0.smethod_7(9249);
 		this.vmethod_2(binaryStream_0);
 	}
 

@@ -14,7 +14,7 @@ public class GClass123 : IWebProxy
 
 	public Uri GetProxy(Uri destination)
 	{
-		return this.uri_0;
+		return this.iddjpttoAR;
 	}
 
 	public bool IsBypassed(Uri host)
@@ -41,7 +41,7 @@ public class GClass123 : IWebProxy
 
 	public GClass123(ProxySettings[] proxySettings_1, int int_1 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (int_1 < 0 || int_1 > 65535)
 		{
@@ -61,13 +61,13 @@ public class GClass123 : IWebProxy
 		}
 		this.proxySettings_0 = proxySettings_1;
 		this.method_1(int_1);
-		this.socket_0 = GClass123.smethod_3();
+		this.socket_0 = GClass123.smethod_4();
 		this.socket_0.Bind(new IPEndPoint(IPAddress.Loopback, this.method_0()));
 		if (this.method_0() == 0)
 		{
 			this.method_1(((IPEndPoint)this.socket_0.LocalEndPoint).Port);
 		}
-		this.uri_0 = new Uri("http://127.0.0.1:" + this.method_0().ToString());
+		this.iddjpttoAR = new Uri("http://127.0.0.1:" + this.method_0().ToString());
 		this.socket_0.Listen(8);
 		this.socket_0.BeginAccept(new AsyncCallback(this.method_4), null);
 	}
@@ -101,7 +101,7 @@ public class GClass123 : IWebProxy
 		}
 		catch
 		{
-			this.kvprjiTfrj();
+			this.method_6();
 		}
 		if (socket != null)
 		{
@@ -125,17 +125,17 @@ public class GClass123 : IWebProxy
 			{
 				try
 				{
-					socket = GClass123.smethod_3();
+					socket = GClass123.smethod_4();
 					socket.Connect(this.proxySettings_0[0].Host, this.proxySettings_0[0].Port);
 				}
 				catch (SocketException)
 				{
-					GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483644), "HTTP/1.1 ");
+					GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483644), "HTTP/1.1 ");
 					flag = false;
 				}
 				catch (Exception)
 				{
-					GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483647), "HTTP/1.1 ");
+					GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483647), "HTTP/1.1 ");
 					flag = false;
 				}
 				if (flag)
@@ -152,7 +152,7 @@ public class GClass123 : IWebProxy
 						}
 						else
 						{
-							GClass123.dabrxbPacO(socket_1, genum, text);
+							GClass123.smethod_3(socket_1, genum, text);
 							flag = false;
 							IL_CE:
 							if (!flag)
@@ -163,7 +163,7 @@ public class GClass123 : IWebProxy
 							genum = GClass123.Class3.smethod_0(socket, string_, num, proxySettings3);
 							if (genum != (GClass123.GEnum7)0)
 							{
-								GClass123.dabrxbPacO(socket_1, genum, text);
+								GClass123.smethod_3(socket_1, genum, text);
 								flag = false;
 								goto IL_12E;
 							}
@@ -195,7 +195,7 @@ public class GClass123 : IWebProxy
 			flag = false;
 			try
 			{
-				GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483647), "HTTP/1.1 ");
+				GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483647), "HTTP/1.1 ");
 			}
 			catch
 			{
@@ -209,8 +209,8 @@ public class GClass123 : IWebProxy
 			}
 			else
 			{
-				socket_1.smethod_3();
-				socket.smethod_3();
+				socket_1.smethod_2();
+				socket.smethod_2();
 			}
 		}
 	}
@@ -237,7 +237,7 @@ public class GClass123 : IWebProxy
 		});
 		if (array.Length != 3)
 		{
-			GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483648), "HTTP/1.1 ");
+			GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483648), "HTTP/1.1 ");
 			return false;
 		}
 		string text2 = array[0];
@@ -254,7 +254,7 @@ public class GClass123 : IWebProxy
 					int num = text4.IndexOf(':');
 					if (num == -1)
 					{
-						GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483648), string_1);
+						GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483648), string_1);
 						return false;
 					}
 					if (text4.Substring(0, num).Trim().Equals("Host", StringComparison.OrdinalIgnoreCase))
@@ -376,7 +376,7 @@ public class GClass123 : IWebProxy
 				return true;
 			}
 		}
-		GClass123.dabrxbPacO(socket_1, (GClass123.GEnum7)(-2147483648), "HTTP/1.1 ");
+		GClass123.smethod_3(socket_1, (GClass123.GEnum7)(-2147483648), "HTTP/1.1 ");
 		return false;
 	}
 
@@ -385,17 +385,17 @@ public class GClass123 : IWebProxy
 		socket_1.Send(Encoding.UTF8.GetBytes(string_0));
 	}
 
-	private static void dabrxbPacO(Socket socket_1, GClass123.GEnum7 genum7_0, string string_0 = "HTTP/1.1 ")
+	private static void smethod_3(Socket socket_1, GClass123.GEnum7 genum7_0, string string_0 = "HTTP/1.1 ")
 	{
 		GClass123.smethod_2(socket_1, string_0 + "401 Unauthorized\r\n\r\n");
 	}
 
-	private static Socket smethod_3()
+	private static Socket smethod_4()
 	{
 		return new Socket(SocketType.Stream, ProtocolType.Tcp);
 	}
 
-	public void kvprjiTfrj()
+	public void method_6()
 	{
 		if (this.Stopped)
 		{
@@ -411,7 +411,7 @@ public class GClass123 : IWebProxy
 	[CompilerGenerated]
 	private int int_0;
 
-	private readonly Uri uri_0;
+	private readonly Uri iddjpttoAR;
 
 	private readonly Socket socket_0;
 
@@ -453,14 +453,14 @@ public class GClass123 : IWebProxy
 
 		public Class1()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static Class1()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			GClass123.Class1.Instance = new GClass123.Class1();
 		}
 
@@ -471,7 +471,7 @@ public class GClass123 : IWebProxy
 	{
 		private Class2(Socket socket_1, Socket socket_2)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 			this.Source = socket_1;
 			this.socket_0 = socket_2;
@@ -501,10 +501,10 @@ public class GClass123 : IWebProxy
 			this.bool_1 = true;
 			this.class2_0.bool_2 = true;
 			this.class2_0 = null;
-			this.Source.smethod_3();
-			this.socket_0.smethod_3();
-			this.socketAsyncEventArgs_0.smethod_4();
-			this.socketAsyncEventArgs_1.smethod_4();
+			this.Source.smethod_2();
+			this.socket_0.smethod_2();
+			this.socketAsyncEventArgs_0.smethod_3();
+			this.socketAsyncEventArgs_1.smethod_3();
 			this.Source = (this.socket_0 = null);
 			this.socketAsyncEventArgs_0 = (this.socketAsyncEventArgs_1 = null);
 			this.byte_0 = null;
@@ -645,7 +645,7 @@ public class GClass123 : IWebProxy
 					{
 						return (GClass123.GEnum7)(-2147483646);
 					}
-					if (instance != null && Class4.smethod_2(string_0) == (Class4.Enum0)3)
+					if (instance != null && Class4.gCyjLgrsr6(string_0) == (Class4.Enum0)3)
 					{
 						IPAddress ipaddress = instance.method_0(string_0);
 						if (ipaddress == null)
@@ -654,7 +654,7 @@ public class GClass123 : IWebProxy
 						}
 						string_0 = ipaddress.ToString();
 					}
-					socket_0.Send(GClass123.Class3.smethod_2((GClass123.GEnum8)1, Class4.smethod_2(string_0), string_0, int_0));
+					socket_0.Send(GClass123.Class3.smethod_2((GClass123.GEnum8)1, Class4.gCyjLgrsr6(string_0), string_0, int_0));
 					int num = socket_0.Receive(array);
 					if (num < 8)
 					{

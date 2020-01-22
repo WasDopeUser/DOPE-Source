@@ -46,7 +46,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Controller>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.Controller);
+				this.method_29(<>PropertyChangedEventArgs.Controller);
 			}
 		}
 
@@ -79,21 +79,21 @@ namespace DOPE.UI
 
 		public MainWindow()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this._lock = new object();
 			this.<BotControllers>k__BackingField = new GClass4<GClass852>();
 			base..ctor();
 			Application.Current.MainWindow = this;
 			MainWindow.Instance = this;
-			this.CellTextBlock_SizeChangedHandler = new SizeChangedEventHandler(this.method_27);
+			this.CellTextBlock_SizeChangedHandler = new SizeChangedEventHandler(this.method_25);
 			this.Controller = new Controller("dope", Constants.VersionString);
 			this.Controller.Control.method_4(this.BotControllers);
-			this.BotControllers.method_0(new GDelegate0(this.method_8));
+			this.BotControllers.method_0(new GDelegate0(this.method_7));
 			base.DataContext = this;
 			this.InitializeComponent();
 			this.Controller.Key = this.method_0();
 			this.Controller.method_7(this.Controller.Key);
-			this.MapRendererThread = new Thread(new ThreadStart(this.method_9));
+			this.MapRendererThread = new Thread(new ThreadStart(this.method_8));
 			this.MapRendererThread.IsBackground = true;
 			this.MapRendererThread.Start();
 			base.Closed += this.MainWindow_Closed;
@@ -117,7 +117,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<GroupInviteCommand>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.GroupInviteCommand);
+				this.method_29(<>PropertyChangedEventArgs.GroupInviteCommand);
 			}
 		}
 
@@ -136,7 +136,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<GroupKickCommand>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.GroupKickCommand);
+				this.method_29(<>PropertyChangedEventArgs.GroupKickCommand);
 			}
 		}
 
@@ -155,7 +155,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<GroupAcceptInviteCommand>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.GroupAcceptInviteCommand);
+				this.method_29(<>PropertyChangedEventArgs.GroupAcceptInviteCommand);
 			}
 		}
 
@@ -174,16 +174,16 @@ namespace DOPE.UI
 					return;
 				}
 				this.<GroupDeclineInviteCommand>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.GroupDeclineInviteCommand);
+				this.method_29(<>PropertyChangedEventArgs.GroupDeclineInviteCommand);
 			}
 		}
 
 		private void method_2()
 		{
 			this.GroupInviteCommand = new RelayCommand(new Action<object>(this.method_4), null);
-			this.GroupKickCommand = new RelayCommand(new Action<object>(this.method_5), null);
-			this.GroupAcceptInviteCommand = new RelayCommand(new Action<object>(this.method_6), null);
-			this.GroupDeclineInviteCommand = new RelayCommand(new Action<object>(this.method_7), null);
+			this.GroupKickCommand = new RelayCommand(new Action<object>(this.bvnqunFfyE), null);
+			this.GroupAcceptInviteCommand = new RelayCommand(new Action<object>(this.method_5), null);
+			this.GroupDeclineInviteCommand = new RelayCommand(new Action<object>(this.method_6), null);
 		}
 
 		private void method_3(Action<GClass852> action_0, bool bool_0 = false)
@@ -208,25 +208,25 @@ namespace DOPE.UI
 			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), true);
 		}
 
-		private void method_5(object object_0)
+		private void bvnqunFfyE(object object_0)
 		{
 			MainWindow.<>c__DisplayClass39_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass39_0();
 			CS$<>8__locals1.id = (int)object_0;
 			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
 		}
 
-		private void method_6(object object_0)
+		private void method_5(object object_0)
 		{
 			MainWindow.<>c__DisplayClass40_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass40_0();
 			CS$<>8__locals1.id = (int)object_0;
 			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
 		}
 
-		private void method_7(object object_0)
+		private void method_6(object object_0)
 		{
 			MainWindow.<>c__DisplayClass41_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass41_0();
 			CS$<>8__locals1.id = (int)object_0;
-			this.method_3(new Action<GClass852>(CS$<>8__locals1.method_0), false);
+			this.method_3(new Action<GClass852>(CS$<>8__locals1.tYmfBypjKq), false);
 		}
 
 		private void MainWindow_Closed(object sender, EventArgs e)
@@ -240,7 +240,7 @@ namespace DOPE.UI
 			Application.Current.Shutdown();
 		}
 
-		private void method_8(object sender, NotifyCollectionChangedEventArgs e)
+		private void method_7(object sender, NotifyCollectionChangedEventArgs e)
 		{
 			if (e.NewItems == null)
 			{
@@ -270,8 +270,8 @@ namespace DOPE.UI
 					return;
 				}
 				this.<BotControllers>k__BackingField = value;
-				this.method_31(<>PropertyChangedEventArgs.Selected);
-				this.method_31(<>PropertyChangedEventArgs.BotControllers);
+				this.method_29(<>PropertyChangedEventArgs.Selected);
+				this.method_29(<>PropertyChangedEventArgs.BotControllers);
 			}
 		}
 
@@ -296,7 +296,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		private void method_9()
+		private void method_8()
 		{
 			while (!this._closing)
 			{
@@ -304,7 +304,7 @@ namespace DOPE.UI
 				this.LastRender = DateTimeOffset.Now.AddDays(1.0);
 				try
 				{
-					base.Dispatcher.Invoke(new Action(this.method_10));
+					base.Dispatcher.Invoke(new Action(this.method_9));
 				}
 				catch
 				{
@@ -312,7 +312,7 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_10()
+		private void method_9()
 		{
 			try
 			{
@@ -359,7 +359,7 @@ namespace DOPE.UI
 			this.LastRender = DateTimeOffset.Now;
 		}
 
-		private void method_11(object sender, RoutedEventArgs e)
+		private void method_10(object sender, RoutedEventArgs e)
 		{
 			foreach (GClass852 gclass in this.BotControllers)
 			{
@@ -367,12 +367,12 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_12(object sender, RoutedEventArgs e)
+		private void method_11(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Start();
 		}
 
-		private void method_13(object sender, RoutedEventArgs e)
+		private void method_12(object sender, RoutedEventArgs e)
 		{
 			foreach (GClass852 gclass in this.BotControllers)
 			{
@@ -380,12 +380,12 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_14(object sender, RoutedEventArgs e)
+		private void method_13(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Pause();
 		}
 
-		private void method_15(object sender, RoutedEventArgs e)
+		private void method_14(object sender, RoutedEventArgs e)
 		{
 			foreach (GClass852 gclass in this.BotControllers)
 			{
@@ -393,17 +393,17 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_16(object sender, RoutedEventArgs e)
+		private void method_15(object sender, RoutedEventArgs e)
 		{
 			this.Selected.Stop();
 		}
 
-		private void method_17(object sender, RoutedEventArgs e)
+		private void method_16(object sender, RoutedEventArgs e)
 		{
 			this.Selected.ForceStop();
 		}
 
-		private void method_18(object sender, RoutedEventArgs e)
+		private void method_17(object sender, RoutedEventArgs e)
 		{
 			if (this.Selected != null && this.Selected.Context.Game.Web.IsLoggedIn)
 			{
@@ -414,7 +414,7 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_19(object sender, RoutedEventArgs e)
+		private void method_18(object sender, RoutedEventArgs e)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged == null)
@@ -424,7 +424,7 @@ namespace DOPE.UI
 			propertyChanged(sender, new PropertyChangedEventArgs("Selected"));
 		}
 
-		private void method_20(object sender, RoutedEventArgs e)
+		private void method_19(object sender, RoutedEventArgs e)
 		{
 			new SettingsWindow(this.Controller).ShowDialog();
 			this.method_1();
@@ -440,7 +440,7 @@ namespace DOPE.UI
 			base.Activate();
 		}
 
-		private void method_21(object sender, RoutedEventArgs e)
+		private void method_20(object sender, RoutedEventArgs e)
 		{
 			if (!this.Debug)
 			{
@@ -451,7 +451,7 @@ namespace DOPE.UI
 			debugWindow.Show();
 		}
 
-		private void method_22(object sender, RoutedEventArgs e)
+		private void method_21(object sender, RoutedEventArgs e)
 		{
 			if (this.PerkavaWindow != null && this.PerkavaWindow.IsLoaded)
 			{
@@ -465,12 +465,12 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_23(object sender, RoutedEventArgs e)
+		private void method_22(object sender, RoutedEventArgs e)
 		{
 			Process.Start("https://powerofdark.space");
 		}
 
-		private void method_24(object sender, MouseButtonEventArgs e)
+		private void nUlfyIiJnd(object sender, MouseButtonEventArgs e)
 		{
 			GClass852 selected = this.Selected;
 			if (selected != null && selected.Context.Game.Connection.Socket.method_2())
@@ -481,19 +481,19 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_25(object sender, EventArgs e)
+		private void method_23(object sender, EventArgs e)
 		{
 			object dataContext = (sender as TabControl).DataContext;
 		}
 
-		private void method_26(object sender, EventArgs e)
+		private void method_24(object sender, EventArgs e)
 		{
 			ListView listView = (ListView)sender;
 			StatisticsCategory statisticsCategory_ = listView.DataContext as StatisticsCategory;
-			this.method_28(listView, statisticsCategory_);
+			this.method_26(listView, statisticsCategory_);
 		}
 
-		private void method_27(object sender, SizeChangedEventArgs e)
+		private void method_25(object sender, SizeChangedEventArgs e)
 		{
 			TextBlock textBlock = (TextBlock)sender;
 			GridViewColumn gridViewColumn = (GridViewColumn)textBlock.Tag;
@@ -501,7 +501,7 @@ namespace DOPE.UI
 			gridViewColumn.SetValue(GridViewColumn.WidthProperty, double.NaN);
 		}
 
-		private void method_28(ListView listView_0, StatisticsCategory statisticsCategory_0)
+		private void method_26(ListView listView_0, StatisticsCategory statisticsCategory_0)
 		{
 			if (statisticsCategory_0 != null)
 			{
@@ -544,14 +544,14 @@ namespace DOPE.UI
 			}
 		}
 
-		private void method_29(object sender, DependencyPropertyChangedEventArgs e)
+		private void method_27(object sender, DependencyPropertyChangedEventArgs e)
 		{
 			ListView listView_ = (ListView)sender;
 			StatisticsCategory statisticsCategory_ = e.NewValue as StatisticsCategory;
-			this.method_28(listView_, statisticsCategory_);
+			this.method_26(listView_, statisticsCategory_);
 		}
 
-		private void method_30(object sender, EventArgs e)
+		private void method_28(object sender, EventArgs e)
 		{
 			ComboBox comboBox = sender as ComboBox;
 			comboBox.Items.Clear();
@@ -573,39 +573,39 @@ namespace DOPE.UI
 			switch (connectionId)
 			{
 			case 2:
-				((ListView)target).DataContextChanged += this.method_29;
-				((ListView)target).Initialized += this.method_26;
+				((ListView)target).DataContextChanged += this.method_27;
+				((ListView)target).Initialized += this.method_24;
 				return;
 			case 3:
 			case 4:
 			case 5:
 				break;
 			case 6:
-				((TextBlock)target).MouseLeftButtonUp += this.method_24;
+				((TextBlock)target).MouseLeftButtonUp += this.nUlfyIiJnd;
 				return;
 			case 7:
-				((TabControl)target).Initialized += this.method_25;
+				((TabControl)target).Initialized += this.method_23;
 				return;
 			case 8:
-				((Button)target).Click += this.method_12;
+				((Button)target).Click += this.method_11;
 				return;
 			case 9:
-				((Button)target).Click += this.method_14;
+				((Button)target).Click += this.method_13;
 				return;
 			case 10:
-				((Button)target).Click += this.method_16;
+				((Button)target).Click += this.method_15;
 				return;
 			case 11:
-				((Button)target).Click += this.method_17;
+				((Button)target).Click += this.method_16;
 				return;
 			case 12:
-				((Button)target).Click += this.method_18;
+				((Button)target).Click += this.method_17;
 				return;
 			case 13:
-				((Button)target).Click += this.method_21;
+				((Button)target).Click += this.method_20;
 				return;
 			case 14:
-				((ComboBox)target).DropDownOpened += this.method_30;
+				((ComboBox)target).DropDownOpened += this.method_28;
 				break;
 			default:
 				return;
@@ -614,7 +614,7 @@ namespace DOPE.UI
 
 		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
-		protected void method_31(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_29(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

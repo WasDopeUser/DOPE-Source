@@ -5,8 +5,8 @@ using DOPE.Common.Models.Spacemap;
 
 namespace DOPE.Common.Models.Bot
 {
-	[DataContract]
 	[Guid("CB44A59A-26FF-4C77-AC01-03D14DAAA767")]
+	[DataContract]
 	public class BotDetailedViewModel
 	{
 		[DataMember(Order = 1)]

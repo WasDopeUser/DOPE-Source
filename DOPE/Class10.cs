@@ -12,7 +12,7 @@ internal static class Class10
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class10()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		Class10.Account = new PropertyChangedEventArgs("Account");
 		Class10.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("AttackingId");
 		Class10.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("BackgroundQueue");
@@ -84,19 +84,19 @@ internal static class Class10
 		Class10.propertyChangedEventArgs_51 = new PropertyChangedEventArgs("SelectedRockets");
 		Class10.propertyChangedEventArgs_52 = new PropertyChangedEventArgs("SellProfile");
 		Class10.propertyChangedEventArgs_53 = new PropertyChangedEventArgs("Server");
-		Class10.propertyChangedEventArgs_54 = new PropertyChangedEventArgs("Service");
+		Class10.fsAqGzbmcgb = new PropertyChangedEventArgs("Service");
 		Class10.ServiceStatus = new PropertyChangedEventArgs("ServiceStatus");
-		Class10.propertyChangedEventArgs_55 = new PropertyChangedEventArgs("ShouldBeDisabled");
+		Class10.propertyChangedEventArgs_54 = new PropertyChangedEventArgs("ShouldBeDisabled");
 		Class10.Started = new PropertyChangedEventArgs("Started");
 		Class10.State = new PropertyChangedEventArgs("State");
-		Class10.propertyChangedEventArgs_56 = new PropertyChangedEventArgs("StateIters");
+		Class10.propertyChangedEventArgs_55 = new PropertyChangedEventArgs("StateIters");
 		Class10.Stats = new PropertyChangedEventArgs("Stats");
 		Class10.Status = new PropertyChangedEventArgs("Status");
 		Class10.Stopped = new PropertyChangedEventArgs("Stopped");
-		Class10.propertyChangedEventArgs_57 = new PropertyChangedEventArgs("Timeout");
-		Class10.propertyChangedEventArgs_58 = new PropertyChangedEventArgs("TimeTableActive");
-		Class10.propertyChangedEventArgs_59 = new PropertyChangedEventArgs("TimeTableProfile");
-		Class10.propertyChangedEventArgs_60 = new PropertyChangedEventArgs("TravelTarget");
+		Class10.propertyChangedEventArgs_56 = new PropertyChangedEventArgs("Timeout");
+		Class10.propertyChangedEventArgs_57 = new PropertyChangedEventArgs("TimeTableActive");
+		Class10.propertyChangedEventArgs_58 = new PropertyChangedEventArgs("TimeTableProfile");
+		Class10.propertyChangedEventArgs_59 = new PropertyChangedEventArgs("TravelTarget");
 		Class10.UridiumHourly = new PropertyChangedEventArgs("UridiumHourly");
 	}
 
@@ -242,17 +242,17 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_53;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_54;
+	internal static readonly PropertyChangedEventArgs fsAqGzbmcgb;
 
 	internal static readonly PropertyChangedEventArgs ServiceStatus;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_55;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_54;
 
 	internal static readonly PropertyChangedEventArgs Started;
 
 	internal static readonly PropertyChangedEventArgs State;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_56;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_55;
 
 	internal static readonly PropertyChangedEventArgs Stats;
 
@@ -260,13 +260,13 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs Stopped;
 
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_56;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_57;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_58;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_59;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_60;
 
 	internal static readonly PropertyChangedEventArgs UridiumHourly;
 }

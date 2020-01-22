@@ -8,13 +8,13 @@ public class GClass124 : GInterface6
 {
 	public GClass124()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 
 	public GClass124(TcpClient tcpClient_2)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (tcpClient_2 == null)
 		{
@@ -25,7 +25,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -37,7 +37,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -53,7 +53,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, string string_4, string string_5)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -75,7 +75,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1, string string_4, string string_5)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -409,7 +409,7 @@ public class GClass124 : GInterface6
 		{
 			throw new ArgumentNullException("data");
 		}
-		return GClass124.smethod_3(byte_0, false, byte_0.Length);
+		return GClass124.smethod_2(byte_0, false, byte_0.Length);
 	}
 
 	public static string smethod_1(byte byte_0)
@@ -418,19 +418,19 @@ public class GClass124 : GInterface6
 		{
 			byte_0
 		};
-		return GClass124.smethod_3(array, false, array.Length);
+		return GClass124.smethod_2(array, false, array.Length);
 	}
 
-	public static string smethod_2(byte[] byte_0, bool bool_0)
+	public static string DjqjOoJknj(byte[] byte_0, bool bool_0)
 	{
 		if (byte_0 == null)
 		{
 			throw new ArgumentNullException("data");
 		}
-		return GClass124.smethod_3(byte_0, bool_0, byte_0.Length);
+		return GClass124.smethod_2(byte_0, bool_0, byte_0.Length);
 	}
 
-	public static string smethod_3(byte[] byte_0, bool bool_0, int int_1)
+	public static string smethod_2(byte[] byte_0, bool bool_0, int int_1)
 	{
 		if (byte_0 == null)
 		{

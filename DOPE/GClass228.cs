@@ -8,7 +8,7 @@ public class GClass228 : GInterface0
 	{
 		get
 		{
-			return 27640;
+			return 14451;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass228 : GInterface0
 
 	public GClass228(GClass258 gclass258_0 = null, Vector<int> vector_0 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass258_0 == null)
 		{
@@ -42,7 +42,7 @@ public class GClass228 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 27640;
+		return 14451;
 	}
 
 	public virtual int vmethod_1()
@@ -63,7 +63,7 @@ public class GClass228 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (U.smethod_0(num3, 8) | num3 << 24);
+			num3 = (num3 << 13 | U.smethod_0(num3, 19));
 			this.State.method_0(num3);
 			num++;
 		}
@@ -71,7 +71,7 @@ public class GClass228 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(27640);
+		binaryStream_0.smethod_7(14451);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -81,7 +81,7 @@ public class GClass228 : GInterface0
 		binaryStream_0.smethod_4(this.State.Length);
 		foreach (int num in this.State)
 		{
-			binaryStream_0.smethod_4(num << 8 | U.smethod_0(num, 24));
+			binaryStream_0.smethod_4(U.smethod_0(num, 13) | num << 19);
 		}
 	}
 

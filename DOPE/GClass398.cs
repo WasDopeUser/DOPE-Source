@@ -8,7 +8,7 @@ public class GClass398 : GClass396, GInterface0
 	{
 		get
 		{
-			return 24734;
+			return 15673;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass398 : GClass396, GInterface0
 
 	public GClass398(GClass589 gclass589_2 = null, GClass589 gclass589_3 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass589_2 == null)
 		{
@@ -42,7 +42,7 @@ public class GClass398 : GClass396, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 24734;
+		return 15673;
 	}
 
 	public override int vmethod_1()
@@ -53,7 +53,6 @@ public class GClass398 : GClass396, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
 		this.gclass589_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass589);
 		this.gclass589_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
@@ -63,16 +62,15 @@ public class GClass398 : GClass396, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24734);
+		binaryStream_0.smethod_7(15673);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-18987);
 		this.gclass589_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-7561);
+		binaryStream_0.smethod_7(29897);
 		this.gclass589_1.imethod_2(binaryStream_0);
 	}
 

@@ -8,7 +8,7 @@ public class GClass598 : GInterface0
 	{
 		get
 		{
-			return 16461;
+			return 27360;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass598 : GInterface0
 
 	public GClass598(string string_1 = "", double double_1 = 0.0, GClass621 gclass621_1 = null, GClass722 gclass722_0 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -45,7 +45,7 @@ public class GClass598 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 16461;
+		return 27360;
 	}
 
 	public virtual int vmethod_1()
@@ -55,37 +55,35 @@ public class GClass598 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
-		this.Status = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass722);
-		this.Status.imethod_1(binaryStream_0);
 		this.gclass621_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass621);
 		this.gclass621_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.Status = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass722);
+		this.Status.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16461);
+		binaryStream_0.smethod_7(27360);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-12044);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(-18810);
-		this.Status.imethod_2(binaryStream_0);
 		this.gclass621_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(10593);
+		binaryStream_0.WriteDouble(this.double_0);
+		this.Status.imethod_2(binaryStream_0);
 	}
+
+	public GClass621 gclass621_0;
 
 	public string string_0;
 
 	public double double_0;
 
 	public GClass722 Status;
-
-	public GClass621 gclass621_0;
 }

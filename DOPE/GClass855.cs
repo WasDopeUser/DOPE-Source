@@ -18,39 +18,39 @@ public class GClass855
 	}
 
 	[CompilerGenerated]
-	public IntPtr method_2()
+	public IntPtr WeVqrcklUx7()
 	{
 		return this.intptr_2;
 	}
 
 	[CompilerGenerated]
-	private void method_3(IntPtr intptr_3)
+	private void method_2(IntPtr intptr_3)
 	{
 		this.intptr_2 = intptr_3;
 	}
 
 	[CompilerGenerated]
-	public List<GClass857.GStruct3> method_4()
+	public List<GClass857.GStruct3> method_3()
 	{
 		return this.list_0;
 	}
 
 	[CompilerGenerated]
-	private void method_5(List<GClass857.GStruct3> list_1)
+	private void hfEqruifOtt(List<GClass857.GStruct3> list_1)
 	{
 		this.list_0 = list_1;
 	}
 
 	public GClass855(int int_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.method_1(int_1);
 	}
 
-	public bool method_6()
+	public bool method_4()
 	{
-		this.method_5(new List<GClass857.GStruct3>());
+		this.hfEqruifOtt(new List<GClass857.GStruct3>());
 		GClass857.GStruct1 gstruct = default(GClass857.GStruct1);
 		GClass857.GetSystemInfo(out gstruct);
 		this.intptr_0 = gstruct.intptr_0;
@@ -58,7 +58,7 @@ public class GClass855
 		long num = (long)this.intptr_0;
 		long num2 = (long)this.intptr_1;
 		IntPtr intPtr;
-		this.method_3(intPtr = GClass857.OpenProcess(5176, false, this.method_0()));
+		this.method_2(intPtr = GClass857.OpenProcess(5176, false, this.method_0()));
 		IntPtr intPtr2 = intPtr;
 		GClass857.GStruct3 gstruct2 = default(GClass857.GStruct3);
 		if (GClass857.smethod_0(intPtr2))
@@ -75,7 +75,7 @@ public class GClass855
 			{
 				if (gstruct2.int_1 == 4 && gstruct2.State == 4096)
 				{
-					this.method_4().Add(gstruct2);
+					this.method_3().Add(gstruct2);
 				}
 				num += gstruct2.long_0;
 				this.intptr_0 = new IntPtr(num);
@@ -93,16 +93,16 @@ public class GClass855
 		return true;
 	}
 
-	public bool method_7(IntPtr intptr_3, byte[] byte_0)
+	public bool method_5(IntPtr intptr_3, byte[] byte_0)
 	{
 		int num = 0;
-		return GClass857.WriteProcessMemory(this.method_2(), intptr_3, byte_0, byte_0.Length, ref num);
+		return GClass857.WriteProcessMemory(this.WeVqrcklUx7(), intptr_3, byte_0, byte_0.Length, ref num);
 	}
 
-	public bool method_8(IntPtr intptr_3, byte[] byte_0, int int_1)
+	public bool method_6(IntPtr intptr_3, byte[] byte_0, int int_1)
 	{
 		int num = 0;
-		return GClass857.ReadProcessMemory(this.method_2(), intptr_3, byte_0, int_1, ref num);
+		return GClass857.ReadProcessMemory(this.WeVqrcklUx7(), intptr_3, byte_0, int_1, ref num);
 	}
 
 	[CompilerGenerated]

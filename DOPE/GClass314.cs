@@ -8,7 +8,7 @@ public class GClass314 : GClass307, GInterface0
 	{
 		get
 		{
-			return 10552;
+			return 26543;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass314 : GClass307, GInterface0
 
 	public GClass314(string string_1 = "")
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -30,7 +30,7 @@ public class GClass314 : GClass307, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 10552;
+		return 26543;
 	}
 
 	public override int vmethod_1()
@@ -42,11 +42,13 @@ public class GClass314 : GClass307, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10552);
+		binaryStream_0.smethod_7(26543);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -54,6 +56,8 @@ public class GClass314 : GClass307, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(26650);
+		binaryStream_0.smethod_7(25638);
 	}
 
 	public string string_0;

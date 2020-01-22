@@ -8,7 +8,7 @@ public class GClass623 : GClass621, GInterface0
 	{
 		get
 		{
-			return 6591;
+			return 20047;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass623 : GClass621, GInterface0
 
 	public GClass623()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 
 	public override int vmethod_0()
 	{
-		return 6591;
+		return 20047;
 	}
 
 	public override int vmethod_1()
@@ -39,16 +39,18 @@ public class GClass623 : GClass621, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6591);
+		binaryStream_0.smethod_7(20047);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-16796);
 	}
 }

@@ -8,7 +8,7 @@ public class GClass721 : GInterface0
 	{
 		get
 		{
-			return 8229;
+			return 15310;
 		}
 	}
 
@@ -22,9 +22,9 @@ public class GClass721 : GInterface0
 
 	public GClass721(string string_1 = "", string string_2 = "", bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
-		this.string_0 = "";
+		Class13.plZSWFPzBWWEZ();
 		this.Value = "";
+		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
 		this.Value = string_2;
@@ -33,7 +33,7 @@ public class GClass721 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 8229;
+		return 15310;
 	}
 
 	public virtual int vmethod_1()
@@ -43,29 +43,27 @@ public class GClass721 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
 		this.Value = binaryStream_0.smethod_2();
+		this.string_0 = binaryStream_0.smethod_2();
 		this.bool_0 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8229);
+		binaryStream_0.smethod_7(15310);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.smethod_3(this.Value);
+		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(-20205);
 	}
 
-	public string string_0;
-
 	public string Value;
+
+	public string string_0;
 
 	public bool bool_0;
 }

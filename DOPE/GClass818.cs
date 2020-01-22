@@ -14,7 +14,7 @@ public class GClass818 : StatisticsCategory
 
 	public GClass818(Hero hero_1, GClass814 gclass814_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor("Hero", new string[]
 		{
 			"Name",
@@ -113,7 +113,7 @@ public class GClass818 : StatisticsCategory
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass818()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass818.list_0 = new List<string>
 		{
 			"prometium",
@@ -149,7 +149,7 @@ public class GClass818 : StatisticsCategory
 	{
 		GClass818.<>c__DisplayClass10_0 CS$<>8__locals1 = new GClass818.<>c__DisplayClass10_0();
 		CS$<>8__locals1.string_0 = string_0;
-		return base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0));
+		return base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.rrSqmKkolOf));
 	}
 
 	[CompilerGenerated]

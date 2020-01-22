@@ -33,7 +33,7 @@ public static class GClass28
 
 		public GClass29()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -81,7 +81,7 @@ public static class GClass28
 
 		public GClass30()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -108,7 +108,7 @@ public static class GClass28
 
 		public GClass31()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -129,7 +129,7 @@ public static class GClass28
 
 		public GClass32()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -146,14 +146,14 @@ public static class GClass28
 	public class GClass33
 	{
 		[JsonProperty("T")]
-		public IList<int> DjeXrbkqhU { get; set; }
+		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
 		public int Int32_0 { get; set; }
 
 		public GClass33()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -174,7 +174,7 @@ public static class GClass28
 
 		public GClass34()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -195,7 +195,7 @@ public static class GClass28
 
 		public GClass35()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -216,7 +216,7 @@ public static class GClass28
 
 		public GClass36()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -243,7 +243,7 @@ public static class GClass28
 
 		public GClass37()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -267,7 +267,7 @@ public static class GClass28
 
 		public GClass38()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -291,7 +291,7 @@ public static class GClass28
 
 		public GClass39()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -311,7 +311,7 @@ public static class GClass28
 	public class GClass40
 	{
 		[JsonProperty("slotsets")]
-		public GClass28.GClass37 RqpQcuTfiV { get; set; }
+		public GClass28.GClass37 GClass37_0 { get; set; }
 
 		[JsonProperty("selling")]
 		public GClass28.GClass38 GClass38_0 { get; set; }
@@ -321,7 +321,7 @@ public static class GClass28
 
 		public GClass40()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -351,7 +351,7 @@ public static class GClass28
 
 		public GClass41()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -381,18 +381,18 @@ public static class GClass28
 
 		public GClass42()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
+
+		[CompilerGenerated]
+		private int qbimpiVtfw;
 
 		[CompilerGenerated]
 		private int int_0;
 
 		[CompilerGenerated]
 		private int int_1;
-
-		[CompilerGenerated]
-		private int int_2;
 	}
 
 	public class GClass43
@@ -416,14 +416,14 @@ public static class GClass28
 		public int Int32_2 { get; set; }
 
 		[JsonProperty("eventItem")]
-		public int btiwMqNoIq { get; set; }
+		public int Int32_3 { get; set; }
 
 		[JsonProperty("eventActive")]
-		public int Int32_3 { get; set; }
+		public int Int32_4 { get; set; }
 
 		public GClass43()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -437,7 +437,7 @@ public static class GClass28
 		private int int_1;
 
 		[CompilerGenerated]
-		private GClass28.GClass42 viewchbPp9;
+		private GClass28.GClass42 DvSmayyrim;
 
 		[CompilerGenerated]
 		private object object_0;
@@ -459,7 +459,7 @@ public static class GClass28
 
 		public GClass44()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -480,7 +480,7 @@ public static class GClass28
 
 		public GClass45()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -504,7 +504,7 @@ public static class GClass28
 
 		public GClass46()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -525,7 +525,7 @@ public static class GClass28
 
 		public Map()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -533,7 +533,7 @@ public static class GClass28
 		private IList<string> ilist_0;
 
 		[CompilerGenerated]
-		private IList<string> SnSmlmgjpy;
+		private IList<string> ilist_1;
 	}
 
 	public class GClass47
@@ -549,7 +549,7 @@ public static class GClass28
 
 		public GClass47()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 
@@ -573,7 +573,7 @@ public static class GClass28
 
 		public GClass48()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 

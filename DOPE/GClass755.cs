@@ -8,7 +8,7 @@ public class GClass755 : GInterface0
 	{
 		get
 		{
-			return 18031;
+			return 2918;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass755 : GInterface0
 
 	public GClass755(string string_1 = "")
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -30,7 +30,7 @@ public class GClass755 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 18031;
+		return 2918;
 	}
 
 	public virtual int vmethod_1()
@@ -40,19 +40,17 @@ public class GClass755 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18031);
+		binaryStream_0.smethod_7(2918);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6069);
 		binaryStream_0.smethod_3(this.string_0);
 	}
 

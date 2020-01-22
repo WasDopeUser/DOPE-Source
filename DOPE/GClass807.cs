@@ -2,23 +2,23 @@
 
 public static class GClass807
 {
-	public static V0TIQ3PI8Zsi6oCXr7Y smethod_0<V0TIQ3PI8Zsi6oCXr7Y>(this Enum enum_0) where V0TIQ3PI8Zsi6oCXr7Y : Attribute
+	public static s6htBVbsjTFerONxfJu smethod_0<s6htBVbsjTFerONxfJu>(this Enum enum_0) where s6htBVbsjTFerONxfJu : Attribute
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(V0TIQ3PI8Zsi6oCXr7Y), false);
+		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(s6htBVbsjTFerONxfJu), false);
 		if (customAttributes.Length == 0)
 		{
-			return default(V0TIQ3PI8Zsi6oCXr7Y);
+			return default(s6htBVbsjTFerONxfJu);
 		}
-		return (V0TIQ3PI8Zsi6oCXr7Y)((object)customAttributes[0]);
+		return (s6htBVbsjTFerONxfJu)((object)customAttributes[0]);
 	}
 
-	public static oFvlO4PRI4mEYYQ6IM4 smethod_1<oFvlO4PRI4mEYYQ6IM4>(this Enum enum_0) where oFvlO4PRI4mEYYQ6IM4 : Attribute
+	public static XYQdoNbRIjPOkg73Ii0 smethod_1<XYQdoNbRIjPOkg73Ii0>(this Enum enum_0) where XYQdoNbRIjPOkg73Ii0 : Attribute
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(oFvlO4PRI4mEYYQ6IM4), false);
+		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(XYQdoNbRIjPOkg73Ii0), false);
 		if (customAttributes.Length == 0)
 		{
-			return default(oFvlO4PRI4mEYYQ6IM4);
+			return default(XYQdoNbRIjPOkg73Ii0);
 		}
-		return (oFvlO4PRI4mEYYQ6IM4)((object)customAttributes[0]);
+		return (XYQdoNbRIjPOkg73Ii0)((object)customAttributes[0]);
 	}
 }

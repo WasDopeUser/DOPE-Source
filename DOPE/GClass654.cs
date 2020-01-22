@@ -8,7 +8,7 @@ public class GClass654 : GClass651, GInterface0
 	{
 		get
 		{
-			return 13010;
+			return 22952;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass654 : GClass651, GInterface0
 
 	public GClass654(int int_0 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.Value = int_0;
 	}
 
 	public override int vmethod_0()
 	{
-		return 13010;
+		return 22952;
 	}
 
 	public override int vmethod_1()
@@ -40,24 +40,24 @@ public class GClass654 : GClass651, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
 		this.Value = binaryStream_0.smethod_0();
-		this.Value = (U.smethod_0(this.Value, 4) | this.Value << 28);
+		this.Value = (this.Value << 10 | U.smethod_0(this.Value, 22));
+		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13010);
+		binaryStream_0.smethod_7(22952);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-19457);
-		binaryStream_0.smethod_4(this.Value << 4 | U.smethod_0(this.Value, 28));
-		binaryStream_0.smethod_7(15580);
+		binaryStream_0.smethod_4(U.smethod_0(this.Value, 10) | this.Value << 22);
+		binaryStream_0.smethod_7(24044);
+		binaryStream_0.smethod_7(-31651);
 	}
 
 	public int Value;

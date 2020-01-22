@@ -8,7 +8,7 @@ public class GClass399 : GClass396, GInterface0
 	{
 		get
 		{
-			return 24724;
+			return 11442;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass399 : GClass396, GInterface0
 
 	public GClass399(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.int_0 = int_2;
 		this.int_1 = int_3;
@@ -30,7 +30,7 @@ public class GClass399 : GClass396, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 24724;
+		return 11442;
 	}
 
 	public override int vmethod_1()
@@ -42,26 +42,22 @@ public class GClass399 : GClass396, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 10) | this.int_1 << 22);
+		this.int_1 = (this.int_1 << 15 | U.smethod_0(this.int_1, 17));
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24724);
+		binaryStream_0.smethod_7(11442);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-		binaryStream_0.smethod_7(-18060);
-		binaryStream_0.smethod_7(-18947);
-		binaryStream_0.smethod_4(this.int_1 << 10 | U.smethod_0(this.int_1, 22));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 15) | this.int_1 << 17);
 	}
 
 	public int int_0;

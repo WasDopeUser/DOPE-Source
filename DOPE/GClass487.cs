@@ -8,7 +8,7 @@ public class GClass487 : GInterface0
 	{
 		get
 		{
-			return 23000;
+			return 204;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass487 : GInterface0
 
 	public GClass487(uint uint_1 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 23000;
+		return 204;
 	}
 
 	public virtual int vmethod_1()
@@ -45,14 +45,14 @@ public class GClass487 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23000);
+		binaryStream_0.smethod_7(204);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(-25856);
+		binaryStream_0.smethod_7(-14543);
 	}
 
 	public uint uint_0;

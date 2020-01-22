@@ -8,7 +8,7 @@ public class GClass682 : GInterface0
 	{
 		get
 		{
-			return 1164;
+			return 4585;
 		}
 	}
 
@@ -22,9 +22,9 @@ public class GClass682 : GInterface0
 
 	public GClass682(bool bool_1 = false, Vector<GClass682> vector_1 = null, string string_0 = "", GClass396 gclass396_1 = null, string string_1 = "")
 	{
-		Class13.nIxas2ezryi9b();
-		this.Name = "";
+		Class13.plZSWFPzBWWEZ();
 		this.ToolTip = "";
+		this.Name = "";
 		base..ctor();
 		this.bool_0 = bool_1;
 		if (vector_1 == null)
@@ -49,7 +49,7 @@ public class GClass682 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 1164;
+		return 4585;
 	}
 
 	public virtual int vmethod_1()
@@ -72,17 +72,16 @@ public class GClass682 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
-		this.Name = binaryStream_0.smethod_2();
-		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.ToolTip = binaryStream_0.smethod_2();
 		this.gclass396_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass396);
 		this.gclass396_0.imethod_1(binaryStream_0);
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.Name = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1164);
+		binaryStream_0.smethod_7(4585);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -93,20 +92,19 @@ public class GClass682 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(-25960);
-		binaryStream_0.smethod_3(this.Name);
-		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_3(this.ToolTip);
 		this.gclass396_0.imethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_3(this.Name);
 	}
 
 	public Vector<GClass682> vector_0;
 
-	public string Name;
-
-	public bool bool_0;
-
 	public string ToolTip;
 
 	public GClass396 gclass396_0;
+
+	public bool bool_0;
+
+	public string Name;
 }

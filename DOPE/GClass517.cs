@@ -8,7 +8,7 @@ public class GClass517 : GInterface0
 	{
 		get
 		{
-			return 22547;
+			return 26907;
 		}
 	}
 
@@ -20,11 +20,11 @@ public class GClass517 : GInterface0
 		}
 	}
 
-	public GClass517(uint uint_0 = 0U, GClass532 gclass532_1 = null, int int_1 = 0, bool bool_1 = false)
+	public GClass517(uint uint_1 = 0U, GClass532 gclass532_1 = null, int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		this.AkothaunWs = uint_0;
+		this.uint_0 = uint_1;
 		if (gclass532_1 == null)
 		{
 			this.gclass532_0 = new GClass532(0U);
@@ -39,7 +39,7 @@ public class GClass517 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 22547;
+		return 26907;
 	}
 
 	public virtual int vmethod_1()
@@ -49,33 +49,35 @@ public class GClass517 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.gclass532_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass532);
 		this.gclass532_0.imethod_1(binaryStream_0);
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
-		this.AkothaunWs = (uint)binaryStream_0.smethod_1();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22547);
+		binaryStream_0.smethod_7(26907);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass532_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
-		binaryStream_0.smethod_6(this.AkothaunWs);
+		this.gclass532_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(-17673);
 	}
-
-	public GClass532 gclass532_0;
-
-	public bool bool_0;
 
 	public int int_0;
 
-	public uint AkothaunWs;
+	public bool bool_0;
+
+	public GClass532 gclass532_0;
+
+	public uint uint_0;
 }

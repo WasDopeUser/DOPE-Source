@@ -3,16 +3,16 @@ using DarkorbitAPI.CommonStructures;
 
 public class GClass799
 {
-	public GClass799(ByteArray byteArray_1, ByteArray byteArray_2)
+	public GClass799(ByteArray byteArray_0, ByteArray byteArray_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.int_0 = 80;
 		base..ctor();
 		GClass799.smethod_0();
 		this.vector_2 = new Vector<int>(100);
 		this.method_0();
-		this.method_1(byteArray_1);
-		this.method_2(byteArray_2);
+		this.method_1(byteArray_0);
+		this.method_2(byteArray_1);
 	}
 
 	public static void smethod_0()
@@ -51,27 +51,27 @@ public class GClass799
 
 	private void method_0()
 	{
-		this.byteArray_0 = new ByteArray();
+		this.hoJzLjtaqE = new ByteArray();
 		for (int i = 0; i < 80; i++)
 		{
-			this.byteArray_0.Memory.WriteByte(0);
+			this.hoJzLjtaqE.Memory.WriteByte(0);
 		}
 	}
 
-	private void method_1(ByteArray byteArray_1)
+	private void method_1(ByteArray byteArray_0)
 	{
 		ByteArray byteArray;
-		if (byteArray_1.Length == 32)
+		if (byteArray_0.Length == 32)
 		{
-			byteArray = byteArray_1;
+			byteArray = byteArray_0;
 		}
 		else
 		{
 			byteArray = new ByteArray();
-			byteArray_1.Memory.Position = 0L;
-			byteArray_1.Memory.CopyTo(byteArray.Memory);
-			byteArray[byteArray_1.Length] = 1;
-			for (int i = byteArray_1.Length + 1; i < byteArray.Length; i++)
+			byteArray_0.Memory.Position = 0L;
+			byteArray_0.Memory.CopyTo(byteArray.Memory);
+			byteArray[byteArray_0.Length] = 1;
+			for (int i = byteArray_0.Length + 1; i < byteArray.Length; i++)
 			{
 				byteArray[i] = 0;
 			}
@@ -949,21 +949,21 @@ public class GClass799
 		this.vector_2[99] = num13;
 	}
 
-	private void method_2(ByteArray byteArray_1)
+	private void method_2(ByteArray byteArray_0)
 	{
-		if (byteArray_1 == null)
+		if (byteArray_0 == null)
 		{
-			byteArray_1 = new ByteArray();
+			byteArray_0 = new ByteArray();
 		}
 		ByteArray byteArray;
-		if (byteArray_1.Length == 16)
+		if (byteArray_0.Length == 16)
 		{
-			byteArray = byteArray_1;
+			byteArray = byteArray_0;
 		}
 		else
 		{
 			byteArray = new ByteArray();
-			for (int i = byteArray_1.Length; i < byteArray.Length; i++)
+			for (int i = byteArray_0.Length; i < byteArray.Length; i++)
 			{
 				byteArray.Memory.WriteByte(0);
 			}
@@ -1359,10 +1359,10 @@ public class GClass799
 		num = (num ^ num3 ^ num2 << 7);
 		num4 = this.method_6(num4, 5);
 		num = this.method_6(num, 22);
-		this.int_9 = num4;
-		this.int_8 = num2;
-		this.int_7 = num;
-		this.int_6 = num3;
+		this.int_10 = num4;
+		this.int_9 = num2;
+		this.int_8 = num;
+		this.int_7 = num3;
 		num4 ^= this.vector_2[48U];
 		num2 ^= this.vector_2[49U];
 		num ^= this.vector_2[50U];
@@ -1560,10 +1560,10 @@ public class GClass799
 		num4 = (num4 ^ num ^ num2 << 7);
 		num3 = this.method_6(num3, 5);
 		num4 = this.method_6(num4, 22);
-		this.int_10 = num3;
-		this.MxazCcXurJ = num2;
-		this.int_11 = num4;
-		this.int_5 = num;
+		this.int_11 = num3;
+		this.int_5 = num2;
+		this.int_12 = num4;
+		this.int_6 = num;
 		num3 ^= this.vector_2[72U];
 		num2 ^= this.vector_2[73U];
 		num4 ^= this.vector_2[74U];
@@ -1770,20 +1770,20 @@ public class GClass799
 		this.int_1 = num4;
 	}
 
-	private void method_3(ByteArray byteArray_1, int int_12)
+	private void method_3(ByteArray byteArray_0, int int_13)
 	{
 		int num = this.int_1;
 		int num2 = this.int_2;
 		int num3 = this.int_3;
 		int num4 = this.int_4;
-		int num5 = this.MxazCcXurJ;
-		int num6 = this.int_5;
-		int num7 = this.int_6;
-		int num8 = this.int_7;
-		int num9 = this.int_8;
-		int num10 = this.int_9;
-		int num11 = this.int_10;
-		int num12 = this.int_11;
+		int num5 = this.int_5;
+		int num6 = this.int_6;
+		int num7 = this.int_7;
+		int num8 = this.int_8;
+		int num9 = this.int_9;
+		int num10 = this.int_10;
+		int num11 = this.int_11;
+		int num12 = this.int_12;
 		int num13 = num11;
 		num11 = num12 + (num2 ^ (((num11 & 1) != 0) ? num9 : 0));
 		num12 = this.method_6(num13 * 1415926535, 7);
@@ -1824,10 +1824,10 @@ public class GClass799
 		num17 ^= num21;
 		num17 ^= num22;
 		num22 = ~num22;
-		this.method_5(num19 ^ num14, byteArray_1, int_12);
-		this.method_5(num21 ^ num16, byteArray_1, int_12 + 4);
-		this.method_5(num17 ^ num18, byteArray_1, int_12 + 8);
-		this.method_5(num22 ^ num20, byteArray_1, int_12 + 12);
+		this.method_5(num19 ^ num14, byteArray_0, int_13);
+		this.method_5(num21 ^ num16, byteArray_0, int_13 + 4);
+		this.method_5(num17 ^ num18, byteArray_0, int_13 + 8);
+		this.method_5(num22 ^ num20, byteArray_0, int_13 + 12);
 		num13 = num11;
 		num11 = num12 + (num6 ^ (((num11 & 1) != 0) ? num3 : 0));
 		num12 = this.method_6(num13 * 1415926535, 7);
@@ -1868,10 +1868,10 @@ public class GClass799
 		num17 ^= num21;
 		num17 ^= num22;
 		num22 = ~num22;
-		this.method_5(num19 ^ num14, byteArray_1, int_12 + 16);
-		this.method_5(num21 ^ num16, byteArray_1, int_12 + 20);
-		this.method_5(num17 ^ num18, byteArray_1, int_12 + 24);
-		this.method_5(num22 ^ num20, byteArray_1, int_12 + 28);
+		this.method_5(num19 ^ num14, byteArray_0, int_13 + 16);
+		this.method_5(num21 ^ num16, byteArray_0, int_13 + 20);
+		this.method_5(num17 ^ num18, byteArray_0, int_13 + 24);
+		this.method_5(num22 ^ num20, byteArray_0, int_13 + 28);
 		num13 = num11;
 		num11 = num12 + (num10 ^ (((num11 & 1) != 0) ? num7 : 0));
 		num12 = this.method_6(num13 * 1415926535, 7);
@@ -1912,10 +1912,10 @@ public class GClass799
 		num17 ^= num21;
 		num17 ^= num22;
 		num22 = ~num22;
-		this.method_5(num19 ^ num14, byteArray_1, int_12 + 32);
-		this.method_5(num21 ^ num16, byteArray_1, int_12 + 36);
-		this.method_5(num17 ^ num18, byteArray_1, int_12 + 40);
-		this.method_5(num22 ^ num20, byteArray_1, int_12 + 44);
+		this.method_5(num19 ^ num14, byteArray_0, int_13 + 32);
+		this.method_5(num21 ^ num16, byteArray_0, int_13 + 36);
+		this.method_5(num17 ^ num18, byteArray_0, int_13 + 40);
+		this.method_5(num22 ^ num20, byteArray_0, int_13 + 44);
 		num13 = num11;
 		num11 = num12 + (num4 ^ (((num11 & 1) != 0) ? num : 0));
 		num12 = this.method_6(num13 * 1415926535, 7);
@@ -1956,10 +1956,10 @@ public class GClass799
 		num17 ^= num21;
 		num17 ^= num22;
 		num22 = ~num22;
-		this.method_5(num19 ^ num14, byteArray_1, int_12 + 48);
-		this.method_5(num21 ^ num16, byteArray_1, int_12 + 52);
-		this.method_5(num17 ^ num18, byteArray_1, int_12 + 56);
-		this.method_5(num22 ^ num20, byteArray_1, int_12 + 60);
+		this.method_5(num19 ^ num14, byteArray_0, int_13 + 48);
+		this.method_5(num21 ^ num16, byteArray_0, int_13 + 52);
+		this.method_5(num17 ^ num18, byteArray_0, int_13 + 56);
+		this.method_5(num22 ^ num20, byteArray_0, int_13 + 60);
 		num13 = num11;
 		num11 = num12 + (num8 ^ (((num11 & 1) != 0) ? num5 : 0));
 		num12 = this.method_6(num13 * 1415926535, 7);
@@ -2000,50 +2000,50 @@ public class GClass799
 		num17 ^= num21;
 		num17 ^= num22;
 		num22 = ~num22;
-		this.method_5(num19 ^ num14, byteArray_1, int_12 + 64);
-		this.method_5(num21 ^ num16, byteArray_1, int_12 + 68);
-		this.method_5(num17 ^ num18, byteArray_1, int_12 + 72);
-		this.method_5(num22 ^ num20, byteArray_1, int_12 + 76);
+		this.method_5(num19 ^ num14, byteArray_0, int_13 + 64);
+		this.method_5(num21 ^ num16, byteArray_0, int_13 + 68);
+		this.method_5(num17 ^ num18, byteArray_0, int_13 + 72);
+		this.method_5(num22 ^ num20, byteArray_0, int_13 + 76);
 		this.int_1 = num;
 		this.int_2 = num2;
 		this.int_3 = num3;
 		this.int_4 = num4;
-		this.MxazCcXurJ = num5;
-		this.int_5 = num6;
-		this.int_6 = num7;
-		this.int_7 = num8;
-		this.int_8 = num9;
-		this.int_9 = num10;
-		this.int_10 = num11;
-		this.int_11 = num12;
+		this.int_5 = num5;
+		this.int_6 = num6;
+		this.int_7 = num7;
+		this.int_8 = num8;
+		this.int_9 = num9;
+		this.int_10 = num10;
+		this.int_11 = num11;
+		this.int_12 = num12;
 	}
 
-	private int method_4(ByteArray byteArray_1, int int_12)
+	private int method_4(ByteArray byteArray_0, int int_13)
 	{
-		return (int)(byteArray_1[int_12] & byte.MaxValue) | (int)(byteArray_1[int_12 + 1] & byte.MaxValue) << 8 | (int)(byteArray_1[int_12 + 2] & byte.MaxValue) << 16 | (int)(byteArray_1[int_12 + 3] & byte.MaxValue) << 24;
+		return (int)(byteArray_0[int_13] & byte.MaxValue) | (int)(byteArray_0[int_13 + 1] & byte.MaxValue) << 8 | (int)(byteArray_0[int_13 + 2] & byte.MaxValue) << 16 | (int)(byteArray_0[int_13 + 3] & byte.MaxValue) << 24;
 	}
 
-	private void method_5(int int_12, ByteArray byteArray_1, int int_13)
+	private void method_5(int int_13, ByteArray byteArray_0, int int_14)
 	{
-		byteArray_1[int_13] = (byte)(int_12 & 255);
-		byteArray_1[int_13 + 1] = (byte)(int_12 >> 8 & 255);
-		byteArray_1[int_13 + 2] = (byte)(int_12 >> 16 & 255);
-		byteArray_1[int_13 + 3] = (byte)(int_12 >> 24 & 255);
+		byteArray_0[int_14] = (byte)(int_13 & 255);
+		byteArray_0[int_14 + 1] = (byte)(int_13 >> 8 & 255);
+		byteArray_0[int_14 + 2] = (byte)(int_13 >> 16 & 255);
+		byteArray_0[int_14 + 3] = (byte)(int_13 >> 24 & 255);
 	}
 
-	private int method_6(int int_12, int int_13)
+	private int method_6(int int_13, int int_14)
 	{
-		return int_12 << int_13 | U.smethod_0(int_12, 32 - int_13);
+		return int_13 << int_14 | U.smethod_0(int_13, 32 - int_14);
 	}
 
-	public virtual void vmethod_0(ByteArray byteArray_1, ByteArray byteArray_2)
+	public virtual void vmethod_0(ByteArray byteArray_0, ByteArray byteArray_1)
 	{
 		int num = 0;
-		int i = byteArray_1.Length;
+		int i = byteArray_0.Length;
 		int num2 = 0;
 		for (int j = 0; j < i; j++)
 		{
-			byteArray_2[j] = (byte)(num2 & 255);
+			byteArray_1[j] = (byte)(num2 & 255);
 		}
 		if (this.int_0 < 80)
 		{
@@ -2054,8 +2054,8 @@ public class GClass799
 			}
 			for (int k = 0; k < num3; k++)
 			{
-				int num4 = (int)(byteArray_1[num + k] ^ this.byteArray_0[this.int_0 + k]);
-				byteArray_2[num + k] = (byte)(num4 & 255);
+				int num4 = (int)(byteArray_0[num + k] ^ this.hoJzLjtaqE[this.int_0 + k]);
+				byteArray_1[num + k] = (byte)(num4 & 255);
 			}
 			this.int_0 += num3;
 			num += num3;
@@ -2064,12 +2064,12 @@ public class GClass799
 		while (i > 0)
 		{
 			int num5 = Math.Min(i, 80);
-			this.method_3(this.byteArray_0, 0);
+			this.method_3(this.hoJzLjtaqE, 0);
 			this.int_0 = 0;
 			for (int l = 0; l < num5; l++)
 			{
-				int num6 = (int)(byteArray_1[num + l] ^ this.byteArray_0[this.int_0 + l]);
-				byteArray_2[num + l] = (byte)(num6 & 255);
+				int num6 = (int)(byteArray_0[num + l] ^ this.hoJzLjtaqE[this.int_0 + l]);
+				byteArray_1[num + l] = (byte)(num6 & 255);
 			}
 			this.int_0 += num5;
 			num += num5;
@@ -2080,7 +2080,7 @@ public class GClass799
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass799()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass799.vector_0 = new Vector<int>(256);
 		GClass799.vector_1 = new Vector<int>(256);
 		GClass799.bool_0 = false;
@@ -2092,7 +2092,7 @@ public class GClass799
 
 	private static volatile bool bool_0;
 
-	private ByteArray byteArray_0;
+	private ByteArray hoJzLjtaqE;
 
 	private int int_0;
 
@@ -2103,8 +2103,6 @@ public class GClass799
 	private int int_3;
 
 	private int int_4;
-
-	private int MxazCcXurJ;
 
 	private int int_5;
 
@@ -2119,6 +2117,8 @@ public class GClass799
 	private int int_10;
 
 	private int int_11;
+
+	private int int_12;
 
 	private Vector<int> vector_2;
 }

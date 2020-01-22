@@ -8,7 +8,7 @@ public class GClass589 : GClass585, GInterface0
 	{
 		get
 		{
-			return 32306;
+			return 14915;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass589 : GClass585, GInterface0
 
 	public GClass589(string string_0 = "", double double_0 = 0.0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(string_0);
 		this.Value = double_0;
 	}
 
 	public override int vmethod_0()
 	{
-		return 32306;
+		return 14915;
 	}
 
 	public override int vmethod_1()
@@ -41,11 +41,13 @@ public class GClass589 : GClass585, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		this.Value = binaryStream_0.ReadDouble();
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32306);
+		binaryStream_0.smethod_7(14915);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -53,6 +55,8 @@ public class GClass589 : GClass585, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.WriteDouble(this.Value);
+		binaryStream_0.smethod_7(16876);
+		binaryStream_0.smethod_7(28760);
 	}
 
 	public double Value;

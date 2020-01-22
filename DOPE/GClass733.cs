@@ -8,7 +8,7 @@ public class GClass733 : GInterface0
 	{
 		get
 		{
-			return 17059;
+			return 5053;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass733 : GInterface0
 
 	public GClass733(string string_1 = "", int int_1 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -37,7 +37,7 @@ public class GClass733 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 17059;
+		return 5053;
 	}
 
 	public virtual int vmethod_1()
@@ -47,7 +47,6 @@ public class GClass733 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -57,31 +56,32 @@ public class GClass733 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 9 | U.smethod_0(num3, 23));
+			num3 = (U.smethod_0(num3, 7) | num3 << 25);
 			this.vector_0.method_0(num3);
 			num++;
 		}
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		this.int_0 = (this.int_0 << 11 | U.smethod_0(this.int_0, 21));
 		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17059);
+		binaryStream_0.smethod_7(5053);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-25413);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (int num in this.vector_0)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 9) | num << 23);
+			binaryStream_0.smethod_4(num << 7 | U.smethod_0(num, 25));
 		}
-		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 11) | this.int_0 << 21);
 		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(-14970);
 	}
 
 	public Vector<int> vector_0;

@@ -8,7 +8,7 @@ public class GClass359 : GInterface0
 	{
 		get
 		{
-			return 18582;
+			return 25597;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass359 : GInterface0
 
 	public GClass359(Vector<GClass434> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass359 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 18582;
+		return 25597;
 	}
 
 	public virtual int vmethod_1()
@@ -57,11 +57,12 @@ public class GClass359 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18582);
+		binaryStream_0.smethod_7(25597);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -72,6 +73,7 @@ public class GClass359 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
+		binaryStream_0.smethod_7(15131);
 	}
 
 	public Vector<GClass434> vector_0;

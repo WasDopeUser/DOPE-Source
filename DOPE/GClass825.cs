@@ -27,13 +27,13 @@ public class GClass825 : GClass824
 
 	public override MapProfile GetMapProfile()
 	{
-		return base.Context.MapProfile ?? this.mapProfile_1;
+		return base.Context.MapProfile ?? this.oLxqtJyxUx8;
 	}
 
 	public GClass825(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
-		this.mapProfile_1 = new MapProfile
+		Class13.plZSWFPzBWWEZ();
+		this.oLxqtJyxUx8 = new MapProfile
 		{
 			TargetMap = TargetMap.X1
 		};
@@ -51,21 +51,21 @@ public class GClass825 : GClass824
 			if (((account2 != null) ? account2.HangarDefault : null) != null && base.Started.Cooldown(30000))
 			{
 				GClass825.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass825.<>c__DisplayClass8_0();
-				GClass849 gclass = base.Context.method_62<GClass849>();
+				GClass849 gclass = base.Context.method_61<GClass849>();
 				GClass825.<>c__DisplayClass8_0 CS$<>8__locals2 = CS$<>8__locals1;
 				AccountSettings account3 = base.C.Account;
-				List<string> list;
+				List<string> list_;
 				if (account3 == null)
 				{
-					list = null;
+					list_ = null;
 				}
 				else
 				{
 					VolatileData @volatile = account3.Volatile;
-					list = ((@volatile != null) ? @volatile.Hangars : null);
+					list_ = ((@volatile != null) ? @volatile.Hangars : null);
 				}
-				CS$<>8__locals2.list_0 = list;
-				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass825.list_0.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
+				CS$<>8__locals2.list_0 = list_;
+				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass825.IgvqtznExoI.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
 				return string_1 != null && gclass.method_15() > 0;
 			}
 		}
@@ -80,15 +80,15 @@ public class GClass825 : GClass824
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass825()
 	{
-		Class13.nIxas2ezryi9b();
-		GClass825.list_0 = new List<string>
+		Class13.plZSWFPzBWWEZ();
+		GClass825.IgvqtznExoI = new List<string>
 		{
 			"ship_phoenix",
 			"ship_liberator"
 		};
 	}
 
-	private MapProfile mapProfile_1;
+	private MapProfile oLxqtJyxUx8;
 
-	public static List<string> list_0;
+	public static List<string> IgvqtznExoI;
 }

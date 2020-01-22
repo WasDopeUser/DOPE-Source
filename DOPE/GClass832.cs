@@ -7,7 +7,7 @@ public class GClass832 : GClass831
 {
 	public GClass832(GClass822 gclass822_1, TargetMap targetMap_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, targetMap_1);
 	}
 

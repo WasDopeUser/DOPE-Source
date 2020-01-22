@@ -24,7 +24,7 @@ public class GClass849 : GClass846
 
 	public GClass849(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, "GgSpinner");
 	}
 
@@ -175,7 +175,7 @@ public class GClass849 : GClass846
 			base.Log.Warn("Nothing to spin");
 			return false;
 		}
-		DarkOrbitWebAPI.jumpgateMultiplier jumpgateMultiplier = this.method_2().multipliers.FirstOrDefault(new Func<DarkOrbitWebAPI.jumpgateMultiplier, bool>(CS$<>8__locals1.method_0));
+		DarkOrbitWebAPI.jumpgateMultiplier jumpgateMultiplier = this.method_2().multipliers.FirstOrDefault(new Func<DarkOrbitWebAPI.jumpgateMultiplier, bool>(CS$<>8__locals1.sauqbzoKuGI));
 		bool flag = jumpgateMultiplier != null && jumpgateMultiplier.value > 0;
 		string text = "&multiplier=" + (flag ? 1 : 0).ToString();
 		long samples = this.method_2().samples;
@@ -326,7 +326,7 @@ public class GClass849 : GClass846
 		}
 		string activeHangarName = base.Context.Game.Web.Equipment.ActiveHangarName;
 		AccountSettings account = base.Context.Account;
-		return account == null || !account.Spinner_UsePhoenix || GClass825.list_0.Contains(activeHangarName);
+		return account == null || !account.Spinner_UsePhoenix || GClass825.IgvqtznExoI.Contains(activeHangarName);
 	}
 
 	public int method_15()
@@ -348,7 +348,7 @@ public class GClass849 : GClass846
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass849()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass849.dictionary_0 = new Dictionary<int, string>
 		{
 			{

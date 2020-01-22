@@ -41,13 +41,13 @@ public class GClass820 : INotifyPropertyChanged
 				return;
 			}
 			this.gclass822_0 = value;
-			this.method_13(Class10.Controller);
-			this.method_13(Class10.propertyChangedEventArgs_15);
-			this.method_13(Class10.propertyChangedEventArgs_5);
-			this.method_13(Class10.propertyChangedEventArgs_59);
-			this.method_13(Class10.propertyChangedEventArgs_37);
-			this.method_13(Class10.propertyChangedEventArgs_58);
-			this.method_13(Class10.Context);
+			this.method_12(Class10.Controller);
+			this.method_12(Class10.propertyChangedEventArgs_15);
+			this.method_12(Class10.propertyChangedEventArgs_5);
+			this.method_12(Class10.propertyChangedEventArgs_58);
+			this.method_12(Class10.propertyChangedEventArgs_37);
+			this.method_12(Class10.propertyChangedEventArgs_57);
+			this.method_12(Class10.Context);
 		}
 	}
 
@@ -117,7 +117,7 @@ public class GClass820 : INotifyPropertyChanged
 				return;
 			}
 			this.string_0 = value;
-			this.method_13(Class10.propertyChangedEventArgs_41);
+			this.method_12(Class10.propertyChangedEventArgs_41);
 		}
 	}
 
@@ -194,13 +194,13 @@ public class GClass820 : INotifyPropertyChanged
 				return;
 			}
 			this.gclass824_0 = value;
-			this.method_13(Class10.Module);
+			this.method_12(Class10.Module);
 		}
 	}
 
 	public GClass820(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.dictionary_0 = new Dictionary<string, DateTimeOffset>();
 		this.random_0 = new Random();
 		this.list_0 = new List<GClass824>();
@@ -214,11 +214,11 @@ public class GClass820 : INotifyPropertyChanged
 			GClass824 gclass = null;
 			if (MapUtils.smethod_4((int)targetMap))
 			{
-				if (MapUtils.smethod_5((int)targetMap))
+				if (MapUtils.jEjnZuoyqO((int)targetMap))
 				{
 					gclass = new GClass831(gclass822_1, targetMap);
 				}
-				else if (MapUtils.smethod_6((int)targetMap))
+				else if (MapUtils.smethod_5((int)targetMap))
 				{
 					gclass = new GClass832(gclass822_1, targetMap);
 				}
@@ -271,29 +271,29 @@ public class GClass820 : INotifyPropertyChanged
 		return this.Module.ShouldBeInGame();
 	}
 
-	public bool method_3()
+	public bool hnyqwrQcimP()
 	{
 		return true;
 	}
 
-	internal void method_4()
+	internal void method_3()
 	{
 		this.bool_0 = false;
 		this.Log.Debug("Resuming");
 	}
 
-	internal void method_5()
+	internal void method_4()
 	{
 		this.bool_0 = true;
 		this.Log.Debug("Freezing");
 	}
 
-	public void method_6()
+	public void method_5()
 	{
-		this.method_7();
+		this.method_6();
 	}
 
-	public void method_7()
+	public void method_6()
 	{
 		if (this.TimeTableActive)
 		{
@@ -327,7 +327,7 @@ public class GClass820 : INotifyPropertyChanged
 		}
 	}
 
-	protected GClass824 method_8()
+	protected GClass824 method_7()
 	{
 		int num = int.MinValue;
 		GClass824 gclass = null;
@@ -342,13 +342,13 @@ public class GClass820 : INotifyPropertyChanged
 		return gclass;
 	}
 
-	protected GClass824 method_9(GClass835 gclass835_0)
+	protected GClass824 method_8(GClass835 gclass835_0)
 	{
 		int num = int.MinValue;
 		GClass824 gclass = null;
 		foreach (GClass824 gclass2 in this.list_0)
 		{
-			if (gclass835_0.vmethod_18(gclass2) && (gclass2.Priority > num || gclass == null))
+			if (gclass835_0.vmethod_19(gclass2) && (gclass2.Priority > num || gclass == null))
 			{
 				num = gclass2.Priority;
 				gclass = gclass2;
@@ -357,16 +357,16 @@ public class GClass820 : INotifyPropertyChanged
 		return gclass;
 	}
 
-	protected void method_10()
+	protected void method_9()
 	{
-		GClass824 gclass = this.method_8();
+		GClass824 gclass = this.method_7();
 		GClass835 behavior = gclass.GetBehavior();
-		while (!behavior.vmethod_18(gclass))
+		while (!behavior.vmethod_19(gclass))
 		{
-			gclass = this.method_9(behavior);
+			gclass = this.method_8(behavior);
 			behavior = gclass.GetBehavior();
 		}
-		if (!this.Module.GetBehavior().vmethod_18(this.Module))
+		if (!this.Module.GetBehavior().vmethod_19(this.Module))
 		{
 			this.Module.ForceStop();
 		}
@@ -384,7 +384,7 @@ public class GClass820 : INotifyPropertyChanged
 		}
 	}
 
-	public void method_11()
+	public void method_10()
 	{
 		if (this.Context.Game.Web.GgInfo == null)
 		{
@@ -394,27 +394,27 @@ public class GClass820 : INotifyPropertyChanged
 		{
 			gclass.UpdateForSchedule();
 		}
-		this.method_6();
-		this.method_10();
+		this.method_5();
+		this.method_9();
 	}
 
 	public event PropertyChangedEventHandler PropertyChanged;
 
-	public GClass824 method_12()
+	public GClass824 method_11()
 	{
 		object obj = this.object_0;
 		GClass824 module;
 		lock (obj)
 		{
-			this.method_11();
+			this.method_10();
 			module = this.Module;
 		}
 		return module;
 	}
 
-	[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 	[DebuggerNonUserCode]
-	protected void method_13(PropertyChangedEventArgs propertyChangedEventArgs_0)
+	[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+	protected void method_12(PropertyChangedEventArgs propertyChangedEventArgs_0)
 	{
 		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 		if (propertyChanged != null)

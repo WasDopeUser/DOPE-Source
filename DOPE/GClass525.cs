@@ -8,7 +8,7 @@ public class GClass525 : GInterface0
 	{
 		get
 		{
-			return 7973;
+			return 25308;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass525 : GInterface0
 
 	public GClass525(Vector<GClass327> vector_1 = null, bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass525 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 7973;
+		return 25308;
 	}
 
 	public virtual int vmethod_1()
@@ -67,20 +67,20 @@ public class GClass525 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(7973);
+		binaryStream_0.smethod_7(25308);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16039);
+		binaryStream_0.smethod_7(31042);
 		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass327 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(-31348);
+		binaryStream_0.smethod_7(-3972);
 	}
 
 	public bool bool_0;

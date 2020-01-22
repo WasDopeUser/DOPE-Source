@@ -10,7 +10,7 @@ public class GClass7 : GInterface4
 
 	public GClass7()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

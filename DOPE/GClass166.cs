@@ -8,7 +8,7 @@ public class GClass166 : GInterface0
 	{
 		get
 		{
-			return 6114;
+			return 15640;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass166 : GInterface0
 
 	public GClass166(GClass135 gclass135_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass135_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass166 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 6114;
+		return 15640;
 	}
 
 	public virtual int vmethod_1()
@@ -46,19 +46,17 @@ public class GClass166 : GInterface0
 	{
 		this.gclass135_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass135);
 		this.gclass135_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6114);
+		binaryStream_0.smethod_7(15640);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		this.gclass135_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-31370);
 	}
 
 	public GClass135 gclass135_0;

@@ -8,7 +8,7 @@ public class GClass415 : GInterface0
 	{
 		get
 		{
-			return 21899;
+			return 14779;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass415 : GInterface0
 
 	public GClass415(Vector<GClass375> vector_1 = null, uint uint_1 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass415 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 21899;
+		return 14779;
 	}
 
 	public virtual int vmethod_1()
@@ -62,23 +62,25 @@ public class GClass415 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21899);
+		binaryStream_0.smethod_7(14779);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(-26170);
+		binaryStream_0.smethod_7(2446);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass375 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
+		binaryStream_0.smethod_7(-7265);
 	}
 
 	public uint uint_0;

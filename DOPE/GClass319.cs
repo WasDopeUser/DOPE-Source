@@ -8,7 +8,7 @@ public class GClass319 : GInterface0
 	{
 		get
 		{
-			return 18039;
+			return 18474;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass319 : GInterface0
 
 	public GClass319(int int_1 = 0, bool bool_0 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.int_0 = int_1;
 		this.Visible = bool_0;
@@ -30,7 +30,7 @@ public class GClass319 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 18039;
+		return 18474;
 	}
 
 	public virtual int vmethod_1()
@@ -41,19 +41,21 @@ public class GClass319 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		binaryStream_0.smethod_1();
 		this.Visible = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18039);
+		binaryStream_0.smethod_7(18474);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
+		binaryStream_0.smethod_7(-20768);
 		binaryStream_0.WriteBoolean(this.Visible);
 	}
 

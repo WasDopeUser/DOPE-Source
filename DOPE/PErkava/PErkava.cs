@@ -54,7 +54,7 @@ namespace PErkava
 
 		static PErkava()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			PErkava.IsSupported = false;
 			PErkava.concurrentDictionary_0 = new ConcurrentDictionary<IntPtr, GClass862>();
 			PErkava.concurrentDictionary_1 = new ConcurrentDictionary<int, IPErkavaBotController>();
@@ -124,7 +124,7 @@ namespace PErkava
 			};
 			PErkava.concurrentDictionary_3 = new ConcurrentDictionary<string, GClass867>();
 			PErkava.concurrentDictionary_4 = new ConcurrentDictionary<string, HashSet<GClass867>>();
-			PErkava.AllServersData = PErkava.string_0.Select(new Func<string, GClass867>(PErkava.<>c.<>c_0.method_0)).ToList<GClass867>();
+			PErkava.AllServersData = PErkava.string_0.Select(new Func<string, GClass867>(PErkava.<>c.<>c_0.SlMqjxvSoi9)).ToList<GClass867>();
 		}
 
 		public static string[] smethod_4()

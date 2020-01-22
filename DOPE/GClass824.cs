@@ -197,13 +197,13 @@ public abstract class GClass824 : INotifyPropertyChanged
 	{
 		get
 		{
-			return this.Context.method_71("Module-" + this.Name);
+			return this.Context.method_70("Module-" + this.Name);
 		}
 	}
 
 	public GClass824(GClass822 gclass822_1, string string_1, int int_2 = -2147483648)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.Name = string_1;
 		this.Context = gclass822_1;
@@ -403,7 +403,7 @@ public abstract class GClass824 : INotifyPropertyChanged
 	public virtual void HandleError(GClass824.GEnum10 genum10_0)
 	{
 		this.SetCooldown(TimeSpan.FromMinutes(3.0));
-		this.C.method_67(BotState.Default);
+		this.C.method_66(BotState.Default);
 	}
 
 	[DebuggerNonUserCode]

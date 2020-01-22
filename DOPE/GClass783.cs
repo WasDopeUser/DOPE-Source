@@ -10,7 +10,7 @@ public static class GClass783
 {
 	static GClass783()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass783.httpClient_0 = new HttpClient();
 		GClass783.httpClient_0.DefaultRequestHeaders.ConnectionClose = new bool?(true);
 	}

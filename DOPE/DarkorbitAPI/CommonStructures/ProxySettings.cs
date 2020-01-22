@@ -14,7 +14,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public ProxySettings(string string_0, string string_1, string string_2, int int_0)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 			this.User = string_0;
 			this.Password = string_1;

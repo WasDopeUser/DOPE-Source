@@ -5,12 +5,12 @@ public class GClass108 : GInterface4
 {
 	public void Run(GClass229 e)
 	{
-		GameManager.Instance.Value.Hero.method_28(e);
+		GameManager.Instance.Value.Hero.method_26(e);
 	}
 
 	public GClass108()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

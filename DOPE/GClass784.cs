@@ -44,9 +44,9 @@ public static class GClass784
 	private static IEnumerable<byte> smethod_5(byte[] byte_0, IEnumerable<byte> ienumerable_0)
 	{
 		GClass784.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass784.<>c__DisplayClass5_0();
-		CS$<>8__locals1.iPbucdLpap = GClass784.smethod_4(byte_0);
+		CS$<>8__locals1.byte_0 = GClass784.smethod_4(byte_0);
 		CS$<>8__locals1.int_0 = 0;
-		CS$<>8__locals1.awxunKghw9 = 0;
+		CS$<>8__locals1.int_1 = 0;
 		return ienumerable_0.Select(new Func<byte, byte>(CS$<>8__locals1.method_0));
 	}
 

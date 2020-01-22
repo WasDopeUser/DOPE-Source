@@ -25,7 +25,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Game>k__BackingField = value;
-				this.method_10(Class5.Game);
+				this.LmrdRxWejv(Class5.Game);
 			}
 		}
 
@@ -44,7 +44,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Group>k__BackingField = value;
-				this.method_10(Class5.Group);
+				this.LmrdRxWejv(Class5.Group);
 			}
 		}
 
@@ -63,13 +63,13 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Pet>k__BackingField = value;
-				this.method_10(Class5.Pet);
+				this.LmrdRxWejv(Class5.Pet);
 			}
 		}
 
 		static Hero()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			Hero.Formations = new Dictionary<GEnum4, string>();
 			foreach (object obj in Enum.GetValues(typeof(GEnum4)))
 			{
@@ -85,7 +85,7 @@ namespace DarkorbitAPI.Structures
 				GEnum4 result = GEnum4.Default;
 				foreach (KeyValuePair<GEnum4, string> keyValuePair in Hero.Formations)
 				{
-					if (this.method_29(keyValuePair.Value))
+					if (this.method_27(keyValuePair.Value))
 					{
 						return keyValuePair.Key;
 					}
@@ -109,7 +109,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Credits>k__BackingField = value;
-				this.method_10(Class5.Credits);
+				this.LmrdRxWejv(Class5.Credits);
 			}
 		}
 
@@ -128,19 +128,19 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<BootyKeys>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_4);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_4);
 			}
 		}
 
-		internal void method_11(GClass235 gclass235_0)
+		internal void method_9(GClass235 gclass235_0)
 		{
 			if (Enum.IsDefined(typeof(CooldownType), (int)gclass235_0.gclass178_0.uint_0))
 			{
-				this.ItemCooldown.method_1((CooldownType)gclass235_0.gclass178_0.uint_0, gclass235_0.double_0);
+				this.ItemCooldown.NuEqfWytUcF((CooldownType)gclass235_0.gclass178_0.uint_0, gclass235_0.double_0);
 			}
 		}
 
-		internal void method_12(GClass276 gclass276_0)
+		internal void method_10(GClass276 gclass276_0)
 		{
 			MenuItem menuItem;
 			if (!this.MenuItems.TryGetValue(gclass276_0.Id, out menuItem))
@@ -150,7 +150,7 @@ namespace DarkorbitAPI.Structures
 			menuItem.method_0(gclass276_0);
 		}
 
-		internal void method_13(GClass277 gclass277_0)
+		internal void method_11(GClass277 gclass277_0)
 		{
 			MenuItem menuItem;
 			if (!this.MenuItems.TryGetValue(gclass277_0.Id, out menuItem))
@@ -160,78 +160,78 @@ namespace DarkorbitAPI.Structures
 			menuItem.method_1(gclass277_0);
 		}
 
-		internal void method_14(GClass243 gclass243_0)
+		internal void method_12(GClass243 gclass243_0)
 		{
 			string string_ = gclass243_0.string_0;
 			if (string_ != null)
 			{
 				if (string_ == "currency_credits")
 				{
-					this.Credits = gclass243_0.double_2;
+					this.Credits = gclass243_0.double_1;
 					return;
 				}
 				if (string_ == "currency_uridium")
 				{
-					this.Uridium = gclass243_0.double_2;
+					this.Uridium = gclass243_0.double_1;
 					return;
 				}
 				if (string_ == "currency_honour")
 				{
-					this.Honor = gclass243_0.double_2;
+					this.Honor = gclass243_0.double_1;
 					return;
 				}
 				if (string_ == "currency_experience")
 				{
-					this.Experience = gclass243_0.double_2;
+					this.Experience = gclass243_0.double_1;
 					return;
 				}
 				if (string_ == "currency_jackpotmoney")
 				{
-					this.Jackpot = gclass243_0.double_2;
+					this.Jackpot = gclass243_0.double_1;
 					return;
 				}
 				if (string_.StartsWith("ammunition_"))
 				{
-					this.method_20(string_, gclass243_0.double_2);
+					this.method_18(string_, gclass243_0.double_1);
 					return;
 				}
 				string text = string_;
 				if (text.StartsWith("resource_"))
 				{
-					this.method_22(text, (double)((int)gclass243_0.double_2));
+					this.method_20(text, (double)((int)gclass243_0.double_1));
 					return;
 				}
 				string text2 = string_;
 				if (text2.StartsWith("equipment_"))
 				{
-					this.method_21(text2, (int)gclass243_0.double_2);
+					this.method_19(text2, (int)gclass243_0.double_1);
 				}
 			}
 		}
 
-		public bool method_15(string string_0)
+		public bool method_13(string string_0)
 		{
 			MenuItem menuItem;
 			return this.MenuItems.TryGetValue(string_0, out menuItem) && menuItem.Available;
 		}
 
-		public bool method_16(string string_0, out MenuItem menuItem_0)
+		public bool qOwoVqdvew(string string_0, out MenuItem menuItem_0)
 		{
 			DateTimeOffset now = DateTimeOffset.Now;
 			return this.MenuItems.TryGetValue(string_0, out menuItem_0) && menuItem_0.Available && menuItem_0.Activatable && now >= menuItem_0.NextUsable;
 		}
 
-		public bool method_17(string string_0, out MenuItem menuItem_0, bool bool_0 = false)
+		public bool method_14(string string_0, out MenuItem menuItem_0, bool bool_0 = false)
 		{
-			if (this.method_16(string_0, out menuItem_0))
+			if (this.qOwoVqdvew(string_0, out menuItem_0))
 			{
-				this.Game.Connection.Server.pJeMiKmRli(string_0, bool_0, false);
+				this.Game.Connection.Server.method_14(string_0, bool_0, false);
 				return true;
 			}
 			return false;
 		}
 
-		public bool method_18(string string_0)
+		public bool method_15(string string_0)
 		{
 			MenuItem menuItem;
 			return this.MenuItems.TryGetValue(string_0, out menuItem) && menuItem.Selected;
@@ -252,7 +252,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Uridium>k__BackingField = value;
-				this.method_10(Class5.Uridium);
+				this.LmrdRxWejv(Class5.Uridium);
 			}
 		}
 
@@ -271,7 +271,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Jackpot>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_48);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_46);
 			}
 		}
 
@@ -290,7 +290,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Premium>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_79);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_73);
 			}
 		}
 
@@ -309,7 +309,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Level>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_65);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_60);
 			}
 		}
 
@@ -328,7 +328,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Honor>k__BackingField = value;
-				this.method_10(Class5.Honor);
+				this.LmrdRxWejv(Class5.Honor);
 			}
 		}
 
@@ -347,7 +347,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Experience>k__BackingField = value;
-				this.method_10(Class5.Experience);
+				this.LmrdRxWejv(Class5.Experience);
 			}
 		}
 
@@ -366,7 +366,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Speed>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_105);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_99);
 			}
 		}
 
@@ -385,7 +385,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsInitialized>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_43);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_41);
 			}
 		}
 
@@ -404,8 +404,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Config>k__BackingField = value;
-				this.uguVcJeFfu();
-				this.method_10(Class5.Config);
+				this.method_16();
+				this.LmrdRxWejv(Class5.Config);
 			}
 		}
 
@@ -424,11 +424,11 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastConfigSwitched>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_52);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_50);
 			}
 		}
 
-		private void uguVcJeFfu()
+		private void method_16()
 		{
 			this.LastConfigSwitched = DateTimeOffset.Now;
 		}
@@ -456,7 +456,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<InSafeZone>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_33);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_32);
 			}
 		}
 
@@ -475,8 +475,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<CargoCapacity>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_7);
-				this.method_10(Class5.propertyChangedEventArgs_6);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_7);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_6);
 			}
 		}
 
@@ -495,8 +495,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<FreeCargo>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_7);
-				this.method_10(Class5.propertyChangedEventArgs_21);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_7);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_21);
 			}
 		}
 
@@ -519,16 +519,16 @@ namespace DarkorbitAPI.Structures
 			set
 			{
 				this.<Ammo>k__BackingField = value;
-				this.method_10(Class5.AmmoX1);
-				this.method_10(Class5.AmmoX2);
-				this.method_10(Class5.AmmoX3);
-				this.method_10(Class5.propertyChangedEventArgs_1);
-				this.method_10(Class5.AmmoR1);
-				this.method_10(Class5.AmmoR2);
-				this.method_10(Class5.AmmoR3);
-				this.method_10(Class5.AmmoR4);
-				this.method_10(Class5.AmmoHS1);
-				this.method_10(Class5.propertyChangedEventArgs_0);
+				this.LmrdRxWejv(Class5.AmmoX1);
+				this.LmrdRxWejv(Class5.AmmoX2);
+				this.LmrdRxWejv(Class5.AmmoX3);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_1);
+				this.LmrdRxWejv(Class5.AmmoR1);
+				this.LmrdRxWejv(Class5.AmmoR2);
+				this.LmrdRxWejv(Class5.AmmoR3);
+				this.LmrdRxWejv(Class5.AmmoR4);
+				this.LmrdRxWejv(Class5.AmmoHS1);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_0);
 			}
 		}
 
@@ -543,7 +543,7 @@ namespace DarkorbitAPI.Structures
 			set
 			{
 				this.<Equipment>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_18);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_18);
 			}
 		}
 
@@ -558,22 +558,22 @@ namespace DarkorbitAPI.Structures
 			set
 			{
 				this.<Resources>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_90);
-				this.method_10(Class5.propertyChangedEventArgs_86);
-				this.method_10(Class5.propertyChangedEventArgs_92);
-				this.method_10(Class5.propertyChangedEventArgs_89);
-				this.method_10(Class5.propertyChangedEventArgs_85);
-				this.method_10(Class5.propertyChangedEventArgs_88);
-				this.method_10(Class5.propertyChangedEventArgs_91);
-				this.method_10(Class5.propertyChangedEventArgs_93);
-				this.method_10(Class5.propertyChangedEventArgs_87);
-				this.method_10(Class5.Resources);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_84);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_80);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_86);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_83);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_79);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_82);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_85);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_87);
+				this.LmrdRxWejv(Class5.propertyChangedEventArgs_81);
+				this.LmrdRxWejv(Class5.Resources);
 			}
 		}
 
 		public Hero(GameManager gameManager_0)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this.ItemCooldown = new CooldownTracker<CooldownType>();
 			this.MenuItems = new ConcurrentDictionary<string, MenuItem>();
 			this.<Ammo>k__BackingField = new ConcurrentDictionary<string, double>();
@@ -591,8 +591,8 @@ namespace DarkorbitAPI.Structures
 			this.Clear();
 			this.Equipment.Clear();
 			base.Init(gclass219_0);
-			this.Speed = gclass219_0.int_0;
-			this.Premium = gclass219_0.bool_2;
+			this.Speed = gclass219_0.int_3;
+			this.Premium = gclass219_0.bool_0;
 			this.Jackpot = gclass219_0.double_0;
 			this.Credits = gclass219_0.Credits;
 			this.Uridium = gclass219_0.Uridium;
@@ -600,8 +600,8 @@ namespace DarkorbitAPI.Structures
 			this.Honor = gclass219_0.Honor;
 			this.Game.Map.MapId = gclass219_0.MapId;
 			this.Game.NextMapId = 0;
-			this.Level = gclass219_0.int_4;
-			this.CargoCapacity = gclass219_0.int_3;
+			this.Level = gclass219_0.YxgaUiuAa9;
+			this.CargoCapacity = gclass219_0.int_15;
 			this.IsInitialized = true;
 		}
 
@@ -614,7 +614,7 @@ namespace DarkorbitAPI.Structures
 			base.LastAttacked = (base.LastTookDamage = (base.LastTookDamageEnemy = DateTimeOffset.MinValue));
 		}
 
-		public double method_19(string string_0)
+		public double method_17(string string_0)
 		{
 			double result;
 			if (this.Ammo.TryGetValue(string_0, out result))
@@ -624,25 +624,25 @@ namespace DarkorbitAPI.Structures
 			return 0.0;
 		}
 
-		public void method_20(string string_0, double double_0)
+		public void method_18(string string_0, double double_0)
 		{
 			this.Ammo[string_0] = double_0;
 			this.Ammo = this.Ammo;
 		}
 
-		public void method_21(string string_0, int int_0)
+		public void method_19(string string_0, int int_0)
 		{
 			this.Equipment[string_0] = int_0;
 			this.Equipment = this.Equipment;
 		}
 
-		public void method_22(string string_0, double double_0)
+		public void method_20(string string_0, double double_0)
 		{
 			this.Resources[string_0] = double_0;
 			this.Resources = this.Resources;
 		}
 
-		public double method_23(ResourceType resourceType_0)
+		public double method_21(ResourceType resourceType_0)
 		{
 			double result;
 			if (this.Resources.TryGetValue("resource_" + resourceType_0.ToString().ToLower(), out result))
@@ -652,7 +652,7 @@ namespace DarkorbitAPI.Structures
 			return 0.0;
 		}
 
-		public int method_24(ResourceType resourceType_0)
+		public int method_22(ResourceType resourceType_0)
 		{
 			int result = 0;
 			switch (resourceType_0)
@@ -670,37 +670,37 @@ namespace DarkorbitAPI.Structures
 			return result;
 		}
 
-		public bool method_25(MapUtils.PortalEdge portalEdge_0, Gate gate_0 = null)
+		public bool method_23(MapUtils.PortalEdge portalEdge_0, Gate gate_0 = null)
 		{
 			return (gate_0 != null && gate_0.FactionId == base.FactionId) || (portalEdge_0 != null && (!portalEdge_0.SelfFactionOnly || portalEdge_0.FactionId == base.FactionId || portalEdge_0.FactionId == 0));
 		}
 
-		public bool method_26(MapUtils.PortalEdge portalEdge_0, Gate gate_0 = null)
+		public bool method_24(MapUtils.PortalEdge portalEdge_0, Gate gate_0 = null)
 		{
-			return (gate_0 != null && gate_0.FactionId == base.FactionId) || (portalEdge_0 != null && this.method_25(portalEdge_0, null) && !MapUtils.smethod_3(portalEdge_0.FromMapId).StartsWith("4-") && portalEdge_0.FactionId != 0 && portalEdge_0.FactionId == base.FactionId);
+			return (gate_0 != null && gate_0.FactionId == base.FactionId) || (portalEdge_0 != null && this.method_23(portalEdge_0, null) && !MapUtils.smethod_3(portalEdge_0.FromMapId).StartsWith("4-") && portalEdge_0.FactionId != 0 && portalEdge_0.FactionId == base.FactionId);
 		}
 
-		public int method_27()
+		public int method_25()
 		{
 			MenuItem menuItem;
-			if (this.method_16("ability_zephyr_mmt", out menuItem))
+			if (this.qOwoVqdvew("ability_zephyr_mmt", out menuItem))
 			{
 				return (int)menuItem.CounterValue * 5;
 			}
 			return 0;
 		}
 
-		public void method_28(GClass229 gclass229_0)
+		public void method_26(GClass229 gclass229_0)
 		{
-			base.method_0(gclass229_0);
-			this.InSafeZone = gclass229_0.bool_0;
+			base.nsOdpvAaud(gclass229_0);
+			this.InSafeZone = gclass229_0.bool_1;
 		}
 
 		public double AmmoX1
 		{
 			get
 			{
-				return this.method_19("ammunition_laser_lcb-10");
+				return this.method_17("ammunition_laser_lcb-10");
 			}
 		}
 
@@ -708,7 +708,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_laser_mcb-25");
+				return this.method_17("ammunition_laser_mcb-25");
 			}
 		}
 
@@ -716,7 +716,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_laser_mcb-50");
+				return this.method_17("ammunition_laser_mcb-50");
 			}
 		}
 
@@ -724,7 +724,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_laser_ucb-100");
+				return this.method_17("ammunition_laser_ucb-100");
 			}
 		}
 
@@ -732,7 +732,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_rocket_r-310");
+				return this.method_17("ammunition_rocket_r-310");
 			}
 		}
 
@@ -740,7 +740,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_rocket_plt-2026");
+				return this.method_17("ammunition_rocket_plt-2026");
 			}
 		}
 
@@ -748,7 +748,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_rocket_plt-2021");
+				return this.method_17("ammunition_rocket_plt-2021");
 			}
 		}
 
@@ -756,7 +756,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_rocket_plt-3030");
+				return this.method_17("ammunition_rocket_plt-3030");
 			}
 		}
 
@@ -764,7 +764,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_19("ammunition_rocketlauncher_eco-10");
+				return this.method_17("ammunition_rocketlauncher_eco-10");
 			}
 		}
 
@@ -772,7 +772,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.PROMETIUM);
+				return this.method_21(ResourceType.PROMETIUM);
 			}
 		}
 
@@ -780,7 +780,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.ENDURIUM);
+				return this.method_21(ResourceType.ENDURIUM);
 			}
 		}
 
@@ -788,7 +788,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.TERBIUM);
+				return this.method_21(ResourceType.TERBIUM);
 			}
 		}
 
@@ -796,7 +796,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.PROMETID);
+				return this.method_21(ResourceType.PROMETID);
 			}
 		}
 
@@ -804,7 +804,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.DURANIUM);
+				return this.method_21(ResourceType.DURANIUM);
 			}
 		}
 
@@ -812,7 +812,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.PROMERIUM);
+				return this.method_21(ResourceType.PROMERIUM);
 			}
 		}
 
@@ -820,7 +820,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.SEPROM);
+				return this.method_21(ResourceType.SEPROM);
 			}
 		}
 
@@ -828,7 +828,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.XENOMIT);
+				return this.method_21(ResourceType.XENOMIT);
 			}
 		}
 
@@ -836,12 +836,12 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return this.method_23(ResourceType.PALLADIUM);
+				return this.method_21(ResourceType.PALLADIUM);
 			}
 		}
 
 		[CompilerGenerated]
-		private bool method_29(string string_0)
+		private bool method_27(string string_0)
 		{
 			MenuItem menuItem;
 			return this.MenuItems.TryGetValue(string_0, out menuItem) && menuItem.Selected;

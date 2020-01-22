@@ -8,7 +8,7 @@ public class GClass382 : GInterface0
 	{
 		get
 		{
-			return 28355;
+			return 30202;
 		}
 	}
 
@@ -20,12 +20,12 @@ public class GClass382 : GInterface0
 		}
 	}
 
-	public GClass382(int int_1 = 0, int int_2 = 0, Vector<int> vector_1 = null)
+	public GClass382(int int_2 = 0, int int_3 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		this.int_0 = int_1;
-		this.jccIinPsGy = int_2;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 		if (vector_1 == null)
 		{
 			this.vector_0 = new Vector<int>();
@@ -36,7 +36,7 @@ public class GClass382 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 28355;
+		return 30202;
 	}
 
 	public virtual int vmethod_1()
@@ -46,8 +46,6 @@ public class GClass382 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.jccIinPsGy = binaryStream_0.smethod_0();
-		this.jccIinPsGy = (U.smethod_0(this.jccIinPsGy, 15) | this.jccIinPsGy << 17);
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -57,36 +55,38 @@ public class GClass382 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 9 | U.smethod_0(num3, 23));
+			num3 = (num3 << 11 | U.smethod_0(num3, 21));
 			this.vector_0.method_0(num3);
 			num++;
 		}
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 16 | U.smethod_0(this.int_0, 16));
+		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 3 | U.smethod_0(this.int_1, 29));
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28355);
+		binaryStream_0.smethod_7(30202);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.jccIinPsGy << 15 | U.smethod_0(this.jccIinPsGy, 17));
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (int num in this.vector_0)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 9) | num << 23);
+			binaryStream_0.smethod_4(U.smethod_0(num, 11) | num << 21);
 		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 16) | this.int_0 << 16);
-		binaryStream_0.smethod_7(883);
+		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 3) | this.int_1 << 29);
+		binaryStream_0.smethod_7(-5948);
 	}
-
-	public int jccIinPsGy;
 
 	public Vector<int> vector_0;
 
 	public int int_0;
+
+	public int int_1;
 }

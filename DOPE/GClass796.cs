@@ -35,12 +35,12 @@ public class GClass796 : GClass791
 
 	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
 	{
-		this.method_2().lAbrFunAvWi(byte_0, int_0, int_1);
+		this.method_2().vmethod_0(byte_0, int_0, int_1);
 	}
 
 	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
 	{
-		this.method_0().lAbrFunAvWi(byte_0, int_0, int_1);
+		this.method_0().vmethod_0(byte_0, int_0, int_1);
 	}
 
 	public override void Init(List<byte[]> list_0)
@@ -65,7 +65,7 @@ public class GClass796 : GClass791
 
 	public GClass796()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 

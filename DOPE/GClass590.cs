@@ -8,7 +8,7 @@ public class GClass590 : GClass585, GInterface0
 	{
 		get
 		{
-			return 3868;
+			return 8197;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass590 : GClass585, GInterface0
 
 	public GClass590(string string_0 = "", bool bool_0 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(string_0);
 		this.Value = bool_0;
 	}
 
 	public override int vmethod_0()
 	{
-		return 3868;
+		return 8197;
 	}
 
 	public override int vmethod_1()
@@ -40,18 +40,20 @@ public class GClass590 : GClass585, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 		this.Value = binaryStream_0.ReadBoolean();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(3868);
+		binaryStream_0.smethod_7(8197);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(13461);
 		binaryStream_0.WriteBoolean(this.Value);
 	}
 

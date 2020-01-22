@@ -28,9 +28,9 @@ namespace DOPE.Core
 	{
 		public Controller(string string_2, string string_3)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
+			this.dateTimeOffset_0 = DateTimeOffset.MinValue;
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
-			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
 			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.method_0);
 			base..ctor();
@@ -78,7 +78,7 @@ namespace DOPE.Core
 				}
 				this.idopeService_0 = value;
 				this.method_18(Class10.propertyChangedEventArgs_16);
-				this.method_18(Class10.propertyChangedEventArgs_54);
+				this.method_18(Class10.fsAqGzbmcgb);
 			}
 		}
 
@@ -192,7 +192,7 @@ namespace DOPE.Core
 		{
 			if (this.Status == GEnum12.Disconnected)
 			{
-				this.dateTimeOffset_0 = DateTimeOffset.Now;
+				this.rQcqFaGeFyj = DateTimeOffset.Now;
 			}
 		}
 
@@ -241,7 +241,7 @@ namespace DOPE.Core
 			DateTimeOffset now = DateTimeOffset.Now;
 			IConnection connection = this.Connection;
 			bool flag = connection != null && connection.Connected;
-			if (this.dateTimeOffset_0.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
+			if (this.rQcqFaGeFyj.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
 			{
 				this.method_7(this.Key);
 			}
@@ -249,17 +249,17 @@ namespace DOPE.Core
 			{
 				this.Connection.Close();
 			}
-			else if (this.Status == GEnum12.Connecting && flag && this.dateTimeOffset_2.AddSeconds(5.0) < now)
+			else if (this.Status == GEnum12.Connecting && flag && this.dateTimeOffset_1.AddSeconds(5.0) < now)
 			{
 				this.Connection.Close();
 			}
-			if ((now - this.dateTimeOffset_1).TotalSeconds > 30.0 && this.Status == GEnum12.Connected && this.Service != null)
+			if ((now - this.dateTimeOffset_0).TotalSeconds > 30.0 && this.Status == GEnum12.Connected && this.Service != null)
 			{
 				DopeServiceStatus serviceStatus = await this.Service.GetServiceStatus();
 				this.ServiceStatus = serviceStatus;
 				if (this.ServiceStatus != null)
 				{
-					this.dateTimeOffset_1 = now;
+					this.dateTimeOffset_0 = now;
 					foreach (string message in this.ServiceStatus.BreakingNews)
 					{
 						Controller.logger_0.Warn(message);
@@ -331,7 +331,7 @@ namespace DOPE.Core
 						}
 						Controller.logger_0.Info("Connecting to DOPE service...");
 						this.bool_0 = true;
-						this.dateTimeOffset_2 = DateTimeOffset.Now;
+						this.dateTimeOffset_1 = DateTimeOffset.Now;
 						this.Status = GEnum12.Connecting;
 						this.Email = null;
 						this.Key = string_2;
@@ -352,7 +352,7 @@ namespace DOPE.Core
 						}
 						catch (Exception ex)
 						{
-							this.dateTimeOffset_0 = DateTimeOffset.Now;
+							this.rQcqFaGeFyj = DateTimeOffset.Now;
 							this.Status = GEnum12.Disconnected;
 							EventHandler<S2C_ConnectionClosed> eventHandler = this.eventHandler_0;
 							if (eventHandler != null)
@@ -423,7 +423,7 @@ namespace DOPE.Core
 			}
 			this.Service = null;
 			this.Status = GEnum12.Disconnected;
-			this.dateTimeOffset_0 = DateTimeOffset.Now;
+			this.rQcqFaGeFyj = DateTimeOffset.Now;
 			Controller.logger_0.Warn("Disconnected from DOPE service -- {exception}", (exception_0 != null) ? exception_0.ToString() : null);
 		}
 
@@ -446,7 +446,7 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
@@ -513,11 +513,11 @@ namespace DOPE.Core
 
 		private volatile bool bool_0;
 
-		private DateTimeOffset dateTimeOffset_0;
+		private DateTimeOffset rQcqFaGeFyj;
 
-		public DateTimeOffset dateTimeOffset_1;
+		public DateTimeOffset dateTimeOffset_0;
 
-		private DateTimeOffset dateTimeOffset_2;
+		private DateTimeOffset dateTimeOffset_1;
 
 		public object object_0;
 

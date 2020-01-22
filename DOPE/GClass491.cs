@@ -8,7 +8,7 @@ public class GClass491 : GClass488, GInterface0
 	{
 		get
 		{
-			return 23766;
+			return 6169;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass491 : GClass488, GInterface0
 
 	public GClass491(bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 23766;
+		return 6169;
 	}
 
 	public override int vmethod_1()
@@ -41,11 +41,12 @@ public class GClass491 : GClass488, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		this.bool_0 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23766);
+		binaryStream_0.smethod_7(6169);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -53,6 +54,7 @@ public class GClass491 : GClass488, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(-32656);
 	}
 
 	public bool bool_0;

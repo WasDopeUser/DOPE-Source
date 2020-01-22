@@ -8,7 +8,7 @@ public class GClass456 : GInterface0
 	{
 		get
 		{
-			return 16092;
+			return 32393;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass456 : GInterface0
 
 	public GClass456(Vector<int> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass456 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 16092;
+		return 32393;
 	}
 
 	public virtual int vmethod_1()
@@ -53,16 +53,15 @@ public class GClass456 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 7 | U.smethod_0(num3, 25));
+			num3 = (num3 << 4 | U.smethod_0(num3, 28));
 			this.vector_0.method_0(num3);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16092);
+		binaryStream_0.smethod_7(32393);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -71,9 +70,8 @@ public class GClass456 : GInterface0
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (int num in this.vector_0)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 7) | num << 25);
+			binaryStream_0.smethod_4(U.smethod_0(num, 4) | num << 28);
 		}
-		binaryStream_0.smethod_7(31745);
 	}
 
 	public Vector<int> vector_0;

@@ -8,7 +8,7 @@ public class GClass668 : GInterface0
 	{
 		get
 		{
-			return 7475;
+			return 14290;
 		}
 	}
 
@@ -20,12 +20,12 @@ public class GClass668 : GInterface0
 		}
 	}
 
-	public GClass668(int int_0 = 0, int int_1 = 0, bool bool_1 = false, Vector<GClass731> vector_1 = null)
+	public GClass668(int int_1 = 0, int int_2 = 0, bool bool_1 = false, Vector<GClass731> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
-		this.NkiTleFcpv = int_0;
-		this.Uridium = int_1;
+		this.int_0 = int_1;
+		this.Uridium = int_2;
 		this.bool_0 = bool_1;
 		if (vector_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass668 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 7475;
+		return 14290;
 	}
 
 	public virtual int vmethod_1()
@@ -47,7 +47,6 @@ public class GClass668 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -61,39 +60,36 @@ public class GClass668 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		this.NkiTleFcpv = binaryStream_0.smethod_0();
-		this.NkiTleFcpv = (U.smethod_0(this.NkiTleFcpv, 4) | this.NkiTleFcpv << 28);
 		this.bool_0 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
 		this.Uridium = binaryStream_0.smethod_0();
-		this.Uridium = (this.Uridium << 13 | U.smethod_0(this.Uridium, 19));
+		this.Uridium = (this.Uridium << 6 | U.smethod_0(this.Uridium, 26));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(7475);
+		binaryStream_0.smethod_7(14290);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-21148);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass731 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_4(this.NkiTleFcpv << 4 | U.smethod_0(this.NkiTleFcpv, 28));
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(27905);
-		binaryStream_0.smethod_4(U.smethod_0(this.Uridium, 13) | this.Uridium << 19);
+		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_4(U.smethod_0(this.Uridium, 6) | this.Uridium << 26);
 	}
 
 	public Vector<GClass731> vector_0;
 
-	public int NkiTleFcpv;
-
 	public bool bool_0;
+
+	public int int_0;
 
 	public int Uridium;
 }

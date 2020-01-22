@@ -78,10 +78,10 @@ public static class GClass823
 
 	private static EntityRenderFragment smethod_6(Color color_0, int int_0, Color? nullable_0 = null)
 	{
-		return GClass823.smethod_7(color_0, int_0, int_0, nullable_0);
+		return GClass823.cbsqmotUkUg(color_0, int_0, int_0, nullable_0);
 	}
 
-	private static EntityRenderFragment smethod_7(Color color_0, int int_0, int int_1, Color? nullable_0 = null)
+	private static EntityRenderFragment cbsqmotUkUg(Color color_0, int int_0, int int_1, Color? nullable_0 = null)
 	{
 		return GClass823.smethod_4(color_0, "rect", nullable_0, new object[]
 		{
@@ -90,7 +90,7 @@ public static class GClass823
 		});
 	}
 
-	private static EntityRenderFragment smethod_8(Color color_0, float float_0, float float_1, Color? nullable_0 = null)
+	private static EntityRenderFragment smethod_7(Color color_0, float float_0, float float_1, Color? nullable_0 = null)
 	{
 		return GClass823.smethod_4(color_0, "rect", nullable_0, new object[]
 		{
@@ -99,7 +99,7 @@ public static class GClass823
 		});
 	}
 
-	private static EntityRenderFragment smethod_9(Color color_0, int int_0, int int_1, Color? nullable_0 = null)
+	private static EntityRenderFragment smethod_8(Color color_0, int int_0, int int_1, Color? nullable_0 = null)
 	{
 		return GClass823.smethod_4(color_0, "circle", nullable_0, new object[]
 		{
@@ -108,7 +108,7 @@ public static class GClass823
 		});
 	}
 
-	private static EntityRenderFragment smethod_10(Color color_0, int int_0, float float_0, float float_1, Color? nullable_0 = null)
+	private static EntityRenderFragment smethod_9(Color color_0, int int_0, float float_0, float float_1, Color? nullable_0 = null)
 	{
 		return GClass823.smethod_4(color_0, "path", nullable_0, new object[]
 		{
@@ -118,7 +118,7 @@ public static class GClass823
 		});
 	}
 
-	private static EntityRenderFragment smethod_11(Color color_0, string string_0, string string_1, string string_2, Color? nullable_0 = null)
+	private static EntityRenderFragment smethod_10(Color color_0, string string_0, string string_1, string string_2, Color? nullable_0 = null)
 	{
 		return GClass823.smethod_4(color_0, "text", nullable_0, new object[]
 		{
@@ -128,10 +128,10 @@ public static class GClass823
 		});
 	}
 
-	private static EntityDataRoot smethod_12(GClass822 gclass822_0, Map map_0, Ship ship_0)
+	private static EntityDataRoot smethod_11(GClass822 gclass822_0, Map map_0, Ship ship_0)
 	{
 		EntityDataRoot entityDataRoot = GClass823.smethod_2(map_0, ship_0);
-		Color color_ = MapUtils.smethod_14(map_0, ship_0);
+		Color color_ = MapUtils.smethod_13(map_0, ship_0);
 		NpcShip npcShip = ship_0 as NpcShip;
 		if (npcShip != null && (!(gclass822_0.Behavior ?? gclass822_0.gclass835_0).vmethod_8(npcShip) || npcShip.LeashedBy > 0))
 		{
@@ -145,10 +145,10 @@ public static class GClass823
 		return entityDataRoot;
 	}
 
-	private static EntityDataRoot smethod_13(Map map_0, Collectible collectible_0)
+	private static EntityDataRoot smethod_12(Map map_0, Collectible collectible_0)
 	{
 		EntityDataRoot entityDataRoot = GClass823.smethod_2(map_0, collectible_0);
-		Color color_ = MapUtils.smethod_14(map_0, collectible_0);
+		Color color_ = MapUtils.smethod_13(map_0, collectible_0);
 		entityDataRoot.Data = new List<EntityRenderFragment>
 		{
 			GClass823.smethod_6(color_, 3, null)
@@ -156,19 +156,19 @@ public static class GClass823
 		return entityDataRoot;
 	}
 
-	private static EntityDataRoot smethod_14(Map map_0, Gate gate_0)
+	private static EntityDataRoot smethod_13(Map map_0, Gate gate_0)
 	{
 		EntityDataRoot entityDataRoot = GClass823.smethod_2(map_0, gate_0);
-		Color color = MapUtils.smethod_14(map_0, gate_0);
+		Color color = MapUtils.smethod_13(map_0, gate_0);
 		entityDataRoot.Data = new List<EntityRenderFragment>
 		{
 			GClass823.smethod_6(color, 3, null),
-			GClass823.smethod_9(Color.Transparent, 12, 3, new Color?(color))
+			GClass823.smethod_8(Color.Transparent, 12, 3, new Color?(color))
 		};
 		return entityDataRoot;
 	}
 
-	private static EntityDataRoot smethod_15(Map map_0, float float_0, float float_1, params EntityRenderFragment[] args)
+	private static EntityDataRoot smethod_14(Map map_0, float float_0, float float_1, params EntityRenderFragment[] args)
 	{
 		DarkorbitAPI.CommonStructures.Size mapSize = map_0.MapSize;
 		return new EntityDataRoot(float_0 / (float)mapSize.Width, float_1 / (float)mapSize.Height)
@@ -177,7 +177,7 @@ public static class GClass823
 		};
 	}
 
-	private static EntityDataRoot smethod_16(float float_0, float float_1, params EntityRenderFragment[] args)
+	private static EntityDataRoot smethod_15(float float_0, float float_1, params EntityRenderFragment[] args)
 	{
 		return new EntityDataRoot(float_0, float_1)
 		{
@@ -185,28 +185,28 @@ public static class GClass823
 		};
 	}
 
-	private static EntityDataRoot smethod_17(Map map_0)
+	private static EntityDataRoot smethod_16(Map map_0)
 	{
-		return GClass823.smethod_16(0.5f, 0.5f, new EntityRenderFragment[]
+		return GClass823.smethod_15(0.5f, 0.5f, new EntityRenderFragment[]
 		{
-			GClass823.smethod_11(Color.Gray, "60px Arial", "center", map_0.MapName, null)
+			GClass823.smethod_10(Color.Gray, "60px Arial", "center", map_0.MapName, null)
 		});
 	}
 
-	private static EntityDataRoot smethod_18(GClass822 gclass822_0, Map map_0)
+	private static EntityDataRoot smethod_17(GClass822 gclass822_0, Map map_0)
 	{
-		string text = string.Join("\r\n", gclass822_0.method_70());
+		string text = string.Join("\r\n", gclass822_0.method_69());
 		if (string.IsNullOrWhiteSpace(text))
 		{
 			return null;
 		}
-		return GClass823.smethod_16(0.98f, 0.1f, new EntityRenderFragment[]
+		return GClass823.smethod_15(0.98f, 0.1f, new EntityRenderFragment[]
 		{
-			GClass823.smethod_11(Color.Red, "30px Arial", "right", text, null)
+			GClass823.smethod_10(Color.Red, "30px Arial", "right", text, null)
 		});
 	}
 
-	private static EntityDataRoot smethod_19(GClass822 gclass822_0)
+	private static EntityDataRoot smethod_18(GClass822 gclass822_0)
 	{
 		string text = string.Format("{0} | CFG: {1} | FRM: {2}", gclass822_0.State.ToString(), gclass822_0.Hero.Config, gclass822_0.Hero.Formation.ToString());
 		HeroPet pet = gclass822_0.Hero.Pet;
@@ -222,13 +222,13 @@ public static class GClass823
 				text += "Off";
 			}
 		}
-		return GClass823.smethod_16(0.02f, 0.95f, new EntityRenderFragment[]
+		return GClass823.smethod_15(0.02f, 0.95f, new EntityRenderFragment[]
 		{
-			GClass823.smethod_11(Color.Red, "16px Arial", "left", text, null)
+			GClass823.smethod_10(Color.Red, "16px Arial", "left", text, null)
 		});
 	}
 
-	private static EntityDataRoot smethod_20(Map map_0, Ship ship_0)
+	private static EntityDataRoot smethod_19(Map map_0, Ship ship_0)
 	{
 		EntityDataRoot entityDataRoot = new EntityDataRoot((ship_0 is Hero) ? 0.8333333f : 0.166666672f, 0.8f);
 		float hpPercentage = ship_0.HpPercentage;
@@ -239,12 +239,12 @@ public static class GClass823
 		int num2 = (int)(Math.Ceiling((double)(116f * shieldPercentage / 200f)) * 2.0);
 		entityDataRoot.Data = new List<EntityRenderFragment>
 		{
-			GClass823.smethod_7(Color.FromArgb(150, Color.LightSlateGray), 120, 20, null),
-			GClass823.smethod_7(Color.FromArgb(150, Color.LawnGreen), num, 16, null),
-			GClass823.smethod_11(Color.FromArgb(150, Color.White), "12px Arial", "center", hpDisplay, null),
-			GClass823.smethod_7(Color.FromArgb(150, Color.LightSlateGray), 120, 20, null),
-			GClass823.smethod_7(Color.FromArgb(150, Color.DodgerBlue), num2, 16, null),
-			GClass823.smethod_11(Color.FromArgb(150, Color.White), "12px Arial", "center", shieldDisplay, null)
+			GClass823.cbsqmotUkUg(Color.FromArgb(150, Color.LightSlateGray), 120, 20, null),
+			GClass823.cbsqmotUkUg(Color.FromArgb(150, Color.LawnGreen), num, 16, null),
+			GClass823.smethod_10(Color.FromArgb(150, Color.White), "12px Arial", "center", hpDisplay, null),
+			GClass823.cbsqmotUkUg(Color.FromArgb(150, Color.LightSlateGray), 120, 20, null),
+			GClass823.cbsqmotUkUg(Color.FromArgb(150, Color.DodgerBlue), num2, 16, null),
+			GClass823.smethod_10(Color.FromArgb(150, Color.White), "12px Arial", "center", shieldDisplay, null)
 		};
 		entityDataRoot.Data[1].OffsetX = (float)(num / 2 - 58);
 		entityDataRoot.Data[2].OffsetY = 4f;
@@ -262,55 +262,55 @@ public static class GClass823
 				string_ = "Cloaked";
 			}
 		}
-		entityDataRoot.Data.Add(GClass823.smethod_11(Color.DarkRed, "13px Arial", "center", string_, null));
+		entityDataRoot.Data.Add(GClass823.smethod_10(Color.DarkRed, "13px Arial", "center", string_, null));
 		entityDataRoot.Data.Last<EntityRenderFragment>().OffsetY = entityDataRoot.Data[2].OffsetY - 24f;
 		return entityDataRoot;
 	}
 
-	private static EntityDataRoot smethod_21(Map map_0)
+	private static EntityDataRoot smethod_20(Map map_0)
 	{
 		EntityDataRoot entityDataRoot = GClass823.smethod_2(map_0, map_0.Hero);
-		Color color_ = MapUtils.smethod_14(map_0, map_0.Hero);
+		Color color_ = MapUtils.smethod_13(map_0, map_0.Hero);
 		entityDataRoot.Data = new List<EntityRenderFragment>();
 		if (map_0.Hero.MovementDestination != null)
 		{
 			Vector2 value = map_0.Hero.MovementDestination.Value;
 			float float_ = value.X / (float)map_0.MapSize.Width;
 			float float_2 = value.Y / (float)map_0.MapSize.Height;
-			entityDataRoot.Data.Add(GClass823.smethod_10(Color.Transparent, 2, float_, float_2, new Color?(Color.RoyalBlue)));
+			entityDataRoot.Data.Add(GClass823.smethod_9(Color.Transparent, 2, float_, float_2, new Color?(Color.RoyalBlue)));
 		}
 		entityDataRoot.Data.Add(GClass823.smethod_6(color_, 8, null));
 		return entityDataRoot;
 	}
 
-	private static EntityDataRoot smethod_22(Map map_0, CollidableRect collidableRect_0)
+	private static EntityDataRoot smethod_21(Map map_0, CollidableRect collidableRect_0)
 	{
 		Rectangle rectangle = collidableRect_0.imethod_1();
 		DarkorbitAPI.CommonStructures.Size mapSize = map_0.MapSize;
 		Color cyan = Color.Cyan;
 		Color color_ = Color.FromArgb(60, (int)cyan.R, (int)cyan.G, (int)cyan.B);
-		return GClass823.smethod_15(map_0, (float)rectangle.X, (float)rectangle.Y, new EntityRenderFragment[]
+		return GClass823.smethod_14(map_0, (float)rectangle.X, (float)rectangle.Y, new EntityRenderFragment[]
 		{
-			GClass823.smethod_8(color_, (float)rectangle.Width / (float)mapSize.Width, (float)rectangle.Height / (float)mapSize.Height, null)
+			GClass823.smethod_7(color_, (float)rectangle.Width / (float)mapSize.Width, (float)rectangle.Height / (float)mapSize.Height, null)
 		});
 	}
 
-	private static EntityDataRoot smethod_23(Map map_0, Asset asset_0)
+	private static EntityDataRoot smethod_22(Map map_0, Asset asset_0)
 	{
-		Color color_ = MapUtils.smethod_14(map_0, asset_0);
+		Color color_ = MapUtils.smethod_13(map_0, asset_0);
 		EntityDataRoot entityDataRoot = GClass823.smethod_2(map_0, asset_0);
-		entityDataRoot.Data.Add(GClass823.smethod_9(color_, 3, 1, new Color?(Color.DarkGray)));
+		entityDataRoot.Data.Add(GClass823.smethod_8(color_, 3, 1, new Color?(Color.DarkGray)));
 		return entityDataRoot;
 	}
 
-	public static MapViewData smethod_24(GClass822 gclass822_0, bool bool_0)
+	public static MapViewData smethod_23(GClass822 gclass822_0, bool bool_0)
 	{
 		Map map = gclass822_0.Map;
 		MapViewData mapViewData = new MapViewData();
 		mapViewData.Background = GClass823.smethod_0(Color.Black);
 		mapViewData.MapId = map.MapId;
 		List<EntityDataRoot> entities = mapViewData.Entities;
-		entities.Add(GClass823.smethod_17(map));
+		entities.Add(GClass823.smethod_16(map));
 		if (bool_0)
 		{
 			List<EntityDataRoot> list = mapViewData.CachableEntities = new List<EntityDataRoot>();
@@ -320,46 +320,46 @@ public static class GClass823
 				CollidableRect collidableRect = keyValuePair.Value as CollidableRect;
 				if (collidableRect != null && collidableRect.imethod_0(map) != CollidableType.None)
 				{
-					list.Add(GClass823.smethod_22(map, collidableRect));
+					list.Add(GClass823.smethod_21(map, collidableRect));
 				}
 			}
 			foreach (KeyValuePair<int, Asset> keyValuePair2 in map.Assets)
 			{
-				list.Add(GClass823.smethod_23(map, keyValuePair2.Value));
+				list.Add(GClass823.smethod_22(map, keyValuePair2.Value));
 			}
 		}
 		foreach (KeyValuePair<int, Gate> keyValuePair3 in map.Gates)
 		{
-			entities.Add(GClass823.smethod_14(map, keyValuePair3.Value));
+			entities.Add(GClass823.smethod_13(map, keyValuePair3.Value));
 		}
 		foreach (KeyValuePair<string, Collectible> keyValuePair4 in map.Collectibles)
 		{
-			entities.Add(GClass823.smethod_13(map, keyValuePair4.Value));
+			entities.Add(GClass823.smethod_12(map, keyValuePair4.Value));
 		}
 		Ship selectedShip = map.SelectedShip;
 		foreach (KeyValuePair<int, Ship> keyValuePair5 in map.Ships)
 		{
 			if (keyValuePair5.Value != selectedShip)
 			{
-				entities.Add(GClass823.smethod_12(gclass822_0, map, keyValuePair5.Value));
+				entities.Add(GClass823.smethod_11(gclass822_0, map, keyValuePair5.Value));
 			}
 		}
 		if (selectedShip != null)
 		{
-			entities.Add(GClass823.smethod_12(gclass822_0, map, selectedShip));
+			entities.Add(GClass823.smethod_11(gclass822_0, map, selectedShip));
 		}
-		entities.Add(GClass823.smethod_21(map));
-		EntityDataRoot entityDataRoot = GClass823.smethod_18(gclass822_0, map);
+		entities.Add(GClass823.smethod_20(map));
+		EntityDataRoot entityDataRoot = GClass823.smethod_17(gclass822_0, map);
 		if (entityDataRoot != null)
 		{
 			entities.Add(entityDataRoot);
 		}
-		entities.Add(GClass823.smethod_20(map, map.Hero));
+		entities.Add(GClass823.smethod_19(map, map.Hero));
 		if (selectedShip != null)
 		{
-			entities.Add(GClass823.smethod_20(map, selectedShip));
+			entities.Add(GClass823.smethod_19(map, selectedShip));
 		}
-		entities.Add(GClass823.smethod_19(gclass822_0));
+		entities.Add(GClass823.smethod_18(gclass822_0));
 		return mapViewData;
 	}
 }

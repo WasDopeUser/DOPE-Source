@@ -74,15 +74,15 @@ public class GClass792 : GClass791
 		{
 			throw new Exception();
 		}
-		ByteArray byteArray = new ByteArray(list_0[0]);
-		ByteArray byteArray2 = new ByteArray(list_0[1]);
-		this.method_1(new GClass799(new ByteArray(byteArray), new ByteArray(byteArray2)));
-		this.method_3(new GClass799(byteArray, byteArray2));
+		ByteArray byteArray_ = new ByteArray(list_0[0]);
+		ByteArray byteArray = new ByteArray(list_0[1]);
+		this.method_1(new GClass799(new ByteArray(byteArray_), new ByteArray(byteArray)));
+		this.method_3(new GClass799(byteArray_, byteArray));
 	}
 
 	public GClass792()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 

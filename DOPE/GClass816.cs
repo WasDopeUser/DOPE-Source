@@ -26,7 +26,7 @@ public class GClass816 : StatisticsCategory
 
 	public GClass816(Dictionary<string, GClass816.GStruct0> dictionary_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor("Deaths", new string[]
 		{
 			"Killer",

@@ -8,7 +8,7 @@ public class GClass593 : GInterface0
 	{
 		get
 		{
-			return 14883;
+			return 15143;
 		}
 	}
 
@@ -22,19 +22,19 @@ public class GClass593 : GInterface0
 
 	public GClass593(string string_3 = "", string string_4 = "", string string_5 = "")
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";
 		base..ctor();
-		this.string_1 = string_3;
-		this.string_0 = string_4;
+		this.string_0 = string_3;
+		this.string_1 = string_4;
 		this.string_2 = string_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 14883;
+		return 15143;
 	}
 
 	public virtual int vmethod_1()
@@ -51,7 +51,7 @@ public class GClass593 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(14883);
+		binaryStream_0.smethod_7(15143);
 		this.vmethod_2(binaryStream_0);
 	}
 

@@ -9,7 +9,7 @@ public class GClass830 : GClass828
 {
 	public GClass830(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, TargetMap.FL_ATLAS_A);
 	}
 
@@ -37,7 +37,7 @@ public class GClass830 : GClass828
 				return base.C.Map.MapId < 430 || base.C.Map.MapId > 445;
 			}
 		}
-		int_2 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
+		int_2 = MapUtils.smethod_9(1, base.C.Hero.FactionId);
 		return int_2 != base.C.Map.MapId;
 	}
 

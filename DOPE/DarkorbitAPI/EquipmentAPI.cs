@@ -67,7 +67,7 @@ namespace DarkorbitAPI
 
 		public EquipmentAPI(DarkOrbitWebAPI web)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 			this.Web = web;
 		}
@@ -292,7 +292,7 @@ namespace DarkorbitAPI
 		{
 			public EquipmentItem(int L, string Name, string T, EquipmentAPI.EquipmentItemType Type, int Selling)
 			{
-				Class13.nIxas2ezryi9b();
+				Class13.plZSWFPzBWWEZ();
 				base..ctor();
 				this.L = L;
 				this.Name = Name;
@@ -326,7 +326,7 @@ namespace DarkorbitAPI
 		{
 			public ItemHeader(string I, int LV, int L, int S)
 			{
-				Class13.nIxas2ezryi9b();
+				Class13.plZSWFPzBWWEZ();
 				base..ctor();
 				this.I = I;
 				this.LV = LV;

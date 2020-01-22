@@ -7,7 +7,7 @@ namespace DOPE.UI.Controls
 	{
 		public SimpleTreeHeader()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 

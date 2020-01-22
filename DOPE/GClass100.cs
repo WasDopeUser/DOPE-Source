@@ -6,7 +6,7 @@ public class GClass100 : GInterface4
 	public void Run(GClass219 cmd)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
-		if (!value.method_19())
+		if (!value.method_18())
 		{
 			return;
 		}
@@ -26,7 +26,7 @@ public class GClass100 : GInterface4
 
 	public GClass100()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

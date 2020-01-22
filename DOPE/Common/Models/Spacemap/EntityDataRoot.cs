@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Spacemap
 {
-	[DataContract]
 	[Guid("4682AE2A-F2C4-4BAE-B5F3-98F84315002B")]
+	[DataContract]
 	public class EntityDataRoot
 	{
 		[DataMember(Order = 1)]

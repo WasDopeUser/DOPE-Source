@@ -8,7 +8,7 @@ public class GClass555 : GInterface0
 	{
 		get
 		{
-			return 23635;
+			return 31356;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass555 : GInterface0
 
 	public GClass555(GClass425 gclass425_1 = null, int int_2 = 0, int int_3 = 0, bool bool_1 = false, Vector<string> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (gclass425_1 == null)
 		{
@@ -45,7 +45,7 @@ public class GClass555 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 23635;
+		return 31356;
 	}
 
 	public virtual int vmethod_1()
@@ -55,11 +55,11 @@ public class GClass555 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
 		this.gclass425_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass425);
 		this.gclass425_0.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -68,40 +68,42 @@ public class GClass555 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			string hLgS6JqKTiiSdPhAGUn = binaryStream_0.smethod_2();
-			this.vector_0.method_0(hLgS6JqKTiiSdPhAGUn);
+			string a5IRDkIkudGf4iDB9w = binaryStream_0.smethod_2();
+			this.vector_0.method_0(a5IRDkIkudGf4iDB9w);
 			num++;
 		}
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 15) | this.int_1 << 17);
+		this.int_1 = (this.int_1 << 6 | U.smethod_0(this.int_1, 26));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23635);
+		binaryStream_0.smethod_7(31356);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(22686);
+		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));
 		this.gclass425_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (string string_ in this.vector_0)
 		{
 			binaryStream_0.smethod_3(string_);
 		}
-		binaryStream_0.smethod_4(this.int_1 << 15 | U.smethod_0(this.int_1, 17));
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 6) | this.int_1 << 26);
 	}
-
-	public bool bool_0;
-
-	public GClass425 gclass425_0;
 
 	public int int_0;
 
+	public GClass425 gclass425_0;
+
 	public Vector<string> vector_0;
+
+	public bool bool_0;
 
 	public int int_1;
 }

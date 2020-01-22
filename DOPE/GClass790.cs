@@ -75,7 +75,7 @@ public class GClass790
 
 	public GClass790(BigInteger bigInteger_3, BigInteger bigInteger_4, BigInteger bigInteger_5)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.method_1(bigInteger_3);
 		this.method_3(bigInteger_4);
@@ -94,8 +94,8 @@ public class GClass790
 
 	private void method_8(Func<BigInteger, BigInteger> func_0, byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
 	{
-		Func<BigInteger, uint, byte[]> func = new Func<BigInteger, uint, byte[]>(this.method_14);
-		uint arg = (uint)this.method_13();
+		Func<BigInteger, uint, byte[]> func = new Func<BigInteger, uint, byte[]>(this.method_13);
+		uint arg = (uint)this.method_12();
 		uint num = uint_0 + uint_1;
 		for (uint num2 = uint_0; num2 < num; num2 += uint_1)
 		{
@@ -106,13 +106,13 @@ public class GClass790
 		}
 	}
 
-	private void method_9(Func<BigInteger, BigInteger> func_0, byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
+	private void xPwJdUjxYy(Func<BigInteger, BigInteger> func_0, byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
 	{
-		uint num = (uint)this.method_13();
+		uint num = (uint)this.method_12();
 		uint num2 = uint_0 + uint_1;
 		for (uint num3 = uint_0; num3 < num2; num3 += num)
 		{
-			BigInteger arg = GClass790.smethod_0(this.method_10(byte_0, (int)num2, (int)num, (int)num3));
+			BigInteger arg = GClass790.smethod_0(this.method_9(byte_0, (int)num2, (int)num, (int)num3));
 			byte[] array = func_0(arg).ToByteArray();
 			for (int i = (int)(num - 1U); i >= 0; i--)
 			{
@@ -121,7 +121,7 @@ public class GClass790
 		}
 	}
 
-	private byte[] method_10(byte[] byte_0, int int_0, int int_1, int int_2)
+	private byte[] method_9(byte[] byte_0, int int_0, int int_1, int int_2)
 	{
 		byte[] array = new byte[int_1];
 		int_0 = Math.Min(int_0, Math.Min(byte_0.Length, int_2 + int_1 - 11));
@@ -144,22 +144,22 @@ public class GClass790
 		return array;
 	}
 
-	public void method_11(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
+	public void method_10(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
 	{
-		this.method_9(new Func<BigInteger, BigInteger>(this.method_7), byte_0, stream_0, uint_0, uint_1);
+		this.xPwJdUjxYy(new Func<BigInteger, BigInteger>(this.method_7), byte_0, stream_0, uint_0, uint_1);
 	}
 
-	public void method_12(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
+	public void method_11(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
 	{
 		this.method_8(new Func<BigInteger, BigInteger>(this.method_6), byte_0, stream_0, uint_0, uint_1);
 	}
 
-	public int method_13()
+	public int method_12()
 	{
 		return this.method_0().ToByteArray().Reverse<byte>().SkipWhile(new Func<byte, bool>(GClass790.<>c.<>c_0.method_0)).Count<byte>();
 	}
 
-	protected byte[] method_14(BigInteger bigInteger_3, uint uint_0)
+	protected byte[] method_13(BigInteger bigInteger_3, uint uint_0)
 	{
 		MemoryStream memoryStream = new MemoryStream();
 		int num = 0;

@@ -84,7 +84,7 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 
 	public GClass814(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.Context = gclass822_1;
 		base.HeroStats = (this.gclass818_0 = new GClass818(gclass822_1.Hero, this));
@@ -189,7 +189,7 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 			string text = array[3];
 			if (text != null)
 			{
-				uint num3 = <PrivateImplementationDetails>{D4A823AF-60BA-43E7-B7F8-9E33A60497F9}.ComputeStringHash(text);
+				uint num3 = <PrivateImplementationDetails>{F16E33B8-4B38-4F3E-8ACC-1DC43472985C}.ComputeStringHash(text);
 				if (num3 <= 1746879935U)
 				{
 					if (num3 != 583800688U)
@@ -397,7 +397,7 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 	{
 		base.InternalRaiseChanged("RunTime", GClass814.propertyChangedEventArgs_0);
 		base.InternalRaiseChanged("UridiumHourly", GClass814.propertyChangedEventArgs_1);
-		base.InternalRaiseChanged("CreditsHourly", GClass814.propertyChangedEventArgs_2);
+		base.InternalRaiseChanged("CreditsHourly", GClass814.lfnqkePmJoL);
 		int num = this.int_0;
 		this.int_0 = num + 1;
 		if (num % 20 == 0)
@@ -421,10 +421,10 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass814()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass814.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("RunTime");
 		GClass814.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("UridiumHourly");
-		GClass814.propertyChangedEventArgs_2 = new PropertyChangedEventArgs("CreditsHourly");
+		GClass814.lfnqkePmJoL = new PropertyChangedEventArgs("CreditsHourly");
 	}
 
 	[CompilerGenerated]
@@ -461,5 +461,5 @@ public class GClass814 : BotStats, INotifyPropertyChanged
 
 	private static readonly PropertyChangedEventArgs propertyChangedEventArgs_1;
 
-	private static readonly PropertyChangedEventArgs propertyChangedEventArgs_2;
+	private static readonly PropertyChangedEventArgs lfnqkePmJoL;
 }

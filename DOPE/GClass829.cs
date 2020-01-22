@@ -18,7 +18,7 @@ public class GClass829 : GClass828
 
 	public GClass829(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, TargetMap.X6);
 		GClass829.<>c__DisplayClass7_0 CS$<>8__locals1 = new GClass829.<>c__DisplayClass7_0();
 		CS$<>8__locals1.random_0 = base.C.Game.Random;
@@ -125,7 +125,7 @@ public class GClass829 : GClass828
 
 	public override GClass835 GetBehavior()
 	{
-		if (MapUtils.smethod_10(6, base.C.Hero.FactionId) == base.C.Map.MapId)
+		if (MapUtils.smethod_9(6, base.C.Hero.FactionId) == base.C.Map.MapId)
 		{
 			return this.Behavior;
 		}
@@ -140,7 +140,7 @@ public class GClass829 : GClass828
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass829()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass829.list_0 = new List<Vector2>
 		{
 			new Vector2(7500f, 3900f),

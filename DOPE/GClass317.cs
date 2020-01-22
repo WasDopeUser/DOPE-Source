@@ -8,7 +8,7 @@ public class GClass317 : GInterface0
 	{
 		get
 		{
-			return 3428;
+			return 11792;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass317 : GInterface0
 
 	public GClass317(string string_2 = "", string string_3 = "", GClass334 gclass334_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
@@ -38,7 +38,7 @@ public class GClass317 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 3428;
+		return 11792;
 	}
 
 	public virtual int vmethod_1()
@@ -50,25 +50,23 @@ public class GClass317 : GInterface0
 	{
 		this.gclass334_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass334);
 		this.gclass334_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
 		this.string_1 = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(3428);
+		binaryStream_0.smethod_7(11792);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		this.gclass334_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-30138);
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(5028);
 		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_7(-23835);
 	}
 
 	public GClass334 gclass334_0;

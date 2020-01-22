@@ -8,7 +8,7 @@ public class GClass562 : GInterface0
 	{
 		get
 		{
-			return 3451;
+			return 25969;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass562 : GInterface0
 
 	public GClass562(Vector<GClass558> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass562 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 3451;
+		return 25969;
 	}
 
 	public virtual int vmethod_1()
@@ -58,24 +58,22 @@ public class GClass562 : GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(3451);
+		binaryStream_0.smethod_7(25969);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-4984);
+		binaryStream_0.smethod_7(-3197);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass558 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(-22316);
 	}
 
 	public Vector<GClass558> vector_0;

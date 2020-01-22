@@ -6,13 +6,13 @@ public sealed class GAttribute8 : Attribute
 {
 	public GAttribute8([GAttribute1] string contract)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this..ctor(contract, false);
 	}
 
 	public GAttribute8([GAttribute1] string contract, bool bool_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.String_0 = contract;
 		this.method_1(bool_1);

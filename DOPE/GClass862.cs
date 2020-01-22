@@ -90,11 +90,11 @@ public class GClass862 : INotifyPropertyChanged
 		}
 	}
 
-	protected void method_3<FPRHpJfqtWiycaWbRWX>(ref FPRHpJfqtWiycaWbRWX gparam_0, FPRHpJfqtWiycaWbRWX k5E40ffaVwXh7rPRhaU, string string_1 = null, [CallerMemberName] string name = null)
+	protected void method_3<WwcNGerI1okc5RgFcuW>(ref WwcNGerI1okc5RgFcuW gparam_0, WwcNGerI1okc5RgFcuW HDW8aHrCNpLVsgkF6dY, string string_1 = null, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<FPRHpJfqtWiycaWbRWX>.Default.Equals(gparam_0, k5E40ffaVwXh7rPRhaU))
+		if (!EqualityComparer<WwcNGerI1okc5RgFcuW>.Default.Equals(gparam_0, HDW8aHrCNpLVsgkF6dY))
 		{
-			gparam_0 = k5E40ffaVwXh7rPRhaU;
+			gparam_0 = HDW8aHrCNpLVsgkF6dY;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
 			{
@@ -322,7 +322,7 @@ public class GClass862 : INotifyPropertyChanged
 		}))
 		{
 			int num = int.Parse(array[0]);
-			Ship ship = this.Game.Map.method_4(num);
+			Ship ship = this.Game.Map.method_3(num);
 			if (array[1] == "1" && ship != null && num != this.Game.Hero.Id)
 			{
 				this.bool_1 = false;
@@ -344,7 +344,7 @@ public class GClass862 : INotifyPropertyChanged
 	{
 		this.bool_2 = false;
 		IPErkavaBotController iperkavaBotController;
-		if (!PErkava.smethod_0().TryGetValue(gclass241_0.int_2, out iperkavaBotController))
+		if (!PErkava.smethod_0().TryGetValue(gclass241_0.int_0, out iperkavaBotController))
 		{
 			return;
 		}
@@ -386,13 +386,13 @@ public class GClass862 : INotifyPropertyChanged
 		}
 		BigInteger value = GClass790.smethod_0(gclass215_0.byteArray_0.Memory.ToArray());
 		BigInteger exponent = GClass790.smethod_0(array);
-		BigInteger value2 = GClass790.smethod_2("34f624e980ce15a5e99c55d2a6220087c0f10917369e2ecc1e8238c7f96cf59ae90e60ca3e7f2076ea968ac95f0b156d5d6a07d833f2c4b390e4b43695161062");
-		BigInteger modulus = GClass790.smethod_2("c9059b49d8f86ba0dc564bb627d87226b28cb259e2343c532383cbde7448e3b0b0cf89f03e7b4b6185b40235630af114e0c31b7985f2fe787a6fe081bddcfcfb");
+		BigInteger value2 = GClass790.smethod_2("4b612da9327e39c6123b29c4faae09a7d07538d425d32d3201565912a5c1e58320f76bc66e28aaf681321d7977785db2ad716f23ed830d221e2cae9e472e9a54");
+		BigInteger modulus = GClass790.smethod_2("c29b0366491748528c6cddce8dbf41ec996147ecd6f555a3980315634d87851dc6fbd42b377cfc23e56cdeb5cde766c4e138316cc470404b03be1bd3d4b11eeb");
 		byte[] array2 = BigInteger.ModPow(value2, exponent, modulus).ToByteArray().Take(64).Reverse<byte>().ToArray<byte>();
 		GClass790 gclass = new GClass790(GClass790.smethod_2("ef09b1bcec67808eeff374b1b51fb155edaac4fcc7a78ed75d5848d6e9eaabee41dec018bb5482d01acea8ce13688bfe33076dde70f06febb80cf3b7327953fb32c08889b815587ded2cdd056d0ec9965b894751848766c27fdee32c707b6fc9"), new BigInteger(65537), GClass790.smethod_2("0b7f1bdd4a41701d6fccf5bfd6463ff1320d148c53cdeb40d06c7e94578bc1d923b1e2eb4d9732f36f56a127c8272f1462f185708af8e56df795bc30c70a7ad52d12b950f35ae6f4103c738fccf485c31be178696560d39f1d9d71baeaed3941"));
 		using (MemoryStream memoryStream = new MemoryStream())
 		{
-			gclass.method_11(array2, memoryStream, 0U, (uint)array2.Length);
+			gclass.method_10(array2, memoryStream, 0U, (uint)array2.Length);
 			GClass216 ginterface0_ = new GClass216(new ByteArray(memoryStream.ToArray()));
 			for (;;)
 			{
@@ -424,7 +424,7 @@ public class GClass862 : INotifyPropertyChanged
 
 	private void method_19(GClass279 gclass279_0)
 	{
-		GClass280 gclass = new GClass280(0, 146, 1, false);
+		GClass280 gclass = new GClass280(0, 147, 1, false);
 		if (gclass.int_0 == gclass279_0.int_0 && gclass.int_1 == gclass279_0.int_1)
 		{
 			if (gclass.int_2 == gclass279_0.int_2)
@@ -453,7 +453,7 @@ public class GClass862 : INotifyPropertyChanged
 
 	public GClass862()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.random_0 = new Random();
 		base..ctor();
 	}
@@ -511,7 +511,7 @@ public class GClass862 : INotifyPropertyChanged
 	[CompilerGenerated]
 	private void method_24(GClass161 gclass161_0)
 	{
-		this.Game.Hero.method_4(gclass161_0.int_2, gclass161_0.int_1, gclass161_0.int_3, gclass161_0.int_0, this.Game.Hero.Speed);
+		this.Game.Hero.method_4(gclass161_0.int_2, gclass161_0.int_3, gclass161_0.int_0, gclass161_0.int_1, this.Game.Hero.Speed);
 	}
 
 	[CompilerGenerated]

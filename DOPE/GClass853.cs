@@ -72,16 +72,16 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 		[CompilerGenerated]
 		get
 		{
-			return this.controller_0;
+			return this.AkUqkcrcHcK;
 		}
 		[CompilerGenerated]
 		internal set
 		{
-			if (object.Equals(this.controller_0, value))
+			if (object.Equals(this.AkUqkcrcHcK, value))
 			{
 				return;
 			}
-			this.controller_0 = value;
+			this.AkUqkcrcHcK = value;
 			this.OnPropertyChanged("Parent");
 		}
 	}
@@ -145,7 +145,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 
 	public GClass853(Guid guid_0, InterfaceDescriptor interfaceDescriptor_0, ICommon icommon_0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.BotControllers = new ConcurrentDictionary<string, GClass852>();
 		this.concurrentDictionary_0 = new ConcurrentDictionary<string, BotProfile>();
 		base..ctor(guid_0, interfaceDescriptor_0, icommon_0);
@@ -203,7 +203,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 								Task loginTask = CS$<>8__locals1.gclass822_0.LoginTask;
 								if (loginTask == null || loginTask.IsCompleted)
 								{
-									CS$<>8__locals1.gclass822_0.LoginTask = Task.Run(new Action(CS$<>8__locals1.gclass822_0.method_63));
+									CS$<>8__locals1.gclass822_0.LoginTask = Task.Run(new Action(CS$<>8__locals1.gclass822_0.method_62));
 								}
 							}
 							if (CS$<>8__locals1.gclass822_0.Game.IsLoggedIn)
@@ -230,7 +230,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 										CS$<>8__locals3.<>c__DisplayClass29_0_0.gclass822_0.LastBackgroundAction = Task.Run<object>(new Func<object>(CS$<>8__locals3.method_0));
 									}
 								}
-								foreach (GInterface9 ginterface in CS$<>8__locals1.gclass822_0.method_61())
+								foreach (GInterface9 ginterface in CS$<>8__locals1.gclass822_0.method_60())
 								{
 									Task lastBackgroundHandlerAction = CS$<>8__locals1.gclass822_0.LastBackgroundHandlerAction;
 									if ((lastBackgroundHandlerAction == null || lastBackgroundHandlerAction.IsCompleted) && ginterface.imethod_0())
@@ -241,7 +241,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 								string activeHangarName = CS$<>8__locals1.gclass822_0.Game.Web.Equipment.ActiveHangarName;
 								if (!string.IsNullOrWhiteSpace(activeHangarName))
 								{
-									GClass824 gclass2 = CS$<>8__locals1.gclass822_0.Scheduler.method_12();
+									GClass824 gclass2 = CS$<>8__locals1.gclass822_0.Scheduler.method_11();
 									bool flag2 = CS$<>8__locals1.gclass822_0.IsPaused || gclass2.ShouldBeInGame();
 									if (activeHangarName != null && gclass2.ShouldChangeHangar(out CS$<>8__locals1.string_0) && CS$<>8__locals1.string_0 != activeHangarName)
 									{
@@ -319,12 +319,12 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 		bots.Clear();
 	}
 
-	private Task<VM1alAfLjZp3r1Ajq1A> method_5<VM1alAfLjZp3r1Ajq1A>(string string_2, Func<GClass852, Task<VM1alAfLjZp3r1Ajq1A>> func_0)
+	private Task<ETI1GirFac3RMKaGCSo> method_5<ETI1GirFac3RMKaGCSo>(string string_2, Func<GClass852, Task<ETI1GirFac3RMKaGCSo>> func_0)
 	{
 		GClass852 gclass = this.Bot(string_2);
 		if (gclass == null)
 		{
-			return Task.FromResult<VM1alAfLjZp3r1Ajq1A>(default(VM1alAfLjZp3r1Ajq1A));
+			return Task.FromResult<ETI1GirFac3RMKaGCSo>(default(ETI1GirFac3RMKaGCSo));
 		}
 		return func_0(gclass);
 	}
@@ -588,7 +588,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass853()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		GClass853.logger_0 = LogManager.GetLogger("Core-MainBotController");
 	}
 
@@ -603,7 +603,7 @@ public class GClass853 : EntangledHostedObjectBase, INotifyPropertyChanged, GInt
 	public ConcurrentDictionary<string, GClass852> BotControllers;
 
 	[CompilerGenerated]
-	private Controller controller_0;
+	private Controller AkUqkcrcHcK;
 
 	[CompilerGenerated]
 	private ConcurrentDictionary<string, BotProfile> concurrentDictionary_0;

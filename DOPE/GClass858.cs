@@ -10,7 +10,7 @@ public class GClass858
 
 	public GClass858(IntPtr intptr_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.intptr_0 = intptr_1;
 	}

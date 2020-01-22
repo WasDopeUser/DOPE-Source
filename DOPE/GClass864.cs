@@ -78,7 +78,7 @@ public class GClass864 : Interface0
 
 	public GClass864()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.dictionary_0 = new Dictionary<string, GClass864.GClass865>();
 		this.object_0 = new object();
 		base..ctor();
@@ -93,7 +93,7 @@ public class GClass864 : Interface0
 	{
 		public GClass865(string string_1, bool bool_1 = false)
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			this.string_0 = "";
 			base..ctor();
 			this.ipaddress_0 = IPAddress.Parse(string_1);

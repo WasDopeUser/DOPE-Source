@@ -28,7 +28,7 @@ public abstract class GClass827 : GClass824
 
 	public GClass827(GClass822 gclass822_1, TargetMap targetMap_1, string string_1, int int_2 = -2147483648)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1, string_1 + "_" + targetMap_1.GetName(), int_2);
 		this.Map = targetMap_1;
 	}

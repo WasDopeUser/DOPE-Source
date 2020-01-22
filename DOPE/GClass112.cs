@@ -10,15 +10,15 @@ public class GClass112 : GInterface4
 		{
 			foreach (GClass252 gclass2 in gclass.Items)
 			{
-				value.Game.Hero.method_11(new GClass235(gclass2.gclass178_0, null, gclass2.gclass277_0.double_0, gclass2.gclass277_0.double_1));
-				value.Game.Hero.method_12(gclass2.Status);
+				value.Game.Hero.method_9(new GClass235(gclass2.gclass178_0, null, gclass2.gclass277_0.double_1, gclass2.gclass277_0.double_0));
+				value.Game.Hero.method_10(gclass2.Status);
 			}
 		}
 	}
 
 	public GClass112()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 	}
 }

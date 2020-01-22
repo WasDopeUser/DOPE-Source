@@ -30,7 +30,7 @@ public class GClass851 : GClass846
 
 	public GClass851(GClass822 gclass822_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.bool_1 = true;
 		base..ctor(gclass822_1, "SkylabWorker");
 	}
@@ -46,7 +46,7 @@ public class GClass851 : GClass846
 		if (dateTimeOffset != null && dateTimeOffset2 == null)
 		{
 			base.Log.Info("Transfer complete. Refreshing");
-			base.Context.method_62<GClass850>().imethod_1();
+			base.Context.method_61<GClass850>().imethod_1();
 			return;
 		}
 		if (dateTimeOffset2 != null)

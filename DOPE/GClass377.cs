@@ -8,7 +8,7 @@ public class GClass377 : GClass375, GInterface0
 	{
 		get
 		{
-			return 16456;
+			return 22201;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass377 : GClass375, GInterface0
 
 	public GClass377(string string_1 = "", int int_1 = 0)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -31,7 +31,7 @@ public class GClass377 : GClass375, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 16456;
+		return 22201;
 	}
 
 	public override int vmethod_1()
@@ -42,25 +42,29 @@ public class GClass377 : GClass375, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 6 | U.smethod_0(this.int_0, 26));
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16456);
+		binaryStream_0.smethod_7(22201);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(2607);
+		binaryStream_0.smethod_7(-22133);
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 	}
 
-	public string string_0;
-
 	public int int_0;
+
+	public string string_0;
 }

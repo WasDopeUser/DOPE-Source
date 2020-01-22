@@ -8,11 +8,11 @@ using PErkava;
 
 public class GClass867 : INotifyPropertyChanged
 {
-	protected void method_0<fOY3RQfNLe4bkcTrNrk>(ref fOY3RQfNLe4bkcTrNrk gparam_0, fOY3RQfNLe4bkcTrNrk Bn2BMUfnMorSK9xFWWg, [CallerMemberName] string name = null)
+	protected void method_0<hUC3w0rdPBfc3VxKm1g>(ref hUC3w0rdPBfc3VxKm1g gparam_0, hUC3w0rdPBfc3VxKm1g ECwnR7rfM5qJoTf1cxX, [CallerMemberName] string name = null)
 	{
-		if (!EqualityComparer<fOY3RQfNLe4bkcTrNrk>.Default.Equals(gparam_0, Bn2BMUfnMorSK9xFWWg))
+		if (!EqualityComparer<hUC3w0rdPBfc3VxKm1g>.Default.Equals(gparam_0, ECwnR7rfM5qJoTf1cxX))
 		{
-			gparam_0 = Bn2BMUfnMorSK9xFWWg;
+			gparam_0 = ECwnR7rfM5qJoTf1cxX;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
 			{
@@ -20,7 +20,7 @@ public class GClass867 : INotifyPropertyChanged
 			}
 			if (name == "Enabled")
 			{
-				if ((bool)((object)Bn2BMUfnMorSK9xFWWg))
+				if ((bool)((object)ECwnR7rfM5qJoTf1cxX))
 				{
 					PErkava.smethod_5(this);
 					return;
@@ -87,7 +87,7 @@ public class GClass867 : INotifyPropertyChanged
 	{
 		Dictionary<int, string> mapHosts;
 		this.method_2(mapHosts = darkOrbitWebAPI_0.GetMapHosts());
-		this.Servers = new HashSet<string>(mapHosts.Select(new Func<KeyValuePair<int, string>, string>(GClass867.<>c.<>c_0.method_0)));
+		this.Servers = new HashSet<string>(mapHosts.Select(new Func<KeyValuePair<int, string>, string>(GClass867.<>c.<>c_0.hqgqjaxbiUM)));
 		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 		if (propertyChanged == null)
 		{
@@ -98,7 +98,7 @@ public class GClass867 : INotifyPropertyChanged
 
 	public GClass867()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.Servers = new HashSet<string>();
 		this.dictionary_0 = new Dictionary<int, string>();
 		base..ctor();

@@ -13,41 +13,41 @@ public class GClass845 : GClass844
 
 	public GClass845(GClass822 gclass822_1, GClass834 gclass834_1)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor(gclass822_1);
 		this.Module = gclass834_1;
 	}
 
-	public override bool vmethod_26()
+	public override bool vmethod_27()
 	{
 		return !base.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(GClass845.<>c.<>c_0.method_0));
 	}
 
-	public override int vmethod_49()
+	public override int vmethod_51()
 	{
 		return int.MaxValue;
 	}
 
-	protected override bool vmethod_50(Ship ship_0, Ship ship_1)
+	protected override bool vmethod_52(Ship ship_0, Ship ship_1)
 	{
 		int num = this.vmethod_9(ship_0 as NpcShip);
 		int num2 = this.vmethod_9(ship_1 as NpcShip);
-		return num < num2 || base.vmethod_50(ship_0, ship_1);
+		return num < num2 || base.vmethod_52(ship_0, ship_1);
 	}
 
-	public override bool vmethod_48(NpcShip npcShip_0)
+	public override bool vmethod_50(NpcShip npcShip_0)
 	{
 		return false;
 	}
 
-	protected override IEnumerable<Vector2> vmethod_22()
+	protected override IEnumerable<Vector2> vmethod_23()
 	{
 		GClass845.<GetRoamTargets>d__11 <GetRoamTargets>d__ = new GClass845.<GetRoamTargets>d__11(-2);
 		<GetRoamTargets>d__.<>4__this = this;
 		return <GetRoamTargets>d__;
 	}
 
-	public override int vmethod_40(NpcShip npcShip_0)
+	public override int vmethod_42(NpcShip npcShip_0)
 	{
 		NpcUtils.NpcClass npcClass;
 		if (npcShip_0 == null)
@@ -61,7 +61,7 @@ public class GClass845 : GClass844
 		}
 		if (npcClass == NpcUtils.N_GygerimOverlord)
 		{
-			int val = base.vmethod_40(npcShip_0);
+			int val = base.vmethod_42(npcShip_0);
 			int num = Math.Max(550, val);
 			int num2 = Math.Max(200, num - 150);
 			int num3 = num - num2;
@@ -77,12 +77,12 @@ public class GClass845 : GClass844
 			float num5 = 1f - num4;
 			return (int)((float)num - (float)num3 * num5);
 		}
-		return base.vmethod_40(npcShip_0);
+		return base.vmethod_42(npcShip_0);
 	}
 
 	public GClass845.GEnum11 State { get; protected set; }
 
-	public GClass845.GEnum11 method_39()
+	public GClass845.GEnum11 method_40()
 	{
 		if (!base.Map.Gates.Any<KeyValuePair<int, Gate>>())
 		{
@@ -97,47 +97,47 @@ public class GClass845 : GClass844
 		return (GClass845.GEnum11)1;
 	}
 
-	public override bool vmethod_51(NpcShip npcShip_0)
+	public override bool vmethod_53(NpcShip npcShip_0)
 	{
 		return this.vmethod_12(npcShip_0);
 	}
 
-	protected override bool vmethod_53()
+	protected override bool vmethod_55()
 	{
 		return false;
 	}
 
-	protected override float vmethod_33(Vector2 vector2_1)
+	protected override float vmethod_35(Vector2 vector2_1)
 	{
 		float num = Math.Max(10000f - vector2_1.X, 0f) / 3f;
-		return base.vmethod_33(vector2_1) - num;
+		return base.vmethod_35(vector2_1) - num;
 	}
 
 	public override void Update()
 	{
 		base.Update();
-		this.State = this.method_39();
+		this.State = this.method_40();
 	}
 
-	public override IEnumerable<string> vmethod_47()
+	public override IEnumerable<string> vmethod_49()
 	{
 		GClass845.<GetStatusText>d__22 <GetStatusText>d__ = new GClass845.<GetStatusText>d__22(-2);
 		<GetStatusText>d__.<>4__this = this;
 		return <GetStatusText>d__;
 	}
 
-	[CompilerGenerated]
 	[DebuggerHidden]
-	private IEnumerable<Vector2> method_40()
+	[CompilerGenerated]
+	private IEnumerable<Vector2> ucSqbbkerrG()
 	{
-		return base.vmethod_22();
+		return base.vmethod_23();
 	}
 
 	[DebuggerHidden]
 	[CompilerGenerated]
 	private IEnumerable<string> method_41()
 	{
-		return base.vmethod_47();
+		return base.vmethod_49();
 	}
 
 	[CompilerGenerated]

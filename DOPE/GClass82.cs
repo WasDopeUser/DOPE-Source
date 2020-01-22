@@ -87,7 +87,7 @@ public static class GClass82
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass82()
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 	}
 
 	[CompilerGenerated]
@@ -133,7 +133,7 @@ public static class GClass82
 
 		public GClass83()
 		{
-			Class13.nIxas2ezryi9b();
+			Class13.plZSWFPzBWWEZ();
 			base..ctor();
 		}
 

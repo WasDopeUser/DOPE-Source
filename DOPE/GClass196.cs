@@ -8,7 +8,7 @@ public class GClass196 : GInterface0
 	{
 		get
 		{
-			return 9879;
+			return 18606;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass196 : GInterface0
 
 	public GClass196(uint uint_0 = 0U)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		base..ctor();
 		this.Mode = uint_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9879;
+		return 18606;
 	}
 
 	public virtual int vmethod_1()
@@ -39,20 +39,20 @@ public class GClass196 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Mode = (uint)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
+		this.Mode = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9879);
+		binaryStream_0.smethod_7(18606);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_7(-31941);
 		binaryStream_0.smethod_6(this.Mode);
-		binaryStream_0.smethod_7(6191);
 	}
 
 	public uint Mode;

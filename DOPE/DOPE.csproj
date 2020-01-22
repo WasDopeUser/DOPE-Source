@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96AAC79A-B4B0-4209-BF5B-A71CDE74F363}</ProjectGuid>
+    <ProjectGuid>{BA7C04B5-DC48-4F20-9409-A1F1300FF543}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DOPE</RootNamespace>
     <AssemblyName>DOPE</AssemblyName>
@@ -38,30 +38,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ace.Networking">
-      <HintPath>..\..\DOPE45.1\Ace.Networking.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\Ace.Networking.dll</HintPath>
     </Reference>
     <Reference Include="Ace.Networking.Entanglement">
-      <HintPath>..\..\DOPE45.1\Ace.Networking.Entanglement.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\Ace.Networking.Entanglement.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="netstandard" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\DOPE45.1\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\..\DOPE45.1\NLog.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="protobuf-net">
-      <HintPath>..\..\DOPE45.1\protobuf-net.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="Syroot.BinaryData">
-      <HintPath>..\..\DOPE45.1\Syroot.BinaryData.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\Syroot.BinaryData.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers">
-      <HintPath>..\..\DOPE45.1\System.Buffers.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -70,7 +70,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>..\..\DOPE45.1\System.Numerics.Vectors.dll</HintPath>
+      <HintPath>..\..\DOPE22.01\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ValueTuple" />
@@ -85,11 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="--PropertyChangedEventArgs.cs" />
-    <Compile Include="-Module-{1F77AD5B-318D-4260-8A3B-CB327AB08684}.cs" />
-    <Compile Include="-Module-{29A7A15A-CDCC-4D45-BA8C-2DCD829F5BB4}.cs" />
-    <Compile Include="-Module-{87AF90A8-4A84-49EF-A88D-279069477EC2}.cs" />
-    <Compile Include="-Module-{C1F1C382-89E9-4B39-A1CA-74A9E7113E2E}.cs" />
-    <Compile Include="-Module-{D760C2F5-0F99-4A90-8361-B869EA170139}.cs" />
+    <Compile Include="-Module-{3B032D57-2CCF-4376-BE79-51735970C823}.cs" />
+    <Compile Include="-Module-{624FC35A-BB7F-4EC3-8160-188ED76FD2FE}.cs" />
+    <Compile Include="-Module-{ADC21217-17AC-42AB-AB97-3FAD390A8C0A}.cs" />
+    <Compile Include="-Module-{B4B7EB1E-2C35-499B-AEB0-0EEE72F65D3F}.cs" />
+    <Compile Include="-Module-{EEFFC004-601F-45B8-A9BC-1251F42A15D5}.cs" />
     <Compile Include="Class0.cs" />
     <Compile Include="Class10.cs" />
     <Compile Include="Class11.cs" />
@@ -291,7 +291,6 @@
     <Compile Include="GAttribute68.cs" />
     <Compile Include="GAttribute69.cs" />
     <Compile Include="GAttribute7.cs" />
-    <Compile Include="GAttribute70.cs" />
     <Compile Include="GAttribute8.cs" />
     <Compile Include="GAttribute9.cs" />
     <Compile Include="GClass0.cs" />
@@ -388,7 +387,6 @@
     <Compile Include="GClass188.cs" />
     <Compile Include="GClass189.cs" />
     <Compile Include="GClass190.cs" />
-    <Compile Include="GClass191.cs" />
     <Compile Include="GClass192.cs" />
     <Compile Include="GClass193.cs" />
     <Compile Include="GClass194.cs" />
@@ -1115,6 +1113,8 @@
     <Compile Include="GInterface7.cs" />
     <Compile Include="GInterface9.cs" />
     <Compile Include="Interface0.cs" />
+    <Compile Include="kgqyqXahnSdusdhZeLF.cs" />
+    <Compile Include="MtkeutgfChvicmSfwvH\GClass191.cs" />
     <Compile Include="PErkava\PErkava.cs" />
     <Compile Include="PErkava\Properties\Resources.cs" />
     <Compile Include="PErkava\Properties\Settings.Designer.cs">

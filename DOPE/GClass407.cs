@@ -8,7 +8,7 @@ public class GClass407 : GClass402, GInterface0
 	{
 		get
 		{
-			return 10981;
+			return 23647;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass407 : GClass402, GInterface0
 
 	public GClass407(uint uint_1 = 0U, int int_2 = 0, int int_3 = 0, string string_1 = "", double double_2 = 0.0, double double_3 = 0.0, Vector<GClass377> vector_1 = null)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.string_0 = "";
 		base..ctor();
 		this.uint_0 = uint_1;
@@ -41,7 +41,7 @@ public class GClass407 : GClass402, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 10981;
+		return 23647;
 	}
 
 	public override int vmethod_1()
@@ -52,12 +52,8 @@ public class GClass407 : GClass402, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
-		this.double_0 = (double)binaryStream_0.smethod_10();
-		this.double_1 = (double)binaryStream_0.smethod_10();
+		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -71,47 +67,49 @@ public class GClass407 : GClass402, GInterface0
 			this.vector_0.method_0(gclass);
 			num++;
 		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.double_1 = (double)binaryStream_0.smethod_10();
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.int_1 = (this.int_1 << 1 | U.smethod_0(this.int_1, 31));
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10981);
+		binaryStream_0.smethod_7(23647);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_6(this.uint_0);
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));
-		binaryStream_0.smethod_9(this.double_0);
-		binaryStream_0.smethod_9(this.double_1);
+		binaryStream_0.smethod_7(7714);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass377 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_4(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		binaryStream_0.smethod_7(-22779);
-		binaryStream_0.smethod_7(-13774);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_9(this.double_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 1) | this.int_1 << 31);
 	}
 
-	public uint uint_0;
-
 	public string string_0;
+
+	public Vector<GClass377> vector_0;
 
 	public int int_0;
 
 	public double double_0;
 
-	public double double_1;
+	public uint uint_0;
 
-	public Vector<GClass377> vector_0;
+	public double double_1;
 
 	public int int_1;
 }

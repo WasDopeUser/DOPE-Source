@@ -8,7 +8,7 @@ public class GClass277 : GInterface0
 	{
 		get
 		{
-			return 21446;
+			return 4131;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass277 : GInterface0
 
 	public GClass277(string string_0 = "", GClass752 gclass752_1 = null, double double_2 = 0.0, double double_3 = 0.0, bool bool_1 = false)
 	{
-		Class13.nIxas2ezryi9b();
+		Class13.plZSWFPzBWWEZ();
 		this.Id = "";
 		base..ctor();
 		this.Id = string_0;
@@ -34,14 +34,14 @@ public class GClass277 : GInterface0
 		{
 			this.gclass752_0 = gclass752_1;
 		}
-		this.double_0 = double_2;
-		this.double_1 = double_3;
+		this.double_1 = double_2;
+		this.double_0 = double_3;
 		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21446;
+		return 4131;
 	}
 
 	public virtual int vmethod_1()
@@ -51,40 +51,40 @@ public class GClass277 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.double_0 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
-		this.gclass752_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass752);
-		this.gclass752_0.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
 		this.Id = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.double_1 = binaryStream_0.ReadDouble();
+		this.gclass752_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass752);
+		this.gclass752_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21446);
+		binaryStream_0.smethod_7(4131);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(8146);
-		this.gclass752_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-26945);
-		binaryStream_0.smethod_3(this.Id);
 		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(-5175);
+		binaryStream_0.smethod_7(-8549);
+		binaryStream_0.smethod_3(this.Id);
+		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.WriteDouble(this.double_1);
+		this.gclass752_0.imethod_2(binaryStream_0);
 	}
-
-	public bool bool_0;
-
-	public GClass752 gclass752_0;
-
-	public string Id;
 
 	public double double_0;
 
+	public string Id;
+
+	public bool bool_0;
+
 	public double double_1;
+
+	public GClass752 gclass752_0;
 }
