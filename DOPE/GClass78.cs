@@ -19,7 +19,7 @@ public class GClass78
 
 	public GClass78(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.Web = darkOrbitWebAPI_1;
 		this.gclass80_0 = new GClass78.GClass80();
@@ -27,7 +27,7 @@ public class GClass78
 
 	public async Task method_1()
 	{
-		string sUrl = GClass812.smethod_1(this.Web.Server, "internalSkylab");
+		string sUrl = GClass813.smethod_1(this.Web.Server, "internalSkylab");
 		DarkOrbitWebAPI.Response response = await this.Web.GetAsync(sUrl, null);
 		response.Data.EnsureSuccessStatusCode();
 		this.method_0().method_10(response.Content);
@@ -90,7 +90,7 @@ public class GClass78
 				string.Format("{0}", int_1)
 			}
 		};
-		DarkOrbitWebAPI.Response response = await this.Web.PostAsync(GClass812.smethod_1(this.Web.Server, null), data, GClass812.smethod_1(this.Web.Server, "internalSkylab"), null);
+		DarkOrbitWebAPI.Response response = await this.Web.PostAsync(GClass813.smethod_1(this.Web.Server, null), data, GClass813.smethod_1(this.Web.Server, "internalSkylab"), null);
 		bool result;
 		if (!response.Data.IsSuccessStatusCode)
 		{
@@ -132,14 +132,14 @@ public class GClass78
 
 		public GClass79()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static GClass79()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			GClass78.GClass79.list_0 = new List<string>
 			{
 				"baseModule",
@@ -228,7 +228,7 @@ public class GClass78
 
 		public GClass80()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 			this.Resources = new ConcurrentDictionary<string, int>();
 			this.list_0 = new List<GClass78.GClass79>();

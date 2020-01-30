@@ -8,7 +8,7 @@ public class GClass702 : GInterface0
 	{
 		get
 		{
-			return 6825;
+			return 25970;
 		}
 	}
 
@@ -16,58 +16,54 @@ public class GClass702 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 7;
 		}
 	}
 
-	public GClass702(uint uint_2 = 0U, uint uint_3 = 0U, GClass354 gclass354_1 = null)
+	public GClass702(int int_1 = 0, string string_1 = "", bool bool_0 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
+		this.string_0 = "";
 		base..ctor();
-		this.uint_1 = uint_2;
-		this.uint_0 = uint_3;
-		if (gclass354_1 == null)
-		{
-			this.gclass354_0 = new GClass354();
-			return;
-		}
-		this.gclass354_0 = gclass354_1;
+		this.int_0 = int_1;
+		this.string_0 = string_1;
+		this.RwJyIcGlcd = bool_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6825;
+		return 25970;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 7;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.uint_1 = (uint)binaryStream_0.smethod_1();
-		this.gclass354_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass354);
-		this.gclass354_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.RwJyIcGlcd = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6825);
+		binaryStream_0.smethod_7(25970);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_6(this.uint_1);
-		this.gclass354_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.WriteBoolean(this.RwJyIcGlcd);
+		binaryStream_0.smethod_4(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
 	}
 
-	public uint uint_0;
+	public string string_0;
 
-	public uint uint_1;
+	public bool RwJyIcGlcd;
 
-	public GClass354 gclass354_0;
+	public int int_0;
 }

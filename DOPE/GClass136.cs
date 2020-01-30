@@ -8,7 +8,7 @@ public class GClass136 : GInterface0
 	{
 		get
 		{
-			return 26713;
+			return 12534;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass136 : GInterface0
 
 	public GClass136(Vector<GClass135> vector_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass136 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 26713;
+		return 12534;
 	}
 
 	public virtual int vmethod_1()
@@ -44,7 +44,6 @@ public class GClass136 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
@@ -63,14 +62,13 @@ public class GClass136 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26713);
+		binaryStream_0.smethod_7(12534);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15771);
-		binaryStream_0.smethod_7(22031);
+		binaryStream_0.smethod_7(21901);
 		binaryStream_0.smethod_4(this.vector_0.Length);
 		foreach (GClass135 gclass in this.vector_0)
 		{

@@ -8,7 +8,7 @@ public class GClass202 : GClass197, GInterface0
 	{
 		get
 		{
-			return 20603;
+			return 23474;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass202 : GClass197, GInterface0
 
 	public GClass202(bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 20603;
+		return 23474;
 	}
 
 	public override int vmethod_1()
@@ -42,12 +42,11 @@ public class GClass202 : GClass197, GInterface0
 		base.imethod_1(binaryStream_0);
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20603);
+		binaryStream_0.smethod_7(23474);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -55,8 +54,7 @@ public class GClass202 : GClass197, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(-4228);
-		binaryStream_0.smethod_7(-5189);
+		binaryStream_0.smethod_7(22706);
 	}
 
 	public bool bool_0;

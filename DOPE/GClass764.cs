@@ -8,7 +8,7 @@ public class GClass764 : GInterface0
 	{
 		get
 		{
-			return 32578;
+			return 11756;
 		}
 	}
 
@@ -20,29 +20,16 @@ public class GClass764 : GInterface0
 		}
 	}
 
-	public GClass764(GClass761 gclass761_1 = null, Vector<GClass135> vector_1 = null)
+	public GClass764(int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (gclass761_1 == null)
-		{
-			this.gclass761_0 = new GClass761(0U);
-		}
-		else
-		{
-			this.gclass761_0 = gclass761_1;
-		}
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass135>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32578;
+		return 11756;
 	}
 
 	public virtual int vmethod_1()
@@ -52,42 +39,22 @@ public class GClass764 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass135 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass135;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
 		binaryStream_0.smethod_1();
-		this.gclass761_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass761);
-		this.gclass761_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32578);
+		binaryStream_0.smethod_7(11756);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass135 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_7(-23006);
-		this.gclass761_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		binaryStream_0.smethod_7(-8705);
 	}
 
-	public Vector<GClass135> vector_0;
-
-	public GClass761 gclass761_0;
+	public int int_0;
 }

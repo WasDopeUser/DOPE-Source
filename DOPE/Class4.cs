@@ -32,7 +32,7 @@ internal static class Class4
 		return Class4.string_0.Contains(string_1, StringComparer.OrdinalIgnoreCase);
 	}
 
-	public static Class4.Enum0 gCyjLgrsr6(string string_1)
+	public static Class4.Enum0 smethod_2(string string_1)
 	{
 		IPAddress ipaddress;
 		if (!IPAddress.TryParse(string_1, out ipaddress))
@@ -46,7 +46,7 @@ internal static class Class4
 		return (Class4.Enum0)4;
 	}
 
-	public static void smethod_2(this Socket socket_0)
+	public static void smethod_3(this Socket socket_0)
 	{
 		if (socket_0 == null)
 		{
@@ -71,7 +71,7 @@ internal static class Class4
 		}
 	}
 
-	public static void smethod_3(this SocketAsyncEventArgs socketAsyncEventArgs_0)
+	public static void smethod_4(this SocketAsyncEventArgs socketAsyncEventArgs_0)
 	{
 		if (socketAsyncEventArgs_0 == null)
 		{
@@ -91,7 +91,7 @@ internal static class Class4
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class4()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		Class4.string_0 = new string[]
 		{
 			"CONNECTION",

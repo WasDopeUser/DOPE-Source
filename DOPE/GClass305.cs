@@ -8,7 +8,7 @@ public class GClass305 : GInterface0
 	{
 		get
 		{
-			return 15767;
+			return 16727;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass305 : GInterface0
 
 	public GClass305(bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 15767;
+		return 16727;
 	}
 
 	public virtual int vmethod_1()
@@ -39,22 +39,20 @@ public class GClass305 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15767);
+		binaryStream_0.smethod_7(16727);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-15542);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(-26436);
+		binaryStream_0.smethod_7(5642);
 	}
 
 	public bool bool_0;

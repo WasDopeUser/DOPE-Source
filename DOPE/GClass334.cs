@@ -8,7 +8,7 @@ public class GClass334 : GInterface0
 	{
 		get
 		{
-			return 26736;
+			return 13987;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass334 : GInterface0
 
 	public GClass334(uint uint_1 = 0U)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26736;
+		return 13987;
 	}
 
 	public virtual int vmethod_1()
@@ -46,15 +46,15 @@ public class GClass334 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26736);
+		binaryStream_0.smethod_7(13987);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32654);
+		binaryStream_0.smethod_7(28393);
 		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(16551);
+		binaryStream_0.smethod_7(8539);
 	}
 
 	public uint uint_0;

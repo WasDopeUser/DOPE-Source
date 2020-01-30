@@ -8,7 +8,7 @@ public class GClass361 : GInterface0
 	{
 		get
 		{
-			return 23743;
+			return 25734;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass361 : GInterface0
 
 	public GClass361(int int_1 = 0, int int_2 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.MapId = int_1;
 		this.int_0 = int_2;
@@ -30,7 +30,7 @@ public class GClass361 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 23743;
+		return 25734;
 	}
 
 	public virtual int vmethod_1()
@@ -41,21 +41,25 @@ public class GClass361 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (U.smethod_0(this.MapId, 14) | this.MapId << 18);
+		this.MapId = (this.MapId << 12 | U.smethod_0(this.MapId, 20));
+		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23743);
+		binaryStream_0.smethod_7(25734);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.MapId << 14 | U.smethod_0(this.MapId, 18));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 12) | this.MapId << 20);
+		binaryStream_0.smethod_7(6507);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_7(12190);
 	}
 
 	public int MapId;

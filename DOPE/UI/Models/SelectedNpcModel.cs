@@ -12,8 +12,8 @@ using DOPE.Common.Models;
 
 namespace DOPE.UI.Models
 {
-	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
 	[DataContract]
+	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
 	public class SelectedNpcModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -36,7 +36,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<NpcId>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_63);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_66);
 			}
 		}
 
@@ -81,9 +81,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 4)]
 		[Layout(Parent = "Enabled", Description = "Laser")]
 		[Category("Ammo")]
+		[DataMember(Order = 4)]
 		public virtual LaserType Laser
 		{
 			[CompilerGenerated]
@@ -99,7 +99,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Laser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
 			}
 		}
 
@@ -121,13 +121,13 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Rocket>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_77);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_80);
 			}
 		}
 
-		[DataMember(Order = 6)]
-		[Layout(Parent = "Enabled", Description = "Hellstorm")]
 		[Category("Ammo")]
+		[Layout(Parent = "Enabled", Description = "Hellstorm")]
+		[DataMember(Order = 6)]
 		public virtual HellstormType Hellstorm
 		{
 			[CompilerGenerated]
@@ -143,7 +143,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Hellstorm>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_45);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_48);
 			}
 		}
 
@@ -164,7 +164,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<DroneFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_19);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_20);
 			}
 		}
 
@@ -190,9 +190,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Priority", Parent = "Enabled")]
-		[DataMember(Order = 10)]
 		[Range(-1, 100)]
+		[DataMember(Order = 10)]
+		[Layout(Description = "Priority", Parent = "Enabled")]
 		public int Priority
 		{
 			[CompilerGenerated]
@@ -208,7 +208,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Priority>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
 			}
 		}
 
@@ -234,8 +234,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Use Kamikaze", Parent = "Enabled")]
 		[DataMember(Order = 12)]
+		[Layout(Description = "Use Kamikaze", Parent = "Enabled")]
 		public bool UseKamikaze
 		{
 			[CompilerGenerated]
@@ -251,12 +251,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseKamikaze>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_102);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_107);
 			}
 		}
 
-		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
 		[DataMember(Order = 13)]
+		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
 		public LaserType GgCornerLaser
 		{
 			[CompilerGenerated]
@@ -272,7 +272,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GgCornerLaser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_38);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_41);
 			}
 		}
 
@@ -293,12 +293,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseOffensiveAbility>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_104);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
 			}
 		}
 
-		[DataMember(Order = 15)]
 		[Layout(Description = "Use SAB-50", Parent = "Enabled")]
+		[DataMember(Order = 15)]
 		public bool UseSab
 		{
 			[CompilerGenerated]
@@ -314,7 +314,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseSab>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_115);
 			}
 		}
 
@@ -335,7 +335,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<IgnoreOwnership>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_47);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_50);
 			}
 		}
 
@@ -356,7 +356,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UsePetLocator>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.eNkqwmwAyEm);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
 			}
 		}
 
@@ -377,7 +377,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GroupAttackMode>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_39);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_42);
 			}
 		}
 
@@ -398,7 +398,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GG_ChaseFleeing>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_35);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_38);
 			}
 		}
 

@@ -8,7 +8,7 @@ public class GClass208 : GClass197, GInterface0
 	{
 		get
 		{
-			return 29618;
+			return 32174;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass208 : GClass197, GInterface0
 
 	public GClass208(bool bool_1 = false, int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.bool_0 = bool_1;
 		this.int_0 = int_1;
@@ -30,7 +30,7 @@ public class GClass208 : GClass197, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 29618;
+		return 32174;
 	}
 
 	public override int vmethod_1()
@@ -41,24 +41,26 @@ public class GClass208 : GClass197, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		this.bool_0 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29618);
+		binaryStream_0.smethod_7(32174);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		binaryStream_0.smethod_7(16310);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_7(-985);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(-21260);
 	}
 
 	public int int_0;

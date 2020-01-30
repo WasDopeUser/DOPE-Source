@@ -8,7 +8,7 @@ public class GClass633 : GInterface0
 	{
 		get
 		{
-			return 21989;
+			return 27871;
 		}
 	}
 
@@ -16,59 +16,66 @@ public class GClass633 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 8;
 		}
 	}
 
-	public GClass633(string string_0 = "", int int_1 = 0, int int_2 = 0)
+	public GClass633(GClass201 gclass201_1 = null, int int_1 = 0, int int_2 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
-		this.Id = "";
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.Id = string_0;
-		this.Progress = int_1;
+		if (gclass201_1 == null)
+		{
+			this.gclass201_0 = new GClass201(0U);
+		}
+		else
+		{
+			this.gclass201_0 = gclass201_1;
+		}
+		this.wCnkUsatqs = int_1;
 		this.int_0 = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21989;
+		return 27871;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Id = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
+		this.wCnkUsatqs = binaryStream_0.smethod_0();
+		this.wCnkUsatqs = (this.wCnkUsatqs << 5 | U.smethod_0(this.wCnkUsatqs, 27));
 		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
-		this.Progress = binaryStream_0.smethod_0();
-		this.Progress = (U.smethod_0(this.Progress, 7) | this.Progress << 25);
+		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_1();
+		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
+		this.gclass201_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21989);
+		binaryStream_0.smethod_7(27871);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.Id);
-		binaryStream_0.smethod_7(24476);
-		binaryStream_0.smethod_7(-6405);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-		binaryStream_0.smethod_4(this.Progress << 7 | U.smethod_0(this.Progress, 25));
+		binaryStream_0.smethod_4(U.smethod_0(this.wCnkUsatqs, 5) | this.wCnkUsatqs << 27);
+		binaryStream_0.smethod_7(-30759);
+		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		binaryStream_0.smethod_7(-22233);
+		this.gclass201_0.imethod_2(binaryStream_0);
 	}
 
-	public string Id;
+	public int wCnkUsatqs;
 
 	public int int_0;
 
-	public int Progress;
+	public GClass201 gclass201_0;
 }

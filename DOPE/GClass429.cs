@@ -8,7 +8,7 @@ public class GClass429 : GInterface0
 	{
 		get
 		{
-			return 29505;
+			return 21143;
 		}
 	}
 
@@ -16,44 +16,57 @@ public class GClass429 : GInterface0
 	{
 		get
 		{
-			return 1;
+			return 12;
 		}
 	}
 
-	public GClass429(bool bool_0 = false)
+	public GClass429(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.YwLilwdyrg = bool_0;
+		this.MapId = int_2;
+		this.int_1 = int_3;
+		this.int_0 = int_4;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29505;
+		return 21143;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 1;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.YwLilwdyrg = binaryStream_0.ReadBoolean();
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 3) | this.MapId << 29);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 10) | this.int_1 << 22);
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29505);
+		binaryStream_0.smethod_7(21143);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.YwLilwdyrg);
-		binaryStream_0.smethod_7(23953);
+		binaryStream_0.smethod_4(this.MapId << 3 | U.smethod_0(this.MapId, 29));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_4(this.int_1 << 10 | U.smethod_0(this.int_1, 22));
+		binaryStream_0.smethod_7(-11841);
 	}
 
-	public bool YwLilwdyrg;
+	public int MapId;
+
+	public int int_0;
+
+	public int int_1;
 }

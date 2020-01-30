@@ -8,7 +8,7 @@ public class GClass420 : GInterface0
 	{
 		get
 		{
-			return 13141;
+			return 20431;
 		}
 	}
 
@@ -16,51 +16,59 @@ public class GClass420 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 3;
 		}
 	}
 
-	public GClass420(int int_2 = 0, int int_3 = 0)
+	public GClass420(string string_1 = "", bool bool_0 = false, GClass359 gclass359_0 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
+		this.string_0 = "";
 		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.string_0 = string_1;
+		this.Visible = bool_0;
+		if (gclass359_0 == null)
+		{
+			this.ToolTip = new GClass359(null);
+			return;
+		}
+		this.ToolTip = gclass359_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13141;
+		return 20431;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 3;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		binaryStream_0.smethod_1();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		this.ToolTip = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass359);
+		this.ToolTip.imethod_1(binaryStream_0);
+		this.Visible = binaryStream_0.ReadBoolean();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13141);
+		binaryStream_0.smethod_7(20431);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		binaryStream_0.smethod_7(-27710);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		this.ToolTip.imethod_2(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.Visible);
+		binaryStream_0.smethod_3(this.string_0);
 	}
 
-	public int int_0;
+	public GClass359 ToolTip;
 
-	public int int_1;
+	public bool Visible;
+
+	public string string_0;
 }

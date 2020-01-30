@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
 
-public class GClass795 : GClass791
+public class GClass795 : GClass792
 {
 	[CompilerGenerated]
 	public GClass802 method_0()
@@ -29,18 +29,18 @@ public class GClass795 : GClass791
 		this.gclass802_1 = gclass802_2;
 	}
 
-	public override void imethod_2()
+	public override void imethod_1()
 	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
 	}
 
 	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
 	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
+		this.method_2().CoXlIiUqGgZ(byte_0, int_0, int_1);
+	}
+
+	public override void UmklIaSsoWi(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_0().CoXlIiUqGgZ(byte_0, int_0, int_1);
 	}
 
 	public override void Init(List<byte[]> list_0)
@@ -49,30 +49,25 @@ public class GClass795 : GClass791
 		{
 			throw new Exception();
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
+		ByteArray byteArray = new ByteArray();
+		ByteArray byteArray2 = new ByteArray();
+		foreach (byte value in list_0[0])
 		{
-			vector.Add((uint)item);
+			byteArray.Memory.WriteByte(value);
 		}
-		foreach (byte item2 in list_0[1])
+		foreach (byte value2 in list_0[1])
 		{
-			vector2.Add((uint)item2);
+			byteArray2.Memory.WriteByte(value2);
 		}
-		if (vector.Length != 12)
-		{
-			Vector<uint> vector3 = vector2;
-			Vector<uint> vector4 = vector;
-			vector = vector3;
-			vector2 = vector4;
-		}
-		this.method_1(new GClass802(new Vector<uint>(vector), new Vector<uint>(vector2)));
-		this.method_3(new GClass802(new Vector<uint>(vector), new Vector<uint>(vector2)));
+		byteArray.Memory.Position = 0L;
+		byteArray2.Memory.Position = 0L;
+		this.method_1(new GClass802(new ByteArray(byteArray), new ByteArray(byteArray2)));
+		this.method_3(new GClass802(byteArray, byteArray2));
 	}
 
 	public GClass795()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 

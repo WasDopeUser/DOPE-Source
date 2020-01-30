@@ -29,17 +29,17 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass822 Context
+		public GClass823 Context
 		{
 			get
 			{
-				return base.DataContext as GClass822;
+				return base.DataContext as GClass823;
 			}
 		}
 
 		public MapControl()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			this.Timer = new Timer();
 			this.LastRender = DateTime.Now;
 			base..ctor();
@@ -121,7 +121,7 @@ namespace DOPE.UI
 				{
 				}
 				this.method_5(drawingContext, float_, float_2, this.Map);
-				string text = string.Join("\r\n", this.Context.method_69());
+				string text = string.Join("\r\n", this.Context.method_70());
 				if (!string.IsNullOrWhiteSpace(text))
 				{
 					this.Progress.Visibility = Visibility.Visible;
@@ -273,7 +273,7 @@ namespace DOPE.UI
 
 		public void method_8(DrawingContext drawingContext_0, float float_0, float float_1, GroupManager.GroupMember groupMember_0)
 		{
-			if (this.Map.method_3(groupMember_0.Id) == null)
+			if (this.Map.method_4(groupMember_0.Id) == null)
 			{
 				if (groupMember_0.MapId == this.Map.MapId)
 				{
@@ -301,19 +301,19 @@ namespace DOPE.UI
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)collectible_0.PosX * float_0), (double)((float)collectible_0.PosY * float_1), 3.0, 3.0));
 		}
 
-		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass822 gclass822_0)
+		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass823 gclass823_0)
 		{
-			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass822_0.DormantTargets)
+			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass823_0.DormantTargets)
 			{
 				Collectible value = keyValuePair.Value;
 				drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.Pink, null, MapControl.smethod_0((double)(value.Position.X * float_0), (double)(value.Position.Y * float_1), 2.0, 2.0));
 			}
-			if (gclass822_0.RoamTarget != Vector2.Zero)
+			if (gclass823_0.RoamTarget != Vector2.Zero)
 			{
-				Vector2 roamTarget = gclass822_0.RoamTarget;
+				Vector2 roamTarget = gclass823_0.RoamTarget;
 				drawingContext_0.DrawEllipse(System.Windows.Media.Brushes.Magenta, null, new System.Windows.Point((double)(roamTarget.X * float_0), (double)(roamTarget.Y * float_1)), 6.0, 6.0);
 			}
-			GClass835 behavior = gclass822_0.Behavior;
+			GClass836 behavior = gclass823_0.Behavior;
 			List<Rectangle> list = (behavior != null) ? behavior.vmethod_17() : null;
 			if (list != null)
 			{

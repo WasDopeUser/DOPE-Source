@@ -25,6 +25,7 @@ namespace DOPE.Common.Models.Bot
 		CheckRepairDrones,
 		TargetQuickSwitch,
 		TradeOre,
-		PingLocation
+		PingLocation,
+		ChangeHangar
 	}
 }

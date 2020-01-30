@@ -18,7 +18,7 @@ public static class GClass10
 
 		public GClass11()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -48,7 +48,7 @@ public static class GClass10
 
 		public GClass12()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -84,7 +84,7 @@ public static class GClass10
 
 		public GClass13()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -92,16 +92,16 @@ public static class GClass10
 		private int int_0;
 
 		[CompilerGenerated]
-		private int int_1;
+		private int pQuRmooBqb;
 
 		[CompilerGenerated]
 		private string string_0;
 
 		[CompilerGenerated]
-		private int int_2;
+		private int int_1;
 
 		[CompilerGenerated]
-		private int int_3;
+		private int int_2;
 	}
 
 	public class GClass14
@@ -120,7 +120,7 @@ public static class GClass10
 
 		public GClass14()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -162,7 +162,7 @@ public static class GClass10
 
 		public GClass15()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -198,7 +198,7 @@ public static class GClass10
 
 		public GClass16()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -231,7 +231,7 @@ public static class GClass10
 
 		public GClass17()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -270,7 +270,7 @@ public static class GClass10
 
 		public GClass18()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -318,7 +318,7 @@ public static class GClass10
 
 		public GClass19()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -366,7 +366,7 @@ public static class GClass10
 
 		public GClass20()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -396,7 +396,7 @@ public static class GClass10
 
 		public GClass21()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -420,7 +420,7 @@ public static class GClass10
 
 		public GClass22()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -527,26 +527,26 @@ public static class GClass10
 		public string String_29 { get; set; }
 
 		[JsonProperty("shopLaser")]
-		public string String_30 { get; set; }
+		public string mRrUehukEm { get; set; }
 
 		[JsonProperty("shopGenerator")]
-		public string String_31 { get; set; }
+		public string String_30 { get; set; }
 
 		[JsonProperty("shopBatteries")]
-		public string String_32 { get; set; }
+		public string String_31 { get; set; }
 
 		[JsonProperty("shopHitpoints")]
-		public string String_33 { get; set; }
+		public string String_32 { get; set; }
 
 		[JsonProperty("shopRockets")]
-		public string String_34 { get; set; }
+		public string String_33 { get; set; }
 
 		[JsonProperty("shopSpecials")]
-		public string String_35 { get; set; }
+		public string String_34 { get; set; }
 
 		public GClass23()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -632,9 +632,6 @@ public static class GClass10
 		private string string_26;
 
 		[CompilerGenerated]
-		private string molBcIlfAA;
-
-		[CompilerGenerated]
 		private string string_27;
 
 		[CompilerGenerated]
@@ -660,6 +657,9 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_35;
+
+		[CompilerGenerated]
+		private string string_36;
 	}
 
 	public class GClass24
@@ -678,12 +678,12 @@ public static class GClass10
 
 		public GClass24()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private GClass10.GClass17 gclass17_0;
+		private GClass10.GClass17 dylYimZyED;
 
 		[CompilerGenerated]
 		private GClass10.GClass21 gclass21_0;
@@ -705,7 +705,7 @@ public static class GClass10
 
 		public GClass25()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -726,7 +726,7 @@ public static class GClass10
 
 		public GClass26()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 
@@ -747,7 +747,7 @@ public static class GClass10
 
 		public GClass27()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 

@@ -8,7 +8,7 @@ public class GClass439 : GInterface0
 	{
 		get
 		{
-			return 13229;
+			return 32261;
 		}
 	}
 
@@ -16,63 +16,64 @@ public class GClass439 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass439(Vector<GClass584> vector_1 = null)
+	public GClass439(GClass762 gclass762_1 = null, uint uint_1 = 0U, double double_1 = 0.0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (vector_1 == null)
+		if (gclass762_1 == null)
 		{
-			this.vector_0 = new Vector<GClass584>();
-			return;
+			this.gclass762_0 = new GClass762(0U);
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.gclass762_0 = gclass762_1;
+		}
+		this.uint_0 = uint_1;
+		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13229;
+		return 32261;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass584 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass584;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.double_0 = binaryStream_0.ReadDouble();
+		binaryStream_0.smethod_1();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.gclass762_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass762);
+		this.gclass762_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13229);
+		binaryStream_0.smethod_7(32261);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass584 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(21885);
+		binaryStream_0.smethod_6(this.uint_0);
+		this.gclass762_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-14925);
 	}
 
-	public Vector<GClass584> vector_0;
+	public double double_0;
+
+	public uint uint_0;
+
+	public GClass762 gclass762_0;
 }

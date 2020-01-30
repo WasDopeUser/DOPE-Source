@@ -64,13 +64,13 @@ namespace DarkorbitAPI
 				text,
 				1920,
 				1080,
-				this.Game.Settings.UIString ?? ".root1.instance470.MainClientApplication0.ApplicationSkin2.Group3.Group4._-s4M5.instance25048 root1 false -1"
+				this.Game.Settings.UIString ?? ".root1.instance480.MainClientApplication0.ApplicationSkin2.Group3.Group4._-Y2x5.instance25056 root1 false -1"
 			});
 		}
 
 		public SecurityManager(GameManager gameManager_0)
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			this.HashBlockList = new CooldownTracker<string>();
 			this.Random = new Random();
 			base..ctor();
@@ -132,7 +132,7 @@ namespace DarkorbitAPI
 
 		static SecurityManager()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			SecurityManager.NpcRangesRegular = new Dictionary<NpcUtils.NpcClass, int>
 			{
 				{

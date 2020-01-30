@@ -8,7 +8,7 @@ public class GClass143 : GInterface0
 	{
 		get
 		{
-			return 32263;
+			return 19606;
 		}
 	}
 
@@ -22,16 +22,16 @@ public class GClass143 : GInterface0
 
 	public GClass143(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.Id = int_2;
-		this.int_1 = int_3;
-		this.int_0 = int_4;
+		this.int_0 = int_3;
+		this.int_1 = int_4;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32263;
+		return 19606;
 	}
 
 	public virtual int vmethod_1()
@@ -42,28 +42,28 @@ public class GClass143 : GInterface0
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
+		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
 		this.Id = binaryStream_0.smethod_0();
-		this.Id = (this.Id << 1 | U.smethod_0(this.Id, 31));
+		this.Id = (U.smethod_0(this.Id, 16) | this.Id << 16);
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 3 | U.smethod_0(this.int_1, 29));
-		binaryStream_0.smethod_1();
+		this.int_1 = (this.int_1 << 8 | U.smethod_0(this.int_1, 24));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32263);
+		binaryStream_0.smethod_7(19606);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-		binaryStream_0.smethod_7(13004);
-		binaryStream_0.smethod_4(U.smethod_0(this.Id, 1) | this.Id << 31);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 3) | this.int_1 << 29);
-		binaryStream_0.smethod_7(-27590);
+		binaryStream_0.smethod_4(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
+		binaryStream_0.smethod_7(-24246);
+		binaryStream_0.smethod_7(-22086);
+		binaryStream_0.smethod_4(this.Id << 16 | U.smethod_0(this.Id, 16));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 8) | this.int_1 << 24);
 	}
 
 	public int int_0;

@@ -8,7 +8,7 @@ public class GClass180 : GClass179, GInterface0
 	{
 		get
 		{
-			return 17850;
+			return 16279;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass180 : GClass179, GInterface0
 
 	public GClass180(string string_2 = "", int int_2 = 0, int int_3 = 0, string string_3 = "")
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_1 = "";
 		base..ctor(string_2, int_2, int_3);
 		this.string_1 = string_3;
@@ -30,7 +30,7 @@ public class GClass180 : GClass179, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 17850;
+		return 16279;
 	}
 
 	public override int vmethod_1()
@@ -43,12 +43,11 @@ public class GClass180 : GClass179, GInterface0
 		base.imethod_1(binaryStream_0);
 		this.string_1 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17850);
+		binaryStream_0.smethod_7(16279);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -56,8 +55,7 @@ public class GClass180 : GClass179, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_7(10499);
-		binaryStream_0.smethod_7(-24244);
+		binaryStream_0.smethod_7(5130);
 	}
 
 	public string string_1;

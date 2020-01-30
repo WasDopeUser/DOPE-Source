@@ -8,7 +8,7 @@ public class GClass251 : GInterface0
 	{
 		get
 		{
-			return 13176;
+			return 20104;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass251 : GInterface0
 
 	public GClass251(string string_1 = "", Vector<GClass252> vector_0 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -36,7 +36,7 @@ public class GClass251 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 13176;
+		return 20104;
 	}
 
 	public virtual int vmethod_1()
@@ -65,7 +65,7 @@ public class GClass251 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13176);
+		binaryStream_0.smethod_7(20104);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -77,7 +77,7 @@ public class GClass251 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(19885);
+		binaryStream_0.smethod_7(1568);
 	}
 
 	public string string_0;

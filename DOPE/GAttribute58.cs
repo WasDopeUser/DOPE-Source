@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.Property)]
 public sealed class GAttribute58 : Attribute
 {
-	public GAttribute58([GAttribute1] string attribute)
+	public GAttribute58()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.String_0 = attribute;
 	}
-
-	[GAttribute1]
-	public string String_0 { get; private set; }
-
-	[CompilerGenerated]
-	private string string_0;
 }

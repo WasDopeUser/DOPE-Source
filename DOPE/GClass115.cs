@@ -8,13 +8,13 @@ public class GClass115 : GInterface4
 		ConnectionManager value = ConnectionManager.Instance.Value;
 		foreach (GClass243 gclass243_ in e.Items)
 		{
-			value.Game.Hero.method_12(gclass243_);
+			value.Game.Hero.method_15(gclass243_);
 		}
 	}
 
 	public GClass115()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 }

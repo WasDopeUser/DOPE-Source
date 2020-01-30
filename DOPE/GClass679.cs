@@ -8,7 +8,7 @@ public class GClass679 : GInterface0
 	{
 		get
 		{
-			return 26675;
+			return 10850;
 		}
 	}
 
@@ -16,88 +16,71 @@ public class GClass679 : GInterface0
 	{
 		get
 		{
-			return 20;
+			return 8;
 		}
 	}
 
-	public GClass679(int int_4 = 0, int int_5 = 0, string string_2 = "", int int_6 = 0, int int_7 = 0, string string_3 = "", GClass201 gclass201_1 = null)
+	public GClass679(GClass318 gclass318_1 = null, uint uint_0 = 0U, int int_1 = 0, int int_2 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
-		this.string_0 = "";
-		this.string_1 = "";
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_2 = int_4;
-		this.int_1 = int_5;
-		this.string_0 = string_2;
-		this.int_3 = int_6;
-		this.int_0 = int_7;
-		this.string_1 = string_3;
-		if (gclass201_1 == null)
+		if (gclass318_1 == null)
 		{
-			this.gclass201_0 = new GClass201(0U);
-			return;
+			this.gclass318_0 = new GClass318(0U);
 		}
-		this.gclass201_0 = gclass201_1;
+		else
+		{
+			this.gclass318_0 = gclass318_1;
+		}
+		this.jUmgofkjPv = uint_0;
+		this.XvOgPoEfxB = int_1;
+		this.int_0 = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26675;
+		return 10850;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 20;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.XvOgPoEfxB = binaryStream_0.smethod_0();
+		this.XvOgPoEfxB = (U.smethod_0(this.XvOgPoEfxB, 16) | this.XvOgPoEfxB << 16);
+		binaryStream_0.smethod_1();
+		this.gclass318_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass318);
+		this.gclass318_0.imethod_1(binaryStream_0);
+		this.jUmgofkjPv = (uint)binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 6 | U.smethod_0(this.int_1, 26));
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
 		binaryStream_0.smethod_1();
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 9 | U.smethod_0(this.int_2, 23));
-		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
-		this.gclass201_0.imethod_1(binaryStream_0);
-		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (U.smethod_0(this.int_3, 16) | this.int_3 << 16);
-		binaryStream_0.smethod_1();
-		this.string_1 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26675);
+		binaryStream_0.smethod_7(10850);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 6) | this.int_1 << 26);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(-28963);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 9) | this.int_2 << 23);
-		this.gclass201_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(this.int_3 << 16 | U.smethod_0(this.int_3, 16));
-		binaryStream_0.smethod_7(9292);
-		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_4(this.XvOgPoEfxB << 16 | U.smethod_0(this.XvOgPoEfxB, 16));
+		binaryStream_0.smethod_7(-18991);
+		this.gclass318_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(this.jUmgofkjPv);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_7(27502);
 	}
 
+	public int XvOgPoEfxB;
+
+	public GClass318 gclass318_0;
+
+	public uint jUmgofkjPv;
+
 	public int int_0;
-
-	public int int_1;
-
-	public string string_0;
-
-	public int int_2;
-
-	public GClass201 gclass201_0;
-
-	public int int_3;
-
-	public string string_1;
 }

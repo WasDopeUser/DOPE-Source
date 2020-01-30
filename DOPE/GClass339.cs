@@ -8,7 +8,7 @@ public class GClass339 : GInterface0
 	{
 		get
 		{
-			return 8126;
+			return 16457;
 		}
 	}
 
@@ -20,24 +20,24 @@ public class GClass339 : GInterface0
 		}
 	}
 
-	public GClass339(string string_1 = "", double double_1 = 0.0, GClass722 gclass722_0 = null)
+	public GClass339(string string_1 = "", double double_1 = 0.0, GClass723 gclass723_0 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
 		this.double_0 = double_1;
-		if (gclass722_0 == null)
+		if (gclass723_0 == null)
 		{
-			this.Status = new GClass722();
+			this.Status = new GClass723();
 			return;
 		}
-		this.Status = gclass722_0;
+		this.Status = gclass723_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8126;
+		return 16457;
 	}
 
 	public virtual int vmethod_1()
@@ -49,28 +49,30 @@ public class GClass339 : GInterface0
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
-		this.Status = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass722);
+		binaryStream_0.smethod_1();
+		this.Status = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass723);
 		this.Status.imethod_1(binaryStream_0);
 		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8126);
+		binaryStream_0.smethod_7(16457);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(-7199);
+		binaryStream_0.smethod_7(-16461);
+		binaryStream_0.smethod_7(-5076);
 		this.Status.imethod_2(binaryStream_0);
 		binaryStream_0.WriteDouble(this.double_0);
 	}
 
 	public string string_0;
 
-	public GClass722 Status;
+	public GClass723 Status;
 
 	public double double_0;
 }

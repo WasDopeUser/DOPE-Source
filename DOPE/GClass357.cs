@@ -8,7 +8,7 @@ public class GClass357 : GInterface0
 	{
 		get
 		{
-			return 10948;
+			return 27381;
 		}
 	}
 
@@ -20,19 +20,19 @@ public class GClass357 : GInterface0
 		}
 	}
 
-	public GClass357(string string_1 = "", int int_1 = 0, int int_2 = 0)
+	public GClass357(string string_1 = "", int int_2 = 0, int int_3 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
-		this.jiChoNyaWw = int_1;
-		this.int_0 = int_2;
+		this.int_1 = int_2;
+		this.int_0 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 10948;
+		return 27381;
 	}
 
 	public virtual int vmethod_1()
@@ -42,31 +42,31 @@ public class GClass357 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.jiChoNyaWw = binaryStream_0.smethod_0();
-		this.jiChoNyaWw = (U.smethod_0(this.jiChoNyaWw, 12) | this.jiChoNyaWw << 20);
-		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_1();
+		this.string_0 = binaryStream_0.smethod_2();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 14 | U.smethod_0(this.int_1, 18));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10948);
+		binaryStream_0.smethod_7(27381);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_7(31959);
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.jiChoNyaWw << 12 | U.smethod_0(this.jiChoNyaWw, 20));
-		binaryStream_0.smethod_7(8299);
-		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 14) | this.int_1 << 18);
 	}
+
+	public int int_0;
 
 	public string string_0;
 
-	public int jiChoNyaWw;
-
-	public int int_0;
+	public int int_1;
 }

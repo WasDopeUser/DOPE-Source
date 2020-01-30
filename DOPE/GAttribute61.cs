@@ -4,23 +4,16 @@ using System.Runtime.CompilerServices;
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public sealed class GAttribute61 : Attribute
 {
-	public GAttribute61([GAttribute1] string type, [GAttribute1] string fieldName)
+	public GAttribute61([GAttribute1] string name)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.Type = type;
-		this.String_0 = fieldName;
+		this.Name = name;
 	}
 
 	[GAttribute1]
-	public string Type { get; private set; }
-
-	[GAttribute1]
-	public string String_0 { get; private set; }
+	public string Name { get; private set; }
 
 	[CompilerGenerated]
 	private string string_0;
-
-	[CompilerGenerated]
-	private string string_1;
 }

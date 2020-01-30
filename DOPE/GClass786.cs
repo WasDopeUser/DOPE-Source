@@ -1,56 +1,69 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-public abstract class GClass786<yNt6yPbGGbg2gfd07Oa> : GInterface7 where yNt6yPbGGbg2gfd07Oa : GInterface7
+public class GClass786
 {
-	[CompilerGenerated]
-	public virtual yNt6yPbGGbg2gfd07Oa vmethod_0()
+	public GClass786(byte[] byte_0 = null)
 	{
-		return this.gparam_0;
-	}
-
-	[CompilerGenerated]
-	public virtual void vmethod_1(yNt6yPbGGbg2gfd07Oa CrmHQNbkanfS1xSStUL)
-	{
-		this.gparam_0 = CrmHQNbkanfS1xSStUL;
-	}
-
-	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		yNt6yPbGGbg2gfd07Oa yNt6yPbGGbg2gfd07Oa = this.vmethod_0();
-		if (yNt6yPbGGbg2gfd07Oa == null)
-		{
-			return;
-		}
-		yNt6yPbGGbg2gfd07Oa.imethod_0(byte_0, int_0, int_1);
-	}
-
-	public virtual void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		yNt6yPbGGbg2gfd07Oa yNt6yPbGGbg2gfd07Oa = this.vmethod_0();
-		if (yNt6yPbGGbg2gfd07Oa == null)
-		{
-			return;
-		}
-		yNt6yPbGGbg2gfd07Oa.imethod_1(byte_0, int_0, int_1);
-	}
-
-	public virtual void imethod_2()
-	{
-		yNt6yPbGGbg2gfd07Oa yNt6yPbGGbg2gfd07Oa = this.vmethod_0();
-		if (yNt6yPbGGbg2gfd07Oa == null)
-		{
-			return;
-		}
-		yNt6yPbGGbg2gfd07Oa.imethod_2();
-	}
-
-	protected GClass786()
-	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
+		this.int_1 = 0;
+		this.int_0 = 0;
+		if (byte_0 != null)
+		{
+			this.method_0(byte_0);
+		}
 	}
 
-	[CompilerGenerated]
-	private yNt6yPbGGbg2gfd07Oa gparam_0;
+	public void method_0(byte[] byte_0)
+	{
+		this.State = new byte[256];
+		int i;
+		for (i = 0; i < 256; i++)
+		{
+			this.State[i] = (byte)i;
+		}
+		int num = 0;
+		i = 0;
+		int num2 = num;
+		while (i < 256)
+		{
+			num2 = (num2 + (int)this.State[i] + (int)byte_0[i % byte_0.Length] & 255);
+			int num3 = (int)this.State[i];
+			this.State[i] = this.State[num2];
+			this.State[num2] = (byte)(num3 & 255);
+			i++;
+		}
+		this.int_1 = 0;
+		this.int_0 = 0;
+	}
+
+	public uint method_1()
+	{
+		this.int_0 = (this.int_0 + 1 & 255);
+		this.int_1 = (this.int_1 + (int)this.State[this.int_0] & 255);
+		int num = (int)this.State[this.int_0];
+		this.State[this.int_0] = this.State[this.int_1];
+		this.State[this.int_1] = (byte)(num & 255);
+		return (uint)this.State[num + (int)this.State[this.int_0] & 255];
+	}
+
+	public void method_2(byte[] byte_0, int int_2, int int_3)
+	{
+		if (this.State == null)
+		{
+			return;
+		}
+		uint num = 0U;
+		while ((ulong)num < (ulong)((long)int_3))
+		{
+			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.method_1()) & 255U);
+			num += 1U;
+		}
+	}
+
+	public byte[] State;
+
+	public int int_0;
+
+	public int int_1;
 }

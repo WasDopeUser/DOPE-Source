@@ -8,7 +8,7 @@ public class GClass159 : GInterface0
 	{
 		get
 		{
-			return 30097;
+			return 17741;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass159 : GInterface0
 
 	public GClass159(int int_0 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.Id = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 30097;
+		return 17741;
 	}
 
 	public virtual int vmethod_1()
@@ -39,21 +39,23 @@ public class GClass159 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (U.smethod_0(this.Id, 2) | this.Id << 30);
 		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (this.Id << 7 | U.smethod_0(this.Id, 25));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(30097);
+		binaryStream_0.smethod_7(17741);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.Id << 2 | U.smethod_0(this.Id, 30));
-		binaryStream_0.smethod_7(19734);
+		binaryStream_0.smethod_7(-20671);
+		binaryStream_0.smethod_7(1665);
+		binaryStream_0.smethod_4(U.smethod_0(this.Id, 7) | this.Id << 25);
 	}
 
 	public int Id;

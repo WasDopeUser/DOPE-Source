@@ -5,12 +5,12 @@ public class GClass107 : GInterface4
 {
 	public void Run(GClass228 e)
 	{
-		ConnectionManager.Instance.Value.Game.Hero.Pet.method_13(e);
+		ConnectionManager.Instance.Value.Game.Hero.Pet.method_16(e);
 	}
 
 	public GClass107()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 }

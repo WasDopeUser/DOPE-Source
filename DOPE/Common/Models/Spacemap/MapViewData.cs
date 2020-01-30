@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Spacemap
 {
-	[Guid("ABF363F4-257A-44DC-8B48-4DFBB295DEB0")]
 	[DataContract]
+	[Guid("ABF363F4-257A-44DC-8B48-4DFBB295DEB0")]
 	public class MapViewData
 	{
 		[DataMember(Order = 1)]

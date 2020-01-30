@@ -8,7 +8,7 @@ public class GClass298 : GInterface0
 	{
 		get
 		{
-			return 8765;
+			return 22702;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass298 : GInterface0
 
 	public GClass298(string string_1 = "", GClass186 gclass186_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -36,7 +36,7 @@ public class GClass298 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 8765;
+		return 22702;
 	}
 
 	public virtual int vmethod_1()
@@ -48,21 +48,21 @@ public class GClass298 : GInterface0
 	{
 		this.gclass186_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass186);
 		this.gclass186_0.imethod_1(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8765);
+		binaryStream_0.smethod_7(22702);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		this.gclass186_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(30850);
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(10574);
 	}
 
 	public GClass186 gclass186_0;

@@ -30,14 +30,14 @@ namespace DarkorbitAPI.Structures
 		{
 			this.Id = gclass276_0.Id;
 			this.Available = gclass276_0.bool_2;
-			this.Buyable = gclass276_0.bool_4;
-			this.CounterValue = gclass276_0.double_1;
-			this.MaxCounterValue = gclass276_0.double_0;
+			this.Buyable = gclass276_0.rmsAeFwwxg;
+			this.CounterValue = gclass276_0.double_0;
+			this.MaxCounterValue = gclass276_0.double_1;
 			this.LootId = gclass276_0.string_0;
-			this.Activatable = gclass276_0.bool_0;
+			this.Activatable = gclass276_0.bool_3;
 			this.Visible = gclass276_0.Visible;
-			this.Blocked = gclass276_0.bool_1;
-			this.Selected = gclass276_0.bool_3;
+			this.Blocked = gclass276_0.bool_0;
+			this.Selected = gclass276_0.bool_1;
 		}
 
 		internal void method_1(GClass277 gclass277_0)
@@ -48,7 +48,7 @@ namespace DarkorbitAPI.Structures
 
 		public MenuItem()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 		}
 	}

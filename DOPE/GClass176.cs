@@ -8,7 +8,7 @@ public class GClass176 : GInterface0
 	{
 		get
 		{
-			return 20957;
+			return 8602;
 		}
 	}
 
@@ -20,29 +20,29 @@ public class GClass176 : GInterface0
 		}
 	}
 
-	public GClass176(GClass728 gclass728_1 = null, GClass581 gclass581_1 = null)
+	public GClass176(GClass729 gclass729_1 = null, GClass582 gclass582_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (gclass728_1 == null)
+		if (gclass729_1 == null)
 		{
-			this.gclass728_0 = new GClass728(0, null);
+			this.gclass729_0 = new GClass729(0, null);
 		}
 		else
 		{
-			this.gclass728_0 = gclass728_1;
+			this.gclass729_0 = gclass729_1;
 		}
-		if (gclass581_1 == null)
+		if (gclass582_1 == null)
 		{
-			this.gclass581_0 = new GClass581(0, null);
+			this.gclass582_0 = new GClass582(0, null);
 			return;
 		}
-		this.gclass581_0 = gclass581_1;
+		this.gclass582_0 = gclass582_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20957;
+		return 8602;
 	}
 
 	public virtual int vmethod_1()
@@ -52,27 +52,25 @@ public class GClass176 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass581_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass581);
-		this.gclass581_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.gclass728_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass728);
-		this.gclass728_0.imethod_1(binaryStream_0);
+		this.gclass729_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass729);
+		this.gclass729_0.imethod_1(binaryStream_0);
+		this.gclass582_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass582);
+		this.gclass582_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20957);
+		binaryStream_0.smethod_7(8602);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass581_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(4050);
-		this.gclass728_0.imethod_2(binaryStream_0);
+		this.gclass729_0.imethod_2(binaryStream_0);
+		this.gclass582_0.imethod_2(binaryStream_0);
 	}
 
-	public GClass581 gclass581_0;
+	public GClass729 gclass729_0;
 
-	public GClass728 gclass728_0;
+	public GClass582 gclass582_0;
 }

@@ -8,7 +8,7 @@ public class GClass207 : GClass197, GInterface0
 	{
 		get
 		{
-			return 4311;
+			return 3409;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass207 : GClass197, GInterface0
 
 	public GClass207(uint uint_1 = 0U)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.uint_0 = uint_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 4311;
+		return 3409;
 	}
 
 	public override int vmethod_1()
@@ -41,22 +41,22 @@ public class GClass207 : GClass197, GInterface0
 	{
 		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(4311);
+		binaryStream_0.smethod_7(3409);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-31430);
-		binaryStream_0.smethod_7(-15228);
+		binaryStream_0.smethod_7(12704);
 		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(-30022);
 	}
 
 	public uint uint_0;

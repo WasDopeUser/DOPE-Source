@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace DarkorbitAPI.CommonStructures
 {
-	public static class GClass813
+	public static class GClass814
 	{
 		public static byte[] smethod_0(this RSACryptoServiceProvider rsacryptoServiceProvider_0, byte[] byte_0)
 		{
@@ -21,10 +21,10 @@ namespace DarkorbitAPI.CommonStructures
 			{
 				throw new ArgumentOutOfRangeException("data", string.Format("Maximum data length for the current key size ({0} bits) is {1} bytes (current length: {2} bytes)", rsacryptoServiceProvider_0.KeySize, num, byte_0.Length));
 			}
-			BigInteger value = GClass813.BuXqMeyhilb(GClass813.raHqMxnJoag(byte_0));
+			BigInteger value = GClass814.smethod_2(GClass814.smethod_3(byte_0));
 			RSAParameters rsaparameters = rsacryptoServiceProvider_0.ExportParameters(true);
-			BigInteger exponent = GClass813.BuXqMeyhilb(rsaparameters.D);
-			BigInteger modulus = GClass813.BuXqMeyhilb(rsaparameters.Modulus);
+			BigInteger exponent = GClass814.smethod_2(rsaparameters.D);
+			BigInteger modulus = GClass814.smethod_2(rsaparameters.Modulus);
 			return BigInteger.ModPow(value, exponent, modulus).ToByteArray();
 		}
 
@@ -36,17 +36,17 @@ namespace DarkorbitAPI.CommonStructures
 			}
 			BigInteger value = new BigInteger(byte_0);
 			RSAParameters rsaparameters = rsacryptoServiceProvider_0.ExportParameters(false);
-			BigInteger exponent = GClass813.BuXqMeyhilb(rsaparameters.Exponent);
-			BigInteger modulus = GClass813.BuXqMeyhilb(rsaparameters.Modulus);
+			BigInteger exponent = GClass814.smethod_2(rsaparameters.Exponent);
+			BigInteger modulus = GClass814.smethod_2(rsaparameters.Modulus);
 			byte[] array = BigInteger.ModPow(value, exponent, modulus).ToByteArray();
 			byte[] array2 = new byte[array.Length - 1];
 			Array.Copy(array, array2, array2.Length);
-			array2 = GClass813.smethod_2(array2);
+			array2 = GClass814.smethod_4(array2);
 			Array.Reverse(array2);
 			return array2;
 		}
 
-		private static BigInteger BuXqMeyhilb(byte[] byte_0)
+		private static BigInteger smethod_2(byte[] byte_0)
 		{
 			byte[] array = (byte[])byte_0.Clone();
 			Array.Reverse(array);
@@ -55,7 +55,7 @@ namespace DarkorbitAPI.CommonStructures
 			return new BigInteger(array2);
 		}
 
-		private static byte[] raHqMxnJoag(byte[] byte_0)
+		private static byte[] smethod_3(byte[] byte_0)
 		{
 			Random random = new Random();
 			byte[] array = new byte[4];
@@ -67,7 +67,7 @@ namespace DarkorbitAPI.CommonStructures
 			return array2;
 		}
 
-		private static byte[] smethod_2(byte[] byte_0)
+		private static byte[] smethod_4(byte[] byte_0)
 		{
 			byte[] array = new byte[byte_0.Length - 4];
 			Array.Copy(byte_0, array, array.Length);

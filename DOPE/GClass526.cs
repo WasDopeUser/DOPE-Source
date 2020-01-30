@@ -8,7 +8,7 @@ public class GClass526 : GInterface0
 	{
 		get
 		{
-			return 7290;
+			return 10347;
 		}
 	}
 
@@ -16,47 +16,72 @@ public class GClass526 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 5;
 		}
 	}
 
-	public GClass526(int int_1 = 0)
+	public GClass526(Vector<GClass327> vector_1 = null, bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass327>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 7290;
+		return 10347;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 5;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass327 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass327;
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(7290);
+		binaryStream_0.smethod_7(10347);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-8906);
-		binaryStream_0.smethod_4(this.int_0 << 9 | U.smethod_0(this.int_0, 23));
-		binaryStream_0.smethod_7(-17189);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass327 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+		binaryStream_0.smethod_7(24324);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public int int_0;
+	public Vector<GClass327> vector_0;
+
+	public bool bool_0;
 }

@@ -8,7 +8,7 @@ public class GClass756 : GInterface0
 	{
 		get
 		{
-			return 6078;
+			return 1977;
 		}
 	}
 
@@ -16,47 +16,45 @@ public class GClass756 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 2;
 		}
 	}
 
-	public GClass756(double double_2 = 0.0, double double_3 = 0.0)
+	public GClass756(string string_1 = "")
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
+		this.string_0 = "";
 		base..ctor();
-		this.double_0 = double_2;
-		this.double_1 = double_3;
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6078;
+		return 1977;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.double_1 = binaryStream_0.ReadDouble();
+		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6078);
+		binaryStream_0.smethod_7(1977);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(9507);
 	}
 
-	public double double_0;
-
-	public double double_1;
+	public string string_0;
 }

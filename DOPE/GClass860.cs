@@ -1,74 +1,153 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
 
-public class GClass860
+public sealed class GClass860 : IDisposable
 {
-	[CompilerGenerated]
-	public int[] method_0()
+	[DllImport("User32.dll")]
+	private static extern bool RegisterHotKey(IntPtr intptr_0, int int_1, uint uint_0, uint uint_1);
+
+	[DllImport("User32.dll")]
+	private static extern bool UnregisterHotKey(IntPtr intptr_0, int int_1);
+
+	public GClass860()
 	{
-		return this.int_0;
+		Class13.Gj4N3WdzaR1LY();
+		this.window_0 = new GClass860.Window();
+		base..ctor();
+		this.window_0.method_0(new EventHandler<GEventArgs0>(this.method_3));
 	}
 
-	[CompilerGenerated]
-	private void method_1(int[] int_1)
+	public void method_0(GEnum13 genum13_0, Keys keys_0)
 	{
-		this.int_0 = int_1;
-	}
-
-	[CompilerGenerated]
-	public byte[] method_2()
-	{
-		return this.byte_0;
-	}
-
-	[CompilerGenerated]
-	private void method_3(byte[] byte_1)
-	{
-		this.byte_0 = byte_1;
-	}
-
-	private void Fill(byte[] s, int[] k)
-	{
-		int i = 0;
-		for (int j = 1; j < s.Length; j++)
+		this.int_0++;
+		if (!GClass860.RegisterHotKey(this.window_0.Handle, this.int_0, (uint)genum13_0, (uint)keys_0))
 		{
-			while (i > 0)
-			{
-				if (s[j] == s[i])
-				{
-					break;
-				}
-				i = k[i - 1];
-			}
-			if (s[j] == s[i])
-			{
-				i++;
-			}
-			k[j] = i;
+			throw new InvalidOperationException("Couldn’t register the hot key.");
 		}
 	}
 
-	public IEnumerable<int> method_4(byte[] byte_1)
+	[CompilerGenerated]
+	public void method_1(EventHandler<GEventArgs0> eventHandler_1)
 	{
-		GClass860.<Match>d__9 <Match>d__ = new GClass860.<Match>d__9(-2);
-		<Match>d__.<>4__this = this;
-		<Match>d__.<>3__q = byte_1;
-		return <Match>d__;
-	}
-
-	public GClass860(byte[] byte_1)
-	{
-		Class13.plZSWFPzBWWEZ();
-		base..ctor();
-		this.method_3(byte_1);
-		this.method_1(new int[byte_1.Length]);
-		this.Fill(byte_1, this.method_0());
+		EventHandler<GEventArgs0> eventHandler = this.eventHandler_0;
+		EventHandler<GEventArgs0> eventHandler2;
+		do
+		{
+			eventHandler2 = eventHandler;
+			EventHandler<GEventArgs0> value = (EventHandler<GEventArgs0>)Delegate.Combine(eventHandler2, eventHandler_1);
+			eventHandler = Interlocked.CompareExchange<EventHandler<GEventArgs0>>(ref this.eventHandler_0, value, eventHandler2);
+		}
+		while (eventHandler != eventHandler2);
 	}
 
 	[CompilerGenerated]
-	private int[] int_0;
+	public void method_2(EventHandler<GEventArgs0> eventHandler_1)
+	{
+		EventHandler<GEventArgs0> eventHandler = this.eventHandler_0;
+		EventHandler<GEventArgs0> eventHandler2;
+		do
+		{
+			eventHandler2 = eventHandler;
+			EventHandler<GEventArgs0> value = (EventHandler<GEventArgs0>)Delegate.Remove(eventHandler2, eventHandler_1);
+			eventHandler = Interlocked.CompareExchange<EventHandler<GEventArgs0>>(ref this.eventHandler_0, value, eventHandler2);
+		}
+		while (eventHandler != eventHandler2);
+	}
+
+	public void Dispose()
+	{
+		for (int i = this.int_0; i > 0; i--)
+		{
+			GClass860.UnregisterHotKey(this.window_0.Handle, i);
+		}
+		this.window_0.Dispose();
+	}
 
 	[CompilerGenerated]
-	private byte[] byte_0;
+	private void method_3(object sender, GEventArgs0 e)
+	{
+		if (this.eventHandler_0 != null)
+		{
+			this.eventHandler_0(this, e);
+		}
+	}
+
+	private GClass860.Window window_0;
+
+	private int int_0;
+
+	[CompilerGenerated]
+	private EventHandler<GEventArgs0> eventHandler_0;
+
+	private class Window : NativeWindow, IDisposable
+	{
+		public Window()
+		{
+			Class13.Gj4N3WdzaR1LY();
+			base..ctor();
+			this.CreateHandle(new CreateParams());
+		}
+
+		protected override void WndProc(ref Message m)
+		{
+			base.WndProc(ref m);
+			if (m.Msg == GClass860.Window.int_0)
+			{
+				Keys keys_ = (Keys)((int)m.LParam >> 16 & 65535);
+				GEnum13 genum13_ = (GEnum13)((int)m.LParam & 65535);
+				if (this.eventHandler_0 != null)
+				{
+					this.eventHandler_0(this, new GEventArgs0(genum13_, keys_));
+				}
+			}
+		}
+
+		[CompilerGenerated]
+		public void method_0(EventHandler<GEventArgs0> eventHandler_1)
+		{
+			EventHandler<GEventArgs0> eventHandler = this.eventHandler_0;
+			EventHandler<GEventArgs0> eventHandler2;
+			do
+			{
+				eventHandler2 = eventHandler;
+				EventHandler<GEventArgs0> value = (EventHandler<GEventArgs0>)Delegate.Combine(eventHandler2, eventHandler_1);
+				eventHandler = Interlocked.CompareExchange<EventHandler<GEventArgs0>>(ref this.eventHandler_0, value, eventHandler2);
+			}
+			while (eventHandler != eventHandler2);
+		}
+
+		[CompilerGenerated]
+		public void method_1(EventHandler<GEventArgs0> eventHandler_1)
+		{
+			EventHandler<GEventArgs0> eventHandler = this.eventHandler_0;
+			EventHandler<GEventArgs0> eventHandler2;
+			do
+			{
+				eventHandler2 = eventHandler;
+				EventHandler<GEventArgs0> value = (EventHandler<GEventArgs0>)Delegate.Remove(eventHandler2, eventHandler_1);
+				eventHandler = Interlocked.CompareExchange<EventHandler<GEventArgs0>>(ref this.eventHandler_0, value, eventHandler2);
+			}
+			while (eventHandler != eventHandler2);
+		}
+
+		public void Dispose()
+		{
+			this.DestroyHandle();
+		}
+
+		// Note: this type is marked as 'beforefieldinit'.
+		static Window()
+		{
+			Class13.Gj4N3WdzaR1LY();
+			GClass860.Window.int_0 = 786;
+		}
+
+		private static int int_0;
+
+		[CompilerGenerated]
+		private EventHandler<GEventArgs0> eventHandler_0;
+	}
 }

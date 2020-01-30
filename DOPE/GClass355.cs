@@ -8,7 +8,7 @@ public class GClass355 : GClass354, GInterface0
 	{
 		get
 		{
-			return 28841;
+			return 29161;
 		}
 	}
 
@@ -20,21 +20,21 @@ public class GClass355 : GClass354, GInterface0
 		}
 	}
 
-	public GClass355(GClass434 gclass434_1 = null)
+	public GClass355(GClass433 gclass433_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (gclass434_1 == null)
+		if (gclass433_1 == null)
 		{
-			this.gclass434_0 = new GClass434(0U, "", null, null);
+			this.gclass433_0 = new GClass433(0U, "", null, null);
 			return;
 		}
-		this.gclass434_0 = gclass434_1;
+		this.gclass433_0 = gclass433_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 28841;
+		return 29161;
 	}
 
 	public override int vmethod_1()
@@ -45,21 +45,25 @@ public class GClass355 : GClass354, GInterface0
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.gclass434_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass434);
-		this.gclass434_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.gclass433_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass433);
+		this.gclass433_0.imethod_1(binaryStream_0);
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28841);
+		binaryStream_0.smethod_7(29161);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		this.gclass434_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(2166);
+		binaryStream_0.smethod_7(-1580);
+		this.gclass433_0.imethod_2(binaryStream_0);
 	}
 
-	public GClass434 gclass434_0;
+	public GClass433 gclass433_0;
 }

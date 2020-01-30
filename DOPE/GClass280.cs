@@ -20,9 +20,9 @@ public class GClass280 : GInterface0
 		}
 	}
 
-	public GClass280(int int_3 = 0, int int_4 = 147, int int_5 = 1, bool bool_1 = false)
+	public GClass280(int int_3 = 0, int int_4 = 148, int int_5 = 1, bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.int_0 = int_3;
 		this.int_1 = int_4;

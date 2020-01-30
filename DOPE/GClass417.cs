@@ -8,7 +8,7 @@ public class GClass417 : GInterface0
 	{
 		get
 		{
-			return 28333;
+			return 18535;
 		}
 	}
 
@@ -16,67 +16,57 @@ public class GClass417 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 12;
 		}
 	}
 
-	public GClass417(bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, bool bool_10 = false)
+	public GClass417(int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.bool_2 = bool_5;
-		this.bool_4 = bool_6;
-		this.QmiijjpnCf = bool_7;
-		this.bool_0 = bool_8;
-		this.bool_1 = bool_9;
-		this.bool_3 = bool_10;
+		this.int_1 = int_3;
+		this.int_0 = int_4;
+		this.int_2 = int_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28333;
+		return 18535;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.QmiijjpnCf = binaryStream_0.ReadBoolean();
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		this.bool_2 = binaryStream_0.ReadBoolean();
-		this.bool_3 = binaryStream_0.ReadBoolean();
-		this.bool_4 = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		binaryStream_0.smethod_1();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (U.smethod_0(this.int_2, 13) | this.int_2 << 19);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28333);
+		binaryStream_0.smethod_7(18535);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.WriteBoolean(this.QmiijjpnCf);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.WriteBoolean(this.bool_2);
-		binaryStream_0.WriteBoolean(this.bool_3);
-		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_7(19111);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		binaryStream_0.smethod_4(this.int_2 << 13 | U.smethod_0(this.int_2, 19));
 	}
 
-	public bool bool_0;
+	public int int_0;
 
-	public bool QmiijjpnCf;
+	public int int_1;
 
-	public bool bool_1;
-
-	public bool bool_2;
-
-	public bool bool_3;
-
-	public bool bool_4;
+	public int int_2;
 }

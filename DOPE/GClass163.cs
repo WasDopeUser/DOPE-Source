@@ -8,7 +8,7 @@ public class GClass163 : GInterface0
 	{
 		get
 		{
-			return 31927;
+			return 11970;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass163 : GInterface0
 
 	public GClass163(GClass258 gclass258_1 = null, int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		if (gclass258_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass163 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 31927;
+		return 11970;
 	}
 
 	public virtual int vmethod_1()
@@ -54,7 +54,7 @@ public class GClass163 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31927);
+		binaryStream_0.smethod_7(11970);
 		this.vmethod_2(binaryStream_0);
 	}
 

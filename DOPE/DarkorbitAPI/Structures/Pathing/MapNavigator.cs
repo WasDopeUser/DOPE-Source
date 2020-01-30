@@ -12,7 +12,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapNavigator()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 			this.items = new MapNavigator.QueueItem[(MapUtils.LargeMapSize.Width / 100 + 1) * (MapUtils.LargeMapSize.Height / 50 + 1)];
 			this._queue = new BfsQueue<MapNavigator.QueueItem>(this.items, new MapNavigator.Comparer());
@@ -469,7 +469,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				if (keyValuePair.Value.IsNpc)
 				{
-					CS$<>8__locals1.npcPositions.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_0(200), (keyValuePair.Value as NpcShip).Range));
+					CS$<>8__locals1.npcPositions.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_1(200), (keyValuePair.Value as NpcShip).Range));
 				}
 			}
 			MapNavigator.QueueItem[] array = this.items;
@@ -536,7 +536,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		// Note: this type is marked as 'beforefieldinit'.
 		static MapNavigator()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			MapNavigator.NULL = new ValueTuple<int, int>(-1, -1);
 		}
 
@@ -616,7 +616,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		private int method_13(Vector2 vector2_0, ref MapNavigator.<>c__DisplayClass21_0 <>c__DisplayClass21_0_0)
 		{
 			int num = 0;
-			num = 0 + (int)Math.Max(0f, 900f - <>c__DisplayClass21_0_0.grid.Map.method_2(vector2_0));
+			num = 0 + (int)Math.Max(0f, 900f - <>c__DisplayClass21_0_0.grid.Map.method_3(vector2_0));
 			foreach (ValueTuple<Vector2, int> valueTuple in <>c__DisplayClass21_0_0.npcPositions)
 			{
 				num += (int)Math.Max(0f, (float)valueTuple.Item2 - Vector2.Distance(valueTuple.Item1, vector2_0));
@@ -677,7 +677,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		{
 			public QueueItem(int int_0, int int_1)
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				this.Distance = int_0;
 				this.Left = int_1;
 				this.Visited = false;
@@ -702,7 +702,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 			public Comparer()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 		}

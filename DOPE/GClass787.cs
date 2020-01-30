@@ -1,34 +1,56 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
-public class GClass787<BK7YiXbJMnApNvPSqEK> : GClass786<BK7YiXbJMnApNvPSqEK> where BK7YiXbJMnApNvPSqEK : GInterface7
+public abstract class GClass787<duG4vZNp7OvFTJKwR0u> : GInterface7 where duG4vZNp7OvFTJKwR0u : GInterface7
 {
-	public GClass787()
+	[CompilerGenerated]
+	public virtual duG4vZNp7OvFTJKwR0u vmethod_0()
 	{
-		Class13.plZSWFPzBWWEZ();
+		return this.gparam_0;
+	}
+
+	[CompilerGenerated]
+	public virtual void vmethod_1(duG4vZNp7OvFTJKwR0u TQjt5uNlFvvN2gjI5rB)
+	{
+		this.gparam_0 = TQjt5uNlFvvN2gjI5rB;
+	}
+
+	public virtual void UmklIaSsoWi(byte[] byte_0, int int_0, int int_1)
+	{
+		duG4vZNp7OvFTJKwR0u duG4vZNp7OvFTJKwR0u = this.vmethod_0();
+		if (duG4vZNp7OvFTJKwR0u == null)
+		{
+			return;
+		}
+		duG4vZNp7OvFTJKwR0u.UmklIaSsoWi(byte_0, int_0, int_1);
+	}
+
+	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		duG4vZNp7OvFTJKwR0u duG4vZNp7OvFTJKwR0u = this.vmethod_0();
+		if (duG4vZNp7OvFTJKwR0u == null)
+		{
+			return;
+		}
+		duG4vZNp7OvFTJKwR0u.imethod_0(byte_0, int_0, int_1);
+	}
+
+	public virtual void imethod_1()
+	{
+		duG4vZNp7OvFTJKwR0u duG4vZNp7OvFTJKwR0u = this.vmethod_0();
+		if (duG4vZNp7OvFTJKwR0u == null)
+		{
+			return;
+		}
+		duG4vZNp7OvFTJKwR0u.imethod_1();
+	}
+
+	protected GClass787()
+	{
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.gclass785_0 = new GClass785(null);
-		this.gclass785_1 = new GClass785(null);
 	}
 
-	public void method_0(byte[] byte_0)
-	{
-		this.gclass785_0.method_0(byte_0);
-		this.gclass785_1.method_0(byte_0);
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		base.imethod_1(byte_0, int_0, int_1);
-		this.gclass785_1.method_1(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.gclass785_0.method_1(byte_0, int_0, int_1);
-		base.imethod_0(byte_0, int_0, int_1);
-	}
-
-	private GClass785 gclass785_0;
-
-	private GClass785 gclass785_1;
+	[CompilerGenerated]
+	private duG4vZNp7OvFTJKwR0u gparam_0;
 }

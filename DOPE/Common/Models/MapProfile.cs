@@ -19,8 +19,8 @@ namespace DOPE.Common.Models
 	[DataContract]
 	public class MapProfile : INotifyPropertyChanged
 	{
-		[DataMember(Order = 1)]
 		[Layout(GroupName = "Main", Description = "Enable map profile")]
+		[DataMember(Order = 1)]
 		public bool Enabled
 		{
 			[CompilerGenerated]
@@ -40,10 +40,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Layout(GroupName = "Main", Description = "Group size", CustomVisibility = "obj => obj.ModuleType == 4")]
+		[DataMember(Order = 42)]
 		[Range(2, 8)]
 		[DefaultValue(2)]
-		[DataMember(Order = 42)]
-		[Layout(GroupName = "Main", Description = "Group size", CustomVisibility = "obj => obj.ModuleType == 4")]
 		public int QZ_GroupSize
 		{
 			[CompilerGenerated]
@@ -59,12 +59,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<QZ_GroupSize>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_76);
 			}
 		}
 
-		[DataMember(Order = 25)]
 		[Layout(GroupName = "Main", Description = "Priority", RightDescription = "Higher number -> higher priority")]
+		[DataMember(Order = 25)]
 		[Range(0, 9999999)]
 		public int Priority
 		{
@@ -81,7 +81,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Priority>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
 			}
 		}
 
@@ -120,13 +120,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Collector>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_14);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_15);
 			}
 		}
 
-		[Layout(GroupName = "Hunter", Description = "Enable NPC hunter")]
 		[DefaultValue(true)]
 		[DataMember(Order = 5)]
+		[Layout(GroupName = "Hunter", Description = "Enable NPC hunter")]
 		public bool Hunter
 		{
 			[CompilerGenerated]
@@ -142,12 +142,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Hunter>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_46);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_49);
 			}
 		}
 
-		[DataMember(Order = 6)]
 		[Layout(GroupName = "Collector", Description = "Stay cloaked", RightDescription = "Works only if NPC hunter is disabled", CustomVisibility = "obj => obj.ModuleType == 0 && !obj.Name.startsWith('GG ')")]
+		[DataMember(Order = 6)]
 		public bool Cloak
 		{
 			[CompilerGenerated]
@@ -168,8 +168,8 @@ namespace DOPE.Common.Models
 		}
 
 		[DataMember(Order = 7)]
-		[DefaultValue(true)]
 		[Layout(GroupName = "Collector", Description = "Collect bonus boxes")]
+		[DefaultValue(true)]
 		public bool CollectBonus
 		{
 			[CompilerGenerated]
@@ -227,13 +227,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectMaterials>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.mHxqUgjMiYb);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_14);
 			}
 		}
 
-		[DefaultValue(true)]
 		[DataMember(Order = 10)]
 		[Layout(GroupName = "Main_Safety", Description = "Flee from enemies seen")]
+		[DefaultValue(true)]
 		public bool FleeFromEnemySeen
 		{
 			[CompilerGenerated]
@@ -249,12 +249,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFromEnemySeen>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_29);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_32);
 			}
 		}
 
-		[DefaultValue(false)]
 		[Layout(GroupName = "Main_Safety", Description = "Flee only from known enemies", RightDescription = "DOPE remembers all aggressors reported by its users in the last 24 hours")]
+		[DefaultValue(false)]
 		[DataMember(Order = 29)]
 		public bool FleeOnlyFromKnownEnemySeen
 		{
@@ -271,13 +271,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeOnlyFromKnownEnemySeen>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_30);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_33);
 			}
 		}
 
-		[DefaultValue(true)]
-		[Layout(GroupName = "Main_Safety", Description = "Flee from enemy on attack")]
 		[DataMember(Order = 11)]
+		[Layout(GroupName = "Main_Safety", Description = "Flee from enemy on attack")]
+		[DefaultValue(true)]
 		public bool FleeFromEnemyAttacker
 		{
 			[CompilerGenerated]
@@ -293,7 +293,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFromEnemyAttacker>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_28);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_31);
 			}
 		}
 
@@ -314,12 +314,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeStopOnEnemyLost>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_31);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_34);
 			}
 		}
 
-		[Layout(GroupName = "Main_Safety", Description = "Repair below % HP", CustomVisibility = "obj => obj.ModuleType != 1")]
 		[DataMember(Order = 12)]
+		[Layout(GroupName = "Main_Safety", Description = "Repair below % HP", CustomVisibility = "obj => obj.ModuleType != 1")]
 		[DefaultValue(40)]
 		[Range(0, 100)]
 		public int MinHp
@@ -337,13 +337,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinHp>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_62);
 			}
 		}
 
-		[DefaultValue(60)]
-		[Layout(GroupName = "Main_Safety", Description = "Use heal ability below % HP")]
 		[DataMember(Order = 37)]
+		[Layout(GroupName = "Main_Safety", Description = "Use heal ability below % HP")]
+		[DefaultValue(60)]
 		public int MinHealHp
 		{
 			[CompilerGenerated]
@@ -359,12 +359,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinHealHp>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_58);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
 			}
 		}
 
-		[DefaultValue(TargetMap.X1)]
 		[DataMember(Order = 13)]
+		[DefaultValue(TargetMap.X1)]
 		public TargetMap TargetMap
 		{
 			[CompilerGenerated]
@@ -381,13 +381,13 @@ namespace DOPE.Common.Models
 				}
 				this.<TargetMap>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Name);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_97);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_102);
 			}
 		}
 
-		[DefaultValue(60)]
 		[Layout(GroupName = "Main_Safety", Description = "Wait X seconds after fleeing")]
 		[DataMember(Order = 14)]
+		[DefaultValue(60)]
 		public int FleeTimeout
 		{
 			[CompilerGenerated]
@@ -403,7 +403,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeTimeout>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_32);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_35);
 			}
 		}
 
@@ -424,13 +424,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<ReviveAtPortal>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_76);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_79);
 			}
 		}
 
 		[DefaultValue(1)]
-		[DataMember(Order = 15)]
 		[Range(1, 2)]
+		[DataMember(Order = 15)]
 		[Layout(GroupName = "Main_Config", Description = "Flying config")]
 		public int FlyingConfig
 		{
@@ -447,7 +447,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FlyingConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_33);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_36);
 			}
 		}
 
@@ -468,14 +468,14 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FlyingFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_34);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_37);
 			}
 		}
 
+		[Range(1, 2)]
 		[DefaultValue(1)]
 		[DataMember(Order = 31)]
 		[Layout(GroupName = "Main_Config", Description = "Flee config")]
-		[Range(1, 2)]
 		public int FleeConfig
 		{
 			[CompilerGenerated]
@@ -491,7 +491,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.UbNqUnoxoCX);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_29);
 			}
 		}
 
@@ -512,14 +512,14 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_27);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_30);
 			}
 		}
 
-		[Range(1, 2)]
-		[Layout(GroupName = "Main_Config", Description = "Attack config")]
 		[DefaultValue(2)]
 		[DataMember(Order = 17)]
+		[Layout(GroupName = "Main_Config", Description = "Attack config")]
+		[Range(1, 2)]
 		public int AttackConfig
 		{
 			[CompilerGenerated]
@@ -560,9 +560,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 43)]
-		[Range(0, 2)]
 		[Layout(GroupName = "Main_Config", Description = "Kamikaze config")]
+		[Range(0, 2)]
+		[DataMember(Order = 43)]
 		public int KamikazeConfig
 		{
 			[CompilerGenerated]
@@ -578,7 +578,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<KamikazeConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_49);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
 			}
 		}
 
@@ -599,12 +599,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<KamikazeFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_50);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_53);
 			}
 		}
 
-		[DataMember(Order = 36)]
 		[Layout(GroupName = "Main_Config", Description = "Use Moth formation to kill corner NPCs", CustomVisibility = "obj => obj.Name.startsWith('GG ')")]
+		[DataMember(Order = 36)]
 		public bool UseMothToKillCorners
 		{
 			[CompilerGenerated]
@@ -620,12 +620,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseMothToKillCorners>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_103);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
 			}
 		}
 
-		[DefaultValue(true)]
 		[DataMember(Order = 19)]
+		[DefaultValue(true)]
 		[Layout(GroupName = "Hunter", Description = "Circle NPCs", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
 		public bool CircleNpcs
 		{
@@ -647,8 +647,8 @@ namespace DOPE.Common.Models
 		}
 
 		[DefaultValue(true)]
-		[Layout(GroupName = "Hunter", Description = "Drag NPCs instead of circling", CustomVisibility = "obj => obj.Name.startsWith('GG ')")]
 		[DataMember(Order = 39)]
+		[Layout(GroupName = "Hunter", Description = "Drag NPCs instead of circling", CustomVisibility = "obj => obj.Name.startsWith('GG ')")]
 		public bool GG_DragNpcs
 		{
 			[CompilerGenerated]
@@ -664,12 +664,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<GG_DragNpcs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_36);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_39);
 			}
 		}
 
-		[Layout(GroupName = "Hunter", Description = "Collect boxes while circling", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
 		[DefaultValue(true)]
+		[Layout(GroupName = "Hunter", Description = "Collect boxes while circling", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
 		[DataMember(Order = 33)]
 		public bool SecondaryCircleNpcs
 		{
@@ -686,13 +686,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<SecondaryCircleNpcs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_78);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_81);
 			}
 		}
 
-		[DataMember(Order = 20)]
-		[DefaultValue(LaserType.LCB_10)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Default laser")]
+		[DefaultValue(LaserType.LCB_10)]
+		[DataMember(Order = 20)]
 		public LaserType DefaultLaser
 		{
 			[CompilerGenerated]
@@ -708,13 +708,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultLaser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_17);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_18);
 			}
 		}
 
 		[DefaultValue(RocketType.None)]
-		[DataMember(Order = 21)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Default rockets")]
+		[DataMember(Order = 21)]
 		public RocketType DefaultRocket
 		{
 			[CompilerGenerated]
@@ -730,12 +730,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultRocket>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_18);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_19);
 			}
 		}
 
-		[DataMember(Order = 22)]
 		[DefaultValue(HellstormType.None)]
+		[DataMember(Order = 22)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Default hellstorm")]
 		public HellstormType DefaultHellstorm
 		{
@@ -752,7 +752,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultHellstorm>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_16);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_17);
 			}
 		}
 
@@ -775,7 +775,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinSabShield>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_60);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_63);
 			}
 		}
 
@@ -796,12 +796,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseRocketPrecision>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_114);
 			}
 		}
 
-		[DataMember(Order = 23)]
 		[Layout(GroupName = "Hunter_Whitelist", CustomType = "collection")]
+		[DataMember(Order = 23)]
 		public ObservableCollection<SelectedNpcModel> NpcWhitelist
 		{
 			[CompilerGenerated]
@@ -817,12 +817,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<NpcWhitelist>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_64);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_67);
 			}
 		}
 
-		[DataMember(Order = 26)]
 		[Layout(GroupName = "Main", Description = "Use P.E.T.")]
+		[DataMember(Order = 26)]
 		public PetModeSelection PetMode
 		{
 			[CompilerGenerated]
@@ -838,7 +838,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<PetMode>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_69);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_72);
 			}
 		}
 
@@ -859,14 +859,14 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<GG_UseKamikazeCorner>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_37);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_40);
 			}
 		}
 
-		[DefaultValue(0)]
-		[DataMember(Order = 3)]
 		[Range(0, 2147483647)]
 		[Layout(GroupName = "Schedule", Description = "Change map after X deaths", RightDescription = "Leave 0 to disable")]
+		[DataMember(Order = 3)]
+		[DefaultValue(0)]
 		public int MaxDeaths
 		{
 			[CompilerGenerated]
@@ -882,13 +882,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MaxDeaths>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_57);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_60);
 			}
 		}
 
-		[Layout(GroupName = "Schedule", Description = "Switch to another map profile after X minutes", RightDescription = "Leave 0 to disable")]
 		[Range(0, 1440)]
 		[DataMember(Order = 27)]
+		[Layout(GroupName = "Schedule", Description = "Switch to another map profile after X minutes", RightDescription = "Leave 0 to disable")]
 		public int MapDuration
 		{
 			[CompilerGenerated]
@@ -904,13 +904,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MapDuration>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_58);
 			}
 		}
 
-		[Range(0, 1440)]
-		[DataMember(Order = 28)]
 		[Layout(GroupName = "Schedule", Description = "Map cooldown in minutes")]
+		[DataMember(Order = 28)]
+		[Range(0, 1440)]
 		public int MapCooldown
 		{
 			[CompilerGenerated]
@@ -926,7 +926,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MapCooldown>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_54);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_57);
 			}
 		}
 
@@ -947,7 +947,7 @@ namespace DOPE.Common.Models
 				}
 				this.<ModuleType>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Name);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_64);
 			}
 		}
 
@@ -967,7 +967,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectPalladium>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_15);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_16);
 			}
 		}
 
@@ -982,11 +982,11 @@ namespace DOPE.Common.Models
 			if (map != null)
 			{
 				int int_ = targetMap ?? map.MapId;
-				if (MapUtils.smethod_7(int_) != GEnum5.None)
+				if (MapUtils.uHiiygsnnX(int_) != GEnum5.None)
 				{
 					if (this.NpcWhitelist.Any((SelectedNpcModel t) => NpcUtils.NpcById[t.NpcId] is NpcUtils.GGWaveType))
 					{
-						GEnum5 type = MapUtils.smethod_7(int_);
+						GEnum5 type = MapUtils.uHiiygsnnX(int_);
 						DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = map.Game.Web.GgInfo;
 						DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(type) : null;
 						if (jumpgateGate == null)
@@ -1051,11 +1051,11 @@ namespace DOPE.Common.Models
 				r = ((model.Rocket == RocketType.Default) ? r : model.Rocket);
 				h = ((model.Hellstorm == HellstormType.Default) ? h : model.Hellstorm);
 				bool flag;
-				if (map.method_7(ship, out flag) && model.GgCornerLaser != LaserType.Default)
+				if (map.method_8(ship, out flag) && model.GgCornerLaser != LaserType.Default)
 				{
 					a = model.GgCornerLaser;
 				}
-				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_17("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
+				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_21("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
 				{
 					a = LaserType.SAB_50;
 				}
@@ -1196,8 +1196,8 @@ namespace DOPE.Common.Models
 			base..ctor();
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

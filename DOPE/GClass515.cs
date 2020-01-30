@@ -8,7 +8,7 @@ public class GClass515 : GInterface0
 	{
 		get
 		{
-			return 22977;
+			return 15136;
 		}
 	}
 
@@ -16,54 +16,63 @@ public class GClass515 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass515(int int_1 = 0, GClass650 gclass650_0 = null)
+	public GClass515(GClass499 gclass499_1 = null, GClass452 gclass452_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_0 = int_1;
-		if (gclass650_0 == null)
+		if (gclass499_1 == null)
 		{
-			this.State = new GClass650(0.0, false, false);
+			this.gclass499_0 = new GClass499(0, false, false, false, 0, null);
+		}
+		else
+		{
+			this.gclass499_0 = gclass499_1;
+		}
+		if (gclass452_1 == null)
+		{
+			this.gclass452_0 = new GClass452(0, null, 0U, 0U, 0.0, false, null, null);
 			return;
 		}
-		this.State = gclass650_0;
+		this.gclass452_0 = gclass452_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22977;
+		return 15136;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-		this.State = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass650);
-		this.State.imethod_1(binaryStream_0);
+		this.gclass452_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass452);
+		this.gclass452_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
+		this.gclass499_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass499);
+		this.gclass499_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22977);
+		binaryStream_0.smethod_7(15136);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
-		this.State.imethod_2(binaryStream_0);
+		this.gclass452_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-10347);
+		this.gclass499_0.imethod_2(binaryStream_0);
 	}
 
-	public int int_0;
+	public GClass452 gclass452_0;
 
-	public GClass650 State;
+	public GClass499 gclass499_0;
 }

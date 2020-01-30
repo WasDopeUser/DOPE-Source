@@ -153,7 +153,7 @@ namespace DOPE.UI
 
 		public DebugWindow()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			this.<Filtered>k__BackingField = new ObservableCollection<TreeNode>();
 			this.<All>k__BackingField = new List<TreeHeaderNode>();
 			this.<JumpToLast>k__BackingField = true;
@@ -211,7 +211,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void method_1<yxGhK1Td2XHansrnMO>(GClass84<yxGhK1Td2XHansrnMO> gclass84_0) where yxGhK1Td2XHansrnMO : GInterface7
+		public void method_1<znqbWc5y1V58aYoSxU>(GClass84<znqbWc5y1V58aYoSxU> gclass84_0) where znqbWc5y1V58aYoSxU : GInterface7
 		{
 			gclass84_0.MessageSent += this.method_6;
 			gclass84_0.MessageReceived += this.method_5;

@@ -8,7 +8,7 @@ public class GClass782 : GInterface0
 	{
 		get
 		{
-			return 29151;
+			return 13101;
 		}
 	}
 
@@ -16,42 +16,56 @@ public class GClass782 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass782(uint uint_1 = 0U)
+	public GClass782(GClass386 gclass386_1 = null, int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.uint_0 = uint_1;
+		if (gclass386_1 == null)
+		{
+			this.gclass386_0 = new GClass386();
+		}
+		else
+		{
+			this.gclass386_0 = gclass386_1;
+		}
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29151;
+		return 13101;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.gclass386_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass386);
+		this.gclass386_0.imethod_1(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29151);
+		binaryStream_0.smethod_7(13101);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(this.uint_0);
+		this.gclass386_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
 	}
 
-	public uint uint_0;
+	public GClass386 gclass386_0;
+
+	public int int_0;
 }

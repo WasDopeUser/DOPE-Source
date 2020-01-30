@@ -8,7 +8,7 @@ public class GClass703 : GInterface0
 	{
 		get
 		{
-			return 14197;
+			return 15220;
 		}
 	}
 
@@ -16,62 +16,60 @@ public class GClass703 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 0;
 		}
 	}
 
-	public GClass703(int int_3 = 0, int int_4 = 0, int int_5 = 0, double double_1 = 0.0)
+	public GClass703(uint uint_2 = 0U, uint uint_3 = 0U, GClass354 gclass354_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_2 = int_3;
-		this.int_0 = int_4;
-		this.int_1 = int_5;
-		this.double_0 = double_1;
+		this.uint_0 = uint_2;
+		this.uint_1 = uint_3;
+		if (gclass354_1 == null)
+		{
+			this.gclass354_0 = new GClass354();
+			return;
+		}
+		this.gclass354_0 = gclass354_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 14197;
+		return 15220;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		this.double_0 = (double)binaryStream_0.smethod_10();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 11 | U.smethod_0(this.int_1, 21));
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (U.smethod_0(this.int_2, 8) | this.int_2 << 24);
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
+		this.gclass354_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass354);
+		this.gclass354_0.imethod_1(binaryStream_0);
+		this.uint_1 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(14197);
+		binaryStream_0.smethod_7(15220);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 9 | U.smethod_0(this.int_0, 23));
-		binaryStream_0.smethod_9(this.double_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 11) | this.int_1 << 21);
-		binaryStream_0.smethod_4(this.int_2 << 8 | U.smethod_0(this.int_2, 24));
-		binaryStream_0.smethod_7(29732);
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(16355);
+		this.gclass354_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(this.uint_1);
 	}
 
-	public int int_0;
+	public uint uint_0;
 
-	public double double_0;
+	public GClass354 gclass354_0;
 
-	public int int_1;
-
-	public int int_2;
+	public uint uint_1;
 }

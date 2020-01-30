@@ -1,28 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-[AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Method | AttributeTargets.Parameter)]
 public sealed class GAttribute44 : Attribute
 {
-	public GAttribute44(GEnum2 genum2_1)
+	public GAttribute44()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.method_1(genum2_1);
 	}
-
-	[CompilerGenerated]
-	public GEnum2 method_0()
-	{
-		return this.genum2_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GEnum2 genum2_1)
-	{
-		this.genum2_0 = genum2_1;
-	}
-
-	[CompilerGenerated]
-	private GEnum2 genum2_0;
 }

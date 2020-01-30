@@ -24,7 +24,7 @@ namespace DarkorbitAPI
 	{
 		static DarkOrbitWebAPI()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			DarkOrbitWebAPI.randomizer = new Random();
 			DarkOrbitWebAPI.place_bet_btn = "BID";
 			DarkOrbitWebAPI.ServerInstances = null;
@@ -46,7 +46,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Sid>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_97);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_103);
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Uid>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_103);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_110);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<UserName>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_105);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_112);
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Server>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_91);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_97);
 			}
 		}
 
@@ -181,7 +181,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<ForcedUserAgent>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_104);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_111);
 				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_20);
 			}
 		}
@@ -212,7 +212,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI(GameManager game)
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			this.BootyArray = new string[3];
 			this.HourAuctionItems = new List<DarkOrbitWebAPI.Item>();
 			this.MyOffers = new List<DarkOrbitWebAPI.Item>();
@@ -248,7 +248,7 @@ namespace DarkorbitAPI
 
 		public bool CheckLoggedIn()
 		{
-			return this.CheckedLoggedIn(this.Get(GClass812.smethod_1(this.Server, null), null).Content);
+			return this.CheckedLoggedIn(this.Get(GClass813.smethod_1(this.Server, null), null).Content);
 		}
 
 		private IDictionary<string, string> GetValues(object data)
@@ -449,7 +449,7 @@ namespace DarkorbitAPI
 			{
 				return;
 			}
-			MatchCollection matchCollection = Regex.Matches(JsonConvert.DeserializeObject<DarkOrbitWebAPI.ServerInstanceList>(this.Post(GClass812.smethod_8(this.Server), new Dictionary<string, string>
+			MatchCollection matchCollection = Regex.Matches(JsonConvert.DeserializeObject<DarkOrbitWebAPI.ServerInstanceList>(this.Post(GClass813.smethod_8(this.Server), new Dictionary<string, string>
 			{
 				{
 					"command",
@@ -503,7 +503,7 @@ namespace DarkorbitAPI
 				}
 				else if (proxy == null)
 				{
-					gclass.method_6();
+					gclass.method_5();
 					this._handler.Proxy = null;
 				}
 				else
@@ -521,7 +521,7 @@ namespace DarkorbitAPI
 			this.IsLoggedIn = false;
 			CS$<>8__locals1.server = CS$<>8__locals1.server.ToLower();
 			this.Server = CS$<>8__locals1.server;
-			string text = GClass812.smethod_0(CS$<>8__locals1.server);
+			string text = GClass813.smethod_0(CS$<>8__locals1.server);
 			CS$<>8__locals1.reqs = 0;
 			DarkOrbitWebAPI.Response response = this.Get(text, null);
 			CS$<>8__locals1.token = DarkOrbitWebAPI.StringBetween(response.Content, "bgcdw_login_form\" action=\"", "\"").Replace("amp;", "");
@@ -551,7 +551,7 @@ namespace DarkorbitAPI
 				})[0].Trim();
 				if (((text3 != null) ? text3.ToLower() : null) != this.Server)
 				{
-					CS$<>8__locals1.resp = this.Post(GClass812.smethod_8(text3), new Dictionary<string, string>
+					CS$<>8__locals1.resp = this.Post(GClass813.smethod_8(text3), new Dictionary<string, string>
 					{
 						{
 							"command",
@@ -651,7 +651,7 @@ namespace DarkorbitAPI
 
 		public FlashSettings GetFlashSettings()
 		{
-			return this.GetFlashSettings(this.Get(GClass812.smethod_2(this.Server), null).Content);
+			return this.GetFlashSettings(this.Get(GClass813.smethod_2(this.Server), null).Content);
 		}
 
 		public FlashSettings GetFlashSettings(string content)
@@ -681,12 +681,12 @@ namespace DarkorbitAPI
 
 		public Dictionary<int, string> GetMapHosts()
 		{
-			return this.GetMapHosts(this.Get(GClass812.Maps(this.Server), null).Content);
+			return this.GetMapHosts(this.Get(GClass813.Maps(this.Server), null).Content);
 		}
 
 		public async Task<Dictionary<int, string>> GetMapHostsAsync()
 		{
-			DarkOrbitWebAPI.Response response = await this.GetAsync(GClass812.Maps(this.Server), null);
+			DarkOrbitWebAPI.Response response = await this.GetAsync(GClass813.Maps(this.Server), null);
 			return this.GetMapHosts(response.Content);
 		}
 
@@ -703,7 +703,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI.spacemap GetSpacemapConfig()
 		{
-			return this.GetSpacemapConfig(this.Get(GClass812.smethod_3(), null).Content);
+			return this.GetSpacemapConfig(this.Get(GClass813.smethod_3(), null).Content);
 		}
 
 		public DarkOrbitWebAPI.spacemap GetSpacemapConfig(string content)
@@ -742,7 +742,7 @@ namespace DarkorbitAPI
 
 		public string method_0()
 		{
-			return this.Get(GClass812.smethod_12(), null).Content;
+			return this.Get(GClass813.smethod_12(), null).Content;
 		}
 
 		public DarkOrbitWebAPI.GalaxyGatesInfo GetGalaxyGatesInfo()
@@ -751,7 +751,7 @@ namespace DarkorbitAPI
 			{
 				return null;
 			}
-			DarkOrbitWebAPI.Response response = this.Get(GClass812.smethod_6(this.Server, this.Uid, this.Sid, "init"), delegate(HttpRequestMessage msg)
+			DarkOrbitWebAPI.Response response = this.Get(GClass813.smethod_6(this.Server, this.Uid, this.Sid, "init"), delegate(HttpRequestMessage msg)
 			{
 				msg.Headers.Add("X-Requested-With", "ShockwaveFlash/32.0.0.270");
 			});
@@ -808,7 +808,7 @@ namespace DarkorbitAPI
 
 		public void Logout()
 		{
-			this.Get(GClass812.smethod_4(this.Server), null);
+			this.Get(GClass813.smethod_4(this.Server), null);
 		}
 
 		private static int ParseNumber(string str, bool ZeroIfNone)
@@ -836,13 +836,13 @@ namespace DarkorbitAPI
 			}
 			new
 			{
-				w8hGOaF3NSI09hRwxPi = "hour",
-				o4XoUBF6dgSaIGm5yvS = "bid",
-				KUnFVEFOVZT8SkwxrnM = item.lootId,
-				zQEb78FpmYnDfedkK5V = item.itemId,
-				d3dgfBFNxY6rHqcUaeU = credits,
-				vNApKxFAcXHWcD5Rkcd = DarkOrbitWebAPI.place_bet_btn,
-				ivSOBOFGdsJ5RtY4llm = reloadToken2
+				KpfwQPb4BLpHlFaJCTH = "hour",
+				h3HIyObBN55vJ6yEfvx = "bid",
+				up30ebbQLkQv4niJ3NK = item.lootId,
+				SSjkoXbHxf2iPrE5r2u = item.itemId,
+				pNvV3PbKbnFrZUgul5s = credits,
+				YTf5jobkBpb6nxGrZPq = DarkOrbitWebAPI.place_bet_btn,
+				fkDt2HbhJvXpGVIxeFC = reloadToken2
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -875,7 +875,7 @@ namespace DarkorbitAPI
 					reloadToken2
 				}
 			};
-			string content = this.Post(GClass812.smethod_1(this.Server, "internalAuction") + "&reloadToken=" + reloadToken2, data, GClass812.smethod_1(this.Server, "internalAuction"), null).Content;
+			string content = this.Post(GClass813.smethod_1(this.Server, "internalAuction") + "&reloadToken=" + reloadToken2, data, GClass813.smethod_1(this.Server, "internalAuction"), null).Content;
 			item.Credits = credits;
 			return content;
 		}
@@ -927,12 +927,12 @@ namespace DarkorbitAPI
 		{
 			new
 			{
-				u7kPgFFK12ta0vSA9gu = "purchase",
-				dQHqcXF5OjWcsEyACfO = category,
-				cBTN84FnOYvxXUaOfPX = itemId,
-				tWhGOvFxYgY48TbbIVn = amount,
-				eijvAsFWgQhMNKUmlAB = level,
-				DrSB1eFVmOpywHdngdv = selectedName
+				lHy9YubvXanFqNF7X22 = "purchase",
+				jhKS6qbIhpBPUpxGfUU = category,
+				PgGjChbg6XehYmTxWpQ = itemId,
+				eysg3FbtsjvJJrdum0X = amount,
+				RTopuhbRumBR4KH1KEa = level,
+				HevQLnb1nPVnYFDGPXS = selectedName
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -961,7 +961,7 @@ namespace DarkorbitAPI
 					selectedName
 				}
 			};
-			return this.Post(GClass812.smethod_5(this.Server), data, "https://darkorbit.com", null).Content.Contains("result: \"success\"");
+			return this.Post(GClass813.smethod_5(this.Server), data, "https://darkorbit.com", null).Content.Contains("result: \"success\"");
 		}
 
 		public bool BuyCloak()
@@ -1012,8 +1012,8 @@ namespace DarkorbitAPI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -1047,7 +1047,7 @@ namespace DarkorbitAPI
 		{
 			public Response(Uri uri, string response, HttpResponseMessage data)
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 				this.Uri = uri;
 				this.Content = response;
@@ -1065,7 +1065,7 @@ namespace DarkorbitAPI
 		{
 			public Credentials(string Username, string Password, string server, bool Auto, bool IsTemplate = false)
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 				this.Username = Username;
 				this.Password = Password;
@@ -1076,7 +1076,7 @@ namespace DarkorbitAPI
 
 			protected Credentials()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1095,7 +1095,7 @@ namespace DarkorbitAPI
 		{
 			public BasicItem(string Name, DarkOrbitWebAPI.ItemType type, string itemId, string lootId, int Uridium, int Credits)
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 				this.Name = Name;
 				this.Type = type;
@@ -1107,7 +1107,7 @@ namespace DarkorbitAPI
 
 			protected BasicItem()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1128,7 +1128,7 @@ namespace DarkorbitAPI
 		{
 			public Item(string Name, DarkOrbitWebAPI.ItemType Type, string itemId, string lootId, int Uridium, int Credits, int LocalCredits, string Winner, string Image, bool Winning = false)
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 				this.Type = Type;
 				this.itemId = itemId;
@@ -1144,7 +1144,7 @@ namespace DarkorbitAPI
 
 			protected Item()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1422,7 +1422,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfo()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1488,7 +1488,7 @@ namespace DarkorbitAPI
 
 			public jumpgateEnergy_cost()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1543,7 +1543,7 @@ namespace DarkorbitAPI
 
 			public jumpgateMultiplier()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1587,7 +1587,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbability()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1629,7 +1629,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbabilityCat()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1791,7 +1791,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGate()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -1862,7 +1862,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGateGatebuilders()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2027,7 +2027,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfoUpdate()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2232,7 +2232,7 @@ namespace DarkorbitAPI
 
 			public jumpgateItem()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2272,7 +2272,7 @@ namespace DarkorbitAPI
 
 			public ServerInstanceList()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 		}
@@ -2298,7 +2298,7 @@ namespace DarkorbitAPI
 
 			public maps()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2337,7 +2337,7 @@ namespace DarkorbitAPI
 
 			public mapsMap()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2380,7 +2380,7 @@ namespace DarkorbitAPI
 
 			public spacemap()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2482,7 +2482,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgate()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2534,7 +2534,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgatePosition()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2576,7 +2576,7 @@ namespace DarkorbitAPI
 
 			public spacemapMap()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2605,7 +2605,7 @@ namespace DarkorbitAPI
 
 			public spacemapMapNpc()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2633,7 +2633,7 @@ namespace DarkorbitAPI
 
 			public NpcConstants()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 
@@ -2673,7 +2673,7 @@ namespace DarkorbitAPI
 
 			public resourceItem()
 			{
-				Class13.plZSWFPzBWWEZ();
+				Class13.Gj4N3WdzaR1LY();
 				base..ctor();
 			}
 

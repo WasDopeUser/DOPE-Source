@@ -8,7 +8,7 @@ public class GClass375 : GInterface0
 	{
 		get
 		{
-			return 29002;
+			return 26949;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass375 : GInterface0
 
 	public GClass375()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29002;
+		return 26949;
 	}
 
 	public virtual int vmethod_1()
@@ -43,12 +43,12 @@ public class GClass375 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29002);
+		binaryStream_0.smethod_7(26949);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-19699);
+		binaryStream_0.smethod_7(-28147);
 	}
 }

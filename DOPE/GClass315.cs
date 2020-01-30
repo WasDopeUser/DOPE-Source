@@ -8,7 +8,7 @@ public class GClass315 : GInterface0
 	{
 		get
 		{
-			return 10601;
+			return 28251;
 		}
 	}
 
@@ -22,16 +22,16 @@ public class GClass315 : GInterface0
 
 	public GClass315(bool bool_3 = false, bool bool_4 = false, bool bool_5 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.bool_0 = bool_3;
-		this.bool_2 = bool_4;
-		this.bool_1 = bool_5;
+		this.bool_1 = bool_4;
+		this.bool_2 = bool_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 10601;
+		return 28251;
 	}
 
 	public virtual int vmethod_1()
@@ -49,7 +49,7 @@ public class GClass315 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10601);
+		binaryStream_0.smethod_7(28251);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -57,7 +57,7 @@ public class GClass315 : GInterface0
 	{
 		binaryStream_0.WriteBoolean(this.bool_0);
 		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.smethod_7(-24071);
+		binaryStream_0.smethod_7(13242);
 		binaryStream_0.WriteBoolean(this.bool_2);
 	}
 

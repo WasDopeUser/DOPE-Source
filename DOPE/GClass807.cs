@@ -2,23 +2,25 @@
 
 public static class GClass807
 {
-	public static s6htBVbsjTFerONxfJu smethod_0<s6htBVbsjTFerONxfJu>(this Enum enum_0) where s6htBVbsjTFerONxfJu : Attribute
+	public static bool Cooldown(this DateTime date, int ms)
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(s6htBVbsjTFerONxfJu), false);
-		if (customAttributes.Length == 0)
-		{
-			return default(s6htBVbsjTFerONxfJu);
-		}
-		return (s6htBVbsjTFerONxfJu)((object)customAttributes[0]);
+		return (DateTime.Now - date).TotalMilliseconds >= (double)ms;
 	}
 
-	public static XYQdoNbRIjPOkg73Ii0 smethod_1<XYQdoNbRIjPOkg73Ii0>(this Enum enum_0) where XYQdoNbRIjPOkg73Ii0 : Attribute
+	public static bool Cooldown(this DateTimeOffset date, int ms)
 	{
-		object[] customAttributes = enum_0.GetType().GetMember(enum_0.ToString())[0].GetCustomAttributes(typeof(XYQdoNbRIjPOkg73Ii0), false);
-		if (customAttributes.Length == 0)
-		{
-			return default(XYQdoNbRIjPOkg73Ii0);
-		}
-		return (XYQdoNbRIjPOkg73Ii0)((object)customAttributes[0]);
+		return (DateTimeOffset.Now - date).TotalMilliseconds >= (double)ms;
+	}
+
+	public static bool smethod_0(this DateTimeOffset dateTimeOffset_0, int int_0)
+	{
+		DateTimeOffset now = DateTimeOffset.Now;
+		return !(dateTimeOffset_0 > now) && (now - dateTimeOffset_0).TotalMilliseconds <= (double)int_0;
+	}
+
+	public static bool smethod_1(this DateTimeOffset dateTimeOffset_0, TimeSpan timeSpan_0)
+	{
+		DateTimeOffset now = DateTimeOffset.Now;
+		return !(dateTimeOffset_0 > now) && now - dateTimeOffset_0 <= timeSpan_0;
 	}
 }

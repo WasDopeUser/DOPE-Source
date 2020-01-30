@@ -6,7 +6,7 @@ public class GClass100 : GInterface4
 	public void Run(GClass219 cmd)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
-		if (!value.method_18())
+		if (!value.method_19())
 		{
 			return;
 		}
@@ -15,7 +15,7 @@ public class GClass100 : GInterface4
 			value.Game.Hero.Clear();
 			value.Game.Map.Clear();
 		}
-		value.Game.method_6(cmd);
+		value.Game.method_5(cmd);
 		value.SendMessage(new GClass158());
 		if (cmd.Reset)
 		{
@@ -26,7 +26,7 @@ public class GClass100 : GInterface4
 
 	public GClass100()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 }

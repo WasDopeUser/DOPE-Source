@@ -8,7 +8,7 @@ public class GClass309 : GClass307, GInterface0
 	{
 		get
 		{
-			return 24842;
+			return 10468;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass309 : GClass307, GInterface0
 
 	public GClass309(GClass139 gclass139_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		if (gclass139_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass309 : GClass307, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 24842;
+		return 10468;
 	}
 
 	public override int vmethod_1()
@@ -52,14 +52,14 @@ public class GClass309 : GClass307, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24842);
+		binaryStream_0.smethod_7(10468);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(25191);
+		binaryStream_0.smethod_7(21192);
 		this.gclass139_0.imethod_2(binaryStream_0);
 	}
 

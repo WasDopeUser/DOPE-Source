@@ -14,7 +14,7 @@ public class GClass118 : GInterface4
 
 	public GClass118()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 }

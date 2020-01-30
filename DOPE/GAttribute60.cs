@@ -1,19 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.Property)]
 public sealed class GAttribute60 : Attribute
 {
-	public GAttribute60([GAttribute1] string name)
+	[CompilerGenerated]
+	public bool method_0()
 	{
-		Class13.plZSWFPzBWWEZ();
-		base..ctor();
-		this.Name = name;
+		return this.bool_0;
 	}
 
-	[GAttribute1]
-	public string Name { get; private set; }
+	[CompilerGenerated]
+	private void method_1(bool bool_1)
+	{
+		this.bool_0 = bool_1;
+	}
+
+	public GAttribute60(bool bool_1)
+	{
+		Class13.Gj4N3WdzaR1LY();
+		base..ctor();
+		this.method_1(bool_1);
+	}
 
 	[CompilerGenerated]
-	private string string_0;
+	private bool bool_0;
 }

@@ -8,7 +8,7 @@ public class GClass612 : GInterface0
 	{
 		get
 		{
-			return 22688;
+			return 12683;
 		}
 	}
 
@@ -16,77 +16,71 @@ public class GClass612 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 6;
 		}
 	}
 
-	public GClass612(int int_2 = 0, Vector<int> vector_1 = null, int int_3 = 0)
+	public GClass612(bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, bool bool_10 = false, bool bool_11 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_1 = int_2;
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<int>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		this.int_0 = int_3;
+		this.bool_0 = bool_6;
+		this.bool_4 = bool_7;
+		this.bool_2 = bool_8;
+		this.bool_5 = bool_9;
+		this.bool_3 = bool_10;
+		this.bool_1 = bool_11;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22688;
+		return 12683;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 5 | U.smethod_0(num3, 27));
-			this.vector_0.method_0(num3);
-			num++;
-		}
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 10 | U.smethod_0(this.int_1, 22));
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_2 = binaryStream_0.ReadBoolean();
+		this.bool_3 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
+		this.bool_4 = binaryStream_0.ReadBoolean();
+		this.bool_5 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22688);
+		binaryStream_0.smethod_7(12683);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (int num in this.vector_0)
-		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 5) | num << 27);
-		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 10) | this.int_1 << 22);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_2);
+		binaryStream_0.WriteBoolean(this.bool_3);
+		binaryStream_0.smethod_7(-29131);
+		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.WriteBoolean(this.bool_5);
+		binaryStream_0.smethod_7(20224);
 	}
 
-	public int int_0;
+	public bool bool_0;
 
-	public Vector<int> vector_0;
+	public bool bool_1;
 
-	public int int_1;
+	public bool bool_2;
+
+	public bool bool_3;
+
+	public bool bool_4;
+
+	public bool bool_5;
 }

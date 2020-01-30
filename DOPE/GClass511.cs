@@ -8,7 +8,7 @@ public class GClass511 : GInterface0
 	{
 		get
 		{
-			return 6135;
+			return 2274;
 		}
 	}
 
@@ -16,60 +16,51 @@ public class GClass511 : GInterface0
 	{
 		get
 		{
-			return 28;
+			return 8;
 		}
 	}
 
-	public GClass511(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0, int int_1 = 0)
+	public GClass511(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.double_0 = double_3;
-		this.double_2 = double_4;
-		this.double_1 = double_5;
-		this.int_0 = int_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6135;
+		return 2274;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 28;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
-		this.double_1 = binaryStream_0.ReadDouble();
-		this.double_2 = binaryStream_0.ReadDouble();
+		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		binaryStream_0.smethod_1();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 16 | U.smethod_0(this.int_1, 16));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6135);
+		binaryStream_0.smethod_7(2274);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-13118);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
-		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.WriteDouble(this.double_2);
+		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_7(-5204);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 16) | this.int_1 << 16);
 	}
-
-	public double double_0;
 
 	public int int_0;
 
-	public double double_1;
-
-	public double double_2;
+	public int int_1;
 }

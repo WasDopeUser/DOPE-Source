@@ -8,7 +8,7 @@ public class GClass348 : GInterface0
 	{
 		get
 		{
-			return 30746;
+			return 10211;
 		}
 	}
 
@@ -20,15 +20,15 @@ public class GClass348 : GInterface0
 		}
 	}
 
-	public GClass348(string string_0 = "", Vector<GClass757> vector_1 = null)
+	public GClass348(string string_0 = "", Vector<GClass758> vector_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.Name = "";
 		base..ctor();
 		this.Name = string_0;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass757>();
+			this.vector_0 = new Vector<GClass758>();
 			return;
 		}
 		this.vector_0 = vector_1;
@@ -36,7 +36,7 @@ public class GClass348 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 30746;
+		return 10211;
 	}
 
 	public virtual int vmethod_1()
@@ -46,7 +46,6 @@ public class GClass348 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Name = binaryStream_0.smethod_2();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -55,30 +54,31 @@ public class GClass348 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			GClass757 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass757;
+			GClass758 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass758;
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			num++;
 		}
+		this.Name = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(30746);
+		binaryStream_0.smethod_7(10211);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.Name);
 		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass757 gclass in this.vector_0)
+		foreach (GClass758 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
+		binaryStream_0.smethod_3(this.Name);
 	}
 
-	public string Name;
+	public Vector<GClass758> vector_0;
 
-	public Vector<GClass757> vector_0;
+	public string Name;
 }

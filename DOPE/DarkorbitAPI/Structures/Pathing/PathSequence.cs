@@ -15,7 +15,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public PathSequence(Vector2 vector2_0)
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			base..ctor();
 			this.Path = new List<Vector2>();
 			this.Destination = vector2_0;
@@ -49,7 +49,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				return Vector2.Distance(vector2_0, this.Path.FirstOrDefault<Vector2>()) < (float)int_1;
 			}
 			int num = int_0 + 1;
-			return num < this.Path.Count && GClass810.smethod_11(this.Path[int_0], this.Path[num], vector2_0, true) < (double)int_1;
+			return num < this.Path.Count && GClass811.smethod_13(this.Path[int_0], this.Path[num], vector2_0, true) < (double)int_1;
 		}
 
 		public bool method_2(Vector2 vector2_0, Action<Vector2> action_0, MapGrid mapGrid_0, int int_0 = 30)

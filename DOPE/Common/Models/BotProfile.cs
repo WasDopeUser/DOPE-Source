@@ -54,7 +54,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Maps>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_56);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
 			}
 		}
 
@@ -239,8 +239,8 @@ namespace DOPE.Common.Models
 			base..ctor();
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

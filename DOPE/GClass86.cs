@@ -17,7 +17,7 @@ public class GClass86
 
 	static GClass86()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		GClass86.dictionary_0 = new Dictionary<int, Type>();
 		foreach (Type type in typeof(GClass86).Assembly.GetTypes())
 		{
@@ -49,7 +49,7 @@ public class GClass86
 
 	public GClass86()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 	}
 

@@ -1,199 +1,64 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
 
-public class GClass790
+public class GClass790 : GClass789
 {
-	[CompilerGenerated]
-	public BigInteger method_0()
+	public GClass788<GClass792> method_0()
 	{
-		return this.bigInteger_0;
+		return (GClass788<GClass792>)this.vmethod_0();
 	}
 
-	[CompilerGenerated]
-	public void method_1(BigInteger bigInteger_3)
+	public GClass790()
 	{
-		this.bigInteger_0 = bigInteger_3;
-	}
-
-	[CompilerGenerated]
-	public BigInteger method_2()
-	{
-		return this.bigInteger_1;
-	}
-
-	[CompilerGenerated]
-	public void method_3(BigInteger bigInteger_3)
-	{
-		this.bigInteger_1 = bigInteger_3;
-	}
-
-	[CompilerGenerated]
-	public BigInteger method_4()
-	{
-		return this.bigInteger_2;
-	}
-
-	[CompilerGenerated]
-	public void method_5(BigInteger bigInteger_3)
-	{
-		this.bigInteger_2 = bigInteger_3;
-	}
-
-	public static BigInteger smethod_0(byte[] byte_0)
-	{
-		byte[] array = (byte[])byte_0.Clone();
-		Array.Reverse(array);
-		int num = (array[array.Length - 1] == 0) ? 0 : 1;
-		byte[] array2 = new byte[array.Length + num];
-		Array.Copy(array, array2, array.Length);
-		return new BigInteger(array2);
-	}
-
-	public static byte[] smethod_1(string string_0)
-	{
-		if (string_0.Length % 2 != 0)
-		{
-			throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "The binary key cannot have an odd number of digits: {0}", string_0));
-		}
-		byte[] array = new byte[string_0.Length / 2];
-		for (int i = 0; i < array.Length; i++)
-		{
-			string s = string_0.Substring(i * 2, 2);
-			array[i] = byte.Parse(s, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
-		}
-		return array;
-	}
-
-	public static BigInteger smethod_2(string string_0)
-	{
-		return GClass790.smethod_0(GClass790.smethod_1(string_0));
-	}
-
-	public GClass790(BigInteger bigInteger_3, BigInteger bigInteger_4, BigInteger bigInteger_5)
-	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
+		this.random_0 = new Random();
 		base..ctor();
-		this.method_1(bigInteger_3);
-		this.method_3(bigInteger_4);
-		this.method_5(bigInteger_5);
+		this.vmethod_1(new GClass788<GClass792>());
 	}
 
-	protected BigInteger method_6(BigInteger bigInteger_3)
+	public override void vmethod_2(byte[] byte_0)
 	{
-		return BigInteger.ModPow(bigInteger_3, this.method_2(), this.method_0());
-	}
-
-	protected BigInteger method_7(BigInteger bigInteger_3)
-	{
-		return BigInteger.ModPow(bigInteger_3, this.method_4(), this.method_0());
-	}
-
-	private void method_8(Func<BigInteger, BigInteger> func_0, byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
-	{
-		Func<BigInteger, uint, byte[]> func = new Func<BigInteger, uint, byte[]>(this.method_13);
-		uint arg = (uint)this.method_12();
-		uint num = uint_0 + uint_1;
-		for (uint num2 = uint_0; num2 < num; num2 += uint_1)
+		GClass791 gclass = new GClass791(GClass791.smethod_2("cc0306d7b0f0c671000bd655485744417a868b29dd77619e42b51f70c28e67d0bbc2caf9dd364cb0419217bcfba86c33735b543fae2b666059b59c631955962afa1f97e0f49f92bf1a5463ae89c751a661e0485c2ec6e011634abfb4a4142157"), new BigInteger(65537), BigInteger.Zero);
+		using (MemoryStream memoryStream = new MemoryStream())
 		{
-			BigInteger arg2 = GClass790.smethod_0(byte_0.Skip((int)uint_0).Take((int)uint_1).ToArray<byte>());
-			BigInteger arg3 = func_0(arg2);
-			byte[] array = func(arg3, arg).ToArray<byte>();
-			stream_0.Write(array, 0, array.Length);
+			gclass.method_12(byte_0, memoryStream, 0U, (uint)byte_0.Length);
+			byte_0 = memoryStream.ToArray();
+		}
+		BigInteger value = GClass791.smethod_0(byte_0);
+		BigInteger modulus = GClass791.smethod_2("9cce462cfbf3984cc160c90f73c767bf94f0e41b2dfcc88a981ecc8089075077916e71507dad5272f41ac83ebb73eb78cad7cf381ebd2a2170211564ba05d8af");
+		byte[] byte_ = BigInteger.ModPow(value, this.bigInteger_0, modulus).ToByteArray().Reverse<byte>().ToArray<byte>().Take(16).ToArray<byte>();
+		this.method_0().method_0(byte_);
+	}
+
+	public override void vmethod_3(DollConfig dollConfig_0, Action action_0)
+	{
+		GClass792 tqjt5uNlFvvN2gjI5rB = GClass799.smethod_0(dollConfig_0);
+		this.method_0().vmethod_1(tqjt5uNlFvvN2gjI5rB);
+		if (action_0 != null)
+		{
+			action_0();
 		}
 	}
 
-	private void xPwJdUjxYy(Func<BigInteger, BigInteger> func_0, byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
+	public override byte[] vmethod_4()
 	{
-		uint num = (uint)this.method_12();
-		uint num2 = uint_0 + uint_1;
-		for (uint num3 = uint_0; num3 < num2; num3 += num)
+		byte[] array = new byte[64];
+		array[0] = 87;
+		for (int i = 1; i < 64; i++)
 		{
-			BigInteger arg = GClass790.smethod_0(this.method_9(byte_0, (int)num2, (int)num, (int)num3));
-			byte[] array = func_0(arg).ToByteArray();
-			for (int i = (int)(num - 1U); i >= 0; i--)
-			{
-				stream_0.WriteByte(array[i]);
-			}
+			array[i] = (byte)this.random_0.Next(1, 256);
 		}
+		BigInteger exponent = GClass791.smethod_0(array);
+		BigInteger value = GClass791.smethod_2("8abb0fba15a87dcf63686b96a362824eb85283942aa5b42e971543063a03e6f389bf3abcf4b4eb85430a699e0f3969e60dec9819bc81cc3ac905fbc8a90eb46b");
+		BigInteger modulus = GClass791.smethod_2("9cce462cfbf3984cc160c90f73c767bf94f0e41b2dfcc88a981ecc8089075077916e71507dad5272f41ac83ebb73eb78cad7cf381ebd2a2170211564ba05d8af");
+		this.bigInteger_0 = exponent;
+		return BigInteger.ModPow(value, exponent, modulus).ToByteArray().Reverse<byte>().ToArray<byte>();
 	}
 
-	private byte[] method_9(byte[] byte_0, int int_0, int int_1, int int_2)
-	{
-		byte[] array = new byte[int_1];
-		int_0 = Math.Min(int_0, Math.Min(byte_0.Length, int_2 + int_1 - 11));
-		int num = int_0 - 1;
-		while (num >= int_2 && int_1 > 11)
-		{
-			array[--int_1] = byte_0[num--];
-		}
-		array[--int_1] = 0;
-		while (int_1 > 2)
-		{
-			byte b;
-			for (b = 0; b == 0; b = byte.MaxValue)
-			{
-			}
-			array[--int_1] = b;
-		}
-		array[--int_1] = 1;
-		array[--int_1] = 0;
-		return array;
-	}
+	private readonly Random random_0;
 
-	public void method_10(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
-	{
-		this.xPwJdUjxYy(new Func<BigInteger, BigInteger>(this.method_7), byte_0, stream_0, uint_0, uint_1);
-	}
-
-	public void method_11(byte[] byte_0, Stream stream_0, uint uint_0, uint uint_1)
-	{
-		this.method_8(new Func<BigInteger, BigInteger>(this.method_6), byte_0, stream_0, uint_0, uint_1);
-	}
-
-	public int method_12()
-	{
-		return this.method_0().ToByteArray().Reverse<byte>().SkipWhile(new Func<byte, bool>(GClass790.<>c.<>c_0.method_0)).Count<byte>();
-	}
-
-	protected byte[] method_13(BigInteger bigInteger_3, uint uint_0)
-	{
-		MemoryStream memoryStream = new MemoryStream();
-		int num = 0;
-		byte[] array = bigInteger_3.ToByteArray().Reverse<byte>().ToArray<byte>();
-		while (num < array.Length && array[num] == 0)
-		{
-			num++;
-		}
-		if ((long)(array.Length - num) == (long)((ulong)(uint_0 - 1U)) && array[num] <= 2)
-		{
-			num++;
-			while (array[num] != 0)
-			{
-				if (++num >= array.Length)
-				{
-					throw new InvalidOperationException();
-				}
-			}
-			while (++num < array.Length)
-			{
-				memoryStream.WriteByte(array[num]);
-			}
-			memoryStream.Position = 0L;
-			return memoryStream.ToArray();
-		}
-		throw new InvalidOperationException();
-	}
-
-	[CompilerGenerated]
 	private BigInteger bigInteger_0;
-
-	[CompilerGenerated]
-	private BigInteger bigInteger_1;
-
-	[CompilerGenerated]
-	private BigInteger bigInteger_2;
 }

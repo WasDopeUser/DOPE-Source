@@ -55,7 +55,7 @@ public partial class GClass5 : Application
 		this.logger_0 = LogManager.GetLogger("DOPE");
 		this.logger_0.Info("Loading DOPE {arch} {version} on {architecture} ({os})", new object[]
 		{
-			GClass857.smethod_1() ? "x86" : "x64",
+			GClass858.smethod_1() ? "x86" : "x64",
 			Constants.VersionString,
 			Environment.Is64BitOperatingSystem ? "x64" : "x86",
 			Environment.OSVersion.VersionString
@@ -82,7 +82,7 @@ public partial class GClass5 : Application
 		{
 			try
 			{
-				GClass863 gclass = new GClass863();
+				GClass864 gclass = new GClass864();
 				gclass.Start();
 				PErkava.Host = gclass;
 			}

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass398 : GClass396, GInterface0
+public class GClass398 : GClass395, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 15673;
+			return 31663;
 		}
 	}
 
@@ -16,65 +16,51 @@ public class GClass398 : GClass396, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 8;
 		}
 	}
 
-	public GClass398(GClass589 gclass589_2 = null, GClass589 gclass589_3 = null)
+	public GClass398(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (gclass589_2 == null)
-		{
-			this.gclass589_0 = new GClass589("", 0.0);
-		}
-		else
-		{
-			this.gclass589_0 = gclass589_2;
-		}
-		if (gclass589_3 == null)
-		{
-			this.gclass589_1 = new GClass589("", 0.0);
-			return;
-		}
-		this.gclass589_1 = gclass589_3;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public override int vmethod_0()
 	{
-		return 15673;
+		return 31663;
 	}
 
 	public override int vmethod_1()
 	{
-		return 0;
+		return 8;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.gclass589_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass589);
-		this.gclass589_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.gclass589_1 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass589);
-		this.gclass589_1.imethod_1(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 6 | U.smethod_0(this.int_1, 26));
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15673);
+		binaryStream_0.smethod_7(31663);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		this.gclass589_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(29897);
-		this.gclass589_1.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 6) | this.int_1 << 26);
 	}
 
-	public GClass589 gclass589_0;
+	public int int_0;
 
-	public GClass589 gclass589_1;
+	public int int_1;
 }

@@ -8,7 +8,7 @@ public class GClass134 : GInterface0
 	{
 		get
 		{
-			return 6224;
+			return 31724;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass134 : GInterface0
 
 	public GClass134(double double_1 = 0.0, Vector<GClass330> vector_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.double_0 = double_1;
 		if (vector_1 == null)
@@ -35,7 +35,7 @@ public class GClass134 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 6224;
+		return 31724;
 	}
 
 	public virtual int vmethod_1()
@@ -60,12 +60,11 @@ public class GClass134 : GInterface0
 		}
 		binaryStream_0.smethod_1();
 		this.double_0 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6224);
+		binaryStream_0.smethod_7(31724);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -76,9 +75,8 @@ public class GClass134 : GInterface0
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(21808);
+		binaryStream_0.smethod_7(-14759);
 		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(20427);
 	}
 
 	public Vector<GClass330> vector_0;

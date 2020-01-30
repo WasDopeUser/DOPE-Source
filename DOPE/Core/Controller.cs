@@ -28,15 +28,15 @@ namespace DOPE.Core
 	{
 		public Controller(string string_2, string string_3)
 		{
-			Class13.plZSWFPzBWWEZ();
-			this.dateTimeOffset_0 = DateTimeOffset.MinValue;
+			Class13.Gj4N3WdzaR1LY();
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
+			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
 			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.method_0);
 			base..ctor();
 			this.entanglementHostService_0 = new EntanglementHostService();
-			this.entanglementHostService_0.Register<GInterface8, GClass853>(EntanglementAccess.Global).Register<IBotController, GClass852>(EntanglementAccess.Manual);
-			this.Control = (GClass853)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
+			this.entanglementHostService_0.Register<GInterface8, GClass854>(EntanglementAccess.Global).Register<IBotController, GClass853>(EntanglementAccess.Manual);
+			this.Control = (GClass854)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
 			this.Control.Parent = this;
 			this.Control.Type = string_2;
 			this.Control.Version = string_3;
@@ -78,7 +78,7 @@ namespace DOPE.Core
 				}
 				this.idopeService_0 = value;
 				this.method_18(Class10.propertyChangedEventArgs_16);
-				this.method_18(Class10.fsAqGzbmcgb);
+				this.method_18(Class10.propertyChangedEventArgs_54);
 			}
 		}
 
@@ -140,21 +140,21 @@ namespace DOPE.Core
 			}
 		}
 
-		public GClass853 Control
+		public GClass854 Control
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.gclass853_0;
+				return this.gclass854_0;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (object.Equals(this.gclass853_0, value))
+				if (object.Equals(this.gclass854_0, value))
 				{
 					return;
 				}
-				this.gclass853_0 = value;
+				this.gclass854_0 = value;
 				this.method_18(Class10.propertyChangedEventArgs_11);
 			}
 		}
@@ -192,7 +192,7 @@ namespace DOPE.Core
 		{
 			if (this.Status == GEnum12.Disconnected)
 			{
-				this.rQcqFaGeFyj = DateTimeOffset.Now;
+				this.dateTimeOffset_0 = DateTimeOffset.Now;
 			}
 		}
 
@@ -241,7 +241,7 @@ namespace DOPE.Core
 			DateTimeOffset now = DateTimeOffset.Now;
 			IConnection connection = this.Connection;
 			bool flag = connection != null && connection.Connected;
-			if (this.rQcqFaGeFyj.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
+			if (this.dateTimeOffset_0.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
 			{
 				this.method_7(this.Key);
 			}
@@ -249,17 +249,17 @@ namespace DOPE.Core
 			{
 				this.Connection.Close();
 			}
-			else if (this.Status == GEnum12.Connecting && flag && this.dateTimeOffset_1.AddSeconds(5.0) < now)
+			else if (this.Status == GEnum12.Connecting && flag && this.dateTimeOffset_2.AddSeconds(5.0) < now)
 			{
 				this.Connection.Close();
 			}
-			if ((now - this.dateTimeOffset_0).TotalSeconds > 30.0 && this.Status == GEnum12.Connected && this.Service != null)
+			if ((now - this.dateTimeOffset_1).TotalSeconds > 30.0 && this.Status == GEnum12.Connected && this.Service != null)
 			{
 				DopeServiceStatus serviceStatus = await this.Service.GetServiceStatus();
 				this.ServiceStatus = serviceStatus;
 				if (this.ServiceStatus != null)
 				{
-					this.dateTimeOffset_0 = now;
+					this.dateTimeOffset_1 = now;
 					foreach (string message in this.ServiceStatus.BreakingNews)
 					{
 						Controller.logger_0.Warn(message);
@@ -280,7 +280,7 @@ namespace DOPE.Core
 		{
 			Controller.logger_0.Info("Stopping...");
 			this.timer_0.Change(-1, -1);
-			foreach (GClass852 gclass in this.Control.Bots)
+			foreach (GClass853 gclass in this.Control.Bots)
 			{
 				this.Control.ForceStopBot(gclass.BotId).GetAwaiter().GetResult();
 			}
@@ -331,7 +331,7 @@ namespace DOPE.Core
 						}
 						Controller.logger_0.Info("Connecting to DOPE service...");
 						this.bool_0 = true;
-						this.dateTimeOffset_1 = DateTimeOffset.Now;
+						this.dateTimeOffset_2 = DateTimeOffset.Now;
 						this.Status = GEnum12.Connecting;
 						this.Email = null;
 						this.Key = string_2;
@@ -352,7 +352,7 @@ namespace DOPE.Core
 						}
 						catch (Exception ex)
 						{
-							this.rQcqFaGeFyj = DateTimeOffset.Now;
+							this.dateTimeOffset_0 = DateTimeOffset.Now;
 							this.Status = GEnum12.Disconnected;
 							EventHandler<S2C_ConnectionClosed> eventHandler = this.eventHandler_0;
 							if (eventHandler != null)
@@ -423,7 +423,7 @@ namespace DOPE.Core
 			}
 			this.Service = null;
 			this.Status = GEnum12.Disconnected;
-			this.rQcqFaGeFyj = DateTimeOffset.Now;
+			this.dateTimeOffset_0 = DateTimeOffset.Now;
 			Controller.logger_0.Warn("Disconnected from DOPE service -- {exception}", (exception_0 != null) ? exception_0.ToString() : null);
 		}
 
@@ -446,7 +446,7 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.plZSWFPzBWWEZ();
+			Class13.Gj4N3WdzaR1LY();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
@@ -494,8 +494,8 @@ namespace DOPE.Core
 			}
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_18(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -513,11 +513,11 @@ namespace DOPE.Core
 
 		private volatile bool bool_0;
 
-		private DateTimeOffset rQcqFaGeFyj;
+		private DateTimeOffset dateTimeOffset_0;
 
-		public DateTimeOffset dateTimeOffset_0;
+		public DateTimeOffset dateTimeOffset_1;
 
-		private DateTimeOffset dateTimeOffset_1;
+		private DateTimeOffset dateTimeOffset_2;
 
 		public object object_0;
 
@@ -537,7 +537,7 @@ namespace DOPE.Core
 		private string string_0;
 
 		[CompilerGenerated]
-		private GClass853 gclass853_0;
+		private GClass854 gclass854_0;
 
 		[CompilerGenerated]
 		private string string_1;

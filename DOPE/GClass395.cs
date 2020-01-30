@@ -8,7 +8,7 @@ public class GClass395 : GInterface0
 	{
 		get
 		{
-			return 27791;
+			return 26323;
 		}
 	}
 
@@ -16,49 +16,37 @@ public class GClass395 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass395(int int_2 = 0, int int_3 = 0)
+	public GClass395()
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 27791;
+		return 26323;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 7) | this.int_1 << 25);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(27791);
+		binaryStream_0.smethod_7(26323);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-		binaryStream_0.smethod_4(this.int_1 << 7 | U.smethod_0(this.int_1, 25));
 	}
-
-	public int int_0;
-
-	public int int_1;
 }

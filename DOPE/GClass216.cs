@@ -8,7 +8,7 @@ public class GClass216 : GInterface0
 	{
 		get
 		{
-			return 27487;
+			return 30221;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass216 : GInterface0
 
 	public GClass216(ByteArray byteArray_1 = null)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.byteArray_0 = new ByteArray();
 		if (byteArray_1 != null)
@@ -33,7 +33,7 @@ public class GClass216 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 27487;
+		return 30221;
 	}
 
 	public virtual int vmethod_1()
@@ -45,11 +45,12 @@ public class GClass216 : GInterface0
 	{
 		this.byteArray_0.Clear();
 		binaryStream_0.smethod_11(this.byteArray_0, 0, binaryStream_0.smethod_0());
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(27487);
+		binaryStream_0.smethod_7(30221);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -57,6 +58,7 @@ public class GClass216 : GInterface0
 	{
 		binaryStream_0.smethod_4(this.byteArray_0.Length);
 		binaryStream_0.smethod_12(this.byteArray_0, 0, this.byteArray_0.Length);
+		binaryStream_0.smethod_7(24699);
 	}
 
 	public ByteArray byteArray_0;

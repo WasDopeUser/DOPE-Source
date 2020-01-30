@@ -8,7 +8,7 @@ public class GClass343 : GInterface0
 	{
 		get
 		{
-			return 20416;
+			return 15590;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass343 : GInterface0
 
 	public GClass343(GClass347 gclass347_1 = null, bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		if (gclass347_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass343 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 20416;
+		return 15590;
 	}
 
 	public virtual int vmethod_1()
@@ -50,12 +50,11 @@ public class GClass343 : GInterface0
 		this.gclass347_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass347);
 		this.gclass347_0.imethod_1(binaryStream_0);
 		this.bool_0 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20416);
+		binaryStream_0.smethod_7(15590);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -63,7 +62,6 @@ public class GClass343 : GInterface0
 	{
 		this.gclass347_0.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(-7984);
 	}
 
 	public GClass347 gclass347_0;

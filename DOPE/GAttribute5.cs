@@ -6,7 +6,7 @@ public sealed class GAttribute5 : Attribute
 {
 	public GAttribute5([GAttribute1] string name)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
 		this.Name = name;
 	}
@@ -15,5 +15,5 @@ public sealed class GAttribute5 : Attribute
 	public string Name { get; private set; }
 
 	[CompilerGenerated]
-	private string string_0;
+	private string mwTpzBaxau;
 }

@@ -8,7 +8,7 @@ public class GClass686 : GInterface0
 	{
 		get
 		{
-			return 21733;
+			return 3733;
 		}
 	}
 
@@ -16,47 +16,48 @@ public class GClass686 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 3;
 		}
 	}
 
-	public GClass686(string string_1 = "")
+	public GClass686(string string_1 = "", bool bool_1 = false)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21733;
+		return 3733;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 3;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21733);
+		binaryStream_0.smethod_7(3733);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(23790);
-		binaryStream_0.smethod_7(14459);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
 	public string string_0;
+
+	public bool bool_0;
 }

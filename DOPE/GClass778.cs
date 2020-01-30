@@ -8,7 +8,7 @@ public class GClass778 : GInterface0
 	{
 		get
 		{
-			return 6311;
+			return 19133;
 		}
 	}
 
@@ -16,71 +16,56 @@ public class GClass778 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 14;
 		}
 	}
 
-	public GClass778(string string_1 = "", Vector<GClass375> vector_0 = null)
+	public GClass778(string string_1 = "", double double_1 = 0.0, int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
-		if (vector_0 == null)
-		{
-			this.Items = new Vector<GClass375>();
-			return;
-		}
-		this.Items = vector_0;
+		this.double_0 = double_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6311;
+		return 19133;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 14;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.Items.Length > 0)
-		{
-			this.Items.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass375 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass375;
-			gclass.imethod_1(binaryStream_0);
-			this.Items.method_0(gclass);
-			num++;
-		}
-		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6311);
+		binaryStream_0.smethod_7(19133);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.Items.Length);
-		foreach (GClass375 gclass in this.Items)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_7(6324);
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(-17166);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public Vector<GClass375> Items;
+	public int int_0;
 
 	public string string_0;
+
+	public double double_0;
 }

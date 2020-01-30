@@ -8,7 +8,7 @@ public class GClass602 : GInterface0
 	{
 		get
 		{
-			return 13920;
+			return 10448;
 		}
 	}
 
@@ -20,21 +20,24 @@ public class GClass602 : GInterface0
 		}
 	}
 
-	public GClass602(Vector<GClass137> vector_0 = null)
+	public GClass602(GClass261 gclass261_1 = null, int int_1 = 0)
 	{
-		Class13.plZSWFPzBWWEZ();
+		Class13.Gj4N3WdzaR1LY();
 		base..ctor();
-		if (vector_0 == null)
+		if (gclass261_1 == null)
 		{
-			this.Commands = new Vector<GClass137>();
-			return;
+			this.gclass261_0 = new GClass261(0U);
 		}
-		this.Commands = vector_0;
+		else
+		{
+			this.gclass261_0 = gclass261_1;
+		}
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13920;
+		return 10448;
 	}
 
 	public virtual int vmethod_1()
@@ -44,39 +47,27 @@ public class GClass602 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.Commands.Length > 0)
-		{
-			this.Commands.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass137 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass137;
-			gclass.imethod_1(binaryStream_0);
-			this.Commands.method_0(gclass);
-			num++;
-		}
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.gclass261_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass261);
+		this.gclass261_0.imethod_1(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13920);
+		binaryStream_0.smethod_7(10448);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.Commands.Length);
-		foreach (GClass137 gclass in this.Commands)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_7(28339);
-		binaryStream_0.smethod_7(-3481);
+		binaryStream_0.smethod_7(24016);
+		this.gclass261_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
 	}
 
-	public Vector<GClass137> Commands;
+	public GClass261 gclass261_0;
+
+	public int int_0;
 }

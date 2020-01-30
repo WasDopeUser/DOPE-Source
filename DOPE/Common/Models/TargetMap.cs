@@ -45,8 +45,8 @@ namespace DOPE.Common.Models
 		[NotMapped]
 		[Display(Name = "GG VoT")]
 		GG_VoT = 227,
-		[Display(Name = "GG QZ")]
 		[NotMapped]
+		[Display(Name = "GG QZ")]
 		GG_QZ = 229,
 		[NotMapped]
 		[Display(Name = "GG Cold Wave")]
@@ -77,8 +77,8 @@ namespace DOPE.Common.Models
 		BL2,
 		[Display(Name = "BL-3")]
 		BL3,
-		[Display(Name = "FL ATLAS A")]
 		[NotMapped]
+		[Display(Name = "FL ATLAS A")]
 		FL_ATLAS_A = 430
 	}
 }
