@@ -24,7 +24,7 @@ public sealed class GAttribute21 : Attribute
 
 	public GAttribute21()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 

@@ -8,7 +8,7 @@ public class GClass322 : GInterface0
 	{
 		get
 		{
-			return 10090;
+			return 26605;
 		}
 	}
 
@@ -16,50 +16,39 @@ public class GClass322 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 0;
 		}
 	}
 
-	public GClass322(uint uint_1 = 0U, string string_0 = "")
+	public GClass322()
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.Value = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.uint_0 = uint_1;
-		this.Value = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 10090;
+		return 26605;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.Value = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10090);
+		binaryStream_0.smethod_6(26605);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26030);
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_3(this.Value);
+		binaryStream_0.smethod_6(22232);
 	}
-
-	public uint uint_0;
-
-	public string Value;
 }

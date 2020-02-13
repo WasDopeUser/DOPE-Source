@@ -26,20 +26,20 @@ namespace DOPE.Core
 {
 	public class Controller : INotifyPropertyChanged, IDopeServiceProxy
 	{
-		public Controller(string string_2, string string_3)
+		public Controller(string string_1, string string_2)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
 			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
 			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.method_0);
 			base..ctor();
 			this.entanglementHostService_0 = new EntanglementHostService();
-			this.entanglementHostService_0.Register<GInterface8, GClass854>(EntanglementAccess.Global).Register<IBotController, GClass853>(EntanglementAccess.Manual);
-			this.Control = (GClass854)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
+			this.entanglementHostService_0.Register<GInterface8, GClass855>(EntanglementAccess.Global).Register<IBotController, GClass854>(EntanglementAccess.Manual);
+			this.Control = (GClass855)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
 			this.Control.Parent = this;
-			this.Control.Type = string_2;
-			this.Control.Version = string_3;
+			this.Control.Type = string_1;
+			this.Control.Version = string_2;
 			this.timer_0 = new Timer(new TimerCallback(this.method_4), null, 100, -1);
 		}
 
@@ -58,7 +58,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.iconnection_0 = value;
-				this.method_18(Class10.Connection);
+				this.method_17(Class10.Connection);
 			}
 		}
 
@@ -77,8 +77,8 @@ namespace DOPE.Core
 					return;
 				}
 				this.idopeService_0 = value;
-				this.method_18(Class10.propertyChangedEventArgs_16);
-				this.method_18(Class10.propertyChangedEventArgs_54);
+				this.method_17(Class10.lBfoxdApVpM);
+				this.method_17(Class10.propertyChangedEventArgs_49);
 			}
 		}
 
@@ -97,7 +97,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.dopeServiceStatus_0 = value;
-				this.method_18(Class10.ServiceStatus);
+				this.method_17(Class10.ServiceStatus);
 			}
 		}
 
@@ -117,7 +117,7 @@ namespace DOPE.Core
 				}
 				this.genum12_0 = value;
 				this.method_1();
-				this.method_18(Class10.Status);
+				this.method_17(Class10.Status);
 			}
 		}
 
@@ -126,36 +126,36 @@ namespace DOPE.Core
 			[CompilerGenerated]
 			get
 			{
-				return this.string_0;
+				return this.WeuoQyphcoj;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (string.Equals(this.string_0, value, StringComparison.Ordinal))
+				if (string.Equals(this.WeuoQyphcoj, value, StringComparison.Ordinal))
 				{
 					return;
 				}
-				this.string_0 = value;
-				this.method_18(Class10.Email);
+				this.WeuoQyphcoj = value;
+				this.method_17(Class10.Email);
 			}
 		}
 
-		public GClass854 Control
+		public GClass855 Control
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.gclass854_0;
+				return this.gclass855_0;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (object.Equals(this.gclass854_0, value))
+				if (object.Equals(this.gclass855_0, value))
 				{
 					return;
 				}
-				this.gclass854_0 = value;
-				this.method_18(Class10.propertyChangedEventArgs_11);
+				this.gclass855_0 = value;
+				this.method_17(Class10.propertyChangedEventArgs_11);
 			}
 		}
 
@@ -172,17 +172,17 @@ namespace DOPE.Core
 			[CompilerGenerated]
 			get
 			{
-				return this.string_1;
+				return this.string_0;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (string.Equals(this.string_1, value, StringComparison.Ordinal))
+				if (string.Equals(this.string_0, value, StringComparison.Ordinal))
 				{
 					return;
 				}
-				this.string_1 = value;
-				this.method_18(Class10.propertyChangedEventArgs_31);
+				this.string_0 = value;
+				this.method_17(Class10.WiLoxwZhvaL);
 			}
 		}
 
@@ -243,7 +243,7 @@ namespace DOPE.Core
 			bool flag = connection != null && connection.Connected;
 			if (this.dateTimeOffset_0.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
 			{
-				this.method_7(this.Key);
+				this.method_6(this.Key);
 			}
 			if (this.Status == GEnum12.Connected && flag && this.Connection.LastReceived.Cooldown(10000))
 			{
@@ -280,7 +280,7 @@ namespace DOPE.Core
 		{
 			Controller.logger_0.Info("Stopping...");
 			this.timer_0.Change(-1, -1);
-			foreach (GClass853 gclass in this.Control.Bots)
+			foreach (GClass854 gclass in this.Control.Bots)
 			{
 				this.Control.ForceStopBot(gclass.BotId).GetAwaiter().GetResult();
 			}
@@ -291,35 +291,35 @@ namespace DOPE.Core
 			}
 		}
 
-		public void method_6(string string_2)
+		public void sgsoQeeaCnu(string string_1)
 		{
-			if (this.Key != string_2)
+			if (this.Key != string_1)
 			{
-				this.Key = string_2;
-				this.Control.Invalidate().ContinueWith(new Action<Task>(this.method_13));
+				this.Key = string_1;
+				this.Control.Invalidate().ContinueWith(new Action<Task>(this.method_12));
 			}
 		}
 
-		public bool method_7(string string_2)
+		public bool method_6(string string_1)
 		{
 			if (this.bool_0)
 			{
 				return false;
 			}
 			string text;
-			if (string_2 == null)
+			if (string_1 == null)
 			{
 				text = null;
 			}
 			else
 			{
-				string text2 = string_2.Trim();
+				string text2 = string_1.Trim();
 				text = ((text2 != null) ? text2.ToLower() : null);
 			}
-			string_2 = text;
-			if (!string.IsNullOrWhiteSpace(string_2))
+			string_1 = text;
+			if (!string.IsNullOrWhiteSpace(string_1))
 			{
-				if (string_2.Length == 36)
+				if (string_1.Length == 36)
 				{
 					object obj = this.object_0;
 					lock (obj)
@@ -334,19 +334,19 @@ namespace DOPE.Core
 						this.dateTimeOffset_2 = DateTimeOffset.Now;
 						this.Status = GEnum12.Connecting;
 						this.Email = null;
-						this.Key = string_2;
+						this.Key = string_1;
 						try
 						{
 							TcpClient client = new TcpClient(Constants.Endpoint, 42169);
-							this.Connection = new ConnectionBuilder(DopeProtocol.Instance).UseServices(new Func<IServicesBuilder<IConnection>, IServicesBuilder<IConnection>>(this.method_14)).Build(client);
-							this.Connection.ClientDisconnected += this.method_11;
-							this.Connection.On<SC_Ping>(new GenericPayloadHandler<SC_Ping>(this.method_9));
-							this.Connection.On<S2C_ConnectionClosed>(new GenericPayloadHandler<S2C_ConnectionClosed>(this.method_15));
-							this.Connection.On<S2C_AccountInfo>(new GenericPayloadHandler<S2C_AccountInfo>(this.method_16));
+							this.Connection = new ConnectionBuilder(DopeProtocol.Instance).UseServices(new Func<IServicesBuilder<IConnection>, IServicesBuilder<IConnection>>(this.method_13)).Build(client);
+							this.Connection.ClientDisconnected += this.method_10;
+							this.Connection.On<SC_Ping>(new GenericPayloadHandler<SC_Ping>(this.method_8));
+							this.Connection.On<S2C_ConnectionClosed>(new GenericPayloadHandler<S2C_ConnectionClosed>(this.method_14));
+							this.Connection.On<S2C_AccountInfo>(new GenericPayloadHandler<S2C_AccountInfo>(this.method_15));
 							this.Connection.Initialize();
 							this.Connection.Send<C2S_AuthorizationKey>(new C2S_AuthorizationKey
 							{
-								Key = string_2
+								Key = string_1
 							});
 							return true;
 						}
@@ -378,7 +378,7 @@ namespace DOPE.Core
 			return false;
 		}
 
-		private void method_8(IConnection iconnection_1, object object_1, Type type_0)
+		private void method_7(IConnection iconnection_1, object object_1, Type type_0)
 		{
 			Controller.logger_0.Info("Sent payload of type {type}", type_0.FullName);
 			ExecuteMethod executeMethod = object_1 as ExecuteMethod;
@@ -394,12 +394,12 @@ namespace DOPE.Core
 			}
 		}
 
-		private object method_9(IConnection iconnection_1, SC_Ping sc_Ping_0)
+		private object method_8(IConnection iconnection_1, SC_Ping sc_Ping_0)
 		{
 			return SC_Ping.Instance;
 		}
 
-		private void method_10(IConnection iconnection_1, object object_1, Type type_0)
+		private void method_9(IConnection iconnection_1, object object_1, Type type_0)
 		{
 			Controller.logger_0.Info("Received payload of type {type}", type_0.FullName);
 			ExecuteMethod executeMethod = object_1 as ExecuteMethod;
@@ -415,7 +415,7 @@ namespace DOPE.Core
 			}
 		}
 
-		private void method_11(IConnection iconnection_1, Exception exception_0)
+		private void method_10(IConnection iconnection_1, Exception exception_0)
 		{
 			if (iconnection_1 != this.Connection)
 			{
@@ -427,16 +427,16 @@ namespace DOPE.Core
 			Controller.logger_0.Warn("Disconnected from DOPE service -- {exception}", (exception_0 != null) ? exception_0.ToString() : null);
 		}
 
-		public Task<DollConfig> method_12(string string_2, byte[] byte_0, string string_3, int int_0)
+		public Task<DollConfig> method_11(string string_1, byte[] byte_0, string string_2, int int_0)
 		{
 			IConnection connection = this.Connection;
 			if (connection != null && connection.Connected)
 			{
 				return this.Connection.SendRequest<C2S_DollRequest, DollConfig>(new C2S_DollRequest
 				{
-					Checksum = string_2,
+					Checksum = string_1,
 					Data = byte_0,
-					UserId = string_3,
+					UserId = string_2,
 					ServerId = int_0
 				}, null);
 			}
@@ -446,24 +446,24 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
 		[CompilerGenerated]
-		private void method_13(Task task_0)
+		private void method_12(Task task_0)
 		{
-			this.method_7(this.Key);
+			this.method_6(this.Key);
 		}
 
 		[CompilerGenerated]
-		private IServicesBuilder<IConnection> method_14(IServicesBuilder<IConnection> iservicesBuilder_0)
+		private IServicesBuilder<IConnection> method_13(IServicesBuilder<IConnection> iservicesBuilder_0)
 		{
 			return iservicesBuilder_0.AddInstance<IEntanglementHostService, EntanglementHostService>(this.entanglementHostService_0, null).AddEntanglementClient(null);
 		}
 
 		[CompilerGenerated]
-		private object method_15(IConnection iconnection_1, S2C_ConnectionClosed s2C_ConnectionClosed_0)
+		private object method_14(IConnection iconnection_1, S2C_ConnectionClosed s2C_ConnectionClosed_0)
 		{
 			Controller.logger_0.Error<ConnectionClosedReason>("Connection closed: {reason}", s2C_ConnectionClosed_0.Reason);
 			EventHandler<S2C_ConnectionClosed> eventHandler = this.eventHandler_0;
@@ -475,15 +475,15 @@ namespace DOPE.Core
 		}
 
 		[CompilerGenerated]
-		private object method_16(IConnection iconnection_1, S2C_AccountInfo s2C_AccountInfo_0)
+		private object method_15(IConnection iconnection_1, S2C_AccountInfo s2C_AccountInfo_0)
 		{
 			Controller.logger_0.Info("Connected to DOPE as {email}", this.Email = s2C_AccountInfo_0.Email);
-			Task.Run(new Func<Task>(this.method_17));
+			Task.Run(new Func<Task>(this.method_16));
 			return null;
 		}
 
 		[CompilerGenerated]
-		private async Task method_17()
+		private async Task method_16()
 		{
 			IDopeService service = await this.Connection.Entangle(null);
 			this.Service = service;
@@ -496,7 +496,7 @@ namespace DOPE.Core
 
 		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
-		protected void method_18(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_17(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
@@ -534,13 +534,13 @@ namespace DOPE.Core
 		private GEnum12 genum12_0;
 
 		[CompilerGenerated]
+		private string WeuoQyphcoj;
+
+		[CompilerGenerated]
+		private GClass855 gclass855_0;
+
+		[CompilerGenerated]
 		private string string_0;
-
-		[CompilerGenerated]
-		private GClass854 gclass854_0;
-
-		[CompilerGenerated]
-		private string string_1;
 
 		[CompilerGenerated]
 		private EventHandler<S2C_ConnectionClosed> eventHandler_0;

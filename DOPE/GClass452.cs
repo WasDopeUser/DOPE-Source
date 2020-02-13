@@ -8,7 +8,7 @@ public class GClass452 : GInterface0
 	{
 		get
 		{
-			return 6627;
+			return 2546;
 		}
 	}
 
@@ -16,63 +16,48 @@ public class GClass452 : GInterface0
 	{
 		get
 		{
-			return 21;
+			return 4;
 		}
 	}
 
-	public GClass452(int int_0 = 0, Vector<string> vector_2 = null, uint uint_2 = 0U, uint uint_3 = 0U, double double_1 = 0.0, bool bool_1 = false, GClass651 gclass651_0 = null, Vector<GClass452> vector_3 = null)
+	public GClass452(Vector<GClass377> vector_1 = null, GClass647 gclass647_1 = null, uint uint_1 = 0U)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.Id = int_0;
-		if (vector_2 == null)
+		if (vector_1 == null)
 		{
-			this.vector_1 = new Vector<string>();
+			this.vector_0 = new Vector<GClass377>();
 		}
 		else
 		{
-			this.vector_1 = vector_2;
+			this.vector_0 = vector_1;
 		}
-		this.uint_1 = uint_2;
-		this.uint_0 = uint_3;
-		this.double_0 = double_1;
-		this.bool_0 = bool_1;
-		if (gclass651_0 == null)
+		if (gclass647_1 == null)
 		{
-			this.State = new GClass651(0.0, false, false);
+			this.gclass647_0 = new GClass647(0, 0);
 		}
 		else
 		{
-			this.State = gclass651_0;
+			this.gclass647_0 = gclass647_1;
 		}
-		if (vector_3 == null)
-		{
-			this.vector_0 = new Vector<GClass452>();
-			return;
-		}
-		this.vector_0 = vector_3;
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6627;
+		return 2546;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 21;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (U.smethod_0(this.Id, 9) | this.Id << 23);
-		this.State = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass651);
-		this.State.imethod_1(binaryStream_0);
-		this.uint_1 = (uint)binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
+		this.gclass647_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass647);
+		this.gclass647_0.imethod_1(binaryStream_0);
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -81,66 +66,35 @@ public class GClass452 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			GClass452 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass452;
+			GClass377 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass377;
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
-		while (this.vector_1.Length > 0)
-		{
-			this.vector_1.method_1();
-		}
-		num = 0;
-		num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			string j5lLFSPlomA2dr8kWg = binaryStream_0.smethod_2();
-			this.vector_1.method_0(j5lLFSPlomA2dr8kWg);
-			num++;
-		}
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6627);
+		binaryStream_0.smethod_6(2546);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_4(this.Id << 9 | U.smethod_0(this.Id, 23));
-		this.State.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_6(this.uint_1);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass452 gclass in this.vector_0)
+		binaryStream_0.smethod_6(-1349);
+		this.gclass647_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.vector_0.Length);
+		foreach (GClass377 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(18796);
-		binaryStream_0.smethod_4(this.vector_1.Length);
-		foreach (string string_ in this.vector_1)
-		{
-			binaryStream_0.smethod_3(string_);
-		}
+		binaryStream_0.smethod_5(this.uint_0);
 	}
 
+	public GClass647 gclass647_0;
+
+	public Vector<GClass377> vector_0;
+
 	public uint uint_0;
-
-	public int Id;
-
-	public GClass651 State;
-
-	public uint uint_1;
-
-	public double double_0;
-
-	public bool bool_0;
-
-	public Vector<GClass452> vector_0;
-
-	public Vector<string> vector_1;
 }

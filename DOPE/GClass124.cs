@@ -8,13 +8,13 @@ public class GClass124 : GInterface6
 {
 	public GClass124()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 
 	public GClass124(TcpClient tcpClient_2)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		if (tcpClient_2 == null)
 		{
@@ -23,23 +23,23 @@ public class GClass124 : GInterface6
 		this.tcpClient_1 = tcpClient_2;
 	}
 
-	public GClass124(string string_2)
+	public GClass124(string string_3)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (string.IsNullOrEmpty(string_2))
+		if (string.IsNullOrEmpty(string_3))
 		{
 			throw new ArgumentNullException("proxyHost");
 		}
-		this.string_0 = string_2;
+		this.string_0 = string_3;
 		this.int_0 = 1080;
 	}
 
-	public GClass124(string string_2, int int_1)
+	public GClass124(string string_3, int int_1)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (string.IsNullOrEmpty(string_2))
+		if (string.IsNullOrEmpty(string_3))
 		{
 			throw new ArgumentNullException("proxyHost");
 		}
@@ -47,37 +47,37 @@ public class GClass124 : GInterface6
 		{
 			throw new ArgumentOutOfRangeException("proxyPort", "port must be greater than zero and less than 65535");
 		}
-		this.string_0 = string_2;
+		this.string_0 = string_3;
 		this.int_0 = int_1;
 	}
 
-	public GClass124(string string_2, string string_3, string string_4)
+	public GClass124(string string_3, string string_4, string string_5)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (string.IsNullOrEmpty(string_2))
+		if (string.IsNullOrEmpty(string_3))
 		{
 			throw new ArgumentNullException("proxyHost");
-		}
-		if (string_3 == null)
-		{
-			throw new ArgumentNullException("proxyUserName");
 		}
 		if (string_4 == null)
 		{
+			throw new ArgumentNullException("proxyUserName");
+		}
+		if (string_5 == null)
+		{
 			throw new ArgumentNullException("proxyPassword");
 		}
-		this.string_0 = string_2;
+		this.string_0 = string_3;
 		this.int_0 = 1080;
-		this.string_1 = string_3;
-		this.AyevaLtuBq = string_4;
+		this.string_1 = string_4;
+		this.string_2 = string_5;
 	}
 
-	public GClass124(string string_2, int int_1, string string_3, string string_4)
+	public GClass124(string string_3, int int_1, string string_4, string string_5)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (string.IsNullOrEmpty(string_2))
+		if (string.IsNullOrEmpty(string_3))
 		{
 			throw new ArgumentNullException("proxyHost");
 		}
@@ -85,10 +85,10 @@ public class GClass124 : GInterface6
 		{
 			throw new ArgumentOutOfRangeException("proxyPort", "port must be greater than zero and less than 65535");
 		}
-		this.string_0 = string_2;
+		this.string_0 = string_3;
 		this.int_0 = int_1;
-		this.string_1 = string_3;
-		this.AyevaLtuBq = string_4;
+		this.string_1 = string_4;
+		this.string_2 = string_5;
 	}
 
 	public string imethod_0()
@@ -96,9 +96,9 @@ public class GClass124 : GInterface6
 		return this.string_0;
 	}
 
-	public void imethod_1(string string_2)
+	public void imethod_1(string string_3)
 	{
-		this.string_0 = string_2;
+		this.string_0 = string_3;
 	}
 
 	public int imethod_2()
@@ -121,19 +121,19 @@ public class GClass124 : GInterface6
 		return this.string_1;
 	}
 
-	public void method_1(string string_2)
+	public void method_1(string string_3)
 	{
-		this.string_1 = string_2;
+		this.string_1 = string_3;
 	}
 
 	public string method_2()
 	{
-		return this.AyevaLtuBq;
+		return this.string_2;
 	}
 
-	public void method_3(string string_2)
+	public void method_3(string string_3)
 	{
-		this.AyevaLtuBq = string_2;
+		this.string_2 = string_3;
 	}
 
 	public TcpClient imethod_5()
@@ -146,9 +146,9 @@ public class GClass124 : GInterface6
 		this.tcpClient_1 = tcpClient_2;
 	}
 
-	public TcpClient imethod_7(string string_2, int int_1)
+	public TcpClient imethod_7(string string_3, int int_1)
 	{
-		if (string.IsNullOrEmpty(string_2))
+		if (string.IsNullOrEmpty(string_3))
 		{
 			throw new ArgumentNullException("destinationHost");
 		}
@@ -175,7 +175,7 @@ public class GClass124 : GInterface6
 				}
 				this.method_4();
 				this.method_5();
-				this.method_9(1, string_2, int_1);
+				this.method_9(1, string_3, int_1);
 				TcpClient result = this.tcpClient_0;
 				this.tcpClient_0 = null;
 				return result;
@@ -190,7 +190,7 @@ public class GClass124 : GInterface6
 
 	private void method_4()
 	{
-		if (this.string_1 != null && this.AyevaLtuBq != null)
+		if (this.string_1 != null && this.string_2 != null)
 		{
 			this.enum2_0 = (GClass124.Enum2)1;
 			return;
@@ -224,12 +224,12 @@ public class GClass124 : GInterface6
 		}
 		if (b == 2)
 		{
-			byte[] array3 = new byte[this.string_1.Length + this.AyevaLtuBq.Length + 3];
+			byte[] array3 = new byte[this.string_1.Length + this.string_2.Length + 3];
 			array3[0] = 1;
 			array3[1] = (byte)this.string_1.Length;
 			Array.Copy(Encoding.ASCII.GetBytes(this.string_1), 0, array3, 2, this.string_1.Length);
-			array3[this.string_1.Length + 2] = (byte)this.AyevaLtuBq.Length;
-			Array.Copy(Encoding.ASCII.GetBytes(this.AyevaLtuBq), 0, array3, this.string_1.Length + 3, this.AyevaLtuBq.Length);
+			array3[this.string_1.Length + 2] = (byte)this.string_2.Length;
+			Array.Copy(Encoding.ASCII.GetBytes(this.string_2), 0, array3, this.string_1.Length + 3, this.string_2.Length);
 			stream.Write(array3, 0, array3.Length);
 			byte[] array4 = new byte[2];
 			stream.Read(array4, 0, array4.Length);
@@ -241,10 +241,10 @@ public class GClass124 : GInterface6
 		}
 	}
 
-	private byte method_6(string string_2)
+	private byte method_6(string string_3)
 	{
 		IPAddress ipaddress = null;
-		if (!IPAddress.TryParse(string_2, out ipaddress))
+		if (!IPAddress.TryParse(string_3, out ipaddress))
 		{
 			return 3;
 		}
@@ -255,25 +255,25 @@ public class GClass124 : GInterface6
 		}
 		if (addressFamily != AddressFamily.InterNetworkV6)
 		{
-			throw new GException0(string.Format(CultureInfo.InvariantCulture, "The host addess {0} of type '{1}' is not a supported address type.  The supported types are InterNetwork and InterNetworkV6.", string_2, Enum.GetName(typeof(AddressFamily), ipaddress.AddressFamily)));
+			throw new GException0(string.Format(CultureInfo.InvariantCulture, "The host addess {0} of type '{1}' is not a supported address type.  The supported types are InterNetwork and InterNetworkV6.", string_3, Enum.GetName(typeof(AddressFamily), ipaddress.AddressFamily)));
 		}
 		return 4;
 	}
 
-	private byte[] method_7(byte byte_0, string string_2)
+	private byte[] method_7(byte byte_0, string string_3)
 	{
 		switch (byte_0)
 		{
 		case 1:
 		case 4:
-			return IPAddress.Parse(string_2).GetAddressBytes();
+			return IPAddress.Parse(string_3).GetAddressBytes();
 		default:
 			return null;
 		case 3:
 		{
-			byte[] array = new byte[string_2.Length + 1];
-			array[0] = Convert.ToByte(string_2.Length);
-			Encoding.ASCII.GetBytes(string_2).CopyTo(array, 1);
+			byte[] array = new byte[string_3.Length + 1];
+			array[0] = Convert.ToByte(string_3.Length);
+			Encoding.ASCII.GetBytes(string_3).CopyTo(array, 1);
 			return array;
 		}
 		}
@@ -288,11 +288,11 @@ public class GClass124 : GInterface6
 		};
 	}
 
-	private void method_9(byte byte_0, string string_2, int int_1)
+	private void method_9(byte byte_0, string string_3, int int_1)
 	{
 		NetworkStream stream = this.tcpClient_0.GetStream();
-		byte b = this.method_6(string_2);
-		byte[] array = this.method_7(b, string_2);
+		byte b = this.method_6(string_3);
+		byte[] array = this.method_7(b, string_3);
 		Array array2 = this.method_8(int_1);
 		byte[] array3 = new byte[4 + array.Length + 2];
 		array3[0] = 5;
@@ -306,11 +306,11 @@ public class GClass124 : GInterface6
 		stream.Read(array4, 0, array4.Length);
 		if (array4[1] != 0)
 		{
-			this.method_10(array4, string_2, int_1);
+			this.method_10(array4, string_3, int_1);
 		}
 	}
 
-	private void method_10(byte[] byte_0, string string_2, int int_1)
+	private void method_10(byte[] byte_0, string string_3, int int_1)
 	{
 		byte b = byte_0[1];
 		switch (byte_0[3])
@@ -397,7 +397,7 @@ public class GClass124 : GInterface6
 		throw new GException0(string.Format(CultureInfo.InvariantCulture, "proxy error: {0} for destination host {1} port number {2}.  Server response (hex): {3}.", new object[]
 		{
 			text,
-			string_2,
+			string_3,
 			int_1,
 			text2
 		}));
@@ -455,7 +455,7 @@ public class GClass124 : GInterface6
 
 	private string string_1;
 
-	private string AyevaLtuBq;
+	private string string_2;
 
 	private GClass124.Enum2 enum2_0;
 

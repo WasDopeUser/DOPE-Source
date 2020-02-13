@@ -23,7 +23,7 @@ public class GClass95 : GInterface4
 
 	public void method_2(GClass254 gclass254_0)
 	{
-		this.Connection.method_9(gclass254_0.byteArray_0.Memory.ToArray(), (uint)gclass254_0.YdTlpRnvHe);
+		this.Connection.method_9(gclass254_0.byteArray_0.Memory.ToArray(), (uint)gclass254_0.int_0);
 	}
 
 	public void method_3(GClass216 gclass216_0)
@@ -47,7 +47,7 @@ public class GClass95 : GInterface4
 
 	public GClass95()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

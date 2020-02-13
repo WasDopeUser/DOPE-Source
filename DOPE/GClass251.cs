@@ -8,7 +8,7 @@ public class GClass251 : GInterface0
 	{
 		get
 		{
-			return 20104;
+			return 17029;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass251 : GInterface0
 
 	public GClass251(string string_1 = "", Vector<GClass252> vector_0 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -36,7 +36,7 @@ public class GClass251 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 20104;
+		return 17029;
 	}
 
 	public virtual int vmethod_1()
@@ -46,7 +46,9 @@ public class GClass251 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 		while (this.Items.Length > 0)
 		{
 			this.Items.method_1();
@@ -60,24 +62,24 @@ public class GClass251 : GInterface0
 			this.Items.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20104);
+		binaryStream_0.smethod_6(17029);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.Items.Length);
+		binaryStream_0.smethod_6(-15311);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.smethod_6(-11617);
+		binaryStream_0.smethod_3(this.Items.Length);
 		foreach (GClass252 gclass in this.Items)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(1568);
 	}
 
 	public string string_0;

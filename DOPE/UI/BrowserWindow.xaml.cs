@@ -81,7 +81,7 @@ namespace DOPE.UI
 
 		public BrowserWindow(string string_0, string string_1, string string_2)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -106,7 +106,7 @@ namespace DOPE.UI
 			}
 			BrowserWindow.<>o__19.<>p__0.Target(BrowserWindow.<>o__19.<>p__0, arg, true);
 			Application.SetCookie(new Uri("https://" + this.Server + ".darkorbit.com"), "dosid=" + this.Sid);
-			this.Browser.Navigate(GClass813.smethod_1(this.Server, null) ?? "");
+			this.Browser.Navigate(GClass814.smethod_1(this.Server, null) ?? "");
 		}
 
 		private void method_2(object sender, EventArgs e)

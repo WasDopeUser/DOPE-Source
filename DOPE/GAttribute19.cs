@@ -6,20 +6,20 @@ public sealed class GAttribute19 : Attribute
 {
 	public GAttribute19()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 
-	public GAttribute19([GAttribute1] [GAttribute19] string basePath)
+	public GAttribute19([GAttribute19] [GAttribute1] string basePath)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.String_0 = basePath;
+		this.CmhCublYiv = basePath;
 	}
 
 	[GAttribute0]
-	public string String_0 { get; private set; }
+	public string CmhCublYiv { get; private set; }
 
 	[CompilerGenerated]
-	private string string_0;
+	private string clbCyZoxDm;
 }

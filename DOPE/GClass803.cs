@@ -3,184 +3,165 @@ using DarkorbitAPI.CommonStructures;
 
 public class GClass803
 {
-	public GClass803(Vector<uint> vector_5, Vector<uint> vector_6)
+	public GClass803(ByteArray byteArray_1, ByteArray byteArray_2)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.uint_1 = 4U;
+		Class13.igxcIukzfpare();
+		this.uint_1 = 15U;
 		base..ctor();
-		if (vector_5 != null)
+		this.vector_0 = new Vector<int>(8);
+		this.vector_1 = new Vector<int>(8);
+		this.vector_2 = new Vector<int>(8);
+		this.method_0(byteArray_1, byteArray_2);
+	}
+
+	private void method_0(ByteArray byteArray_1, ByteArray byteArray_2)
+	{
+		this.byteArray_0 = new ByteArray();
+		for (int i = 0; i < 16; i++)
 		{
-			if (vector_5.Length == 12)
-			{
-				if (vector_6 == null)
-				{
-					return;
-				}
-				this.vector_3 = new Vector<uint>(4);
-				this.vector_4 = new Vector<uint>(4);
-				this.vector_2 = new Vector<uint>(4);
-				uint length = (uint)vector_6.Length;
-				this.vector_0 = new Vector<uint>((int)length);
-				this.vector_1 = new Vector<uint>((int)length);
-				for (int i = 0; i < vector_5.Length; i++)
-				{
-					this.vector_1[i] = vector_5[i];
-				}
-				int num = 0;
-				while ((long)num < (long)((ulong)length))
-				{
-					this.vector_0[num] = vector_6[num];
-					num++;
-				}
-				this.method_5(this.vector_0, this.vector_1);
-				this.method_0();
-				return;
-			}
+			this.byteArray_0[i] = 0;
+		}
+		int num = this.method_3(byteArray_1, 0);
+		int num2 = this.method_3(byteArray_1, 4);
+		int num3 = this.method_3(byteArray_1, 8);
+		int num4 = this.method_3(byteArray_1, 12);
+		this.vector_0[0U] = num;
+		this.vector_0[2U] = num2;
+		this.vector_0[4U] = num3;
+		this.vector_0[6U] = num4;
+		this.vector_0[1U] = (num4 << 16 | num3 >> 16);
+		this.vector_0[3U] = (num << 16 | num4 >> 16);
+		this.vector_0[5U] = (num2 << 16 | num >> 16);
+		this.vector_0[7U] = (num3 << 16 | num2 >> 16);
+		this.vector_1[0U] = (int)this.method_5(num3, 16);
+		this.vector_1[2U] = (int)this.method_5(num4, 16);
+		this.vector_1[4U] = (int)this.method_5(num, 16);
+		this.vector_1[6U] = (int)this.method_5(num2, 16);
+		this.vector_1[1U] = ((int)((long)num & 4294901760L) | (num2 & 65535));
+		this.vector_1[3U] = ((int)((long)num2 & 4294901760L) | (num3 & 65535));
+		this.vector_1[5U] = ((int)((long)num3 & 4294901760L) | (num4 & 65535));
+		this.vector_1[7U] = ((int)((long)num4 & 4294901760L) | (num & 65535));
+		this.uint_0 = 0U;
+		for (int j = 0; j < 4; j++)
+		{
+			this.method_1();
+		}
+		for (int k = 0; k < 8; k++)
+		{
+			this.vector_1[k] = (this.vector_1[k] ^ this.vector_0[k + 4 & 7]);
+		}
+		int num5 = this.method_3(byteArray_2, 0);
+		int num6 = this.method_3(byteArray_2, 4);
+		int num7 = (int)((long)(num5 >> 16) | ((long)num6 & 4294901760L));
+		int num8 = num6 << 16 | (num5 & 65535);
+		this.vector_1[0U] = (this.vector_1[0U] ^ num5);
+		this.vector_1[1U] = (this.vector_1[1U] ^ num7);
+		this.vector_1[2U] = (this.vector_1[2U] ^ num6);
+		this.vector_1[3U] = (this.vector_1[3U] ^ num8);
+		this.vector_1[4U] = (this.vector_1[4U] ^ num5);
+		this.vector_1[5U] = (this.vector_1[5U] ^ num7);
+		this.vector_1[6U] = (this.vector_1[6U] ^ num6);
+		this.vector_1[7U] = (this.vector_1[7U] ^ num8);
+		for (int l = 0; l < 4; l++)
+		{
+			this.method_1();
 		}
 	}
 
-	private void method_0()
+	private void method_1()
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			this.uint_0 = this.method_1();
-			this.vector_4 = this.method_2(this.vector_4, this.method_3() ^ this.vector_3[0U] ^ this.uint_0);
-			this.vector_3 = this.method_2(this.vector_3, this.method_4() ^ this.uint_0);
+			this.vector_2[i] = this.vector_1[i];
 		}
-		this.bool_0 = true;
-	}
-
-	private uint method_1()
-	{
-		uint num = (uint)(U.smethod_2(this.vector_4[0U], 2) | (int)((int)this.vector_4[1U] << 30));
-		uint num2 = (uint)(U.smethod_2(this.vector_4[0U], 12) | (int)((int)this.vector_4[1U] << 20));
-		uint num3 = (uint)(U.smethod_2(this.vector_4[0U], 15) | (int)((int)this.vector_4[1U] << 17));
-		uint num4 = (uint)(U.smethod_2(this.vector_4[1U], 4) | (int)((int)this.vector_4[2U] << 28));
-		uint num5 = (uint)(U.smethod_2(this.vector_4[1U], 13) | (int)((int)this.vector_4[2U] << 19));
-		uint num6 = this.vector_4[2U];
-		uint num7 = (uint)(U.smethod_2(this.vector_4[2U], 9) | (int)((int)this.vector_4[3U] << 23));
-		uint num8 = (uint)(U.smethod_2(this.vector_4[2U], 25) | (int)((int)this.vector_4[3U] << 7));
-		uint num9 = (uint)(U.smethod_2(this.vector_4[2U], 31) | (int)((int)this.vector_4[3U] << 1));
-		uint num10 = (uint)(U.smethod_2(this.vector_3[0U], 8) | (int)((int)this.vector_3[1U] << 24));
-		uint num11 = (uint)(U.smethod_2(this.vector_3[0U], 13) | (int)((int)this.vector_3[1U] << 19));
-		uint num12 = (uint)(U.smethod_2(this.vector_3[0U], 20) | (int)((int)this.vector_3[1U] << 12));
-		uint num13 = (uint)(U.smethod_2(this.vector_3[1U], 10) | (int)((int)this.vector_3[2U] << 22));
-		uint num14 = (uint)(U.smethod_2(this.vector_3[1U], 28) | (int)((int)this.vector_3[2U] << 4));
-		uint num15 = (uint)(U.smethod_2(this.vector_3[2U], 15) | (int)((int)this.vector_3[3U] << 17));
-		uint num16 = (uint)(U.smethod_2(this.vector_3[2U], 29) | (int)((int)this.vector_3[3U] << 3));
-		uint num17 = (uint)(U.smethod_2(this.vector_3[2U], 31) | (int)((int)this.vector_3[3U] << 1));
-		return (num2 & num10) ^ (num11 & num12) ^ (num9 & num13) ^ (num14 & num15) ^ (num2 & num9 & num17) ^ num16 ^ num ^ num3 ^ num4 ^ num5 ^ num6 ^ num7 ^ num8;
-	}
-
-	private Vector<uint> method_2(Vector<uint> vector_5, uint uint_2)
-	{
-		vector_5[0U] = vector_5[1U];
-		vector_5[1U] = vector_5[2U];
-		vector_5[2U] = vector_5[3U];
-		vector_5[3U] = uint_2;
-		return vector_5;
-	}
-
-	private uint method_3()
-	{
-		uint num = this.vector_4[0U];
-		uint num2 = (uint)(U.smethod_2(this.vector_4[0U], 3) | (int)((int)this.vector_4[1U] << 29));
-		uint num3 = (uint)(U.smethod_2(this.vector_4[0U], 11) | (int)((int)this.vector_4[1U] << 21));
-		uint num4 = (uint)(U.smethod_2(this.vector_4[0U], 13) | (int)((int)this.vector_4[1U] << 19));
-		uint num5 = (uint)(U.smethod_2(this.vector_4[0U], 17) | (int)((int)this.vector_4[1U] << 15));
-		uint num6 = (uint)(U.smethod_2(this.vector_4[0U], 18) | (int)((int)this.vector_4[1U] << 14));
-		uint num7 = (uint)(U.smethod_2(this.vector_4[0U], 26) | (int)((int)this.vector_4[1U] << 6));
-		uint num8 = (uint)(U.smethod_2(this.vector_4[0U], 27) | (int)((int)this.vector_4[1U] << 5));
-		uint num9 = (uint)(U.smethod_2(this.vector_4[1U], 8) | (int)((int)this.vector_4[2U] << 24));
-		uint num10 = (uint)(U.smethod_2(this.vector_4[1U], 16) | (int)((int)this.vector_4[2U] << 16));
-		uint num11 = (uint)(U.smethod_2(this.vector_4[1U], 24) | (int)((int)this.vector_4[2U] << 8));
-		uint num12 = (uint)(U.smethod_2(this.vector_4[1U], 27) | (int)((int)this.vector_4[2U] << 5));
-		uint num13 = (uint)(U.smethod_2(this.vector_4[1U], 29) | (int)((int)this.vector_4[2U] << 3));
-		uint num14 = (uint)(U.smethod_2(this.vector_4[2U], 1) | (int)((int)this.vector_4[3U] << 31));
-		uint num15 = (uint)(U.smethod_2(this.vector_4[2U], 3) | (int)((int)this.vector_4[3U] << 29));
-		uint num16 = (uint)(U.smethod_2(this.vector_4[2U], 4) | (int)((int)this.vector_4[3U] << 28));
-		uint num17 = (uint)(U.smethod_2(this.vector_4[2U], 20) | (int)((int)this.vector_4[3U] << 12));
-		uint num18 = (uint)(U.smethod_2(this.vector_4[2U], 27) | (int)((int)this.vector_4[3U] << 5));
-		uint num19 = this.vector_4[3U];
-		return num ^ num7 ^ num11 ^ num18 ^ num19 ^ (num2 & num15) ^ (num3 & num4) ^ (num5 & num6) ^ (num8 & num12) ^ (num9 & num10) ^ (num13 & num14) ^ (num16 & num17);
-	}
-
-	private uint method_4()
-	{
-		uint num = this.vector_3[0U];
-		uint num2 = (uint)(U.smethod_2(this.vector_3[0U], 7) | (int)((int)this.vector_3[1U] << 25));
-		uint num3 = (uint)(U.smethod_2(this.vector_3[1U], 6) | (int)((int)this.vector_3[2U] << 26));
-		uint num4 = (uint)(U.smethod_2(this.vector_3[2U], 6) | (int)((int)this.vector_3[3U] << 26));
-		uint num5 = (uint)(U.smethod_2(this.vector_3[2U], 17) | (int)((int)this.vector_3[3U] << 15));
-		uint num6 = this.vector_3[3U];
-		return num ^ num2 ^ num3 ^ num4 ^ num5 ^ num6;
-	}
-
-	private void method_5(Vector<uint> vector_5, Vector<uint> vector_6)
-	{
-		vector_6[12U] = 255U;
-		vector_6[13U] = 255U;
-		vector_6[14U] = 255U;
-		vector_6[15U] = 255U;
-		this.vector_0 = vector_5;
-		this.vector_1 = vector_6;
-		uint num = 0U;
-		uint length = (uint)this.vector_4.Length;
-		int num2 = 0;
-		while ((long)num2 < (long)((ulong)length))
+		this.vector_1[0U] = (int)((long)(this.vector_1[0U] + 1295307597) + (long)((ulong)this.uint_0));
+		this.vector_1[1U] = (int)((long)this.vector_1[1U] + 3545052371L + ((this.vector_1[0U] < this.vector_2[0U]) ? 1L : 0L));
+		this.vector_1[2U] = this.vector_1[2U] + 886263092 + ((this.vector_1[1U] < this.vector_2[1U]) ? 1 : 0);
+		this.vector_1[3U] = this.vector_1[3U] + 1295307597 + ((this.vector_1[2U] < this.vector_2[2U]) ? 1 : 0);
+		this.vector_1[4U] = (int)((long)this.vector_1[4U] + 3545052371L + ((this.vector_1[3U] < this.vector_2[3U]) ? 1L : 0L));
+		this.vector_1[5U] = this.vector_1[5U] + 886263092 + ((this.vector_1[4U] < this.vector_2[4U]) ? 1 : 0);
+		this.vector_1[6U] = this.vector_1[6U] + 1295307597 + ((this.vector_1[5U] < this.vector_2[5U]) ? 1 : 0);
+		this.vector_1[7U] = (int)((long)this.vector_1[7U] + 3545052371L + ((this.vector_1[6U] < this.vector_2[6U]) ? 1L : 0L));
+		this.uint_0 = ((this.vector_1[7U] < this.vector_2[7U]) ? 1U : 0U);
+		for (int j = 0; j < 8; j++)
 		{
-			this.vector_4[num2] = (this.vector_0[num + 3U] << 24 | (this.vector_0[num + 2U] << 16 & 16711680U) | (this.vector_0[num + 1U] << 8 & 65280U) | (this.vector_0[num] & 255U));
-			this.vector_3[num2] = (this.vector_1[num + 3U] << 24 | (this.vector_1[num + 2U] << 16 & 16711680U) | (this.vector_1[num + 1U] << 8 & 65280U) | (this.vector_1[num] & 255U));
-			num += 4U;
-			num2++;
+			this.vector_2[j] = (int)this.method_2(this.vector_0[j] + this.vector_1[j]);
 		}
+		this.vector_0[0U] = (int)((long)this.vector_2[0U] + (long)((ulong)this.method_5(this.vector_2[7U], 16)) + (long)((ulong)this.method_5(this.vector_2[6U], 16)));
+		this.vector_0[1U] = (int)((long)this.vector_2[1U] + (long)((ulong)this.method_5(this.vector_2[0U], 8)) + (long)this.vector_2[7U]);
+		this.vector_0[2U] = (int)((long)this.vector_2[2U] + (long)((ulong)this.method_5(this.vector_2[1U], 16)) + (long)((ulong)this.method_5(this.vector_2[0U], 16)));
+		this.vector_0[3U] = (int)((long)this.vector_2[3U] + (long)((ulong)this.method_5(this.vector_2[2U], 8)) + (long)this.vector_2[1U]);
+		this.vector_0[4U] = (int)((long)this.vector_2[4U] + (long)((ulong)this.method_5(this.vector_2[3U], 16)) + (long)((ulong)this.method_5(this.vector_2[2U], 16)));
+		this.vector_0[5U] = (int)((long)this.vector_2[5U] + (long)((ulong)this.method_5(this.vector_2[4U], 8)) + (long)this.vector_2[3U]);
+		this.vector_0[6U] = (int)((long)this.vector_2[6U] + (long)((ulong)this.method_5(this.vector_2[5U], 16)) + (long)((ulong)this.method_5(this.vector_2[4U], 16)));
+		this.vector_0[7U] = (int)((long)this.vector_2[7U] + (long)((ulong)this.method_5(this.vector_2[6U], 8)) + (long)this.vector_2[5U]);
+	}
+
+	public uint method_2(int int_0)
+	{
+		int num = int_0 & 65535;
+		int num2 = int_0 >> 16;
+		uint num3 = (uint)(((num * num >> 17) + num * num2 >> 15) + num2 * num2);
+		int num4 = int_0 * int_0;
+		return num3 ^ (uint)num4;
+	}
+
+	private int method_3(ByteArray byteArray_1, int int_0)
+	{
+		return (int)(byteArray_1[int_0] & byte.MaxValue) | (int)(byteArray_1[int_0 + 1] & byte.MaxValue) << 8 | (int)(byteArray_1[int_0 + 2] & byte.MaxValue) << 16 | (int)byteArray_1[int_0 + 3] << 24;
+	}
+
+	private void method_4(ByteArray byteArray_1, int int_0, int int_1)
+	{
+		byteArray_1[int_0] = (byte)(int_1 & 255);
+		byteArray_1[int_0 + 1] = (byte)(U.smethod_0(int_1, 8) & 255);
+		byteArray_1[int_0 + 2] = (byte)(U.smethod_0(int_1, 16) & 255);
+		byteArray_1[int_0 + 3] = (byte)(U.smethod_0(int_1, 24) & 255);
+	}
+
+	private uint method_5(int int_0, int int_1)
+	{
+		return (uint)(int_0 << int_1 | int_0 >> 32 - int_1);
+	}
+
+	private int method_6()
+	{
+		uint num = this.uint_1 + 1U;
+		this.uint_1 = num;
+		if ((ulong)num >= (ulong)((long)this.byteArray_0.Length))
+		{
+			this.method_7();
+			this.uint_1 = 0U;
+		}
+		return (int)this.byteArray_0[(int)this.uint_1];
+	}
+
+	private void method_7()
+	{
+		this.method_1();
+		this.method_4(this.byteArray_0, 0, this.vector_0[0U] ^ this.vector_0[5U] >> 16 ^ this.vector_0[3U] << 16);
+		this.method_4(this.byteArray_0, 4, this.vector_0[2U] ^ this.vector_0[7U] >> 16 ^ this.vector_0[5U] << 16);
+		this.method_4(this.byteArray_0, 8, this.vector_0[4U] ^ this.vector_0[1U] >> 16 ^ this.vector_0[7U] << 16);
+		this.method_4(this.byteArray_0, 12, this.vector_0[6U] ^ this.vector_0[3U] >> 16 ^ this.vector_0[1U] << 16);
 	}
 
 	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
 	{
 		for (int i = 0; i < int_1; i++)
 		{
-			byte_0[i + int_0] = (byte)(((uint)byte_0[i + int_0] ^ this.method_6()) & 255U);
+			byte_0[i + int_0] = (byte)(((int)byte_0[i + int_0] ^ this.method_6()) & 255);
 		}
 	}
 
-	private uint method_6()
-	{
-		if (this.uint_1 > 3U)
-		{
-			this.method_7();
-			this.uint_1 = 0U;
-		}
-		Vector<uint> vector = this.vector_2;
-		uint num = this.uint_1;
-		this.uint_1 = num + 1U;
-		return vector[num];
-	}
+	private Vector<int> vector_0;
 
-	private void method_7()
-	{
-		this.uint_0 = this.method_1();
-		this.vector_2[0U] = this.uint_0;
-		this.vector_2[1U] = this.uint_0 >> 8;
-		this.vector_2[2U] = this.uint_0 >> 16;
-		this.vector_2[3U] = this.uint_0 >> 24;
-		this.vector_4 = this.method_2(this.vector_4, this.method_3() ^ this.vector_3[0U]);
-		this.vector_3 = this.method_2(this.vector_3, this.method_4());
-	}
-
-	private Vector<uint> vector_0;
-
-	private Vector<uint> vector_1;
-
-	private Vector<uint> vector_2;
-
-	private Vector<uint> vector_3;
-
-	private Vector<uint> vector_4;
+	private Vector<int> vector_1;
 
 	private uint uint_0;
 
+	private ByteArray byteArray_0;
+
 	private uint uint_1;
 
-	private bool bool_0;
+	private Vector<int> vector_2;
 }

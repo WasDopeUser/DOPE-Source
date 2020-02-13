@@ -8,7 +8,7 @@ public class GClass644 : GInterface0
 	{
 		get
 		{
-			return 20647;
+			return 7671;
 		}
 	}
 
@@ -16,47 +16,49 @@ public class GClass644 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 6;
 		}
 	}
 
-	public GClass644(string string_1 = "")
+	public GClass644(int int_0 = 0, string string_1 = "")
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		this.string_0 = "";
 		base..ctor();
+		this.MapId = int_0;
 		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20647;
+		return 7671;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.string_0 = binaryStream_0.smethod_2();
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (this.MapId << 10 | U.smethod_0(this.MapId, 22));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20647);
+		binaryStream_0.smethod_6(7671);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13240);
-		binaryStream_0.smethod_7(5336);
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.smethod_3(U.smethod_0(this.MapId, 10) | this.MapId << 22);
 	}
 
 	public string string_0;
+
+	public int MapId;
 }

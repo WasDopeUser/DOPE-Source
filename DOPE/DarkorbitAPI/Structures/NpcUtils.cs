@@ -49,7 +49,7 @@ namespace DarkorbitAPI.Structures
 
 		static NpcUtils()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			NpcUtils.Groups = new List<NpcUtils.NpcGroup>();
 			NpcUtils.G_Regular = new NpcUtils.NpcGroup("Regular", "");
 			NpcUtils.G_Boss = new NpcUtils.NpcGroup("Boss", null);
@@ -368,7 +368,7 @@ namespace DarkorbitAPI.Structures
 			{
 				for (int k = 2; k <= 8; k++)
 				{
-					NpcUtils.NpcsByMap[MapUtils.smethod_9(k, j)].Add(NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_ChaosProtegit));
+					NpcUtils.NpcsByMap[MapUtils.smethod_10(k, j)].Add(NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, NpcUtils.N_ChaosProtegit));
 				}
 			}
 			Dictionary<int, List<NpcUtils.NpcType>> dictionary2 = new Dictionary<int, List<NpcUtils.NpcType>>();
@@ -742,7 +742,7 @@ namespace DarkorbitAPI.Structures
 
 			public GGWaveType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, int int_0, string string_0 = null)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor(npcClass_0, npcGroup_0, false);
 				this.WaveNumber = int_0;
 				this.Description = string_0;
@@ -768,7 +768,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static GGWaveType()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				NpcUtils.GGWaveType.LastGGId = 2146483647;
 			}
 
@@ -788,7 +788,7 @@ namespace DarkorbitAPI.Structures
 
 			protected NpcType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, bool bool_0 = true)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor();
 				this.Class = npcClass_0;
 				this.Group = npcGroup_0;
@@ -802,7 +802,7 @@ namespace DarkorbitAPI.Structures
 			public static string smethod_0(string string_0)
 			{
 				string_0 = string_0.Replace("-x-", "").Replace("xX[", "").Replace("]Xx", "");
-				return new string(string_0.Where(new Func<char, bool>(NpcUtils.NpcType.<>c.<>9.method_0)).ToArray<char>()).Trim();
+				return new string(string_0.Where(new Func<char, bool>(NpcUtils.NpcType.<>c.<>9.fgvpxayLhT)).ToArray<char>()).Trim();
 			}
 
 			public static NpcUtils.NpcType smethod_1(int int_0)
@@ -874,7 +874,7 @@ namespace DarkorbitAPI.Structures
 				{
 					npcGroup_ = NpcUtils.G_Viral;
 				}
-				NpcUtils.NpcType npcType = NpcUtils.Npcs[CS$<>8__locals1.sanitized] = new NpcUtils.NpcType(NpcUtils.Classes.OrderByDescending(new Func<NpcUtils.NpcClass, int>(NpcUtils.NpcType.<>c.<>9.method_1)).FirstOrDefault(new Func<NpcUtils.NpcClass, bool>(CS$<>8__locals1.method_0)) ?? NpcUtils.N_Unknown, npcGroup_, true);
+				NpcUtils.NpcType npcType = NpcUtils.Npcs[CS$<>8__locals1.sanitized] = new NpcUtils.NpcType(NpcUtils.Classes.OrderByDescending(new Func<NpcUtils.NpcClass, int>(NpcUtils.NpcType.<>c.<>9.method_0)).FirstOrDefault(new Func<NpcUtils.NpcClass, bool>(CS$<>8__locals1.method_0)) ?? NpcUtils.N_Unknown, npcGroup_, true);
 				if (npcType.Class == NpcUtils.N_Unknown)
 				{
 					LogManager.GetLogger("Base-Net-Handlers").Warn("Unknown npc: " + string_0);
@@ -894,7 +894,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcType()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 			}
 
 			public static int LastId;
@@ -909,7 +909,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcClass(string string_0)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor();
 				this.Name = string_0;
 				NpcUtils.Classes.Add(this);
@@ -934,7 +934,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcClass()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				NpcUtils.NpcClass.LastId = 1;
 			}
 
@@ -953,7 +953,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcGroup(string string_0, string string_1 = null)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor();
 				if (string_1 == null)
 				{
@@ -1030,7 +1030,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcGroup()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				NpcUtils.NpcGroup.LastId = 1;
 			}
 

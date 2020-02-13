@@ -8,7 +8,7 @@ public class GClass337 : GInterface0
 	{
 		get
 		{
-			return 28196;
+			return 23516;
 		}
 	}
 
@@ -16,65 +16,53 @@ public class GClass337 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass337(Vector<GClass485> vector_1 = null)
+	public GClass337(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass485>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28196;
+		return 23516;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass485 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass485;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28196);
+		binaryStream_0.smethod_6(23516);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-30442);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass485 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_6(-6050);
+		binaryStream_0.smethod_3(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		binaryStream_0.smethod_3(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.smethod_6(-16548);
 	}
 
-	public Vector<GClass485> vector_0;
+	public int int_0;
+
+	public int int_1;
 }

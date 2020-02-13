@@ -8,7 +8,7 @@ public class GClass639 : GInterface0
 	{
 		get
 		{
-			return 16271;
+			return 1980;
 		}
 	}
 
@@ -16,59 +16,84 @@ public class GClass639 : GInterface0
 	{
 		get
 		{
-			return 14;
+			return 2;
 		}
 	}
 
-	public GClass639(int int_3 = 0, double double_1 = 0.0, int int_4 = 0, int int_5 = 0)
+	public GClass639(GClass632 gclass632_1 = null, string string_1 = "", GClass582 gclass582_1 = null, GClass482 gclass482_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
+		this.string_0 = "";
 		base..ctor();
-		this.int_1 = int_3;
-		this.double_0 = double_1;
-		this.int_0 = int_4;
-		this.int_2 = int_5;
+		if (gclass632_1 == null)
+		{
+			this.gclass632_0 = new GClass632(0U);
+		}
+		else
+		{
+			this.gclass632_0 = gclass632_1;
+		}
+		this.string_0 = string_1;
+		if (gclass582_1 == null)
+		{
+			this.gclass582_0 = new GClass582(0U);
+		}
+		else
+		{
+			this.gclass582_0 = gclass582_1;
+		}
+		if (gclass482_1 == null)
+		{
+			this.gclass482_0 = new GClass482(false, 0);
+			return;
+		}
+		this.gclass482_0 = gclass482_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 16271;
+		return 1980;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 14;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = (int)binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
-		this.int_1 = (int)binaryStream_0.smethod_1();
-		this.int_2 = (int)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.gclass582_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass582);
+		this.gclass582_0.imethod_1(binaryStream_0);
+		this.gclass482_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass482);
+		this.gclass482_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.gclass632_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass632);
+		this.gclass632_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16271);
+		binaryStream_0.smethod_6(1980);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(this.int_0);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(22866);
-		binaryStream_0.smethod_7(this.int_1);
-		binaryStream_0.smethod_7(this.int_2);
+		binaryStream_0.smethod_6(-18369);
+		binaryStream_0.smethod_6(28618);
+		this.gclass582_0.imethod_2(binaryStream_0);
+		this.gclass482_0.imethod_2(binaryStream_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		this.gclass632_0.imethod_2(binaryStream_0);
 	}
 
-	public int int_0;
+	public GClass582 gclass582_0;
 
-	public double double_0;
+	public GClass482 gclass482_0;
 
-	public int int_1;
+	public string string_0;
 
-	public int int_2;
+	public GClass632 gclass632_0;
 }

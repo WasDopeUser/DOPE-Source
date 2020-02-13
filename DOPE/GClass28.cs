@@ -33,7 +33,7 @@ public static class GClass28
 
 		public GClass29()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -81,7 +81,7 @@ public static class GClass28
 
 		public GClass30()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -89,10 +89,10 @@ public static class GClass28
 		private int int_0;
 
 		[CompilerGenerated]
-		private int int_1;
+		private int TgFmeLyyun;
 
 		[CompilerGenerated]
-		private int int_2;
+		private int int_1;
 
 		[CompilerGenerated]
 		private string string_0;
@@ -108,7 +108,7 @@ public static class GClass28
 
 		public GClass31()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -129,7 +129,7 @@ public static class GClass28
 
 		public GClass32()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -153,7 +153,7 @@ public static class GClass28
 
 		public GClass33()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -174,7 +174,7 @@ public static class GClass28
 
 		public GClass34()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -195,7 +195,7 @@ public static class GClass28
 
 		public GClass35()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -216,7 +216,7 @@ public static class GClass28
 
 		public GClass36()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -243,7 +243,7 @@ public static class GClass28
 
 		public GClass37()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -267,12 +267,12 @@ public static class GClass28
 
 		public GClass38()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private int int_0;
+		private int lPiffvolmo;
 	}
 
 	public class GClass39
@@ -291,7 +291,7 @@ public static class GClass28
 
 		public GClass39()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -299,13 +299,13 @@ public static class GClass28
 		private string string_0;
 
 		[CompilerGenerated]
-		private string yqjKsmbeYa;
-
-		[CompilerGenerated]
 		private string string_1;
 
 		[CompilerGenerated]
 		private string string_2;
+
+		[CompilerGenerated]
+		private string string_3;
 	}
 
 	public class GClass40
@@ -321,7 +321,7 @@ public static class GClass28
 
 		public GClass40()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -351,7 +351,7 @@ public static class GClass28
 
 		public GClass41()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -381,7 +381,7 @@ public static class GClass28
 
 		public GClass42()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -423,7 +423,7 @@ public static class GClass28
 
 		public GClass43()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -459,7 +459,7 @@ public static class GClass28
 
 		public GClass44()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -480,7 +480,7 @@ public static class GClass28
 
 		public GClass45()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -504,7 +504,7 @@ public static class GClass28
 
 		public GClass46()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -525,7 +525,7 @@ public static class GClass28
 
 		public Map()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -545,11 +545,11 @@ public static class GClass28
 		public GClass28.GClass46 GClass46_0 { get; set; }
 
 		[JsonProperty("map")]
-		public GClass28.Map Map_0 { get; set; }
+		public GClass28.Map xdBhmbgvok { get; set; }
 
 		public GClass47()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
@@ -573,7 +573,7 @@ public static class GClass28
 
 		public GClass48()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 

@@ -14,8 +14,8 @@ using DOPE.UI.Models;
 
 namespace DOPE.Common.Models
 {
-	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	[DataContract]
+	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	public class BotProfile : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -54,7 +54,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Maps>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
 			}
 		}
 

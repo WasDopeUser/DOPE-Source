@@ -8,7 +8,7 @@ public class GClass278 : GInterface0
 	{
 		get
 		{
-			return 22922;
+			return 4828;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass278 : GInterface0
 
 	public GClass278(Vector<GClass239> vector_1 = null, bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass278 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 22922;
+		return 4828;
 	}
 
 	public virtual int vmethod_1()
@@ -47,7 +47,6 @@ public class GClass278 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -66,14 +65,13 @@ public class GClass278 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22922);
+		binaryStream_0.smethod_6(4828);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-12085);
-		binaryStream_0.smethod_4(this.vector_0.Length);
+		binaryStream_0.smethod_3(this.vector_0.Length);
 		foreach (GClass239 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);

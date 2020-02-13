@@ -15,7 +15,7 @@ namespace DarkorbitAPI.Structures
 		internal void method_0(GClass249 gclass249_0)
 		{
 			Vector2 value = new Vector2((float)gclass249_0.int_0, (float)gclass249_0.int_1);
-			foreach (GroupManager.GroupMember groupMember in this.method_11())
+			foreach (GroupManager.GroupMember groupMember in this.method_10())
 			{
 				if (Vector2.Distance(groupMember.Position, value) < 1200f)
 				{
@@ -44,8 +44,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Hero>k__BackingField = value;
-				this.method_12(Class5.IsOwner);
-				this.method_12(Class5.Hero);
+				this.method_11(Class5.IsOwner);
+				this.method_11(Class5.Hero);
 			}
 		}
 
@@ -64,8 +64,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Invites>k__BackingField = value;
-				this.method_12(Class5.InviteList);
-				this.method_12(Class5.propertyChangedEventArgs_34);
+				this.method_11(Class5.InviteList);
+				this.method_11(Class5.propertyChangedEventArgs_33);
 			}
 		}
 
@@ -84,8 +84,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Members>k__BackingField = value;
-				this.method_12(Class5.MemberList);
-				this.method_12(Class5.propertyChangedEventArgs_72);
+				this.method_11(Class5.MemberList);
+				this.method_11(Class5.propertyChangedEventArgs_70);
 			}
 		}
 
@@ -120,8 +120,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsInitialized>k__BackingField = value;
-				this.method_12(Class5.IsOwner);
-				this.method_12(Class5.propertyChangedEventArgs_43);
+				this.method_11(Class5.IsOwner);
+				this.method_11(Class5.propertyChangedEventArgs_42);
 			}
 		}
 
@@ -140,8 +140,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<OwnerId>k__BackingField = value;
-				this.method_12(Class5.IsOwner);
-				this.method_12(Class5.propertyChangedEventArgs_77);
+				this.method_11(Class5.IsOwner);
+				this.method_11(Class5.propertyChangedEventArgs_74);
 			}
 		}
 
@@ -168,13 +168,13 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Id>k__BackingField = value;
-				this.method_12(Class5.Id);
+				this.method_11(Class5.Id);
 			}
 		}
 
 		public GroupManager(Hero hero_0)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 			this.Hero = hero_0;
 			this.Invites = new ConcurrentDictionary<int, GroupManager.GroupInvite>();
@@ -223,43 +223,43 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void method_5(GClass194 gclass194_0)
+		public void SoFgjjSveZ(GClass194 gclass194_0)
 		{
 			GroupManager.GroupMember groupMember;
 			if (!this.Members.TryGetValue(gclass194_0.Id, out groupMember))
 			{
 				groupMember = (this.Members[gclass194_0.Id] = new GroupManager.GroupMember());
 			}
-			groupMember.method_0(gclass194_0);
+			groupMember.method_1(gclass194_0);
 			this.method_2();
 		}
 
-		public void method_6(GClass193 gclass193_0)
+		public void method_5(GClass193 gclass193_0)
 		{
 			this.Clear();
 			this.OwnerId = gclass193_0.int_1;
 			this.IsInitialized = true;
 			foreach (GClass194 gclass194_ in gclass193_0.vector_0)
 			{
-				this.method_5(gclass194_);
+				this.SoFgjjSveZ(gclass194_);
 			}
 		}
 
-		public void method_7(GClass211 gclass211_0)
+		public void method_6(GClass211 gclass211_0)
 		{
 			GroupManager.GroupMember groupMember;
 			if (this.Members.TryGetValue(gclass211_0.int_0, out groupMember))
 			{
-				groupMember.method_1(gclass211_0);
+				groupMember.method_2(gclass211_0);
 			}
 		}
 
-		public void method_8(GClass192 gclass192_0)
+		public void method_7(GClass192 gclass192_0)
 		{
 			this.Clear();
 		}
 
-		public void method_9(GClass212 gclass212_0)
+		public void method_8(GClass212 gclass212_0)
 		{
 			GroupManager.GroupMember groupMember;
 			this.Members.TryRemove(gclass212_0.int_0, out groupMember);
@@ -271,7 +271,7 @@ namespace DarkorbitAPI.Structures
 			this.method_2();
 		}
 
-		public void method_10(GClass214 gclass214_0)
+		public void method_9(GClass214 gclass214_0)
 		{
 			this.OwnerId = gclass214_0.int_0;
 		}
@@ -284,7 +284,7 @@ namespace DarkorbitAPI.Structures
 			this.method_2();
 		}
 
-		public IEnumerable<GroupManager.GroupMember> method_11()
+		public IEnumerable<GroupManager.GroupMember> method_10()
 		{
 			GroupManager.<>c__DisplayClass45_0 CS$<>8__locals1 = new GroupManager.<>c__DisplayClass45_0();
 			CS$<>8__locals1.<>4__this = this;
@@ -301,7 +301,7 @@ namespace DarkorbitAPI.Structures
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_12(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_11(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
@@ -327,7 +327,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<Id>k__BackingField = value;
-					this.method_6(Class5.Id);
+					this.method_7(Class5.Id);
 				}
 			}
 
@@ -346,7 +346,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<Name>k__BackingField = value;
-					this.method_6(Class5.Name);
+					this.method_7(Class5.Name);
 				}
 			}
 
@@ -365,7 +365,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<IsInitialized>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_43);
+					this.method_7(Class5.propertyChangedEventArgs_42);
 				}
 			}
 
@@ -384,9 +384,9 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<Location>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_78);
-					this.method_6(Class5.MapId);
-					this.method_6(Class5.propertyChangedEventArgs_68);
+					this.method_7(Class5.propertyChangedEventArgs_75);
+					this.method_7(Class5.MapId);
+					this.method_7(Class5.propertyChangedEventArgs_66);
 				}
 			}
 
@@ -396,7 +396,7 @@ namespace DarkorbitAPI.Structures
 				{
 					if (this.Location != null)
 					{
-						return new Vector2((float)this.Location.int_1, (float)this.Location.int_0);
+						return new Vector2((float)this.Location.int_0, (float)this.Location.int_1);
 					}
 					return default(Vector2);
 				}
@@ -446,7 +446,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<ShipInfo>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_101);
+					this.method_7(Class5.propertyChangedEventArgs_98);
 				}
 			}
 
@@ -465,7 +465,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<Target>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_106);
+					this.method_7(Class5.propertyChangedEventArgs_103);
 				}
 			}
 
@@ -484,7 +484,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<FactionId>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_19);
+					this.method_7(Class5.propertyChangedEventArgs_19);
 				}
 			}
 
@@ -503,7 +503,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<IsCloaked>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_38);
+					this.method_7(Class5.propertyChangedEventArgs_37);
 				}
 			}
 
@@ -522,7 +522,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<IsActive>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_35);
+					this.method_7(Class5.propertyChangedEventArgs_34);
 				}
 			}
 
@@ -541,7 +541,7 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<IsFighting>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_41);
+					this.method_7(Class5.propertyChangedEventArgs_40);
 				}
 			}
 
@@ -560,21 +560,21 @@ namespace DarkorbitAPI.Structures
 						return;
 					}
 					this.<LastPinged>k__BackingField = value;
-					this.method_6(Class5.propertyChangedEventArgs_58);
+					this.method_7(Class5.propertyChangedEventArgs_56);
 				}
 			}
 
 			public event PropertyChangedEventHandler PropertyChanged;
 
-			public bool CnVrnkuQiB(out GClass205 gclass205_0)
+			public bool method_0(out GClass205 gclass205_0)
 			{
 				gclass205_0 = this.Target;
-				return gclass205_0 != null && gclass205_0.gclass207_0.uint_0 > 0U;
+				return gclass205_0 != null && gclass205_0.gclass207_0.ldwIvZeOfb > 0U;
 			}
 
 			public GroupMember()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor(0, 0);
 			}
 
@@ -588,45 +588,45 @@ namespace DarkorbitAPI.Structures
 				this.Target = null;
 			}
 
-			public void method_0(GClass194 gclass194_0)
+			public void method_1(GClass194 gclass194_0)
 			{
 				this.Clear();
 				this.IsInitialized = true;
-				this.method_3(gclass194_0.gclass204_0);
+				this.method_4(gclass194_0.gclass204_0);
 				this.Id = gclass194_0.Id;
 				this.Name = gclass194_0.Name;
-				this.method_4(gclass194_0.gclass205_0);
-				this.IsCloaked = gclass194_0.bool_1;
+				this.method_5(gclass194_0.gclass205_0);
+				this.IsCloaked = gclass194_0.bool_0;
 				this.IsActive = !gclass194_0.bool_3;
-				this.method_5(gclass194_0.gclass201_0);
+				this.method_6(gclass194_0.gclass201_0);
 			}
 
-			public void method_1(GClass211 gclass211_0)
+			public void method_2(GClass211 gclass211_0)
 			{
 				foreach (GClass197 gclass197_ in gclass211_0.vector_0)
 				{
-					this.method_2(gclass197_);
+					this.method_3(gclass197_);
 				}
 			}
 
-			public void method_2(GClass197 gclass197_0)
+			public void method_3(GClass197 gclass197_0)
 			{
 				GClass204 gclass = gclass197_0 as GClass204;
 				if (gclass != null)
 				{
-					this.method_3(gclass);
+					this.method_4(gclass);
 					return;
 				}
 				GClass205 gclass2 = gclass197_0 as GClass205;
 				if (gclass2 != null)
 				{
-					this.method_4(gclass2);
+					this.method_5(gclass2);
 					return;
 				}
 				GClass201 gclass3 = gclass197_0 as GClass201;
 				if (gclass3 != null)
 				{
-					this.method_5(gclass3);
+					this.method_6(gclass3);
 					return;
 				}
 				GClass202 gclass4 = gclass197_0 as GClass202;
@@ -642,24 +642,24 @@ namespace DarkorbitAPI.Structures
 				}
 			}
 
-			public void method_3(GClass204 gclass204_0)
+			public void method_4(GClass204 gclass204_0)
 			{
 				this.Location = gclass204_0;
 			}
 
-			public void method_4(GClass205 gclass205_0)
+			public void method_5(GClass205 gclass205_0)
 			{
 				this.Target = gclass205_0;
 			}
 
-			public void method_5(GClass201 gclass201_0)
+			public void method_6(GClass201 gclass201_0)
 			{
 				this.FactionId = (int)gclass201_0.uint_0;
 			}
 
 			[DebuggerNonUserCode]
 			[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
-			protected void method_6(PropertyChangedEventArgs propertyChangedEventArgs_0)
+			protected void method_7(PropertyChangedEventArgs propertyChangedEventArgs_0)
 			{
 				PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 				if (propertyChanged != null)
@@ -683,7 +683,7 @@ namespace DarkorbitAPI.Structures
 
 			public GroupInvite(GClass195 gclass195_0, bool bool_0)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor();
 				this.FromId = gclass195_0.FromId;
 				this.FromName = gclass195_0.FromName;

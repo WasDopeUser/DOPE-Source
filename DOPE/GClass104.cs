@@ -26,17 +26,17 @@ public class GClass104 : GInterface4
 
 	public void method_1(GClass226 gclass226_0)
 	{
-		this.Pet.method_19(gclass226_0);
+		this.Pet.method_20(gclass226_0);
 	}
 
 	public void method_2(GClass225 gclass225_0)
 	{
-		this.Pet.method_21(gclass225_0);
+		this.Pet.method_22(gclass225_0);
 	}
 
 	public GClass104()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

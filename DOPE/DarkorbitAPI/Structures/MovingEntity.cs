@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Structures
 	{
 		protected MovingEntity(int int_0, int int_1)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor(int_0, int_1);
 		}
 
@@ -88,7 +88,7 @@ namespace DarkorbitAPI.Structures
 			{
 				return;
 			}
-			if (gclass229_0.int_3 == gclass229_0.int_2)
+			if (gclass229_0.int_0 == gclass229_0.int_3)
 			{
 			}
 		}

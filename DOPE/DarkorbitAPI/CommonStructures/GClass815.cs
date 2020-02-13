@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace DarkorbitAPI.CommonStructures
 {
-	public static class GClass814
+	public static class GClass815
 	{
 		public static byte[] smethod_0(this RSACryptoServiceProvider rsacryptoServiceProvider_0, byte[] byte_0)
 		{
@@ -21,10 +21,10 @@ namespace DarkorbitAPI.CommonStructures
 			{
 				throw new ArgumentOutOfRangeException("data", string.Format("Maximum data length for the current key size ({0} bits) is {1} bytes (current length: {2} bytes)", rsacryptoServiceProvider_0.KeySize, num, byte_0.Length));
 			}
-			BigInteger value = GClass814.smethod_2(GClass814.smethod_3(byte_0));
+			BigInteger value = GClass815.smethod_2(GClass815.smethod_3(byte_0));
 			RSAParameters rsaparameters = rsacryptoServiceProvider_0.ExportParameters(true);
-			BigInteger exponent = GClass814.smethod_2(rsaparameters.D);
-			BigInteger modulus = GClass814.smethod_2(rsaparameters.Modulus);
+			BigInteger exponent = GClass815.smethod_2(rsaparameters.D);
+			BigInteger modulus = GClass815.smethod_2(rsaparameters.Modulus);
 			return BigInteger.ModPow(value, exponent, modulus).ToByteArray();
 		}
 
@@ -36,12 +36,12 @@ namespace DarkorbitAPI.CommonStructures
 			}
 			BigInteger value = new BigInteger(byte_0);
 			RSAParameters rsaparameters = rsacryptoServiceProvider_0.ExportParameters(false);
-			BigInteger exponent = GClass814.smethod_2(rsaparameters.Exponent);
-			BigInteger modulus = GClass814.smethod_2(rsaparameters.Modulus);
+			BigInteger exponent = GClass815.smethod_2(rsaparameters.Exponent);
+			BigInteger modulus = GClass815.smethod_2(rsaparameters.Modulus);
 			byte[] array = BigInteger.ModPow(value, exponent, modulus).ToByteArray();
 			byte[] array2 = new byte[array.Length - 1];
 			Array.Copy(array, array2, array2.Length);
-			array2 = GClass814.smethod_4(array2);
+			array2 = GClass815.smethod_4(array2);
 			Array.Reverse(array2);
 			return array2;
 		}

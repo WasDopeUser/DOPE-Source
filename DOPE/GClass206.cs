@@ -8,7 +8,7 @@ public class GClass206 : GClass197, GInterface0
 	{
 		get
 		{
-			return 21524;
+			return 25428;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass206 : GClass197, GInterface0
 
 	public GClass206(bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 21524;
+		return 25428;
 	}
 
 	public override int vmethod_1()
@@ -45,7 +45,7 @@ public class GClass206 : GClass197, GInterface0
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21524);
+		binaryStream_0.smethod_6(25428);
 		this.vmethod_2(binaryStream_0);
 	}
 

@@ -8,7 +8,7 @@ public class GClass415 : GInterface0
 	{
 		get
 		{
-			return 20284;
+			return 8232;
 		}
 	}
 
@@ -16,92 +16,45 @@ public class GClass415 : GInterface0
 	{
 		get
 		{
-			return 11;
+			return 4;
 		}
 	}
 
-	public GClass415(string string_3 = "", Vector<GClass689> vector_1 = null, string string_4 = "", string string_5 = "", bool bool_0 = false)
+	public GClass415(int int_1 = 0)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.string_0 = "";
-		this.string_1 = "";
-		this.string_2 = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.string_1 = string_3;
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass689>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		this.string_0 = string_4;
-		this.string_2 = string_5;
-		this.Visible = bool_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20284;
+		return 8232;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 11;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.string_1 = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass689 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass689;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-		this.Visible = binaryStream_0.ReadBoolean();
-		this.string_2 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20284);
+		binaryStream_0.smethod_6(8232);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_7(-20456);
-		binaryStream_0.smethod_7(-20271);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass689 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.WriteBoolean(this.Visible);
-		binaryStream_0.smethod_3(this.string_2);
+		binaryStream_0.smethod_3(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		binaryStream_0.smethod_6(-5623);
 	}
 
-	public string string_0;
-
-	public string string_1;
-
-	public Vector<GClass689> vector_0;
-
-	public bool Visible;
-
-	public string string_2;
+	public int int_0;
 }

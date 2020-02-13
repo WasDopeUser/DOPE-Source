@@ -8,7 +8,7 @@ public class GClass165 : GInterface0
 	{
 		get
 		{
-			return 5085;
+			return 22833;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass165 : GInterface0
 
 	public GClass165(GClass258 gclass258_1 = null, bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		if (gclass258_1 == null)
 		{
@@ -37,7 +37,7 @@ public class GClass165 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 5085;
+		return 22833;
 	}
 
 	public virtual int vmethod_1()
@@ -55,13 +55,13 @@ public class GClass165 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(5085);
+		binaryStream_0.smethod_6(22833);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28656);
+		binaryStream_0.smethod_6(-30677);
 		this.gclass258_0.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
 	}

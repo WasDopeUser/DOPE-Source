@@ -8,7 +8,7 @@ public class GClass756 : GInterface0
 	{
 		get
 		{
-			return 1977;
+			return 24519;
 		}
 	}
 
@@ -16,45 +16,39 @@ public class GClass756 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 0;
 		}
 	}
 
-	public GClass756(string string_1 = "")
+	public GClass756()
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.string_0 = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 1977;
+		return 24519;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1977);
+		binaryStream_0.smethod_6(24519);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(9507);
+		binaryStream_0.smethod_6(29651);
 	}
-
-	public string string_0;
 }

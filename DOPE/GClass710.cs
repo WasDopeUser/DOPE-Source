@@ -8,7 +8,7 @@ public class GClass710 : GInterface0
 	{
 		get
 		{
-			return 10995;
+			return 420;
 		}
 	}
 
@@ -20,24 +20,21 @@ public class GClass710 : GInterface0
 		}
 	}
 
-	public GClass710(GClass178 gclass178_1 = null, int int_1 = 0)
+	public GClass710(Vector<GClass368> vector_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (gclass178_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass178_0 = new GClass178(0U);
+			this.vector_0 = new Vector<GClass368>();
+			return;
 		}
-		else
-		{
-			this.gclass178_0 = gclass178_1;
-		}
-		this.int_0 = int_1;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 10995;
+		return 420;
 	}
 
 	public virtual int vmethod_1()
@@ -47,27 +44,39 @@ public class GClass710 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass178_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass178);
-		this.gclass178_0.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
 		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass368 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass368;
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10995);
+		binaryStream_0.smethod_6(420);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass178_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		binaryStream_0.smethod_7(16066);
+		binaryStream_0.smethod_6(13353);
+		binaryStream_0.smethod_6(7402);
+		binaryStream_0.smethod_3(this.vector_0.Length);
+		foreach (GClass368 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
 	}
 
-	public GClass178 gclass178_0;
-
-	public int int_0;
+	public Vector<GClass368> vector_0;
 }

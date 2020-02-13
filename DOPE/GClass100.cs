@@ -19,14 +19,14 @@ public class GClass100 : GInterface4
 		value.SendMessage(new GClass158());
 		if (cmd.Reset)
 		{
-			value.SendMessage(new GClass172(value.Game.Security.method_1(), value.Game.Settings.Use3D ? 1U : 0U));
-			value.SendMessage(new GClass172(value.Game.Security.method_1(), 2U));
+			value.SendMessage(new GClass172(value.Game.Security.itZxNqgcms(), value.Game.Settings.Use3D ? 1U : 0U));
+			value.SendMessage(new GClass172(value.Game.Security.itZxNqgcms(), 2U));
 		}
 	}
 
 	public GClass100()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

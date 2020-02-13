@@ -6,7 +6,7 @@ namespace DarkorbitAPI.Packets.Static
 	{
 		public Ability()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 	}

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass406 : GClass401, GInterface0
+public class GClass406 : GClass403, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 15737;
+			return 21800;
 		}
 	}
 
@@ -16,100 +16,56 @@ public class GClass406 : GClass401, GInterface0
 	{
 		get
 		{
-			return 22;
+			return 4;
 		}
 	}
 
-	public GClass406(uint uint_1 = 0U, int int_2 = 0, int int_3 = 0, string string_1 = "", double double_2 = 0.0, double double_3 = 0.0, Vector<GClass377> vector_1 = null)
+	public GClass406(int int_1 = 0, GClass365 gclass365_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.string_0 = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.uint_0 = uint_1;
-		this.int_0 = int_2;
-		this.int_1 = int_3;
-		this.string_0 = string_1;
-		this.double_0 = double_2;
-		this.double_1 = double_3;
-		if (vector_1 == null)
+		this.int_0 = int_1;
+		if (gclass365_1 == null)
 		{
-			this.vector_0 = new Vector<GClass377>();
+			this.gclass365_0 = new GClass365(false);
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.gclass365_0 = gclass365_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 15737;
+		return 21800;
 	}
 
 	public override int vmethod_1()
 	{
-		return 22;
+		return 4;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		base.imethod_1(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass377 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass377;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-		this.double_0 = (double)binaryStream_0.smethod_10();
-		this.double_1 = (double)binaryStream_0.smethod_10();
-		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 14) | this.int_1 << 18);
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.gclass365_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass365);
+		this.gclass365_0.imethod_1(binaryStream_0);
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15737);
+		binaryStream_0.smethod_6(21800);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass377 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_9(this.double_0);
-		binaryStream_0.smethod_9(this.double_1);
-		binaryStream_0.smethod_7(28257);
-		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		binaryStream_0.smethod_4(this.int_1 << 14 | U.smethod_0(this.int_1, 18));
+		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		this.gclass365_0.imethod_2(binaryStream_0);
 	}
-
-	public string string_0;
-
-	public uint uint_0;
-
-	public Vector<GClass377> vector_0;
-
-	public double double_0;
-
-	public double double_1;
 
 	public int int_0;
 
-	public int int_1;
+	public GClass365 gclass365_0;
 }

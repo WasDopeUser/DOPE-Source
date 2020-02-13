@@ -143,13 +143,13 @@
 					</ResourceDictionary>
 				</FrameworkElement.Resources>
 				<Button
-					Click="method_8">
+					Click="method_7">
 					<Run>Clear</Run>
 				</Button>
 				<CheckBox
 					IsThreeState="True"
 					IsChecked="{Binding FilterReceived}"
-					Click="method_7">
+					Click="method_6">
 					<Run>Filter received</Run>
 				</CheckBox>
 				<CheckBox

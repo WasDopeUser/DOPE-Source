@@ -6,7 +6,7 @@ public sealed class GAttribute4 : Attribute
 {
 	public GAttribute4([GAttribute1] string formatParameterName)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.String_0 = formatParameterName;
 	}
@@ -15,5 +15,5 @@ public sealed class GAttribute4 : Attribute
 	public string String_0 { get; private set; }
 
 	[CompilerGenerated]
-	private string UdcpifFkcX;
+	private string string_0;
 }

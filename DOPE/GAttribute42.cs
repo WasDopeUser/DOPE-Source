@@ -6,13 +6,13 @@ public sealed class GAttribute42 : Attribute
 {
 	public GAttribute42()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 
 	public GAttribute42([GAttribute1] string name)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.Name = name;
 	}

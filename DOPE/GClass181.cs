@@ -8,7 +8,7 @@ public class GClass181 : GClass179, GInterface0
 	{
 		get
 		{
-			return 21044;
+			return 24749;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass181 : GClass179, GInterface0
 
 	public GClass181(string string_1 = "", int int_2 = 0, int int_3 = 0, GClass261 gclass261_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor(string_1, int_2, int_3);
 		if (gclass261_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass181 : GClass179, GInterface0
 
 	public override int vmethod_0()
 	{
-		return 21044;
+		return 24749;
 	}
 
 	public override int vmethod_1()
@@ -47,11 +47,12 @@ public class GClass181 : GClass179, GInterface0
 		base.imethod_1(binaryStream_0);
 		this.gclass261_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass261);
 		this.gclass261_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21044);
+		binaryStream_0.smethod_6(24749);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -59,6 +60,7 @@ public class GClass181 : GClass179, GInterface0
 	{
 		base.vmethod_2(binaryStream_0);
 		this.gclass261_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(22401);
 	}
 
 	public GClass261 gclass261_0;

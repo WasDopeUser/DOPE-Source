@@ -8,7 +8,7 @@ public class GClass521 : GInterface0
 	{
 		get
 		{
-			return 17984;
+			return 23133;
 		}
 	}
 
@@ -16,49 +16,52 @@ public class GClass521 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 3;
 		}
 	}
 
-	public GClass521(int int_2 = 0, int int_3 = 0)
+	public GClass521(string string_1 = "", bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
+		this.string_0 = "";
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
+		this.string_0 = string_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17984;
+		return 23133;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 3;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17984);
+		binaryStream_0.smethod_6(23133);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		binaryStream_0.smethod_6(-25622);
+		binaryStream_0.smethod_6(-20271);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
 	}
 
-	public int int_0;
+	public bool bool_0;
 
-	public int int_1;
+	public string string_0;
 }

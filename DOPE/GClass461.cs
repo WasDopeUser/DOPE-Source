@@ -8,7 +8,7 @@ public class GClass461 : GInterface0
 	{
 		get
 		{
-			return 8889;
+			return 907;
 		}
 	}
 
@@ -20,15 +20,16 @@ public class GClass461 : GInterface0
 		}
 	}
 
-	public GClass461()
+	public GClass461(uint uint_1 = 0U)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8889;
+		return 907;
 	}
 
 	public virtual int vmethod_1()
@@ -38,15 +39,19 @@ public class GClass461 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8889);
+		binaryStream_0.smethod_6(907);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_5(this.uint_0);
 	}
+
+	public uint uint_0;
 }

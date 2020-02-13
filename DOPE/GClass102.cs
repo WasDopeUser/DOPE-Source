@@ -18,14 +18,14 @@ public class GClass102 : GInterface4
 			GClass102.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass102.<>c__DisplayClass0_0();
 			if (isControlDisabled)
 			{
-				value.Game.Hero.Pet.method_22();
+				value.Game.Hero.Pet.method_23();
 			}
 			HeroPet.PetModeData petModeData;
 			if (!value.Game.Hero.Pet.Modes.TryGetValue(PetMode.Kamikaze, out petModeData))
 			{
 				return;
 			}
-			CS$<>8__locals1.int_0 = petModeData.Data.int_1 * 50 + 350;
+			CS$<>8__locals1.int_0 = petModeData.Data.int_0 * 50 + 350;
 			CS$<>8__locals1.vector2_0 = value.Game.Hero.Pet.Position;
 			int num = value.Game.Map.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(CS$<>8__locals1.method_0));
 			string text = string.Format("Kamikaze hit {0} enemies", num);
@@ -39,7 +39,7 @@ public class GClass102 : GInterface4
 
 	public GClass102()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

@@ -12,8 +12,8 @@ using DOPE.Common.Models;
 
 namespace DOPE.UI.Models
 {
-	[DataContract]
 	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
+	[DataContract]
 	public class SelectedNpcModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -36,7 +36,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<NpcId>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_66);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_62);
 			}
 		}
 
@@ -81,9 +81,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Parent = "Enabled", Description = "Laser")]
 		[Category("Ammo")]
 		[DataMember(Order = 4)]
+		[Layout(Parent = "Enabled", Description = "Laser")]
 		public virtual LaserType Laser
 		{
 			[CompilerGenerated]
@@ -99,12 +99,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Laser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_51);
 			}
 		}
 
-		[Category("Ammo")]
 		[DataMember(Order = 5)]
+		[Category("Ammo")]
 		[Layout(Parent = "Enabled", Description = "Rocket")]
 		public virtual RocketType Rocket
 		{
@@ -121,13 +121,13 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Rocket>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_80);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_75);
 			}
 		}
 
 		[Category("Ammo")]
-		[Layout(Parent = "Enabled", Description = "Hellstorm")]
 		[DataMember(Order = 6)]
+		[Layout(Parent = "Enabled", Description = "Hellstorm")]
 		public virtual HellstormType Hellstorm
 		{
 			[CompilerGenerated]
@@ -143,12 +143,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Hellstorm>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_48);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_44);
 			}
 		}
 
-		[DataMember(Order = 8)]
 		[Layout(Description = "Override drone formation", Parent = "Enabled")]
+		[DataMember(Order = 8)]
 		public GEnum4 DroneFormation
 		{
 			[CompilerGenerated]
@@ -164,12 +164,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<DroneFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_20);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_19);
 			}
 		}
 
-		[DataMember(Order = 9)]
 		[Layout(Description = "Config", Parent = "Enabled", RightDescription = "Set 0 to use the attack config")]
+		[DataMember(Order = 9)]
 		[Range(0, 2)]
 		public int Config
 		{
@@ -190,9 +190,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Range(-1, 100)]
 		[DataMember(Order = 10)]
 		[Layout(Description = "Priority", Parent = "Enabled")]
+		[Range(-1, 100)]
 		public int Priority
 		{
 			[CompilerGenerated]
@@ -208,13 +208,13 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Priority>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_69);
 			}
 		}
 
-		[DataMember(Order = 11)]
-		[Range(300, 675)]
 		[Layout(Description = "Circle range", Parent = "Enabled", RightDescription = "Set below 350 to disable circling")]
+		[Range(300, 675)]
+		[DataMember(Order = 11)]
 		public int CircleRange
 		{
 			[CompilerGenerated]
@@ -234,8 +234,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 12)]
 		[Layout(Description = "Use Kamikaze", Parent = "Enabled")]
+		[DataMember(Order = 12)]
 		public bool UseKamikaze
 		{
 			[CompilerGenerated]
@@ -251,12 +251,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseKamikaze>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_107);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_101);
 			}
 		}
 
-		[DataMember(Order = 13)]
 		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
+		[DataMember(Order = 13)]
 		public LaserType GgCornerLaser
 		{
 			[CompilerGenerated]
@@ -272,12 +272,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GgCornerLaser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_41);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_39);
 			}
 		}
 
-		[DataMember(Order = 14)]
 		[Layout(Description = "Use offensive ship ability", Parent = "Enabled", RightDescription = "Works with Venom and Diminisher")]
+		[DataMember(Order = 14)]
 		public bool UseOffensiveAbility
 		{
 			[CompilerGenerated]
@@ -293,7 +293,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseOffensiveAbility>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_103);
 			}
 		}
 
@@ -314,12 +314,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseSab>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_115);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
 			}
 		}
 
-		[DataMember(Order = 16)]
 		[Layout(Description = "Ignore ownership", Parent = "Enabled")]
+		[DataMember(Order = 16)]
 		public bool IgnoreOwnership
 		{
 			[CompilerGenerated]
@@ -335,12 +335,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<IgnoreOwnership>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_50);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_46);
 			}
 		}
 
-		[Layout(Description = "Use PET locator", Parent = "Enabled", RightDescription = "PET has to be already running", CustomVisibility = "(obj,p) => p === undefined || !p.Name.startsWith('GG ')")]
 		[DataMember(Order = 17)]
+		[Layout(Description = "Use PET locator", Parent = "Enabled", RightDescription = "PET has to be already running", CustomVisibility = "(obj,p) => p === undefined || !p.Name.startsWith('GG ')")]
 		public bool UsePetLocator
 		{
 			[CompilerGenerated]
@@ -356,7 +356,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UsePetLocator>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_104);
 			}
 		}
 
@@ -377,12 +377,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GroupAttackMode>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_42);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_40);
 			}
 		}
 
-		[DataMember(Order = 19)]
 		[Layout(Description = "Chase if fleeing", Parent = "Enabled", RightDescription = "Keeps attacking the NPC even if its HP drops below 25%.\nIts priority is set to +1", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')")]
+		[DataMember(Order = 19)]
 		public bool GG_ChaseFleeing
 		{
 			[CompilerGenerated]
@@ -398,7 +398,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GG_ChaseFleeing>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_38);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_36);
 			}
 		}
 
@@ -406,7 +406,7 @@ namespace DOPE.UI.Models
 		{
 			if (this.CircleRange < 300 || this.CircleRange > 675)
 			{
-				this.CircleRange = SecurityManager.smethod_1(NpcUtils.NpcType.smethod_3(this.Name));
+				this.CircleRange = SecurityManager.smethod_0(NpcUtils.NpcType.smethod_3(this.Name));
 			}
 		}
 

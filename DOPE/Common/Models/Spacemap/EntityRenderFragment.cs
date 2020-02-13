@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Spacemap
 {
-	[Guid("6925D691-BDE8-48A7-9CA5-3310A5069203")]
 	[DataContract]
+	[Guid("6925D691-BDE8-48A7-9CA5-3310A5069203")]
 	public class EntityRenderFragment
 	{
 		[DataMember(Order = 1)]

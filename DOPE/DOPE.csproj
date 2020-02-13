@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29169F55-B9DE-4CCD-9FC1-290066C856F4}</ProjectGuid>
+    <ProjectGuid>{3F77BC12-333A-4D5C-9898-5AF2561E2283}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DOPE</RootNamespace>
     <AssemblyName>DOPE</AssemblyName>
@@ -38,30 +38,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ace.Networking">
-      <HintPath>..\..\DOPE30.01\Ace.Networking.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\Ace.Networking.dll</HintPath>
     </Reference>
     <Reference Include="Ace.Networking.Entanglement">
-      <HintPath>..\..\DOPE30.01\Ace.Networking.Entanglement.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\Ace.Networking.Entanglement.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="netstandard" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\DOPE30.01\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\..\DOPE30.01\NLog.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="protobuf-net">
-      <HintPath>..\..\DOPE30.01\protobuf-net.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="Syroot.BinaryData">
-      <HintPath>..\..\DOPE30.01\Syroot.BinaryData.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\Syroot.BinaryData.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers">
-      <HintPath>..\..\DOPE30.01\System.Buffers.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -70,7 +70,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>..\..\DOPE30.01\System.Numerics.Vectors.dll</HintPath>
+      <HintPath>..\..\DOPE13.02\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ValueTuple" />
@@ -85,12 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="--PropertyChangedEventArgs.cs" />
-    <Compile Include="-Module-{01437F77-0924-4067-ADA6-D41DCC03D519}.cs" />
-    <Compile Include="-Module-{1E3E679E-5866-4A3F-8763-F1121A9F96FB}.cs" />
-    <Compile Include="-Module-{26D31104-D892-44CF-95F0-2143C79D44E5}.cs" />
-    <Compile Include="-Module-{74020EB0-2621-466C-8AA4-583EEE836ABC}.cs" />
-    <Compile Include="-Module-{D73DE562-83FB-489D-B6B6-EFB6BCD31381}.cs" />
-    <Compile Include="bEmlXsHmdrlYyEhnFoh\GClass403.cs" />
+    <Compile Include="-Module-{417671FB-39E1-4E0F-92C9-E7BAEA671DE6}.cs" />
+    <Compile Include="-Module-{439406E9-13E1-4533-AE6E-4FD8D04095A5}.cs" />
+    <Compile Include="-Module-{4421181C-82D4-451C-95FB-75A095ABE19A}.cs" />
+    <Compile Include="-Module-{B830DFBB-F276-441C-A6A5-FFE42AD77172}.cs" />
+    <Compile Include="-Module-{EABBA3B0-A1A2-4710-B197-1259C33E0E76}.cs" />
     <Compile Include="Class0.cs" />
     <Compile Include="Class10.cs" />
     <Compile Include="Class11.cs" />
@@ -163,7 +162,7 @@
     <Compile Include="DarkorbitAPI\CommonStructures\DollConfig.cs" />
     <Compile Include="DarkorbitAPI\CommonStructures\ErrorReason.cs" />
     <Compile Include="DarkorbitAPI\CommonStructures\FlashSettings.cs" />
-    <Compile Include="DarkorbitAPI\CommonStructures\GClass814.cs" />
+    <Compile Include="DarkorbitAPI\CommonStructures\GClass815.cs" />
     <Compile Include="DarkorbitAPI\CommonStructures\Heap.cs" />
     <Compile Include="DarkorbitAPI\CommonStructures\MapExtensions.cs" />
     <Compile Include="DarkorbitAPI\CommonStructures\MaxHeap.cs" />
@@ -253,7 +252,6 @@
     <Compile Include="GAttribute32.cs" />
     <Compile Include="GAttribute33.cs" />
     <Compile Include="GAttribute34.cs" />
-    <Compile Include="GAttribute35.cs" />
     <Compile Include="GAttribute36.cs" />
     <Compile Include="GAttribute37.cs" />
     <Compile Include="GAttribute38.cs" />
@@ -605,6 +603,7 @@
     <Compile Include="GClass400.cs" />
     <Compile Include="GClass401.cs" />
     <Compile Include="GClass402.cs" />
+    <Compile Include="GClass403.cs" />
     <Compile Include="GClass404.cs" />
     <Compile Include="GClass405.cs" />
     <Compile Include="GClass406.cs" />
@@ -1024,7 +1023,7 @@
     <Compile Include="GClass811.cs" />
     <Compile Include="GClass812.cs" />
     <Compile Include="GClass813.cs" />
-    <Compile Include="GClass815.cs" />
+    <Compile Include="GClass814.cs" />
     <Compile Include="GClass816.cs" />
     <Compile Include="GClass817.cs" />
     <Compile Include="GClass818.cs" />
@@ -1079,8 +1078,9 @@
     <Compile Include="GClass863.cs" />
     <Compile Include="GClass864.cs" />
     <Compile Include="GClass865.cs" />
-    <Compile Include="GClass867.cs" />
+    <Compile Include="GClass866.cs" />
     <Compile Include="GClass868.cs" />
+    <Compile Include="GClass869.cs" />
     <Compile Include="GClass87.cs" />
     <Compile Include="GClass88.cs" />
     <Compile Include="GClass89.cs" />
@@ -1115,6 +1115,7 @@
     <Compile Include="GInterface6.cs" />
     <Compile Include="GInterface7.cs" />
     <Compile Include="GInterface9.cs" />
+    <Compile Include="ImahZwjhkEuqolfeLgg\GAttribute35.cs" />
     <Compile Include="Interface0.cs" />
     <Compile Include="PErkava\PErkava.cs" />
     <Compile Include="PErkava\Properties\Resources.cs" />

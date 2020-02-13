@@ -86,7 +86,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapGrid(Map map_0)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			this._lock = new object();
 			base..ctor();
 			this.Map = map_0;
@@ -126,7 +126,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				while (enumerator.MoveNext())
 				{
 					Vector2 vector;
-					if (GClass811.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
+					if (GClass812.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
 					{
 						return true;
 					}
@@ -142,7 +142,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				while (enumerator.MoveNext())
 				{
-					if (GClass811.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
+					if (GClass812.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
 					{
 						return true;
 					}

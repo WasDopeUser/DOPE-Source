@@ -11,7 +11,7 @@ namespace DOPE.UI
 	{
 		public TrayHelper(MainWindow mainWindow_0)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 			this.mainWindow = mainWindow_0;
 			mainWindow_0.StateChanged += this.method_0;
@@ -41,7 +41,7 @@ namespace DOPE.UI
 			this.ni.BalloonTipIcon = ToolTipIcon.None;
 			this.ni.Visible = true;
 			this.ni.ShowBalloonTip(30000);
-			this.ni.BalloonTipClicked += this.riLpAaaAua;
+			this.ni.BalloonTipClicked += this.ni_BalloonTipClicked;
 		}
 
 		private void method_2(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace DOPE.UI
 		}
 
 		[CompilerGenerated]
-		private void riLpAaaAua(object sender, EventArgs e)
+		private void ni_BalloonTipClicked(object sender, EventArgs e)
 		{
 			this.mainWindow.Show();
 			this.mainWindow.Activate();

@@ -1,336 +1,619 @@
 ﻿using System;
-using System.CodeDom.Compiler;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
-using System.Windows.Interop;
-using System.Windows.Markup;
+using System.Threading.Tasks;
+using Ace.Networking;
+using Ace.Networking.Entanglement.ProxyImpl;
+using Ace.Networking.Entanglement.Reflection;
+using Ace.Networking.Entanglement.Services;
 using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using PErkava;
+using DarkorbitAPI.CommonStructures;
+using Dope.Common;
+using DOPE.Common;
+using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
+using DOPE.Core;
+using NLog;
 
-public class GClass855 : Window, INotifyPropertyChanged, IComponentConnector
+public class GClass855 : EntangledHostedObjectBase, INotifyPropertyChanged, GInterface8
 {
-	private void method_0()
+	public string Type
 	{
-		this.method_1(GEnum13.None, Keys.Oemtilde);
-		this.method_1((GEnum13)4U, Keys.Oemtilde);
-		this.method_1(GEnum13.None, Keys.Scroll);
-		this.method_1((GEnum13)4U, Keys.Scroll);
-	}
-
-	protected override void OnSourceInitialized(EventArgs e)
-	{
-		base.OnSourceInitialized(e);
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		this.hwndSource_0 = HwndSource.FromHwnd(windowInteropHelper.Handle);
-		this.hwndSource_0.AddHook(new HwndSourceHook(this.method_3));
-		this.method_0();
-	}
-
-	[DllImport("User32.dll")]
-	private static extern bool RegisterHotKey([In] IntPtr intptr_0, [In] int int_1, [In] uint uint_0, [In] uint uint_1);
-
-	[DllImport("User32.dll")]
-	private static extern bool UnregisterHotKey([In] IntPtr intptr_0, [In] int int_1);
-
-	protected override void OnClosed(EventArgs e)
-	{
-		HwndSource hwndSource = this.hwndSource_0;
-		if (hwndSource != null)
-		{
-			hwndSource.RemoveHook(new HwndSourceHook(this.method_3));
-		}
-		this.hwndSource_0 = null;
-		this.method_2();
-		base.OnClosed(e);
-	}
-
-	private void method_1(GEnum13 genum13_0, Keys keys_0)
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		int num = Interlocked.Increment(ref GClass855.int_0);
-		if (GClass855.RegisterHotKey(windowInteropHelper.Handle, num, (uint)genum13_0, (uint)keys_0))
-		{
-			this.hashSet_0.Add(num);
-		}
-	}
-
-	private void method_2()
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		foreach (int int_ in this.hashSet_0)
-		{
-			GClass855.UnregisterHotKey(windowInteropHelper.Handle, int_);
-		}
-		this.hashSet_0.Clear();
-	}
-
-	private IntPtr method_3(IntPtr intptr_0, int int_1, IntPtr intptr_1, IntPtr intptr_2, ref bool bool_1)
-	{
-		if (int_1 == 786)
-		{
-			int item = intptr_1.ToInt32();
-			if (this.hashSet_0.Contains(item))
-			{
-				Keys keys_ = (Keys)((int)intptr_2 >> 16 & 65535);
-				GEnum13 genum13_ = (GEnum13)((int)intptr_2 & 65535);
-				if (this.method_9(this, new GEventArgs0(genum13_, keys_)))
-				{
-					bool_1 = true;
-				}
-			}
-		}
-		return IntPtr.Zero;
-	}
-
-	public GClass863 Proxy
-	{
+		[CompilerGenerated]
 		get
 		{
-			return this.gclass863_0;
+			return this.string_0;
 		}
+		[CompilerGenerated]
 		set
 		{
-			this.method_6<GClass863>(ref this.gclass863_0, value, "Target", "Proxy");
+			if (string.Equals(this.string_0, value, StringComparison.Ordinal))
+			{
+				return;
+			}
+			this.string_0 = value;
+			this.OnPropertyChanged("Type");
 		}
 	}
 
-	public Ship Target
+	public string Version
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.string_1;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (string.Equals(this.string_1, value, StringComparison.Ordinal))
+			{
+				return;
+			}
+			this.string_1 = value;
+			this.OnPropertyChanged("Version");
+		}
+	}
+
+	public IConnection Connection
 	{
 		get
 		{
-			GClass863 proxy = this.Proxy;
-			if (proxy == null)
+			return base._Context.Host as IConnection;
+		}
+	}
+
+	public Controller Parent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.controller_0;
+		}
+		[CompilerGenerated]
+		internal set
+		{
+			if (object.Equals(this.controller_0, value))
 			{
-				return null;
+				return;
 			}
-			GameManager game = proxy.Game;
-			if (game == null)
+			this.controller_0 = value;
+			this.OnPropertyChanged("Parent");
+		}
+	}
+
+	public ConcurrentDictionary<string, BotProfile> ProfileMap
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.concurrentDictionary_0;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (object.Equals(this.concurrentDictionary_0, value))
 			{
-				return null;
+				return;
 			}
-			Map map = game.Map;
-			if (map == null)
+			this.concurrentDictionary_0 = value;
+			this.OnPropertyChanged("ProfileMap");
+		}
+	}
+
+	public ICollection<GClass854> Bots
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.icollection_0;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (object.Equals(this.icollection_0, value))
 			{
-				return null;
+				return;
 			}
-			return map.SelectedShip;
+			this.icollection_0 = value;
+			this.OnPropertyChanged("Bots");
 		}
 	}
 
-	public GClass855()
+	public Thread AccountManagerThread
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.hashSet_0 = new HashSet<int>();
-		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		base.Closed += this.GClass855_Closed;
-		this.gclass862_0 = new GClass862();
-		this.timer_0 = new System.Windows.Forms.Timer();
-		this.timer_0.Tick += this.timer_0_Tick;
-		this.timer_0.Interval = 100;
-		this.timer_0.Start();
-	}
-
-	public void method_4()
-	{
-		this.gclass862_0.method_3();
-		this.gclass862_0.ShowDialog();
-		base.Topmost = true;
-		base.Focus();
-	}
-
-	public bool method_5()
-	{
-		this.method_4();
-		if (!this.gclass862_0.IsSupported)
+		[CompilerGenerated]
+		get
 		{
-			base.Close();
-			return false;
+			return this.eatoHvZdegS;
 		}
-		base.Visibility = Visibility.Visible;
-		base.Topmost = true;
-		base.Focus();
-		return true;
-	}
-
-	private void GClass855_Closed(object sender, EventArgs e)
-	{
-		System.Windows.Forms.Timer timer = this.timer_0;
-		if (timer != null)
+		[CompilerGenerated]
+		private set
 		{
-			timer.Stop();
-		}
-		System.Windows.Forms.Timer timer2 = this.timer_0;
-		if (timer2 != null)
-		{
-			timer2.Dispose();
-		}
-		if (this.gclass862_0 != null)
-		{
-			this.gclass862_0.method_2(true);
-		}
-		GClass862 gclass = this.gclass862_0;
-		if (gclass == null)
-		{
-			return;
-		}
-		gclass.Close();
-	}
-
-	protected void method_6<U2wWBGE0kduDp36NBDj>(ref U2wWBGE0kduDp36NBDj gparam_0, U2wWBGE0kduDp36NBDj dGfE2vEDCvfbPOpkI59, string string_0 = null, [CallerMemberName] string name = null)
-	{
-		if (!EqualityComparer<U2wWBGE0kduDp36NBDj>.Default.Equals(gparam_0, dGfE2vEDCvfbPOpkI59))
-		{
-			gparam_0 = dGfE2vEDCvfbPOpkI59;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
+			if (object.Equals(this.eatoHvZdegS, value))
 			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
+				return;
 			}
-			if (string_0 != null)
+			this.eatoHvZdegS = value;
+			this.OnPropertyChanged("AccountManagerThread");
+		}
+	}
+
+	public GClass855(Guid guid_0, InterfaceDescriptor interfaceDescriptor_0, ICommon icommon_0)
+	{
+		Class13.igxcIukzfpare();
+		this.BotControllers = new ConcurrentDictionary<string, GClass854>();
+		this.concurrentDictionary_0 = new ConcurrentDictionary<string, BotProfile>();
+		base..ctor(guid_0, interfaceDescriptor_0, icommon_0);
+		this.Bots = new List<GClass854>();
+		this.AccountManagerThread = new Thread(new ThreadStart(this.method_1))
+		{
+			IsBackground = true
+		};
+		this.AccountManagerThread.Start();
+	}
+
+	private void method_1()
+	{
+		for (;;)
+		{
+			foreach (KeyValuePair<string, GClass854> keyValuePair in this.BotControllers)
 			{
-				PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
-				if (propertyChanged2 == null)
+				GClass855.<>c__DisplayClass29_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass29_0();
+				GClass854 value = keyValuePair.Value;
+				CS$<>8__locals1.gclass824_0 = ((value != null) ? value.Context : null);
+				if (CS$<>8__locals1.gclass824_0 != null)
 				{
-					return;
+					GClass855.<>c__DisplayClass29_0 CS$<>8__locals2 = CS$<>8__locals1;
+					string str = "Core-MainBotController-";
+					GClass824 gclass824_ = CS$<>8__locals1.gclass824_0;
+					string str2;
+					if (gclass824_ == null)
+					{
+						str2 = null;
+					}
+					else
+					{
+						AccountSettings account = gclass824_.Account;
+						str2 = ((account != null) ? account.BotId : null);
+					}
+					CS$<>8__locals2.logger_0 = LogManager.GetLogger(str + str2);
+					try
+					{
+						bool flag = CS$<>8__locals1.gclass824_0.Game.Connection.Socket.method_2();
+						if (CS$<>8__locals1.gclass824_0.ShouldBeDisabled && !flag && CS$<>8__locals1.gclass824_0.Game.IsLoggedOut)
+						{
+							CS$<>8__locals1.gclass824_0.IsEnabled = false;
+							CS$<>8__locals1.gclass824_0.ShouldBeDisabled = false;
+							CS$<>8__locals1.gclass824_0.Stop();
+							foreach (GClass826 gclass in CS$<>8__locals1.gclass824_0.Scheduler.list_0)
+							{
+								gclass.ForceStop();
+							}
+						}
+						if (CS$<>8__locals1.gclass824_0.IsEnabled)
+						{
+							CS$<>8__locals1.gclass824_0.Game.Settings.Use3D = true;
+							if (CS$<>8__locals1.gclass824_0.LastLogin.Cooldown(60000))
+							{
+								Task loginTask = CS$<>8__locals1.gclass824_0.LoginTask;
+								if (loginTask == null || loginTask.IsCompleted)
+								{
+									CS$<>8__locals1.gclass824_0.LoginTask = Task.Run(new Action(CS$<>8__locals1.gclass824_0.method_62));
+								}
+							}
+							if (CS$<>8__locals1.gclass824_0.Game.IsLoggedIn)
+							{
+								if (CS$<>8__locals1.gclass824_0.LastDisconnectReason == ErrorReason.CantLogin)
+								{
+									CS$<>8__locals1.gclass824_0.LastDisconnectReason = ErrorReason.Unknown;
+								}
+								if (CS$<>8__locals1.gclass824_0.BackgroundQueue != null && CS$<>8__locals1.gclass824_0.BackgroundQueue.Any<Func<DarkOrbitWebAPI, object>>())
+								{
+									for (;;)
+									{
+										GClass855.<>c__DisplayClass29_1 CS$<>8__locals3 = new GClass855.<>c__DisplayClass29_1();
+										CS$<>8__locals3.<>c__DisplayClass29_0_0 = CS$<>8__locals1;
+										if (!CS$<>8__locals3.<>c__DisplayClass29_0_0.gclass824_0.BackgroundQueue.TryDequeue(out CS$<>8__locals3.func_0))
+										{
+											break;
+										}
+										Task lastBackgroundAction = CS$<>8__locals3.<>c__DisplayClass29_0_0.gclass824_0.LastBackgroundAction;
+										if (lastBackgroundAction != null && !lastBackgroundAction.IsCompleted)
+										{
+											break;
+										}
+										CS$<>8__locals3.<>c__DisplayClass29_0_0.gclass824_0.LastBackgroundAction = Task.Run<object>(new Func<object>(CS$<>8__locals3.method_0));
+									}
+								}
+								foreach (GInterface9 ginterface in CS$<>8__locals1.gclass824_0.method_60())
+								{
+									Task lastBackgroundHandlerAction = CS$<>8__locals1.gclass824_0.LastBackgroundHandlerAction;
+									if ((lastBackgroundHandlerAction == null || lastBackgroundHandlerAction.IsCompleted) && ginterface.imethod_0())
+									{
+										CS$<>8__locals1.gclass824_0.LastBackgroundHandlerAction = Task.Run(new Action(ginterface.Execute));
+									}
+								}
+								string activeHangarName = CS$<>8__locals1.gclass824_0.Game.Web.Equipment.ActiveHangarName;
+								if (!string.IsNullOrWhiteSpace(activeHangarName))
+								{
+									GClass826 gclass2 = CS$<>8__locals1.gclass824_0.Scheduler.method_12();
+									bool flag2 = CS$<>8__locals1.gclass824_0.IsPaused || gclass2.ShouldBeInGame();
+									if (activeHangarName != null && gclass2.ShouldChangeHangar(out CS$<>8__locals1.string_0) && CS$<>8__locals1.string_0 != activeHangarName)
+									{
+										if (CS$<>8__locals1.gclass824_0.Game.IsLoggedOut && !CS$<>8__locals1.gclass824_0.wdvoKamvDiv.Cooldown(900000))
+										{
+											flag2 = false;
+											if (CS$<>8__locals1.gclass824_0.Cooldowns.method_2(BotAction.ChangeHangar, 10000.0))
+											{
+												bool flag3;
+												CS$<>8__locals1.gclass824_0.method_10<bool>("ChangeHangar", new Func<DarkOrbitWebAPI, bool>(CS$<>8__locals1.method_0), out flag3);
+											}
+										}
+										else
+										{
+											flag2 = true;
+											CS$<>8__locals1.gclass824_0.ForceLogout = true;
+										}
+									}
+									if (!flag)
+									{
+										if (flag2 && CS$<>8__locals1.gclass824_0.LastMapLogin.Cooldown(10000) && CS$<>8__locals1.gclass824_0.dateTime_2.Cooldown(1000))
+										{
+											CS$<>8__locals1.gclass824_0.LastMapLogin = DateTime.Now;
+											CS$<>8__locals1.gclass824_0.Game.Settings.IsClient = (CS$<>8__locals1.gclass824_0.Game.Connection.ProxySocket == null);
+											CS$<>8__locals1.gclass824_0.Game.Start();
+										}
+									}
+									else if (!CS$<>8__locals1.gclass824_0.Run)
+									{
+										CS$<>8__locals1.gclass824_0.Start(true);
+									}
+								}
+							}
+						}
+					}
+					catch (Exception ex)
+					{
+						CS$<>8__locals1.logger_0.Error("Exception in main loop: {exception}", ex.ToString());
+					}
 				}
-				propertyChanged2(this, new PropertyChangedEventArgs(string_0));
 			}
+			Thread.Sleep(50);
 		}
 	}
 
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	private void method_7(object sender, RoutedEventArgs e)
+	private void method_2(AccountSettings accountSettings_0)
 	{
-		GClass863 proxy = this.Proxy;
-		if (proxy == null)
+		if (!this.BotControllers.ContainsKey(accountSettings_0.BotId))
 		{
-			return;
-		}
-		GClass84<GClass788<GInterface7>> gclass = proxy.method_0();
-		if (gclass == null)
-		{
-			return;
-		}
-		GClass91 socket = gclass.Socket;
-		if (socket == null)
-		{
-			return;
-		}
-		socket.method_8();
-	}
-
-	private void timer_0_Tick(object sender, EventArgs e)
-	{
-		IntPtr foregroundWindow = GClass858.GetForegroundWindow();
-		GClass863 proxy = null;
-		PErkava.concurrentDictionary_0.TryGetValue(foregroundWindow, out proxy);
-		this.Proxy = proxy;
-	}
-
-	public void method_8(bool bool_1)
-	{
-		GClass855.<>c__DisplayClass30_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass30_0();
-		CS$<>8__locals1.hero_0 = this.Proxy.Game.Hero;
-		Ship ship;
-		if (bool_1)
-		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
+			IEntanglementHostService entanglementHostService = this.Connection.Services.Get<IEntanglementHostService>();
+			GClass824 gclass = new GClass824(this.Parent, accountSettings_0);
+			GClass854 gclass2 = entanglementHostService.GetHostedObject(entanglementHostService.GetInstance(typeof(IBotController).GUID, null).Value) as GClass854;
+			gclass.Controller = gclass2;
+			gclass2.Context = gclass;
+			gclass2.Controller = this;
+			this.Bots.Add(gclass2);
+			this.BotControllers[gclass.Account.BotId] = gclass2;
 		}
 		else
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
+			this.BotControllers[accountSettings_0.BotId].Context.Account = accountSettings_0;
 		}
-		if (ship != null)
+		this.BotControllers[accountSettings_0.BotId].Context.Scheduler.method_1(accountSettings_0.ProfileName);
+	}
+
+	public void method_3(ICollection<GClass854> icollection_1)
+	{
+		foreach (GClass854 item in this.Bots)
 		{
-			this.Proxy.Game.Connection.Server.method_7(ship, false);
+			icollection_1.Add(item);
+		}
+		ICollection<GClass854> bots = this.Bots;
+		this.Bots = icollection_1;
+		if (bots == null)
+		{
+			return;
+		}
+		bots.Clear();
+	}
+
+	private Task<cFp2T3LqjVdrpVceeKr> method_4<cFp2T3LqjVdrpVceeKr>(string string_2, Func<GClass854, Task<cFp2T3LqjVdrpVceeKr>> func_0)
+	{
+		GClass854 gclass = this.Bot(string_2);
+		if (gclass == null)
+		{
+			return Task.FromResult<cFp2T3LqjVdrpVceeKr>(default(cFp2T3LqjVdrpVceeKr));
+		}
+		return func_0(gclass);
+	}
+
+	private GClass854 Bot(string id)
+	{
+		GClass854 result;
+		if (!this.BotControllers.TryGetValue(id, out result))
+		{
+			return null;
+		}
+		return result;
+	}
+
+	public async Task Init(List<AccountSettings> accounts, List<BotProfile> profiles)
+	{
+		GClass855.logger_0.Info(string.Format("Initializing {0} accounts and {1} profiles", (accounts != null) ? accounts.Count : 0, (profiles != null) ? profiles.Count : 0));
+		if (this.Parent != null)
+		{
+			this.Parent.Status = GEnum12.Connected;
+		}
+		HashSet<GClass854> hashSet = new HashSet<GClass854>(this.BotControllers.Values);
+		foreach (AccountSettings accountSettings in accounts)
+		{
+			this.method_2(accountSettings);
+			hashSet.Remove(this.BotControllers[accountSettings.BotId]);
+		}
+		foreach (GClass854 r in hashSet)
+		{
+			this.Bots.Remove(r);
+			ConcurrentDictionary<string, GClass854> botControllers = this.BotControllers;
+			AccountSettings account = r.Context.Account;
+			if (account == null)
+			{
+				goto IL_15B;
+			}
+			string key;
+			if ((key = account.BotId) == null)
+			{
+				goto IL_15B;
+			}
+			IL_161:
+			GClass854 gclass;
+			botControllers.TryRemove(key, out gclass);
+			TaskAwaiter<bool> taskAwaiter = r.ForceStop().GetAwaiter();
+			if (!taskAwaiter.IsCompleted)
+			{
+				await taskAwaiter;
+				TaskAwaiter<bool> taskAwaiter2;
+				taskAwaiter = taskAwaiter2;
+				taskAwaiter2 = default(TaskAwaiter<bool>);
+			}
+			taskAwaiter.GetResult();
+			r.Controller = null;
+			r = null;
+			continue;
+			IL_15B:
+			key = "";
+			goto IL_161;
+		}
+		HashSet<GClass854>.Enumerator enumerator2 = default(HashSet<GClass854>.Enumerator);
+		foreach (BotProfile botProfile in profiles)
+		{
+			this.ProfileMap[botProfile.Name] = botProfile.Fill();
 		}
 	}
 
-	public bool method_9(object object_0, GEventArgs0 geventArgs0_0)
+	public Task<AccountSettings> CreateNewBot(string username, string password, string server, string userAgent)
 	{
-		if (this.Proxy == null)
+		DarkOrbitWebAPI darkOrbitWebAPI = new DarkOrbitWebAPI(null)
 		{
-			return false;
+			ForcedUserAgent = userAgent
+		};
+		if (!darkOrbitWebAPI.Login(username, password, server, null))
+		{
+			return Task.FromResult<AccountSettings>(null);
 		}
-		if (geventArgs0_0.Key != Keys.Oemtilde)
+		AccountSettings accountSettings = new AccountSettings
 		{
-			if (geventArgs0_0.Key != Keys.Scroll)
+			Username = username,
+			Password = password,
+			Server = server,
+			UserId = darkOrbitWebAPI.Uid,
+			UserAgent = userAgent
+		};
+		accountSettings.Fill();
+		string botId = accountSettings.BotId;
+		GClass854 gclass;
+		if (this.BotControllers.TryGetValue(botId, out gclass))
+		{
+			return Task.FromResult<AccountSettings>(gclass.Context.Account);
+		}
+		this.method_2(accountSettings);
+		return Task.FromResult<AccountSettings>(accountSettings);
+	}
+
+	public Task<List<string>> GetAvailableBots()
+	{
+		return Task.FromResult<List<string>>(this.BotControllers.Keys.ToList<string>());
+	}
+
+	public Task<List<BotProfile>> GetBotProfiles()
+	{
+		return Task.FromResult<List<BotProfile>>(this.ProfileMap.Values.ToList<BotProfile>());
+	}
+
+	public Task<bool> UpdateBotProfile(BotProfile profile)
+	{
+		this.ProfileMap[profile.Name] = profile.Fill();
+		foreach (GClass854 gclass in this.Bots)
+		{
+			string a;
+			if (gclass == null)
 			{
-				return false;
+				a = null;
+			}
+			else
+			{
+				GClass824 context = gclass.Context;
+				if (context == null)
+				{
+					a = null;
+				}
+				else
+				{
+					AccountSettings account = context.Account;
+					a = ((account != null) ? account.ProfileName : null);
+				}
+			}
+			if (a == profile.Name)
+			{
+				gclass.Context.Scheduler.method_1(profile.Name);
 			}
 		}
-		this.method_8(geventArgs0_0.method_0().HasFlag((GEnum13)4U));
-		return true;
+		return Task.FromResult<bool>(true);
 	}
 
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
+	public Task<bool> DeleteBotProfile(string profileName)
 	{
-		if (this.bool_0)
-		{
-			return;
-		}
-		this.bool_0 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/overlaywindow.xaml", UriKind.Relative);
-		System.Windows.Application.LoadComponent(this, resourceLocator);
+		BotProfile botProfile;
+		return Task.FromResult<bool>(this.ProfileMap.TryRemove(profileName, out botProfile));
 	}
 
-	[DebuggerNonUserCode]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	void IComponentConnector.Connect(int connectionId, object target)
+	public Task<bool> UpdateAccount(AccountSettings account)
 	{
-		switch (connectionId)
+		GClass854 gclass;
+		if (!this.BotControllers.TryGetValue(account.BotId, out gclass))
 		{
-		case 1:
-			this.Guide = (System.Windows.Controls.Label)target;
-			return;
-		case 2:
-			this.Progress = (System.Windows.Controls.Label)target;
-			return;
-		case 3:
-			((System.Windows.Controls.Button)target).Click += this.method_7;
-			return;
-		default:
-			this.bool_0 = true;
-			return;
+			return Task.FromResult<bool>(false);
 		}
+		gclass.Context.Account = account;
+		return Task.FromResult<bool>(true);
+	}
+
+	public Task<AccountSettings> GetAccount(string botId)
+	{
+		GClass854 gclass;
+		return Task.FromResult<AccountSettings>(this.BotControllers.TryGetValue(botId, out gclass) ? gclass.Context.Account : null);
+	}
+
+	public Task<bool> DeleteAccount(string botId)
+	{
+		GClass854 gclass;
+		GClass854 gclass2;
+		return Task.FromResult<bool>(this.BotControllers.TryGetValue(botId, out gclass) && !gclass.Context.IsEnabled && this.BotControllers.TryRemove(botId, out gclass2));
+	}
+
+	public async Task<List<BasicBotStateInfo>> GetBasicBotStateInfos(CancellationToken? token = null)
+	{
+		List<BasicBotStateInfo> list = new List<BasicBotStateInfo>();
+		foreach (KeyValuePair<string, GClass854> keyValuePair in this.BotControllers)
+		{
+			List<BasicBotStateInfo> list2 = list;
+			TaskAwaiter<BasicBotStateInfo> taskAwaiter = keyValuePair.Value.GetBasicBotStateInfo().GetAwaiter();
+			if (!taskAwaiter.IsCompleted)
+			{
+				await taskAwaiter;
+				TaskAwaiter<BasicBotStateInfo> taskAwaiter2;
+				taskAwaiter = taskAwaiter2;
+				taskAwaiter2 = default(TaskAwaiter<BasicBotStateInfo>);
+			}
+			BasicBotStateInfo result = taskAwaiter.GetResult();
+			list2.Add(result);
+			list2 = null;
+		}
+		IEnumerator<KeyValuePair<string, GClass854>> enumerator = null;
+		return list;
+	}
+
+	public Task<BotStats> GetBotStats(string id)
+	{
+		GClass854 gclass = this.Bot(id);
+		if (gclass != null)
+		{
+			return gclass.GetStats();
+		}
+		return Task.FromResult<BotStats>(null);
+	}
+
+	public Task<bool> StartBot(string id)
+	{
+		return this.method_4<bool>(id, new Func<GClass854, Task<bool>>(GClass855.<>c.<>c_0.method_0));
+	}
+
+	public Task<bool> PauseBot(string id)
+	{
+		return this.method_4<bool>(id, new Func<GClass854, Task<bool>>(GClass855.<>c.<>c_0.method_1));
+	}
+
+	[Obsolete("Delete 'disable' parameter")]
+	public Task<bool> StopBot(string id, bool disable)
+	{
+		return this.method_4<bool>(id, new Func<GClass854, Task<bool>>(GClass855.<>c.<>c_0.method_2));
+	}
+
+	public Task<bool> ForceStopBot(string id)
+	{
+		return this.method_4<bool>(id, new Func<GClass854, Task<bool>>(GClass855.<>c.<>c_0.method_3));
+	}
+
+	public Task<bool> SetBotProfile(string id, string name)
+	{
+		GClass855.<>c__DisplayClass49_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass49_0();
+		CS$<>8__locals1.string_0 = name;
+		return this.method_4<bool>(id, new Func<GClass854, Task<bool>>(CS$<>8__locals1.method_0));
+	}
+
+	public Task<BotSummaryViewModel> GetBotSummary(string id)
+	{
+		return this.method_4<BotSummaryViewModel>(id, new Func<GClass854, Task<BotSummaryViewModel>>(GClass855.<>c.<>c_0.method_4));
+	}
+
+	public async Task Invalidate()
+	{
+		GClass855.logger_0.Warn("Invalidating current controller...");
+		await this.Init(new List<AccountSettings>(), new List<BotProfile>());
+	}
+
+	public Task<BotDetailedViewModel> GetBotDetailedView(string id, CancellationToken? token = null)
+	{
+		return this.method_4<BotDetailedViewModel>(id, new Func<GClass854, Task<BotDetailedViewModel>>(GClass855.<>c.<>c_0.method_5));
+	}
+
+	public Task<BotDetailedViewModel> GetBotDetailedView(string id, int lastMapId, bool includeCachable, CancellationToken? token = null)
+	{
+		GClass855.<>c__DisplayClass53_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass53_0();
+		CS$<>8__locals1.int_0 = lastMapId;
+		CS$<>8__locals1.bool_0 = includeCachable;
+		return this.method_4<BotDetailedViewModel>(id, new Func<GClass854, Task<BotDetailedViewModel>>(CS$<>8__locals1.ArWoxeAday6));
+	}
+
+	public Task OnSpacemapClicked(string botId, float x, float y, string mode)
+	{
+		GClass855.<>c__DisplayClass54_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass54_0();
+		CS$<>8__locals1.float_0 = x;
+		CS$<>8__locals1.float_1 = y;
+		CS$<>8__locals1.string_0 = mode;
+		return this.method_4<bool>(botId, new Func<GClass854, Task<bool>>(CS$<>8__locals1.method_0));
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass855()
 	{
-		Class13.Gj4N3WdzaR1LY();
-		GClass855.int_0 = 913376;
+		Class13.igxcIukzfpare();
+		GClass855.logger_0 = LogManager.GetLogger("Core-MainBotController");
 	}
 
-	private HwndSource hwndSource_0;
+	private static Logger logger_0;
 
-	private static int int_0;
+	[CompilerGenerated]
+	private string string_0;
 
-	private HashSet<int> hashSet_0;
+	[CompilerGenerated]
+	private string string_1;
 
-	private GClass863 gclass863_0;
+	public ConcurrentDictionary<string, GClass854> BotControllers;
 
-	private System.Windows.Forms.Timer timer_0;
+	[CompilerGenerated]
+	private Controller controller_0;
 
-	private GClass862 gclass862_0;
+	[CompilerGenerated]
+	private ConcurrentDictionary<string, BotProfile> concurrentDictionary_0;
 
-	internal System.Windows.Controls.Label Guide;
+	[CompilerGenerated]
+	private ICollection<GClass854> icollection_0;
 
-	internal System.Windows.Controls.Label Progress;
-
-	private bool bool_0;
+	[CompilerGenerated]
+	private Thread eatoHvZdegS;
 }

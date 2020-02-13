@@ -8,7 +8,7 @@ public class GClass189 : GInterface0
 	{
 		get
 		{
-			return 3075;
+			return 2917;
 		}
 	}
 
@@ -22,15 +22,15 @@ public class GClass189 : GInterface0
 
 	public GClass189(double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.double_1 = double_2;
-		this.double_0 = double_3;
+		this.double_0 = double_2;
+		this.double_1 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 3075;
+		return 2917;
 	}
 
 	public virtual int vmethod_1()
@@ -42,12 +42,11 @@ public class GClass189 : GInterface0
 	{
 		this.double_0 = binaryStream_0.ReadDouble();
 		this.double_1 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(3075);
+		binaryStream_0.smethod_6(2917);
 		this.vmethod_2(binaryStream_0);
 	}
 
@@ -55,7 +54,6 @@ public class GClass189 : GInterface0
 	{
 		binaryStream_0.WriteDouble(this.double_0);
 		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.smethod_7(10852);
 	}
 
 	public double double_0;

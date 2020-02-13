@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DarkorbitAPI.CommonStructures
 {
-	[Guid("5E568938-8C13-42FF-B9B8-0E60DC160733")]
 	[DataContract]
+	[Guid("5E568938-8C13-42FF-B9B8-0E60DC160733")]
 	public class DollConfig
 	{
 		[DataMember(Order = 1)]
@@ -17,7 +17,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public DollConfig()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 	}

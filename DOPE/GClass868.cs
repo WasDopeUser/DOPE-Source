@@ -1,116 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using DarkorbitAPI;
-using PErkava;
+using System.Management;
+using System.Net.NetworkInformation;
 
-public class GClass868 : INotifyPropertyChanged
+public class GClass868 : Interface0
 {
-	protected void method_0<eYJi1DEi9yEcZIViX0G>(ref eYJi1DEi9yEcZIViX0G gparam_0, eYJi1DEi9yEcZIViX0G UwcFaEEmd2gqoeKQeDa, [CallerMemberName] string name = null)
+	private static tyexuKLaXfJcx2cqQI6 smethod_0<tyexuKLaXfJcx2cqQI6>(ManagementObject managementObject_0, string string_0)
 	{
-		if (!EqualityComparer<eYJi1DEi9yEcZIViX0G>.Default.Equals(gparam_0, UwcFaEEmd2gqoeKQeDa))
+		GClass868.<>c__DisplayClass0_0<tyexuKLaXfJcx2cqQI6> CS$<>8__locals1 = new GClass868.<>c__DisplayClass0_0<tyexuKLaXfJcx2cqQI6>();
+		CS$<>8__locals1.property = string_0;
+		PropertyData propertyData = managementObject_0.Properties.Cast<PropertyData>().FirstOrDefault(new Func<PropertyData, bool>(CS$<>8__locals1.method_0));
+		return (tyexuKLaXfJcx2cqQI6)((object)((propertyData != null) ? propertyData.Value : null));
+	}
+
+	public static bool smethod_1(string string_0, TimeSpan timeSpan_0)
+	{
+		if (string_0 == "99999999235959.000000:000")
 		{
-			gparam_0 = UwcFaEEmd2gqoeKQeDa;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
+			return false;
+		}
+		bool result;
+		try
+		{
+			result = (ManagementDateTimeConverter.ToTimeSpan(string_0) <= timeSpan_0);
+		}
+		catch
+		{
+			result = false;
+		}
+		return result;
+	}
+
+	public bool imethod_2()
+	{
+		try
+		{
+			ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
+			new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
+			using (ManagementObjectCollection.ManagementObjectEnumerator enumerator = new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get().GetEnumerator())
 			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
-			}
-			if (name == "Enabled")
-			{
-				if ((bool)((object)UwcFaEEmd2gqoeKQeDa))
+				if (enumerator.MoveNext())
 				{
-					PErkava.smethod_5(this);
-					return;
+					ManagementObject managementObject = (ManagementObject)enumerator.Current;
+					return true;
 				}
-				PErkava.smethod_6(this);
 			}
 		}
+		catch
+		{
+		}
+		return false;
 	}
 
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	public bool Enabled
+	public void imethod_0(HashSet<string> hashSet_0 = null)
 	{
-		get
+		ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
+		new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
+		foreach (ManagementBaseObject managementBaseObject in new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get())
 		{
-			return this.bool_0;
-		}
-		set
-		{
-			this.method_0<bool>(ref this.bool_0, value, "Enabled");
-		}
-	}
-
-	public string Name
-	{
-		get
-		{
-			return this.string_0;
-		}
-		set
-		{
-			this.method_0<string>(ref this.string_0, value, "Name");
-		}
-	}
-
-	public int ServerCount
-	{
-		get
-		{
-			HashSet<string> servers = this.Servers;
-			if (servers == null)
+			ManagementObject managementObject = (ManagementObject)managementBaseObject;
+			string item = GClass868.smethod_0<string>(managementObject, "IPAddress");
+			if ((long)NetworkInterface.LoopbackInterfaceIndex == (long)((ulong)GClass868.smethod_0<uint>(managementObject, "InterfaceIndex")) & (GClass868.smethod_1(GClass868.smethod_0<string>(managementObject, "PreferredLifetime"), TimeSpan.FromHours(24.0)) && (hashSet_0 == null || hashSet_0.Contains(item))))
 			{
-				return 0;
+				managementObject.Delete();
 			}
-			return servers.Count;
 		}
 	}
 
-	public HashSet<string> Servers { get; set; }
-
-	[CompilerGenerated]
-	public Dictionary<int, string> method_1()
+	public void imethod_1(string[] string_0)
 	{
-		return this.dictionary_0;
-	}
-
-	[CompilerGenerated]
-	public void method_2(Dictionary<int, string> dictionary_1)
-	{
-		this.dictionary_0 = dictionary_1;
-	}
-
-	public void method_3(DarkOrbitWebAPI darkOrbitWebAPI_0)
-	{
-		Dictionary<int, string> mapHosts;
-		this.method_2(mapHosts = darkOrbitWebAPI_0.GetMapHosts());
-		this.Servers = new HashSet<string>(mapHosts.Select(new Func<KeyValuePair<int, string>, string>(GClass868.<>c.<>c_0.method_0)));
-		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-		if (propertyChanged == null)
+		HashSet<string> hashSet = new HashSet<string>(string_0);
+		ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
+		ManagementClass managementClass = new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
+		foreach (ManagementBaseObject managementBaseObject in new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get())
 		{
-			return;
+			string item = GClass868.smethod_0<string>((ManagementObject)managementBaseObject, "IPAddress");
+			hashSet.Remove(item);
 		}
-		propertyChanged(this, new PropertyChangedEventArgs("ServerCount"));
+		ManagementBaseObject methodParameters = managementClass.GetMethodParameters("Create");
+		methodParameters["InterfaceIndex"] = NetworkInterface.LoopbackInterfaceIndex;
+		methodParameters["PreferredLifetime"] = ManagementDateTimeConverter.ToDmtfTimeInterval(TimeSpan.FromHours(24.0));
+		foreach (string value in hashSet)
+		{
+			methodParameters["IPAddress"] = value;
+			managementClass.InvokeMethod("Create", methodParameters, null);
+		}
 	}
 
 	public GClass868()
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.Servers = new HashSet<string>();
-		this.dictionary_0 = new Dictionary<int, string>();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
-
-	private bool bool_0;
-
-	private string string_0;
-
-	[CompilerGenerated]
-	private HashSet<string> hashSet_0;
-
-	[CompilerGenerated]
-	private Dictionary<int, string> dictionary_0;
 }

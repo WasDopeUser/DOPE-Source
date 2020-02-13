@@ -8,7 +8,7 @@ public class GClass241 : GInterface0
 	{
 		get
 		{
-			return 29125;
+			return 25361;
 		}
 	}
 
@@ -22,12 +22,12 @@ public class GClass241 : GInterface0
 
 	public GClass241(int int_3 = 0, int int_4 = 0, string string_2 = "", string string_3 = "", int int_5 = 0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
-		this.int_1 = int_3;
-		this.int_2 = int_4;
+		this.int_2 = int_3;
+		this.int_1 = int_4;
 		this.string_0 = string_2;
 		this.string_1 = string_3;
 		this.int_0 = int_5;
@@ -35,7 +35,7 @@ public class GClass241 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 29125;
+		return 25361;
 	}
 
 	public virtual int vmethod_1()
@@ -45,35 +45,35 @@ public class GClass241 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
 		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
 		binaryStream_0.smethod_1();
 		this.string_1 = binaryStream_0.smethod_2();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		this.int_2 = (int)binaryStream_0.smethod_1();
+		this.int_1 = (int)binaryStream_0.smethod_1();
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 7 | U.smethod_0(this.int_2, 25));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29125);
+		binaryStream_0.smethod_6(25361);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(23014);
-		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
-		binaryStream_0.smethod_7(this.int_2);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		binaryStream_0.smethod_6(28661);
+		binaryStream_0.MoioCjQkqp0(this.string_1);
+		binaryStream_0.smethod_6(this.int_1);
+		binaryStream_0.smethod_3(U.smethod_0(this.int_2, 7) | this.int_2 << 25);
 	}
 
-	public int int_0;
-
 	public string string_0;
+
+	public int int_0;
 
 	public string string_1;
 

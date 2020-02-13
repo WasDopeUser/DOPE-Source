@@ -55,13 +55,13 @@ public partial class GClass5 : Application
 		this.logger_0 = LogManager.GetLogger("DOPE");
 		this.logger_0.Info("Loading DOPE {arch} {version} on {architecture} ({os})", new object[]
 		{
-			GClass858.smethod_1() ? "x86" : "x64",
+			GClass859.twhoiCoyXfL() ? "x86" : "x64",
 			Constants.VersionString,
 			Environment.Is64BitOperatingSystem ? "x64" : "x86",
 			Environment.OSVersion.VersionString
 		});
 		AppDomain.CurrentDomain.FirstChanceException += this.method_0;
-		AppDomain.CurrentDomain.UnhandledException += this.method_2;
+		AppDomain.CurrentDomain.UnhandledException += this.qAhoYvbsNa;
 		base.ShutdownMode = ShutdownMode.OnMainWindowClose;
 		GClass82.smethod_2();
 		bool flag;
@@ -82,7 +82,7 @@ public partial class GClass5 : Application
 		{
 			try
 			{
-				GClass864 gclass = new GClass864();
+				GClass865 gclass = new GClass865();
 				gclass.Start();
 				PErkava.Host = gclass;
 			}
@@ -129,7 +129,7 @@ public partial class GClass5 : Application
 		}
 	}
 
-	private void method_2(object sender, UnhandledExceptionEventArgs e)
+	private void qAhoYvbsNa(object sender, UnhandledExceptionEventArgs e)
 	{
 		if (this.logger_0 == null)
 		{
@@ -153,7 +153,7 @@ public partial class GClass5 : Application
 
 	[DebuggerNonUserCode]
 	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	public void method_3()
+	public void method_2()
 	{
 		if (this.bool_0)
 		{

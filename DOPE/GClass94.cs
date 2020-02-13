@@ -19,14 +19,14 @@ public class GClass94 : GInterface4
 			{
 				num -= (int)gclass.Count;
 			}
-			hero.method_24("resource_" + uint_.ToString().ToLower(), gclass.Count);
+			hero.method_23("resource_" + uint_.ToString().ToLower(), gclass.Count);
 		}
 		for (int i = 0; i <= 8; i++)
 		{
 			ResourceType resourceType = (ResourceType)i;
 			if (!hashSet.Contains(i))
 			{
-				hero.method_24("resource_" + resourceType.ToString().ToLower(), 0.0);
+				hero.method_23("resource_" + resourceType.ToString().ToLower(), 0.0);
 			}
 		}
 		hero.FreeCargo = num;
@@ -34,7 +34,7 @@ public class GClass94 : GInterface4
 
 	public GClass94()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

@@ -8,7 +8,7 @@ public class GClass512 : GInterface0
 	{
 		get
 		{
-			return 1599;
+			return 2044;
 		}
 	}
 
@@ -16,58 +16,53 @@ public class GClass512 : GInterface0
 	{
 		get
 		{
-			return 28;
+			return 8;
 		}
 	}
 
-	public GClass512(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0, int int_1 = 0)
+	public GClass512(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.double_1 = double_3;
-		this.double_0 = double_4;
-		this.double_2 = double_5;
-		this.int_0 = int_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 1599;
+		return 2044;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 28;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.double_1 = binaryStream_0.ReadDouble();
-		this.double_2 = binaryStream_0.ReadDouble();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 13) | this.int_1 << 19);
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1599);
+		binaryStream_0.smethod_6(2044);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.WriteDouble(this.double_2);
+		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		binaryStream_0.smethod_3(this.int_1 << 13 | U.smethod_0(this.int_1, 19));
+		binaryStream_0.smethod_6(-21093);
+		binaryStream_0.smethod_6(-6056);
 	}
 
 	public int int_0;
 
-	public double double_0;
-
-	public double double_1;
-
-	public double double_2;
+	public int int_1;
 }

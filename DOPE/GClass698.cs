@@ -8,7 +8,7 @@ public class GClass698 : GInterface0
 	{
 		get
 		{
-			return 17979;
+			return 17426;
 		}
 	}
 
@@ -16,51 +16,115 @@ public class GClass698 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass698(int int_1 = 0, int int_2 = 0)
+	public GClass698(GClass518 gclass518_1 = null, GClass601 gclass601_1 = null, GClass393 gclass393_1 = null, GClass703 gclass703_1 = null, GClass282 gclass282_1 = null, GClass418 gclass418_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.int_0 = int_1;
-		this.doByhMguub = int_2;
+		if (gclass518_1 == null)
+		{
+			this.gclass518_0 = new GClass518(false, 0, 0, 0, false, 0, 0, 0, 0, 0, 0);
+		}
+		else
+		{
+			this.gclass518_0 = gclass518_1;
+		}
+		if (gclass601_1 == null)
+		{
+			this.gclass601_0 = new GClass601(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, 0, 0, 0, 0, 0, 0, 0, false, false, false, false, false);
+		}
+		else
+		{
+			this.gclass601_0 = gclass601_1;
+		}
+		if (gclass393_1 == null)
+		{
+			this.gclass393_0 = new GClass393(false, 0, 0, 0, false);
+		}
+		else
+		{
+			this.gclass393_0 = gclass393_1;
+		}
+		if (gclass703_1 == null)
+		{
+			this.gclass703_0 = new GClass703(0, "", false);
+		}
+		else
+		{
+			this.gclass703_0 = gclass703_1;
+		}
+		if (gclass282_1 == null)
+		{
+			this.gclass282_0 = new GClass282(false, false, false, false, false, false, false, false, false, false);
+		}
+		else
+		{
+			this.gclass282_0 = gclass282_1;
+		}
+		if (gclass418_1 == null)
+		{
+			this.gclass418_0 = new GClass418(false, false, false, false, false, false);
+			return;
+		}
+		this.gclass418_0 = gclass418_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17979;
+		return 17426;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
 		binaryStream_0.smethod_1();
-		this.doByhMguub = binaryStream_0.smethod_0();
-		this.doByhMguub = (U.smethod_0(this.doByhMguub, 5) | this.doByhMguub << 27);
+		this.gclass703_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass703);
+		this.gclass703_0.imethod_1(binaryStream_0);
+		this.gclass282_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass282);
+		this.gclass282_0.imethod_1(binaryStream_0);
+		this.gclass601_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass601);
+		this.gclass601_0.imethod_1(binaryStream_0);
+		this.gclass418_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass418);
+		this.gclass418_0.imethod_1(binaryStream_0);
+		this.gclass393_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass393);
+		this.gclass393_0.imethod_1(binaryStream_0);
+		this.gclass518_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass518);
+		this.gclass518_0.imethod_1(binaryStream_0);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17979);
+		binaryStream_0.smethod_6(17426);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		binaryStream_0.smethod_7(18849);
-		binaryStream_0.smethod_4(this.doByhMguub << 5 | U.smethod_0(this.doByhMguub, 27));
+		binaryStream_0.smethod_6(-21778);
+		this.gclass703_0.imethod_2(binaryStream_0);
+		this.gclass282_0.imethod_2(binaryStream_0);
+		this.gclass601_0.imethod_2(binaryStream_0);
+		this.gclass418_0.imethod_2(binaryStream_0);
+		this.gclass393_0.imethod_2(binaryStream_0);
+		this.gclass518_0.imethod_2(binaryStream_0);
 	}
 
-	public int int_0;
+	public GClass703 gclass703_0;
 
-	public int doByhMguub;
+	public GClass282 gclass282_0;
+
+	public GClass601 gclass601_0;
+
+	public GClass418 gclass418_0;
+
+	public GClass393 gclass393_0;
+
+	public GClass518 gclass518_0;
 }

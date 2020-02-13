@@ -20,7 +20,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<OwnerId>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_77);
+				this.method_11(Class5.propertyChangedEventArgs_74);
 			}
 		}
 
@@ -39,7 +39,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Level>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_65);
+				this.method_11(Class5.propertyChangedEventArgs_63);
 			}
 		}
 
@@ -53,19 +53,19 @@ namespace DarkorbitAPI.Structures
 
 		public void method_12(GClass255 gclass255_0)
 		{
-			this.OwnerId = gclass255_0.int_7;
-			base.Id = gclass255_0.int_3;
-			this.Level = gclass255_0.int_9;
+			this.OwnerId = gclass255_0.int_0;
+			base.Id = gclass255_0.int_9;
+			this.Level = gclass255_0.int_8;
 			base.Name = gclass255_0.Name;
-			this.PosX = gclass255_0.int_6;
-			this.PosY = gclass255_0.int_0;
+			this.PosX = gclass255_0.int_5;
+			this.PosY = gclass255_0.int_6;
 			base.ClanTag = gclass255_0.string_0;
-			base.FactionId = gclass255_0.int_5;
+			base.FactionId = gclass255_0.int_3;
 		}
 
 		public Pet()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 	}

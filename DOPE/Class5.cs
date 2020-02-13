@@ -12,7 +12,7 @@ internal static class Class5
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class5()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		Class5.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("Ammo");
 		Class5.AmmoHS1 = new PropertyChangedEventArgs("AmmoHS1");
 		Class5.AmmoR1 = new PropertyChangedEventArgs("AmmoR1");
@@ -66,102 +66,102 @@ internal static class Class5
 		Class5.HpPercentage = new PropertyChangedEventArgs("HpPercentage");
 		Class5.Id = new PropertyChangedEventArgs("Id");
 		Class5.propertyChangedEventArgs_31 = new PropertyChangedEventArgs("InjectedEncoder");
-		Class5.propertyChangedEventArgs_32 = new PropertyChangedEventArgs("InjectedLen");
-		Class5.propertyChangedEventArgs_33 = new PropertyChangedEventArgs("InSafeZone");
+		Class5.NbqoJhOdgaB = new PropertyChangedEventArgs("InjectedLen");
+		Class5.propertyChangedEventArgs_32 = new PropertyChangedEventArgs("InSafeZone");
 		Class5.InviteList = new PropertyChangedEventArgs("InviteList");
-		Class5.propertyChangedEventArgs_34 = new PropertyChangedEventArgs("Invites");
-		Class5.propertyChangedEventArgs_35 = new PropertyChangedEventArgs("IsActive");
-		Class5.propertyChangedEventArgs_36 = new PropertyChangedEventArgs("IsAuthenticated");
-		Class5.propertyChangedEventArgs_37 = new PropertyChangedEventArgs("IsAvailable");
-		Class5.propertyChangedEventArgs_38 = new PropertyChangedEventArgs("IsCloaked");
-		Class5.propertyChangedEventArgs_39 = new PropertyChangedEventArgs("IsControlDisabled");
-		Class5.propertyChangedEventArgs_40 = new PropertyChangedEventArgs("IsEnabled");
-		Class5.propertyChangedEventArgs_41 = new PropertyChangedEventArgs("IsFighting");
-		Class5.propertyChangedEventArgs_42 = new PropertyChangedEventArgs("IsGG");
-		Class5.propertyChangedEventArgs_43 = new PropertyChangedEventArgs("IsInitialized");
+		Class5.propertyChangedEventArgs_33 = new PropertyChangedEventArgs("Invites");
+		Class5.propertyChangedEventArgs_34 = new PropertyChangedEventArgs("IsActive");
+		Class5.propertyChangedEventArgs_35 = new PropertyChangedEventArgs("IsAuthenticated");
+		Class5.propertyChangedEventArgs_36 = new PropertyChangedEventArgs("IsAvailable");
+		Class5.propertyChangedEventArgs_37 = new PropertyChangedEventArgs("IsCloaked");
+		Class5.propertyChangedEventArgs_38 = new PropertyChangedEventArgs("IsControlDisabled");
+		Class5.propertyChangedEventArgs_39 = new PropertyChangedEventArgs("IsEnabled");
+		Class5.propertyChangedEventArgs_40 = new PropertyChangedEventArgs("IsFighting");
+		Class5.propertyChangedEventArgs_41 = new PropertyChangedEventArgs("IsGG");
+		Class5.propertyChangedEventArgs_42 = new PropertyChangedEventArgs("IsInitialized");
 		Class5.IsLoggedIn = new PropertyChangedEventArgs("IsLoggedIn");
-		Class5.propertyChangedEventArgs_44 = new PropertyChangedEventArgs("IsLoggedOut");
-		Class5.propertyChangedEventArgs_45 = new PropertyChangedEventArgs("IsNpc");
+		Class5.propertyChangedEventArgs_43 = new PropertyChangedEventArgs("IsLoggedOut");
+		Class5.jkjoJdxknIo = new PropertyChangedEventArgs("IsNpc");
 		Class5.IsOwner = new PropertyChangedEventArgs("IsOwner");
-		Class5.propertyChangedEventArgs_46 = new PropertyChangedEventArgs("IsRepairNeeded");
-		Class5.propertyChangedEventArgs_47 = new PropertyChangedEventArgs("IsX1");
-		Class5.propertyChangedEventArgs_48 = new PropertyChangedEventArgs("Jackpot");
-		Class5.propertyChangedEventArgs_49 = new PropertyChangedEventArgs("LastAttacked");
-		Class5.propertyChangedEventArgs_50 = new PropertyChangedEventArgs("LastAttackedHero");
-		Class5.propertyChangedEventArgs_51 = new PropertyChangedEventArgs("LastAttackedHeroDamage");
-		Class5.propertyChangedEventArgs_52 = new PropertyChangedEventArgs("LastConfigSwitched");
-		Class5.propertyChangedEventArgs_53 = new PropertyChangedEventArgs("LastControlDisabled");
-		Class5.propertyChangedEventArgs_54 = new PropertyChangedEventArgs("LastDailyLogin");
-		Class5.propertyChangedEventArgs_55 = new PropertyChangedEventArgs("LastDied");
-		Class5.propertyChangedEventArgs_56 = new PropertyChangedEventArgs("LastDistance");
-		Class5.propertyChangedEventArgs_57 = new PropertyChangedEventArgs("LastJumped");
-		Class5.propertyChangedEventArgs_58 = new PropertyChangedEventArgs("LastPinged");
-		Class5.propertyChangedEventArgs_59 = new PropertyChangedEventArgs("LastStatUpdate");
-		Class5.propertyChangedEventArgs_60 = new PropertyChangedEventArgs("LastTookDamage");
-		Class5.propertyChangedEventArgs_61 = new PropertyChangedEventArgs("LastTookDamageEnemy");
-		Class5.propertyChangedEventArgs_62 = new PropertyChangedEventArgs("LastTookDamageFrom");
-		Class5.propertyChangedEventArgs_63 = new PropertyChangedEventArgs("LastTookDamageHero");
-		Class5.propertyChangedEventArgs_64 = new PropertyChangedEventArgs("LeashedBy");
-		Class5.propertyChangedEventArgs_65 = new PropertyChangedEventArgs("Level");
-		Class5.propertyChangedEventArgs_66 = new PropertyChangedEventArgs("LicenseExpiration");
-		Class5.propertyChangedEventArgs_67 = new PropertyChangedEventArgs("LicenseState");
-		Class5.propertyChangedEventArgs_68 = new PropertyChangedEventArgs("Location");
-		Class5.propertyChangedEventArgs_69 = new PropertyChangedEventArgs("Log");
-		Class5.propertyChangedEventArgs_70 = new PropertyChangedEventArgs("LogManager");
+		Class5.propertyChangedEventArgs_44 = new PropertyChangedEventArgs("IsRepairNeeded");
+		Class5.propertyChangedEventArgs_45 = new PropertyChangedEventArgs("IsX1");
+		Class5.propertyChangedEventArgs_46 = new PropertyChangedEventArgs("Jackpot");
+		Class5.propertyChangedEventArgs_47 = new PropertyChangedEventArgs("LastAttacked");
+		Class5.propertyChangedEventArgs_48 = new PropertyChangedEventArgs("LastAttackedHero");
+		Class5.propertyChangedEventArgs_49 = new PropertyChangedEventArgs("LastAttackedHeroDamage");
+		Class5.propertyChangedEventArgs_50 = new PropertyChangedEventArgs("LastConfigSwitched");
+		Class5.propertyChangedEventArgs_51 = new PropertyChangedEventArgs("LastControlDisabled");
+		Class5.propertyChangedEventArgs_52 = new PropertyChangedEventArgs("LastDailyLogin");
+		Class5.propertyChangedEventArgs_53 = new PropertyChangedEventArgs("LastDied");
+		Class5.propertyChangedEventArgs_54 = new PropertyChangedEventArgs("LastDistance");
+		Class5.propertyChangedEventArgs_55 = new PropertyChangedEventArgs("LastJumped");
+		Class5.propertyChangedEventArgs_56 = new PropertyChangedEventArgs("LastPinged");
+		Class5.propertyChangedEventArgs_57 = new PropertyChangedEventArgs("LastStatUpdate");
+		Class5.propertyChangedEventArgs_58 = new PropertyChangedEventArgs("LastTookDamage");
+		Class5.propertyChangedEventArgs_59 = new PropertyChangedEventArgs("LastTookDamageEnemy");
+		Class5.propertyChangedEventArgs_60 = new PropertyChangedEventArgs("LastTookDamageFrom");
+		Class5.propertyChangedEventArgs_61 = new PropertyChangedEventArgs("LastTookDamageHero");
+		Class5.propertyChangedEventArgs_62 = new PropertyChangedEventArgs("LeashedBy");
+		Class5.propertyChangedEventArgs_63 = new PropertyChangedEventArgs("Level");
+		Class5.propertyChangedEventArgs_64 = new PropertyChangedEventArgs("LicenseExpiration");
+		Class5.propertyChangedEventArgs_65 = new PropertyChangedEventArgs("LicenseState");
+		Class5.propertyChangedEventArgs_66 = new PropertyChangedEventArgs("Location");
+		Class5.propertyChangedEventArgs_67 = new PropertyChangedEventArgs("Log");
+		Class5.propertyChangedEventArgs_68 = new PropertyChangedEventArgs("LogManager");
 		Class5.Map = new PropertyChangedEventArgs("Map");
 		Class5.MapId = new PropertyChangedEventArgs("MapId");
 		Class5.MapName = new PropertyChangedEventArgs("MapName");
-		Class5.propertyChangedEventArgs_71 = new PropertyChangedEventArgs("MapSize");
+		Class5.propertyChangedEventArgs_69 = new PropertyChangedEventArgs("MapSize");
 		Class5.MemberList = new PropertyChangedEventArgs("MemberList");
-		Class5.propertyChangedEventArgs_72 = new PropertyChangedEventArgs("Members");
+		Class5.propertyChangedEventArgs_70 = new PropertyChangedEventArgs("Members");
 		Class5.Mode = new PropertyChangedEventArgs("Mode");
-		Class5.propertyChangedEventArgs_73 = new PropertyChangedEventArgs("ModeExtra");
-		Class5.propertyChangedEventArgs_74 = new PropertyChangedEventArgs("Modes");
+		Class5.propertyChangedEventArgs_71 = new PropertyChangedEventArgs("ModeExtra");
+		Class5.ybaoJatPqLe = new PropertyChangedEventArgs("Modes");
 		Class5.Name = new PropertyChangedEventArgs("Name");
-		Class5.propertyChangedEventArgs_75 = new PropertyChangedEventArgs("NextMapId");
-		Class5.propertyChangedEventArgs_76 = new PropertyChangedEventArgs("NpcTypes");
-		Class5.propertyChangedEventArgs_77 = new PropertyChangedEventArgs("OwnerId");
+		Class5.propertyChangedEventArgs_72 = new PropertyChangedEventArgs("NextMapId");
+		Class5.propertyChangedEventArgs_73 = new PropertyChangedEventArgs("NpcTypes");
+		Class5.propertyChangedEventArgs_74 = new PropertyChangedEventArgs("OwnerId");
 		Class5.Pet = new PropertyChangedEventArgs("Pet");
-		Class5.propertyChangedEventArgs_78 = new PropertyChangedEventArgs("Position");
-		Class5.propertyChangedEventArgs_79 = new PropertyChangedEventArgs("Premium");
-		Class5.propertyChangedEventArgs_80 = new PropertyChangedEventArgs("ProxySettings");
-		Class5.propertyChangedEventArgs_81 = new PropertyChangedEventArgs("ProxySocket");
-		Class5.propertyChangedEventArgs_82 = new PropertyChangedEventArgs("Range");
-		Class5.propertyChangedEventArgs_83 = new PropertyChangedEventArgs("RangeFix");
-		Class5.propertyChangedEventArgs_84 = new PropertyChangedEventArgs("Rect");
-		Class5.propertyChangedEventArgs_85 = new PropertyChangedEventArgs("ResourceDuranium");
-		Class5.propertyChangedEventArgs_86 = new PropertyChangedEventArgs("ResourceEndurium");
-		Class5.propertyChangedEventArgs_87 = new PropertyChangedEventArgs("ResourcePalladium");
-		Class5.propertyChangedEventArgs_88 = new PropertyChangedEventArgs("ResourcePromerium");
-		Class5.propertyChangedEventArgs_89 = new PropertyChangedEventArgs("ResourcePrometid");
-		Class5.propertyChangedEventArgs_90 = new PropertyChangedEventArgs("ResourcePrometium");
+		Class5.propertyChangedEventArgs_75 = new PropertyChangedEventArgs("Position");
+		Class5.propertyChangedEventArgs_76 = new PropertyChangedEventArgs("Premium");
+		Class5.propertyChangedEventArgs_77 = new PropertyChangedEventArgs("ProxySettings");
+		Class5.propertyChangedEventArgs_78 = new PropertyChangedEventArgs("ProxySocket");
+		Class5.propertyChangedEventArgs_79 = new PropertyChangedEventArgs("Range");
+		Class5.propertyChangedEventArgs_80 = new PropertyChangedEventArgs("RangeFix");
+		Class5.propertyChangedEventArgs_81 = new PropertyChangedEventArgs("Rect");
+		Class5.propertyChangedEventArgs_82 = new PropertyChangedEventArgs("ResourceDuranium");
+		Class5.propertyChangedEventArgs_83 = new PropertyChangedEventArgs("ResourceEndurium");
+		Class5.propertyChangedEventArgs_84 = new PropertyChangedEventArgs("ResourcePalladium");
+		Class5.propertyChangedEventArgs_85 = new PropertyChangedEventArgs("ResourcePromerium");
+		Class5.propertyChangedEventArgs_86 = new PropertyChangedEventArgs("ResourcePrometid");
+		Class5.propertyChangedEventArgs_87 = new PropertyChangedEventArgs("ResourcePrometium");
 		Class5.Resources = new PropertyChangedEventArgs("Resources");
-		Class5.propertyChangedEventArgs_91 = new PropertyChangedEventArgs("ResourceSeprom");
-		Class5.propertyChangedEventArgs_92 = new PropertyChangedEventArgs("ResourceTerbium");
-		Class5.propertyChangedEventArgs_93 = new PropertyChangedEventArgs("ResourceXenomit");
-		Class5.propertyChangedEventArgs_94 = new PropertyChangedEventArgs("RightCorner");
-		Class5.propertyChangedEventArgs_95 = new PropertyChangedEventArgs("SecretKey");
-		Class5.propertyChangedEventArgs_96 = new PropertyChangedEventArgs("Security");
+		Class5.propertyChangedEventArgs_88 = new PropertyChangedEventArgs("ResourceSeprom");
+		Class5.propertyChangedEventArgs_89 = new PropertyChangedEventArgs("ResourceTerbium");
+		Class5.propertyChangedEventArgs_90 = new PropertyChangedEventArgs("ResourceXenomit");
+		Class5.propertyChangedEventArgs_91 = new PropertyChangedEventArgs("RightCorner");
+		Class5.propertyChangedEventArgs_92 = new PropertyChangedEventArgs("SecretKey");
+		Class5.propertyChangedEventArgs_93 = new PropertyChangedEventArgs("Security");
 		Class5.SelectedShip = new PropertyChangedEventArgs("SelectedShip");
-		Class5.propertyChangedEventArgs_97 = new PropertyChangedEventArgs("Server");
-		Class5.propertyChangedEventArgs_98 = new PropertyChangedEventArgs("Settings");
-		Class5.propertyChangedEventArgs_99 = new PropertyChangedEventArgs("Shield");
+		Class5.propertyChangedEventArgs_94 = new PropertyChangedEventArgs("Server");
+		Class5.propertyChangedEventArgs_95 = new PropertyChangedEventArgs("Settings");
+		Class5.propertyChangedEventArgs_96 = new PropertyChangedEventArgs("Shield");
 		Class5.ShieldDisplay = new PropertyChangedEventArgs("ShieldDisplay");
-		Class5.propertyChangedEventArgs_100 = new PropertyChangedEventArgs("ShieldMax");
+		Class5.propertyChangedEventArgs_97 = new PropertyChangedEventArgs("ShieldMax");
 		Class5.ShieldPercentage = new PropertyChangedEventArgs("ShieldPercentage");
-		Class5.propertyChangedEventArgs_101 = new PropertyChangedEventArgs("ShipInfo");
-		Class5.propertyChangedEventArgs_102 = new PropertyChangedEventArgs("Ships");
-		Class5.propertyChangedEventArgs_103 = new PropertyChangedEventArgs("Sid");
-		Class5.propertyChangedEventArgs_104 = new PropertyChangedEventArgs("Socket");
-		Class5.propertyChangedEventArgs_105 = new PropertyChangedEventArgs("Speed");
-		Class5.propertyChangedEventArgs_106 = new PropertyChangedEventArgs("Target");
-		Class5.propertyChangedEventArgs_107 = new PropertyChangedEventArgs("TargetId");
-		Class5.propertyChangedEventArgs_108 = new PropertyChangedEventArgs("Type");
-		Class5.propertyChangedEventArgs_109 = new PropertyChangedEventArgs("TypeId");
-		Class5.propertyChangedEventArgs_110 = new PropertyChangedEventArgs("Uid");
+		Class5.propertyChangedEventArgs_98 = new PropertyChangedEventArgs("ShipInfo");
+		Class5.propertyChangedEventArgs_99 = new PropertyChangedEventArgs("Ships");
+		Class5.propertyChangedEventArgs_100 = new PropertyChangedEventArgs("Sid");
+		Class5.propertyChangedEventArgs_101 = new PropertyChangedEventArgs("Socket");
+		Class5.propertyChangedEventArgs_102 = new PropertyChangedEventArgs("Speed");
+		Class5.propertyChangedEventArgs_103 = new PropertyChangedEventArgs("Target");
+		Class5.zvwoYdyOnOC = new PropertyChangedEventArgs("TargetId");
+		Class5.propertyChangedEventArgs_104 = new PropertyChangedEventArgs("Type");
+		Class5.propertyChangedEventArgs_105 = new PropertyChangedEventArgs("TypeId");
+		Class5.propertyChangedEventArgs_106 = new PropertyChangedEventArgs("Uid");
 		Class5.Uridium = new PropertyChangedEventArgs("Uridium");
-		Class5.propertyChangedEventArgs_111 = new PropertyChangedEventArgs("UserAgent");
-		Class5.propertyChangedEventArgs_112 = new PropertyChangedEventArgs("UserName");
+		Class5.propertyChangedEventArgs_107 = new PropertyChangedEventArgs("UserAgent");
+		Class5.propertyChangedEventArgs_108 = new PropertyChangedEventArgs("UserName");
 		Class5.Web = new PropertyChangedEventArgs("Web");
 	}
 
@@ -271,11 +271,13 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_31;
 
+	internal static readonly PropertyChangedEventArgs NbqoJhOdgaB;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_32;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_33;
-
 	internal static readonly PropertyChangedEventArgs InviteList;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_33;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_34;
 
@@ -295,15 +297,17 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_42;
 
+	internal static readonly PropertyChangedEventArgs IsLoggedIn;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_43;
 
-	internal static readonly PropertyChangedEventArgs IsLoggedIn;
+	internal static readonly PropertyChangedEventArgs jkjoJdxknIo;
+
+	internal static readonly PropertyChangedEventArgs IsOwner;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_44;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_45;
-
-	internal static readonly PropertyChangedEventArgs IsOwner;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_46;
 
@@ -351,37 +355,39 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_68;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_69;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_70;
-
 	internal static readonly PropertyChangedEventArgs Map;
 
 	internal static readonly PropertyChangedEventArgs MapId;
 
 	internal static readonly PropertyChangedEventArgs MapName;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_71;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_69;
 
 	internal static readonly PropertyChangedEventArgs MemberList;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_72;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_70;
 
 	internal static readonly PropertyChangedEventArgs Mode;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_71;
+
+	internal static readonly PropertyChangedEventArgs ybaoJatPqLe;
+
+	internal static readonly PropertyChangedEventArgs Name;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_72;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_73;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_74;
 
-	internal static readonly PropertyChangedEventArgs Name;
+	internal static readonly PropertyChangedEventArgs Pet;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_75;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_76;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_77;
-
-	internal static readonly PropertyChangedEventArgs Pet;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_78;
 
@@ -403,13 +409,13 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_87;
 
+	internal static readonly PropertyChangedEventArgs Resources;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_88;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_89;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_90;
-
-	internal static readonly PropertyChangedEventArgs Resources;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_91;
 
@@ -417,25 +423,25 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_93;
 
+	internal static readonly PropertyChangedEventArgs SelectedShip;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_94;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_95;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_96;
 
-	internal static readonly PropertyChangedEventArgs SelectedShip;
+	internal static readonly PropertyChangedEventArgs ShieldDisplay;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_97;
+
+	internal static readonly PropertyChangedEventArgs ShieldPercentage;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_98;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_99;
 
-	internal static readonly PropertyChangedEventArgs ShieldDisplay;
-
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_100;
-
-	internal static readonly PropertyChangedEventArgs ShieldPercentage;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_101;
 
@@ -443,25 +449,19 @@ internal static class Class5
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_103;
 
+	internal static readonly PropertyChangedEventArgs zvwoYdyOnOC;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_104;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_105;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_106;
 
+	internal static readonly PropertyChangedEventArgs Uridium;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_107;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_108;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_109;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_110;
-
-	internal static readonly PropertyChangedEventArgs Uridium;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_111;
-
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_112;
 
 	internal static readonly PropertyChangedEventArgs Web;
 }

@@ -8,7 +8,7 @@ public class GClass470 : GInterface0
 	{
 		get
 		{
-			return 9221;
+			return 7418;
 		}
 	}
 
@@ -16,71 +16,55 @@ public class GClass470 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 18;
 		}
 	}
 
-	public GClass470(GClass631 gclass631_1 = null, string string_1 = "", GClass581 gclass581_1 = null)
+	public GClass470(string string_1 = "", double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		this.string_0 = "";
 		base..ctor();
-		if (gclass631_1 == null)
-		{
-			this.gclass631_0 = new GClass631(0U);
-		}
-		else
-		{
-			this.gclass631_0 = gclass631_1;
-		}
 		this.string_0 = string_1;
-		if (gclass581_1 == null)
-		{
-			this.gclass581_0 = new GClass581(0U);
-			return;
-		}
-		this.gclass581_0 = gclass581_1;
+		this.double_1 = double_2;
+		this.double_0 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9221;
+		return 7418;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 18;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.gclass581_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass581);
-		this.gclass581_0.imethod_1(binaryStream_0);
-		this.gclass631_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass631);
-		this.gclass631_0.imethod_1(binaryStream_0);
+		this.double_0 = binaryStream_0.ReadDouble();
 		this.string_0 = binaryStream_0.smethod_2();
+		this.double_1 = binaryStream_0.ReadDouble();
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9221);
+		binaryStream_0.smethod_6(7418);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8341);
-		this.gclass581_0.imethod_2(binaryStream_0);
-		this.gclass631_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(-24063);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_6(-11782);
 	}
 
-	public GClass581 gclass581_0;
-
-	public GClass631 gclass631_0;
+	public double double_0;
 
 	public string string_0;
+
+	public double double_1;
 }

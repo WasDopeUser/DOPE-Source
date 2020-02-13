@@ -8,7 +8,7 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 29597;
+			return 18257;
 		}
 	}
 
@@ -16,68 +16,57 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 17;
+			return 6;
 		}
 	}
 
-	public GClass595(int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0, bool bool_1 = false)
+	public GClass595(string string_3 = "", string string_4 = "", string string_5 = "")
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
+		this.string_0 = "";
+		this.string_1 = "";
+		this.string_2 = "";
 		base..ctor();
-		this.Id = int_3;
-		this.int_1 = int_4;
-		this.int_0 = int_5;
-		this.int_2 = int_6;
-		this.bool_0 = bool_1;
+		this.string_1 = string_3;
+		this.string_2 = string_4;
+		this.string_0 = string_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29597;
+		return 18257;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 17;
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 11) | this.int_1 << 21);
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (U.smethod_0(this.int_2, 11) | this.int_2 << 21);
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (this.Id << 6 | U.smethod_0(this.Id, 26));
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.string_0 = binaryStream_0.smethod_2();
+		this.string_1 = binaryStream_0.smethod_2();
+		this.string_2 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29597);
+		binaryStream_0.smethod_6(18257);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(3573);
-		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
-		binaryStream_0.smethod_4(this.int_1 << 11 | U.smethod_0(this.int_1, 21));
-		binaryStream_0.smethod_4(this.int_2 << 11 | U.smethod_0(this.int_2, 21));
-		binaryStream_0.smethod_4(U.smethod_0(this.Id, 6) | this.Id << 26);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_6(11804);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.MoioCjQkqp0(this.string_1);
+		binaryStream_0.MoioCjQkqp0(this.string_2);
 	}
 
-	public int int_0;
+	public string string_0;
 
-	public int int_1;
+	public string string_1;
 
-	public int int_2;
-
-	public int Id;
-
-	public bool bool_0;
+	public string string_2;
 }

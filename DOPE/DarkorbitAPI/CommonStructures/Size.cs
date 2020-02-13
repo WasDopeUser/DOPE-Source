@@ -7,7 +7,7 @@ namespace DarkorbitAPI.CommonStructures
 	{
 		public Size(int int_0, int int_1)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			this.Width = int_0;
 			this.Height = int_1;
 			this.Vector = new Vector2((float)int_0, (float)int_1);

@@ -12,14 +12,14 @@ namespace DarkorbitAPI.NativeWrappers
 
 		public NullLogManager()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static NullLogManager()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			NullLogManager.Instance = new NullLogManager();
 		}
 

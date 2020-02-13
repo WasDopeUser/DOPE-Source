@@ -1,95 +1,89 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
+using DOPE.Common;
+using DOPE.Common.Models;
 
-public class GClass852 : GClass847
+public class GClass852 : GClass848
 {
+	public GClass852(GClass824 gclass824_1)
+	{
+		Class13.igxcIukzfpare();
+		base..ctor(gclass824_1, "HangarInfoProvider");
+	}
+
 	public override int Cooldown
 	{
 		get
 		{
-			if (!this.method_2())
+			if (base.Context.Game.Web.Equipment.Hangars != null)
 			{
-				return 300000;
+				return 60000;
 			}
-			return 60000;
+			return 2000;
 		}
 	}
 
 	[CompilerGenerated]
-	public bool method_2()
+	public DateTimeOffset method_2()
 	{
-		return this.bool_1;
+		return this.dateTimeOffset_1;
 	}
 
 	[CompilerGenerated]
-	public void method_3(bool bool_2)
+	public void method_3(DateTimeOffset dateTimeOffset_2)
 	{
-		this.bool_1 = bool_2;
-	}
-
-	public GClass852(GClass823 gclass823_1)
-	{
-		Class13.Gj4N3WdzaR1LY();
-		this.bool_1 = true;
-		base..ctor(gclass823_1, "SkylabWorker");
-	}
-
-	public void method_4()
-	{
-		this.method_3(true);
-		GClass78 skylab = base.Context.Game.Web.Skylab;
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.Hangar;
-		DateTimeOffset? dateTimeOffset = skylab.method_0().method_5();
-		skylab.method_1().GetAwaiter().GetResult();
-		DateTimeOffset? dateTimeOffset2 = skylab.method_0().method_5();
-		if (dateTimeOffset != null && dateTimeOffset2 == null)
-		{
-			base.Log.Info("Transfer complete. Refreshing");
-			base.Context.method_62<GClass851>().imethod_1();
-			return;
-		}
-		if (dateTimeOffset2 != null)
-		{
-			base.Log.Info<DateTimeOffset>("Transfer in progress. Complete at {time}", dateTimeOffset2.Value);
-			return;
-		}
-		int num = (int)base.Context.Hero.ResourcePromerium;
-		int num2 = (int)base.Context.Hero.ResourceSeprom;
-		if (!base.Context.Game.Connection.Socket.method_2() || !base.Context.Hero.IsInitialized)
-		{
-			num = hangar.method_1("resource_ore_promerium");
-			num2 = hangar.method_1("resource_ore_seprom");
-		}
-		int skylab_KeepPromerium = base.Context.Account.Skylab_KeepPromerium;
-		int skylab_KeepSeprom = base.Context.Account.Skylab_KeepSeprom;
-		int num3 = Math.Min(Math.Max(0, skylab_KeepPromerium - num), skylab.method_0().method_2("resource_ore_promerium"));
-		int num4 = Math.Min(Math.Max(0, skylab_KeepSeprom - num2), skylab.method_0().method_2("resource_ore_seprom"));
-		base.Log.Info<int, int>("Need to transfer {promerium} promerium & {seprom} seprom", num3, num4);
-		num4 = Math.Min(num4, 90);
-		int val = 100 - num4;
-		num3 = Math.Min(num3, val);
-		if (num3 + num4 == 0)
-		{
-			return;
-		}
-		Thread.Sleep(2000);
-		base.Log.Info<int, int>("Transferring a batch of {promerium} promerium & {seprom} seprom", num3, num4);
-		bool result = skylab.method_2(num3, num4).GetAwaiter().GetResult();
-		this.method_3(result);
-		base.Log.Info("Transfer state: {state}", result);
+		this.dateTimeOffset_1 = dateTimeOffset_2;
 	}
 
 	public override void Execute()
 	{
-		this.method_4();
+		GClass28.GClass48 hangarList = base.Context.Game.Web.Equipment.GetHangarList();
+		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.GetHangar();
+		IDopeService service = base.Context.MainController.Parent.Service;
+		List<string> list = hangarList.data.ret.hangars.Select(new Func<GClass28.GClass32, string>(GClass852.<>c.<>c_0.method_0)).ToList<string>();
+		if (list != null && list.Any<string>() && hangar != null)
+		{
+			VolatileData volatileData = new VolatileData();
+			volatileData.LastUpdated = DateTimeOffset.Now;
+			volatileData.Hangars = list;
+			VolatileData volatileData2 = volatileData;
+			GClass28.GClass32 gclass = hangarList.data.ret.hangars.FirstOrDefault(new Func<GClass28.GClass32, bool>(GClass852.<>c.<>c_0.method_1));
+			string activeHangar;
+			if (gclass == null)
+			{
+				activeHangar = null;
+			}
+			else
+			{
+				GClass28.GClass31 gclass31_ = gclass.GClass31_0;
+				if (gclass31_ == null)
+				{
+					activeHangar = null;
+				}
+				else
+				{
+					GClass28.GClass30 gclass30_ = gclass31_.GClass30_0;
+					activeHangar = ((gclass30_ != null) ? gclass30_.String_0 : null);
+				}
+			}
+			volatileData2.ActiveHangar = activeHangar;
+			volatileData.Fill();
+			base.Context.Account.Volatile = volatileData;
+			if (this.method_2().Cooldown(120000))
+			{
+				service.UpdateVolatile(base.Context.Account.BotId, volatileData);
+				this.method_3(DateTimeOffset.Now);
+			}
+		}
 	}
 
 	public override bool vmethod_0()
 	{
-		return base.Context.Game.Web.Equipment.Hangar != null && base.Context.Account.Skylab_KeepPromerium + base.Context.Account.Skylab_KeepSeprom > 0;
+		return true;
 	}
 
 	[CompilerGenerated]
-	private bool bool_1;
+	private DateTimeOffset dateTimeOffset_1;
 }

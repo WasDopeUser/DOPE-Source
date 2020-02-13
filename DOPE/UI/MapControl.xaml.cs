@@ -29,17 +29,17 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass823 Context
+		public GClass824 Context
 		{
 			get
 			{
-				return base.DataContext as GClass823;
+				return base.DataContext as GClass824;
 			}
 		}
 
 		public MapControl()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			this.Timer = new Timer();
 			this.LastRender = DateTime.Now;
 			base..ctor();
@@ -121,7 +121,7 @@ namespace DOPE.UI
 				{
 				}
 				this.method_5(drawingContext, float_, float_2, this.Map);
-				string text = string.Join("\r\n", this.Context.method_70());
+				string text = string.Join("\r\n", this.Context.fcDoZzaqUxq());
 				if (!string.IsNullOrWhiteSpace(text))
 				{
 					this.Progress.Visibility = Visibility.Visible;
@@ -220,7 +220,7 @@ namespace DOPE.UI
 		{
 			foreach (KeyValuePair<int, Asset> keyValuePair in map_0.Assets)
 			{
-				System.Drawing.Color color = MapUtils.smethod_13(map_0, keyValuePair.Value);
+				System.Drawing.Color color = MapUtils.smethod_14(map_0, keyValuePair.Value);
 				drawingContext_0.DrawEllipse(new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B)), new System.Windows.Media.Pen(System.Windows.Media.Brushes.DarkGray, 1.0), new System.Windows.Point((double)((float)keyValuePair.Value.PosX * float_0), (double)((float)keyValuePair.Value.PosY * float_1)), 3.0, 3.0);
 			}
 			if (map_0.Battlestation != null)
@@ -260,7 +260,7 @@ namespace DOPE.UI
 		public void method_7(DrawingContext drawingContext_0, float float_0, float float_1, Ship ship_0)
 		{
 			Vector2 position = ship_0.Position;
-			System.Drawing.Color color = MapUtils.smethod_13(this.Context.Map, ship_0);
+			System.Drawing.Color color = MapUtils.smethod_14(this.Context.Map, ship_0);
 			System.Windows.Media.Pen pen = null;
 			if (this.Map.SelectedShip == ship_0)
 			{
@@ -288,7 +288,7 @@ namespace DOPE.UI
 
 		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
 		{
-			System.Drawing.Color color = MapUtils.smethod_13(this.Map, gate_0);
+			System.Drawing.Color color = MapUtils.smethod_14(this.Map, gate_0);
 			SolidColorBrush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1), 3.0, 3.0));
 			drawingContext_0.DrawEllipse(null, new System.Windows.Media.Pen(brush, 2.0), new System.Windows.Point((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1)), 10.0, 10.0);
@@ -296,24 +296,24 @@ namespace DOPE.UI
 
 		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
 		{
-			System.Drawing.Color color = MapUtils.smethod_13(this.Map, collectible_0);
+			System.Drawing.Color color = MapUtils.smethod_14(this.Map, collectible_0);
 			System.Windows.Media.Brush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)collectible_0.PosX * float_0), (double)((float)collectible_0.PosY * float_1), 3.0, 3.0));
 		}
 
-		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass823 gclass823_0)
+		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass824 gclass824_0)
 		{
-			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass823_0.DormantTargets)
+			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass824_0.DormantTargets)
 			{
 				Collectible value = keyValuePair.Value;
 				drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.Pink, null, MapControl.smethod_0((double)(value.Position.X * float_0), (double)(value.Position.Y * float_1), 2.0, 2.0));
 			}
-			if (gclass823_0.RoamTarget != Vector2.Zero)
+			if (gclass824_0.RoamTarget != Vector2.Zero)
 			{
-				Vector2 roamTarget = gclass823_0.RoamTarget;
+				Vector2 roamTarget = gclass824_0.RoamTarget;
 				drawingContext_0.DrawEllipse(System.Windows.Media.Brushes.Magenta, null, new System.Windows.Point((double)(roamTarget.X * float_0), (double)(roamTarget.Y * float_1)), 6.0, 6.0);
 			}
-			GClass836 behavior = gclass823_0.Behavior;
+			GClass837 behavior = gclass824_0.Behavior;
 			List<Rectangle> list = (behavior != null) ? behavior.vmethod_17() : null;
 			if (list != null)
 			{

@@ -6,11 +6,11 @@ using System.Windows.Media;
 
 public static class GClass6
 {
-	public static SQAOx3bqMSagS7G2rh3 smethod_0<SQAOx3bqMSagS7G2rh3>(DependencyObject dependencyObject_0, Func<SQAOx3bqMSagS7G2rh3, bool> func_0 = null) where SQAOx3bqMSagS7G2rh3 : DependencyObject
+	public static s6jr0LGPhbGgKTrp9LL smethod_0<s6jr0LGPhbGgKTrp9LL>(DependencyObject dependencyObject_0, Func<s6jr0LGPhbGgKTrp9LL, bool> func_0 = null) where s6jr0LGPhbGgKTrp9LL : DependencyObject
 	{
 		if (dependencyObject_0 == null)
 		{
-			return default(SQAOx3bqMSagS7G2rh3);
+			return default(s6jr0LGPhbGgKTrp9LL);
 		}
 		Queue<DependencyObject> queue = new Queue<DependencyObject>();
 		queue.Enqueue(dependencyObject_0);
@@ -21,14 +21,14 @@ public static class GClass6
 			for (int i = 0; i < childrenCount; i++)
 			{
 				DependencyObject child = VisualTreeHelper.GetChild(reference, i);
-				SQAOx3bqMSagS7G2rh3 sqaox3bqMSagS7G2rh = child as SQAOx3bqMSagS7G2rh3;
-				if (sqaox3bqMSagS7G2rh != null && (func_0 == null || func_0(sqaox3bqMSagS7G2rh)))
+				s6jr0LGPhbGgKTrp9LL s6jr0LGPhbGgKTrp9LL = child as s6jr0LGPhbGgKTrp9LL;
+				if (s6jr0LGPhbGgKTrp9LL != null && (func_0 == null || func_0(s6jr0LGPhbGgKTrp9LL)))
 				{
-					return sqaox3bqMSagS7G2rh;
+					return s6jr0LGPhbGgKTrp9LL;
 				}
 				queue.Enqueue(child);
 			}
 		}
-		return default(SQAOx3bqMSagS7G2rh3);
+		return default(s6jr0LGPhbGgKTrp9LL);
 	}
 }

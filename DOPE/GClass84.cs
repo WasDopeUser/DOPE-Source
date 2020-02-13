@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using NLog;
 using Syroot.BinaryData;
 
-public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vcbM : GInterface7
+public class GClass84<MJYqPmV19bIF9wlgC6l> : GInterface5 where MJYqPmV19bIF9wlgC6l : GInterface7
 {
 	private Logger Log
 	{
@@ -23,7 +23,7 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 
 	public GClass84(ConnectionManager connectionManager_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		this.dictionary_0 = new Dictionary<int, GInterface0>();
 		this.object_0 = new object();
 		base..ctor();
@@ -39,26 +39,26 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 		[CompilerGenerated]
 		add
 		{
-			GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
+			GClass82.GDelegate4 gdelegate = this.KsuinxwuqI;
 			GClass82.GDelegate4 gdelegate2;
 			do
 			{
 				gdelegate2 = gdelegate;
 				GClass82.GDelegate4 value2 = (GClass82.GDelegate4)Delegate.Combine(gdelegate2, value);
-				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_0, value2, gdelegate2);
+				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.KsuinxwuqI, value2, gdelegate2);
 			}
 			while (gdelegate != gdelegate2);
 		}
 		[CompilerGenerated]
 		remove
 		{
-			GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
+			GClass82.GDelegate4 gdelegate = this.KsuinxwuqI;
 			GClass82.GDelegate4 gdelegate2;
 			do
 			{
 				gdelegate2 = gdelegate;
 				GClass82.GDelegate4 value2 = (GClass82.GDelegate4)Delegate.Remove(gdelegate2, value);
-				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_0, value2, gdelegate2);
+				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.KsuinxwuqI, value2, gdelegate2);
 			}
 			while (gdelegate != gdelegate2);
 		}
@@ -69,26 +69,26 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 		[CompilerGenerated]
 		add
 		{
-			GClass82.GDelegate4 gdelegate = this.gdelegate4_1;
+			GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
 			GClass82.GDelegate4 gdelegate2;
 			do
 			{
 				gdelegate2 = gdelegate;
 				GClass82.GDelegate4 value2 = (GClass82.GDelegate4)Delegate.Combine(gdelegate2, value);
-				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_1, value2, gdelegate2);
+				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_0, value2, gdelegate2);
 			}
 			while (gdelegate != gdelegate2);
 		}
 		[CompilerGenerated]
 		remove
 		{
-			GClass82.GDelegate4 gdelegate = this.gdelegate4_1;
+			GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
 			GClass82.GDelegate4 gdelegate2;
 			do
 			{
 				gdelegate2 = gdelegate;
 				GClass82.GDelegate4 value2 = (GClass82.GDelegate4)Delegate.Remove(gdelegate2, value);
-				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_1, value2, gdelegate2);
+				gdelegate = Interlocked.CompareExchange<GClass82.GDelegate4>(ref this.gdelegate4_0, value2, gdelegate2);
 			}
 			while (gdelegate != gdelegate2);
 		}
@@ -121,15 +121,15 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 	}
 
 	[CompilerGenerated]
-	public mQ77yYnw0oi4S08vcbM method_4()
+	public MJYqPmV19bIF9wlgC6l method_4()
 	{
 		return this.gparam_0;
 	}
 
 	[CompilerGenerated]
-	private void method_5(mQ77yYnw0oi4S08vcbM Xwl4mgnWIPK9Uwsg6WV)
+	private void method_5(MJYqPmV19bIF9wlgC6l Xkj2ehVqYKHhfyggKVf)
 	{
-		this.gparam_0 = Xwl4mgnWIPK9Uwsg6WV;
+		this.gparam_0 = Xkj2ehVqYKHhfyggKVf;
 	}
 
 	[CompilerGenerated]
@@ -193,22 +193,22 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 		return ginterface;
 	}
 
-	public void method_9(GClass91 gclass91_1, mQ77yYnw0oi4S08vcbM SOv3uknJgCuhs6s15Ur)
+	public void method_9(GClass91 gclass91_1, MJYqPmV19bIF9wlgC6l ne2m1dVSXE7Ks14qyNR)
 	{
 		this.method_11();
 		this.Socket = gclass91_1;
 		try
 		{
-			mQ77yYnw0oi4S08vcbM mQ77yYnw0oi4S08vcbM = this.method_4();
-			if (mQ77yYnw0oi4S08vcbM != null)
+			MJYqPmV19bIF9wlgC6l mjyqPmV19bIF9wlgC6l = this.method_4();
+			if (mjyqPmV19bIF9wlgC6l != null)
 			{
-				mQ77yYnw0oi4S08vcbM.imethod_1();
+				mjyqPmV19bIF9wlgC6l.imethod_2();
 			}
 		}
 		catch
 		{
 		}
-		this.method_5(SOv3uknJgCuhs6s15Ur);
+		this.method_5(ne2m1dVSXE7Ks14qyNR);
 	}
 
 	public void method_10(string string_1)
@@ -239,8 +239,8 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 				this.method_6().Position = 0L;
 				this.method_6().Write((short)num);
 			}
-			mQ77yYnw0oi4S08vcbM mQ77yYnw0oi4S08vcbM = this.method_4();
-			mQ77yYnw0oi4S08vcbM.UmklIaSsoWi(this.byte_0, 0, num + num2);
+			MJYqPmV19bIF9wlgC6l mjyqPmV19bIF9wlgC6l = this.method_4();
+			mjyqPmV19bIF9wlgC6l.imethod_0(this.byte_0, 0, num + num2);
 			try
 			{
 				this.Socket.method_3().GetStream().Write(this.byte_0, 0, num + num2);
@@ -249,12 +249,12 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 			{
 			}
 		}
-		GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
-		if (gdelegate == null)
+		GClass82.GDelegate4 ksuinxwuqI = this.KsuinxwuqI;
+		if (ksuinxwuqI == null)
 		{
 			return;
 		}
-		gdelegate(ginterface0_0);
+		ksuinxwuqI(ginterface0_0);
 	}
 
 	public void Reset()
@@ -263,71 +263,71 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 
 	private void method_11()
 	{
-		this.int_1 = 2;
+		this.owkijCelp2 = 2;
 		this.method_7().Position = 0L;
 		this.func_0 = new Func<BinaryStream, int, bool>(this.method_14);
 	}
 
-	public void method_12(BinaryStream binaryStream_2, byte[] byte_1, int int_6)
+	public void method_12(BinaryStream binaryStream_2, byte[] byte_1, int int_5)
 	{
-		this.int_2 = int_6;
+		this.int_1 = int_5;
 		this.int_0 = 0;
-		mQ77yYnw0oi4S08vcbM mQ77yYnw0oi4S08vcbM = this.method_4();
-		mQ77yYnw0oi4S08vcbM.imethod_0(byte_1, 0, int_6);
-		while (this.func_0(binaryStream_2, int_6))
+		MJYqPmV19bIF9wlgC6l mjyqPmV19bIF9wlgC6l = this.method_4();
+		mjyqPmV19bIF9wlgC6l.imethod_1(byte_1, 0, int_5);
+		while (this.func_0(binaryStream_2, int_5))
 		{
 			this.method_7().Position = 0L;
 		}
 		binaryStream_2.Position = 0L;
 	}
 
-	private bool method_13(BinaryStream binaryStream_2, int int_6)
+	private bool method_13(BinaryStream binaryStream_2, int int_5)
 	{
-		if (this.int_2 == 0)
+		if (this.int_1 == 0)
 		{
 			return false;
 		}
-		if (this.int_1 > 0)
+		if (this.owkijCelp2 > 0)
 		{
-			int num = Math.Min(this.int_1, this.int_2);
-			GClass812.smethod_0(binaryStream_2, this.method_7(), num);
+			int num = Math.Min(this.owkijCelp2, this.int_1);
+			GClass813.smethod_0(binaryStream_2, this.method_7(), num);
+			this.owkijCelp2 -= num;
 			this.int_1 -= num;
-			this.int_2 -= num;
 			this.int_0 += num;
 		}
-		return this.int_1 == 0;
+		return this.owkijCelp2 == 0;
 	}
 
-	private bool method_14(BinaryStream binaryStream_2, int int_6)
+	private bool method_14(BinaryStream binaryStream_2, int int_5)
 	{
-		if (!this.method_13(binaryStream_2, int_6))
+		if (!this.method_13(binaryStream_2, int_5))
 		{
 			return false;
 		}
 		this.method_7().Position = 0L;
-		if (this.int_3 == 65535)
+		if (this.int_2 == 65535)
 		{
-			this.int_3 = (int)this.method_7().ReadUInt32();
+			this.int_2 = (int)this.method_7().ReadUInt32();
 		}
 		else
 		{
-			this.int_3 = (int)this.method_7().ReadUInt16();
-			if (this.int_3 == 65535)
+			this.int_2 = (int)this.method_7().ReadUInt16();
+			if (this.int_2 == 65535)
 			{
 				this.func_0 = new Func<BinaryStream, int, bool>(this.method_14);
-				this.int_1 = 4;
+				this.owkijCelp2 = 4;
 				return true;
 			}
 		}
-		this.int_1 = this.int_3;
-		this.method_7().SetLength((long)this.int_3);
+		this.owkijCelp2 = this.int_2;
+		this.method_7().SetLength((long)this.int_2);
 		this.func_0 = new Func<BinaryStream, int, bool>(this.method_15);
 		return true;
 	}
 
-	private bool method_15(BinaryStream binaryStream_2, int int_6)
+	private bool method_15(BinaryStream binaryStream_2, int int_5)
 	{
-		if (!this.method_13(binaryStream_2, int_6))
+		if (!this.method_13(binaryStream_2, int_5))
 		{
 			return false;
 		}
@@ -335,7 +335,7 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 		this.method_7().Position = 0L;
 		short num;
 		GInterface0 ginterface = this.method_8(this.method_7(), out num);
-		this.int_5++;
+		this.int_4++;
 		ConnectionManager connection = this.Connection;
 		if (connection != null)
 		{
@@ -350,7 +350,7 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 				{
 					action(ginterface);
 				}
-				GClass82.GDelegate4 gdelegate = this.gdelegate4_1;
+				GClass82.GDelegate4 gdelegate = this.gdelegate4_0;
 				if (gdelegate != null)
 				{
 					gdelegate(ginterface);
@@ -378,10 +378,10 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 	private ConnectionManager connectionManager_0;
 
 	[CompilerGenerated]
-	private GClass82.GDelegate4 gdelegate4_0;
+	private GClass82.GDelegate4 KsuinxwuqI;
 
 	[CompilerGenerated]
-	private GClass82.GDelegate4 gdelegate4_1;
+	private GClass82.GDelegate4 gdelegate4_0;
 
 	[CompilerGenerated]
 	private Action<GInterface0> action_0;
@@ -393,7 +393,7 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 	private string string_0;
 
 	[CompilerGenerated]
-	private mQ77yYnw0oi4S08vcbM gparam_0;
+	private MJYqPmV19bIF9wlgC6l gparam_0;
 
 	[CompilerGenerated]
 	private readonly BinaryStream binaryStream_0;
@@ -405,15 +405,15 @@ public class GClass84<mQ77yYnw0oi4S08vcbM> : GInterface5 where mQ77yYnw0oi4S08vc
 
 	private int int_0;
 
+	private int owkijCelp2;
+
 	private int int_1;
 
 	private int int_2;
 
-	private int int_3;
-
 	private Func<BinaryStream, int, bool> func_0;
 
-	private int int_4;
+	private int int_3;
 
-	private int int_5;
+	private int int_4;
 }

@@ -10,7 +10,7 @@ public class GClass107 : GInterface4
 
 	public GClass107()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

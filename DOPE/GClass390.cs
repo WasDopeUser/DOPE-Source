@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass390 : GInterface0
+public class GClass390 : GClass388, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 21306;
+			return 8457;
 		}
 	}
 
@@ -16,68 +16,48 @@ public class GClass390 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass390(GClass424 gclass424_1 = null, bool bool_2 = false, bool bool_3 = false, string string_1 = "")
+	public GClass390(uint uint_1 = 0U)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.string_0 = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (gclass424_1 == null)
-		{
-			this.gclass424_0 = new GClass424(0U);
-		}
-		else
-		{
-			this.gclass424_0 = gclass424_1;
-		}
-		this.bool_1 = bool_2;
-		this.bool_0 = bool_3;
-		this.string_0 = string_1;
+		this.uint_0 = uint_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 21306;
+		return 8457;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
+		base.imethod_1(binaryStream_0);
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		this.gclass424_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass424);
-		this.gclass424_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21306);
+		binaryStream_0.smethod_6(8457);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-6319);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		this.gclass424_0.imethod_2(binaryStream_0);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_5(this.uint_0);
+		binaryStream_0.smethod_6(25657);
+		binaryStream_0.smethod_6(-30380);
 	}
 
-	public string string_0;
-
-	public bool bool_0;
-
-	public bool bool_1;
-
-	public GClass424 gclass424_0;
+	public uint uint_0;
 }

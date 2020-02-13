@@ -1,51 +1,75 @@
 ﻿using System;
-using System.Linq;
-using System.Threading;
-using DarkorbitAPI;
-using DOPE.Common.Models;
+using System.Runtime.CompilerServices;
+using NLog;
 
-public class GClass848 : GClass847
+public abstract class GClass848 : GInterface9
 {
-	public GClass848(GClass823 gclass823_1)
+	public GClass824 Context { get; }
+
+	public Logger Log { get; set; }
+
+	[CompilerGenerated]
+	public DateTimeOffset method_0()
 	{
-		Class13.Gj4N3WdzaR1LY();
-		base..ctor(gclass823_1, "DroneRepair");
+		return this.dateTimeOffset_0;
 	}
 
-	public override int Cooldown
+	[CompilerGenerated]
+	public void method_1(DateTimeOffset dateTimeOffset_1)
 	{
-		get
+		this.dateTimeOffset_0 = dateTimeOffset_1;
+	}
+
+	public abstract int Cooldown { get; }
+
+	public GClass848(GClass824 gclass824_1, string string_0)
+	{
+		Class13.igxcIukzfpare();
+		base..ctor();
+		this.Context = gclass824_1;
+		this.Log = this.Context.method_69("BackgroundLogic-" + string_0);
+	}
+
+	void GInterface9.Execute()
+	{
+		this.bool_0 = true;
+		try
 		{
-			return 120000;
+			this.Execute();
+		}
+		catch (Exception ex)
+		{
+			this.Log.Error("Error executing background task {exception}", ex.ToString());
+		}
+		finally
+		{
+			this.bool_0 = false;
+			this.method_1(DateTimeOffset.Now);
 		}
 	}
 
-	public void method_2(DarkOrbitWebAPI darkOrbitWebAPI_0)
+	public abstract void Execute();
+
+	public abstract bool vmethod_0();
+
+	bool GInterface9.WUqBdU8HhfK()
 	{
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.Hangar;
-		foreach (GClass49.GClass52 gclass in hangar.data.ret.hangars.First<GClass49.GClass54>().GClass53_0.IList_0)
-		{
-			int num = int.Parse(gclass.HP.TrimEnd(new char[]
-			{
-				'%'
-			}));
-			if (num >= 90)
-			{
-				Thread.Sleep(5000);
-				base.Log.Info("Repairing drone at {damage}% damage.", num);
-				darkOrbitWebAPI_0.Equipment.RepairDrone(hangar.data, gclass);
-			}
-		}
+		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
 	}
 
-	public override void Execute()
+	public virtual void imethod_1()
 	{
-		this.method_2(base.Context.Game.Web);
+		this.method_1(DateTimeOffset.MinValue);
 	}
 
-	public override bool vmethod_0()
-	{
-		AccountSettings account = base.Context.Account;
-		return account != null && account.RepairDrones && base.Context.Game.Web.Equipment.Hangar != null;
-	}
+	[CompilerGenerated]
+	private readonly GClass824 gclass824_0;
+
+	[CompilerGenerated]
+	private Logger logger_0;
+
+	[CompilerGenerated]
+	private DateTimeOffset dateTimeOffset_0;
+
+	private volatile bool bool_0;
 }

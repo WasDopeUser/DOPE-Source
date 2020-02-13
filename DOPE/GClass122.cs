@@ -10,7 +10,7 @@ public class GClass122 : GInterface4
 
 	public GClass122()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 	}
 }

@@ -12,7 +12,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapNavigator()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor();
 			this.items = new MapNavigator.QueueItem[(MapUtils.LargeMapSize.Width / 100 + 1) * (MapUtils.LargeMapSize.Height / 50 + 1)];
 			this._queue = new BfsQueue<MapNavigator.QueueItem>(this.items, new MapNavigator.Comparer());
@@ -536,7 +536,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		// Note: this type is marked as 'beforefieldinit'.
 		static MapNavigator()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			MapNavigator.NULL = new ValueTuple<int, int>(-1, -1);
 		}
 
@@ -677,7 +677,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		{
 			public QueueItem(int int_0, int int_1)
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				this.Distance = int_0;
 				this.Left = int_1;
 				this.Visited = false;
@@ -702,7 +702,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 			public Comparer()
 			{
-				Class13.Gj4N3WdzaR1LY();
+				Class13.igxcIukzfpare();
 				base..ctor();
 			}
 		}

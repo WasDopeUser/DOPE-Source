@@ -8,7 +8,7 @@ public class GClass700 : GInterface0
 	{
 		get
 		{
-			return 25802;
+			return 25007;
 		}
 	}
 
@@ -16,54 +16,56 @@ public class GClass700 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 2;
 		}
 	}
 
-	public GClass700(int int_1 = 0, int int_2 = 0, double double_0 = 0.0)
+	public GClass700(GClass763 gclass763_1 = null, string string_1 = "")
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
+		this.string_0 = "";
 		base..ctor();
-		this.jIcyvNbAbm = int_1;
-		this.int_0 = int_2;
-		this.JprySeaWmS = double_0;
+		if (gclass763_1 == null)
+		{
+			this.gclass763_0 = new GClass763(0U);
+		}
+		else
+		{
+			this.gclass763_0 = gclass763_1;
+		}
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 25802;
+		return 25007;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.jIcyvNbAbm = binaryStream_0.smethod_0();
-		this.jIcyvNbAbm = (this.jIcyvNbAbm << 9 | U.smethod_0(this.jIcyvNbAbm, 23));
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
-		this.JprySeaWmS = (double)binaryStream_0.smethod_10();
+		this.gclass763_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass763);
+		this.gclass763_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(25802);
+		binaryStream_0.smethod_6(25007);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.jIcyvNbAbm, 9) | this.jIcyvNbAbm << 23);
-		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		binaryStream_0.smethod_9(this.JprySeaWmS);
+		this.gclass763_0.imethod_2(binaryStream_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
 	}
 
-	public int jIcyvNbAbm;
+	public GClass763 gclass763_0;
 
-	public int int_0;
-
-	public double JprySeaWmS;
+	public string string_0;
 }

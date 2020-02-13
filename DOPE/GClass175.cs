@@ -8,7 +8,7 @@ public class GClass175 : GInterface0
 	{
 		get
 		{
-			return 17525;
+			return 19118;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass175 : GInterface0
 
 	public GClass175(Vector<GClass176> vector_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -34,7 +34,7 @@ public class GClass175 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 17525;
+		return 19118;
 	}
 
 	public virtual int vmethod_1()
@@ -44,7 +44,6 @@ public class GClass175 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -62,14 +61,13 @@ public class GClass175 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17525);
+		binaryStream_0.smethod_6(19118);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(798);
-		binaryStream_0.smethod_4(this.vector_0.Length);
+		binaryStream_0.smethod_3(this.vector_0.Length);
 		foreach (GClass176 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);

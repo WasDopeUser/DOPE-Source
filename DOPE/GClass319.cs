@@ -8,7 +8,7 @@ public class GClass319 : GInterface0
 	{
 		get
 		{
-			return 7984;
+			return 6090;
 		}
 	}
 
@@ -16,48 +16,64 @@ public class GClass319 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 4;
 		}
 	}
 
-	public GClass319(int int_1 = 0, bool bool_0 = false)
+	public GClass319(string string_2 = "", string string_3 = "", GClass336 gclass336_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		this.int_0 = int_1;
-		this.Visible = bool_0;
+		this.string_1 = string_2;
+		this.string_0 = string_3;
+		if (gclass336_1 == null)
+		{
+			this.gclass336_0 = new GClass336(0U);
+			return;
+		}
+		this.gclass336_0 = gclass336_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 7984;
+		return 6090;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Visible = binaryStream_0.ReadBoolean();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_1();
+		this.gclass336_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass336);
+		this.gclass336_0.imethod_1(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.string_1 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(7984);
+		binaryStream_0.smethod_6(6090);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.Visible);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_6(-751);
+		this.gclass336_0.imethod_2(binaryStream_0);
+		binaryStream_0.MoioCjQkqp0(this.string_0);
+		binaryStream_0.MoioCjQkqp0(this.string_1);
+		binaryStream_0.smethod_6(25850);
 	}
 
-	public bool Visible;
+	public GClass336 gclass336_0;
 
-	public int int_0;
+	public string string_0;
+
+	public string string_1;
 }

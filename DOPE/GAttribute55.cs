@@ -6,7 +6,7 @@ public sealed class GAttribute55 : Attribute
 {
 	public GAttribute55([GAttribute1] string tagName, [GAttribute1] Type controlType)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.String_0 = tagName;
 		this.Type_0 = controlType;
@@ -22,5 +22,5 @@ public sealed class GAttribute55 : Attribute
 	private string string_0;
 
 	[CompilerGenerated]
-	private Type yByjwwDaHw;
+	private Type type_0;
 }

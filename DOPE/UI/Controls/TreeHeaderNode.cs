@@ -20,10 +20,10 @@ namespace DOPE.UI.Controls
 			set
 			{
 				this.<Command>k__BackingField = value;
-				this.method_0(<>PropertyChangedEventArgs.Id);
-				this.method_0(<>PropertyChangedEventArgs.Name);
-				this.method_0(<>PropertyChangedEventArgs.Enabled);
-				this.method_0(<>PropertyChangedEventArgs.Command);
+				this.method_1(<>PropertyChangedEventArgs.Id);
+				this.method_1(<>PropertyChangedEventArgs.Name);
+				this.method_1(<>PropertyChangedEventArgs.Enabled);
+				this.method_1(<>PropertyChangedEventArgs.Command);
 			}
 		}
 
@@ -42,7 +42,7 @@ namespace DOPE.UI.Controls
 					return;
 				}
 				this.<Timestamp>k__BackingField = value;
-				this.method_0(<>PropertyChangedEventArgs.Timestamp);
+				this.method_1(<>PropertyChangedEventArgs.Timestamp);
 			}
 		}
 
@@ -85,7 +85,7 @@ namespace DOPE.UI.Controls
 					return;
 				}
 				this.<Received>k__BackingField = value;
-				this.method_0(<>PropertyChangedEventArgs.Received);
+				this.method_1(<>PropertyChangedEventArgs.Received);
 			}
 		}
 
@@ -93,23 +93,23 @@ namespace DOPE.UI.Controls
 
 		public TreeHeaderNode(CommandViewModel commandViewModel_0, DateTime dateTime_0, bool bool_0)
 		{
-			Class13.Gj4N3WdzaR1LY();
-			this.PropertyChanged = new PropertyChangedEventHandler(TreeHeaderNode.<>c.<>9.eiFpQoedjU);
+			Class13.igxcIukzfpare();
+			this.PropertyChanged = new PropertyChangedEventHandler(TreeHeaderNode.<>c.<>9.method_0);
 			base..ctor();
 			this.Command = commandViewModel_0;
 			this.Timestamp = dateTime_0;
 			this.Received = bool_0;
-			commandViewModel_0.PropertyChanged += this.hkApOrRaaT;
+			commandViewModel_0.PropertyChanged += this.method_0;
 		}
 
-		private void hkApOrRaaT(object sender, PropertyChangedEventArgs e)
+		private void method_0(object sender, PropertyChangedEventArgs e)
 		{
 			this.Command = this.Command;
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_0(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		protected void method_1(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass654 : GClass652, GInterface0
+public class GClass654 : GClass653, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 2220;
+			return 23852;
 		}
 	}
 
@@ -16,30 +16,26 @@ public class GClass654 : GClass652, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass654(GClass201 gclass201_1 = null)
+	public GClass654(int int_0 = 0, uint uint_1 = 0U)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		if (gclass201_1 == null)
-		{
-			this.gclass201_0 = new GClass201(0U);
-			return;
-		}
-		this.gclass201_0 = gclass201_1;
+		this.MapId = int_0;
+		this.uint_0 = uint_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 2220;
+		return 23852;
 	}
 
 	public override int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
@@ -47,23 +43,27 @@ public class GClass654 : GClass652, GInterface0
 		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
-		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
-		this.gclass201_0.imethod_1(binaryStream_0);
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 13) | this.MapId << 19);
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2220);
+		binaryStream_0.smethod_6(23852);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-25795);
-		binaryStream_0.smethod_7(-29655);
-		this.gclass201_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(21929);
+		binaryStream_0.smethod_6(10930);
+		binaryStream_0.smethod_3(this.MapId << 13 | U.smethod_0(this.MapId, 19));
+		binaryStream_0.smethod_5(this.uint_0);
 	}
 
-	public GClass201 gclass201_0;
+	public int MapId;
+
+	public uint uint_0;
 }

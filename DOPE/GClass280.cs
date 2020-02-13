@@ -20,9 +20,9 @@ public class GClass280 : GInterface0
 		}
 	}
 
-	public GClass280(int int_3 = 0, int int_4 = 148, int int_5 = 1, bool bool_1 = false)
+	public GClass280(int int_3 = 0, int int_4 = 129, int int_5 = 5, bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.int_0 = int_3;
 		this.int_1 = int_4;
@@ -50,15 +50,15 @@ public class GClass280 : GInterface0
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(667);
+		binaryStream_0.smethod_6(667);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0);
-		binaryStream_0.smethod_4(this.int_1);
-		binaryStream_0.smethod_4(this.int_2);
+		binaryStream_0.smethod_3(this.int_0);
+		binaryStream_0.smethod_3(this.int_1);
+		binaryStream_0.smethod_3(this.int_2);
 		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 

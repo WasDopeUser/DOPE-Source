@@ -11,7 +11,7 @@ namespace PErkava
 	{
 		public static bool IsSupported { get; set; }
 
-		public static GClass864 Host { get; set; }
+		public static GClass865 Host { get; set; }
 
 		[CompilerGenerated]
 		public static ConcurrentDictionary<int, IPErkavaBotController> smethod_0()
@@ -25,11 +25,11 @@ namespace PErkava
 			PErkava.concurrentDictionary_1 = concurrentDictionary_5;
 		}
 
-		public static List<GClass868> AllServersData { get; private set; }
+		public static List<GClass869> AllServersData { get; private set; }
 
 		public static bool smethod_2()
 		{
-			return PErkava.Proxy is GClass865;
+			return PErkava.Proxy is GClass866;
 		}
 
 		public static void smethod_3()
@@ -38,10 +38,10 @@ namespace PErkava
 			{
 				if (PErkava.Proxy == null)
 				{
-					PErkava.Proxy = new GClass867();
+					PErkava.Proxy = new GClass868();
 					if (!PErkava.Proxy.imethod_2())
 					{
-						PErkava.Proxy = new GClass865();
+						PErkava.Proxy = new GClass866();
 					}
 					if (!PErkava.Proxy.imethod_2())
 					{
@@ -54,9 +54,9 @@ namespace PErkava
 
 		static PErkava()
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			PErkava.IsSupported = false;
-			PErkava.concurrentDictionary_0 = new ConcurrentDictionary<IntPtr, GClass863>();
+			PErkava.concurrentDictionary_0 = new ConcurrentDictionary<IntPtr, GClass864>();
 			PErkava.concurrentDictionary_1 = new ConcurrentDictionary<int, IPErkavaBotController>();
 			PErkava.hashSet_0 = new HashSet<uint>();
 			PErkava.concurrentDictionary_2 = new ConcurrentDictionary<IntPtr, bool>();
@@ -122,9 +122,9 @@ namespace PErkava
 				"us3",
 				"us4"
 			};
-			PErkava.concurrentDictionary_3 = new ConcurrentDictionary<string, GClass868>();
-			PErkava.concurrentDictionary_4 = new ConcurrentDictionary<string, HashSet<GClass868>>();
-			PErkava.AllServersData = PErkava.string_0.Select(new Func<string, GClass868>(PErkava.<>c.<>c_0.method_0)).ToList<GClass868>();
+			PErkava.concurrentDictionary_3 = new ConcurrentDictionary<string, GClass869>();
+			PErkava.concurrentDictionary_4 = new ConcurrentDictionary<string, HashSet<GClass869>>();
+			PErkava.AllServersData = PErkava.string_0.Select(new Func<string, GClass869>(PErkava.<>c.<>c_0.method_0)).ToList<GClass869>();
 		}
 
 		public static string[] smethod_4()
@@ -132,36 +132,36 @@ namespace PErkava
 			return PErkava.string_0;
 		}
 
-		public static void smethod_5(GClass868 gclass868_0)
+		public static void smethod_5(GClass869 gclass869_0)
 		{
 			List<string> list = new List<string>();
-			foreach (string text in gclass868_0.Servers)
+			foreach (string text in gclass869_0.Servers)
 			{
-				HashSet<GClass868> hashSet = null;
+				HashSet<GClass869> hashSet = null;
 				if (!PErkava.concurrentDictionary_4.TryGetValue(text, out hashSet))
 				{
-					hashSet = (PErkava.concurrentDictionary_4[text] = new HashSet<GClass868>());
+					hashSet = (PErkava.concurrentDictionary_4[text] = new HashSet<GClass869>());
 				}
 				if (hashSet.Count == 0)
 				{
 					list.Add(text);
 				}
-				hashSet.Add(gclass868_0);
+				hashSet.Add(gclass869_0);
 			}
 			PErkava.Proxy.imethod_1(list.ToArray());
 		}
 
-		public static void smethod_6(GClass868 gclass868_0)
+		public static void smethod_6(GClass869 gclass869_0)
 		{
 			HashSet<string> hashSet = new HashSet<string>();
-			foreach (string text in gclass868_0.Servers)
+			foreach (string text in gclass869_0.Servers)
 			{
-				HashSet<GClass868> hashSet2 = null;
+				HashSet<GClass869> hashSet2 = null;
 				if (!PErkava.concurrentDictionary_4.TryGetValue(text, out hashSet2))
 				{
-					hashSet2 = (PErkava.concurrentDictionary_4[text] = new HashSet<GClass868>());
+					hashSet2 = (PErkava.concurrentDictionary_4[text] = new HashSet<GClass869>());
 				}
-				hashSet2.Remove(gclass868_0);
+				hashSet2.Remove(gclass869_0);
 				if (hashSet2.Count == 0)
 				{
 					hashSet.Add(text);
@@ -173,10 +173,10 @@ namespace PErkava
 		[CompilerGenerated]
 		private static bool bool_0;
 
-		public static readonly ConcurrentDictionary<IntPtr, GClass863> concurrentDictionary_0;
+		public static readonly ConcurrentDictionary<IntPtr, GClass864> concurrentDictionary_0;
 
 		[CompilerGenerated]
-		private static GClass864 gclass864_0;
+		private static GClass865 gclass865_0;
 
 		[CompilerGenerated]
 		private static ConcurrentDictionary<int, IPErkavaBotController> concurrentDictionary_1;
@@ -188,11 +188,11 @@ namespace PErkava
 		public static readonly string[] string_0;
 
 		[CompilerGenerated]
-		private static List<GClass868> list_0;
+		private static List<GClass869> list_0;
 
-		public static ConcurrentDictionary<string, GClass868> concurrentDictionary_3;
+		public static ConcurrentDictionary<string, GClass869> concurrentDictionary_3;
 
-		public static ConcurrentDictionary<string, HashSet<GClass868>> concurrentDictionary_4;
+		public static ConcurrentDictionary<string, HashSet<GClass869>> concurrentDictionary_4;
 
 		private static Interface0 Proxy;
 	}

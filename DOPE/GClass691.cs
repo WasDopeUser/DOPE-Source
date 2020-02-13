@@ -8,7 +8,7 @@ public class GClass691 : GInterface0
 	{
 		get
 		{
-			return 13012;
+			return 20409;
 		}
 	}
 
@@ -16,63 +16,52 @@ public class GClass691 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 0;
 		}
 	}
 
-	public GClass691(int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0)
+	public GClass691(GClass784 gclass784_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.int_2 = int_3;
-		this.int_1 = int_4;
-		this.Color = int_5;
-		this.int_0 = int_6;
+		if (gclass784_1 == null)
+		{
+			this.gclass784_0 = new GClass784(0U);
+			return;
+		}
+		this.gclass784_0 = gclass784_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13012;
+		return 20409;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 1) | this.int_1 << 31);
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 16 | U.smethod_0(this.int_2, 16));
-		this.Color = binaryStream_0.smethod_0();
-		this.Color = (this.Color << 3 | U.smethod_0(this.Color, 29));
+		this.gclass784_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass784);
+		this.gclass784_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13012);
+		binaryStream_0.smethod_6(20409);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		binaryStream_0.smethod_4(this.int_1 << 1 | U.smethod_0(this.int_1, 31));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 16) | this.int_2 << 16);
-		binaryStream_0.smethod_4(U.smethod_0(this.Color, 3) | this.Color << 29);
-		binaryStream_0.smethod_7(9870);
+		this.gclass784_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_6(-30158);
+		binaryStream_0.smethod_6(-14522);
 	}
 
-	public int int_0;
-
-	public int int_1;
-
-	public int int_2;
-
-	public int Color;
+	public GClass784 gclass784_0;
 }

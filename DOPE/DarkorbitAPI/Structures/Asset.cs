@@ -52,15 +52,15 @@ namespace DarkorbitAPI.Structures
 
 		public Asset(int int_0, int int_1)
 		{
-			Class13.Gj4N3WdzaR1LY();
+			Class13.igxcIukzfpare();
 			base..ctor(int_0, int_1);
 		}
 
 		public void method_0(GClass126 gclass126_0)
 		{
-			this.PosX = gclass126_0.int_6;
-			this.PosY = gclass126_0.int_3;
-			this.Id = gclass126_0.int_0;
+			this.PosX = gclass126_0.int_3;
+			this.PosY = gclass126_0.int_2;
+			this.Id = gclass126_0.int_4;
 			this.Name = gclass126_0.string_1;
 			this.ClanTag = gclass126_0.string_0;
 			this.FactionId = gclass126_0.int_1;

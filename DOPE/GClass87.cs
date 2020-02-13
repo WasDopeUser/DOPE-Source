@@ -21,7 +21,7 @@ public class GClass87 : GInterface1
 
 	public GClass87(GInterface0 ginterface0_1)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.Name = "ServerCommandNotification" + ginterface0_1.Id.ToString();
 		this.imethod_1(ginterface0_1);

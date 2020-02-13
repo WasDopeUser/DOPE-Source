@@ -8,7 +8,7 @@ public class GClass317 : GInterface0
 	{
 		get
 		{
-			return 12227;
+			return 21861;
 		}
 	}
 
@@ -16,62 +16,54 @@ public class GClass317 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 3;
 		}
 	}
 
-	public GClass317(string string_1 = "", string string_2 = "", GClass334 gclass334_1 = null)
+	public GClass317(bool bool_3 = false, bool bool_4 = false, bool bool_5 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		this.string_0 = "";
-		this.wdwbuhMphC = "";
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.string_0 = string_1;
-		this.wdwbuhMphC = string_2;
-		if (gclass334_1 == null)
-		{
-			this.gclass334_0 = new GClass334(0U);
-			return;
-		}
-		this.gclass334_0 = gclass334_1;
+		this.bool_2 = bool_3;
+		this.bool_1 = bool_4;
+		this.bool_0 = bool_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12227;
+		return 21861;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 3;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_2 = binaryStream_0.ReadBoolean();
 		binaryStream_0.smethod_1();
-		this.gclass334_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass334);
-		this.gclass334_0.imethod_1(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
-		this.wdwbuhMphC = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12227);
+		binaryStream_0.smethod_6(21861);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23517);
-		this.gclass334_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_3(this.wdwbuhMphC);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_2);
+		binaryStream_0.smethod_6(-2554);
 	}
 
-	public GClass334 gclass334_0;
+	public bool bool_0;
 
-	public string string_0;
+	public bool bool_1;
 
-	public string wdwbuhMphC;
+	public bool bool_2;
 }

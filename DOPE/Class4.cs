@@ -91,7 +91,7 @@ internal static class Class4
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class4()
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		Class4.string_0 = new string[]
 		{
 			"CONNECTION",

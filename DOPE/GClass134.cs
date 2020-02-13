@@ -8,7 +8,7 @@ public class GClass134 : GInterface0
 	{
 		get
 		{
-			return 31724;
+			return 2165;
 		}
 	}
 
@@ -20,14 +20,14 @@ public class GClass134 : GInterface0
 		}
 	}
 
-	public GClass134(double double_1 = 0.0, Vector<GClass330> vector_1 = null)
+	public GClass134(double double_1 = 0.0, Vector<GClass332> vector_1 = null)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.double_0 = double_1;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass330>();
+			this.vector_0 = new Vector<GClass332>();
 			return;
 		}
 		this.vector_0 = vector_1;
@@ -35,7 +35,7 @@ public class GClass134 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 31724;
+		return 2165;
 	}
 
 	public virtual int vmethod_1()
@@ -45,6 +45,8 @@ public class GClass134 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.double_0 = binaryStream_0.ReadDouble();
+		binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -53,33 +55,31 @@ public class GClass134 : GInterface0
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			GClass330 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass330;
+			GClass332 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass332;
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			num++;
 		}
-		binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31724);
+		binaryStream_0.smethod_6(2165);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass330 gclass in this.vector_0)
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_6(30119);
+		binaryStream_0.smethod_3(this.vector_0.Length);
+		foreach (GClass332 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(-14759);
-		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public Vector<GClass330> vector_0;
-
 	public double double_0;
+
+	public Vector<GClass332> vector_0;
 }

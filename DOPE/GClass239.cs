@@ -8,7 +8,7 @@ public class GClass239 : GInterface0
 	{
 		get
 		{
-			return 1202;
+			return 27746;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass239 : GInterface0
 
 	public GClass239(uint uint_1 = 0U, Vector<int> vector_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
 		this.uint_0 = uint_1;
 		if (vector_1 == null)
@@ -39,7 +39,7 @@ public class GClass239 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 1202;
+		return 27746;
 	}
 
 	public virtual int vmethod_1()
@@ -49,9 +49,6 @@ public class GClass239 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -61,36 +58,41 @@ public class GClass239 : GInterface0
 		while ((long)num < (long)((ulong)num2))
 		{
 			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 6 | U.smethod_0(num3, 26));
+			num3 = (num3 << 9 | U.smethod_0(num3, 23));
 			this.vector_0.method_0(num3);
 			num++;
 		}
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_1();
 		this.int_1 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1202);
+		binaryStream_0.smethod_6(27746);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_4(this.vector_0.Length);
+		binaryStream_0.smethod_3(this.vector_0.Length);
 		foreach (int num in this.vector_0)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 6) | num << 26);
+			binaryStream_0.smethod_3(U.smethod_0(num, 9) | num << 23);
 		}
-		binaryStream_0.smethod_7(this.int_1);
+		binaryStream_0.smethod_5(this.uint_0);
+		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		binaryStream_0.smethod_6(28619);
+		binaryStream_0.smethod_6(this.int_1);
 	}
 
-	public int int_0;
+	public Vector<int> vector_0;
 
 	public uint uint_0;
 
-	public Vector<int> vector_0;
+	public int int_0;
 
 	public int int_1;
 }

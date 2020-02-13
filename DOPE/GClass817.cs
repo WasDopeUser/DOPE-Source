@@ -5,48 +5,34 @@ using DOPE.Common.Models.Bot.Stats;
 
 public class GClass817 : StatisticsCategory
 {
-	public Dictionary<string, GClass817.GStruct0> DeathLog
+	public Dictionary<string, int> Count
 	{
 		[CompilerGenerated]
 		get
 		{
-			return this.dictionary_0;
+			return this.WqvoffXkxZs;
 		}
 		[CompilerGenerated]
 		private set
 		{
-			if (object.Equals(this.dictionary_0, value))
+			if (object.Equals(this.WqvoffXkxZs, value))
 			{
 				return;
 			}
-			this.dictionary_0 = value;
-			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_17);
+			this.WqvoffXkxZs = value;
+			this.<>OnPropertyChanged(Class10.Count);
 		}
 	}
 
-	public GClass817(Dictionary<string, GClass817.GStruct0> dictionary_1)
+	public GClass817(string string_0, Dictionary<string, int> dictionary_0)
 	{
-		Class13.Gj4N3WdzaR1LY();
-		base..ctor("Deaths", new string[]
+		Class13.igxcIukzfpare();
+		base..ctor(string_0, new string[]
 		{
-			"Killer",
-			"Count",
-			"LastDeath"
+			"Name",
+			"Count"
 		}, null);
-		this.DeathLog = dictionary_1;
-	}
-
-	public void method_0(string string_0)
-	{
-		Dictionary<string, GClass817.GStruct0> deathLog = this.DeathLog;
-		lock (deathLog)
-		{
-			GClass817.GStruct0 value;
-			this.DeathLog.TryGetValue(string_0, out value);
-			value.Count++;
-			value.dateTimeOffset_0 = DateTimeOffset.Now;
-			this.DeathLog[string_0] = value;
-		}
+		this.Count = dictionary_0;
 	}
 
 	public override void Rebuild()
@@ -55,29 +41,21 @@ public class GClass817 : StatisticsCategory
 
 	public override void Update()
 	{
-		Dictionary<string, GClass817.GStruct0> deathLog = this.DeathLog;
-		lock (deathLog)
+		Dictionary<string, int> count = this.Count;
+		lock (count)
 		{
-			foreach (KeyValuePair<string, GClass817.GStruct0> keyValuePair in this.DeathLog)
+			foreach (KeyValuePair<string, int> keyValuePair in this.Count)
 			{
-				GClass817.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass817.<>c__DisplayClass8_0();
+				GClass817.<>c__DisplayClass6_0 CS$<>8__locals1 = new GClass817.<>c__DisplayClass6_0();
 				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
 				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.method_0));
-				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value.Count);
-				(rowEntry.Cells[2] as VariableValue<string>).Value = string.Format("{0}", keyValuePair.Value.dateTimeOffset_0);
-				rowEntry.Order = keyValuePair.Value.Count;
+				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value);
+				rowEntry.Order = -keyValuePair.Value;
 			}
 		}
 		base.Update();
 	}
 
 	[CompilerGenerated]
-	private Dictionary<string, GClass817.GStruct0> dictionary_0;
-
-	public struct GStruct0
-	{
-		public int Count;
-
-		public DateTimeOffset dateTimeOffset_0;
-	}
+	private Dictionary<string, int> WqvoffXkxZs;
 }

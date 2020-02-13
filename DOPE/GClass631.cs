@@ -8,7 +8,7 @@ public class GClass631 : GInterface0
 	{
 		get
 		{
-			return 26008;
+			return 26003;
 		}
 	}
 
@@ -16,46 +16,46 @@ public class GClass631 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 1;
 		}
 	}
 
-	public GClass631(uint uint_0 = 0U)
+	public GClass631(bool bool_1 = false)
 	{
-		Class13.Gj4N3WdzaR1LY();
+		Class13.igxcIukzfpare();
 		base..ctor();
-		this.WtekcWqWvp = uint_0;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26008;
+		return 26003;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.WtekcWqWvp = (uint)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26008);
+		binaryStream_0.smethod_6(26003);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(10887);
-		binaryStream_0.smethod_6(this.WtekcWqWvp);
-		binaryStream_0.smethod_7(-26107);
+		binaryStream_0.smethod_6(14894);
+		binaryStream_0.smethod_6(30402);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public uint WtekcWqWvp;
+	public bool bool_0;
 }
