@@ -1,198 +1,64 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Numerics;
 using DarkorbitAPI.CommonStructures;
 
-public class GClass806
+public class GClass806 : GClass805
 {
-	public GClass806(Vector<uint> vector_5, Vector<uint> vector_6)
+	public GClass804<GClass808> method_0()
 	{
-		Class13.igxcIukzfpare();
+		return (GClass804<GClass808>)this.vmethod_0();
+	}
+
+	public GClass806()
+	{
+		Class13.NP5bWyNzLwONS();
+		this.random_0 = new Random();
 		base..ctor();
-		this.vector_0 = new Vector<uint>(512);
-		this.vector_1 = new Vector<uint>(512);
-		this.vector_4 = new Vector<uint>(4);
-		if (vector_6 != null)
+		this.vmethod_1(new GClass804<GClass808>());
+	}
+
+	public override void vmethod_2(byte[] byte_0)
+	{
+		GClass807 gclass = new GClass807(GClass807.smethod_2("cc0306d7b0f0c671000bd655485744417a868b29dd77619e42b51f70c28e67d0bbc2caf9dd364cb0419217bcfba86c33735b543fae2b666059b59c631955962afa1f97e0f49f92bf1a5463ae89c751a661e0485c2ec6e011634abfb4a4142157"), new BigInteger(65537), BigInteger.Zero);
+		using (MemoryStream memoryStream = new MemoryStream())
 		{
-			if (vector_6.Length == 16)
-			{
-				if (vector_5 != null)
-				{
-					if (vector_5.Length == 16)
-					{
-						this.vector_3 = vector_5;
-						this.vector_2 = vector_6;
-						this.method_0();
-						return;
-					}
-				}
-				return;
-			}
+			gclass.method_12(byte_0, memoryStream, 0U, (uint)byte_0.Length);
+			byte_0 = memoryStream.ToArray();
+		}
+		BigInteger value = GClass807.smethod_0(byte_0);
+		BigInteger modulus = GClass807.smethod_2("999d6c44ffd30467cd7e8bc70e095a8d08fb8fbfeee536fdfb2d43f99005ee3f6b529b4411395a56651422f449eb9ea3f7d48d8c443c06bd1387afe489a7c6c1");
+		byte[] byte_ = BigInteger.ModPow(value, this.bigInteger_0, modulus).ToByteArray().Reverse<byte>().ToArray<byte>().Take(16).ToArray<byte>();
+		this.method_0().method_0(byte_);
+	}
+
+	public override void vmethod_3(DollConfig dollConfig_0, Action action_0)
+	{
+		GClass808 i1JMkOw41TUC9YiQVej = GClass815.smethod_0(dollConfig_0);
+		this.method_0().vmethod_1(i1JMkOw41TUC9YiQVej);
+		if (action_0 != null)
+		{
+			action_0();
 		}
 	}
 
-	private void method_0()
+	public override byte[] vmethod_4()
 	{
-		Vector<uint> vector = new Vector<uint>(1280);
-		for (uint num = 0U; num < 16U; num += 1U)
+		byte[] array = new byte[64];
+		array[0] = 87;
+		for (int i = 1; i < 64; i++)
 		{
-			uint num2 = this.vector_2[num] & 255U;
-			uint num3 = 8U * (num & 3U);
-			uint num4 = num >> 2;
-			vector[num4] |= num2 << (int)num3;
+			array[i] = (byte)this.random_0.Next(1, 256);
 		}
-		this.method_14(vector, 0U, vector, 4U, 4U);
-		int num5 = 0;
-		while (num5 < this.vector_3.Length && num5 < 16)
-		{
-			vector[(num5 >> 2) + 8] = (vector[(num5 >> 2) + 8] | (this.vector_3[num5] & 255U) << 8 * (num5 & 3));
-			num5++;
-		}
-		this.method_14(vector, 8U, vector, 12U, 4U);
-		for (int i = 16; i < 1280; i++)
-		{
-			vector[i] = (uint)((ulong)(this.method_3(vector[i - 2]) + vector[i - 7] + this.method_2(vector[i - 15]) + vector[i - 16]) + (ulong)((long)i));
-		}
-		this.method_14(vector, 256U, this.vector_0, 0U, 512U);
-		this.method_14(vector, 768U, this.vector_1, 0U, 512U);
-		for (int j = 0; j < 512; j++)
-		{
-			this.vector_0[j] = this.method_13();
-		}
-		for (int k = 0; k < 512; k++)
-		{
-			this.vector_1[k] = this.method_13();
-		}
-		this.uint_0 = 0U;
+		BigInteger exponent = GClass807.smethod_0(array);
+		BigInteger value = GClass807.smethod_2("4bf022d9780125620d16442953c60a4a97874e263c099e613eed290247240829d74fc0a31d84b686699a55651a1285f7cbcc936153a8c942e3d3a4c864832ad1");
+		BigInteger modulus = GClass807.smethod_2("999d6c44ffd30467cd7e8bc70e095a8d08fb8fbfeee536fdfb2d43f99005ee3f6b529b4411395a56651422f449eb9ea3f7d48d8c443c06bd1387afe489a7c6c1");
+		this.bigInteger_0 = exponent;
+		return BigInteger.ModPow(value, exponent, modulus).ToByteArray().Reverse<byte>().ToArray<byte>();
 	}
 
-	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		uint num = 0U;
-		while ((ulong)num < (ulong)((long)int_1))
-		{
-			byte_0[(int)(checked((IntPtr)(unchecked((long)int_0 + (long)((ulong)num)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((long)int_0 + (long)((ulong)num)))))] ^ this.method_1()) & 255U);
-			num += 1U;
-		}
-	}
+	private readonly Random random_0;
 
-	private uint method_1()
-	{
-		if (this.uint_1 == 0U)
-		{
-			uint num = this.method_13();
-			this.vector_4[0U] = (num & 255U);
-			num >>= 8;
-			this.vector_4[1U] = (num & 255U);
-			num >>= 8;
-			this.vector_4[2U] = (num & 255U);
-			num >>= 8;
-			this.vector_4[3U] = (num & 255U);
-		}
-		uint result = this.vector_4[this.uint_1];
-		this.uint_1 = (this.uint_1 + 1U & 3U);
-		return result;
-	}
-
-	private uint method_2(uint uint_2)
-	{
-		return this.method_7(uint_2, 7U) ^ this.method_7(uint_2, 18U) ^ uint_2 >> 3;
-	}
-
-	private uint method_3(uint uint_2)
-	{
-		return this.method_7(uint_2, 17U) ^ this.method_7(uint_2, 19U) ^ uint_2 >> 10;
-	}
-
-	private uint method_4(uint uint_2, uint uint_3, uint uint_4)
-	{
-		return (this.method_7(uint_2, 10U) ^ this.method_7(uint_4, 23U)) + this.method_7(uint_3, 8U);
-	}
-
-	private uint method_5(uint uint_2, uint uint_3, uint uint_4)
-	{
-		return (this.method_6(uint_2, 10U) ^ this.method_6(uint_4, 23U)) + this.method_6(uint_3, 8U);
-	}
-
-	private uint method_6(uint uint_2, uint uint_3)
-	{
-		return uint_2 << (int)uint_3 | (uint)U.smethod_2(uint_2, (int)(-(int)uint_3));
-	}
-
-	private uint method_7(uint uint_2, uint uint_3)
-	{
-		return (uint)(U.smethod_1(uint_2, uint_3) | (int)((int)uint_2 << (int)(-(int)uint_3)));
-	}
-
-	private uint method_8(uint uint_2)
-	{
-		return this.vector_1[uint_2 & 255U] + this.vector_1[(uint_2 >> 16 & 255U) + 256U];
-	}
-
-	private uint method_9(uint uint_2)
-	{
-		return this.vector_0[uint_2 & 255U] + this.vector_0[(uint_2 >> 16 & 255U) + 256U];
-	}
-
-	private uint method_10(uint uint_2)
-	{
-		return uint_2 & 1023U;
-	}
-
-	private uint method_11(uint uint_2)
-	{
-		return uint_2 & 511U;
-	}
-
-	private uint method_12(uint uint_2, uint uint_3)
-	{
-		return this.method_11(uint_2 - uint_3);
-	}
-
-	private uint method_13()
-	{
-		uint uint_ = this.method_11(this.uint_0);
-		uint result;
-		if (this.uint_0 < 512U)
-		{
-			this.vector_0[uint_] = this.vector_0[uint_] + this.method_4(this.vector_0[this.method_12(uint_, 3U)], this.vector_0[this.method_12(uint_, 10U)], this.vector_0[this.method_12(uint_, 511U)]);
-			result = (this.method_8(this.vector_0[this.method_12(uint_, 12U)]) ^ this.vector_0[uint_]);
-		}
-		else
-		{
-			this.vector_1[uint_] = this.vector_1[uint_] + this.method_5(this.vector_1[this.method_12(uint_, 3U)], this.vector_1[this.method_12(uint_, 10U)], this.vector_1[this.method_12(uint_, 511U)]);
-			result = (this.method_9(this.vector_1[this.method_12(uint_, 12U)]) ^ this.vector_1[uint_]);
-		}
-		this.uint_0 = this.method_10(this.uint_0 + 1U);
-		return result;
-	}
-
-	private void method_14(Vector<uint> vector_5, uint uint_2, Vector<uint> vector_6, uint uint_3, uint uint_4)
-	{
-		uint num = uint_3;
-		uint num2 = uint_4 + uint_2;
-		for (uint num3 = uint_2; num3 < num2; num3 += 1U)
-		{
-			vector_6[num] = vector_5[num3];
-			num += 1U;
-		}
-	}
-
-	public virtual void vmethod_1()
-	{
-		this.uint_1 = 0U;
-		this.method_0();
-	}
-
-	private uint uint_0;
-
-	private Vector<uint> vector_0;
-
-	private Vector<uint> vector_1;
-
-	private Vector<uint> vector_2;
-
-	private Vector<uint> vector_3;
-
-	private Vector<uint> vector_4;
-
-	private uint uint_1;
+	private BigInteger bigInteger_0;
 }

@@ -8,8 +8,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Bot
 {
-	[DataContract]
 	[Guid("7CDB6E89-CAFE-4CA7-B212-CD514925AEC9")]
+	[DataContract]
 	public class BasicBotStateInfo : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -72,7 +72,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<SessionId>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_78);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_84);
 			}
 		}
 
@@ -152,7 +152,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<ProfileName>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_75);
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<NextProfileName>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_66);
 			}
 		}
 
@@ -192,7 +192,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<HasNextProfile>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.nfYoekhXaSL);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_48);
 			}
 		}
 
@@ -212,7 +212,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<HasLicense>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_43);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_47);
 			}
 		}
 
@@ -232,7 +232,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<LastError>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_57);
 			}
 		}
 
@@ -252,12 +252,12 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<TimeTableActive>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_99);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_104);
 			}
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

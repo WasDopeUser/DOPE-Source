@@ -16,11 +16,19 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return string.Format("{0}.{1}", 0, 48);
+				return string.Format("{0}.{1}", 0, 52);
 			}
 		}
 
 		public static bool FrozenLabirynthEnabled
+		{
+			get
+			{
+				return false;
+			}
+		}
+
+		public static bool PayloadEscortEnabled
 		{
 			get
 			{
@@ -40,7 +48,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				GClass279 gclass = new GClass279(0, 129, 5);
+				GClass283 gclass = new GClass283(0, 134, 4);
 				return string.Format("{0}.{1}.{2}", gclass.int_0, gclass.int_1, gclass.int_2);
 			}
 		}
@@ -63,7 +71,7 @@ namespace DOPE.Common
 			});
 			int num3 = int.Parse(array2[0]);
 			int num4 = int.Parse(array2[1]);
-			return num > num3 || (num == num3 && num2 > num4);
+			return num > num3 || (num == num3 && num2 > num4) || localVersion != remoteVersion;
 		}
 
 		public static bool bool_0;

@@ -13,7 +13,7 @@ namespace DOPE.UI.Controls
 	{
 		public TreeViewObject()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 			this.InitializeComponent();
 		}
@@ -53,7 +53,7 @@ namespace DOPE.UI.Controls
 		// Note: this type is marked as 'beforefieldinit'.
 		static TreeViewObject()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			TreeViewObject.ObjectToVisualizeProperty = DependencyProperty.Register("ObjectToVisualize", typeof(object), typeof(TreeViewObject), new PropertyMetadata(null, new PropertyChangedCallback(TreeViewObject.smethod_0)));
 			TreeViewObject.TreeNodesProperty = DependencyProperty.Register("TreeNodes", typeof(List<TreeNode>), typeof(TreeViewObject), new PropertyMetadata(null));
 		}

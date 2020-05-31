@@ -2,15 +2,25 @@
 
 public static class GClass823
 {
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass823()
+	public static bool Cooldown(this DateTime date, int ms)
 	{
-		Class13.igxcIukzfpare();
-		GClass823.string_0 = "data\\accounts.json";
-		GClass823.string_1 = "profiles";
+		return (DateTime.Now - date).TotalMilliseconds >= (double)ms;
 	}
 
-	public static string string_0;
+	public static bool Cooldown(this DateTimeOffset date, int ms)
+	{
+		return (DateTimeOffset.Now - date).TotalMilliseconds >= (double)ms;
+	}
 
-	public static string string_1;
+	public static bool smethod_0(this DateTimeOffset dateTimeOffset_0, int int_0)
+	{
+		DateTimeOffset now = DateTimeOffset.Now;
+		return !(dateTimeOffset_0 > now) && (now - dateTimeOffset_0).TotalMilliseconds <= (double)int_0;
+	}
+
+	public static bool smethod_1(this DateTimeOffset dateTimeOffset_0, TimeSpan timeSpan_0)
+	{
+		DateTimeOffset now = DateTimeOffset.Now;
+		return !(dateTimeOffset_0 > now) && now - dateTimeOffset_0 <= timeSpan_0;
+	}
 }

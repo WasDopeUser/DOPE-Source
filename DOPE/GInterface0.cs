@@ -7,7 +7,7 @@ public interface GInterface0
 
 	int imethod_0();
 
-	void imethod_1(BinaryStream binaryStream_0);
+	void HrqIugnatr8(BinaryStream binaryStream_0);
 
-	void imethod_2(BinaryStream binaryStream_0);
+	void imethod_1(BinaryStream binaryStream_0);
 }

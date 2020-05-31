@@ -1,77 +1,71 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass798 : GClass793
+public class GClass798 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass805 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass805_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass805 gclass805_2)
-	{
-		this.gclass805_0 = gclass805_2;
-	}
-
-	[CompilerGenerated]
-	public GClass805 method_2()
-	{
-		return this.gclass805_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass805 gclass805_2)
-	{
-		this.gclass805_1 = gclass805_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return 11007;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		this.method_1(new GClass805(new Vector<uint>(vector), new Vector<uint>(vector2)));
-		this.method_3(new GClass805(vector, vector2));
 	}
 
-	public GClass798()
+	int GInterface0.SizeBytes
 	{
-		Class13.igxcIukzfpare();
+		get
+		{
+			return 4;
+		}
+	}
+
+	public GClass798(GClass394 gclass394_1 = null, int int_1 = 0)
+	{
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
+		if (gclass394_1 == null)
+		{
+			this.gclass394_0 = new GClass394();
+		}
+		else
+		{
+			this.gclass394_0 = gclass394_1;
+		}
+		this.int_0 = int_1;
 	}
 
-	[CompilerGenerated]
-	private GClass805 gclass805_0;
+	public virtual int vmethod_0()
+	{
+		return 11007;
+	}
 
-	[CompilerGenerated]
-	private GClass805 gclass805_1;
+	public virtual int vmethod_1()
+	{
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.gclass394_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass394);
+		this.gclass394_0.HrqIugnatr8(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(11007);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		this.gclass394_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+	}
+
+	public GClass394 gclass394_0;
+
+	public int int_0;
 }

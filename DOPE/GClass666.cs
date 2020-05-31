@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass666 : GClass662, GInterface0
+public class GClass666 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 23681;
+			return 27879;
 		}
 	}
 
@@ -16,49 +16,54 @@ public class GClass666 : GClass662, GInterface0
 	{
 		get
 		{
-			return 8;
+			return 10;
 		}
 	}
 
-	public GClass666(string string_1 = "", int int_1 = 0)
+	public GClass666(double double_1 = 0.0, bool bool_2 = false, bool bool_3 = false)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(string_1);
-		this.int_0 = int_1;
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
+		this.double_0 = double_1;
+		this.bool_1 = bool_2;
+		this.bool_0 = bool_3;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 23681;
+		return 27879;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 8;
+		return 10;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(23681);
+		binaryStream_0.smethod_7(27879);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_6(-20824);
-		binaryStream_0.smethod_3(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		binaryStream_0.smethod_6(5949);
+		binaryStream_0.smethod_7(-18209);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public int int_0;
+	public bool bool_0;
+
+	public bool bool_1;
+
+	public double double_0;
 }

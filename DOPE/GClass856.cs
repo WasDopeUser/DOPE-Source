@@ -1,336 +1,355 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
+using System.Numerics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
-using System.Windows.Interop;
-using System.Windows.Markup;
-using DarkorbitAPI;
+using DarkorbitAPI.Packets.Static;
 using DarkorbitAPI.Structures;
-using PErkava;
+using DOPE.Common.Models;
+using DOPE.UI.Models;
 
-public class GClass856 : Window, INotifyPropertyChanged, IComponentConnector
+public class GClass856 : GClass854
 {
-	private void method_0()
+	public GClass856(GClass839 gclass839_1)
 	{
-		this.method_1(GEnum13.None, Keys.Oemtilde);
-		this.method_1((GEnum13)4U, Keys.Oemtilde);
-		this.method_1(GEnum13.None, Keys.Scroll);
-		this.method_1((GEnum13)4U, Keys.Scroll);
+		Class13.NP5bWyNzLwONS();
+		this.float_1 = 100f;
+		base..ctor(gclass839_1);
+		this.float_0 = (float)base.C.Game.Random.NextDouble() * 2f;
+		this.float_1 = (float)base.C.Game.Random.Next(100, 300);
 	}
 
-	protected override void OnSourceInitialized(EventArgs e)
+	public override bool vmethod_10(NpcShip npcShip_1)
 	{
-		base.OnSourceInitialized(e);
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		this.hwndSource_0 = HwndSource.FromHwnd(windowInteropHelper.Handle);
-		this.hwndSource_0.AddHook(new HwndSourceHook(this.method_3));
-		this.method_0();
-	}
-
-	[DllImport("User32.dll")]
-	private static extern bool RegisterHotKey([In] IntPtr intptr_0, [In] int int_1, [In] uint uint_0, [In] uint uint_1);
-
-	[DllImport("User32.dll")]
-	private static extern bool UnregisterHotKey([In] IntPtr intptr_0, [In] int int_1);
-
-	protected override void OnClosed(EventArgs e)
-	{
-		HwndSource hwndSource = this.hwndSource_0;
-		if (hwndSource != null)
+		GClass187 gclass;
+		if (npcShip_1.HasModifier(EntityModifierType.INVINCIBILITY, out gclass))
 		{
-			hwndSource.RemoveHook(new HwndSourceHook(this.method_3));
-		}
-		this.hwndSource_0 = null;
-		this.method_2();
-		base.OnClosed(e);
-	}
-
-	private void method_1(GEnum13 genum13_0, Keys keys_0)
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		int num = Interlocked.Increment(ref GClass856.int_0);
-		if (GClass856.RegisterHotKey(windowInteropHelper.Handle, num, (uint)genum13_0, (uint)keys_0))
-		{
-			this.hashSet_0.Add(num);
-		}
-	}
-
-	private void method_2()
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		foreach (int int_ in this.hashSet_0)
-		{
-			GClass856.UnregisterHotKey(windowInteropHelper.Handle, int_);
-		}
-		this.hashSet_0.Clear();
-	}
-
-	private IntPtr method_3(IntPtr intptr_0, int int_1, IntPtr intptr_1, IntPtr intptr_2, ref bool bool_1)
-	{
-		if (int_1 == 786)
-		{
-			int item = intptr_1.ToInt32();
-			if (this.hashSet_0.Contains(item))
-			{
-				Keys keys_ = (Keys)((int)intptr_2 >> 16 & 65535);
-				GEnum13 genum13_ = (GEnum13)((int)intptr_2 & 65535);
-				if (this.method_9(this, new GEventArgs0(genum13_, keys_)))
-				{
-					bool_1 = true;
-				}
-			}
-		}
-		return IntPtr.Zero;
-	}
-
-	public GClass864 Proxy
-	{
-		get
-		{
-			return this.gclass864_0;
-		}
-		set
-		{
-			this.method_6<GClass864>(ref this.gclass864_0, value, "Target", "Proxy");
-		}
-	}
-
-	public Ship Target
-	{
-		get
-		{
-			GClass864 proxy = this.Proxy;
-			if (proxy == null)
-			{
-				return null;
-			}
-			GameManager game = proxy.Game;
-			if (game == null)
-			{
-				return null;
-			}
-			Map map = game.Map;
-			if (map == null)
-			{
-				return null;
-			}
-			return map.SelectedShip;
-		}
-	}
-
-	public GClass856()
-	{
-		Class13.igxcIukzfpare();
-		this.hashSet_0 = new HashSet<int>();
-		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		base.Closed += this.GClass856_Closed;
-		this.gclass863_0 = new GClass863();
-		this.timer_0 = new System.Windows.Forms.Timer();
-		this.timer_0.Tick += this.timer_0_Tick;
-		this.timer_0.Interval = 100;
-		this.timer_0.Start();
-	}
-
-	public void method_4()
-	{
-		this.gclass863_0.method_3();
-		this.gclass863_0.ShowDialog();
-		base.Topmost = true;
-		base.Focus();
-	}
-
-	public bool method_5()
-	{
-		this.method_4();
-		if (!this.gclass863_0.IsSupported)
-		{
-			base.Close();
 			return false;
 		}
-		base.Visibility = Visibility.Visible;
-		base.Topmost = true;
-		base.Focus();
-		return true;
+		NpcUtils.NpcType type = npcShip_1.Type;
+		if (((type != null) ? type.Class : null) == NpcUtils.N_EMFreighter)
+		{
+			return false;
+		}
+		SelectedNpcModel selectedNpcModel = this.vmethod_5(npcShip_1);
+		return selectedNpcModel == null || selectedNpcModel.Enabled;
 	}
 
-	private void GClass856_Closed(object sender, EventArgs e)
+	public override bool vmethod_26()
 	{
-		System.Windows.Forms.Timer timer = this.timer_0;
-		if (timer != null)
+		if (base.vmethod_26())
 		{
-			timer.Stop();
+			MapProfile mapProfile = base.C.MapProfile;
+			return mapProfile != null && mapProfile.MinHp > 0;
 		}
-		System.Windows.Forms.Timer timer2 = this.timer_0;
-		if (timer2 != null)
-		{
-			timer2.Dispose();
-		}
-		if (this.gclass863_0 != null)
-		{
-			this.gclass863_0.method_2(true);
-		}
-		GClass863 gclass = this.gclass863_0;
-		if (gclass == null)
-		{
-			return;
-		}
-		gclass.Close();
+		return false;
 	}
 
-	protected void method_6<uwUDCBLAwh5THX0jMOW>(ref uwUDCBLAwh5THX0jMOW gparam_0, uwUDCBLAwh5THX0jMOW OlHDA0L0cq49iuVtVOr, string string_0 = null, [CallerMemberName] string name = null)
+	public override Vector2? vmethod_21(bool bool_3)
 	{
-		if (!EqualityComparer<uwUDCBLAwh5THX0jMOW>.Default.Equals(gparam_0, OlHDA0L0cq49iuVtVOr))
+		Vector2 position = base.Hero.Position;
+		if (this.method_24() == null)
 		{
-			gparam_0 = OlHDA0L0cq49iuVtVOr;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
-			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
-			}
-			if (string_0 != null)
-			{
-				PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
-				if (propertyChanged2 == null)
-				{
-					return;
-				}
-				propertyChanged2(this, new PropertyChangedEventArgs(string_0));
-			}
+			return null;
 		}
+		return this.vmethod_39(position, this.method_24().Position, 1275f, null, 0.4f);
 	}
 
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	private void method_7(object sender, RoutedEventArgs e)
+	public override bool vmethod_6(NpcShip npcShip_1)
 	{
-		GClass864 proxy = this.Proxy;
-		if (proxy == null)
+		SelectedNpcModel selectedNpcModel = this.vmethod_5(npcShip_1);
+		if (selectedNpcModel == null || selectedNpcModel.IgnoreOwnership)
 		{
-			return;
+			return true;
 		}
-		GClass84<GClass789<GInterface7>> gclass = proxy.method_0();
-		if (gclass == null)
+		if (base.method_0() == GroupAttackMode.Assist)
 		{
-			return;
+			int? num = (npcShip_1 != null) ? new int?(npcShip_1.Id) : null;
+			int num2 = base.method_12();
+			return num.GetValueOrDefault() == num2 & num != null;
 		}
-		GClass91 socket = gclass.Socket;
-		if (socket == null)
-		{
-			return;
-		}
-		socket.method_8();
+		return false;
 	}
 
-	private void timer_0_Tick(object sender, EventArgs e)
+	public override Vector2? vmethod_20(Vector2 vector2_2, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
 	{
-		IntPtr foregroundWindow = GClass859.GetForegroundWindow();
-		GClass864 proxy = null;
-		PErkava.concurrentDictionary_0.TryGetValue(foregroundWindow, out proxy);
-		this.Proxy = proxy;
+		gate_0 = base.Map.Gates.FirstOrDefault<KeyValuePair<int, Gate>>().Value;
+		Gate gate = gate_0;
+		if (gate == null)
+		{
+			return null;
+		}
+		return new Vector2?(gate.Position);
 	}
 
-	public void method_8(bool bool_1)
+	public override bool vmethod_16()
 	{
-		GClass856.<>c__DisplayClass30_0 CS$<>8__locals1 = new GClass856.<>c__DisplayClass30_0();
-		CS$<>8__locals1.hero_0 = this.Proxy.Game.Hero;
-		Ship ship;
-		if (bool_1)
+		return false;
+	}
+
+	public override bool vmethod_15()
+	{
+		return base.vmethod_15() && (!base.C.method_75() || base.Hero.HpPercentage < 40f);
+	}
+
+	public override bool vmethod_4(bool bool_3 = false, bool bool_4 = false)
+	{
+		Vector2 heroPosition = base.C.HeroPosition;
+		Ship ship = base.C.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(GClass856.<>c.<>c_0.method_0), null, 0);
+		return (ship == null || Vector2.Distance(heroPosition, ship.Position) >= 1000f) && (!base.Hero.LastTookDamage.smethod_0(5000) || !bool_3) && (Vector2.Distance(this.method_26(), heroPosition) <= 1400f && this.method_24() != null);
+	}
+
+	public override bool vmethod_8(NpcShip npcShip_1)
+	{
+		return this.method_24() != null && Vector2.Distance(this.method_26(), npcShip_1.Position) < 1500f && base.vmethod_8(npcShip_1);
+	}
+
+	public override bool vmethod_13(Collectible collectible_0)
+	{
+		return (this.method_24() == null || Vector2.Distance(this.method_26(), collectible_0.Position) < 2250f) && base.vmethod_13(collectible_0);
+	}
+
+	public override bool vmethod_12(NpcShip npcShip_1)
+	{
+		return false;
+	}
+
+	public override bool vmethod_19(GClass841 gclass841_0)
+	{
+		return gclass841_0 is GClass848;
+	}
+
+	public override bool vmethod_14(Ship ship_0, Collectible collectible_0)
+	{
+		return this.vmethod_13(collectible_0);
+	}
+
+	protected override float vmethod_35(Vector2 vector2_2)
+	{
+		float num = base.vmethod_35(vector2_2);
+		if (Vector2.Distance(this.method_26(), vector2_2) <= 1500f)
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
+			num -= 150f;
 		}
 		else
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
+			num -= 101500f;
 		}
-		if (ship != null)
-		{
-			this.Proxy.Game.Connection.Server.method_8(ship, false);
-		}
+		return num;
 	}
 
-	public bool method_9(object object_0, GEventArgs0 geventArgs0_0)
+	public override uint vmethod_48()
 	{
-		if (this.Proxy == null)
+		MapProfile mapProfile = base.C.MapProfile;
+		if (mapProfile != null && mapProfile.ReviveAtPortal && !base.C.IsStopping && this.method_28().smethod_0(60000))
+		{
+			return 3U;
+		}
+		return 1U;
+	}
+
+	protected override IEnumerable<Vector2> vmethod_23()
+	{
+		IEnumerator<Vector2> enumerator = this.method_30().GetEnumerator();
+		for (;;)
+		{
+			try
+			{
+				IL_52:
+				if (!enumerator.MoveNext())
+				{
+					break;
+				}
+				goto IL_94;
+				IL_4A:
+				goto IL_52;
+			}
+			finally
+			{
+				if (enumerator != null)
+				{
+					enumerator.Dispose();
+				}
+			}
+			break;
+			IL_94:
+			Vector2 vector = enumerator.Current;
+			yield return vector;
+			goto IL_4A;
+		}
+		enumerator = null;
+		yield return GClass822.smethod_8(this.method_26(), this.float_1, this.float_0);
+		yield break;
+		yield break;
+	}
+
+	public override int vmethod_9(NpcShip npcShip_1)
+	{
+		int num = base.vmethod_9(npcShip_1);
+		if (num >= 0)
+		{
+			if (npcShip_1.LastAttackedHero.smethod_0(5000))
+			{
+				num++;
+			}
+			MapProfile mapProfile = base.C.MapProfile;
+			if (mapProfile != null && mapProfile.Escort_PreferFreeNPCs && (npcShip_1.LeashedBy <= 0 || base.Hero.Group.jYrndIqmin(npcShip_1.LeashedBy)))
+			{
+				num += 3;
+			}
+		}
+		return num;
+	}
+
+	[CompilerGenerated]
+	public NpcShip method_24()
+	{
+		return this.npcShip_0;
+	}
+
+	[CompilerGenerated]
+	public void method_25(NpcShip npcShip_1)
+	{
+		this.npcShip_0 = npcShip_1;
+	}
+
+	[CompilerGenerated]
+	public Vector2 method_26()
+	{
+		return this.vector2_1;
+	}
+
+	[CompilerGenerated]
+	public void method_27(Vector2 vector2_2)
+	{
+		this.vector2_1 = vector2_2;
+	}
+
+	public override bool vmethod_1(Ship ship_0, out Ship ship_1)
+	{
+		GClass856.<>c__DisplayClass29_0 CS$<>8__locals1;
+		CS$<>8__locals1.gclass856_0 = this;
+		CS$<>8__locals1.ship_0 = ship_0;
+		ship_1 = null;
+		if (CS$<>8__locals1.ship_0 == null)
 		{
 			return false;
 		}
-		if (geventArgs0_0.Key != Keys.Oemtilde)
+		if (this.method_24() != null && Vector2.Distance(CS$<>8__locals1.ship_0.Position, this.method_26()) <= 1600f)
 		{
-			if (geventArgs0_0.Key != Keys.Scroll)
-			{
-				return false;
-			}
+			return base.vmethod_1(CS$<>8__locals1.ship_0, out ship_1);
 		}
-		this.method_8(geventArgs0_0.method_0().HasFlag((GEnum13)4U));
+		this.method_31(1.0, ref CS$<>8__locals1);
 		return true;
 	}
 
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
+	public override Gate vmethod_25(int int_1)
 	{
-		if (this.bool_0)
+		if (MapUtils.smethod_2(int_1) == MapGroup.PayloadEscort)
 		{
-			return;
+			return null;
 		}
-		this.bool_0 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/overlaywindow.xaml", UriKind.Relative);
-		System.Windows.Application.LoadComponent(this, resourceLocator);
+		return base.Map.Gates.FirstOrDefault<KeyValuePair<int, Gate>>().Value;
 	}
 
-	[DebuggerNonUserCode]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	void IComponentConnector.Connect(int connectionId, object target)
+	public override IEnumerable<string> vmethod_50()
 	{
-		switch (connectionId)
+		IEnumerator<string> enumerator = this.method_32().GetEnumerator();
+		for (;;)
 		{
-		case 1:
-			this.Guide = (System.Windows.Controls.Label)target;
-			return;
-		case 2:
-			this.Progress = (System.Windows.Controls.Label)target;
-			return;
-		case 3:
-			((System.Windows.Controls.Button)target).Click += this.method_7;
-			return;
-		default:
-			this.bool_0 = true;
-			return;
+			try
+			{
+				IL_52:
+				if (!enumerator.MoveNext())
+				{
+					break;
+				}
+				goto IL_A2;
+				IL_4A:
+				goto IL_52;
+			}
+			finally
+			{
+				if (enumerator != null)
+				{
+					enumerator.Dispose();
+				}
+			}
+			break;
+			IL_A2:
+			string text = enumerator.Current;
+			yield return text;
+			goto IL_4A;
 		}
+		enumerator = null;
+		string format = "Payload HP: {0:0.0}%";
+		NpcShip npcShip = this.method_24();
+		yield return string.Format(format, (npcShip != null) ? npcShip.HpPercentage : 0f);
+		DateTimeOffset now = DateTimeOffset.Now;
+		yield break;
+		yield break;
 	}
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass856()
+	public override bool vmethod_27()
 	{
-		Class13.igxcIukzfpare();
-		GClass856.int_0 = 913376;
+		return this.method_24() != null;
 	}
 
-	private HwndSource hwndSource_0;
+	[CompilerGenerated]
+	public DateTimeOffset method_28()
+	{
+		return this.dateTimeOffset_0;
+	}
 
-	private static int int_0;
+	[CompilerGenerated]
+	public void method_29(DateTimeOffset dateTimeOffset_1)
+	{
+		this.dateTimeOffset_0 = dateTimeOffset_1;
+	}
 
-	private HashSet<int> hashSet_0;
+	public override void Update()
+	{
+		base.Update();
+		this.method_25(base.Map.method_7<NpcShip>(base.Hero.Position, new Func<NpcShip, bool>(GClass856.<>c.<>c_0.method_1), null, 0).FirstOrDefault<ValueTuple<NpcShip, float, int>>().Item1);
+		if (this.method_24() != null)
+		{
+			this.method_29(DateTimeOffset.Now);
+		}
+		NpcShip npcShip = this.method_24();
+		this.method_27((npcShip != null) ? npcShip.Position : base.Map.Center);
+	}
 
-	private GClass864 gclass864_0;
+	[DebuggerHidden]
+	[CompilerGenerated]
+	private IEnumerable<Vector2> method_30()
+	{
+		return base.vmethod_23();
+	}
 
-	private System.Windows.Forms.Timer timer_0;
+	[CompilerGenerated]
+	private void method_31(double double_0, ref GClass856.<>c__DisplayClass29_0 <>c__DisplayClass29_0_0)
+	{
+		base.C.NpcLockout.method_1(<>c__DisplayClass29_0_0.ship_0.Id, double_0 * 10000.0);
+	}
 
-	private GClass863 gclass863_0;
+	[CompilerGenerated]
+	[DebuggerHidden]
+	private IEnumerable<string> method_32()
+	{
+		return base.vmethod_50();
+	}
 
-	internal System.Windows.Controls.Label Guide;
+	private float float_0;
 
-	internal System.Windows.Controls.Label Progress;
+	private float float_1;
 
-	private bool bool_0;
+	[CompilerGenerated]
+	private NpcShip npcShip_0;
+
+	[CompilerGenerated]
+	private Vector2 vector2_1;
+
+	[CompilerGenerated]
+	private DateTimeOffset dateTimeOffset_0;
 }

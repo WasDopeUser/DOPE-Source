@@ -1,158 +1,102 @@
 ﻿using System;
-using System.Management;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Numerics;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
 
-public static class GClass859
+public class GClass859 : GClass857
 {
-	[DllImport("User32.dll")]
-	public static extern IntPtr GetForegroundWindow();
-
-	[DllImport("User32.dll", SetLastError = true)]
-	public static extern uint GetWindowThreadProcessId(IntPtr intptr_0, out uint uint_0);
-
-	[DllImport("kernel32.dll")]
-	public static extern void GetSystemInfo(out GClass859.GStruct1 gstruct1_0);
-
-	[DllImport("kernel32.dll", SetLastError = true)]
-	public static extern int VirtualQueryEx(IntPtr intptr_0, IntPtr intptr_1, out GClass859.GStruct2 gstruct2_0, uint uint_0);
-
-	[DllImport("kernel32.dll", EntryPoint = "VirtualQueryEx", SetLastError = true)]
-	public static extern int VirtualQueryEx_1(IntPtr intptr_0, IntPtr intptr_1, out GClass859.GStruct3 gstruct3_0, uint uint_0);
-
-	[DllImport("kernel32.dll")]
-	public static extern bool ReadProcessMemory(IntPtr intptr_0, IntPtr intptr_1, byte[] byte_0, int int_0, ref int int_1);
-
-	[DllImport("kernel32.dll")]
-	public static extern IntPtr OpenProcess(int int_0, bool bool_0, int int_1);
-
-	[DllImport("kernel32.dll", SetLastError = true)]
-	public static extern bool WriteProcessMemory(IntPtr intptr_0, IntPtr intptr_1, byte[] byte_0, int int_0, ref int int_1);
-
-	[DllImport("kernel32.dll", SetLastError = true)]
-	[return: MarshalAs(UnmanagedType.Bool)]
-	public static extern bool IsWow64Process([In] IntPtr intptr_0, out bool bool_0);
-
-	public static bool smethod_0(IntPtr intptr_0)
+	public GClass859(GClass839 gclass839_1)
 	{
-		bool flag;
-		return !Environment.Is64BitOperatingSystem || ((Environment.OSVersion.Version.Major > 5 || (Environment.OSVersion.Version.Major == 5 && Environment.OSVersion.Version.Minor >= 1)) && (GClass859.IsWow64Process(intptr_0, out flag) && flag));
-	}
-
-	public static bool twhoiCoyXfL()
-	{
-		return !Environment.Is64BitProcess;
-	}
-
-	public static GClass859.GStruct3 smethod_1(IntPtr intptr_0, IntPtr intptr_1, out int int_0)
-	{
-		int_0 = 0;
-		GClass859.GStruct3 result = default(GClass859.GStruct3);
-		if (GClass859.twhoiCoyXfL())
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1);
+		this.list_1 = new List<Rectangle>
 		{
-			GClass859.GStruct2 gstruct = default(GClass859.GStruct2);
-			if (GClass859.VirtualQueryEx(intptr_0, intptr_1, out gstruct, (uint)Marshal.SizeOf(typeof(GClass859.GStruct2))) != 0)
-			{
-				result.intptr_1 = gstruct.intptr_1;
-				result.int_0 = gstruct.int_0;
-				result.intptr_0 = gstruct.intptr_0;
-				result.int_1 = gstruct.int_2;
-				result.long_0 = (long)gstruct.int_1;
-				result.State = gstruct.State;
-				result.int_2 = gstruct.int_3;
-				return result;
-			}
-			int_0 = Marshal.GetLastWin32Error();
+			GClass859.list_0[0]
+		};
+	}
+
+	public override bool vmethod_19(GClass841 gclass841_0)
+	{
+		return gclass841_0 is GClass843;
+	}
+
+	public override List<Rectangle> vmethod_17()
+	{
+		AccountSettings account = base.Context.Account;
+		int num = (account != null) ? account.PalladiumCollectionAreaWidth : 0;
+		if (num == this.int_1)
+		{
+			return this.list_1;
+		}
+		Rectangle value = GClass859.list_0[0];
+		int num2 = (int)((float)((100 - num) * value.Width) / 100f);
+		value.Width -= num2;
+		value.X += num2;
+		this.list_1[0] = value;
+		this.int_1 = num;
+		return this.list_1;
+	}
+
+	public override bool vmethod_8(NpcShip npcShip_0)
+	{
+		Vector2 position = npcShip_0.Position;
+		return this.vmethod_17()[0].Contains((int)position.X, (int)position.Y) && base.vmethod_8(npcShip_0);
+	}
+
+	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
+	{
+		gate_0 = null;
+		List<KeyValuePair<int, Gate>> list = base.C.Map.Gates.Where(new Func<KeyValuePair<int, Gate>, bool>(this.method_24)).OrderBy(new Func<KeyValuePair<int, Gate>, int>(GClass859.<>c.<>c_0.method_0)).ToList<KeyValuePair<int, Gate>>();
+		if (list.Count != 2)
+		{
+			return null;
+		}
+		CollidableRect collidableRect = base.C.Map.Collidables.FirstOrDefault(new Func<KeyValuePair<string, ICollidable>, bool>(GClass859.<>c.<>c_0.method_1)).Value as CollidableRect;
+		if (collidableRect == null)
+		{
+			return null;
+		}
+		Gate value;
+		if (vector2_1.X < (float)collidableRect.Rect.X)
+		{
+			value = list[0].Value;
 		}
 		else
 		{
-			if (GClass859.VirtualQueryEx_1(intptr_0, intptr_1, out result, (uint)Marshal.SizeOf(typeof(GClass859.GStruct3))) != 0)
-			{
-				return result;
-			}
-			int_0 = Marshal.GetLastWin32Error();
+			value = list[1].Value;
 		}
-		return result;
+		return new Vector2?(value.Position);
 	}
 
-	public static string WbloiYmsjqv(uint uint_0)
+	public override bool vmethod_13(Collectible collectible_0)
 	{
-		string text = null;
-		using (ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(string.Format("SELECT CommandLine FROM Win32_Process WHERE ProcessId = {0}", uint_0)))
+		Vector2 position = collectible_0.Position;
+		return this.vmethod_17()[0].Contains((int)position.X, (int)position.Y);
+	}
+
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass859()
+	{
+		Class13.NP5bWyNzLwONS();
+		GClass859.list_0 = new List<Rectangle>
 		{
-			ManagementObjectCollection.ManagementObjectEnumerator enumerator = managementObjectSearcher.Get().GetEnumerator();
-			if (enumerator.MoveNext())
-			{
-				object obj = enumerator.Current["CommandLine"];
-				text = ((obj != null) ? obj.ToString() : null);
-			}
-		}
-		if (text == null)
-		{
-			return "";
-		}
-		return text;
+			new Rectangle(12000, 18200, 20350, 7300)
+		};
 	}
 
-	public struct GStruct1
+	[CompilerGenerated]
+	private bool method_24(KeyValuePair<int, Gate> keyValuePair_0)
 	{
-		public ushort ushort_0;
-
-		private ushort ushort_1;
-
-		public uint GkYotahyvnK;
-
-		public IntPtr intptr_0;
-
-		public IntPtr intptr_1;
-
-		public IntPtr JqjotzcDhXg;
-
-		public uint uint_0;
-
-		public uint uint_1;
-
-		public uint uint_2;
-
-		public ushort ushort_2;
-
-		public ushort ushort_3;
+		return keyValuePair_0.Value.FactionId == base.C.Hero.FactionId;
 	}
 
-	public struct GStruct2
-	{
-		public IntPtr intptr_0;
+	public static List<Rectangle> list_0;
 
-		public IntPtr intptr_1;
+	public List<Rectangle> list_1;
 
-		public int int_0;
-
-		public int int_1;
-
-		public int State;
-
-		public int int_2;
-
-		public int int_3;
-	}
-
-	public struct GStruct3
-	{
-		public IntPtr intptr_0;
-
-		public IntPtr intptr_1;
-
-		public int int_0;
-
-		public uint uint_0;
-
-		public long long_0;
-
-		public int State;
-
-		public int int_1;
-
-		public int int_2;
-
-		public uint uint_1;
-	}
+	private int int_1;
 }

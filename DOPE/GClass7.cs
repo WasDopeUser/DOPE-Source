@@ -3,14 +3,14 @@ using DarkorbitAPI;
 
 public class GClass7 : GInterface4
 {
-	public void Run(GClass231 e)
+	public void Run(GClass232 e)
 	{
 		ConnectionManager.Instance.Value.SendMessage(new GClass158());
 	}
 
 	public GClass7()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 }

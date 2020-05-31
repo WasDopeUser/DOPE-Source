@@ -1,74 +1,102 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Numerics;
 using System.Runtime.CompilerServices;
+using DarkorbitAPI.Structures;
 
-public class GClass862
+public class GClass862 : GClass854
 {
-	[CompilerGenerated]
-	public int[] method_0()
+	private GClass846 Module { get; }
+
+	public GClass862(GClass839 gclass839_1, GClass846 gclass846_1)
 	{
-		return this.int_0;
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1);
+		this.Module = gclass846_1;
 	}
 
-	[CompilerGenerated]
-	private void method_1(int[] int_1)
+	public override bool vmethod_19(GClass841 gclass841_0)
 	{
-		this.int_0 = int_1;
+		return gclass841_0 == this.Module;
 	}
 
-	[CompilerGenerated]
-	public byte[] method_2()
+	public override bool vmethod_8(NpcShip npcShip_0)
 	{
-		return this.byte_0;
+		NpcUtils.NpcType type = npcShip_0.Type;
+		NpcUtils.NpcClass npcClass = (type != null) ? type.Class : null;
+		return (npcClass == NpcUtils.N_Cubikon || Vector2.Distance(this.Module.BestSpawn, npcShip_0.Position) < 800f) && (npcClass != NpcUtils.N_Protegit || !this.method_24()) && base.vmethod_8(npcShip_0);
 	}
 
-	[CompilerGenerated]
-	private void method_3(byte[] byte_1)
+	public override bool vmethod_13(Collectible collectible_0)
 	{
-		this.byte_0 = byte_1;
+		return Vector2.Distance(this.Module.BestSpawn, collectible_0.Position) < 800f && base.vmethod_13(collectible_0);
 	}
 
-	private void Fill(byte[] s, int[] k)
+	protected override IEnumerable<Vector2> vmethod_23()
 	{
-		int i = 0;
-		for (int j = 1; j < s.Length; j++)
+		IEnumerator<Vector2> enumerator = this.method_26().GetEnumerator();
+		for (;;)
 		{
-			while (i > 0)
+			try
 			{
-				if (s[j] == s[i])
+				IL_52:
+				if (!enumerator.MoveNext())
 				{
 					break;
 				}
-				i = k[i - 1];
+				goto IL_88;
+				IL_4A:
+				goto IL_52;
 			}
-			if (s[j] == s[i])
+			finally
 			{
-				i++;
+				if (enumerator != null)
+				{
+					enumerator.Dispose();
+				}
 			}
-			k[j] = i;
+			break;
+			IL_88:
+			Vector2 vector = enumerator.Current;
+			yield return vector;
+			goto IL_4A;
 		}
-	}
-
-	public IEnumerable<int> method_4(byte[] byte_1)
-	{
-		GClass862.<Match>d__9 <Match>d__ = new GClass862.<Match>d__9(-2);
-		<Match>d__.<>4__this = this;
-		<Match>d__.<>3__q = byte_1;
-		return <Match>d__;
-	}
-
-	public GClass862(byte[] byte_1)
-	{
-		Class13.igxcIukzfpare();
-		base..ctor();
-		this.method_3(byte_1);
-		this.method_1(new int[byte_1.Length]);
-		this.Fill(byte_1, this.method_0());
+		enumerator = null;
+		yield return this.Module.BestSpawn;
+		yield break;
+		yield break;
 	}
 
 	[CompilerGenerated]
-	private int[] int_0;
+	public bool method_24()
+	{
+		return this.bool_3;
+	}
 
 	[CompilerGenerated]
-	private byte[] byte_0;
+	public void method_25(bool bool_4)
+	{
+		this.bool_3 = bool_4;
+	}
+
+	public override void Update()
+	{
+		base.Update();
+		DateTimeOffset left = DateTimeOffset.Now.AddSeconds(30.0);
+		this.method_25(left >= this.Module.BestSpawnTime);
+	}
+
+	[DebuggerHidden]
+	[CompilerGenerated]
+	private IEnumerable<Vector2> method_26()
+	{
+		return base.vmethod_23();
+	}
+
+	[CompilerGenerated]
+	private readonly GClass846 gclass846_0;
+
+	[CompilerGenerated]
+	private bool bool_3;
 }

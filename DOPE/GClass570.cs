@@ -8,7 +8,7 @@ public class GClass570 : GInterface0
 	{
 		get
 		{
-			return 19206;
+			return 8716;
 		}
 	}
 
@@ -20,21 +20,24 @@ public class GClass570 : GInterface0
 		}
 	}
 
-	public GClass570(Vector<GClass197> vector_1 = null)
+	public GClass570(Vector<string> vector_0 = null, uint uint_1 = 0U)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		if (vector_1 == null)
+		if (vector_0 == null)
 		{
-			this.vector_0 = new Vector<GClass197>();
-			return;
+			this.SytGkYfPmb = new Vector<string>();
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.SytGkYfPmb = vector_0;
+		}
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 19206;
+		return 8716;
 	}
 
 	public virtual int vmethod_1()
@@ -42,39 +45,44 @@ public class GClass570 : GInterface0
 		return 4;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		while (this.SytGkYfPmb.Length > 0)
 		{
-			this.vector_0.method_1();
+			this.SytGkYfPmb.method_1();
 		}
 		int num = 0;
 		uint num2 = (uint)binaryStream_0.smethod_0();
 		while ((long)num < (long)((ulong)num2))
 		{
-			GClass197 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass197;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
+			string iai2vvt4Q2e7jARe47j = binaryStream_0.smethod_2();
+			this.SytGkYfPmb.method_0(iai2vvt4Q2e7jARe47j);
 			num++;
 		}
-		binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(19206);
+		binaryStream_0.smethod_7(8716);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (GClass197 gclass in this.vector_0)
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(1869);
+		binaryStream_0.smethod_7(-30819);
+		binaryStream_0.smethod_4(this.SytGkYfPmb.Length);
+		foreach (string string_ in this.SytGkYfPmb)
 		{
-			gclass.imethod_2(binaryStream_0);
+			binaryStream_0.smethod_3(string_);
 		}
-		binaryStream_0.smethod_6(-2659);
 	}
 
-	public Vector<GClass197> vector_0;
+	public uint uint_0;
+
+	public Vector<string> SytGkYfPmb;
 }

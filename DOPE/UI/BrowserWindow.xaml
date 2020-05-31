@@ -3,8 +3,8 @@
 	Title="BrowserWindow"
 	Height="720"
 	Width="1280"
-	Loaded="method_1"
-	Closed="method_2">
+	Loaded="enoHxSomUi"
+	Closed="method_1">
 	<Grid>
 		<WebBrowser
 			Name="Browser" />

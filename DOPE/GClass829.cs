@@ -1,59 +1,96 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using DOPE.Common;
-using DOPE.Common.Models;
 
-public abstract class GClass829 : GClass826
+public static class GClass829
 {
-	public TargetMap Map
+	public static string smethod_0(string string_1)
 	{
-		[CompilerGenerated]
-		get
-		{
-			return this.targetMap_0;
-		}
-		[CompilerGenerated]
-		protected set
-		{
-			if (this.targetMap_0 == value)
-			{
-				return;
-			}
-			this.targetMap_0 = value;
-			this.method_0(Class10.Map);
-		}
+		return string.Format(GClass829.string_0, string_1);
 	}
 
-	public GClass829(GClass824 gclass824_1, TargetMap targetMap_1, string string_1, int int_2 = -2147483648)
+	public static string smethod_1(string string_1, string string_2 = null)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, string_1 + "_" + targetMap_1.GetName(), int_2);
-		this.Map = targetMap_1;
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		GClass829.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass829.<>c__DisplayClass5_0();
-		CS$<>8__locals1.targetMap_0 = this.Map;
-		if (botProfile_1 == null)
+		if (string_2 == null)
 		{
-			return null;
+			return GClass829.smethod_0(string_1) + "/indexInternal.es";
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(CS$<>8__locals1.method_0));
+		return GClass829.smethod_0(string_1) + "/indexInternal.es?action=" + string_2;
 	}
 
-	public override string ToString()
+	public static string smethod_2(string string_1)
 	{
-		return this.Map.GetName() ?? "";
+		return GClass829.smethod_1(string_1, "internalMapRevolution");
 	}
 
-	[CompilerGenerated]
-	private TargetMap targetMap_0;
+	public static string Maps(string server)
+	{
+		return GClass829.smethod_0(server) + "/spacemap/xml/maps.php";
+	}
+
+	public static string smethod_3()
+	{
+		return "https://powerofdark.space/static/maps.xml";
+	}
+
+	public static string smethod_4(string string_1)
+	{
+		return GClass829.smethod_1(string_1, "externalLogout");
+	}
+
+	public static string smethod_5(string string_1)
+	{
+		return GClass829.smethod_0(string_1) + "/ajax/shop.php";
+	}
+
+	public static string oemHlkhhlQr(string string_1, string string_2, string string_3, string string_4 = "init")
+	{
+		return string.Concat(new string[]
+		{
+			GClass829.smethod_0(string_1),
+			"/flashinput/galaxyGates.php?userID=",
+			string_2,
+			"&action=",
+			string_4,
+			"&sid=",
+			string_3
+		});
+	}
+
+	public static string smethod_6(string string_1)
+	{
+		return GClass829.smethod_0(string_1) + "/flashAPI/dailyLogin.php?doBook=1";
+	}
+
+	public static string smethod_7(string string_1)
+	{
+		return GClass829.smethod_0(string_1) + "/ajax/instances.php";
+	}
+
+	public static string smethod_8(string string_1)
+	{
+		return GClass829.smethod_0(string_1) + "/flashAPI/inventory.php";
+	}
+
+	public static string smethod_9(string string_1)
+	{
+		return GClass829.smethod_1(string_1, "internalNanoTechFactory");
+	}
+
+	public static string smethod_10(string string_1)
+	{
+		return GClass829.smethod_0(string_1) + "/ajax/nanotechFactory.php";
+	}
+
+	public static string smethod_11()
+	{
+		return "https://powerofdark.space/static/ui.txt";
+	}
+
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass829()
+	{
+		Class13.NP5bWyNzLwONS();
+		GClass829.string_0 = "https://{0}.darkorbit.com";
+	}
+
+	public static string string_0;
 }

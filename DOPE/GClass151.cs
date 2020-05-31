@@ -8,7 +8,7 @@ public class GClass151 : GInterface0
 	{
 		get
 		{
-			return 5545;
+			return 6369;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass151 : GInterface0
 
 	public GClass151(string string_0 = "")
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		this.Name = "";
 		base..ctor();
 		this.Name = string_0;
@@ -30,7 +30,7 @@ public class GClass151 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 5545;
+		return 6369;
 	}
 
 	public virtual int vmethod_1()
@@ -38,20 +38,22 @@ public class GClass151 : GInterface0
 		return 2;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
 		this.Name = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(5545);
+		binaryStream_0.smethod_7(6369);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.MoioCjQkqp0(this.Name);
+		binaryStream_0.smethod_3(this.Name);
+		binaryStream_0.smethod_7(-28768);
 	}
 
 	public string Name;

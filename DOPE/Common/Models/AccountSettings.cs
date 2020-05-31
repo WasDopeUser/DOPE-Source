@@ -13,8 +13,8 @@ using DarkorbitAPI.CommonStructures;
 
 namespace DOPE.Common.Models
 {
-	[DataContract]
 	[Guid("A095ED63-D742-424A-83EB-2575A985AB60")]
+	[DataContract]
 	public class AccountSettings : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -37,9 +37,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Range(0, 999999999)]
 		[Layout(GroupName = "Account", Description = "Stop after X deaths", RightDescription = "Leave 0 to disable")]
 		[DataMember(Order = 37)]
+		[Range(0, 999999999)]
 		public int MaxDeaths
 		{
 			[CompilerGenerated]
@@ -55,13 +55,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MaxDeaths>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_56);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
 			}
 		}
 
 		[DefaultValue(true)]
-		[Layout(GroupName = "Account", Description = "Repair drones at >90% damage")]
 		[DataMember(Order = 15)]
+		[Layout(GroupName = "Account", Description = "Repair drones at >90% damage")]
 		public bool RepairDrones
 		{
 			[CompilerGenerated]
@@ -77,13 +77,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<RepairDrones>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.tenoeDtTjgd);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_78);
 			}
 		}
 
-		[ComboBox("$Volatile.Hangars", "$Volatile.Hangars")]
 		[Layout(Description = "Default hangar", GroupName = "Account_Hangars")]
 		[DataMember(Order = 34)]
+		[ComboBox("$Volatile.Hangars", "$Volatile.Hangars")]
 		public string HangarDefault
 		{
 			[CompilerGenerated]
@@ -99,12 +99,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<HangarDefault>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_41);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_44);
 			}
 		}
 
-		[DataMember(Order = 35)]
 		[Layout(Description = "5-3 Palladium collector hangar", GroupName = "Account_Hangars")]
+		[DataMember(Order = 35)]
 		[ComboBox("$Volatile.Hangars", "$Volatile.Hangars")]
 		public string HangarPalladiumCollect
 		{
@@ -121,7 +121,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<HangarPalladiumCollect>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.kbBoeOnLvYq);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_45);
 			}
 		}
 
@@ -143,12 +143,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<HangarPalladiumSell>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_42);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_46);
 			}
 		}
 
-		[Layout(GroupName = "Account_Credentials", Description = "Username", Style = "readonly")]
 		[DataMember(Order = 13)]
+		[Layout(GroupName = "Account_Credentials", Description = "Username", Style = "readonly")]
 		[Category("Credentials")]
 		public string Username
 		{
@@ -166,13 +166,13 @@ namespace DOPE.Common.Models
 				}
 				this.<Username>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.BotName);
-				this.<>OnPropertyChanged(Class7.fdXolxBejSE);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_113);
 			}
 		}
 
+		[Category("Credentials")]
 		[DataMember(Order = 3)]
 		[Layout(GroupName = "Account_Credentials", Style = "password", Description = "Password")]
-		[Category("Credentials")]
 		public string Password
 		{
 			[CompilerGenerated]
@@ -188,13 +188,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Password>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_66);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_71);
 			}
 		}
 
-		[Layout(GroupName = "Account_Credentials", Description = "Server (eg. int1)", Style = "readonly")]
 		[DataMember(Order = 4)]
 		[Category("Credentials")]
+		[Layout(GroupName = "Account_Credentials", Description = "Server (eg. int1)", Style = "readonly")]
 		public string Server
 		{
 			[CompilerGenerated]
@@ -211,12 +211,12 @@ namespace DOPE.Common.Models
 				}
 				this.<Server>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.BotName);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_77);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_83);
 			}
 		}
 
-		[Layout(GroupName = "Account_Credentials", Description = "Browser UserAgent", Style = "readonly")]
 		[DataMember(Order = 5, EmitDefaultValue = true)]
+		[Layout(GroupName = "Account_Credentials", Description = "Browser UserAgent", Style = "readonly")]
 		public string UserAgent
 		{
 			[CompilerGenerated]
@@ -232,12 +232,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UserAgent>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_105);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_111);
 			}
 		}
 
-		[Layout(GroupName = "Account_Credentials", Description = "Proxy", RightDescription = "SOCKS5 connection string\n[user:pass@]host:port\nLeave empty to disable")]
 		[DataMember(Order = 45)]
+		[Layout(GroupName = "Account_Credentials", Description = "Proxy", RightDescription = "SOCKS5 connection string\n[user:pass@]host:port\nLeave empty to disable")]
 		public string ProxyString
 		{
 			[CompilerGenerated]
@@ -253,7 +253,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<ProxyString>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_71);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_76);
 			}
 		}
 
@@ -273,7 +273,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Use3D>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_100);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_106);
 			}
 		}
 
@@ -294,12 +294,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectGreenBooty>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_12);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_13);
 			}
 		}
 
-		[DataMember(Order = 8)]
 		[Layout(GroupName = "Account_Resources", Description = "Collect golden pirate booty")]
+		[DataMember(Order = 8)]
 		public bool CollectGoldBooty
 		{
 			[CompilerGenerated]
@@ -315,13 +315,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectGoldBooty>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_11);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_12);
 			}
 		}
 
+		[DefaultValue(true)]
 		[DataMember(Order = 14, EmitDefaultValue = true)]
 		[Layout(GroupName = "Account_Resources", Description = "Automatically refine resources")]
-		[DefaultValue(true)]
 		public bool AutoRefine
 		{
 			[CompilerGenerated]
@@ -343,8 +343,8 @@ namespace DOPE.Common.Models
 
 		[Layout(GroupName = "Account_Resources", Description = "Palladium collection area width", RightDescription = "By default 60%. Increasing this number might result in your ship respawning on the left-side portal on 5-3")]
 		[DataMember(Order = 38, EmitDefaultValue = true)]
-		[Range(10, 100)]
 		[DefaultValue(60)]
+		[Range(10, 100)]
 		public int PalladiumCollectionAreaWidth
 		{
 			[CompilerGenerated]
@@ -360,13 +360,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<PalladiumCollectionAreaWidth>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_65);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
 			}
 		}
 
-		[Range(0, 3000)]
-		[Layout(GroupName = "Account_Skylab", Description = "Keep X Promerium on ship")]
 		[DataMember(Order = 41)]
+		[Layout(GroupName = "Account_Skylab", Description = "Keep X Promerium on ship")]
+		[Range(0, 3000)]
 		public int Skylab_KeepPromerium
 		{
 			[CompilerGenerated]
@@ -382,13 +382,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Skylab_KeepPromerium>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_79);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_85);
 			}
 		}
 
+		[Range(0, 3000)]
 		[DataMember(Order = 42)]
 		[Layout(GroupName = "Account_Skylab", Description = "Keep X Seprom on ship")]
-		[Range(0, 3000)]
 		public int Skylab_KeepSeprom
 		{
 			[CompilerGenerated]
@@ -404,12 +404,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Skylab_KeepSeprom>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_80);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_86);
 			}
 		}
 
-		[Layout(GroupName = "Account", Description = "Jump into GG if 1 life left")]
 		[DataMember(Order = 17)]
+		[Layout(GroupName = "Account", Description = "Jump into GG if 1 life left")]
 		public bool JumpGGLastLife
 		{
 			[CompilerGenerated]
@@ -425,12 +425,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<JumpGGLastLife>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_47);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
 			}
 		}
 
-		[DataMember(Order = 18)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Enable GG builder")]
+		[DataMember(Order = 18)]
 		public bool Spinner_Enabled
 		{
 			[CompilerGenerated]
@@ -446,14 +446,14 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Enabled>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_84);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_90);
 			}
 		}
 
 		[Layout(GroupName = "Account_GG Spinner", Description = "Spin delay (ms)")]
-		[DefaultValue(250)]
 		[DataMember(Order = 40)]
 		[Range(0, 2000)]
+		[DefaultValue(250)]
 		public int Spinner_SpinDelay
 		{
 			[CompilerGenerated]
@@ -469,12 +469,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_SpinDelay>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_91);
+				this.<>OnPropertyChanged(Class7.wpvHvJgIcWy);
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Spin size")]
 		[DataMember(Order = 44)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Spin size")]
 		public SpinnerModeSelection Spinner_SpinSize
 		{
 			[CompilerGenerated]
@@ -490,7 +490,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_SpinSize>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_92);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_97);
 			}
 		}
 
@@ -511,12 +511,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_UsePhoenix>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_94);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_99);
 			}
 		}
 
-		[DataMember(Order = 19)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Minimum Uridium", RightDescription = "Leave 0 to only use Free Energy")]
+		[DataMember(Order = 19)]
 		public int Spinner_UseUridium
 		{
 			[CompilerGenerated]
@@ -532,7 +532,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_UseUridium>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_95);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_100);
 			}
 		}
 
@@ -553,7 +553,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_PlaceGates>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_90);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_96);
 			}
 		}
 
@@ -574,12 +574,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Alpha>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_81);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_87);
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Beta")]
 		[DataMember(Order = 29)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Beta")]
 		public bool Spinner_Beta
 		{
 			[CompilerGenerated]
@@ -595,7 +595,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Beta>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_82);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_88);
 			}
 		}
 
@@ -616,12 +616,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Gamma>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_86);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_92);
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Stop when either of ABG is built")]
 		[DataMember(Order = 32)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Stop when either of ABG is built")]
 		public bool Spinner_StopABG
 		{
 			[CompilerGenerated]
@@ -637,12 +637,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_StopABG>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_93);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_98);
 			}
 		}
 
-		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Delta")]
 		[DataMember(Order = 22)]
+		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Delta")]
 		public bool Spinner_Delta
 		{
 			[CompilerGenerated]
@@ -658,12 +658,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Delta>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_83);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_89);
 			}
 		}
 
-		[DataMember(Order = 23)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Epsilon")]
+		[DataMember(Order = 23)]
 		public bool Spinner_Epsilon
 		{
 			[CompilerGenerated]
@@ -679,7 +679,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Epsilon>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_85);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_91);
 			}
 		}
 
@@ -700,12 +700,12 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Zeta>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_96);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_101);
 			}
 		}
 
-		[DataMember(Order = 25)]
 		[Layout(GroupName = "Account_GG Spinner", Description = "Build GG Kappa")]
+		[DataMember(Order = 25)]
 		public bool Spinner_Kappa
 		{
 			[CompilerGenerated]
@@ -721,7 +721,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Kappa>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_87);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_93);
 			}
 		}
 
@@ -742,7 +742,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Lambda>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_89);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_95);
 			}
 		}
 
@@ -763,7 +763,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Spinner_Kuiper>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_88);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_94);
 			}
 		}
 
@@ -783,7 +783,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<EnableTimeTable>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_25);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_27);
 			}
 		}
 
@@ -803,7 +803,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<TimeTable>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_98);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_103);
 			}
 		}
 
@@ -823,7 +823,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<TimeTableUseUtc>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.gbrolhxyfvp);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_105);
 			}
 		}
 
@@ -843,7 +843,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<ProfileName>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_75);
 			}
 		}
 
@@ -863,7 +863,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UserId>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_106);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_112);
 			}
 		}
 
@@ -926,7 +926,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Volatile>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_116);
 			}
 		}
 

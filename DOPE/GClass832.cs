@@ -1,61 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
+using System.Runtime.CompilerServices;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass832 : GClass830
+public class GClass832 : StatisticsCategory
 {
-	public GClass832(GClass824 gclass824_1)
+	public Dictionary<string, int> Count
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, TargetMap.FL_ATLAS_A);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		if (botProfile_1 == null)
+		[CompilerGenerated]
+		get
 		{
-			return null;
+			return this.dictionary_0;
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
+		[CompilerGenerated]
+		private set
 		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass832.<>c.<>c_0.method_0));
-	}
-
-	public override bool TrySwitchMap(out int int_2)
-	{
-		if (!base.C.IsStopping)
-		{
-			if (base.State == ModuleState.Started)
+			if (object.Equals(this.dictionary_0, value))
 			{
-				int_2 = 430;
-				return base.C.Map.MapId < 430 || base.C.Map.MapId > 445;
+				return;
+			}
+			this.dictionary_0 = value;
+			this.<>OnPropertyChanged(Class10.Count);
+		}
+	}
+
+	public GClass832(string string_0, Dictionary<string, int> dictionary_1)
+	{
+		Class13.NP5bWyNzLwONS();
+		base..ctor(string_0, new string[]
+		{
+			"Name",
+			"Count"
+		}, null);
+		this.Count = dictionary_1;
+	}
+
+	public override void Rebuild()
+	{
+	}
+
+	public override void Update()
+	{
+		Dictionary<string, int> count = this.Count;
+		lock (count)
+		{
+			foreach (KeyValuePair<string, int> keyValuePair in this.Count)
+			{
+				GClass832.<>c__DisplayClass6_0 CS$<>8__locals1 = new GClass832.<>c__DisplayClass6_0();
+				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
+				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.method_0));
+				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value);
+				rowEntry.Order = -keyValuePair.Value;
 			}
 		}
-		int_2 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
-		return int_2 != base.C.Map.MapId;
+		base.Update();
 	}
 
-	public override int UpdatePriority()
-	{
-		DateTimeOffset frozenLabirynthOpening = base.C.Game.FrozenLabirynthOpening;
-		DateTimeOffset frozenLabirynthClosing = base.C.Game.FrozenLabirynthClosing;
-		bool flag = frozenLabirynthOpening == default(DateTimeOffset) || frozenLabirynthClosing == default(DateTimeOffset);
-		DateTimeOffset now = DateTimeOffset.Now;
-		if (!flag && !(frozenLabirynthOpening < now) && !(frozenLabirynthClosing > now))
-		{
-			return int.MinValue;
-		}
-		return base.UpdatePriority();
-	}
-
-	public override string ToString()
-	{
-		return "Frozen Labirynth";
-	}
+	[CompilerGenerated]
+	private Dictionary<string, int> dictionary_0;
 }

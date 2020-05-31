@@ -8,7 +8,7 @@ public class GClass516 : GInterface0
 	{
 		get
 		{
-			return 28630;
+			return 13152;
 		}
 	}
 
@@ -16,61 +16,48 @@ public class GClass516 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 3;
 		}
 	}
 
-	public GClass516(GClass500 gclass500_1 = null, GClass454 gclass454_1 = null)
+	public GClass516(bool bool_1 = false, string string_1 = "")
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
-		if (gclass500_1 == null)
-		{
-			this.gclass500_0 = new GClass500(0, false, false, false, 0, null);
-		}
-		else
-		{
-			this.gclass500_0 = gclass500_1;
-		}
-		if (gclass454_1 == null)
-		{
-			this.gclass454_0 = new GClass454(0, null, 0U, 0U, 0.0, false, null, null);
-			return;
-		}
-		this.gclass454_0 = gclass454_1;
+		this.bool_0 = bool_1;
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28630;
+		return 13152;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 3;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.string_0 = binaryStream_0.smethod_2();
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass454_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass454);
-		this.gclass454_0.imethod_1(binaryStream_0);
-		this.gclass500_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass500);
-		this.gclass500_0.imethod_1(binaryStream_0);
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(28630);
+		binaryStream_0.smethod_7(13152);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass454_0.imethod_2(binaryStream_0);
-		this.gclass500_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public GClass454 gclass454_0;
+	public string string_0;
 
-	public GClass500 gclass500_0;
+	public bool bool_0;
 }

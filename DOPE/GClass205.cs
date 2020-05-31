@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass205 : GClass197, GInterface0
+public class GClass205 : GClass198, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 29052;
+			return 22248;
 		}
 	}
 
@@ -16,69 +16,59 @@ public class GClass205 : GClass197, GInterface0
 	{
 		get
 		{
-			return 2;
+			return 12;
 		}
 	}
 
-	public GClass205(GClass207 gclass207_1 = null, string string_0 = "", GClass198 gclass198_1 = null)
+	public GClass205(int int_1 = 0, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.igxcIukzfpare();
-		this.Name = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		if (gclass207_1 == null)
-		{
-			this.gclass207_0 = new GClass207(0U);
-		}
-		else
-		{
-			this.gclass207_0 = gclass207_1;
-		}
-		this.Name = string_0;
-		if (gclass198_1 == null)
-		{
-			this.gclass198_0 = new GClass198(0, 0, 0, 0, 0, 0);
-			return;
-		}
-		this.gclass198_0 = gclass198_1;
+		this.MapId = int_1;
+		this.int_0 = int_2;
+		this.ByBszpfmUm = int_3;
 	}
 
 	public override int vmethod_0()
 	{
-		return 29052;
+		return 22248;
 	}
 
 	public override int vmethod_1()
 	{
-		return 2;
+		return 12;
+	}
+
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		base.HrqIugnatr8(binaryStream_0);
+		this.ByBszpfmUm = binaryStream_0.smethod_0();
+		this.ByBszpfmUm = (this.ByBszpfmUm << 10 | U.smethod_0(this.ByBszpfmUm, 22));
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 1) | this.MapId << 31);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
+		binaryStream_0.smethod_1();
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		this.gclass198_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass198);
-		this.gclass198_0.imethod_1(binaryStream_0);
-		this.gclass207_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
-		this.gclass207_0.imethod_1(binaryStream_0);
-		this.Name = binaryStream_0.smethod_2();
-	}
-
-	public override void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(29052);
+		binaryStream_0.smethod_7(22248);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
 		base.vmethod_2(binaryStream_0);
-		this.gclass198_0.imethod_2(binaryStream_0);
-		this.gclass207_0.imethod_2(binaryStream_0);
-		binaryStream_0.MoioCjQkqp0(this.Name);
+		binaryStream_0.smethod_4(U.smethod_0(this.ByBszpfmUm, 10) | this.ByBszpfmUm << 22);
+		binaryStream_0.smethod_4(this.MapId << 1 | U.smethod_0(this.MapId, 31));
+		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
+		binaryStream_0.smethod_7(-18347);
 	}
 
-	public GClass198 gclass198_0;
+	public int ByBszpfmUm;
 
-	public GClass207 gclass207_0;
+	public int MapId;
 
-	public string Name;
+	public int int_0;
 }

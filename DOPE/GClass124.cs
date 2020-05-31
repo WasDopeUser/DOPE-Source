@@ -8,13 +8,13 @@ public class GClass124 : GInterface6
 {
 	public GClass124()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 
 	public GClass124(TcpClient tcpClient_2)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (tcpClient_2 == null)
 		{
@@ -25,7 +25,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -37,7 +37,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -53,7 +53,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, string string_4, string string_5)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -75,7 +75,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1, string string_4, string string_5)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -175,7 +175,7 @@ public class GClass124 : GInterface6
 				}
 				this.method_4();
 				this.method_5();
-				this.method_9(1, string_3, int_1);
+				this.method_8(1, string_3, int_1);
 				TcpClient result = this.tcpClient_0;
 				this.tcpClient_0 = null;
 				return result;
@@ -279,7 +279,7 @@ public class GClass124 : GInterface6
 		}
 	}
 
-	private byte[] method_8(int int_1)
+	private byte[] yixMcigtv3(int int_1)
 	{
 		return new byte[]
 		{
@@ -288,12 +288,12 @@ public class GClass124 : GInterface6
 		};
 	}
 
-	private void method_9(byte byte_0, string string_3, int int_1)
+	private void method_8(byte byte_0, string string_3, int int_1)
 	{
 		NetworkStream stream = this.tcpClient_0.GetStream();
 		byte b = this.method_6(string_3);
 		byte[] array = this.method_7(b, string_3);
-		Array array2 = this.method_8(int_1);
+		Array array2 = this.yixMcigtv3(int_1);
 		byte[] array3 = new byte[4 + array.Length + 2];
 		array3[0] = 5;
 		array3[1] = byte_0;
@@ -306,11 +306,11 @@ public class GClass124 : GInterface6
 		stream.Read(array4, 0, array4.Length);
 		if (array4[1] != 0)
 		{
-			this.method_10(array4, string_3, int_1);
+			this.method_9(array4, string_3, int_1);
 		}
 	}
 
-	private void method_10(byte[] byte_0, string string_3, int int_1)
+	private void method_9(byte[] byte_0, string string_3, int int_1)
 	{
 		byte b = byte_0[1];
 		switch (byte_0[3])

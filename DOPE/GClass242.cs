@@ -8,7 +8,7 @@ public class GClass242 : GInterface0
 	{
 		get
 		{
-			return 30729;
+			return 1599;
 		}
 	}
 
@@ -16,62 +16,66 @@ public class GClass242 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 14;
 		}
 	}
 
-	public GClass242(uint uint_1 = 0U, uint uint_2 = 0U, GClass502 gclass502_1 = null)
+	public GClass242(int int_3 = 0, int int_4 = 0, string string_2 = "", string string_3 = "", int int_5 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		this.Visibility = uint_1;
-		this.uint_0 = uint_2;
-		if (gclass502_1 == null)
-		{
-			this.gclass502_0 = new GClass502("", null, null);
-			return;
-		}
-		this.gclass502_0 = gclass502_1;
+		this.int_2 = int_3;
+		this.int_1 = int_4;
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		this.int_0 = int_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 30729;
+		return 1599;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 14;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.int_1 = (int)binaryStream_0.smethod_1();
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 12 | U.smethod_0(this.int_2, 20));
+		this.string_1 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass502_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass502);
-		this.gclass502_0.imethod_1(binaryStream_0);
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.Visibility = (uint)binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(30729);
+		binaryStream_0.smethod_7(1599);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass502_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_5(this.uint_0);
-		binaryStream_0.smethod_6(-25767);
-		binaryStream_0.smethod_5(this.Visibility);
-		binaryStream_0.smethod_6(31915);
+		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(this.int_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 12) | this.int_2 << 20);
+		binaryStream_0.smethod_3(this.string_1);
 	}
 
-	public GClass502 gclass502_0;
+	public int int_0;
 
-	public uint uint_0;
+	public string string_0;
 
-	public uint Visibility;
+	public int int_1;
+
+	public int int_2;
+
+	public string string_1;
 }

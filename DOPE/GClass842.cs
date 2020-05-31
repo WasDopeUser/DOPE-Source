@@ -1,102 +1,94 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using DarkorbitAPI.Structures;
 using DOPE.Common.Models;
 
-public class GClass842 : GClass840
+public class GClass842 : GClass841
 {
-	public GClass842(GClass824 gclass824_1)
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1);
-		this.list_1 = new List<Rectangle>
+		return null;
+	}
+
+	public override bool ShouldBeInGame()
+	{
+		return false;
+	}
+
+	public override int UpdatePriority()
+	{
+		return -1;
+	}
+
+	public override void UpdateState()
+	{
+		base.UpdateState();
+	}
+
+	public override MapProfile GetMapProfile()
+	{
+		return base.Context.MapProfile ?? this.mapProfile_1;
+	}
+
+	public GClass842(GClass839 gclass839_1)
+	{
+		Class13.NP5bWyNzLwONS();
+		this.mapProfile_1 = new MapProfile
 		{
-			GClass842.list_0[0]
+			TargetMap = TargetMap.X1
 		};
+		base..ctor(gclass839_1, "Idle", -1);
+		base.MapProfile = null;
 	}
 
-	public override bool vmethod_19(GClass826 gclass826_0)
+	public override bool ShouldChangeHangar(out string string_1)
 	{
-		return gclass826_0 is GClass828;
+		string_1 = null;
+		AccountSettings account = base.C.Account;
+		if (account != null && account.Spinner_UsePhoenix)
+		{
+			AccountSettings account2 = base.C.Account;
+			if (((account2 != null) ? account2.HangarDefault : null) != null && base.Started.Cooldown(30000))
+			{
+				GClass842.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass842.<>c__DisplayClass8_0();
+				GClass868 gclass = base.Context.method_60<GClass868>();
+				GClass842.<>c__DisplayClass8_0 CS$<>8__locals2 = CS$<>8__locals1;
+				AccountSettings account3 = base.C.Account;
+				List<string> list;
+				if (account3 == null)
+				{
+					list = null;
+				}
+				else
+				{
+					VolatileData @volatile = account3.Volatile;
+					list = ((@volatile != null) ? @volatile.Hangars : null);
+				}
+				CS$<>8__locals2.list_0 = list;
+				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass842.list_0.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
+				return string_1 != null && gclass.method_14() > 0;
+			}
+		}
+		return false;
 	}
 
-	public override List<Rectangle> vmethod_17()
+	public override string ToString()
 	{
-		AccountSettings account = base.Context.Account;
-		int num = (account != null) ? account.PalladiumCollectionAreaWidth : 0;
-		if (num == this.int_1)
-		{
-			return this.list_1;
-		}
-		Rectangle value = GClass842.list_0[0];
-		int num2 = (int)((float)((100 - num) * value.Width) / 100f);
-		value.Width -= num2;
-		value.X += num2;
-		this.list_1[0] = value;
-		this.int_1 = num;
-		return this.list_1;
-	}
-
-	public override bool vmethod_8(NpcShip npcShip_0)
-	{
-		Vector2 position = npcShip_0.Position;
-		return this.vmethod_17()[0].Contains((int)position.X, (int)position.Y) && base.vmethod_8(npcShip_0);
-	}
-
-	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
-	{
-		gate_0 = null;
-		List<KeyValuePair<int, Gate>> list = base.C.Map.Gates.Where(new Func<KeyValuePair<int, Gate>, bool>(this.method_23)).OrderBy(new Func<KeyValuePair<int, Gate>, int>(GClass842.<>c.<>c_0.method_0)).ToList<KeyValuePair<int, Gate>>();
-		if (list.Count != 2)
-		{
-			return null;
-		}
-		CollidableRect collidableRect = base.C.Map.Collidables.FirstOrDefault(new Func<KeyValuePair<string, ICollidable>, bool>(GClass842.<>c.<>c_0.method_1)).Value as CollidableRect;
-		if (collidableRect == null)
-		{
-			return null;
-		}
-		Gate value;
-		if (vector2_1.X < (float)collidableRect.Rect.X)
-		{
-			value = list[0].Value;
-		}
-		else
-		{
-			value = list[1].Value;
-		}
-		return new Vector2?(value.Position);
-	}
-
-	public override bool vmethod_13(Collectible collectible_0)
-	{
-		Vector2 position = collectible_0.Position;
-		return this.vmethod_17()[0].Contains((int)position.X, (int)position.Y);
+		return "Idle";
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass842()
 	{
-		Class13.igxcIukzfpare();
-		GClass842.list_0 = new List<Rectangle>
+		Class13.NP5bWyNzLwONS();
+		GClass842.list_0 = new List<string>
 		{
-			new Rectangle(12000, 18200, 20350, 7300)
+			"ship_phoenix",
+			"ship_liberator"
 		};
 	}
 
-	[CompilerGenerated]
-	private bool method_23(KeyValuePair<int, Gate> keyValuePair_0)
-	{
-		return keyValuePair_0.Value.FactionId == base.C.Hero.FactionId;
-	}
+	private MapProfile mapProfile_1;
 
-	public static List<Rectangle> list_0;
-
-	public List<Rectangle> list_1;
-
-	private int int_1;
+	public static List<string> list_0;
 }

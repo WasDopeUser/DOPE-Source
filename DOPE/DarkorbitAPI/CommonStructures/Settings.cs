@@ -19,7 +19,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public Settings()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.FlashSettings = new FlashSettings();
 			this.IsClient = true;
 			this.MapHosts = new Dictionary<int, string>();

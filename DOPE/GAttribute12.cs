@@ -6,28 +6,28 @@ public sealed class GAttribute12 : Attribute
 {
 	public GAttribute12()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		this..ctor((GEnum0)7, (GEnum1)1);
 	}
 
 	public GAttribute12(GEnum0 genum0_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		this..ctor(genum0_1, (GEnum1)1);
 	}
 
 	public GAttribute12(GEnum1 genum1_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		this..ctor((GEnum0)7, genum1_1);
 	}
 
 	public GAttribute12(GEnum0 genum0_1, GEnum1 genum1_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.method_1(genum0_1);
-		this.method_3(genum1_1);
+		this.qOolKaFfsj(genum1_1);
 	}
 
 	[CompilerGenerated]
@@ -49,7 +49,7 @@ public sealed class GAttribute12 : Attribute
 	}
 
 	[CompilerGenerated]
-	private void method_3(GEnum1 genum1_1)
+	private void qOolKaFfsj(GEnum1 genum1_1)
 	{
 		this.genum1_0 = genum1_1;
 	}

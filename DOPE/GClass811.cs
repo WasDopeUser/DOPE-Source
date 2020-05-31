@@ -1,34 +1,79 @@
 ﻿using System;
-using System.Drawing;
-using System.IO;
-using System.Numerics;
-using System.Text;
-using Syroot.BinaryData;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
 
-public static class GClass811
+public class GClass811 : GClass808
 {
-	public static string smethod_0(this string string_0)
+	[CompilerGenerated]
+	public GClass818 method_0()
 	{
-		return Encoding.UTF8.GetString(Convert.FromBase64String(string_0));
+		return this.gclass818_0;
 	}
 
-	public static string smethod_1(this string string_0)
+	[CompilerGenerated]
+	private void method_1(GClass818 gclass818_2)
 	{
-		return Convert.ToBase64String(Encoding.UTF8.GetBytes(string_0));
+		this.gclass818_0 = gclass818_2;
 	}
 
-	public static BinaryStream smethod_2(this Stream stream_0, bool bool_0 = true)
+	[CompilerGenerated]
+	public GClass818 method_2()
 	{
-		return new BinaryStream(stream_0, ByteConverter.Big, Encoding.UTF8, BooleanCoding.Byte, DateTimeCoding.NetTicks, StringCoding.Int16CharCount, bool_0);
+		return this.gclass818_1;
 	}
 
-	public static Point smethod_3(this Vector2 vector2_0)
+	[CompilerGenerated]
+	private void method_3(GClass818 gclass818_2)
 	{
-		return new Point((int)vector2_0.X, (int)vector2_0.Y);
+		this.gclass818_1 = gclass818_2;
 	}
 
-	public static Vector2 smethod_4(this Rectangle rectangle_0)
+	public override void imethod_2()
 	{
-		return new Vector2((float)(rectangle_0.X + rectangle_0.Width / 2), (float)(rectangle_0.Y + rectangle_0.Height / 2));
 	}
+
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_2().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_0().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void Init(List<byte[]> list_0)
+	{
+		if (list_0.Count != 2)
+		{
+			throw new Exception();
+		}
+		ByteArray byteArray = new ByteArray();
+		ByteArray byteArray2 = new ByteArray();
+		foreach (byte value in list_0[0])
+		{
+			byteArray.Memory.WriteByte(value);
+		}
+		foreach (byte value2 in list_0[1])
+		{
+			byteArray2.Memory.WriteByte(value2);
+		}
+		byteArray.Memory.Position = 0L;
+		byteArray2.Memory.Position = 0L;
+		this.method_1(new GClass818(new ByteArray(byteArray), new ByteArray(byteArray2)));
+		this.method_3(new GClass818(byteArray, byteArray2));
+	}
+
+	public GClass811()
+	{
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
+	}
+
+	[CompilerGenerated]
+	private GClass818 gclass818_0;
+
+	[CompilerGenerated]
+	private GClass818 gclass818_1;
 }

@@ -8,7 +8,7 @@ public class GClass422 : GInterface0
 	{
 		get
 		{
-			return 26203;
+			return 27909;
 		}
 	}
 
@@ -16,59 +16,51 @@ public class GClass422 : GInterface0
 	{
 		get
 		{
-			return 3;
+			return 8;
 		}
 	}
 
-	public GClass422(string string_1 = "", bool bool_0 = false, GClass361 gclass361_0 = null)
+	public GClass422(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.igxcIukzfpare();
-		this.string_0 = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.string_0 = string_1;
-		this.Visible = bool_0;
-		if (gclass361_0 == null)
-		{
-			this.ToolTip = new GClass361(null);
-			return;
-		}
-		this.ToolTip = gclass361_0;
+		this.int_1 = int_2;
+		this.int_0 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26203;
+		return 27909;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 3;
+		return 8;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Visible = binaryStream_0.ReadBoolean();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.ToolTip = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass361);
-		this.ToolTip.imethod_1(binaryStream_0);
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(26203);
+		binaryStream_0.smethod_7(27909);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.WriteBoolean(this.Visible);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		this.ToolTip.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.smethod_7(137);
 	}
 
-	public bool Visible;
+	public int int_0;
 
-	public string string_0;
-
-	public GClass361 ToolTip;
+	public int int_1;
 }

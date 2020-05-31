@@ -4,24 +4,24 @@ using System.Linq;
 
 public static class GClass0
 {
-	public static ICollection<tRdEUP15TaQXKhNGyU> smethod_0<tRdEUP15TaQXKhNGyU>(this ICollection<tRdEUP15TaQXKhNGyU> icollection_0, Func<tRdEUP15TaQXKhNGyU, bool> func_0)
+	public static ICollection<cGWD5UZMgWApw2ey3e> smethod_0<cGWD5UZMgWApw2ey3e>(this ICollection<cGWD5UZMgWApw2ey3e> icollection_0, Func<cGWD5UZMgWApw2ey3e, bool> func_0)
 	{
-		foreach (tRdEUP15TaQXKhNGyU item in icollection_0.Where(func_0).ToList<tRdEUP15TaQXKhNGyU>())
+		foreach (cGWD5UZMgWApw2ey3e item in icollection_0.Where(func_0).ToList<cGWD5UZMgWApw2ey3e>())
 		{
 			icollection_0.Remove(item);
 		}
 		return icollection_0;
 	}
 
-	public static ICollection<BxLfjePqqlk5D0Qs8P> smethod_1<BxLfjePqqlk5D0Qs8P>(this ICollection<BxLfjePqqlk5D0Qs8P> icollection_0)
+	public static ICollection<ubPeJJWFnZUV8yQYQc> smethod_1<ubPeJJWFnZUV8yQYQc>(this ICollection<ubPeJJWFnZUV8yQYQc> icollection_0)
 	{
-		icollection_0.smethod_0(new Func<BxLfjePqqlk5D0Qs8P, bool>(GClass0.<>c__1<BxLfjePqqlk5D0Qs8P>.<>9.method_0));
+		icollection_0.smethod_0(new Func<ubPeJJWFnZUV8yQYQc, bool>(GClass0.<>c__1<ubPeJJWFnZUV8yQYQc>.<>9.method_0));
 		return icollection_0;
 	}
 
-	public static void smethod_2<XCe8HIqK69s2IGm3fb>(this ICollection<XCe8HIqK69s2IGm3fb> icollection_0, IEnumerable<XCe8HIqK69s2IGm3fb> ienumerable_0)
+	public static void smethod_2<zgDb7qn2X3mKxbtTbv>(this ICollection<zgDb7qn2X3mKxbtTbv> icollection_0, IEnumerable<zgDb7qn2X3mKxbtTbv> ienumerable_0)
 	{
-		foreach (XCe8HIqK69s2IGm3fb item in ienumerable_0)
+		foreach (zgDb7qn2X3mKxbtTbv item in ienumerable_0)
 		{
 			icollection_0.Add(item);
 		}

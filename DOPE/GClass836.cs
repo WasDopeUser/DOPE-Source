@@ -1,155 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI;
 using DarkorbitAPI.Structures;
-using DOPE.Common;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass836 : GClass834
+public class GClass836 : StatisticsCategory
 {
-	public GClass847 Behavior
+	public HeroPet Pet { get; }
+
+	public GClass831 Stats { get; }
+
+	public GClass836(HeroPet heroPet_1, GClass831 gclass831_1)
 	{
-		[CompilerGenerated]
-		get
+		Class13.NP5bWyNzLwONS();
+		base..ctor("Pet", new string[]
 		{
-			return this.gclass847_0;
-		}
-		[CompilerGenerated]
-		private set
+			"Name",
+			"Value"
+		}, null);
+		this.Pet = heroPet_1;
+		this.Stats = gclass831_1;
+		base.Subscribe<HeroPet>(this.Pet);
+		base.Subscribe<GClass831>(this.Stats);
+	}
+
+	public override void Update()
+	{
+		GClass836.<>c__DisplayClass7_0 CS$<>8__locals1;
+		CS$<>8__locals1.gclass836_0 = this;
+		List<IRowEntry> list = new List<IRowEntry>();
+		list.Add(this.method_0("Available", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_0), ref CS$<>8__locals1));
+		CS$<>8__locals1.list_0 = list;
+		if (this.Pet.IsAvailable)
 		{
-			if (object.Equals(this.gclass847_0, value))
-			{
-				return;
-			}
-			this.gclass847_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_2);
+			this.method_1("Enabled", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_1), ref CS$<>8__locals1);
+			this.method_1("Name", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_2), ref CS$<>8__locals1);
+			this.method_1("Fuel", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_3), ref CS$<>8__locals1);
+			this.method_1("Level", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_4), ref CS$<>8__locals1);
+			this.method_1("Experience", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_5), ref CS$<>8__locals1);
+			this.method_1("HP", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_6), ref CS$<>8__locals1);
+			this.method_1("Shield", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_7), ref CS$<>8__locals1);
+			this.method_1("Mode", new Func<HeroPet, string>(GClass836.<>c.<>c_0.method_8), ref CS$<>8__locals1);
+			List<IRowEntry> list_ = CS$<>8__locals1.list_0;
+			string key = "Deaths";
+			IValueWrapper<string>[] array = new IValueWrapper<string>[1];
+			array[0] = base.L<GClass831>(new Func<GClass831, string>(GClass836.<>c.<>c_0.method_9));
+			list_.Add(StatisticsCategory.WithName(key, array));
 		}
-	}
-
-	public int FailedJumpCount
-	{
-		[CompilerGenerated]
-		get
+		int num = 0;
+		foreach (IRowEntry rowEntry in CS$<>8__locals1.list_0)
 		{
-			return this.int_2;
+			rowEntry.Order = num++;
+			base.Add(rowEntry);
 		}
-		[CompilerGenerated]
-		private set
-		{
-			if (this.int_2 == value)
-			{
-				return;
-			}
-			this.int_2 = value;
-			this.method_0(Class10.propertyChangedEventArgs_19);
-		}
-	}
-
-	public int method_3()
-	{
-		MenuItem menuItem;
-		return (int)(base.C.Hero.MenuItems.TryGetValue("ammunition_ggportal_quarantine-zone-cpu", out menuItem) ? menuItem.CounterValue : 0.0);
-	}
-
-	public GClass836(GClass824 gclass824_1)
-	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, TargetMap.GG_QZ);
-		this.Behavior = new GClass847(gclass824_1, this);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		if (botProfile_1 == null)
-		{
-			return null;
-		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass836.<>c.<>c_0.QajoOpvlseN));
-	}
-
-	public override int UpdatePriority()
-	{
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile != null)
-		{
-			int qz_GroupSize = mapProfile.QZ_GroupSize;
-		}
-		int num = this.method_3();
-		if ((base.C.Hero.IsInitialized || base.C.Hero.LastStatUpdate.smethod_0(3600000)) && (num == 0 || base.C.Hero.Group.Members.Count < 2))
-		{
-			return int.MinValue;
-		}
-		return base.UpdatePriority();
-	}
-
-	protected override void OnBind()
-	{
-		base.OnBind();
-		base.C.Game.LogMessage += this.method_4;
-	}
-
-	protected override void OnUnbind()
-	{
-		base.OnUnbind();
-		base.C.Game.LogMessage -= this.method_4;
-	}
-
-	private void method_4(GameManager gameManager_0, GClass269 gclass269_0)
-	{
-		if (gclass269_0.string_0 == "0|A|STM|jumpgate_failed_no_key_activated" && this.method_3() > 0)
-		{
-			base.C.Server.method_14("ammunition_ggportal_quarantine-zone-cpu", false, false);
-			return;
-		}
-	}
-
-	public override GClass837 GetBehavior()
-	{
-		if (base.C.Map.MapId == 229)
-		{
-			return this.Behavior;
-		}
-		return base.GetBehavior();
-	}
-
-	public override void ClearStats()
-	{
-		base.ClearStats();
-		this.FailedJumpCount = 0;
-	}
-
-	public override bool TrySwitchMap(out int int_3)
-	{
-		if (!base.C.IsStopping)
-		{
-			if (base.State == ModuleState.Started)
-			{
-				int_3 = MapUtils.smethod_0(base.C.MapProfile.TargetMap.GetName(), base.C.Hero.FactionId);
-				return int_3 != base.C.Map.MapId;
-			}
-		}
-		int_3 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
-		return true;
-	}
-
-	public override void HandleError(GClass826.GEnum10 genum10_0)
-	{
-		TimeSpan value = TimeSpan.FromMinutes(3.0);
-		base.C.Timeout = new DateTime?(DateTime.Now.Add(value));
-		base.C.method_13(true, false);
+		base.Update();
 	}
 
 	[CompilerGenerated]
-	private GClass847 gclass847_0;
+	private IRowEntry method_0(string string_0, Func<HeroPet, string> func_0, ref GClass836.<>c__DisplayClass7_0 <>c__DisplayClass7_0_0)
+	{
+		return StatisticsCategory.WithName(string_0, new IValueWrapper<string>[]
+		{
+			base.L<HeroPet>(func_0)
+		});
+	}
 
 	[CompilerGenerated]
-	private int int_2;
+	private void method_1(string string_0, Func<HeroPet, string> func_0, ref GClass836.<>c__DisplayClass7_0 <>c__DisplayClass7_0_0)
+	{
+		<>c__DisplayClass7_0_0.list_0.Add(this.method_0(string_0, func_0, ref <>c__DisplayClass7_0_0));
+	}
+
+	[CompilerGenerated]
+	private readonly HeroPet heroPet_0;
+
+	[CompilerGenerated]
+	private readonly GClass831 gclass831_0;
 }

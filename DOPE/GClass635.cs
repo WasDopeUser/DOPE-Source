@@ -8,7 +8,7 @@ public class GClass635 : GInterface0
 	{
 		get
 		{
-			return 9269;
+			return 60;
 		}
 	}
 
@@ -16,55 +16,39 @@ public class GClass635 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 0;
 		}
 	}
 
-	public GClass635(string string_0 = "", int int_1 = 0, int int_2 = 0)
+	public GClass635()
 	{
-		Class13.igxcIukzfpare();
-		this.Id = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.Id = string_0;
-		this.Progress = int_1;
-		this.int_0 = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9269;
+		return 60;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 0;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
-		this.Id = binaryStream_0.smethod_2();
-		this.Progress = binaryStream_0.smethod_0();
-		this.Progress = (this.Progress << 13 | U.smethod_0(this.Progress, 19));
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(9269);
+		binaryStream_0.smethod_7(60);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
-		binaryStream_0.MoioCjQkqp0(this.Id);
-		binaryStream_0.smethod_3(U.smethod_0(this.Progress, 13) | this.Progress << 19);
+		binaryStream_0.smethod_7(-10652);
 	}
-
-	public int int_0;
-
-	public string Id;
-
-	public int Progress;
 }

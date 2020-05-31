@@ -8,7 +8,7 @@ public class GClass573 : GInterface0
 	{
 		get
 		{
-			return 28524;
+			return 4069;
 		}
 	}
 
@@ -16,50 +16,37 @@ public class GClass573 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 0;
 		}
 	}
 
-	public GClass573(string string_1 = "", double double_1 = 0.0)
+	public GClass573()
 	{
-		Class13.igxcIukzfpare();
-		this.string_0 = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.string_0 = string_1;
-		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28524;
+		return 4069;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 0;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(28524);
+		binaryStream_0.smethod_7(4069);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(8480);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		binaryStream_0.WriteDouble(this.double_0);
 	}
-
-	public string string_0;
-
-	public double double_0;
 }

@@ -6,7 +6,7 @@ public sealed class GAttribute5 : Attribute
 {
 	public GAttribute5([GAttribute1] string name)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.Name = name;
 	}

@@ -1,165 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using DOPE.Common;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
-using DOPE.UI.Models;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass833 : GClass829
+public class GClass833 : StatisticsCategory
 {
-	public GEnum5 GalaxyGateType
+	public Dictionary<string, GClass833.GStruct0> DeathLog
 	{
 		[CompilerGenerated]
 		get
 		{
-			return this.genum5_0;
+			return this.dictionary_0;
 		}
 		[CompilerGenerated]
-		set
+		private set
 		{
-			if (this.genum5_0 == value)
+			if (object.Equals(this.dictionary_0, value))
 			{
 				return;
 			}
-			this.genum5_0 = value;
-			this.method_0(Class10.hahoxIyVbok);
+			this.dictionary_0 = value;
+			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_17);
 		}
 	}
 
-	public GClass833(GClass824 gclass824_1, TargetMap targetMap_1)
+	public GClass833(Dictionary<string, GClass833.GStruct0> dictionary_1)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, targetMap_1, "G", int.MinValue);
-		this.GalaxyGateType = MapUtils.smethod_8((int)targetMap_1);
-	}
-
-	protected override void OnBind()
-	{
-		base.OnBind();
-		base.C.Game.Map.ShipCreated += this.method_2;
-		base.C.Game.Map.ShipDestroyed += this.method_1;
-	}
-
-	protected override void OnUnbind()
-	{
-		base.OnUnbind();
-		base.C.Game.Map.ShipCreated -= this.method_2;
-		base.C.Game.Map.ShipDestroyed -= this.method_1;
-	}
-
-	private void method_1(Map map_0, Ship ship_0)
-	{
-		GClass837 behavior = base.C.Behavior;
-		if (ship_0.IsNpc)
+		Class13.NP5bWyNzLwONS();
+		base..ctor("Deaths", new string[]
 		{
-			GClass846 gclass = behavior as GClass846;
-			if (gclass != null)
+			"Killer",
+			"Count",
+			"LastDeath"
+		}, null);
+		this.DeathLog = dictionary_1;
+	}
+
+	public void method_0(string string_0)
+	{
+		Dictionary<string, GClass833.GStruct0> deathLog = this.DeathLog;
+		lock (deathLog)
+		{
+			GClass833.GStruct0 value;
+			this.DeathLog.TryGetValue(string_0, out value);
+			value.Count++;
+			value.dateTimeOffset_0 = DateTimeOffset.Now;
+			this.DeathLog[string_0] = value;
+		}
+	}
+
+	public override void Rebuild()
+	{
+	}
+
+	public override void Update()
+	{
+		Dictionary<string, GClass833.GStruct0> deathLog = this.DeathLog;
+		lock (deathLog)
+		{
+			foreach (KeyValuePair<string, GClass833.GStruct0> keyValuePair in this.DeathLog)
 			{
-				gclass.method_36(false);
+				GClass833.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass833.<>c__DisplayClass8_0();
+				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
+				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.AkrHmfhPviQ));
+				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value.Count);
+				(rowEntry.Cells[2] as VariableValue<string>).Value = string.Format("{0}", keyValuePair.Value.dateTimeOffset_0);
+				rowEntry.Order = keyValuePair.Value.Count;
 			}
 		}
-	}
-
-	private void method_2(Map map_0, Ship ship_0)
-	{
-		GClass837 behavior = base.C.Behavior;
-		if (ship_0.IsNpc)
-		{
-			GClass846 gclass = behavior as GClass846;
-			if (gclass != null && !gclass.method_35())
-			{
-				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass833.<>c.<>c_0.method_0)) == 1;
-				gclass.method_36(flag);
-				if (flag)
-				{
-					base.Log.Info("New wave -- {ship}", ship_0.Name);
-				}
-			}
-		}
-	}
-
-	public override bool CheckStopped()
-	{
-		return !base.C.Map.IsGG;
-	}
-
-	protected virtual bool vmethod_0()
-	{
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(this.GalaxyGateType) : null;
-		if (jumpgateGate == null)
-		{
-			return false;
-		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?((int)base.Map), 0) : null;
-		if (selectedNpcModel != null && selectedNpcModel.Enabled)
-		{
-			if (jumpgateGate.prepared)
-			{
-				if (base.Context.Account.JumpGGLastLife || jumpgateGate.livesLeft != 1)
-				{
-					return true;
-				}
-			}
-			return false;
-		}
-		return false;
-	}
-
-	public override int UpdatePriority()
-	{
-		int result = base.UpdatePriority();
-		DopeServiceStatus serviceStatus = base.C.MainController.Parent.ServiceStatus;
-		if (serviceStatus != null && serviceStatus.EnabledGG && this.vmethod_0())
-		{
-			return result;
-		}
-		return int.MinValue;
-	}
-
-	public virtual bool eypBpbBoFoK()
-	{
-		int mapId = base.Context.Map.MapId;
-		GEnum5 galaxyGateType = this.GalaxyGateType;
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		if (((ggInfo != null) ? ggInfo.GetGate(galaxyGateType) : null) == null)
-		{
-			return false;
-		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?(mapId), 0) : null;
-		return selectedNpcModel != null && mapProfile.NpcWhitelist.LastOrDefault<SelectedNpcModel>() == selectedNpcModel;
-	}
-
-	public virtual SelectedNpcModel vmethod_1(Ship ship_0)
-	{
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile == null)
-		{
-			return null;
-		}
-		return mapProfile.GetModel(Ship.Default, base.C.Map, null, 0);
-	}
-
-	public override bool TrySwitchMap(out int int_2)
-	{
-		if (!base.C.IsStopping)
-		{
-			if (base.State == ModuleState.Started)
-			{
-				int_2 = MapUtils.smethod_0(base.C.MapProfile.TargetMap.GetName(), base.C.Hero.FactionId);
-				return true;
-			}
-		}
-		int_2 = MapUtils.smethod_10(1, base.C.Hero.FactionId);
-		return true;
+		base.Update();
 	}
 
 	[CompilerGenerated]
-	private GEnum5 genum5_0;
+	private Dictionary<string, GClass833.GStruct0> dictionary_0;
+
+	public struct GStruct0
+	{
+		public int Count;
+
+		public DateTimeOffset dateTimeOffset_0;
+	}
 }

@@ -1,56 +1,62 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass788<JGPNTtBEmmG1BPGN8CR> : GInterface7 where JGPNTtBEmmG1BPGN8CR : GInterface7
+public class GClass788 : GClass787, GInterface0
 {
-	[CompilerGenerated]
-	public virtual JGPNTtBEmmG1BPGN8CR vmethod_0()
+	short GInterface0.Id
 	{
-		return this.gparam_0;
-	}
-
-	[CompilerGenerated]
-	public virtual void vmethod_1(JGPNTtBEmmG1BPGN8CR meIr9DB4lDEaS0WTWUX)
-	{
-		this.gparam_0 = meIr9DB4lDEaS0WTWUX;
-	}
-
-	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		JGPNTtBEmmG1BPGN8CR jgpnttBEmmG1BPGN8CR = this.vmethod_0();
-		if (jgpnttBEmmG1BPGN8CR == null)
+		get
 		{
-			return;
+			return 31500;
 		}
-		jgpnttBEmmG1BPGN8CR.imethod_0(byte_0, int_0, int_1);
 	}
 
-	public virtual void imethod_1(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		JGPNTtBEmmG1BPGN8CR jgpnttBEmmG1BPGN8CR = this.vmethod_0();
-		if (jgpnttBEmmG1BPGN8CR == null)
+		get
 		{
-			return;
+			return 4;
 		}
-		jgpnttBEmmG1BPGN8CR.imethod_1(byte_0, int_0, int_1);
 	}
 
-	public virtual void imethod_2()
+	public GClass788(int int_1 = 0)
 	{
-		JGPNTtBEmmG1BPGN8CR jgpnttBEmmG1BPGN8CR = this.vmethod_0();
-		if (jgpnttBEmmG1BPGN8CR == null)
-		{
-			return;
-		}
-		jgpnttBEmmG1BPGN8CR.imethod_2();
-	}
-
-	protected GClass788()
-	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
+		this.int_0 = int_1;
 	}
 
-	[CompilerGenerated]
-	private JGPNTtBEmmG1BPGN8CR gparam_0;
+	public override int vmethod_0()
+	{
+		return 31500;
+	}
+
+	public override int vmethod_1()
+	{
+		return 4;
+	}
+
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		base.HrqIugnatr8(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		binaryStream_0.smethod_1();
+	}
+
+	public override void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(31500);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected override void vmethod_2(BinaryStream binaryStream_0)
+	{
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_7(-1251);
+	}
+
+	public int int_0;
 }

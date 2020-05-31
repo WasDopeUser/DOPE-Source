@@ -9,8 +9,8 @@ using DOPE.Common.Models.Bot.Stats;
 
 namespace DOPE.Common.Models.Bot
 {
-	[Guid("63669AC1-AF22-4F9E-BDD6-5E73B550D772")]
 	[DataContract]
+	[Guid("63669AC1-AF22-4F9E-BDD6-5E73B550D772")]
 	public class BotStats : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -133,7 +133,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX1>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_22);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_23);
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX2>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_23);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_24);
 			}
 		}
 
@@ -173,7 +173,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX3>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_24);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_25);
 			}
 		}
 
@@ -193,7 +193,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX4>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.DtAoYzgVolf);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_26);
 			}
 		}
 
@@ -213,7 +213,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedSAB>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_21);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_22);
 			}
 		}
 
@@ -233,7 +233,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedJackpot>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_20);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_21);
 			}
 		}
 
@@ -293,7 +293,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<Resets>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_79);
 			}
 		}
 
@@ -333,7 +333,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<PetDeaths>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_67);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_72);
 			}
 		}
 
@@ -489,8 +489,8 @@ namespace DOPE.Common.Models.Bot
 			propertyChanged(this, args);
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

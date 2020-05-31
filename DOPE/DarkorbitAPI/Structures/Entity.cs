@@ -39,7 +39,7 @@ namespace DarkorbitAPI.Structures
 
 		protected Entity(int int_0, int int_1)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.SyncRoot = new object();
 			base..ctor();
 			this._posX = int_0;

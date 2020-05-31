@@ -100,7 +100,7 @@ namespace DOPE.UI.Controls
 
 		public TreeNode()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.Children = new List<TreeNode>();
 			base..ctor();
 		}

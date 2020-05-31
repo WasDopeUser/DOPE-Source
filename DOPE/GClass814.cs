@@ -1,96 +1,77 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI.CommonStructures;
 
-public static class GClass814
+public class GClass814 : GClass808
 {
-	public static string smethod_0(string string_1)
+	[CompilerGenerated]
+	public GClass821 method_0()
 	{
-		return string.Format(GClass814.string_0, string_1);
+		return this.gclass821_0;
 	}
 
-	public static string smethod_1(string string_1, string string_2 = null)
+	[CompilerGenerated]
+	private void method_1(GClass821 gclass821_2)
 	{
-		if (string_2 == null)
+		this.gclass821_0 = gclass821_2;
+	}
+
+	[CompilerGenerated]
+	public GClass821 method_2()
+	{
+		return this.gclass821_1;
+	}
+
+	[CompilerGenerated]
+	private void method_3(GClass821 gclass821_2)
+	{
+		this.gclass821_1 = gclass821_2;
+	}
+
+	public override void imethod_2()
+	{
+	}
+
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_2().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_0().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void Init(List<byte[]> list_0)
+	{
+		if (list_0.Count != 2)
 		{
-			return GClass814.smethod_0(string_1) + "/indexInternal.es";
+			throw new Exception();
 		}
-		return GClass814.smethod_0(string_1) + "/indexInternal.es?action=" + string_2;
-	}
-
-	public static string smethod_2(string string_1)
-	{
-		return GClass814.smethod_1(string_1, "internalMapRevolution");
-	}
-
-	public static string Maps(string server)
-	{
-		return GClass814.smethod_0(server) + "/spacemap/xml/maps.php";
-	}
-
-	public static string smethod_3()
-	{
-		return "https://powerofdark.space/static/maps.xml";
-	}
-
-	public static string smethod_4(string string_1)
-	{
-		return GClass814.smethod_1(string_1, "externalLogout");
-	}
-
-	public static string smethod_5(string string_1)
-	{
-		return GClass814.smethod_0(string_1) + "/ajax/shop.php";
-	}
-
-	public static string smethod_6(string string_1, string string_2, string string_3, string string_4 = "init")
-	{
-		return string.Concat(new string[]
+		Vector<uint> vector = new Vector<uint>();
+		Vector<uint> vector2 = new Vector<uint>();
+		foreach (byte item in list_0[0])
 		{
-			GClass814.smethod_0(string_1),
-			"/flashinput/galaxyGates.php?userID=",
-			string_2,
-			"&action=",
-			string_4,
-			"&sid=",
-			string_3
-		});
+			vector.Add((uint)item);
+		}
+		foreach (byte item2 in list_0[1])
+		{
+			vector2.Add((uint)item2);
+		}
+		this.method_1(new GClass821(new Vector<uint>(vector2), new Vector<uint>(vector)));
+		this.method_3(new GClass821(vector2, vector));
 	}
 
-	public static string smethod_7(string string_1)
+	public GClass814()
 	{
-		return GClass814.smethod_0(string_1) + "/flashAPI/dailyLogin.php?doBook=1";
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
 	}
 
-	public static string smethod_8(string string_1)
-	{
-		return GClass814.smethod_0(string_1) + "/ajax/instances.php";
-	}
+	[CompilerGenerated]
+	private GClass821 gclass821_0;
 
-	public static string smethod_9(string string_1)
-	{
-		return GClass814.smethod_0(string_1) + "/flashAPI/inventory.php";
-	}
-
-	public static string smethod_10(string string_1)
-	{
-		return GClass814.smethod_1(string_1, "internalNanoTechFactory");
-	}
-
-	public static string smethod_11(string string_1)
-	{
-		return GClass814.smethod_0(string_1) + "/ajax/nanotechFactory.php";
-	}
-
-	public static string smethod_12()
-	{
-		return "https://powerofdark.space/static/ui.txt";
-	}
-
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass814()
-	{
-		Class13.igxcIukzfpare();
-		GClass814.string_0 = "https://{0}.darkorbit.com";
-	}
-
-	public static string string_0;
+	[CompilerGenerated]
+	private GClass821 gclass821_1;
 }

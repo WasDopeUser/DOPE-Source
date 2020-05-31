@@ -8,7 +8,7 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 18257;
+			return 26805;
 		}
 	}
 
@@ -16,57 +16,55 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 12;
 		}
 	}
 
-	public GClass595(string string_3 = "", string string_4 = "", string string_5 = "")
+	public GClass595(int int_1 = 0, double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.igxcIukzfpare();
-		this.string_0 = "";
-		this.string_1 = "";
-		this.string_2 = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.string_1 = string_3;
-		this.string_2 = string_4;
-		this.string_0 = string_5;
+		this.int_0 = int_1;
+		this.double_0 = double_2;
+		this.double_1 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 18257;
+		return 26805;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 12;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_1();
+		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.double_1 = (double)binaryStream_0.smethod_10();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.string_1 = binaryStream_0.smethod_2();
-		this.string_2 = binaryStream_0.smethod_2();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(18257);
+		binaryStream_0.smethod_7(26805);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(11804);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		binaryStream_0.MoioCjQkqp0(this.string_1);
-		binaryStream_0.MoioCjQkqp0(this.string_2);
+		binaryStream_0.smethod_7(-2961);
+		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_9(this.double_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 	}
 
-	public string string_0;
+	public double double_0;
 
-	public string string_1;
+	public double double_1;
 
-	public string string_2;
+	public int int_0;
 }

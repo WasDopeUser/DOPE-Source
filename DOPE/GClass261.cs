@@ -8,7 +8,7 @@ public class GClass261 : GInterface0
 	{
 		get
 		{
-			return 25747;
+			return 32586;
 		}
 	}
 
@@ -16,44 +16,71 @@ public class GClass261 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 9;
 		}
 	}
 
-	public GClass261(uint uint_1 = 0U)
+	public GClass261(GClass262 gclass262_1 = null, int int_2 = 0, int int_3 = 0, bool bool_0 = false)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.uint_0 = uint_1;
+		if (gclass262_1 == null)
+		{
+			this.gclass262_0 = new GClass262(0U);
+		}
+		else
+		{
+			this.gclass262_0 = gclass262_1;
+		}
+		this.int_1 = int_2;
+		this.int_0 = int_3;
+		this.Enabled = bool_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 25747;
+		return 32586;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 9;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_1();
+		this.gclass262_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass262);
+		this.gclass262_0.HrqIugnatr8(binaryStream_0);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		this.Enabled = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(25747);
+		binaryStream_0.smethod_7(32586);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(-12589);
-		binaryStream_0.smethod_5(this.uint_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		binaryStream_0.smethod_7(27822);
+		this.gclass262_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		binaryStream_0.WriteBoolean(this.Enabled);
+		binaryStream_0.smethod_7(-31892);
 	}
 
-	public uint uint_0;
+	public int int_0;
+
+	public GClass262 gclass262_0;
+
+	public int int_1;
+
+	public bool Enabled;
 }

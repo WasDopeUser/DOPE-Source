@@ -8,7 +8,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 	{
 		public EnemyLocatorResultCollection()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.Entries = new Dictionary<int, EnemyLocatorResultCollection.Entry>();
 			base..ctor();
 		}
@@ -72,7 +72,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 			public Entry()
 			{
-				Class13.igxcIukzfpare();
+				Class13.NP5bWyNzLwONS();
 				base..ctor();
 			}
 		}

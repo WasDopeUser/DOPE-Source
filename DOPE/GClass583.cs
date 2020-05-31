@@ -8,7 +8,7 @@ public class GClass583 : GInterface0
 	{
 		get
 		{
-			return 21996;
+			return 3997;
 		}
 	}
 
@@ -16,71 +16,44 @@ public class GClass583 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass583(int int_1 = 0, Vector<GClass453> vector_1 = null)
+	public GClass583(uint uint_1 = 0U)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.int_0 = int_1;
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass453>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.uint_0 = uint_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21996;
+		return 3997;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass453 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass453;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(21996);
+		binaryStream_0.smethod_7(3997);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(22428);
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (GClass453 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(-29451);
 	}
 
-	public int int_0;
-
-	public Vector<GClass453> vector_0;
+	public uint uint_0;
 }

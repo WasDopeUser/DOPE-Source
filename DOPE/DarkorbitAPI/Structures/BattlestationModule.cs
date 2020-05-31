@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Structures
 	{
 		public BattlestationModule(int int_0, int int_1)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor(int_0, int_1);
 			base.Hitbox = MapGrid.smethod_2(int_0 - 650, int_1 - 650, 1300, 1300);
 		}

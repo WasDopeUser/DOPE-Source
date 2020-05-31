@@ -8,7 +8,7 @@ public class GClass609 : GInterface0
 	{
 		get
 		{
-			return 8898;
+			return 11492;
 		}
 	}
 
@@ -20,17 +20,25 @@ public class GClass609 : GInterface0
 		}
 	}
 
-	public GClass609(int int_2 = 0, int int_3 = 0)
+	public GClass609(GClass132 gclass132_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		if (gclass132_1 == null)
+		{
+			this.gclass132_0 = new GClass132(0U);
+		}
+		else
+		{
+			this.gclass132_0 = gclass132_1;
+		}
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8898;
+		return 11492;
 	}
 
 	public virtual int vmethod_1()
@@ -38,27 +46,36 @@ public class GClass609 : GInterface0
 		return 8;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		this.gclass132_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass132);
+		this.gclass132_0.HrqIugnatr8(binaryStream_0);
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 9) | this.int_1 << 23);
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(8898);
+		binaryStream_0.smethod_7(11492);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-		binaryStream_0.smethod_3(this.int_1 << 9 | U.smethod_0(this.int_1, 23));
+		binaryStream_0.smethod_7(-13136);
+		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.gclass132_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.smethod_7(27098);
 	}
 
 	public int int_0;
+
+	public GClass132 gclass132_0;
 
 	public int int_1;
 }

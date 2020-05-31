@@ -9,19 +9,19 @@ namespace DOPE.UI.Models.Commands
 
 		public bool CanExecute(object parameter)
 		{
-			return parameter is GClass816;
+			return parameter is GClass831;
 		}
 
 		public void Execute(object parameter)
 		{
-			GClass816 gclass = parameter as GClass816;
+			GClass831 gclass = parameter as GClass831;
 			gclass.Reset();
 			gclass.Started = new DateTime?(DateTime.Now);
 		}
 
 		public ResetStatsCommand()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.CanExecuteChanged = new EventHandler(ResetStatsCommand.<>c.<>9.method_0);
 			base..ctor();
 		}
@@ -29,7 +29,7 @@ namespace DOPE.UI.Models.Commands
 		// Note: this type is marked as 'beforefieldinit'.
 		static ResetStatsCommand()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			ResetStatsCommand.Instance = new ResetStatsCommand();
 		}
 

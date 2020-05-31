@@ -63,11 +63,11 @@ internal static class <>PropertyChangedEventArgs
 
 	internal static readonly PropertyChangedEventArgs Server = new PropertyChangedEventArgs("Server");
 
-	internal static readonly PropertyChangedEventArgs Sid = new PropertyChangedEventArgs("Sid");
-
 	internal static readonly PropertyChangedEventArgs Timestamp = new PropertyChangedEventArgs("Timestamp");
 
 	internal static readonly PropertyChangedEventArgs UserAgent = new PropertyChangedEventArgs("UserAgent");
 
 	internal static readonly PropertyChangedEventArgs Value = new PropertyChangedEventArgs("Value");
+
+	internal static readonly PropertyChangedEventArgs Web = new PropertyChangedEventArgs("Web");
 }

@@ -33,7 +33,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Filtered>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.Filtered);
+				this.method_12(<>PropertyChangedEventArgs.Filtered);
 			}
 		}
 
@@ -52,7 +52,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<All>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.All);
+				this.method_12(<>PropertyChangedEventArgs.All);
 			}
 		}
 
@@ -71,7 +71,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<FilterReceived>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.FilterReceived);
+				this.method_12(<>PropertyChangedEventArgs.FilterReceived);
 			}
 		}
 
@@ -90,7 +90,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Commands>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.Commands);
+				this.method_12(<>PropertyChangedEventArgs.Commands);
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<CommandById>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.CommandById);
+				this.method_12(<>PropertyChangedEventArgs.CommandById);
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<JumpToLast>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.JumpToLast);
+				this.method_12(<>PropertyChangedEventArgs.JumpToLast);
 			}
 		}
 
@@ -147,13 +147,13 @@ namespace DOPE.UI
 					return;
 				}
 				this.<SearchText>k__BackingField = value;
-				this.method_10(<>PropertyChangedEventArgs.SearchText);
+				this.method_12(<>PropertyChangedEventArgs.SearchText);
 			}
 		}
 
 		public DebugWindow()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.<Filtered>k__BackingField = new ObservableCollection<TreeNode>();
 			this.<All>k__BackingField = new List<TreeHeaderNode>();
 			this.<JumpToLast>k__BackingField = true;
@@ -178,8 +178,8 @@ namespace DOPE.UI
 		{
 			foreach (GInterface5 ginterface in this._attached)
 			{
-				ginterface.MessageReceived -= this.method_4;
-				ginterface.MessageSent -= this.method_5;
+				ginterface.MessageReceived -= this.method_5;
+				ginterface.MessageSent -= this.method_6;
 			}
 			this._attached.Clear();
 		}
@@ -188,7 +188,7 @@ namespace DOPE.UI
 		{
 			if (e.PropertyName == "Enabled")
 			{
-				this.method_1();
+				this.method_2();
 			}
 		}
 
@@ -211,30 +211,30 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void vtAoUgUpLs<wdFgYBkNrasm7uhXlC>(GClass84<wdFgYBkNrasm7uhXlC> gclass84_0) where wdFgYBkNrasm7uhXlC : GInterface7
+		public void method_1<Fl4buWsl5SHRoTqOvA>(GClass84<Fl4buWsl5SHRoTqOvA> gclass84_0) where Fl4buWsl5SHRoTqOvA : GInterface7
 		{
-			gclass84_0.MessageSent += this.method_5;
-			gclass84_0.MessageReceived += this.method_4;
+			gclass84_0.MessageSent += this.method_6;
+			gclass84_0.MessageReceived += this.method_5;
 			this._attached.Add(gclass84_0);
 		}
 
-		public void method_1()
+		public void method_2()
 		{
 			object @lock = this._lock;
 			lock (@lock)
 			{
 				BindingOperations.DisableCollectionSynchronization(this.Filtered);
-				this.Filtered = new ObservableCollection<TreeNode>(this.Filtered.Where(new Func<TreeNode, bool>(this.method_9)));
+				this.Filtered = new ObservableCollection<TreeNode>(this.Filtered.Where(new Func<TreeNode, bool>(this.TsyHqovntg)));
 				BindingOperations.EnableCollectionSynchronization(this.Filtered, this._lock);
 			}
 		}
 
-		public bool method_2(TreeHeaderNode treeHeaderNode_0)
+		public bool method_3(TreeHeaderNode treeHeaderNode_0)
 		{
 			return (this.FilterReceived == null || this.FilterReceived.Value == treeHeaderNode_0.Received) && treeHeaderNode_0.Enabled;
 		}
 
-		public void method_3(GInterface0 ginterface0_0, bool bool_0)
+		public void method_4(GInterface0 ginterface0_0, bool bool_0)
 		{
 			DateTime now = DateTime.Now;
 			TreeHeaderNode treeHeaderNode = TreeNode.smethod_0(ginterface0_0, this.CommandById[(int)ginterface0_0.Id], now, bool_0);
@@ -250,7 +250,7 @@ namespace DOPE.UI
 				int num = commandViewModel2.CountSent;
 				commandViewModel2.CountSent = num + 1;
 			}
-			if (this.method_2(treeHeaderNode))
+			if (this.method_3(treeHeaderNode))
 			{
 				object @lock = this._lock;
 				lock (@lock)
@@ -259,27 +259,27 @@ namespace DOPE.UI
 				}
 				if (this.JumpToLast)
 				{
-					base.Dispatcher.BeginInvoke(new Action(this.tlNodldfo7), Array.Empty<object>());
+					base.Dispatcher.BeginInvoke(new Action(this.method_11), Array.Empty<object>());
 				}
 			}
 		}
 
-		private void method_4(GInterface0 ginterface0_0)
-		{
-			this.method_3(ginterface0_0, true);
-		}
-
 		private void method_5(GInterface0 ginterface0_0)
 		{
-			this.method_3(ginterface0_0, false);
+			this.method_4(ginterface0_0, true);
 		}
 
-		private void method_6(object sender, RoutedEventArgs e)
+		private void method_6(GInterface0 ginterface0_0)
 		{
-			this.method_1();
+			this.method_4(ginterface0_0, false);
 		}
 
 		private void method_7(object sender, RoutedEventArgs e)
+		{
+			this.method_2();
+		}
+
+		private void method_8(object sender, RoutedEventArgs e)
 		{
 			this.Filtered.Clear();
 			foreach (CommandViewModel commandViewModel in this.Commands)
@@ -289,43 +289,43 @@ namespace DOPE.UI
 			}
 		}
 
-		private void zAgoigaPg8(object sender, RoutedEventArgs e)
+		private void method_9(object sender, RoutedEventArgs e)
 		{
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-		internal Delegate method_8(Type type_0, string string_0)
+		[DebuggerNonUserCode]
+		internal Delegate method_10(Type type_0, string string_0)
 		{
 			return Delegate.CreateDelegate(type_0, this, string_0);
 		}
 
-		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		[EditorBrowsable(EditorBrowsableState.Never)]
+		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		[DebuggerNonUserCode]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			if (connectionId == 6)
 			{
-				((CheckBox)target).Click += this.zAgoigaPg8;
+				((CheckBox)target).Click += this.method_9;
 			}
 		}
 
 		[CompilerGenerated]
-		private bool method_9(TreeNode treeNode_0)
+		private bool TsyHqovntg(TreeNode treeNode_0)
 		{
-			return this.method_2(treeNode_0 as TreeHeaderNode);
+			return this.method_3(treeNode_0 as TreeHeaderNode);
 		}
 
 		[CompilerGenerated]
-		private void tlNodldfo7()
+		private void method_11()
 		{
 			this.CmdList.ScrollToEnd();
 		}
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_10(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_12(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

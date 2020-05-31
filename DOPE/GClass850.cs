@@ -1,32 +1,37 @@
 ﻿using System;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
+using DOPE.UI.Models;
 
-public class GClass850 : GClass848
+public class GClass850 : GClass849
 {
-	public GClass850(GClass824 gclass824_1)
+	public GClass850(GClass839 gclass839_1, TargetMap targetMap_1)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, "GgInfoProvider");
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1, targetMap_1);
 	}
 
-	public override int Cooldown
-	{
-		get
-		{
-			if (base.Context.Game.Web.GgInfo != null)
-			{
-				return 60000;
-			}
-			return 2000;
-		}
-	}
-
-	public override void Execute()
-	{
-		base.Context.Game.Web.GetGalaxyGatesInfo();
-	}
-
-	public override bool vmethod_0()
+	protected override bool vmethod_0()
 	{
 		return true;
+	}
+
+	public override bool vmethod_1()
+	{
+		return false;
+	}
+
+	public override SelectedNpcModel vmethod_2(Ship ship_0)
+	{
+		if (ship_0 == null)
+		{
+			return null;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		if (mapProfile == null)
+		{
+			return null;
+		}
+		return mapProfile.GetModel(ship_0, base.C.Map, null, 0);
 	}
 }

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass606 : GInterface0
+public class GClass606 : GClass602, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 29396;
+			return 3439;
 		}
 	}
 
@@ -16,67 +16,46 @@ public class GClass606 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 12;
 		}
 	}
 
-	public GClass606(Vector<GClass668> vector_1 = null)
+	public GClass606(string string_0 = "", double double_0 = 0.0)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass668>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		Class13.NP5bWyNzLwONS();
+		base..ctor(string_0);
+		this.Value = double_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 29396;
+		return 3439;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 12;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
+		base.HrqIugnatr8(binaryStream_0);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass668 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass668;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.Value = binaryStream_0.ReadDouble();
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(29396);
+		binaryStream_0.smethod_7(3439);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(12281);
-		binaryStream_0.smethod_6(15975);
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (GClass668 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(21582);
+		binaryStream_0.WriteDouble(this.Value);
 	}
 
-	public Vector<GClass668> vector_0;
+	public double Value;
 }

@@ -1,75 +1,76 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-using NLog;
+using System.Collections.Generic;
+using System.Linq;
+using DarkorbitAPI.Packets.Static;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
 
-public abstract class GClass848 : GInterface9
+public class GClass848 : GClass845
 {
-	public GClass824 Context { get; }
-
-	public Logger Log { get; set; }
-
-	[CompilerGenerated]
-	public DateTimeOffset method_0()
+	public override bool IsInterruptible
 	{
-		return this.dateTimeOffset_0;
-	}
-
-	[CompilerGenerated]
-	public void method_1(DateTimeOffset dateTimeOffset_1)
-	{
-		this.dateTimeOffset_0 = dateTimeOffset_1;
-	}
-
-	public abstract int Cooldown { get; }
-
-	public GClass848(GClass824 gclass824_1, string string_0)
-	{
-		Class13.igxcIukzfpare();
-		base..ctor();
-		this.Context = gclass824_1;
-		this.Log = this.Context.method_69("BackgroundLogic-" + string_0);
-	}
-
-	void GInterface9.Execute()
-	{
-		this.bool_0 = true;
-		try
+		get
 		{
-			this.Execute();
-		}
-		catch (Exception ex)
-		{
-			this.Log.Error("Error executing background task {exception}", ex.ToString());
-		}
-		finally
-		{
-			this.bool_0 = false;
-			this.method_1(DateTimeOffset.Now);
+			return false;
 		}
 	}
 
-	public abstract void Execute();
-
-	public abstract bool vmethod_0();
-
-	bool GInterface9.WUqBdU8HhfK()
+	public GClass848(GClass839 gclass839_1)
 	{
-		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1, TargetMap.PayloadEscort);
 	}
 
-	public virtual void imethod_1()
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
 	{
-		this.method_1(DateTimeOffset.MinValue);
+		if (botProfile_1 == null)
+		{
+			return null;
+		}
+		List<MapProfile> maps = botProfile_1.Maps;
+		if (maps == null)
+		{
+			return null;
+		}
+		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass848.<>c.<>c_0.method_0));
 	}
 
-	[CompilerGenerated]
-	private readonly GClass824 gclass824_0;
+	public override bool TrySwitchMap(out int int_2)
+	{
+		int_2 = 431;
+		if (MapUtils.smethod_2(base.C.Map.MapId) == MapGroup.PayloadEscort)
+		{
+			int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
+		}
+		return true;
+	}
 
-	[CompilerGenerated]
-	private Logger logger_0;
+	public override int UpdatePriority()
+	{
+		DateTimeOffset eventGateOpening = base.C.Game.EventGateOpening;
+		DateTimeOffset eventGateClosing = base.C.Game.EventGateClosing;
+		DateTimeOffset now = DateTimeOffset.Now;
+		bool flag = (eventGateOpening != default(DateTimeOffset) && eventGateOpening < now && eventGateClosing < now) || base.C.Hero.LastStatUpdate == default(DateTimeOffset);
+		bool flag2 = base.C.Hero.method_24("resource_payload-keys") > 0.0;
+		if (!flag && (!(eventGateClosing > eventGateOpening) || !(eventGateClosing > now) || !flag2) && (!base.C.gclass856_0.method_28().smethod_0(120000) || !base.C.Game.LastDied.smethod_0(60000)))
+		{
+			return int.MinValue;
+		}
+		int num = base.UpdatePriority();
+		if (num > 0)
+		{
+			base.C.Scheduler.method_9(this);
+		}
+		return num;
+	}
 
-	[CompilerGenerated]
-	private DateTimeOffset dateTimeOffset_0;
+	public override bool CheckStopped()
+	{
+		return MapUtils.smethod_2(base.C.Map.MapId) != MapGroup.PayloadEscort;
+	}
 
-	private volatile bool bool_0;
+	public override string ToString()
+	{
+		return "Payload Escort";
+	}
 }

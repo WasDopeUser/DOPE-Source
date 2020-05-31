@@ -33,7 +33,7 @@ public static class GClass28
 
 		public GClass29()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -47,6 +47,9 @@ public static class GClass28
 		private IList<int> ilist_2;
 
 		[CompilerGenerated]
+		private IList<int> GasWocKljb;
+
+		[CompilerGenerated]
 		private IList<int> ilist_3;
 
 		[CompilerGenerated]
@@ -57,9 +60,6 @@ public static class GClass28
 
 		[CompilerGenerated]
 		private IList<int> ilist_6;
-
-		[CompilerGenerated]
-		private IList<int> ilist_7;
 	}
 
 	public class GClass30
@@ -81,7 +81,7 @@ public static class GClass28
 
 		public GClass30()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -89,7 +89,7 @@ public static class GClass28
 		private int int_0;
 
 		[CompilerGenerated]
-		private int TgFmeLyyun;
+		private int zgtxvyCsiS;
 
 		[CompilerGenerated]
 		private int int_1;
@@ -108,7 +108,7 @@ public static class GClass28
 
 		public GClass31()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -129,7 +129,7 @@ public static class GClass28
 
 		public GClass32()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -149,11 +149,11 @@ public static class GClass28
 		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
-		public int Int32_0 { get; set; }
+		public long Int64_0 { get; set; }
 
 		public GClass33()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -161,7 +161,7 @@ public static class GClass28
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private int int_0;
+		private long long_0;
 	}
 
 	public class GClass34
@@ -170,11 +170,11 @@ public static class GClass28
 		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
-		public int Int32_0 { get; set; }
+		public long iEhxkudnn4 { get; set; }
 
 		public GClass34()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -182,7 +182,7 @@ public static class GClass28
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private int int_0;
+		private long long_0;
 	}
 
 	public class GClass35
@@ -191,11 +191,11 @@ public static class GClass28
 		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
-		public int Int32_0 { get; set; }
+		public long Int64_0 { get; set; }
 
 		public GClass35()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -203,7 +203,7 @@ public static class GClass28
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private int int_0;
+		private long long_0;
 	}
 
 	public class GClass36
@@ -212,11 +212,11 @@ public static class GClass28
 		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
-		public int Int32_0 { get; set; }
+		public long Int64_0 { get; set; }
 
 		public GClass36()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -224,7 +224,7 @@ public static class GClass28
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private int int_0;
+		private long long_0;
 	}
 
 	public class GClass37
@@ -243,7 +243,7 @@ public static class GClass28
 
 		public GClass37()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -263,16 +263,16 @@ public static class GClass28
 	public class GClass38
 	{
 		[JsonProperty("credits")]
-		public int credits { get; set; }
+		public long credits { get; set; }
 
 		public GClass38()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private int lPiffvolmo;
+		private long long_0;
 	}
 
 	public class GClass39
@@ -291,7 +291,7 @@ public static class GClass28
 
 		public GClass39()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -321,7 +321,7 @@ public static class GClass28
 
 		public GClass40()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -351,7 +351,7 @@ public static class GClass28
 
 		public GClass41()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -371,28 +371,28 @@ public static class GClass28
 	public class GClass42
 	{
 		[JsonProperty("uridium")]
-		public int Int32_0 { get; set; }
+		public long Int64_0 { get; set; }
 
 		[JsonProperty("credits")]
-		public int credits { get; set; }
+		public long credits { get; set; }
 
 		[JsonProperty("isPayment")]
-		public int Int32_1 { get; set; }
+		public int Int32_0 { get; set; }
 
 		public GClass42()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
+		private long long_0;
+
+		[CompilerGenerated]
+		private long long_1;
+
+		[CompilerGenerated]
 		private int int_0;
-
-		[CompilerGenerated]
-		private int int_1;
-
-		[CompilerGenerated]
-		private int int_2;
 	}
 
 	public class GClass43
@@ -423,7 +423,7 @@ public static class GClass28
 
 		public GClass43()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -459,7 +459,7 @@ public static class GClass28
 
 		public GClass44()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -480,7 +480,7 @@ public static class GClass28
 
 		public GClass45()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -504,7 +504,7 @@ public static class GClass28
 
 		public GClass46()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -525,7 +525,7 @@ public static class GClass28
 
 		public Map()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -533,7 +533,7 @@ public static class GClass28
 		private IList<string> ilist_0;
 
 		[CompilerGenerated]
-		private IList<string> ilist_1;
+		private IList<string> unFgAclfgY;
 	}
 
 	public class GClass47
@@ -545,11 +545,11 @@ public static class GClass28
 		public GClass28.GClass46 GClass46_0 { get; set; }
 
 		[JsonProperty("map")]
-		public GClass28.Map xdBhmbgvok { get; set; }
+		public GClass28.Map Map_0 { get; set; }
 
 		public GClass47()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -573,7 +573,7 @@ public static class GClass28
 
 		public GClass48()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 

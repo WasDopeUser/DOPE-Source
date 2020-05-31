@@ -47,8 +47,8 @@
 							Property="Visibility"
 							Value="Hidden" />
 						<Style.Triggers>
-							<DataTrigger xmlns:cxjcd1lm5s1kbbsdgc0="clr-namespace:cXJcD1Lm5S1KBbsdGc0"
-								Value="{x:Static cxjcd1lm5s1kbbsdgc0:kwinRQLGs2fXxqxsR6j.Connected}"
+							<DataTrigger xmlns:vg5nhrccusdawe89x8u="clr-namespace:Vg5nHrCcUsdAWe89X8u"
+								Value="{x:Static vg5nhrccusdawe89x8u:eslebqCskdnd1vBKaWK.Connected}"
 								Binding="{Binding Controller.Status}">
 								<Setter
 									Property="Visibility"
@@ -70,7 +70,7 @@
 							Value="Hidden" />
 						<Style.Triggers>
 							<DataTrigger
-								Value="{x:Static :kwinRQLGs2fXxqxsR6j.Connecting}"
+								Value="{x:Static :eslebqCskdnd1vBKaWK.Connecting}"
 								Binding="{Binding Controller.Status}">
 								<Setter
 									Property="Visibility"
@@ -93,7 +93,7 @@
 							Value="Hidden" />
 						<Style.Triggers>
 							<DataTrigger
-								Value="{x:Static :kwinRQLGs2fXxqxsR6j.Disconnected}"
+								Value="{x:Static :eslebqCskdnd1vBKaWK.Disconnected}"
 								Binding="{Binding Controller.Status}">
 								<Setter
 									Property="Visibility"

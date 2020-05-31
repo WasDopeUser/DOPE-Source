@@ -8,7 +8,7 @@ public class GClass478 : GInterface0
 	{
 		get
 		{
-			return 17567;
+			return 7815;
 		}
 	}
 
@@ -16,43 +16,67 @@ public class GClass478 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 2;
 		}
 	}
 
-	public GClass478(int int_1 = 0)
+	public GClass478(GClass647 gclass647_1 = null, string string_1 = "", GClass597 gclass597_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
-		this.int_0 = int_1;
+		if (gclass647_1 == null)
+		{
+			this.gclass647_0 = new GClass647(0U);
+		}
+		else
+		{
+			this.gclass647_0 = gclass647_1;
+		}
+		this.string_0 = string_1;
+		if (gclass597_1 == null)
+		{
+			this.gclass597_0 = new GClass597(0U);
+			return;
+		}
+		this.gclass597_0 = gclass597_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17567;
+		return 7815;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 2;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.gclass647_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass647);
+		this.gclass647_0.HrqIugnatr8(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.gclass597_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass597);
+		this.gclass597_0.HrqIugnatr8(binaryStream_0);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(17567);
+		binaryStream_0.smethod_7(7815);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		this.gclass647_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		this.gclass597_0.imethod_1(binaryStream_0);
 	}
 
-	public int int_0;
+	public GClass647 gclass647_0;
+
+	public string string_0;
+
+	public GClass597 gclass597_0;
 }

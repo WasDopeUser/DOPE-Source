@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass604 : GInterface0
+public class GClass604 : GClass602, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 20668;
+			return 8998;
 		}
 	}
 
@@ -16,63 +16,45 @@ public class GClass604 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass604(Vector<GClass137> vector_0 = null)
+	public GClass604(string string_0 = "", int int_0 = 0)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor();
-		if (vector_0 == null)
-		{
-			this.Commands = new Vector<GClass137>();
-			return;
-		}
-		this.Commands = vector_0;
+		Class13.NP5bWyNzLwONS();
+		base..ctor(string_0);
+		this.Value = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 20668;
+		return 8998;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		while (this.Commands.Length > 0)
-		{
-			this.Commands.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass137 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass137;
-			gclass.imethod_1(binaryStream_0);
-			this.Commands.method_0(gclass);
-			num++;
-		}
+		base.HrqIugnatr8(binaryStream_0);
+		this.Value = binaryStream_0.smethod_0();
+		this.Value = (U.smethod_0(this.Value, 1) | this.Value << 31);
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(20668);
+		binaryStream_0.smethod_7(8998);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.Commands.Length);
-		foreach (GClass137 gclass in this.Commands)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.Value << 1 | U.smethod_0(this.Value, 31));
 	}
 
-	public Vector<GClass137> Commands;
+	public int Value;
 }

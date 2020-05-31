@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Structures
 	{
 		protected MovingEntity(int int_0, int int_1)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor(int_0, int_1);
 		}
 
@@ -43,7 +43,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return new Vector2((float)this._posX, (float)this._posY);
 			}
 		}
@@ -52,7 +52,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return this._posX;
 			}
 			protected set
@@ -66,7 +66,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				this.method_7();
+				this.method_6();
 				return this._posY;
 			}
 			protected set
@@ -78,17 +78,17 @@ namespace DarkorbitAPI.Structures
 
 		public void Reset()
 		{
-			this.method_7();
+			this.method_6();
 			this.TargetPosition = null;
 		}
 
-		protected void method_0(GClass229 gclass229_0)
+		protected void method_0(GClass230 gclass230_0)
 		{
 			if (!(this is Hero))
 			{
 				return;
 			}
-			if (gclass229_0.int_0 == gclass229_0.int_3)
+			if (gclass230_0.int_3 == gclass230_0.int_2)
 			{
 			}
 		}
@@ -101,7 +101,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public Vector2 method_1(int int_0)
+		public Vector2 VvOumUkog6(int int_0)
 		{
 			DateTime dateTime = DateTime.Now.AddMilliseconds((double)int_0);
 			double value = 0.0;
@@ -130,7 +130,7 @@ namespace DarkorbitAPI.Structures
 			return new Vector2((float)((int)((double)startPosition.X + (double)(vector2.X - startPosition.X) * num)), (float)((int)((double)startPosition.Y + (double)(vector2.Y - startPosition.Y) * num)));
 		}
 
-		public int method_2(int int_0, int int_1, int int_2)
+		public int method_1(int int_0, int int_1, int int_2)
 		{
 			DateTime now = DateTime.Now;
 			object syncRoot = this.SyncRoot;
@@ -153,17 +153,26 @@ namespace DarkorbitAPI.Structures
 			return (int)Math.Round((double)(Vector2.Distance(new Vector2((float)int_0, (float)int_1), new Vector2((float)int_2, (float)int_3)) * 1000f / float_0));
 		}
 
-		public int method_3(int int_0, int int_1, float float_0)
+		public int method_2(int int_0, int int_1, float float_0)
 		{
 			return (int)Math.Round((double)(Vector2.Distance(this.Position, new Vector2((float)int_0, (float)int_1)) * 1000f / float_0));
 		}
 
-		public int method_4(int int_0, int int_1, int int_2)
+		public int method_3(int int_0, int int_1, int int_2)
 		{
-			return this.method_2(int_0, int_1, this.method_3(int_0, int_1, (float)int_2 * 0.97f));
+			if (int_2 == 0)
+			{
+				object syncRoot = this.SyncRoot;
+				lock (syncRoot)
+				{
+					this.Reset();
+				}
+				return 0;
+			}
+			return this.method_1(int_0, int_1, this.method_2(int_0, int_1, (float)int_2 * 0.97f));
 		}
 
-		public void method_5(int int_0, int int_1, int int_2, int int_3, int int_4)
+		public void method_4(int int_0, int int_1, int int_2, int int_3, int int_4)
 		{
 			object syncRoot = this.SyncRoot;
 			lock (syncRoot)
@@ -171,21 +180,21 @@ namespace DarkorbitAPI.Structures
 				this.Reset();
 				this._posX = int_0;
 				this._posY = int_1;
-				this.method_4(int_2, int_3, int_4);
+				this.method_3(int_2, int_3, int_4);
 			}
 		}
 
-		protected void method_6()
+		protected void method_5()
 		{
-			this.method_7();
+			this.method_6();
 			if (this.TargetPosition != null)
 			{
 				Vector2 value = this.TargetPosition.Value;
-				this.method_2((int)(value.X + ((float)this._posX - value.X) * 2f), (int)(value.Y + ((float)this._posY - value.Y) * 2f), this._timeLeft);
+				this.method_1((int)(value.X + ((float)this._posX - value.X) * 2f), (int)(value.Y + ((float)this._posY - value.Y) * 2f), this._timeLeft);
 			}
 		}
 
-		public void method_7()
+		public void method_6()
 		{
 			object syncRoot = this.SyncRoot;
 			lock (syncRoot)
@@ -221,7 +230,7 @@ namespace DarkorbitAPI.Structures
 
 		public override void vmethod_0(out int int_0, out int int_1, out int int_2, out int int_3, out int int_4)
 		{
-			this.method_7();
+			this.method_6();
 			int_0 = this._posX;
 			int_1 = this._posY;
 			if (this.TargetPosition == null)

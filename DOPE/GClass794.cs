@@ -1,94 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass794 : GClass793
+public class GClass794 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass801 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass801_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass801 gclass801_2)
-	{
-		this.gclass801_0 = gclass801_2;
-	}
-
-	[CompilerGenerated]
-	public GClass801 method_2()
-	{
-		return this.gclass801_1;
-	}
-
-	[CompilerGenerated]
-	private void hEozdeHwly(GClass801 gclass801_2)
-	{
-		this.gclass801_1 = gclass801_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		byte[] array = new byte[int_1];
-		byte[] array2 = new byte[int_1];
-		Buffer.BlockCopy(byte_0, int_0, array, 0, int_1);
-		using (MemoryStream memoryStream = new MemoryStream(array))
+		get
 		{
-			using (MemoryStream memoryStream2 = new MemoryStream(array2))
-			{
-				ByteArray byteArray_ = new ByteArray(memoryStream);
-				ByteArray byteArray_2 = new ByteArray(memoryStream2);
-				this.method_2().vmethod_0(byteArray_, byteArray_2);
-				Buffer.BlockCopy(array2, 0, byte_0, int_0, int_1);
-			}
+			return 6080;
 		}
 	}
 
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		byte[] array = new byte[int_1];
-		byte[] array2 = new byte[int_1];
-		Buffer.BlockCopy(byte_0, int_0, array, 0, int_1);
-		using (MemoryStream memoryStream = new MemoryStream(array))
+		get
 		{
-			using (MemoryStream memoryStream2 = new MemoryStream(array2))
-			{
-				ByteArray byteArray_ = new ByteArray(memoryStream);
-				ByteArray byteArray_2 = new ByteArray(memoryStream2);
-				this.method_0().vmethod_0(byteArray_, byteArray_2);
-				Buffer.BlockCopy(array2, 0, byte_0, int_0, int_1);
-			}
+			return 14;
 		}
 	}
 
-	public override void Init(List<byte[]> list_0)
+	public GClass794(string string_1 = "", double double_1 = 0.0, int int_1 = 0)
 	{
-		if (list_0.Count != 2)
-		{
-			throw new Exception();
-		}
-		ByteArray byteArray = new ByteArray(list_0[0]);
-		ByteArray byteArray2 = new ByteArray(list_0[1]);
-		this.method_1(new GClass801(new ByteArray(byteArray), new ByteArray(byteArray2)));
-		this.hEozdeHwly(new GClass801(byteArray, byteArray2));
-	}
-
-	public GClass794()
-	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
+		this.string_0 = string_1;
+		this.double_0 = double_1;
+		this.int_0 = int_1;
 	}
 
-	[CompilerGenerated]
-	private GClass801 gclass801_0;
+	public virtual int vmethod_0()
+	{
+		return 6080;
+	}
 
-	[CompilerGenerated]
-	private GClass801 gclass801_1;
+	public virtual int vmethod_1()
+	{
+		return 14;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(6080);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(4994);
+		binaryStream_0.smethod_7(20844);
+		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+	}
+
+	public double double_0;
+
+	public string string_0;
+
+	public int int_0;
 }

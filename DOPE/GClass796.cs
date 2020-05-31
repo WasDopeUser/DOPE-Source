@@ -1,79 +1,84 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass796 : GClass793
+public class GClass796 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass803 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass803_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass803 gclass803_2)
-	{
-		this.gclass803_0 = gclass803_2;
-	}
-
-	[CompilerGenerated]
-	public GClass803 method_2()
-	{
-		return this.gclass803_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass803 gclass803_2)
-	{
-		this.gclass803_1 = gclass803_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return 19346;
 		}
-		ByteArray byteArray = new ByteArray();
-		ByteArray byteArray2 = new ByteArray();
-		foreach (byte value in list_0[0])
-		{
-			byteArray.Memory.WriteByte(value);
-		}
-		foreach (byte value2 in list_0[1])
-		{
-			byteArray2.Memory.WriteByte(value2);
-		}
-		byteArray.Memory.Position = 0L;
-		byteArray2.Memory.Position = 0L;
-		this.method_1(new GClass803(new ByteArray(byteArray), new ByteArray(byteArray2)));
-		this.method_3(new GClass803(byteArray, byteArray2));
 	}
 
-	public GClass796()
+	int GInterface0.SizeBytes
 	{
-		Class13.igxcIukzfpare();
+		get
+		{
+			return 9;
+		}
+	}
+
+	public GClass796(GClass355 gclass355_1 = null, int int_2 = 0, int int_3 = 0, bool bool_1 = false)
+	{
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
+		if (gclass355_1 == null)
+		{
+			this.gclass355_0 = new GClass355(0U);
+		}
+		else
+		{
+			this.gclass355_0 = gclass355_1;
+		}
+		this.int_1 = int_2;
+		this.int_0 = int_3;
+		this.bool_0 = bool_1;
 	}
 
-	[CompilerGenerated]
-	private GClass803 gclass803_0;
+	public virtual int vmethod_0()
+	{
+		return 19346;
+	}
 
-	[CompilerGenerated]
-	private GClass803 gclass803_1;
+	public virtual int vmethod_1()
+	{
+		return 9;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 15 | U.smethod_0(this.int_0, 17));
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.gclass355_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass355);
+		this.gclass355_0.HrqIugnatr8(binaryStream_0);
+		binaryStream_0.smethod_1();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 8) | this.int_1 << 24);
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(19346);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 15) | this.int_0 << 17);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		this.gclass355_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_7(-7995);
+		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));
+	}
+
+	public int int_0;
+
+	public bool bool_0;
+
+	public GClass355 gclass355_0;
+
+	public int int_1;
 }

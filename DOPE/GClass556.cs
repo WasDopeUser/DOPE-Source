@@ -8,7 +8,7 @@ public class GClass556 : GInterface0
 	{
 		get
 		{
-			return 889;
+			return 30017;
 		}
 	}
 
@@ -16,69 +16,54 @@ public class GClass556 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 7;
 		}
 	}
 
-	public GClass556(Vector<string> vector_1 = null, uint uint_1 = 0U)
+	public GClass556(int int_1 = 0, string string_0 = "", bool bool_1 = false)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.Name = "";
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<string>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		this.uint_0 = uint_1;
+		this.int_0 = int_1;
+		this.Name = string_0;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 889;
+		return 30017;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 7;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.Name = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			string s44RYan4wYWecm5pLgd = binaryStream_0.smethod_2();
-			this.vector_0.method_0(s44RYan4wYWecm5pLgd);
-			num++;
-		}
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(889);
+		binaryStream_0.smethod_7(30017);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(this.uint_0);
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (string string_ in this.vector_0)
-		{
-			binaryStream_0.MoioCjQkqp0(string_);
-		}
+		binaryStream_0.smethod_3(this.Name);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public uint uint_0;
+	public string Name;
 
-	public Vector<string> vector_0;
+	public int int_0;
+
+	public bool bool_0;
 }

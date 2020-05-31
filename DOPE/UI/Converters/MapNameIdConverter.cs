@@ -10,7 +10,7 @@ namespace DOPE.UI.Converters
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			return MapUtils.smethod_3((int)value);
+			return MapUtils.smethod_4((int)value);
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -25,7 +25,7 @@ namespace DOPE.UI.Converters
 
 		public MapNameIdConverter()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 	}

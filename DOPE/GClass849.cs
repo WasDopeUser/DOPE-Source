@@ -1,51 +1,185 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
+using System.Runtime.CompilerServices;
 using DarkorbitAPI;
+using DarkorbitAPI.Structures;
+using DOPE.Common;
 using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
+using DOPE.Core;
+using DOPE.UI.Models;
 
-public class GClass849 : GClass848
+public class GClass849 : GClass844
 {
-	public GClass849(GClass824 gclass824_1)
+	public GEnum5 GalaxyGateType
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, "DroneRepair");
-	}
-
-	public override int Cooldown
-	{
+		[CompilerGenerated]
 		get
 		{
-			return 120000;
+			return this.genum5_0;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (this.genum5_0 == value)
+			{
+				return;
+			}
+			this.genum5_0 = value;
+			this.method_0(Class10.propertyChangedEventArgs_23);
 		}
 	}
 
-	public void method_2(DarkOrbitWebAPI darkOrbitWebAPI_0)
+	public GClass849(GClass839 gclass839_1, TargetMap targetMap_1)
 	{
-		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.Hangar;
-		foreach (GClass49.GClass52 gclass in hangar.data.ret.hangars.First<GClass49.GClass54>().GClass53_0.IList_0)
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1, targetMap_1, "G", int.MinValue);
+		this.GalaxyGateType = MapUtils.smethod_10((int)targetMap_1);
+	}
+
+	protected override void OnBind()
+	{
+		base.OnBind();
+		base.C.Game.Map.ShipCreated += this.method_2;
+		base.C.Game.Map.ShipDestroyed += this.method_1;
+	}
+
+	protected override void OnUnbind()
+	{
+		base.OnUnbind();
+		base.C.Game.Map.ShipCreated -= this.method_2;
+		base.C.Game.Map.ShipDestroyed -= this.method_1;
+	}
+
+	private void method_1(Map map_0, Ship ship_0)
+	{
+		GClass853 behavior = base.C.Behavior;
+		if (ship_0.IsNpc)
 		{
-			int num = int.Parse(gclass.HP.TrimEnd(new char[]
+			GClass863 gclass = behavior as GClass863;
+			if (gclass != null)
 			{
-				'%'
-			}));
-			if (num >= 90)
-			{
-				Thread.Sleep(5000);
-				base.Log.Info("Repairing drone at {damage}% damage.", num);
-				darkOrbitWebAPI_0.Equipment.RepairDrone(hangar.data, gclass);
+				gclass.method_37(false);
 			}
 		}
 	}
 
-	public override void Execute()
+	private void method_2(Map map_0, Ship ship_0)
 	{
-		this.method_2(base.Context.Game.Web);
+		GClass853 behavior = base.C.Behavior;
+		if (ship_0.IsNpc)
+		{
+			GClass863 gclass = behavior as GClass863;
+			if (gclass != null && !gclass.method_36())
+			{
+				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass849.<>c.<>c_0.method_0)) == 1;
+				gclass.method_37(flag);
+				if (flag)
+				{
+					base.Log.Info("New wave -- {ship}", ship_0.Name);
+				}
+			}
+		}
 	}
 
-	public override bool vmethod_0()
+	public override bool CheckStopped()
 	{
-		AccountSettings account = base.Context.Account;
-		return account != null && account.RepairDrones && base.Context.Game.Web.Equipment.Hangar != null;
+		return !base.C.Map.IsGG;
 	}
+
+	protected virtual bool vmethod_0()
+	{
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
+		DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(this.GalaxyGateType) : null;
+		if (jumpgateGate == null)
+		{
+			return false;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?((int)base.Map), 0) : null;
+		if (selectedNpcModel != null && selectedNpcModel.Enabled)
+		{
+			if (jumpgateGate.prepared)
+			{
+				if (base.Context.Account.JumpGGLastLife || jumpgateGate.livesLeft != 1)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		return false;
+	}
+
+	public override int UpdatePriority()
+	{
+		int result = base.UpdatePriority();
+		GClass872 mainController = base.C.MainController;
+		bool? flag;
+		if (mainController == null)
+		{
+			flag = null;
+		}
+		else
+		{
+			Controller parent = mainController.Parent;
+			if (parent == null)
+			{
+				flag = null;
+			}
+			else
+			{
+				DopeServiceStatus serviceStatus = parent.ServiceStatus;
+				flag = ((serviceStatus != null) ? new bool?(serviceStatus.EnabledGG) : null);
+			}
+		}
+		bool? flag2 = flag;
+		if (flag2.GetValueOrDefault() && this.vmethod_0())
+		{
+			return result;
+		}
+		return int.MinValue;
+	}
+
+	public virtual bool vmethod_1()
+	{
+		int mapId = base.Context.Map.MapId;
+		GEnum5 galaxyGateType = this.GalaxyGateType;
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
+		if (((ggInfo != null) ? ggInfo.GetGate(galaxyGateType) : null) == null)
+		{
+			return false;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?(mapId), 0) : null;
+		return selectedNpcModel != null && mapProfile.NpcWhitelist.LastOrDefault<SelectedNpcModel>() == selectedNpcModel;
+	}
+
+	public virtual SelectedNpcModel vmethod_2(Ship ship_0)
+	{
+		MapProfile mapProfile = base.MapProfile;
+		if (mapProfile == null)
+		{
+			return null;
+		}
+		return mapProfile.GetModel(Ship.Default, base.C.Map, null, 0);
+	}
+
+	public override bool TrySwitchMap(out int int_2)
+	{
+		if (!base.C.IsStopping)
+		{
+			if (base.State == ModuleState.Started)
+			{
+				int_2 = base.C.MapProfile.TargetMap.Resolve(base.C.Hero.FactionId);
+				return true;
+			}
+		}
+		int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
+		return true;
+	}
+
+	[CompilerGenerated]
+	private GEnum5 genum5_0;
 }

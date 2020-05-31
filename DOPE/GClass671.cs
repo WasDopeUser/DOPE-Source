@@ -8,7 +8,7 @@ public class GClass671 : GInterface0
 	{
 		get
 		{
-			return 12146;
+			return 2986;
 		}
 	}
 
@@ -16,61 +16,47 @@ public class GClass671 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 1;
 		}
 	}
 
-	public GClass671(int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
+	public GClass671(uint uint_1 = 0U, bool bool_1 = false)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.int_3 = int_4;
-		this.int_0 = int_5;
-		this.int_2 = int_6;
-		this.int_1 = int_7;
+		this.uint_0 = uint_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12146;
+		return 2986;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 1;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 5 | U.smethod_0(this.int_1, 27));
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (U.smethod_0(this.int_2, 11) | this.int_2 << 21);
-		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (this.int_3 << 1 | U.smethod_0(this.int_3, 31));
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(12146);
+		binaryStream_0.smethod_7(2986);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		binaryStream_0.smethod_3(U.smethod_0(this.int_1, 5) | this.int_1 << 27);
-		binaryStream_0.smethod_3(this.int_2 << 11 | U.smethod_0(this.int_2, 21));
-		binaryStream_0.smethod_3(U.smethod_0(this.int_3, 1) | this.int_3 << 31);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_6(this.uint_0);
 	}
 
-	public int int_0;
+	public bool bool_0;
 
-	public int int_1;
-
-	public int int_2;
-
-	public int int_3;
+	public uint uint_0;
 }

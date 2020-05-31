@@ -23,7 +23,7 @@ namespace DOPE.UI.Models
 
 		public StatisticsCategoryWpf()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 	}

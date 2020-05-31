@@ -9,14 +9,14 @@ namespace DarkorbitAPI.CommonStructures
 
 		public MaxStack(int int_0 = 1000)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 			this.Limit = int_0;
 		}
 
-		public void method_0(T KjkKLmn6XM01hsdoTha)
+		public void method_0(T ntw5wttk1NWRxIiIHj4)
 		{
-			base.AddLast(KjkKLmn6XM01hsdoTha);
+			base.AddLast(ntw5wttk1NWRxIiIHj4);
 			if (base.Count > this.Limit)
 			{
 				base.RemoveFirst();
@@ -37,6 +37,15 @@ namespace DarkorbitAPI.CommonStructures
 				return default(T);
 			}
 			return base.Last.Value;
+		}
+
+		public T method_3()
+		{
+			if (base.Count == 0)
+			{
+				return default(T);
+			}
+			return base.First.Value;
 		}
 	}
 }

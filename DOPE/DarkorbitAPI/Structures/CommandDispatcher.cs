@@ -18,11 +18,11 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void method_1<P4BRYSBGPE7moj4RKrQ>(Action<P4BRYSBGPE7moj4RKrQ> action_0) where P4BRYSBGPE7moj4RKrQ : class, GInterface0
+		public void method_1<HCEoy9wNNO7AaklTMAN>(Action<HCEoy9wNNO7AaklTMAN> action_0) where HCEoy9wNNO7AaklTMAN : class, GInterface0
 		{
-			CommandDispatcher.<>c__DisplayClass2_0<P4BRYSBGPE7moj4RKrQ> CS$<>8__locals1 = new CommandDispatcher.<>c__DisplayClass2_0<P4BRYSBGPE7moj4RKrQ>();
+			CommandDispatcher.<>c__DisplayClass2_0<HCEoy9wNNO7AaklTMAN> CS$<>8__locals1 = new CommandDispatcher.<>c__DisplayClass2_0<HCEoy9wNNO7AaklTMAN>();
 			CS$<>8__locals1.action = action_0;
-			short id = ((P4BRYSBGPE7moj4RKrQ)((object)GClass85.smethod_0(typeof(P4BRYSBGPE7moj4RKrQ)))).Id;
+			short id = ((HCEoy9wNNO7AaklTMAN)((object)GClass85.smethod_0(typeof(HCEoy9wNNO7AaklTMAN)))).Id;
 			this.Handlers.AddOrUpdate(id, CS$<>8__locals1.action, new Func<short, MulticastDelegate, MulticastDelegate>(CS$<>8__locals1.method_0));
 		}
 
@@ -38,7 +38,7 @@ namespace DarkorbitAPI.Structures
 
 		public CommandDispatcher()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.Handlers = new ConcurrentDictionary<short, MulticastDelegate>();
 			base..ctor();
 		}

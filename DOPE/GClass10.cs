@@ -18,18 +18,18 @@ public static class GClass10
 
 		public GClass11()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
-
-		[CompilerGenerated]
-		private int hipeebjGyk;
 
 		[CompilerGenerated]
 		private int int_0;
 
 		[CompilerGenerated]
 		private int int_1;
+
+		[CompilerGenerated]
+		private int int_2;
 	}
 
 	public class GClass12
@@ -38,17 +38,17 @@ public static class GClass10
 		public string String_0 { get; set; }
 
 		[JsonProperty("maxHitPoints")]
-		public int LhEefuCvev { get; set; }
-
-		[JsonProperty("nanohull")]
 		public int Int32_0 { get; set; }
 
-		[JsonProperty("maxNanohull")]
+		[JsonProperty("nanohull")]
 		public int Int32_1 { get; set; }
+
+		[JsonProperty("maxNanohull")]
+		public int Int32_2 { get; set; }
 
 		public GClass12()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -84,7 +84,7 @@ public static class GClass10
 
 		public GClass13()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -120,7 +120,7 @@ public static class GClass10
 
 		public GClass14()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -146,23 +146,23 @@ public static class GClass10
 		public int Int32_1 { get; set; }
 
 		[JsonProperty("blue")]
-		public int ixmllpVxcl { get; set; }
-
-		[JsonProperty("silver")]
 		public int Int32_2 { get; set; }
 
-		[JsonProperty("masque")]
+		[JsonProperty("silver")]
 		public int Int32_3 { get; set; }
 
-		[JsonProperty("prometheus")]
+		[JsonProperty("masque")]
 		public int Int32_4 { get; set; }
 
-		[JsonProperty("obsidian")]
+		[JsonProperty("prometheus")]
 		public int Int32_5 { get; set; }
+
+		[JsonProperty("obsidian")]
+		public int Int32_6 { get; set; }
 
 		public GClass15()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -198,7 +198,7 @@ public static class GClass10
 
 		public GClass16()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -231,7 +231,7 @@ public static class GClass10
 
 		public GClass17()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -242,7 +242,7 @@ public static class GClass10
 		private GClass10.GClass12 gclass12_0;
 
 		[CompilerGenerated]
-		private GClass10.GClass13 EaglEnhsyE;
+		private GClass10.GClass13 gclass13_0;
 
 		[CompilerGenerated]
 		private GClass10.GClass14 gclass14_0;
@@ -270,7 +270,7 @@ public static class GClass10
 
 		public GClass18()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -299,16 +299,16 @@ public static class GClass10
 		public string String_2 { get; set; }
 
 		[JsonProperty("ddro_droneID")]
-		public string String_3 { get; set; }
+		public string UnAvKbfQaA { get; set; }
 
 		[JsonProperty("points")]
-		public string String_4 { get; set; }
+		public string String_3 { get; set; }
 
 		[JsonProperty("ddro_durability")]
-		public string String_5 { get; set; }
+		public string String_4 { get; set; }
 
 		[JsonProperty("name")]
-		public string String_6 { get; set; }
+		public string String_5 { get; set; }
 
 		[JsonProperty("damage")]
 		public int Int32_0 { get; set; }
@@ -318,7 +318,7 @@ public static class GClass10
 
 		public GClass19()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -366,7 +366,7 @@ public static class GClass10
 
 		public GClass20()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -374,7 +374,7 @@ public static class GClass10
 		private string string_0;
 
 		[CompilerGenerated]
-		private string BeyZnEumbR;
+		private string string_1;
 
 		[CompilerGenerated]
 		private int int_0;
@@ -396,7 +396,7 @@ public static class GClass10
 
 		public GClass21()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -420,7 +420,7 @@ public static class GClass10
 
 		public GClass22()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -500,53 +500,53 @@ public static class GClass10
 		public string String_20 { get; set; }
 
 		[JsonProperty("points")]
-		public string ciYjtwKern { get; set; }
-
-		[JsonProperty("nextLevel")]
 		public string String_21 { get; set; }
 
-		[JsonProperty("noDrones")]
+		[JsonProperty("nextLevel")]
 		public string String_22 { get; set; }
 
-		[JsonProperty("fuel")]
+		[JsonProperty("noDrones")]
 		public string String_23 { get; set; }
 
-		[JsonProperty("experience")]
+		[JsonProperty("fuel")]
 		public string String_24 { get; set; }
 
-		[JsonProperty("noPet")]
+		[JsonProperty("experience")]
 		public string String_25 { get; set; }
 
-		[JsonProperty("name")]
-		public string ImVjulnXsR { get; set; }
-
-		[JsonProperty("shopSpeed")]
+		[JsonProperty("noPet")]
 		public string String_26 { get; set; }
 
-		[JsonProperty("shopLoad")]
+		[JsonProperty("name")]
 		public string String_27 { get; set; }
 
-		[JsonProperty("shopLaser")]
+		[JsonProperty("shopSpeed")]
 		public string String_28 { get; set; }
 
-		[JsonProperty("shopGenerator")]
+		[JsonProperty("shopLoad")]
 		public string String_29 { get; set; }
 
-		[JsonProperty("shopBatteries")]
+		[JsonProperty("shopLaser")]
 		public string String_30 { get; set; }
 
-		[JsonProperty("shopHitpoints")]
+		[JsonProperty("shopGenerator")]
+		public string JtwauUvpTS { get; set; }
+
+		[JsonProperty("shopBatteries")]
 		public string String_31 { get; set; }
 
-		[JsonProperty("shopRockets")]
+		[JsonProperty("shopHitpoints")]
 		public string String_32 { get; set; }
 
-		[JsonProperty("shopSpecials")]
+		[JsonProperty("shopRockets")]
 		public string String_33 { get; set; }
+
+		[JsonProperty("shopSpecials")]
+		public string String_34 { get; set; }
 
 		public GClass23()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -561,6 +561,9 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_3;
+
+		[CompilerGenerated]
+		private string xBaympgTf6;
 
 		[CompilerGenerated]
 		private string string_4;
@@ -638,6 +641,9 @@ public static class GClass10
 		private string string_28;
 
 		[CompilerGenerated]
+		private string ceUykbMbxR;
+
+		[CompilerGenerated]
 		private string string_29;
 
 		[CompilerGenerated]
@@ -654,12 +660,6 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_34;
-
-		[CompilerGenerated]
-		private string string_35;
-
-		[CompilerGenerated]
-		private string string_36;
 	}
 
 	public class GClass24
@@ -678,7 +678,7 @@ public static class GClass10
 
 		public GClass24()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -705,7 +705,7 @@ public static class GClass10
 
 		public GClass25()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -726,7 +726,7 @@ public static class GClass10
 
 		public GClass26()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -747,7 +747,7 @@ public static class GClass10
 
 		public GClass27()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
@@ -755,6 +755,6 @@ public static class GClass10
 		private int int_0;
 
 		[CompilerGenerated]
-		private GClass10.GClass26 XkxKkeImfM;
+		private GClass10.GClass26 gclass26_0;
 	}
 }

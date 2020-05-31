@@ -1,26 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 
-public static class GClass808
+public abstract class GClass808 : GInterface7
 {
-	public static bool Cooldown(this DateTime date, int ms)
-	{
-		return (DateTime.Now - date).TotalMilliseconds >= (double)ms;
-	}
+	public abstract void Init(List<byte[]> list_0);
 
-	public static bool Cooldown(this DateTimeOffset date, int ms)
-	{
-		return (DateTimeOffset.Now - date).TotalMilliseconds >= (double)ms;
-	}
+	public abstract void imethod_2();
 
-	public static bool smethod_0(this DateTimeOffset dateTimeOffset_0, int int_0)
-	{
-		DateTimeOffset now = DateTimeOffset.Now;
-		return !(dateTimeOffset_0 > now) && (now - dateTimeOffset_0).TotalMilliseconds <= (double)int_0;
-	}
+	public abstract void imethod_1(byte[] byte_0, int int_0, int int_1);
 
-	public static bool smethod_1(this DateTimeOffset dateTimeOffset_0, TimeSpan timeSpan_0)
+	public abstract void imethod_0(byte[] byte_0, int int_0, int int_1);
+
+	protected GClass808()
 	{
-		DateTimeOffset now = DateTimeOffset.Now;
-		return !(dateTimeOffset_0 > now) && now - dateTimeOffset_0 <= timeSpan_0;
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
 	}
 }

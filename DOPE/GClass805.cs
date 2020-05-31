@@ -1,111 +1,35 @@
 ﻿using System;
+using System.Linq;
 using DarkorbitAPI.CommonStructures;
 
-public class GClass805
+public abstract class GClass805 : GClass803<GInterface7>
 {
-	private void method_0(Vector<uint> vector_1)
+	public static byte[] smethod_0(string string_0)
 	{
-		this.vector_0[0U] = this.method_1(this.MssookYcMjQ, 0U);
-		this.vector_0[1U] = this.method_1(this.MssookYcMjQ, 4U);
-		this.vector_0[2U] = ((this.MssookYcMjQ[8U] & 255U) | (this.MssookYcMjQ[9U] << 8 & 65280U));
-		this.vector_0[3U] = this.method_1(vector_1, 0U);
-		this.vector_0[4U] = this.method_1(vector_1, 4U);
-		this.vector_0[5U] = ((vector_1[8U] & 255U) | (vector_1[9U] << 8 & 65280U));
-		this.vector_0[6U] = 0U;
-		this.vector_0[7U] = 0U;
-		this.vector_0[8U] = 0U;
-		this.vector_0[9U] = 28672U;
-		for (int i = 0; i < 36; i++)
-		{
-			uint num = (this.vector_0[2U] << 30 | (uint)U.smethod_2(this.vector_0[1U], 2)) ^ (this.vector_0[2U] << 3 | (uint)U.smethod_2(this.vector_0[1U], 29));
-			uint num2 = (this.vector_0[5U] << 27 | (uint)U.smethod_2(this.vector_0[4U], 5)) ^ (this.vector_0[5U] << 12 | (uint)U.smethod_2(this.vector_0[4U], 20));
-			uint num3 = (this.vector_0[8U] << 30 | (uint)U.smethod_2(this.vector_0[7U], 2)) ^ (this.vector_0[9U] << 17 | (uint)U.smethod_2(this.vector_0[8U], 15));
-			num ^= (((this.vector_0[2U] << 5 | (uint)U.smethod_2(this.vector_0[1U], 27)) & (this.vector_0[2U] << 4 | (uint)U.smethod_2(this.vector_0[1U], 28))) ^ (this.vector_0[5U] << 18 | (uint)U.smethod_2(this.vector_0[4U], 14)));
-			num2 ^= (((this.vector_0[5U] << 14 | (uint)U.smethod_2(this.vector_0[4U], 18)) & (this.vector_0[5U] << 13 | (uint)U.smethod_2(this.vector_0[4U], 19))) ^ (this.vector_0[8U] << 9 | (uint)U.smethod_2(this.vector_0[7U], 23)));
-			num3 ^= (((this.vector_0[9U] << 19 | (uint)U.smethod_2(this.vector_0[8U], 13)) & (this.vector_0[9U] << 18 | (uint)U.smethod_2(this.vector_0[8U], 14))) ^ (this.vector_0[2U] << 27 | (uint)U.smethod_2(this.vector_0[1U], 5)));
-			this.vector_0[2U] = this.vector_0[1U];
-			this.vector_0[1U] = this.vector_0[0U];
-			this.vector_0[0U] = num3;
-			this.vector_0[5U] = this.vector_0[4U];
-			this.vector_0[4U] = this.vector_0[3U];
-			this.vector_0[3U] = num;
-			this.vector_0[9U] = this.vector_0[8U];
-			this.vector_0[8U] = this.vector_0[7U];
-			this.vector_0[7U] = this.vector_0[6U];
-			this.vector_0[6U] = num2;
-		}
+		GClass805.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass805.<>c__DisplayClass0_0();
+		CS$<>8__locals1.string_0 = string_0;
+		return Enumerable.Range(0, CS$<>8__locals1.string_0.Length).Where(new Func<int, bool>(GClass805.<>c.<>c_0.method_0)).Select(new Func<int, byte>(CS$<>8__locals1.method_0)).ToArray<byte>();
 	}
 
-	private uint method_1(Vector<uint> vector_1, uint uint_2)
+	public abstract void vmethod_2(byte[] byte_0);
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
 	{
-		return vector_1[uint_2 + 3U] << 24 | (vector_1[uint_2 + 2U] & 255U) << 16 | (vector_1[uint_2 + 1U] & 255U) << 8 | (vector_1[uint_2] & 255U);
+		base.imethod_0(byte_0, int_0, int_1);
 	}
 
-	private uint method_2()
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
 	{
-		uint num = (this.vector_0[2U] << 30 | (uint)U.smethod_2(this.vector_0[1U], 2)) ^ (this.vector_0[2U] << 3 | (uint)U.smethod_2(this.vector_0[1U], 29));
-		uint num2 = (this.vector_0[5U] << 27 | (uint)U.smethod_2(this.vector_0[4U], 5)) ^ (this.vector_0[5U] << 12 | (uint)U.smethod_2(this.vector_0[4U], 20));
-		uint num3 = (this.vector_0[8U] << 30 | (uint)U.smethod_2(this.vector_0[7U], 2)) ^ (this.vector_0[9U] << 17 | (uint)U.smethod_2(this.vector_0[8U], 15));
-		uint result = num ^ num2 ^ num3;
-		num ^= (((this.vector_0[2U] << 5 | (uint)U.smethod_2(this.vector_0[1U], 27)) & (this.vector_0[2U] << 4 | (uint)U.smethod_2(this.vector_0[1U], 28))) ^ (this.vector_0[5U] << 18 | (uint)U.smethod_2(this.vector_0[4U], 14)));
-		num2 ^= (((this.vector_0[5U] << 14 | (uint)U.smethod_2(this.vector_0[4U], 18)) & (this.vector_0[5U] << 13 | (uint)U.smethod_2(this.vector_0[4U], 19))) ^ (this.vector_0[8U] << 9 | (uint)U.smethod_2(this.vector_0[7U], 23)));
-		num3 ^= (((this.vector_0[9U] << 19 | (uint)U.smethod_2(this.vector_0[8U], 13)) & (this.vector_0[9U] << 18 | (uint)U.smethod_2(this.vector_0[8U], 14))) ^ (this.vector_0[2U] << 27 | (uint)U.smethod_2(this.vector_0[1U], 5)));
-		this.vector_0[2U] = this.vector_0[1U];
-		this.vector_0[1U] = this.vector_0[0U];
-		this.vector_0[0U] = num3;
-		this.vector_0[5U] = this.vector_0[4U];
-		this.vector_0[4U] = this.vector_0[3U];
-		this.vector_0[3U] = num;
-		this.vector_0[9U] = this.vector_0[8U];
-		this.vector_0[8U] = this.vector_0[7U];
-		this.vector_0[7U] = this.vector_0[6U];
-		this.vector_0[6U] = num2;
-		return result;
+		base.imethod_1(byte_0, int_0, int_1);
 	}
 
-	public GClass805(Vector<uint> vector_1, Vector<uint> vector_2)
+	public abstract void vmethod_3(DollConfig dollConfig_0, Action action_0);
+
+	public abstract byte[] vmethod_4();
+
+	protected GClass805()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.vector_0 = new Vector<uint>(10);
-		if (vector_1 != null)
-		{
-			if (vector_1.Length == 10)
-			{
-				if (vector_2 != null)
-				{
-					if (vector_2.Length == 10)
-					{
-						this.MssookYcMjQ = vector_1;
-						this.method_0(vector_2);
-						return;
-					}
-				}
-				return;
-			}
-		}
 	}
-
-	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		for (int i = 0; i < int_1; i++)
-		{
-			if (this.uint_1 == 0U)
-			{
-				this.uint_0 = this.method_2();
-				this.uint_1 = 4U;
-			}
-			byte_0[i + int_0] = (byte)(((uint)byte_0[i + int_0] ^ this.uint_0) & 255U);
-			this.uint_0 >>= 8;
-			this.uint_1 -= 1U;
-		}
-	}
-
-	private uint uint_0;
-
-	private uint uint_1;
-
-	private Vector<uint> MssookYcMjQ;
-
-	private Vector<uint> vector_0;
 }

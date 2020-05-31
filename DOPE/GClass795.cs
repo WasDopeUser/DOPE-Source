@@ -1,77 +1,86 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass795 : GClass793
+public class GClass795 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass802 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass802_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass802 gclass802_2)
-	{
-		this.gclass802_0 = gclass802_2;
-	}
-
-	[CompilerGenerated]
-	public GClass802 method_2()
-	{
-		return this.gclass802_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass802 gclass802_2)
-	{
-		this.gclass802_1 = gclass802_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return 15919;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		this.method_1(new GClass802(new Vector<uint>(vector2), new Vector<uint>(vector)));
-		this.method_3(new GClass802(vector2, vector));
 	}
 
-	public GClass795()
+	int GInterface0.SizeBytes
 	{
-		Class13.igxcIukzfpare();
+		get
+		{
+			return 6;
+		}
+	}
+
+	public GClass795(string string_1 = "", Vector<GClass383> vector_0 = null)
+	{
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
+		this.string_0 = string_1;
+		if (vector_0 == null)
+		{
+			this.Items = new Vector<GClass383>();
+			return;
+		}
+		this.Items = vector_0;
 	}
 
-	[CompilerGenerated]
-	private GClass802 gclass802_0;
+	public virtual int vmethod_0()
+	{
+		return 15919;
+	}
 
-	[CompilerGenerated]
-	private GClass802 gclass802_1;
+	public virtual int vmethod_1()
+	{
+		return 6;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.string_0 = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		while (this.Items.Length > 0)
+		{
+			this.Items.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass383 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass383;
+			gclass.HrqIugnatr8(binaryStream_0);
+			this.Items.method_0(gclass);
+			num++;
+		}
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(15919);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(26848);
+		binaryStream_0.smethod_4(this.Items.Length);
+		foreach (GClass383 gclass in this.Items)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+	}
+
+	public string string_0;
+
+	public Vector<GClass383> Items;
 }

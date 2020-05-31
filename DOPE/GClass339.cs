@@ -8,7 +8,7 @@ public class GClass339 : GInterface0
 	{
 		get
 		{
-			return 2683;
+			return 28354;
 		}
 	}
 
@@ -16,63 +16,63 @@ public class GClass339 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass339(Vector<GClass487> vector_1 = null)
+	public GClass339(GClass467 gclass467_1 = null, GClass491 gclass491_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		if (vector_1 == null)
+		if (gclass467_1 == null)
 		{
-			this.vector_0 = new Vector<GClass487>();
+			this.gclass467_0 = new GClass467(0U);
+		}
+		else
+		{
+			this.gclass467_0 = gclass467_1;
+		}
+		if (gclass491_1 == null)
+		{
+			this.gclass491_0 = new GClass491(0, null, null, null, null, "", "");
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.gclass491_0 = gclass491_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2683;
+		return 28354;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_1();
+		this.gclass467_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass467);
+		this.gclass467_0.HrqIugnatr8(binaryStream_0);
+		this.gclass491_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass491);
+		this.gclass491_0.HrqIugnatr8(binaryStream_0);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass487 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass487;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(2683);
+		binaryStream_0.smethod_7(28354);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (GClass487 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_7(16643);
+		this.gclass467_0.imethod_1(binaryStream_0);
+		this.gclass491_0.imethod_1(binaryStream_0);
 	}
 
-	public Vector<GClass487> vector_0;
+	public GClass467 gclass467_0;
+
+	public GClass491 gclass491_0;
 }

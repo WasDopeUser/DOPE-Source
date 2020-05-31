@@ -1,35 +1,60 @@
 ﻿using System;
-using System.Linq;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass790 : GClass788<GInterface7>
+public class GClass790 : GInterface0
 {
-	public static byte[] smethod_0(string string_0)
+	short GInterface0.Id
 	{
-		GClass790.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass790.<>c__DisplayClass0_0();
-		CS$<>8__locals1.string_0 = string_0;
-		return Enumerable.Range(0, CS$<>8__locals1.string_0.Length).Where(new Func<int, bool>(GClass790.<>c.<>c_0.method_0)).Select(new Func<int, byte>(CS$<>8__locals1.method_0)).ToArray<byte>();
+		get
+		{
+			return 28416;
+		}
 	}
 
-	public abstract void vmethod_2(byte[] byte_0);
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		base.imethod_0(byte_0, int_0, int_1);
+		get
+		{
+			return 4;
+		}
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public GClass790(int int_0 = 0)
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-	}
-
-	public abstract void vmethod_3(DollConfig dollConfig_0, Action action_0);
-
-	public abstract byte[] vmethod_4();
-
-	protected GClass790()
-	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
+		this.MapId = int_0;
 	}
+
+	public virtual int vmethod_0()
+	{
+		return 28416;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 6) | this.MapId << 26);
+		binaryStream_0.smethod_1();
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(28416);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_4(this.MapId << 6 | U.smethod_0(this.MapId, 26));
+		binaryStream_0.smethod_7(-10880);
+	}
+
+	public int MapId;
 }

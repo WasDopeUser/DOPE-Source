@@ -1,77 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass799 : GClass793
+public class GClass799 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass806 method_0()
+	short GInterface0.Id
 	{
-		return this.YtGootqtmBO;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass806 gclass806_1)
-	{
-		this.YtGootqtmBO = gclass806_1;
-	}
-
-	[CompilerGenerated]
-	public GClass806 method_2()
-	{
-		return this.gclass806_0;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass806 gclass806_1)
-	{
-		this.gclass806_0 = gclass806_1;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return 11485;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		this.method_1(new GClass806(new Vector<uint>(vector2), new Vector<uint>(vector)));
-		this.method_3(new GClass806(vector2, vector));
 	}
 
-	public GClass799()
+	int GInterface0.SizeBytes
 	{
-		Class13.igxcIukzfpare();
+		get
+		{
+			return 0;
+		}
+	}
+
+	public GClass799(uint uint_1 = 0U)
+	{
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
+		this.uint_0 = uint_1;
 	}
 
-	[CompilerGenerated]
-	private GClass806 YtGootqtmBO;
+	public virtual int vmethod_0()
+	{
+		return 11485;
+	}
 
-	[CompilerGenerated]
-	private GClass806 gclass806_0;
+	public virtual int vmethod_1()
+	{
+		return 0;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(11485);
+		this.vmethod_2(binaryStream_0);
+	}
+
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_6(this.uint_0);
+		binaryStream_0.smethod_7(27985);
+	}
+
+	public uint uint_0;
 }

@@ -4,7 +4,7 @@ using DarkorbitAPI.Packets.Static;
 
 public class GClass119 : GInterface4
 {
-	public void Run(GClass259 e)
+	public void Run(GClass263 e)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
 		value.Game.Hero.Pet.Mode = PetMode.Off;
@@ -17,7 +17,7 @@ public class GClass119 : GInterface4
 
 	public GClass119()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 }

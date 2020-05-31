@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 [AttributeUsage(AttributeTargets.Parameter)]
 public sealed class GAttribute47 : Attribute
 {
-	public GAttribute47(GEnum3 genum3_0)
+	public GAttribute47(GEnum3 genum3_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.method_1(genum3_0);
+		this.method_1(genum3_1);
 	}
 
 	[CompilerGenerated]
 	public GEnum3 method_0()
 	{
-		return this.WfgJuokeoK;
+		return this.genum3_0;
 	}
 
 	[CompilerGenerated]
-	private void method_1(GEnum3 genum3_0)
+	private void method_1(GEnum3 genum3_1)
 	{
-		this.WfgJuokeoK = genum3_0;
+		this.genum3_0 = genum3_1;
 	}
 
 	[CompilerGenerated]
-	private GEnum3 WfgJuokeoK;
+	private GEnum3 genum3_0;
 }

@@ -21,7 +21,7 @@ public class GClass87 : GInterface1
 
 	public GClass87(GInterface0 ginterface0_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.Name = "ServerCommandNotification" + ginterface0_1.Id.ToString();
 		this.imethod_1(ginterface0_1);
@@ -34,5 +34,5 @@ public class GClass87 : GInterface1
 	private string string_0;
 
 	[CompilerGenerated]
-	private readonly string string_1;
+	private readonly string HapKsEtdpa;
 }

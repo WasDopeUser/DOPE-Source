@@ -8,7 +8,7 @@ public class GClass342 : GInterface0
 	{
 		get
 		{
-			return 3947;
+			return 9080;
 		}
 	}
 
@@ -16,67 +16,49 @@ public class GClass342 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass342(Vector<int> vector_1 = null)
+	public GClass342(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<int>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 3947;
+		return 9080;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 5 | U.smethod_0(this.int_1, 27));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 4 | U.smethod_0(num3, 28));
-			this.vector_0.method_0(num3);
-			num++;
-		}
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(3947);
+		binaryStream_0.smethod_7(9080);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(30360);
-		binaryStream_0.smethod_6(4198);
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (int num in this.vector_0)
-		{
-			binaryStream_0.smethod_3(U.smethod_0(num, 4) | num << 28);
-		}
+		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 5) | this.int_1 << 27);
 	}
 
-	public Vector<int> vector_0;
+	public int int_0;
+
+	public int int_1;
 }

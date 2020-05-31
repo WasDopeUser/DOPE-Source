@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass363 : GInterface0
+public class GClass363 : GClass362, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 29186;
+			return 12917;
 		}
 	}
 
@@ -16,53 +16,50 @@ public class GClass363 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass363(int int_1 = 0, int int_2 = 0)
+	public GClass363(GClass442 gclass442_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.MapId = int_1;
-		this.int_0 = int_2;
+		if (gclass442_1 == null)
+		{
+			this.gclass442_0 = new GClass442(0U, "", null, null);
+			return;
+		}
+		this.gclass442_0 = gclass442_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 29186;
+		return 12917;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (U.smethod_0(this.MapId, 3) | this.MapId << 29);
+		base.HrqIugnatr8(binaryStream_0);
+		this.gclass442_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass442);
+		this.gclass442_0.HrqIugnatr8(binaryStream_0);
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(29186);
+		binaryStream_0.smethod_7(12917);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		binaryStream_0.smethod_6(-14688);
-		binaryStream_0.smethod_6(30803);
-		binaryStream_0.smethod_3(this.MapId << 3 | U.smethod_0(this.MapId, 29));
+		base.vmethod_2(binaryStream_0);
+		this.gclass442_0.imethod_1(binaryStream_0);
 	}
 
-	public int int_0;
-
-	public int MapId;
+	public GClass442 gclass442_0;
 }

@@ -41,7 +41,7 @@ public class GClass123 : IWebProxy
 
 	public GClass123(ProxySettings[] proxySettings_1, int int_1 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		if (int_1 < 0 || int_1 > 65535)
 		{
@@ -453,14 +453,14 @@ public class GClass123 : IWebProxy
 
 		public Class1()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static Class1()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			GClass123.Class1.Instance = new GClass123.Class1();
 		}
 
@@ -471,7 +471,7 @@ public class GClass123 : IWebProxy
 	{
 		private Class2(Socket socket_1, Socket socket_2)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 			this.Source = socket_1;
 			this.socket_0 = socket_2;

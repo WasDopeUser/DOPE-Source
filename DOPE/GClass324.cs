@@ -8,7 +8,7 @@ public class GClass324 : GInterface0
 	{
 		get
 		{
-			return 9551;
+			return 20685;
 		}
 	}
 
@@ -16,50 +16,64 @@ public class GClass324 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 4;
 		}
 	}
 
-	public GClass324(uint uint_1 = 0U, string string_0 = "")
+	public GClass324(string string_2 = "", string string_3 = "", GClass341 gclass341_1 = null)
 	{
-		Class13.igxcIukzfpare();
-		this.Value = "";
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		this.uint_0 = uint_1;
-		this.Value = string_0;
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		if (gclass341_1 == null)
+		{
+			this.gclass341_0 = new GClass341(0U);
+			return;
+		}
+		this.gclass341_0 = gclass341_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9551;
+		return 20685;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_1();
+		binaryStream_0.smethod_1();
+		this.string_0 = binaryStream_0.smethod_2();
+		this.gclass341_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass341);
+		this.gclass341_0.HrqIugnatr8(binaryStream_0);
+		this.string_1 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Value = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(9551);
+		binaryStream_0.smethod_7(20685);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.MoioCjQkqp0(this.Value);
-		binaryStream_0.smethod_6(7962);
-		binaryStream_0.smethod_5(this.uint_0);
+		binaryStream_0.smethod_7(4362);
+		binaryStream_0.smethod_7(32001);
+		binaryStream_0.smethod_3(this.string_0);
+		this.gclass341_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_1);
 	}
 
-	public string Value;
+	public string string_0;
 
-	public uint uint_0;
+	public GClass341 gclass341_0;
+
+	public string string_1;
 }

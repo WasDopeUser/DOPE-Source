@@ -2,12 +2,14 @@
 using System.CodeDom.Compiler;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
+using DarkorbitAPI;
 using Microsoft.CSharp.RuntimeBinder;
 
 namespace DOPE.UI
@@ -17,60 +19,40 @@ namespace DOPE.UI
 		[DllImport("urlmon.dll", CharSet = CharSet.Ansi)]
 		private static extern int UrlMkSetSessionOption(int int_0, string string_0, int int_1, int int_2);
 
-		public string Sid
+		public DarkOrbitWebAPI Web
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.<Sid>k__BackingField;
+				return this.<Web>k__BackingField;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (string.Equals(this.<Sid>k__BackingField, value, StringComparison.Ordinal))
+				if (object.Equals(this.<Web>k__BackingField, value))
 				{
 					return;
 				}
-				this.<Sid>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.Sid);
-			}
-		}
-
-		public string Server
-		{
-			[CompilerGenerated]
-			get
-			{
-				return this.<Server>k__BackingField;
-			}
-			[CompilerGenerated]
-			set
-			{
-				if (string.Equals(this.<Server>k__BackingField, value, StringComparison.Ordinal))
-				{
-					return;
-				}
-				this.<Server>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.Server);
+				this.<Web>k__BackingField = value;
+				this.method_2(<>PropertyChangedEventArgs.UserAgent);
+				this.method_2(<>PropertyChangedEventArgs.Server);
+				this.method_2(<>PropertyChangedEventArgs.Web);
 			}
 		}
 
 		public string UserAgent
 		{
-			[CompilerGenerated]
 			get
 			{
-				return this.<UserAgent>k__BackingField;
+				return this.Web.UserAgent;
 			}
-			[CompilerGenerated]
-			set
+		}
+
+		public string Server
+		{
+			get
 			{
-				if (string.Equals(this.<UserAgent>k__BackingField, value, StringComparison.Ordinal))
-				{
-					return;
-				}
-				this.<UserAgent>k__BackingField = value;
-				this.method_3(<>PropertyChangedEventArgs.UserAgent);
+				return this.Web.Server;
 			}
 		}
 
@@ -79,21 +61,32 @@ namespace DOPE.UI
 			BrowserWindow.UrlMkSetSessionOption(268435457, this.UserAgent, this.UserAgent.Length, 0);
 		}
 
-		public BrowserWindow(string string_0, string string_1, string string_2)
+		public BrowserWindow(DarkOrbitWebAPI darkOrbitWebAPI_0)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
-			this.Sid = string_1;
-			this.Server = string_2;
-			this.UserAgent = (string_0 ?? "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36");
+			this.Web = darkOrbitWebAPI_0;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		private void method_1(object sender, RoutedEventArgs e)
+		private static void dKnHyFdWmi()
 		{
+			int num = 3;
+			if (!BrowserWindow.InternetSetOption(IntPtr.Zero, 81, ref num, 4))
+			{
+				throw Marshal.GetExceptionForHR(Marshal.GetHRForLastWin32Error());
+			}
+		}
+
+		[DllImport("wininet.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		public static extern bool InternetSetOption(IntPtr intptr_0, int int_0, ref int int_1, int int_2);
+
+		private void enoHxSomUi(object sender, RoutedEventArgs e)
+		{
+			BrowserWindow.dKnHyFdWmi();
 			this.method_0();
 			object arg = this.Browser.GetType().InvokeMember("ActiveXInstance", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.GetProperty, null, this.Browser, new object[0]);
 			if (BrowserWindow.<>o__19.<>p__0 == null)
@@ -105,18 +98,23 @@ namespace DOPE.UI
 				}));
 			}
 			BrowserWindow.<>o__19.<>p__0.Target(BrowserWindow.<>o__19.<>p__0, arg, true);
-			Application.SetCookie(new Uri("https://" + this.Server + ".darkorbit.com"), "dosid=" + this.Sid);
-			this.Browser.Navigate(GClass814.smethod_1(this.Server, null) ?? "");
+			Uri uri = new Uri("https://" + this.Server + ".darkorbit.com");
+			foreach (object obj in this.Web.Cookies.GetCookies(uri))
+			{
+				Cookie cookie = (Cookie)obj;
+				Application.SetCookie(uri, cookie.Name + "=" + cookie.Value);
+			}
+			this.Browser.Navigate(GClass829.smethod_1(this.Server, null) ?? "");
 		}
 
-		private void method_2(object sender, EventArgs e)
+		private void method_1(object sender, EventArgs e)
 		{
 			this.Browser.Dispose();
 		}
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_3(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_2(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

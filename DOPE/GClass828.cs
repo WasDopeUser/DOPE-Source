@@ -1,198 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using DOPE.Common;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
+using System.Buffers;
+using System.IO;
+using Ace.Networking.Memory;
 
-public class GClass828 : GClass826
+public static class GClass828
 {
-	public MapProfile CollectProfile
+	public static void smethod_0(Stream stream_0, Stream stream_1, int int_0)
 	{
-		[CompilerGenerated]
-		get
+		ArrayPool<byte> pool = MemoryManager.Instance.Pool;
+		byte[] array = pool.Rent(4096);
+		try
 		{
-			return this.mapProfile_1;
-		}
-		[CompilerGenerated]
-		protected set
-		{
-			if (object.Equals(this.mapProfile_1, value))
+			int count = Math.Min(array.Length, int_0);
+			int num = stream_0.Read(array, 0, count);
+			if (num == 0)
 			{
-				return;
+				throw new IndexOutOfRangeException();
 			}
-			this.mapProfile_1 = value;
-			this.method_0(Class10.propertyChangedEventArgs_10);
+			stream_1.Write(array, 0, num);
 		}
-	}
-
-	public MapProfile SellProfile
-	{
-		[CompilerGenerated]
-		get
+		finally
 		{
-			return this.mapProfile_2;
-		}
-		[CompilerGenerated]
-		protected set
-		{
-			if (object.Equals(this.mapProfile_2, value))
-			{
-				return;
-			}
-			this.mapProfile_2 = value;
-			this.method_0(Class10.propertyChangedEventArgs_47);
+			pool.Return(array, false);
 		}
 	}
-
-	public GClass828(GClass824 gclass824_1)
-	{
-		Class13.igxcIukzfpare();
-		this.bool_0 = true;
-		base..ctor(gclass824_1, "Palladium", int.MinValue);
-		this.gclass842_0 = new GClass842(gclass824_1);
-		this.gclass843_0 = new GClass843(gclass824_1);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		MapProfile collectProfile;
-		if (botProfile_1 == null)
-		{
-			collectProfile = null;
-		}
-		else
-		{
-			List<MapProfile> maps = botProfile_1.Maps;
-			if (maps == null)
-			{
-				collectProfile = null;
-			}
-			else
-			{
-				collectProfile = maps.FirstOrDefault(new Func<MapProfile, bool>(GClass828.<>c.<>c_0.method_0));
-			}
-		}
-		this.CollectProfile = collectProfile;
-		if (this.CollectProfile != null)
-		{
-			this.SellProfile = DataUtils.DeepClone<MapProfile>(this.CollectProfile);
-			this.SellProfile.TargetMap = TargetMap.P52;
-			MapProfile sellProfile = this.SellProfile;
-			this.SellProfile.Collector = false;
-			sellProfile.Hunter = false;
-			this.CollectProfile.CollectPalladium = true;
-		}
-		return this.CollectProfile;
-	}
-
-	public override GClass837 GetBehavior()
-	{
-		int mapId = base.Context.Map.MapId;
-		if (mapId == 93)
-		{
-			return this.gclass842_0;
-		}
-		if (mapId == 92)
-		{
-			return this.gclass843_0;
-		}
-		return base.GetBehavior();
-	}
-
-	public override int UpdatePriority()
-	{
-		if (this.CollectProfile != null)
-		{
-			AccountSettings account = base.C.Account;
-			if (((account != null) ? account.HangarPalladiumSell : null) != null)
-			{
-				AccountSettings account2 = base.C.Account;
-				if (((account2 != null) ? account2.HangarPalladiumCollect : null) != null)
-				{
-					return base.UpdatePriority();
-				}
-			}
-		}
-		return int.MinValue;
-	}
-
-	public override void UpdateState()
-	{
-		base.UpdateState();
-		if (base.State == ModuleState.Started && base.C.Hero.CargoCapacity > 1)
-		{
-			string activeHangarName = base.Context.Game.Web.Equipment.ActiveHangarName;
-			if (activeHangarName != null)
-			{
-				if (activeHangarName == base.Context.Account.HangarPalladiumCollect)
-				{
-					this.bool_0 = (base.C.Hero.FreeCargo > 50);
-					return;
-				}
-				this.bool_0 = this.CheckStopped();
-			}
-		}
-	}
-
-	protected override void OnStopping()
-	{
-		base.OnStopping();
-		this.bool_0 = false;
-	}
-
-	public override void ClearStats()
-	{
-		base.ClearStats();
-		this.bool_0 = true;
-	}
-
-	public override bool CheckStopped()
-	{
-		return base.Context.Hero.ResourcePalladium < 15.0;
-	}
-
-	public override MapProfile GetMapProfile()
-	{
-		if (base.Context.Account.HangarPalladiumCollect == base.Context.Account.HangarPalladiumSell)
-		{
-			if (!this.bool_0)
-			{
-				return this.SellProfile;
-			}
-			return this.CollectProfile;
-		}
-		else
-		{
-			if (!(base.Context.Game.Web.Equipment.ActiveHangarName == base.Context.Account.HangarPalladiumSell))
-			{
-				return this.CollectProfile;
-			}
-			return this.SellProfile;
-		}
-	}
-
-	public override string ToString()
-	{
-		return "Palladium " + (this.bool_0 ? "collector" : "seller");
-	}
-
-	public override bool ShouldChangeHangar(out string string_1)
-	{
-		string_1 = (this.bool_0 ? base.C.Account.HangarPalladiumCollect : base.C.Account.HangarPalladiumSell);
-		return string_1 != null;
-	}
-
-	public readonly GClass842 gclass842_0;
-
-	public readonly GClass843 gclass843_0;
-
-	[CompilerGenerated]
-	private MapProfile mapProfile_1;
-
-	[CompilerGenerated]
-	private MapProfile mapProfile_2;
-
-	public bool bool_0;
 }

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass656 : GClass653, GInterface0
+public class GClass656 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 7284;
+			return 1829;
 		}
 	}
 
@@ -16,49 +16,66 @@ public class GClass656 : GClass653, GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass656(int int_0 = 0)
+	public GClass656(GClass139 gclass139_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.Value = int_0;
+		if (gclass139_1 == null)
+		{
+			this.gclass139_0 = new GClass139(0U);
+		}
+		else
+		{
+			this.gclass139_0 = gclass139_1;
+		}
+		this.int_1 = int_2;
+		this.int_0 = int_3;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 7284;
+		return 1829;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		this.Value = binaryStream_0.smethod_0();
-		this.Value = (U.smethod_0(this.Value, 15) | this.Value << 17);
 		binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.gclass139_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass139);
+		this.gclass139_0.HrqIugnatr8(binaryStream_0);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 6) | this.int_1 << 26);
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(7284);
+		binaryStream_0.smethod_7(1829);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.Value << 15 | U.smethod_0(this.Value, 17));
-		binaryStream_0.smethod_6(-8702);
-		binaryStream_0.smethod_6(-20088);
+		binaryStream_0.smethod_7(24933);
+		binaryStream_0.smethod_7(10551);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		this.gclass139_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_1 << 6 | U.smethod_0(this.int_1, 26));
 	}
 
-	public int Value;
+	public int int_0;
+
+	public GClass139 gclass139_0;
+
+	public int int_1;
 }

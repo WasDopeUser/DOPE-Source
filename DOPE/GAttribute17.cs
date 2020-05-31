@@ -6,13 +6,13 @@ public sealed class GAttribute17 : Attribute
 {
 	public GAttribute17()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 
 	public GAttribute17([GAttribute1] string justification)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.String_0 = justification;
 	}

@@ -95,7 +95,7 @@ namespace DOPE.Common
 					LogLevel.Info
 				},
 				{
-					"Base-Net-Handlers",
+					"Base-Net-Handlers*",
 					LogLevel.Info
 				},
 				{

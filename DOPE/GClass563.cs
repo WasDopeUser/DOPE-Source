@@ -8,7 +8,7 @@ public class GClass563 : GInterface0
 	{
 		get
 		{
-			return 5715;
+			return 4264;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass563 : GInterface0
 
 	public GClass563()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 5715;
+		return 4264;
 	}
 
 	public virtual int vmethod_1()
@@ -36,13 +36,13 @@ public class GClass563 : GInterface0
 		return 0;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(5715);
+		binaryStream_0.smethod_7(4264);
 		this.vmethod_2(binaryStream_0);
 	}
 

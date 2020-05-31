@@ -8,7 +8,7 @@ public class GClass215 : GInterface0
 	{
 		get
 		{
-			return 644;
+			return 23508;
 		}
 	}
 
@@ -16,48 +16,43 @@ public class GClass215 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass215(ByteArray byteArray_1 = null)
+	public GClass215(int int_1 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.byteArray_0 = new ByteArray();
-		if (byteArray_1 != null)
-		{
-			this.byteArray_0 = byteArray_1;
-		}
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 644;
+		return 23508;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.byteArray_0.Clear();
-		binaryStream_0.smethod_10(this.byteArray_0, 0, binaryStream_0.smethod_0());
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(644);
+		binaryStream_0.smethod_7(23508);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.byteArray_0.Length);
-		binaryStream_0.smethod_11(this.byteArray_0, 0, this.byteArray_0.Length);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
 	}
 
-	public ByteArray byteArray_0;
+	public int int_0;
 }

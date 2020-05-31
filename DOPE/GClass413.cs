@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass413 : GInterface0
+public class GClass413 : GClass409, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 23700;
+			return 7811;
 		}
 	}
 
@@ -16,84 +16,89 @@ public class GClass413 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 12;
 		}
 	}
 
-	public GClass413(GClass284 gclass284_0 = null, bool bool_2 = false, uint uint_0 = 0U, bool bool_3 = false, GClass482 gclass482_1 = null, string string_1 = "")
+	public GClass413(string string_2 = "", string string_3 = "", int int_2 = 0, int int_3 = 0, GClass564 gclass564_1 = null, GClass441 gclass441_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		if (gclass284_0 == null)
+		this.string_0 = string_2;
+		this.string_1 = string_3;
+		this.int_1 = int_2;
+		this.int_0 = int_3;
+		if (gclass564_1 == null)
 		{
-			this.Window = new GClass284(0U);
+			this.gclass564_0 = new GClass564(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		}
 		else
 		{
-			this.Window = gclass284_0;
+			this.gclass564_0 = gclass564_1;
 		}
-		this.bool_1 = bool_2;
-		this.Visibility = uint_0;
-		this.bool_0 = bool_3;
-		if (gclass482_1 == null)
+		if (gclass441_1 == null)
 		{
-			this.gclass482_0 = new GClass482(false, 0);
+			this.gclass441_0 = new GClass441(0, 0U);
+			return;
 		}
-		else
-		{
-			this.gclass482_0 = gclass482_1;
-		}
-		this.string_0 = string_1;
+		this.gclass441_0 = gclass441_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 23700;
+		return 7811;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 4;
+		return 12;
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		this.Visibility = (uint)binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass482_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass482);
-		this.gclass482_0.imethod_1(binaryStream_0);
-		this.bool_1 = binaryStream_0.ReadBoolean();
+		base.HrqIugnatr8(binaryStream_0);
 		this.string_0 = binaryStream_0.smethod_2();
-		this.Window = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass284);
-		this.Window.imethod_1(binaryStream_0);
+		this.string_1 = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
+		this.gclass564_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass564);
+		this.gclass564_0.HrqIugnatr8(binaryStream_0);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 7 | U.smethod_0(this.int_1, 25));
+		binaryStream_0.smethod_1();
+		this.gclass441_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass441);
+		this.gclass441_0.HrqIugnatr8(binaryStream_0);
 	}
 
-	public virtual void imethod_2(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(23700);
+		binaryStream_0.smethod_7(7811);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	protected override void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_5(this.Visibility);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		this.gclass482_0.imethod_2(binaryStream_0);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		this.Window.imethod_2(binaryStream_0);
+		base.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
+		this.gclass564_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 7) | this.int_1 << 25);
+		binaryStream_0.smethod_7(13468);
+		this.gclass441_0.imethod_1(binaryStream_0);
 	}
-
-	public uint Visibility;
-
-	public bool bool_0;
-
-	public GClass482 gclass482_0;
-
-	public bool bool_1;
 
 	public string string_0;
 
-	public GClass284 Window;
+	public string string_1;
+
+	public int int_0;
+
+	public GClass564 gclass564_0;
+
+	public int int_1;
+
+	public GClass441 gclass441_0;
 }

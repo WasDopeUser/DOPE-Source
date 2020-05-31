@@ -1,5 +1,6 @@
 ﻿using System;
 using DarkorbitAPI;
+using NLog;
 
 public class GClass96 : GInterface4
 {
@@ -11,21 +12,53 @@ public class GClass96 : GInterface4
 		}
 	}
 
-	public void method_0(GClass188 gclass188_0)
+	public Logger Log
 	{
-		this.Game.Hero.method_23("resource_labirynth-keys", (double)gclass188_0.hfOqaBlyd3);
-		this.Game.FrozenLabirynthOpening = DateTimeOffset.Now.AddSeconds(gclass188_0.gclass189_0.double_1);
-		if (gclass188_0.gclass189_0.double_0 > 1.0)
+		get
 		{
-			this.Game.FrozenLabirynthClosing = DateTimeOffset.Now.AddSeconds(gclass188_0.gclass189_0.double_0);
+			return this.Game.LogManager.Get("Net-Handlers");
+		}
+	}
+
+	public void method_0(GClass189 gclass189_0)
+	{
+		this.Game.Hero.method_22("resource_labirynth-keys", (double)gclass189_0.int_0);
+		this.Game.EventGateOpening = DateTimeOffset.Now.AddSeconds(gclass189_0.gclass190_0.double_1);
+		if (gclass189_0.gclass190_0.double_0 > 1.0)
+		{
+			this.Game.EventGateClosing = DateTimeOffset.Now.AddSeconds(gclass189_0.gclass190_0.double_0);
 			return;
 		}
-		this.Game.FrozenLabirynthClosing = DateTimeOffset.Now.AddSeconds(-1.0);
+		this.Game.EventGateClosing = DateTimeOffset.Now.AddSeconds(-1.0);
+	}
+
+	public void method_1(GClass256 gclass256_0)
+	{
+		this.Game.Hero.method_22("resource_payload-keys", (double)gclass256_0.gclass257_0.int_0);
+		if (gclass256_0.gclass258_0.double_0 > 1.0)
+		{
+			this.Game.EventGateOpening = DateTimeOffset.Now.AddSeconds(-1.0);
+			this.Game.EventGateClosing = DateTimeOffset.Now.AddSeconds(gclass256_0.gclass258_0.double_0);
+			this.Game.EventGateGoal = DateTimeOffset.Now.AddSeconds(-1.0);
+		}
+		else
+		{
+			this.Game.EventGateOpening = DateTimeOffset.Now.AddSeconds(gclass256_0.gclass258_0.double_1);
+			this.Game.EventGateClosing = DateTimeOffset.Now.AddSeconds(-1.0);
+			this.Game.EventGateGoal = DateTimeOffset.Now.AddSeconds(gclass256_0.gclass258_0.double_2);
+		}
+		this.Log.Info("Payload escort update -- {keys} keys; {open}~{closing} ({remaining})", new object[]
+		{
+			gclass256_0.gclass257_0.int_0,
+			this.Game.EventGateOpening,
+			this.Game.EventGateClosing,
+			this.Game.EventGateGoal
+		});
 	}
 
 	public GClass96()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 }

@@ -1,173 +1,465 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using DarkorbitAPI;
 using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
 
-public class GClass831 : GClass830
+public class GClass831 : BotStats, INotifyPropertyChanged
 {
-	[CompilerGenerated]
-	protected Dictionary<Vector2, DateTimeOffset> method_1()
-	{
-		return this.dictionary_0;
-	}
-
-	private GClass845 Behavior { get; }
-
-	public GClass831(GClass824 gclass824_1)
-	{
-		Class13.igxcIukzfpare();
-		base..ctor(gclass824_1, TargetMap.X6);
-		GClass831.<>c__DisplayClass7_0 CS$<>8__locals1 = new GClass831.<>c__DisplayClass7_0();
-		CS$<>8__locals1.random_0 = base.C.Game.Random;
-		this.dictionary_0 = GClass831.list_0.ToDictionary(new Func<Vector2, Vector2>(CS$<>8__locals1.method_0), new Func<Vector2, DateTimeOffset>(GClass831.<>c.<>c_0.method_0));
-		this.Behavior = new GClass845(gclass824_1, this);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		if (botProfile_1 == null)
-		{
-			return null;
-		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass831.<>c.<>c_0.method_1));
-	}
-
-	protected override void OnBind()
-	{
-		base.C.Game.Map.ShipDestroyed += this.method_3;
-		base.OnBind();
-	}
-
-	protected override void OnUnbind()
-	{
-		base.C.Game.Map.ShipDestroyed -= this.method_3;
-		base.OnUnbind();
-	}
-
-	public override void UpdateState()
-	{
-		Vector2 vector = this.method_2();
-		DateTimeOffset now = DateTimeOffset.Now;
-		DateTimeOffset right = this.method_1()[vector];
-		if (vector != this.BestSpawn)
-		{
-			this.BestSpawn = vector;
-		}
-		else if (Vector2.Distance(base.C.Hero.Position, vector) < 50f && (now - right).TotalSeconds > 15.0)
-		{
-			this.method_1()[vector] = GClass831.smethod_0(this.method_1()[vector], now.AddSeconds(60.0));
-		}
-		base.UpdateState();
-	}
-
-	public Vector2 BestSpawn
+	public GClass839 Context
 	{
 		[CompilerGenerated]
 		get
 		{
-			return this.vector2_0;
+			return this.gclass839_0;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (object.Equals(this.gclass839_0, value))
+			{
+				return;
+			}
+			this.gclass839_0 = value;
+			this.<>OnPropertyChanged(Class10.Context);
+		}
+	}
+
+	public TimeSpan RunTime
+	{
+		get
+		{
+			if (this.Started == null)
+			{
+				return TimeSpan.Zero;
+			}
+			return (this.Stopped ?? DateTime.Now) - this.Started.Value;
+		}
+	}
+
+	public double UridiumHourly
+	{
+		get
+		{
+			if (!(this.RunTime == TimeSpan.Zero))
+			{
+				return base.EarnedUridium / this.RunTime.TotalSeconds * 3600.0;
+			}
+			return 0.0;
+		}
+	}
+
+	public double CreditsHourly
+	{
+		get
+		{
+			if (!(this.RunTime == TimeSpan.Zero))
+			{
+				return base.EarnedCredits / this.RunTime.TotalSeconds * 3600.0;
+			}
+			return 0.0;
+		}
+	}
+
+	public Dictionary<string, GClass833.GStruct0> DeathLog
+	{
+		[CompilerGenerated]
+		get
+		{
+			return this.dictionary_2;
 		}
 		[CompilerGenerated]
 		private set
 		{
-			if (this.vector2_0 == value)
+			if (object.Equals(this.dictionary_2, value))
 			{
 				return;
 			}
-			this.vector2_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_4);
-			this.method_0(Class10.propertyChangedEventArgs_3);
+			this.dictionary_2 = value;
+			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_17);
 		}
 	}
 
-	public DateTimeOffset BestSpawnTime
+	public GClass831(GClass839 gclass839_1)
 	{
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
+		this.Context = gclass839_1;
+		base.HeroStats = (this.gclass835_0 = new GClass835(gclass839_1.Hero, this));
+		base.PetStats = (this.gclass836_0 = new GClass836(gclass839_1.Hero.Pet, this));
+		base.GgStats = (this.gclass834_0 = new GClass834(gclass839_1.Game.Web));
+		this.DeathLog = new Dictionary<string, GClass833.GStruct0>();
+		base.DeathStats = (this.gclass833_0 = new GClass833(this.DeathLog));
+		this.dictionary_0 = new Dictionary<string, int>();
+		base.NpcStats = (this.gclass832_0 = new GClass832("NPCs", this.dictionary_0));
+		this.dictionary_1 = new Dictionary<string, int>();
+		base.BoxStats = (this.gclass832_1 = new GClass832("Boxes", this.dictionary_1));
+		gclass839_1.Game.LogMessage += this.method_2;
+		gclass839_1.Game.Map.ShipDestroyed += this.method_1;
+		gclass839_1.Game.Map.CollectibleCollected += this.method_0;
+	}
+
+	private void method_0(Map map_0, string string_0, Collectible collectible_0, bool bool_0)
+	{
+		if (collectible_0 != null && bool_0 && this.Context.IsCollecting && this.Context.string_0 == string_0)
+		{
+			Dictionary<string, int> obj = this.dictionary_1;
+			lock (obj)
+			{
+				if (!this.dictionary_1.ContainsKey(collectible_0.Type))
+				{
+					this.dictionary_1.Add(collectible_0.Type, 0);
+				}
+				Dictionary<string, int> dictionary = this.dictionary_1;
+				string type = collectible_0.Type;
+				int num = dictionary[type];
+				dictionary[type] = num + 1;
+			}
+		}
+	}
+
+	private void method_1(Map map_0, Ship ship_0)
+	{
+		if (ship_0 == null)
+		{
+			return;
+		}
+		if (ship_0 != this.Context.Game.Hero)
+		{
+			if (ship_0.Id == this.Context.Game.Hero.Pet.Id && this.Context.Game.Hero.Pet.Hp == 0)
+			{
+				int num = base.PetDeaths;
+				base.PetDeaths = num + 1;
+				return;
+			}
+			NpcShip npcShip = ship_0 as NpcShip;
+			if (npcShip != null && (this.Context.Map.IsGG || !npcShip.LastTookDamageHero.Cooldown(5000)))
+			{
+				Dictionary<string, int> obj = this.dictionary_0;
+				lock (obj)
+				{
+					string text = NpcUtils.NpcType.smethod_0(ship_0.Name);
+					if (!this.dictionary_0.ContainsKey(text))
+					{
+						this.dictionary_0.Add(text, 0);
+					}
+					Dictionary<string, int> dictionary = this.dictionary_0;
+					string key = text;
+					int num = dictionary[key];
+					dictionary[key] = num + 1;
+				}
+			}
+		}
+	}
+
+	public DateTime? Started
+	{
+		[CompilerGenerated]
 		get
 		{
-			DateTimeOffset result;
-			if (!this.method_1().TryGetValue(this.BestSpawn, out result))
-			{
-				return default(DateTimeOffset);
-			}
-			return result;
+			return this.nullable_0;
 		}
-	}
-
-	private Vector2 method_2()
-	{
-		return this.method_1().OrderBy(new Func<KeyValuePair<Vector2, DateTimeOffset>, DateTimeOffset>(GClass831.<>c.<>c_0.method_2)).First<KeyValuePair<Vector2, DateTimeOffset>>().Key;
-	}
-
-	private void method_3(Map map_0, Ship ship_1)
-	{
-		NpcShip npcShip = ship_1 as NpcShip;
-		if (npcShip != null)
+		[CompilerGenerated]
+		set
 		{
-			NpcUtils.NpcType type = npcShip.Type;
-			if (((type != null) ? type.Class : null) == NpcUtils.N_Cubikon)
+			if (Nullable.Equals<DateTime>(this.nullable_0, value))
 			{
-				GClass831.<>c__DisplayClass20_0 CS$<>8__locals1 = new GClass831.<>c__DisplayClass20_0();
-				CS$<>8__locals1.vector2_0 = ship_1.Position;
-				Vector2 vector = this.method_1().Keys.OrderBy(new Func<Vector2, float>(CS$<>8__locals1.method_0)).First<Vector2>();
-				this.method_1()[vector] = DateTimeOffset.Now.AddSeconds(300.0);
-				base.Log.Info<Vector2>("Cubikon at spawn {position} destroyed", vector);
+				return;
+			}
+			this.nullable_0 = value;
+			this.<>OnPropertyChanged(Class10.RunTime);
+			this.<>OnPropertyChanged(Class10.UridiumHourly);
+			this.<>OnPropertyChanged(Class10.CreditsHourly);
+			this.<>OnPropertyChanged(Class10.Started);
+		}
+	}
+
+	private void method_2(GameManager gameManager_0, GClass273 gclass273_0)
+	{
+		string[] array = gclass273_0.string_0.Split(new char[]
+		{
+			'|'
+		});
+		if (array[1] == "LM" && array[2] == "ST" && array.Length > 4)
+		{
+			double num2;
+			double num = double.TryParse(array[4], out num2) ? num2 : 0.0;
+			string text = array[3];
+			if (text != null)
+			{
+				uint num3 = <PrivateImplementationDetails>{F0556DD4-2D98-4EFB-B00E-C9D791C43D77}.ComputeStringHash(text);
+				if (num3 <= 1746879935U)
+				{
+					if (num3 != 583800688U)
+					{
+						if (num3 != 1702788290U)
+						{
+							if (num3 != 1746879935U)
+							{
+								return;
+							}
+							if (!(text == "CRE"))
+							{
+								return;
+							}
+							base.EarnedCredits += num;
+							return;
+						}
+						else
+						{
+							if (!(text == "JPA"))
+							{
+								return;
+							}
+							base.EarnedJackpot += num;
+							return;
+						}
+					}
+					else
+					{
+						if (!(text == "EP"))
+						{
+							return;
+						}
+						base.EarnedExp += num;
+						return;
+					}
+				}
+				else if (num3 <= 2053729053U)
+				{
+					if (num3 != 1805517074U)
+					{
+						if (num3 != 2053729053U)
+						{
+							return;
+						}
+						if (!(text == "URI"))
+						{
+							return;
+						}
+						base.EarnedUridium += num;
+						return;
+					}
+					else
+					{
+						if (!(text == "HON"))
+						{
+							return;
+						}
+						base.EarnedHonor += num;
+					}
+				}
+				else if (num3 != 3043894024U)
+				{
+					if (num3 != 4214671512U)
+					{
+						return;
+					}
+					if (!(text == "XEN"))
+					{
+						return;
+					}
+					base.EarnedEnergy += num;
+					return;
+				}
+				else
+				{
+					if (!(text == "BAT"))
+					{
+						return;
+					}
+					num = double.Parse(array[5]);
+					string text2 = array[4];
+					if (text2 != null)
+					{
+						if (text2 == "ammunition_laser_lcb-10")
+						{
+							base.EarnedX1 += num;
+							return;
+						}
+						if (text2 == "ammunition_laser_mcb-25")
+						{
+							base.EarnedX2 += num;
+							return;
+						}
+						if (text2 == "ammunition_laser_mcb-50")
+						{
+							base.EarnedX3 += num;
+							return;
+						}
+						if (text2 == "ammunition_laser_ucb-100")
+						{
+							base.EarnedX4 += num;
+							return;
+						}
+						if (!(text2 == "ammunition_laser_sab-50"))
+						{
+							return;
+						}
+						base.Double_0 += num;
+						return;
+					}
+				}
 			}
 		}
 	}
 
-	public override GClass837 GetBehavior()
+	public DateTime? Stopped
 	{
-		if (MapUtils.smethod_10(6, base.C.Hero.FactionId) == base.C.Map.MapId)
+		[CompilerGenerated]
+		get
 		{
-			return this.Behavior;
+			return this.nullable_1;
 		}
-		return base.GetBehavior();
+		[CompilerGenerated]
+		internal set
+		{
+			if (Nullable.Equals<DateTime>(this.nullable_1, value))
+			{
+				return;
+			}
+			this.nullable_1 = value;
+			this.<>OnPropertyChanged(Class10.RunTime);
+			this.<>OnPropertyChanged(Class10.UridiumHourly);
+			this.<>OnPropertyChanged(Class10.CreditsHourly);
+			this.<>OnPropertyChanged(Class10.Stopped);
+		}
 	}
 
-	public override string ToString()
+	public void Reset()
 	{
-		return "Cubikons";
+		base.PetDeaths = 0;
+		base.Spins = 0;
+		base.Resets = 0;
+		base.Deaths = 0;
+		base.Boxes = 0;
+		double earnedX = (double)0f;
+		double num = (double)0f;
+		base.EarnedX4 = earnedX;
+		double earnedX2 = num;
+		double num2 = (double)0f;
+		base.EarnedX3 = earnedX2;
+		double earnedX3 = num2;
+		double num3 = (double)0f;
+		base.EarnedX2 = earnedX3;
+		double earnedX4 = num3;
+		double num4 = (double)0f;
+		base.EarnedX1 = earnedX4;
+		double earnedUridium = num4;
+		double num5 = (double)0f;
+		base.EarnedUridium = earnedUridium;
+		double double_ = num5;
+		double num6 = (double)0f;
+		base.Double_0 = double_;
+		double earnedJackpot = num6;
+		double num7 = (double)0f;
+		base.EarnedJackpot = earnedJackpot;
+		double earnedHonor = num7;
+		double num8 = (double)0f;
+		base.EarnedHonor = earnedHonor;
+		double earnedExp = num8;
+		double num9 = (double)0f;
+		base.EarnedExp = earnedExp;
+		double earnedEnergy = num9;
+		double earnedCredits = (double)0f;
+		base.EarnedEnergy = earnedEnergy;
+		base.EarnedCredits = earnedCredits;
+		base.NpcStats.ScheduleClear();
+		base.BoxStats.ScheduleClear();
+		base.DeathStats.ScheduleClear();
+		Dictionary<string, int> obj = this.dictionary_1;
+		lock (obj)
+		{
+			this.dictionary_1.Clear();
+		}
+		obj = this.dictionary_0;
+		lock (obj)
+		{
+			this.dictionary_0.Clear();
+		}
+		Dictionary<string, GClass833.GStruct0> deathLog = this.DeathLog;
+		lock (deathLog)
+		{
+			this.DeathLog.Clear();
+		}
+		DateTime? dateTime = null;
+		this.Stopped = dateTime;
+		this.Started = dateTime;
+		if (this.Context.Run)
+		{
+			this.Context.Stats.Started = new DateTime?(DateTime.Now);
+		}
+	}
+
+	public void method_3()
+	{
+		base.InternalRaiseChanged("RunTime", GClass831.propertyChangedEventArgs_0);
+		base.InternalRaiseChanged("UridiumHourly", GClass831.propertyChangedEventArgs_1);
+		base.InternalRaiseChanged("CreditsHourly", GClass831.propertyChangedEventArgs_2);
+		int num = this.int_0;
+		this.int_0 = num + 1;
+		if (num % 20 == 0)
+		{
+			base.HeroStats.Update();
+			base.PetStats.Update();
+			this.gclass834_0.Update();
+			this.gclass833_0.Update();
+			base.NpcStats.Update();
+			base.BoxStats.Update();
+		}
+	}
+
+	public void method_4(GClass218 gclass218_0)
+	{
+		int deaths = base.Deaths;
+		base.Deaths = deaths + 1;
+		this.gclass833_0.method_0(gclass218_0.string_1);
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass831()
 	{
-		Class13.igxcIukzfpare();
-		GClass831.list_0 = new List<Vector2>
-		{
-			new Vector2(7500f, 3900f),
-			new Vector2(13400f, 3900f),
-			new Vector2(13400f, 7900f),
-			new Vector2(7500f, 7900f)
-		};
+		Class13.NP5bWyNzLwONS();
+		GClass831.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("RunTime");
+		GClass831.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("UridiumHourly");
+		GClass831.propertyChangedEventArgs_2 = new PropertyChangedEventArgs("CreditsHourly");
 	}
 
 	[CompilerGenerated]
-	internal static DateTimeOffset smethod_0(DateTimeOffset dateTimeOffset_2, DateTimeOffset dateTimeOffset_3)
-	{
-		if (!(dateTimeOffset_2 > dateTimeOffset_3))
-		{
-			return dateTimeOffset_3;
-		}
-		return dateTimeOffset_2;
-	}
+	private GClass839 gclass839_0;
 
-	public static List<Vector2> list_0;
+	private GClass835 gclass835_0;
+
+	private GClass836 gclass836_0;
+
+	private GClass834 gclass834_0;
+
+	private GClass832 gclass832_0;
+
+	private GClass832 gclass832_1;
+
+	private GClass833 gclass833_0;
+
+	private Dictionary<string, int> dictionary_0;
+
+	private Dictionary<string, int> dictionary_1;
 
 	[CompilerGenerated]
-	private readonly Dictionary<Vector2, DateTimeOffset> dictionary_0;
+	private Dictionary<string, GClass833.GStruct0> dictionary_2;
 
 	[CompilerGenerated]
-	private readonly GClass845 gclass845_0;
+	private DateTime? nullable_0;
 
 	[CompilerGenerated]
-	private Vector2 vector2_0;
+	private DateTime? nullable_1;
+
+	private int int_0;
+
+	private static readonly PropertyChangedEventArgs propertyChangedEventArgs_0;
+
+	private static readonly PropertyChangedEventArgs propertyChangedEventArgs_1;
+
+	private static readonly PropertyChangedEventArgs propertyChangedEventArgs_2;
 }

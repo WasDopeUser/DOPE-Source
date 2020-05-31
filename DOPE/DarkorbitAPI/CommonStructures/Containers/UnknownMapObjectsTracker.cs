@@ -75,7 +75,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 		public UnknownMapObjectsTracker()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 			this.Objects = new HashSet<UnknownMapObjectsTracker<T>.ObjectEntry<T>>();
 		}
@@ -108,7 +108,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 			public ObjectEntry()
 			{
-				Class13.igxcIukzfpare();
+				Class13.NP5bWyNzLwONS();
 				base..ctor();
 				this.Created = DateTimeOffset.Now;
 				this.LastUpdated = this.Created;
@@ -133,7 +133,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 				{
 					return false;
 				}
-				double val = totalMilliseconds * (double)this.Speed / 1000.0;
+				double val = totalMilliseconds * (double)this.Speed / 1000.0 + 200.0;
 				return (double)float_0 <= Math.Min(val, (double)float_1);
 			}
 

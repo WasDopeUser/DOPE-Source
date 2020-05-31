@@ -72,7 +72,7 @@ namespace DOPE.UI
 
 		public SettingsWindow(Controller controller_0)
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			this.PropertyChanged = new PropertyChangedEventHandler(SettingsWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -112,7 +112,7 @@ namespace DOPE.UI
 			string newKey = this.NewKey;
 			if (newKey != null && newKey.Length == 36)
 			{
-				this.Controller.sgsoQeeaCnu(this.NewKey);
+				this.Controller.method_6(this.NewKey);
 				return;
 			}
 			MessageBox.Show("Invalid key");

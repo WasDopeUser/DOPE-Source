@@ -1,84 +1,87 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DarkorbitAPI.Packets.Static;
 
 namespace DOPE.Common.Models
 {
 	public enum TargetMap
 	{
-		[Display(Name = "None")]
+		[Map("None")]
 		None,
-		[Display(Name = "X-1")]
+		[Map("X-1", ByFaction = 1)]
 		X1,
-		[Display(Name = "X-2")]
+		[Map("X-2", ByFaction = 2)]
 		X2,
-		[Display(Name = "X-3")]
+		[Map("X-3", ByFaction = 3)]
 		X3,
-		[Display(Name = "X-4")]
+		[Map("X-4", ByFaction = 4)]
 		X4,
-		[Display(Name = "X-5")]
+		[Map("X-5", ByFaction = 5)]
 		X5 = 17,
-		[Display(Name = "X-6")]
+		[Map("X-6", ByFaction = 6)]
 		X6,
-		[Display(Name = "X-7")]
+		[Map("X-7", ByFaction = 7)]
 		X7,
-		[Display(Name = "X-8")]
+		[Map("X-8", ByFaction = 8)]
 		X8,
-		[Display(Name = "GG Alpha")]
+		[Map("GG Alpha", Gate = (GEnum5)51)]
 		GG_Alpha = 51,
-		[Display(Name = "GG Beta")]
+		[Map("GG Beta", Gate = (GEnum5)52)]
 		GG_Beta,
-		[Display(Name = "GG Gamma")]
+		[Map("GG Gamma", Gate = (GEnum5)53)]
 		GG_Gamma,
-		[Display(Name = "GG Delta")]
+		[Map("GG Delta", Gate = (GEnum5)55)]
 		GG_Delta = 55,
-		[Display(Name = "GG Epsilon")]
+		[Map("GG Epsilon", Gate = (GEnum5)70)]
 		GG_Epsilon = 70,
-		[Display(Name = "GG Zeta")]
+		[Map("GG Zeta", Gate = (GEnum5)71)]
 		GG_Zeta,
-		[Display(Name = "GG Kappa")]
+		[Map("GG Kappa", Gate = (GEnum5)74)]
 		GG_Kappa = 74,
-		[Display(Name = "GG Lambda")]
+		[Map("GG Lambda", Gate = (GEnum5)75)]
 		GG_Lambda,
-		[Display(Name = "GG Kronos")]
+		[Map("GG Kronos", Gate = (GEnum5)76)]
 		GG_Kronos,
 		[NotMapped]
-		[Display(Name = "GG VoT")]
+		[Map("GG VoT", Gate = (GEnum5)227)]
 		GG_VoT = 227,
 		[NotMapped]
-		[Display(Name = "GG QZ")]
+		[Map("GG QZ", Gate = (GEnum5)229)]
 		GG_QZ = 229,
+		[Map("GG ColdWave", Gate = (GEnum5)77)]
 		[NotMapped]
-		[Display(Name = "GG Cold Wave")]
 		GG_ColdWave = 77,
-		[Display(Name = "GG Kuiper")]
+		[Map("GG Kuiper", Gate = (GEnum5)300)]
 		GG_Kuiper = 300,
-		[Display(Name = "4-1")]
+		[Map("4-1")]
 		W41 = 13,
-		[Display(Name = "4-2")]
+		[Map("4-2")]
 		W42,
-		[Display(Name = "4-3")]
+		[Map("4-3")]
 		W43,
-		[Display(Name = "4-4")]
+		[Map("4-4")]
 		W44,
-		[Display(Name = "4-5")]
+		[Map("4-5")]
 		W45 = 29,
+		[Map("5-1")]
 		[NotMapped]
-		[Display(Name = "5-1")]
 		P51 = 91,
-		[Display(Name = "5-2")]
+		[Map("5-2")]
 		P52,
-		[Display(Name = "5-3")]
 		[NotMapped]
+		[Map("5-3")]
 		P53,
-		[Display(Name = "BL-1")]
+		[Map("BL-1")]
 		BL1 = 306,
-		[Display(Name = "BL-2")]
+		[Map("BL-2")]
 		BL2,
-		[Display(Name = "BL-3")]
+		[Map("BL-3")]
 		BL3,
+		[Map("FL ATLAS A", MapGroup = MapGroup.FrozenLabyrinth)]
 		[NotMapped]
-		[Display(Name = "FL ATLAS A")]
-		FL_ATLAS_A = 430
+		FL_ATLAS_A = 430,
+		[NotMapped]
+		[Map("Payload Escort", MapGroup = MapGroup.PayloadEscort)]
+		PayloadEscort
 	}
 }

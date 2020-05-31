@@ -84,7 +84,7 @@ public class GClass91
 
 	public GClass91()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.method_6(new Thread(new ThreadStart(this.method_7)));
 		this.method_5().IsBackground = true;

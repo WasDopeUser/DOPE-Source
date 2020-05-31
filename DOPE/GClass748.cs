@@ -8,7 +8,7 @@ public class GClass748 : GInterface0
 	{
 		get
 		{
-			return 24771;
+			return 8748;
 		}
 	}
 
@@ -16,91 +16,75 @@ public class GClass748 : GInterface0
 	{
 		get
 		{
-			return 24;
+			return 10;
 		}
 	}
 
-	public GClass748(int int_6 = 0, GClass201 gclass201_1 = null, uint uint_1 = 0U, int int_7 = 0, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0)
+	public GClass748(string string_1 = "", int int_1 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
-		this.int_1 = int_6;
-		if (gclass201_1 == null)
+		this.string_0 = string_1;
+		this.int_0 = int_1;
+		if (vector_1 == null)
 		{
-			this.gclass201_0 = new GClass201(0U);
+			this.vector_0 = new Vector<int>();
+			return;
 		}
-		else
-		{
-			this.gclass201_0 = gclass201_1;
-		}
-		this.uint_0 = uint_1;
-		this.int_4 = int_7;
-		this.int_0 = int_8;
-		this.int_2 = int_9;
-		this.int_3 = int_10;
-		this.int_5 = int_11;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 24771;
+		return 8748;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 24;
+		return 10;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			int num3 = binaryStream_0.smethod_0();
+			num3 = (U.smethod_0(num3, 8) | num3 << 24);
+			this.vector_0.method_0(num3);
+			num++;
+		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 12) | this.int_1 << 20);
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 10 | U.smethod_0(this.int_2, 22));
-		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (U.smethod_0(this.int_3, 1) | this.int_3 << 31);
-		this.int_4 = binaryStream_0.smethod_0();
-		this.int_4 = (this.int_4 << 4 | U.smethod_0(this.int_4, 28));
-		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
-		this.gclass201_0.imethod_1(binaryStream_0);
-		this.int_5 = binaryStream_0.smethod_0();
-		this.int_5 = (this.int_5 << 1 | U.smethod_0(this.int_5, 31));
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(24771);
+		binaryStream_0.smethod_7(8748);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-		binaryStream_0.smethod_3(this.int_1 << 12 | U.smethod_0(this.int_1, 20));
-		binaryStream_0.smethod_5(this.uint_0);
-		binaryStream_0.smethod_3(U.smethod_0(this.int_2, 10) | this.int_2 << 22);
-		binaryStream_0.smethod_3(this.int_3 << 1 | U.smethod_0(this.int_3, 31));
-		binaryStream_0.smethod_3(U.smethod_0(this.int_4, 4) | this.int_4 << 28);
-		this.gclass201_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(U.smethod_0(this.int_5, 1) | this.int_5 << 31);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (int num in this.vector_0)
+		{
+			binaryStream_0.smethod_4(num << 8 | U.smethod_0(num, 24));
+		}
+		binaryStream_0.smethod_4(this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		binaryStream_0.smethod_3(this.string_0);
 	}
+
+	public Vector<int> vector_0;
 
 	public int int_0;
 
-	public int int_1;
-
-	public uint uint_0;
-
-	public int int_2;
-
-	public int int_3;
-
-	public int int_4;
-
-	public GClass201 gclass201_0;
-
-	public int int_5;
+	public string string_0;
 }

@@ -8,7 +8,7 @@ public class GClass332 : GInterface0
 	{
 		get
 		{
-			return 26263;
+			return 18038;
 		}
 	}
 
@@ -16,88 +16,76 @@ public class GClass332 : GInterface0
 	{
 		get
 		{
-			return 24;
+			return 4;
 		}
 	}
 
-	public GClass332(int int_2 = 0, int int_3 = 0, int int_4 = 0, uint uint_0 = 0U, double double_1 = 0.0, string string_2 = "", string string_3 = "", GClass201 gclass201_1 = null)
+	public GClass332(Vector<GClass349> vector_1 = null, GClass349 gclass349_1 = null)
 	{
-		Class13.igxcIukzfpare();
-		this.string_0 = "";
-		this.string_1 = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.MapId = int_2;
-		this.int_1 = int_3;
-		this.int_0 = int_4;
-		this.Status = uint_0;
-		this.double_0 = double_1;
-		this.string_0 = string_2;
-		this.string_1 = string_3;
-		if (gclass201_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass201_0 = new GClass201(0U);
+			this.vector_0 = new Vector<GClass349>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		if (gclass349_1 == null)
+		{
+			this.gclass349_0 = new GClass349(0, "", "", 0);
 			return;
 		}
-		this.gclass201_0 = gclass201_1;
+		this.gclass349_0 = gclass349_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26263;
+		return 18038;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 24;
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass349 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass349;
+			gclass.HrqIugnatr8(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
+		this.gclass349_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass349);
+		this.gclass349_0.HrqIugnatr8(binaryStream_0);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (this.MapId << 14 | U.smethod_0(this.MapId, 18));
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.Status = (uint)binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 16) | this.int_0 << 16);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
-		this.string_1 = binaryStream_0.smethod_2();
-		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
-		this.gclass201_0.imethod_1(binaryStream_0);
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(26263);
+		binaryStream_0.smethod_7(18038);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(U.smethod_0(this.MapId, 14) | this.MapId << 18);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		binaryStream_0.smethod_5(this.Status);
-		binaryStream_0.smethod_3(this.int_0 << 16 | U.smethod_0(this.int_0, 16));
-		binaryStream_0.smethod_3(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
-		binaryStream_0.MoioCjQkqp0(this.string_1);
-		this.gclass201_0.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass349 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		this.gclass349_0.imethod_1(binaryStream_0);
 	}
 
-	public int MapId;
+	public Vector<GClass349> vector_0;
 
-	public double double_0;
-
-	public string string_0;
-
-	public uint Status;
-
-	public int int_0;
-
-	public int int_1;
-
-	public string string_1;
-
-	public GClass201 gclass201_0;
+	public GClass349 gclass349_0;
 }

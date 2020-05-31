@@ -8,7 +8,7 @@ public class GClass292 : GInterface0
 	{
 		get
 		{
-			return 8437;
+			return 31800;
 		}
 	}
 
@@ -16,49 +16,63 @@ public class GClass292 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 4;
 		}
 	}
 
-	public GClass292(int int_2 = 0, int int_3 = 0)
+	public GClass292(Vector<GClass599> vector_1 = null)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass599>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8437;
+		return 31800;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 4;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass599 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass599;
+			gclass.HrqIugnatr8(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(8437);
+		binaryStream_0.smethod_7(31800);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		binaryStream_0.smethod_3(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass599 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
 	}
 
-	public int int_0;
-
-	public int int_1;
+	public Vector<GClass599> vector_0;
 }

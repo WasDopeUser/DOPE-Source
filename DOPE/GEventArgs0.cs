@@ -5,7 +5,7 @@ public class GEventArgs0 : EventArgs
 {
 	internal GEventArgs0(GEnum13 genum13_1, Keys keys_1)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 		this.genum13_0 = genum13_1;
 		this.keys_0 = keys_1;

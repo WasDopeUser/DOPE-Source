@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass654 : GClass653, GInterface0
+public class GClass654 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 23852;
+			return 1265;
 		}
 	}
 
@@ -16,54 +16,59 @@ public class GClass654 : GClass653, GInterface0
 	{
 		get
 		{
-			return 4;
+			return 14;
 		}
 	}
 
-	public GClass654(int int_0 = 0, uint uint_1 = 0U)
+	public GClass654(int int_2 = 0, double double_1 = 0.0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.MapId = int_0;
-		this.uint_0 = uint_1;
+		this.int_0 = int_2;
+		this.double_0 = double_1;
+		this.int_1 = int_3;
+		this.cshQqiZyal = int_4;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 23852;
+		return 1265;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 4;
+		return 14;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.cshQqiZyal = (int)binaryStream_0.smethod_1();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (U.smethod_0(this.MapId, 13) | this.MapId << 19);
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.int_1 = (int)binaryStream_0.smethod_1();
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(23852);
+		binaryStream_0.smethod_7(1265);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_6(21929);
-		binaryStream_0.smethod_6(10930);
-		binaryStream_0.smethod_3(this.MapId << 13 | U.smethod_0(this.MapId, 19));
-		binaryStream_0.smethod_5(this.uint_0);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(this.cshQqiZyal);
+		binaryStream_0.smethod_7(this.int_0);
+		binaryStream_0.smethod_7(15054);
+		binaryStream_0.smethod_7(this.int_1);
 	}
 
-	public int MapId;
+	public double double_0;
 
-	public uint uint_0;
+	public int cshQqiZyal;
+
+	public int int_0;
+
+	public int int_1;
 }

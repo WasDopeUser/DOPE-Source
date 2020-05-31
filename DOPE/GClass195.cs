@@ -8,7 +8,7 @@ public class GClass195 : GInterface0
 	{
 		get
 		{
-			return 17455;
+			return 9811;
 		}
 	}
 
@@ -16,85 +16,171 @@ public class GClass195 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 15;
 		}
 	}
 
-	public GClass195(int int_1 = 0, string string_1 = "", GClass207 gclass207_2 = null, int int_2 = 0, string string_2 = "", GClass207 gclass207_3 = null)
+	public GClass195(string string_0 = "", int int_1 = 0, GClass199 gclass199_1 = null, GClass205 gclass205_1 = null, int int_2 = 0, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, GClass201 gclass201_1 = null, GClass202 gclass202_1 = null, GClass206 gclass206_1 = null, GClass208 gclass208_1 = null, GClass209 gclass209_1 = null)
 	{
-		Class13.igxcIukzfpare();
-		this.FromName = "";
-		this.string_0 = "";
+		Class13.NP5bWyNzLwONS();
+		this.Name = "";
 		base..ctor();
-		this.FromId = int_1;
-		this.FromName = string_1;
-		if (gclass207_2 == null)
+		this.Name = string_0;
+		this.Id = int_1;
+		if (gclass199_1 == null)
 		{
-			this.gclass207_0 = new GClass207(0U);
+			this.gclass199_0 = new GClass199(0, 0, 0, 0, 0, 0);
 		}
 		else
 		{
-			this.gclass207_0 = gclass207_2;
+			this.gclass199_0 = gclass199_1;
+		}
+		if (gclass205_1 == null)
+		{
+			this.gclass205_0 = new GClass205(0, 0, 0);
+		}
+		else
+		{
+			this.gclass205_0 = gclass205_1;
 		}
 		this.int_0 = int_2;
-		this.string_0 = string_2;
-		if (gclass207_3 == null)
+		this.bool_0 = bool_5;
+		this.bool_2 = bool_6;
+		this.bool_1 = bool_7;
+		this.bool_4 = bool_8;
+		this.bool_3 = bool_9;
+		if (gclass201_1 == null)
 		{
-			this.gclass207_1 = new GClass207(0U);
+			this.gclass201_0 = new GClass201(0, "");
+		}
+		else
+		{
+			this.gclass201_0 = gclass201_1;
+		}
+		if (gclass202_1 == null)
+		{
+			this.gclass202_0 = new GClass202(0U);
+		}
+		else
+		{
+			this.gclass202_0 = gclass202_1;
+		}
+		if (gclass206_1 == null)
+		{
+			this.gclass206_0 = new GClass206(null, "", null);
+		}
+		else
+		{
+			this.gclass206_0 = gclass206_1;
+		}
+		if (gclass208_1 == null)
+		{
+			this.gclass208_0 = new GClass208(0U);
+		}
+		else
+		{
+			this.gclass208_0 = gclass208_1;
+		}
+		if (gclass209_1 == null)
+		{
+			this.gclass209_0 = new GClass209(false, 0);
 			return;
 		}
-		this.gclass207_1 = gclass207_3;
+		this.gclass209_0 = gclass209_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17455;
+		return 9811;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 15;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.gclass205_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass205);
+		this.gclass205_0.HrqIugnatr8(binaryStream_0);
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		this.Name = binaryStream_0.smethod_2();
+		this.gclass206_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass206);
+		this.gclass206_0.HrqIugnatr8(binaryStream_0);
+		this.gclass209_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass209);
+		this.gclass209_0.HrqIugnatr8(binaryStream_0);
+		this.gclass199_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass199);
+		this.gclass199_0.HrqIugnatr8(binaryStream_0);
+		this.bool_2 = binaryStream_0.ReadBoolean();
+		this.gclass208_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass208);
+		this.gclass208_0.HrqIugnatr8(binaryStream_0);
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (this.Id << 9 | U.smethod_0(this.Id, 23));
+		this.gclass201_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass201);
+		this.gclass201_0.HrqIugnatr8(binaryStream_0);
+		this.bool_3 = binaryStream_0.ReadBoolean();
+		this.bool_4 = binaryStream_0.ReadBoolean();
+		binaryStream_0.smethod_1();
+		this.gclass202_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass202);
+		this.gclass202_0.HrqIugnatr8(binaryStream_0);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass207_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
-		this.gclass207_0.imethod_1(binaryStream_0);
-		this.FromName = binaryStream_0.smethod_2();
-		this.gclass207_1 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass207);
-		this.gclass207_1.imethod_1(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
-		this.FromId = binaryStream_0.smethod_0();
-		this.FromId = (this.FromId << 12 | U.smethod_0(this.FromId, 20));
-		this.string_0 = binaryStream_0.smethod_2();
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(17455);
+		binaryStream_0.smethod_7(9811);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		this.gclass207_0.imethod_2(binaryStream_0);
-		binaryStream_0.MoioCjQkqp0(this.FromName);
-		this.gclass207_1.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		binaryStream_0.smethod_3(U.smethod_0(this.FromId, 12) | this.FromId << 20);
-		binaryStream_0.MoioCjQkqp0(this.string_0);
+		this.gclass205_0.imethod_1(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		binaryStream_0.smethod_3(this.Name);
+		this.gclass206_0.imethod_1(binaryStream_0);
+		this.gclass209_0.imethod_1(binaryStream_0);
+		this.gclass199_0.imethod_1(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_2);
+		this.gclass208_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.Id, 9) | this.Id << 23);
+		this.gclass201_0.imethod_1(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_3);
+		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.smethod_7(410);
+		this.gclass202_0.imethod_1(binaryStream_0);
 	}
 
-	public GClass207 gclass207_0;
+	public GClass205 gclass205_0;
 
-	public string FromName;
+	public bool bool_0;
 
-	public GClass207 gclass207_1;
+	public bool bool_1;
 
 	public int int_0;
 
-	public int FromId;
+	public string Name;
 
-	public string string_0;
+	public GClass206 gclass206_0;
+
+	public GClass209 gclass209_0;
+
+	public GClass199 gclass199_0;
+
+	public bool bool_2;
+
+	public GClass208 gclass208_0;
+
+	public int Id;
+
+	public GClass201 gclass201_0;
+
+	public bool bool_3;
+
+	public bool bool_4;
+
+	public GClass202 gclass202_0;
 }

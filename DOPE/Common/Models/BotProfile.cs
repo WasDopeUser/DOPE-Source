@@ -14,8 +14,8 @@ using DOPE.UI.Models;
 
 namespace DOPE.Common.Models
 {
-	[DataContract]
 	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
+	[DataContract]
 	public class BotProfile : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -54,7 +54,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Maps>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_60);
 			}
 		}
 
@@ -78,7 +78,7 @@ namespace DOPE.Common.Models
 				if (map != 0 && fieldInfo.GetCustomAttribute<NotMappedAttribute>() == null)
 				{
 					mapSet.Add(map);
-					bool flag = MapUtils.smethod_4(map);
+					bool flag = MapUtils.smethod_6(map);
 					MapProfile mapProfile = this.Maps.FirstOrDefault((MapProfile t) => t.TargetMap == (TargetMap)map);
 					if (mapProfile == null)
 					{
@@ -96,6 +96,7 @@ namespace DOPE.Common.Models
 			this.AddPalladiumModule();
 			this.AddCubikonsModule();
 			this.AddFrozenLabirynthModule();
+			this.AddPayloadEscort();
 			this.AddQuarantineZone();
 			this.Maps = (from t in this.Maps
 			where mapSet.Contains((int)t.TargetMap) || t.ModuleType > ModuleType.Default
@@ -127,7 +128,7 @@ namespace DOPE.Common.Models
 				npc.Enabled = true;
 				npc.Priority = -1;
 			});
-			int battlerayId = NpcUtils.NpcType.smethod_3("Battleray").Id;
+			int battlerayId = NpcUtils.NpcType.smethod_4("Battleray").Id;
 			mapProfile.NpcWhitelist.First((SelectedNpcModel t) => t.NpcId == battlerayId).Enabled = false;
 		}
 
@@ -143,7 +144,7 @@ namespace DOPE.Common.Models
 				maps.Add(mapProfile2);
 			}
 			mapProfile.TargetMap = TargetMap.X6;
-			int cubikonId = NpcUtils.NpcType.smethod_3("Cubikon").Id;
+			int cubikonId = NpcUtils.NpcType.smethod_4("Cubikon").Id;
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;
@@ -181,6 +182,48 @@ namespace DOPE.Common.Models
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;
+			});
+		}
+
+		private void AddPayloadEscort()
+		{
+			bool payloadEscortEnabled = Constants.PayloadEscortEnabled;
+			MapProfile mapProfile = this.Maps.FirstOrDefault((MapProfile t) => t.ModuleType == ModuleType.PayloadEscort);
+			if (!payloadEscortEnabled)
+			{
+				if (mapProfile != null)
+				{
+					this.Maps.Remove(mapProfile);
+				}
+				return;
+			}
+			if (mapProfile == null)
+			{
+				List<MapProfile> maps = this.Maps;
+				MapProfile mapProfile2 = new MapProfile();
+				mapProfile2.ModuleType = ModuleType.PayloadEscort;
+				mapProfile2.FleeFromEnemySeen = false;
+				mapProfile2.ReviveAtPortal = true;
+				mapProfile2.Priority = 10;
+				mapProfile = mapProfile2;
+				maps.Add(mapProfile2);
+			}
+			mapProfile.FleeFromEnemyAttacker = false;
+			mapProfile.TargetMap = TargetMap.PayloadEscort;
+			IEnumerable<NpcUtils.NpcType> worthy = NpcUtils.NpcType.smethod_3(new NpcUtils.NpcClass[]
+			{
+				NpcUtils.N_PiercingMimesis,
+				NpcUtils.N_ObscuredMimesis
+			});
+			mapProfile.Fill(delegate(SelectedNpcModel npc)
+			{
+				npc.Enabled = true;
+				npc.IgnoreOwnership = true;
+				npc.CircleRange = 545;
+				if (worthy.Any((NpcUtils.NpcType t) => t.Id == npc.NpcId))
+				{
+					npc.Priority = Math.Max(1, npc.Priority);
+				}
 			});
 		}
 

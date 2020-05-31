@@ -12,7 +12,7 @@ namespace DOPE.UI
 	{
 		public ShipSummaryControl()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 			this.InitializeComponent();
 		}

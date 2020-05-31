@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass589 : GClass587, GInterface0
+public class GClass589 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 19865;
+			return 11875;
 		}
 	}
 
@@ -16,49 +16,57 @@ public class GClass589 : GClass587, GInterface0
 	{
 		get
 		{
-			return 8;
+			return 1;
 		}
 	}
 
-	public GClass589(string string_0 = "", int int_0 = 0)
+	public GClass589(GClass288 gclass288_1 = null, bool bool_1 = false)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor(string_0);
-		this.Value = int_0;
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
+		if (gclass288_1 == null)
+		{
+			this.gclass288_0 = new GClass288(0U);
+		}
+		else
+		{
+			this.gclass288_0 = gclass288_1;
+		}
+		this.bool_0 = bool_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 19865;
+		return 11875;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 8;
+		return 1;
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		base.imethod_1(binaryStream_0);
-		this.Value = binaryStream_0.smethod_0();
-		this.Value = (U.smethod_0(this.Value, 5) | this.Value << 27);
 		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.gclass288_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass288);
+		this.gclass288_0.HrqIugnatr8(binaryStream_0);
 	}
 
-	public override void imethod_2(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_6(19865);
+		binaryStream_0.smethod_7(11875);
 		this.vmethod_2(binaryStream_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.Value << 5 | U.smethod_0(this.Value, 27));
-		binaryStream_0.smethod_6(26397);
-		binaryStream_0.smethod_6(-32488);
+		binaryStream_0.smethod_7(21278);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		this.gclass288_0.imethod_1(binaryStream_0);
 	}
 
-	public int Value;
+	public bool bool_0;
+
+	public GClass288 gclass288_0;
 }

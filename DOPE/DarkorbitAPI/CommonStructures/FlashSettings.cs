@@ -86,7 +86,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public FlashSettings()
 		{
-			Class13.igxcIukzfpare();
+			Class13.NP5bWyNzLwONS();
 			base..ctor();
 		}
 	}

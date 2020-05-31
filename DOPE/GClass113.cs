@@ -3,7 +3,7 @@ using DarkorbitAPI;
 
 public class GClass113 : GInterface4
 {
-	public void Run(GClass237 e)
+	public void Run(GClass238 e)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
 		value.Game.NextMapId = e.MapId;
@@ -12,7 +12,7 @@ public class GClass113 : GInterface4
 
 	public GClass113()
 	{
-		Class13.igxcIukzfpare();
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
 	}
 }

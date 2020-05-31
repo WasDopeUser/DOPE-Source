@@ -1,116 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI;
-using PErkava;
+using DOPE.Common;
+using DOPE.Common.Models;
 
-public class GClass869 : INotifyPropertyChanged
+public class GClass869 : GClass865
 {
-	protected void method_0<MQdqaTL5swwGDyqCVK5>(ref MQdqaTL5swwGDyqCVK5 gparam_0, MQdqaTL5swwGDyqCVK5 irqIWjLUo5YUljjBycV, [CallerMemberName] string name = null)
+	public GClass869(GClass839 gclass839_1)
 	{
-		if (!EqualityComparer<MQdqaTL5swwGDyqCVK5>.Default.Equals(gparam_0, irqIWjLUo5YUljjBycV))
+		Class13.NP5bWyNzLwONS();
+		base..ctor(gclass839_1, "HangarInfoProvider");
+	}
+
+	public override int Cooldown
+	{
+		get
 		{
-			gparam_0 = irqIWjLUo5YUljjBycV;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
+			if (base.Context.Game.Web.Equipment.Hangars != null)
 			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
+				return 60000;
 			}
-			if (name == "Enabled")
+			return 2000;
+		}
+	}
+
+	[CompilerGenerated]
+	public DateTimeOffset method_2()
+	{
+		return this.dateTimeOffset_1;
+	}
+
+	[CompilerGenerated]
+	public void method_3(DateTimeOffset dateTimeOffset_2)
+	{
+		this.dateTimeOffset_1 = dateTimeOffset_2;
+	}
+
+	public override void Execute()
+	{
+		GClass28.GClass48 hangarList = base.Context.Game.Web.Equipment.GetHangarList();
+		GClass49.GClass76 hangar = base.Context.Game.Web.Equipment.GetHangar();
+		IDopeService service = base.Context.MainController.Parent.Service;
+		List<string> list = hangarList.data.ret.hangars.Select(new Func<GClass28.GClass32, string>(GClass869.<>c.<>c_0.method_0)).ToList<string>();
+		if (list != null && list.Any<string>() && hangar != null)
+		{
+			VolatileData volatileData = new VolatileData();
+			volatileData.LastUpdated = DateTimeOffset.Now;
+			volatileData.Hangars = list;
+			VolatileData volatileData2 = volatileData;
+			GClass28.GClass32 gclass = hangarList.data.ret.hangars.FirstOrDefault(new Func<GClass28.GClass32, bool>(GClass869.<>c.<>c_0.method_1));
+			string activeHangar;
+			if (gclass == null)
 			{
-				if ((bool)((object)irqIWjLUo5YUljjBycV))
+				activeHangar = null;
+			}
+			else
+			{
+				GClass28.GClass31 gclass31_ = gclass.GClass31_0;
+				if (gclass31_ == null)
 				{
-					PErkava.smethod_5(this);
-					return;
+					activeHangar = null;
 				}
-				PErkava.smethod_6(this);
+				else
+				{
+					GClass28.GClass30 gclass30_ = gclass31_.GClass30_0;
+					activeHangar = ((gclass30_ != null) ? gclass30_.String_0 : null);
+				}
 			}
-		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	public bool Enabled
-	{
-		get
-		{
-			return this.bool_0;
-		}
-		set
-		{
-			this.method_0<bool>(ref this.bool_0, value, "Enabled");
-		}
-	}
-
-	public string Name
-	{
-		get
-		{
-			return this.zkYotWmaWsL;
-		}
-		set
-		{
-			this.method_0<string>(ref this.zkYotWmaWsL, value, "Name");
-		}
-	}
-
-	public int ServerCount
-	{
-		get
-		{
-			HashSet<string> servers = this.Servers;
-			if (servers == null)
+			volatileData2.ActiveHangar = activeHangar;
+			volatileData.Fill();
+			base.Context.Account.Volatile = volatileData;
+			if (this.method_2().Cooldown(120000))
 			{
-				return 0;
+				service.UpdateVolatile(base.Context.Account.BotId, volatileData);
+				this.method_3(DateTimeOffset.Now);
 			}
-			return servers.Count;
 		}
 	}
 
-	public HashSet<string> Servers { get; set; }
-
-	[CompilerGenerated]
-	public Dictionary<int, string> method_1()
+	public override bool vmethod_0()
 	{
-		return this.dictionary_0;
+		return true;
 	}
 
 	[CompilerGenerated]
-	public void method_2(Dictionary<int, string> dictionary_1)
-	{
-		this.dictionary_0 = dictionary_1;
-	}
-
-	public void method_3(DarkOrbitWebAPI darkOrbitWebAPI_0)
-	{
-		Dictionary<int, string> mapHosts;
-		this.method_2(mapHosts = darkOrbitWebAPI_0.GetMapHosts());
-		this.Servers = new HashSet<string>(mapHosts.Select(new Func<KeyValuePair<int, string>, string>(GClass869.<>c.<>c_0.method_0)));
-		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-		if (propertyChanged == null)
-		{
-			return;
-		}
-		propertyChanged(this, new PropertyChangedEventArgs("ServerCount"));
-	}
-
-	public GClass869()
-	{
-		Class13.igxcIukzfpare();
-		this.Servers = new HashSet<string>();
-		this.dictionary_0 = new Dictionary<int, string>();
-		base..ctor();
-	}
-
-	private bool bool_0;
-
-	private string zkYotWmaWsL;
-
-	[CompilerGenerated]
-	private HashSet<string> hashSet_0;
-
-	[CompilerGenerated]
-	private Dictionary<int, string> dictionary_0;
+	private DateTimeOffset dateTimeOffset_1;
 }

@@ -8,7 +8,7 @@ public class GClass484 : GInterface0
 	{
 		get
 		{
-			return 26140;
+			return 11535;
 		}
 	}
 
@@ -16,152 +16,89 @@ public class GClass484 : GInterface0
 	{
 		get
 		{
-			return 20;
+			return 32;
 		}
 	}
 
-	public GClass484(int int_0 = 0, Vector<GClass577> vector_3 = null, GClass500 gclass500_1 = null, Vector<GClass571> vector_4 = null, Vector<GClass696> vector_5 = null, string string_2 = "", string string_3 = "")
+	public GClass484(int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0)
 	{
-		Class13.igxcIukzfpare();
-		this.string_0 = "";
-		this.string_1 = "";
+		Class13.NP5bWyNzLwONS();
 		base..ctor();
-		this.Id = int_0;
-		if (vector_3 == null)
-		{
-			this.vector_1 = new Vector<GClass577>();
-		}
-		else
-		{
-			this.vector_1 = vector_3;
-		}
-		if (gclass500_1 == null)
-		{
-			this.gclass500_0 = new GClass500(0, false, false, false, 0, null);
-		}
-		else
-		{
-			this.gclass500_0 = gclass500_1;
-		}
-		if (vector_4 == null)
-		{
-			this.vector_2 = new Vector<GClass571>();
-		}
-		else
-		{
-			this.vector_2 = vector_4;
-		}
-		if (vector_5 == null)
-		{
-			this.vector_0 = new Vector<GClass696>();
-		}
-		else
-		{
-			this.vector_0 = vector_5;
-		}
-		this.string_0 = string_2;
-		this.string_1 = string_3;
+		this.int_1 = int_8;
+		this.int_7 = int_9;
+		this.int_4 = int_10;
+		this.int_3 = int_11;
+		this.int_0 = int_12;
+		this.int_6 = int_13;
+		this.int_2 = int_14;
+		this.int_5 = int_15;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26140;
+		return 11535;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 20;
+		return 32;
+	}
+
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 8) | this.int_1 << 24);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 7 | U.smethod_0(this.int_2, 25));
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (this.int_3 << 4 | U.smethod_0(this.int_3, 28));
+		this.int_4 = binaryStream_0.smethod_0();
+		this.int_4 = (this.int_4 << 15 | U.smethod_0(this.int_4, 17));
+		this.int_5 = binaryStream_0.smethod_0();
+		this.int_5 = (U.smethod_0(this.int_5, 12) | this.int_5 << 20);
+		binaryStream_0.smethod_1();
+		this.int_6 = binaryStream_0.smethod_0();
+		this.int_6 = (U.smethod_0(this.int_6, 13) | this.int_6 << 19);
+		binaryStream_0.smethod_1();
+		this.int_7 = binaryStream_0.smethod_0();
+		this.int_7 = (this.int_7 << 4 | U.smethod_0(this.int_7, 28));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass696 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass696;
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
-		this.string_0 = binaryStream_0.smethod_2();
-		this.string_1 = binaryStream_0.smethod_2();
-		this.gclass500_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass500);
-		this.gclass500_0.imethod_1(binaryStream_0);
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (this.Id << 16 | U.smethod_0(this.Id, 16));
-		while (this.vector_1.Length > 0)
-		{
-			this.vector_1.method_1();
-		}
-		num = 0;
-		num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass577 gclass2 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass577;
-			gclass2.imethod_1(binaryStream_0);
-			this.vector_1.method_0(gclass2);
-			num++;
-		}
-		while (this.vector_2.Length > 0)
-		{
-			this.vector_2.method_1();
-		}
-		num = 0;
-		num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass571 gclass3 = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass571;
-			gclass3.imethod_1(binaryStream_0);
-			this.vector_2.method_0(gclass3);
-			num++;
-		}
-	}
-
-	public virtual void imethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(26140);
+		binaryStream_0.smethod_7(11535);
 		this.vmethod_2(binaryStream_0);
 	}
 
 	protected virtual void vmethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_3(this.vector_0.Length);
-		foreach (GClass696 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.MoioCjQkqp0(this.string_0);
-		binaryStream_0.MoioCjQkqp0(this.string_1);
-		this.gclass500_0.imethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(U.smethod_0(this.Id, 16) | this.Id << 16);
-		binaryStream_0.smethod_3(this.vector_1.Length);
-		foreach (GClass577 gclass2 in this.vector_1)
-		{
-			gclass2.imethod_2(binaryStream_0);
-		}
-		binaryStream_0.smethod_3(this.vector_2.Length);
-		foreach (GClass571 gclass3 in this.vector_2)
-		{
-			gclass3.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 7) | this.int_2 << 25);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_3, 4) | this.int_3 << 28);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 15) | this.int_4 << 17);
+		binaryStream_0.smethod_4(this.int_5 << 12 | U.smethod_0(this.int_5, 20));
+		binaryStream_0.smethod_7(-14562);
+		binaryStream_0.smethod_4(this.int_6 << 13 | U.smethod_0(this.int_6, 19));
+		binaryStream_0.smethod_7(21012);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_7, 4) | this.int_7 << 28);
 	}
 
-	public Vector<GClass696> vector_0;
+	public int int_0;
 
-	public string string_0;
+	public int int_1;
 
-	public string string_1;
+	public int int_2;
 
-	public GClass500 gclass500_0;
+	public int int_3;
 
-	public int Id;
+	public int int_4;
 
-	public Vector<GClass577> vector_1;
+	public int int_5;
 
-	public Vector<GClass571> vector_2;
+	public int int_6;
+
+	public int int_7;
 }

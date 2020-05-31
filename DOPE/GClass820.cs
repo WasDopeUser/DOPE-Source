@@ -1,182 +1,111 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using DarkorbitAPI.Structures;
-using DOPE.Common;
-using DOPE.Common.Models.Bot.Stats;
+using DarkorbitAPI.CommonStructures;
 
-public class GClass820 : StatisticsCategory
+public class GClass820
 {
-	public Hero Hero { get; }
-
-	public GClass816 Stats { get; }
-
-	public GClass820(Hero hero_1, GClass816 gclass816_1)
+	private void method_0(Vector<uint> vector_2)
 	{
-		Class13.igxcIukzfpare();
-		base..ctor("Hero", new string[]
+		this.vector_1[0U] = this.method_1(this.vector_0, 0U);
+		this.vector_1[1U] = this.method_1(this.vector_0, 4U);
+		this.vector_1[2U] = ((this.vector_0[8U] & 255U) | (this.vector_0[9U] << 8 & 65280U));
+		this.vector_1[3U] = this.method_1(vector_2, 0U);
+		this.vector_1[4U] = this.method_1(vector_2, 4U);
+		this.vector_1[5U] = ((vector_2[8U] & 255U) | (vector_2[9U] << 8 & 65280U));
+		this.vector_1[6U] = 0U;
+		this.vector_1[7U] = 0U;
+		this.vector_1[8U] = 0U;
+		this.vector_1[9U] = 28672U;
+		for (int i = 0; i < 36; i++)
 		{
-			"Name",
-			"Value"
-		}, null);
-		this.Hero = hero_1;
-		this.Stats = gclass816_1;
-		base.Subscribe<Hero>(this.Hero);
-		base.Subscribe<GClass816>(this.Stats);
+			uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
+			uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
+			uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
+			num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
+			num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
+			num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
+			this.vector_1[2U] = this.vector_1[1U];
+			this.vector_1[1U] = this.vector_1[0U];
+			this.vector_1[0U] = num3;
+			this.vector_1[5U] = this.vector_1[4U];
+			this.vector_1[4U] = this.vector_1[3U];
+			this.vector_1[3U] = num;
+			this.vector_1[9U] = this.vector_1[8U];
+			this.vector_1[8U] = this.vector_1[7U];
+			this.vector_1[7U] = this.vector_1[6U];
+			this.vector_1[6U] = num2;
+		}
 	}
 
-	private void method_0(List<IRowEntry> list_2)
+	private uint method_1(Vector<uint> vector_2, uint uint_2)
 	{
-		List<IRowEntry> list = new List<IRowEntry>();
-		using (IEnumerator<KeyValuePair<string, double>> enumerator = this.Hero.Ammo.GetEnumerator())
+		return vector_2[uint_2 + 3U] << 24 | (vector_2[uint_2 + 2U] & 255U) << 16 | (vector_2[uint_2 + 1U] & 255U) << 8 | (vector_2[uint_2] & 255U);
+	}
+
+	private uint method_2()
+	{
+		uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
+		uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
+		uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
+		uint result = num ^ num2 ^ num3;
+		num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
+		num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
+		num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
+		this.vector_1[2U] = this.vector_1[1U];
+		this.vector_1[1U] = this.vector_1[0U];
+		this.vector_1[0U] = num3;
+		this.vector_1[5U] = this.vector_1[4U];
+		this.vector_1[4U] = this.vector_1[3U];
+		this.vector_1[3U] = num;
+		this.vector_1[9U] = this.vector_1[8U];
+		this.vector_1[8U] = this.vector_1[7U];
+		this.vector_1[7U] = this.vector_1[6U];
+		this.vector_1[6U] = num2;
+		return result;
+	}
+
+	public GClass820(Vector<uint> vector_2, Vector<uint> vector_3)
+	{
+		Class13.NP5bWyNzLwONS();
+		base..ctor();
+		this.vector_1 = new Vector<uint>(10);
+		if (vector_2 != null)
 		{
-			while (enumerator.MoveNext())
+			if (vector_2.Length == 10)
 			{
-				GClass820.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass820.<>c__DisplayClass9_0();
-				CS$<>8__locals1.keyValuePair_0 = enumerator.Current;
-				list.Add(StatisticsCategory.WithName(CS$<>8__locals1.keyValuePair_0.Key.ToPascal(), new IValueWrapper<string>[]
+				if (vector_3 != null)
 				{
-					base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0))
-				}));
+					if (vector_3.Length == 10)
+					{
+						this.vector_0 = vector_2;
+						this.method_0(vector_3);
+						return;
+					}
+				}
+				return;
 			}
 		}
-		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, double>(GClass820.<>c.<>c_0.method_0)).ThenBy(new Func<IRowEntry, string>(GClass820.<>c.<>c_0.method_1)))
-		{
-			list_2.Add(item);
-		}
 	}
 
-	private void method_1(List<IRowEntry> list_2)
+	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
 	{
-		List<IRowEntry> list = new List<IRowEntry>();
-		foreach (string text in GClass820.list_0)
+		for (int i = 0; i < int_1; i++)
 		{
-			string text2 = "resource_" + text;
-			if (this.Hero.Resources.ContainsKey(text2))
+			if (this.uint_1 == 0U)
 			{
-				list_2.Add(StatisticsCategory.WithName("Cargo_" + text.ToPascal(), new IValueWrapper<string>[]
-				{
-					this.method_2(text2)
-				}));
+				this.uint_0 = this.method_2();
+				this.uint_1 = 4U;
 			}
-		}
-		foreach (KeyValuePair<string, double> keyValuePair in this.Hero.Resources)
-		{
-			if (!GClass820.list_0.Contains(keyValuePair.Key.Replace("resource_", "")))
-			{
-				list.Add(StatisticsCategory.WithName(keyValuePair.Key.Replace("resource_collectable", "Materials").ToPascal(), new IValueWrapper<string>[]
-				{
-					this.method_2(keyValuePair.Key)
-				}));
-			}
-		}
-		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, string>(GClass820.<>c.<>c_0.method_2)))
-		{
-			list_2.Add(item);
+			byte_0[i + int_0] = (byte)(((uint)byte_0[i + int_0] ^ this.uint_0) & 255U);
+			this.uint_0 >>= 8;
+			this.uint_1 -= 1U;
 		}
 	}
 
-	public override void Update()
-	{
-		List<IRowEntry> list = new List<IRowEntry>();
-		list.Add(this.method_3("In game", new Func<Hero, string>(GClass820.<>c.<>c_0.method_3)));
-		list.Add(this.method_3("Name", new Func<Hero, string>(GClass820.<>c.<>c_0.method_4)));
-		list.Add(this.method_3("Clan", new Func<Hero, string>(GClass820.<>c.<>c_0.method_5)));
-		list.Add(this.method_3("Credits", new Func<Hero, string>(GClass820.<>c.<>c_0.method_6)));
-		list.Add(this.method_3("Uridium", new Func<Hero, string>(GClass820.<>c.<>c_0.GgJofbUaPs3)));
-		list.Add(this.method_3("Level", new Func<Hero, string>(GClass820.<>c.<>c_0.method_7)));
-		list.Add(this.method_3("Experience", new Func<Hero, string>(GClass820.<>c.<>c_0.method_8)));
-		list.Add(this.method_3("Honor", new Func<Hero, string>(GClass820.<>c.<>c_0.method_9)));
-		list.Add(this.method_3("Booty keys", new Func<Hero, string>(GClass820.<>c.<>c_0.method_10)));
-		list.Add(this.method_3("Map", new Func<Hero, string>(GClass820.<>c.<>c_0.method_11)));
-		list.Add(this.method_4("TypeId", new Func<Hero, string>(GClass820.<>c.<>c_0.exQofgAmliF)));
-		list.Add(this.method_4("Cloaked", new Func<Hero, string>(GClass820.<>c.<>c_0.method_12)));
-		list.Add(this.method_4("Speed", new Func<Hero, string>(GClass820.<>c.<>c_0.method_13)));
-		list.Add(this.method_4("HP", new Func<Hero, string>(GClass820.<>c.<>c_0.method_14)));
-		list.Add(this.method_4("Shield", new Func<Hero, string>(GClass820.<>c.<>c_0.UgfofzOpwu6)));
-		list.Add(this.method_4("Config", new Func<Hero, string>(GClass820.<>c.<>c_0.geKoNnyVsf5)));
-		list.Add(this.method_4("Formation", new Func<Hero, string>(GClass820.<>c.<>c_0.vUxoNobxsAP)));
-		list.Add(this.method_4("Cargo", new Func<Hero, string>(GClass820.<>c.<>c_0.method_15)));
-		List<IRowEntry> list2 = list;
-		this.method_0(list2);
-		this.method_1(list2);
-		int num = 0;
-		foreach (IRowEntry rowEntry in list2)
-		{
-			rowEntry.Order = num++;
-			base.Add(rowEntry);
-		}
-		base.Update();
-	}
+	private uint uint_0;
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass820()
-	{
-		Class13.igxcIukzfpare();
-		GClass820.list_0 = new List<string>
-		{
-			"prometium",
-			"endurium",
-			"terbium",
-			"duranium",
-			"prometid",
-			"promerium",
-			"seprom",
-			"xenomit",
-			"palladium"
-		};
-		GClass820.list_1 = new List<string>
-		{
-			"ammunition_laser_lcb-10",
-			"ammunition_laser_mcb-25",
-			"ammunition_laser_mcb-50",
-			"ammunition_laser_ucb-100",
-			"ammunition_laser_job-100",
-			"ammunition_laser_sab-50",
-			"ammunition_rocket_r-310",
-			"ammunition_rocket_plt-2026",
-			"ammunition_rocket_plt-2021",
-			"ammunition_rocket_plt-3030",
-			"ammunition_rocketlauncher_eco-10",
-			"ammunition_rocketlauncher_hstrm-01",
-			"ammunition_rocketlauncher_ubr-100"
-		};
-	}
+	private uint uint_1;
 
-	[CompilerGenerated]
-	private LazyBindingValue<string, Hero> method_2(string string_0)
-	{
-		GClass820.<>c__DisplayClass10_0 CS$<>8__locals1 = new GClass820.<>c__DisplayClass10_0();
-		CS$<>8__locals1.string_0 = string_0;
-		return base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0));
-	}
+	private Vector<uint> vector_0;
 
-	[CompilerGenerated]
-	private IRowEntry method_3(string string_0, Func<Hero, string> func_0)
-	{
-		return StatisticsCategory.WithName(string_0, new IValueWrapper<string>[]
-		{
-			base.L<Hero>(func_0)
-		});
-	}
-
-	[CompilerGenerated]
-	private IRowEntry method_4(string string_0, Func<Hero, string> func_0)
-	{
-		return StatisticsCategory.WithName("Ship_" + string_0, new IValueWrapper<string>[]
-		{
-			base.L<Hero>(func_0)
-		});
-	}
-
-	[CompilerGenerated]
-	private readonly Hero hero_0;
-
-	[CompilerGenerated]
-	private readonly GClass816 gclass816_0;
-
-	public static readonly List<string> list_0;
-
-	public static readonly List<string> list_1;
+	private Vector<uint> vector_1;
 }

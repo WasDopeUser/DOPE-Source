@@ -1,34 +1,86 @@
 ﻿using System;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass789<R0ji3SB0Ip3nxpE2xug> : GClass788<R0ji3SB0Ip3nxpE2xug> where R0ji3SB0Ip3nxpE2xug : GInterface7
+public class GClass789 : GInterface0
 {
-	public GClass789()
+	short GInterface0.Id
 	{
-		Class13.igxcIukzfpare();
+		get
+		{
+			return 17328;
+		}
+	}
+
+	int GInterface0.SizeBytes
+	{
+		get
+		{
+			return 6;
+		}
+	}
+
+	public GClass789(string string_1 = "", Vector<GClass558> vector_1 = null)
+	{
+		Class13.NP5bWyNzLwONS();
+		this.string_0 = "";
 		base..ctor();
-		this.ayksupwJno = new GClass787(null);
-		this.gclass787_0 = new GClass787(null);
+		this.string_0 = string_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass558>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
-	public void method_0(byte[] byte_0)
+	public virtual int vmethod_0()
 	{
-		this.ayksupwJno.method_0(byte_0);
-		this.gclass787_0.method_0(byte_0);
+		return 17328;
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public virtual int vmethod_1()
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-		this.gclass787_0.method_2(byte_0, int_0, int_1);
+		return 6;
 	}
 
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
 	{
-		this.ayksupwJno.method_2(byte_0, int_0, int_1);
-		base.imethod_0(byte_0, int_0, int_1);
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int num = 0;
+		uint num2 = (uint)binaryStream_0.smethod_0();
+		while ((long)num < (long)((ulong)num2))
+		{
+			GClass558 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass558;
+			gclass.HrqIugnatr8(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			num++;
+		}
+		binaryStream_0.smethod_1();
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	private GClass787 ayksupwJno;
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(17328);
+		this.vmethod_2(binaryStream_0);
+	}
 
-	private GClass787 gclass787_0;
+	protected virtual void vmethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_4(this.vector_0.Length);
+		foreach (GClass558 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		binaryStream_0.smethod_7(-17054);
+		binaryStream_0.smethod_3(this.string_0);
+	}
+
+	public Vector<GClass558> vector_0;
+
+	public string string_0;
 }

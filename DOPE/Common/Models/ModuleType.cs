@@ -11,6 +11,8 @@ namespace DOPE.Common.Models
 		[Display(Name = "Frozen Labirynth")]
 		FrozenLabirynth,
 		[Display(Name = "Quarantine Zone")]
-		QuarantineZone
+		QuarantineZone,
+		[Display(Name = "Payload Escort")]
+		PayloadEscort
 	}
 }
