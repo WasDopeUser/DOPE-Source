@@ -8,8 +8,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models.Bot
 {
-	[Guid("7CDB6E89-CAFE-4CA7-B212-CD514925AEC9")]
 	[DataContract]
+	[Guid("7CDB6E89-CAFE-4CA7-B212-CD514925AEC9")]
 	public class BasicBotStateInfo : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -252,7 +252,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<TimeTableActive>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_104);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_105);
 			}
 		}
 

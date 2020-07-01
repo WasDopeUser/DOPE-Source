@@ -8,7 +8,7 @@ public class GClass252 : GInterface0
 	{
 		get
 		{
-			return 32739;
+			return -5427;
 		}
 	}
 
@@ -16,69 +16,47 @@ public class GClass252 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 24;
 		}
 	}
 
-	public GClass252(string string_1 = "", Vector<GClass253> vector_0 = null)
+	public GClass252(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.string_0 = string_1;
-		if (vector_0 == null)
-		{
-			this.Items = new Vector<GClass253>();
-			return;
-		}
-		this.Items = vector_0;
+		this.double_0 = double_3;
+		this.double_1 = double_5;
+		this.double_2 = double_4;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32739;
+		return -5427;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 24;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		while (this.Items.Length > 0)
-		{
-			this.Items.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass253 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass253;
-			gclass.HrqIugnatr8(binaryStream_0);
-			this.Items.method_0(gclass);
-			num++;
-		}
-		this.string_0 = binaryStream_0.smethod_2();
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
+		this.double_2 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32739);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-5427);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.WriteDouble(this.double_2);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.Items.Length);
-		foreach (GClass253 gclass in this.Items)
-		{
-			gclass.imethod_1(binaryStream_0);
-		}
-		binaryStream_0.smethod_3(this.string_0);
-	}
+	public double double_0;
 
-	public Vector<GClass253> Items;
+	public double double_1;
 
-	public string string_0;
+	public double double_2;
 }

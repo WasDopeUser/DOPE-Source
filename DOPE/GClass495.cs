@@ -8,7 +8,7 @@ public class GClass495 : GInterface0
 	{
 		get
 		{
-			return 31740;
+			return 2085;
 		}
 	}
 
@@ -20,23 +20,23 @@ public class GClass495 : GInterface0
 		}
 	}
 
-	public GClass495(int int_2 = 0, int int_3 = 0, GClass367 gclass367_0 = null)
+	public GClass495(int int_2 = 0, int int_3 = 0, GClass363 gclass363_0 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
-		if (gclass367_0 == null)
+		this.int_0 = int_2;
+		this.int_1 = int_3;
+		if (gclass363_0 == null)
 		{
-			this.ToolTip = new GClass367(null);
+			this.ToolTip = new GClass363(null);
 			return;
 		}
-		this.ToolTip = gclass367_0;
+		this.ToolTip = gclass363_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 31740;
+		return 2085;
 	}
 
 	public virtual int vmethod_1()
@@ -44,34 +44,35 @@ public class GClass495 : GInterface0
 		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.ToolTip = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass367);
-		this.ToolTip.HrqIugnatr8(binaryStream_0);
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
+		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 16 | U.smethod_0(this.int_1, 16));
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		this.ToolTip = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.ToolTip != null)
+		{
+			this.ToolTip.imethod_0(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31740);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(2085);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		if (this.ToolTip != null)
+		{
+			this.ToolTip.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-10555);
-		this.ToolTip.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 16) | this.int_1 << 16);
-	}
-
-	public GClass367 ToolTip;
 
 	public int int_0;
 
 	public int int_1;
+
+	public GClass363 ToolTip;
 }

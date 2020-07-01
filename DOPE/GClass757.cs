@@ -8,7 +8,7 @@ public class GClass757 : GInterface0
 	{
 		get
 		{
-			return 317;
+			return 122;
 		}
 	}
 
@@ -16,59 +16,58 @@ public class GClass757 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass757(GClass570 gclass570_1 = null, uint uint_0 = 0U)
+	public GClass757(Vector<GClass697> vector_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass570_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass570_0 = new GClass570(null, 0U);
+			this.vector_0 = new Vector<GClass697>();
+			return;
 		}
-		else
-		{
-			this.gclass570_0 = gclass570_1;
-		}
-		this.rbqreijhpI = uint_0;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 317;
+		return 122;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.gclass570_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass570);
-		this.gclass570_0.HrqIugnatr8(binaryStream_0);
-		this.rbqreijhpI = (uint)binaryStream_0.smethod_1();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass697 gclass = (GClass697)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(317);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(122);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass697 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(21547);
-		binaryStream_0.smethod_7(-19161);
-		this.gclass570_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_6(this.rbqreijhpI);
-	}
-
-	public GClass570 gclass570_0;
-
-	public uint rbqreijhpI;
+	public Vector<GClass697> vector_0;
 }

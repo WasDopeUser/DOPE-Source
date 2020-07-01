@@ -8,7 +8,7 @@ public class GClass760 : GInterface0
 	{
 		get
 		{
-			return 21930;
+			return 71;
 		}
 	}
 
@@ -16,43 +16,67 @@ public class GClass760 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass760(int int_1 = 0)
+	public GClass760(GClass749 gclass749_1 = null, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_0 = int_1;
+		if (gclass749_1 == null)
+		{
+			this.gclass749_0 = new GClass749();
+		}
+		else
+		{
+			this.gclass749_0 = gclass749_1;
+		}
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21930;
+		return 71;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
+		this.gclass749_0 = (GClass749)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass749_0 != null)
+		{
+			this.gclass749_0.imethod_0(binaryStream_0);
+		}
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 3) | this.int_1 << 29);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21930);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(71);
+		if (this.gclass749_0 != null)
+		{
+			this.gclass749_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		binaryStream_0.smethod_4(this.int_1 << 3 | U.smethod_0(this.int_1, 29));
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-	}
+	public GClass749 gclass749_0;
 
 	public int int_0;
+
+	public int int_1;
 }

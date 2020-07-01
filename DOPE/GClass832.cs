@@ -1,61 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using DOPE.Common.Models.Bot.Stats;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass832 : StatisticsCategory
+public class GClass832 : GInterface0
 {
-	public Dictionary<string, int> Count
+	short GInterface0.Id
 	{
-		[CompilerGenerated]
 		get
 		{
-			return this.dictionary_0;
-		}
-		[CompilerGenerated]
-		private set
-		{
-			if (object.Equals(this.dictionary_0, value))
-			{
-				return;
-			}
-			this.dictionary_0 = value;
-			this.<>OnPropertyChanged(Class10.Count);
+			return 11873;
 		}
 	}
 
-	public GClass832(string string_0, Dictionary<string, int> dictionary_1)
+	int GInterface0.SizeBytes
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(string_0, new string[]
+		get
 		{
-			"Name",
-			"Count"
-		}, null);
-		this.Count = dictionary_1;
-	}
-
-	public override void Rebuild()
-	{
-	}
-
-	public override void Update()
-	{
-		Dictionary<string, int> count = this.Count;
-		lock (count)
-		{
-			foreach (KeyValuePair<string, int> keyValuePair in this.Count)
-			{
-				GClass832.<>c__DisplayClass6_0 CS$<>8__locals1 = new GClass832.<>c__DisplayClass6_0();
-				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
-				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.method_0));
-				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value);
-				rowEntry.Order = -keyValuePair.Value;
-			}
+			return 4;
 		}
-		base.Update();
 	}
 
-	[CompilerGenerated]
-	private Dictionary<string, int> dictionary_0;
+	public GClass832(int int_1 = 0)
+	{
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_1;
+	}
+
+	public virtual int vmethod_0()
+	{
+		return 11873;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 4;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(11873);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+	}
+
+	public int int_0;
 }

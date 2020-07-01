@@ -64,13 +64,13 @@ namespace DarkorbitAPI
 				text,
 				1920,
 				1080,
-				this.Game.Settings.UIString ?? ".root1.instance475.MainClientApplication0.ApplicationSkin2.Group3.Group4._-wi5.instance25054 root1 false -1"
+				this.Game.Settings.UIString ?? ".root1.instance466.MainClientApplication0.ApplicationSkin2.Group3.Group4._-R42_5.instance25043 root1 false -1"
 			});
 		}
 
 		public SecurityManager(GameManager gameManager_0)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.HashBlockList = new CooldownTracker<string>();
 			this.Random = new Random();
 			base..ctor();
@@ -121,7 +121,7 @@ namespace DarkorbitAPI
 			int num3 = CS$<>8__locals1.int_1 * CS$<>8__locals1.int_0 + num;
 			int num4 = CS$<>8__locals1.int_3 * CS$<>8__locals1.int_2 + num2;
 			Vector2 vector = new Vector2((float)num3, (float)num4);
-			if (map_0.Grid.method_6(vector))
+			if (map_0.Grid.method_7(vector))
 			{
 				return this.method_4(map_0, rectangle_0);
 			}
@@ -132,7 +132,7 @@ namespace DarkorbitAPI
 
 		static SecurityManager()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			SecurityManager.NpcRangesRegular = new Dictionary<NpcUtils.NpcClass, int>
 			{
 				{
@@ -484,7 +484,7 @@ namespace DarkorbitAPI
 		{
 			int num;
 			int num2;
-			if (this.Game.Map.Grid.afXuUuplYy((float)int_0, (float)int_1, out num, out num2))
+			if (this.Game.Map.Grid.method_1((float)int_0, (float)int_1, out num, out num2))
 			{
 				int scaleX = this.Game.Map.Grid.ScaleX;
 				int scaleY = this.Game.Map.Grid.ScaleY;

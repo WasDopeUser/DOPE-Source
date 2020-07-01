@@ -79,9 +79,9 @@ namespace DOPE.UI
 
 		public MainWindow()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this._lock = new object();
-			this.<BotControllers>k__BackingField = new GClass4<GClass871>();
+			this.<BotControllers>k__BackingField = new GClass4<GClass922>();
 			base..ctor();
 			Application.Current.MainWindow = this;
 			MainWindow.Instance = this;
@@ -186,9 +186,9 @@ namespace DOPE.UI
 			this.GroupDeclineInviteCommand = new RelayCommand(new Action<object>(this.method_7), null);
 		}
 
-		private void method_3(Action<GClass871> action_0, bool bool_0 = false)
+		private void method_3(Action<GClass922> action_0, bool bool_0 = false)
 		{
-			GClass871 selected = this.Selected;
+			GClass922 selected = this.Selected;
 			if (selected != null && (!bool_0 || selected.Context.Hero.IsInitialized))
 			{
 				action_0(selected);
@@ -205,28 +205,28 @@ namespace DOPE.UI
 				return;
 			}
 			comboBox.Text = "";
-			this.method_3(new Action<GClass871>(CS$<>8__locals1.method_0), true);
+			this.method_3(new Action<GClass922>(CS$<>8__locals1.method_0), true);
 		}
 
 		private void method_5(object object_0)
 		{
 			MainWindow.<>c__DisplayClass39_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass39_0();
 			CS$<>8__locals1.id = (int)object_0;
-			this.method_3(new Action<GClass871>(CS$<>8__locals1.method_0), false);
+			this.method_3(new Action<GClass922>(CS$<>8__locals1.method_0), false);
 		}
 
 		private void method_6(object object_0)
 		{
 			MainWindow.<>c__DisplayClass40_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass40_0();
 			CS$<>8__locals1.id = (int)object_0;
-			this.method_3(new Action<GClass871>(CS$<>8__locals1.method_0), false);
+			this.method_3(new Action<GClass922>(CS$<>8__locals1.method_0), false);
 		}
 
 		private void method_7(object object_0)
 		{
 			MainWindow.<>c__DisplayClass41_0 CS$<>8__locals1 = new MainWindow.<>c__DisplayClass41_0();
 			CS$<>8__locals1.id = (int)object_0;
-			this.method_3(new Action<GClass871>(CS$<>8__locals1.method_0), false);
+			this.method_3(new Action<GClass922>(CS$<>8__locals1.method_0), false);
 		}
 
 		private void MainWindow_Closed(object sender, EventArgs e)
@@ -248,14 +248,14 @@ namespace DOPE.UI
 			}
 			foreach (object obj in e.NewItems)
 			{
-				GClass871 gclass = (GClass871)obj;
+				GClass922 gclass = (GClass922)obj;
 				PErkava.smethod_0()[int.Parse(gclass.Context.Account.UserId)] = gclass.Context;
 			}
 		}
 
 		public static MainWindow Instance { get; set; }
 
-		public GClass4<GClass871> BotControllers
+		public GClass4<GClass922> BotControllers
 		{
 			[CompilerGenerated]
 			get
@@ -275,7 +275,7 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass871 Selected
+		public GClass922 Selected
 		{
 			get
 			{
@@ -329,7 +329,7 @@ namespace DOPE.UI
 							goto IL_67;
 						}
 					}
-					this._lastMapControl = GClass6.smethod_0<MapControl>(this.MainTabs, new Func<MapControl, bool>(CS$<>8__locals1.UchShImKrY));
+					this._lastMapControl = GClass6.smethod_0<MapControl>(this.MainTabs, new Func<MapControl, bool>(CS$<>8__locals1.method_0));
 					IL_67:
 					this._lastSelected = CS$<>8__locals1.selected;
 					MapControl lastMapControl = this._lastMapControl;
@@ -337,13 +337,13 @@ namespace DOPE.UI
 					{
 						lastMapControl.InvalidateVisual();
 					}
-					GClass871 lastSelected = this._lastSelected;
+					GClass922 lastSelected = this._lastSelected;
 					if (lastSelected != null)
 					{
-						GClass839 context = lastSelected.Context;
+						GClass890 context = lastSelected.Context;
 						if (context != null)
 						{
-							GClass831 stats = context.Stats;
+							GClass882 stats = context.Stats;
 							if (stats != null)
 							{
 								stats.method_3();
@@ -361,7 +361,7 @@ namespace DOPE.UI
 
 		private void method_11(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass871 gclass in this.BotControllers)
+			foreach (GClass922 gclass in this.BotControllers)
 			{
 				gclass.Start();
 			}
@@ -374,7 +374,7 @@ namespace DOPE.UI
 
 		private void method_13(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass871 gclass in this.BotControllers)
+			foreach (GClass922 gclass in this.BotControllers)
 			{
 				gclass.Pause();
 			}
@@ -387,7 +387,7 @@ namespace DOPE.UI
 
 		private void method_15(object sender, RoutedEventArgs e)
 		{
-			foreach (GClass871 gclass in this.BotControllers)
+			foreach (GClass922 gclass in this.BotControllers)
 			{
 				gclass.Stop();
 			}
@@ -447,7 +447,7 @@ namespace DOPE.UI
 				return;
 			}
 			DebugWindow debugWindow = new DebugWindow();
-			debugWindow.method_1<GClass805>(this._lastSelected.Context.Game.Connection.Socket.method_5());
+			debugWindow.method_1<GClass854>(this._lastSelected.Context.Game.Connection.Socket.method_3());
 			debugWindow.Show();
 		}
 
@@ -458,7 +458,7 @@ namespace DOPE.UI
 				this.PerkavaWindow.Focus();
 				return;
 			}
-			this.PerkavaWindow = new GClass873();
+			this.PerkavaWindow = new GClass924();
 			if (this.PerkavaWindow.method_5())
 			{
 				this.PerkavaWindow.Show();
@@ -472,8 +472,8 @@ namespace DOPE.UI
 
 		private void method_24(object sender, MouseButtonEventArgs e)
 		{
-			GClass871 selected = this.Selected;
-			if (selected != null && selected.Context.Game.Connection.Socket.method_2())
+			GClass922 selected = this.Selected;
+			if (selected != null && selected.Context.Game.Connection.Socket.method_1())
 			{
 				int config = selected.Context.Hero.Config;
 				selected.Context.Server.method_4((config == 1) ? 2 : 1);
@@ -555,7 +555,7 @@ namespace DOPE.UI
 		{
 			ComboBox comboBox = sender as ComboBox;
 			comboBox.Items.Clear();
-			foreach (GClass871 gclass in this.BotControllers)
+			foreach (GClass922 gclass in this.BotControllers)
 			{
 				string userName = gclass.Context.Game.Web.UserName;
 				if (!string.IsNullOrEmpty(userName))
@@ -565,9 +565,9 @@ namespace DOPE.UI
 			}
 		}
 
-		[DebuggerNonUserCode]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+		[DebuggerNonUserCode]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			switch (connectionId)
@@ -625,7 +625,7 @@ namespace DOPE.UI
 
 		private MapControl _lastMapControl;
 
-		private GClass871 _lastSelected;
+		private GClass922 _lastSelected;
 
 		private readonly object _lock;
 
@@ -633,7 +633,7 @@ namespace DOPE.UI
 
 		public Thread MapRendererThread;
 
-		public GClass873 PerkavaWindow;
+		public GClass924 PerkavaWindow;
 
 		private volatile bool _closing;
 

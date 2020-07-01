@@ -34,9 +34,9 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Web>k__BackingField = value;
-				this.method_2(<>PropertyChangedEventArgs.UserAgent);
-				this.method_2(<>PropertyChangedEventArgs.Server);
-				this.method_2(<>PropertyChangedEventArgs.Web);
+				this.method_3(<>PropertyChangedEventArgs.UserAgent);
+				this.method_3(<>PropertyChangedEventArgs.Server);
+				this.method_3(<>PropertyChangedEventArgs.Web);
 			}
 		}
 
@@ -63,7 +63,7 @@ namespace DOPE.UI
 
 		public BrowserWindow(DarkOrbitWebAPI darkOrbitWebAPI_0)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -72,7 +72,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		private static void dKnHyFdWmi()
+		private static void smethod_0()
 		{
 			int num = 3;
 			if (!BrowserWindow.InternetSetOption(IntPtr.Zero, 81, ref num, 4))
@@ -84,9 +84,9 @@ namespace DOPE.UI
 		[DllImport("wininet.dll", CharSet = CharSet.Auto, SetLastError = true)]
 		public static extern bool InternetSetOption(IntPtr intptr_0, int int_0, ref int int_1, int int_2);
 
-		private void enoHxSomUi(object sender, RoutedEventArgs e)
+		private void method_1(object sender, RoutedEventArgs e)
 		{
-			BrowserWindow.dKnHyFdWmi();
+			BrowserWindow.smethod_0();
 			this.method_0();
 			object arg = this.Browser.GetType().InvokeMember("ActiveXInstance", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.GetProperty, null, this.Browser, new object[0]);
 			if (BrowserWindow.<>o__19.<>p__0 == null)
@@ -104,17 +104,17 @@ namespace DOPE.UI
 				Cookie cookie = (Cookie)obj;
 				Application.SetCookie(uri, cookie.Name + "=" + cookie.Value);
 			}
-			this.Browser.Navigate(GClass829.smethod_1(this.Server, null) ?? "");
+			this.Browser.Navigate(GClass880.smethod_1(this.Server, null) ?? "");
 		}
 
-		private void method_1(object sender, EventArgs e)
+		private void method_2(object sender, EventArgs e)
 		{
 			this.Browser.Dispose();
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_2(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		protected void method_3(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

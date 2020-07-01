@@ -5,9 +5,9 @@ public interface GInterface0
 {
 	short Id { get; }
 
-	int imethod_0();
+	int DfujvOpZkSk();
 
-	void HrqIugnatr8(BinaryStream binaryStream_0);
+	void imethod_0(BinaryStream binaryStream_0);
 
 	void imethod_1(BinaryStream binaryStream_0);
 }

@@ -12,7 +12,7 @@ internal static class Class7
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class7()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		Class7.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("AttackConfig");
 		Class7.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("AttackFormation");
 		Class7.propertyChangedEventArgs_2 = new PropertyChangedEventArgs("AutoRefine");
@@ -129,29 +129,29 @@ internal static class Class7
 		Class7.propertyChangedEventArgs_94 = new PropertyChangedEventArgs("Spinner_Kuiper");
 		Class7.propertyChangedEventArgs_95 = new PropertyChangedEventArgs("Spinner_Lambda");
 		Class7.propertyChangedEventArgs_96 = new PropertyChangedEventArgs("Spinner_PlaceGates");
-		Class7.wpvHvJgIcWy = new PropertyChangedEventArgs("Spinner_SpinDelay");
-		Class7.propertyChangedEventArgs_97 = new PropertyChangedEventArgs("Spinner_SpinSize");
-		Class7.propertyChangedEventArgs_98 = new PropertyChangedEventArgs("Spinner_StopABG");
-		Class7.propertyChangedEventArgs_99 = new PropertyChangedEventArgs("Spinner_UsePhoenix");
-		Class7.propertyChangedEventArgs_100 = new PropertyChangedEventArgs("Spinner_UseUridium");
-		Class7.propertyChangedEventArgs_101 = new PropertyChangedEventArgs("Spinner_Zeta");
+		Class7.propertyChangedEventArgs_97 = new PropertyChangedEventArgs("Spinner_SpinDelay");
+		Class7.propertyChangedEventArgs_98 = new PropertyChangedEventArgs("Spinner_SpinSize");
+		Class7.propertyChangedEventArgs_99 = new PropertyChangedEventArgs("Spinner_StopABG");
+		Class7.propertyChangedEventArgs_100 = new PropertyChangedEventArgs("Spinner_UsePhoenix");
+		Class7.propertyChangedEventArgs_101 = new PropertyChangedEventArgs("Spinner_UseUridium");
+		Class7.propertyChangedEventArgs_102 = new PropertyChangedEventArgs("Spinner_Zeta");
 		Class7.Spins = new PropertyChangedEventArgs("Spins");
-		Class7.propertyChangedEventArgs_102 = new PropertyChangedEventArgs("TargetMap");
-		Class7.propertyChangedEventArgs_103 = new PropertyChangedEventArgs("TimeTable");
-		Class7.propertyChangedEventArgs_104 = new PropertyChangedEventArgs("TimeTableActive");
-		Class7.propertyChangedEventArgs_105 = new PropertyChangedEventArgs("TimeTableUseUtc");
-		Class7.propertyChangedEventArgs_106 = new PropertyChangedEventArgs("Use3D");
-		Class7.propertyChangedEventArgs_107 = new PropertyChangedEventArgs("UseKamikaze");
-		Class7.propertyChangedEventArgs_108 = new PropertyChangedEventArgs("UseMothToKillCorners");
-		Class7.propertyChangedEventArgs_109 = new PropertyChangedEventArgs("UseOffensiveAbility");
-		Class7.propertyChangedEventArgs_110 = new PropertyChangedEventArgs("UsePetLocator");
-		Class7.propertyChangedEventArgs_111 = new PropertyChangedEventArgs("UserAgent");
-		Class7.propertyChangedEventArgs_112 = new PropertyChangedEventArgs("UserId");
-		Class7.propertyChangedEventArgs_113 = new PropertyChangedEventArgs("Username");
-		Class7.propertyChangedEventArgs_114 = new PropertyChangedEventArgs("UseRocketPrecision");
-		Class7.propertyChangedEventArgs_115 = new PropertyChangedEventArgs("UseSab");
+		Class7.propertyChangedEventArgs_103 = new PropertyChangedEventArgs("TargetMap");
+		Class7.propertyChangedEventArgs_104 = new PropertyChangedEventArgs("TimeTable");
+		Class7.propertyChangedEventArgs_105 = new PropertyChangedEventArgs("TimeTableActive");
+		Class7.propertyChangedEventArgs_106 = new PropertyChangedEventArgs("TimeTableUseUtc");
+		Class7.propertyChangedEventArgs_107 = new PropertyChangedEventArgs("Use3D");
+		Class7.propertyChangedEventArgs_108 = new PropertyChangedEventArgs("UseKamikaze");
+		Class7.propertyChangedEventArgs_109 = new PropertyChangedEventArgs("UseMothToKillCorners");
+		Class7.propertyChangedEventArgs_110 = new PropertyChangedEventArgs("UseOffensiveAbility");
+		Class7.propertyChangedEventArgs_111 = new PropertyChangedEventArgs("UsePetLocator");
+		Class7.propertyChangedEventArgs_112 = new PropertyChangedEventArgs("UserAgent");
+		Class7.propertyChangedEventArgs_113 = new PropertyChangedEventArgs("UserId");
+		Class7.propertyChangedEventArgs_114 = new PropertyChangedEventArgs("Username");
+		Class7.propertyChangedEventArgs_115 = new PropertyChangedEventArgs("UseRocketPrecision");
+		Class7.propertyChangedEventArgs_116 = new PropertyChangedEventArgs("UseSab");
 		Class7.Value = new PropertyChangedEventArgs("Value");
-		Class7.propertyChangedEventArgs_116 = new PropertyChangedEventArgs("Volatile");
+		Class7.propertyChangedEventArgs_117 = new PropertyChangedEventArgs("Volatile");
 	}
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_0;
@@ -386,8 +386,6 @@ internal static class Class7
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_96;
 
-	internal static readonly PropertyChangedEventArgs wpvHvJgIcWy;
-
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_97;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_98;
@@ -398,9 +396,9 @@ internal static class Class7
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_101;
 
-	internal static readonly PropertyChangedEventArgs Spins;
-
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_102;
+
+	internal static readonly PropertyChangedEventArgs Spins;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_103;
 
@@ -428,7 +426,9 @@ internal static class Class7
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_115;
 
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_116;
+
 	internal static readonly PropertyChangedEventArgs Value;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_116;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_117;
 }

@@ -16,7 +16,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return string.Format("{0}.{1}", 0, 52);
+				return string.Format("{0}.{1}", 0, 54);
 			}
 		}
 
@@ -48,8 +48,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				GClass283 gclass = new GClass283(0, 134, 4);
-				return string.Format("{0}.{1}.{2}", gclass.int_0, gclass.int_1, gclass.int_2);
+				return "2288b5adc1b3377c217c9e212e024300";
 			}
 		}
 

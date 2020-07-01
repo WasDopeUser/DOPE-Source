@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass363 : GClass362, GInterface0
+public class GClass363 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12917;
+			return -30886;
 		}
 	}
 
@@ -16,50 +16,58 @@ public class GClass363 : GClass362, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass363(GClass442 gclass442_1 = null)
+	public GClass363(Vector<GClass439> vector_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass442_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass442_0 = new GClass442(0U, "", null, null);
+			this.vector_0 = new Vector<GClass439>();
 			return;
 		}
-		this.gclass442_0 = gclass442_1;
+		this.vector_0 = vector_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 12917;
+		return -30886;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.gclass442_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass442);
-		this.gclass442_0.HrqIugnatr8(binaryStream_0);
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass439 gclass = (GClass439)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12917);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-30886);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass439 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		this.gclass442_0.imethod_1(binaryStream_0);
-	}
-
-	public GClass442 gclass442_0;
+	public Vector<GClass439> vector_0;
 }

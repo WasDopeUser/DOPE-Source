@@ -5,24 +5,24 @@ using System.Runtime.CompilerServices;
 public sealed class GAttribute60 : Attribute
 {
 	[CompilerGenerated]
-	public bool jYoEzFtjhG()
+	public bool method_0()
 	{
-		return this.bool_0;
+		return this.tHlyFgHnaD;
 	}
 
 	[CompilerGenerated]
-	private void method_0(bool bool_1)
+	private void method_1(bool bool_0)
 	{
-		this.bool_0 = bool_1;
+		this.tHlyFgHnaD = bool_0;
 	}
 
-	public GAttribute60(bool bool_1)
+	public GAttribute60(bool bool_0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.method_0(bool_1);
+		this.method_1(bool_0);
 	}
 
 	[CompilerGenerated]
-	private bool bool_0;
+	private bool tHlyFgHnaD;
 }

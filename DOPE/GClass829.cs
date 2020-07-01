@@ -1,96 +1,62 @@
 ﻿using System;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public static class GClass829
+public class GClass829 : GInterface0
 {
-	public static string smethod_0(string string_1)
+	short GInterface0.Id
 	{
-		return string.Format(GClass829.string_0, string_1);
-	}
-
-	public static string smethod_1(string string_1, string string_2 = null)
-	{
-		if (string_2 == null)
+		get
 		{
-			return GClass829.smethod_0(string_1) + "/indexInternal.es";
+			return 24370;
 		}
-		return GClass829.smethod_0(string_1) + "/indexInternal.es?action=" + string_2;
 	}
 
-	public static string smethod_2(string string_1)
+	int GInterface0.SizeBytes
 	{
-		return GClass829.smethod_1(string_1, "internalMapRevolution");
-	}
-
-	public static string Maps(string server)
-	{
-		return GClass829.smethod_0(server) + "/spacemap/xml/maps.php";
-	}
-
-	public static string smethod_3()
-	{
-		return "https://powerofdark.space/static/maps.xml";
-	}
-
-	public static string smethod_4(string string_1)
-	{
-		return GClass829.smethod_1(string_1, "externalLogout");
-	}
-
-	public static string smethod_5(string string_1)
-	{
-		return GClass829.smethod_0(string_1) + "/ajax/shop.php";
-	}
-
-	public static string oemHlkhhlQr(string string_1, string string_2, string string_3, string string_4 = "init")
-	{
-		return string.Concat(new string[]
+		get
 		{
-			GClass829.smethod_0(string_1),
-			"/flashinput/galaxyGates.php?userID=",
-			string_2,
-			"&action=",
-			string_4,
-			"&sid=",
-			string_3
-		});
+			return 24;
+		}
 	}
 
-	public static string smethod_6(string string_1)
+	public GClass829(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
 	{
-		return GClass829.smethod_0(string_1) + "/flashAPI/dailyLogin.php?doBook=1";
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.double_0 = double_4;
+		this.double_1 = double_5;
+		this.double_2 = double_3;
 	}
 
-	public static string smethod_7(string string_1)
+	public virtual int vmethod_0()
 	{
-		return GClass829.smethod_0(string_1) + "/ajax/instances.php";
+		return 24370;
 	}
 
-	public static string smethod_8(string string_1)
+	public virtual int vmethod_1()
 	{
-		return GClass829.smethod_0(string_1) + "/flashAPI/inventory.php";
+		return 24;
 	}
 
-	public static string smethod_9(string string_1)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		return GClass829.smethod_1(string_1, "internalNanoTechFactory");
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
+		this.double_2 = binaryStream_0.ReadDouble();
 	}
 
-	public static string smethod_10(string string_1)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		return GClass829.smethod_0(string_1) + "/ajax/nanotechFactory.php";
+		binaryStream_0.smethod_7(24370);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.WriteDouble(this.double_2);
 	}
 
-	public static string smethod_11()
-	{
-		return "https://powerofdark.space/static/ui.txt";
-	}
+	public double double_0;
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass829()
-	{
-		Class13.NP5bWyNzLwONS();
-		GClass829.string_0 = "https://{0}.darkorbit.com";
-	}
+	public double double_1;
 
-	public static string string_0;
+	public double double_2;
 }

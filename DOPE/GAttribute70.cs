@@ -18,7 +18,7 @@ public sealed class GAttribute70 : Attribute
 
 	public GAttribute70(string string_1)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.method_1(string_1);
 	}

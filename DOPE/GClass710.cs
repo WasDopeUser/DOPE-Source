@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass710 : GInterface0
+public class GClass710 : GClass708, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 11803;
+			return 27350;
 		}
 	}
 
@@ -16,44 +16,41 @@ public class GClass710 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass710(uint uint_1 = 0U)
+	public GClass710(string string_1 = "", int int_1 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-		this.uint_0 = uint_1;
+		Class13.F93tSdiz1aNIA();
+		base..ctor(string_1);
+		this.int_0 = int_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 11803;
+		return 27350;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11803);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(27350);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-21977);
-		binaryStream_0.smethod_6(this.uint_0);
-	}
-
-	public uint uint_0;
+	public int int_0;
 }

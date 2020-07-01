@@ -10,7 +10,6 @@ using Ace.Networking;
 using Ace.Networking.Entanglement;
 using Ace.Networking.Entanglement.Extensions;
 using Ace.Networking.Entanglement.Packets;
-using Ace.Networking.Entanglement.ProxyImpl;
 using Ace.Networking.Entanglement.Services;
 using Ace.Networking.Handlers;
 using Ace.Networking.Services;
@@ -28,15 +27,15 @@ namespace DOPE.Core
 	{
 		public Controller(string string_2, string string_3)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
 			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
 			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.method_0);
 			base..ctor();
 			this.entanglementHostService_0 = new EntanglementHostService();
-			this.entanglementHostService_0.Register<GInterface8, GClass872>(EntanglementAccess.Global).Register<IBotController, GClass871>(EntanglementAccess.Manual);
-			this.Control = (GClass872)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
+			this.entanglementHostService_0.Register<GInterface8, GClass923>(EntanglementAccess.Global).Register<IBotController, GClass922>(EntanglementAccess.Manual);
+			this.Control = (GClass923)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
 			this.Control.Parent = this;
 			this.Control.Type = string_2;
 			this.Control.Version = string_3;
@@ -77,8 +76,8 @@ namespace DOPE.Core
 					return;
 				}
 				this.idopeService_0 = value;
-				this.method_18(Class10.propertyChangedEventArgs_16);
-				this.method_18(Class10.propertyChangedEventArgs_54);
+				this.method_18(Class10.propertyChangedEventArgs_15);
+				this.method_18(Class10.propertyChangedEventArgs_51);
 			}
 		}
 
@@ -140,21 +139,21 @@ namespace DOPE.Core
 			}
 		}
 
-		public GClass872 Control
+		public GClass923 Control
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.gclass872_0;
+				return this.gclass923_0;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (object.Equals(this.gclass872_0, value))
+				if (object.Equals(this.gclass923_0, value))
 				{
 					return;
 				}
-				this.gclass872_0 = value;
+				this.gclass923_0 = value;
 				this.method_18(Class10.propertyChangedEventArgs_11);
 			}
 		}
@@ -182,7 +181,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.string_1 = value;
-				this.method_18(Class10.propertyChangedEventArgs_31);
+				this.method_18(Class10.propertyChangedEventArgs_29);
 			}
 		}
 
@@ -224,63 +223,30 @@ namespace DOPE.Core
 			while (eventHandler != eventHandler2);
 		}
 
-		private async void method_4(object object_1)
+		private void method_4(object object_1)
 		{
-			try
-			{
-				await this.method_5();
-			}
-			catch
-			{
-			}
-			this.timer_0.Change(100, -1);
+			Controller.<Monitor>d__46 <Monitor>d__;
+			<Monitor>d__.<>4__this = this;
+			<Monitor>d__.<>t__builder = AsyncVoidMethodBuilder.Create();
+			<Monitor>d__.<>1__state = -1;
+			<Monitor>d__.<>t__builder.Start<Controller.<Monitor>d__46>(ref <Monitor>d__);
 		}
 
-		private async Task method_5()
+		private Task method_5()
 		{
-			DateTimeOffset now = DateTimeOffset.Now;
-			IConnection connection = this.Connection;
-			bool flag = connection != null && connection.Connected;
-			if (this.dateTimeOffset_0.AddSeconds(5.0) < now && this.Key != null && !this.bool_0 && !flag)
-			{
-				this.method_7(this.Key);
-			}
-			if (this.Status == GEnum12.Connected && flag && this.Connection.LastReceived.Cooldown(10000))
-			{
-				this.Connection.Close();
-			}
-			else if (this.Status == GEnum12.Connecting && flag && this.dateTimeOffset_2.AddSeconds(5.0) < now)
-			{
-				this.Connection.Close();
-			}
-			if ((now - this.dateTimeOffset_1).TotalSeconds > 30.0 && this.Status == GEnum12.Connected && this.Service != null)
-			{
-				DopeServiceStatus serviceStatus = await this.Service.GetServiceStatus();
-				this.ServiceStatus = serviceStatus;
-				if (this.ServiceStatus != null)
-				{
-					this.dateTimeOffset_1 = now;
-					foreach (string message in this.ServiceStatus.BreakingNews)
-					{
-						Controller.logger_0.Warn(message);
-					}
-					if (this.ServiceStatus.ClientOutOfDate)
-					{
-						Controller.logger_0.Warn("Your client version is outdated. Please download the new version from Home/Downloads.");
-					}
-					if (!this.ServiceStatus.EnabledGG)
-					{
-						Controller.logger_0.Warn("GGs are disabled.");
-					}
-				}
-			}
+			Controller.<MonitorBot>d__47 <MonitorBot>d__;
+			<MonitorBot>d__.<>4__this = this;
+			<MonitorBot>d__.<>t__builder = AsyncTaskMethodBuilder.Create();
+			<MonitorBot>d__.<>1__state = -1;
+			<MonitorBot>d__.<>t__builder.Start<Controller.<MonitorBot>d__47>(ref <MonitorBot>d__);
+			return <MonitorBot>d__.<>t__builder.Task;
 		}
 
 		public void Stop()
 		{
 			Controller.logger_0.Info("Stopping...");
 			this.timer_0.Change(-1, -1);
-			foreach (GClass871 gclass in this.Control.Bots)
+			foreach (GClass922 gclass in this.Control.Bots)
 			{
 				this.Control.ForceStopBot(gclass.BotId).GetAwaiter().GetResult();
 			}
@@ -446,7 +412,7 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
@@ -483,19 +449,18 @@ namespace DOPE.Core
 		}
 
 		[CompilerGenerated]
-		private async Task method_17()
+		private Task method_17()
 		{
-			IDopeService service = await this.Connection.Entangle(null);
-			this.Service = service;
-			EntangledLocalObjectBase entangledLocalObjectBase = this.Service as EntangledLocalObjectBase;
-			if (entangledLocalObjectBase != null)
-			{
-				entangledLocalObjectBase.DefaultExecutionTimeout = new TimeSpan?(TimeSpan.FromSeconds(5.0));
-			}
+			Controller.<<Init>b__50_3>d <<Init>b__50_3>d;
+			<<Init>b__50_3>d.<>4__this = this;
+			<<Init>b__50_3>d.<>t__builder = AsyncTaskMethodBuilder.Create();
+			<<Init>b__50_3>d.<>1__state = -1;
+			<<Init>b__50_3>d.<>t__builder.Start<Controller.<<Init>b__50_3>d>(ref <<Init>b__50_3>d);
+			return <<Init>b__50_3>d.<>t__builder.Task;
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_18(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -537,7 +502,7 @@ namespace DOPE.Core
 		private string string_0;
 
 		[CompilerGenerated]
-		private GClass872 gclass872_0;
+		private GClass923 gclass923_0;
 
 		[CompilerGenerated]
 		private string string_1;

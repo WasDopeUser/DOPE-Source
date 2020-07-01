@@ -1,75 +1,77 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using NLog;
+using DarkorbitAPI.CommonStructures;
 
-public abstract class GClass865 : GInterface9
+public class GClass865 : GClass859
 {
-	public GClass839 Context { get; }
-
-	public Logger Log { get; set; }
-
 	[CompilerGenerated]
-	public DateTimeOffset method_0()
+	public GClass872 method_0()
 	{
-		return this.dateTimeOffset_0;
+		return this.gclass872_0;
 	}
 
 	[CompilerGenerated]
-	public void method_1(DateTimeOffset dateTimeOffset_1)
+	private void method_1(GClass872 gclass872_2)
 	{
-		this.dateTimeOffset_0 = dateTimeOffset_1;
+		this.gclass872_0 = gclass872_2;
 	}
 
-	public abstract int Cooldown { get; }
-
-	public GClass865(GClass839 gclass839_1, string string_0)
+	[CompilerGenerated]
+	public GClass872 method_2()
 	{
-		Class13.NP5bWyNzLwONS();
+		return this.gclass872_1;
+	}
+
+	[CompilerGenerated]
+	private void method_3(GClass872 gclass872_2)
+	{
+		this.gclass872_1 = gclass872_2;
+	}
+
+	public override void imethod_2()
+	{
+	}
+
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_2().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		this.method_0().vmethod_0(byte_0, int_0, int_1);
+	}
+
+	public override void Init(List<byte[]> list_0)
+	{
+		if (list_0.Count != 2)
+		{
+			throw new Exception();
+		}
+		Vector<uint> vector = new Vector<uint>();
+		Vector<uint> vector2 = new Vector<uint>();
+		foreach (byte item in list_0[0])
+		{
+			vector.Add((uint)item);
+		}
+		foreach (byte item2 in list_0[1])
+		{
+			vector2.Add((uint)item2);
+		}
+		this.method_1(new GClass872(new Vector<uint>(vector2), new Vector<uint>(vector)));
+		this.method_3(new GClass872(vector2, vector));
+	}
+
+	public GClass865()
+	{
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.Context = gclass839_1;
-		this.Log = this.Context.method_69("BackgroundLogic-" + string_0);
-	}
-
-	void GInterface9.Execute()
-	{
-		this.bool_0 = true;
-		try
-		{
-			this.Execute();
-		}
-		catch (Exception ex)
-		{
-			this.Log.Error("Error executing background task {exception}", ex.ToString());
-		}
-		finally
-		{
-			this.bool_0 = false;
-			this.method_1(DateTimeOffset.Now);
-		}
-	}
-
-	public abstract void Execute();
-
-	public abstract bool vmethod_0();
-
-	bool GInterface9.drPITfhx6QL()
-	{
-		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
-	}
-
-	public virtual void imethod_1()
-	{
-		this.method_1(DateTimeOffset.MinValue);
 	}
 
 	[CompilerGenerated]
-	private readonly GClass839 gclass839_0;
+	private GClass872 gclass872_0;
 
 	[CompilerGenerated]
-	private Logger logger_0;
-
-	[CompilerGenerated]
-	private DateTimeOffset dateTimeOffset_0;
-
-	private volatile bool bool_0;
+	private GClass872 gclass872_1;
 }

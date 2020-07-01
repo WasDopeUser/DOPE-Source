@@ -8,7 +8,7 @@ public class GClass509 : GInterface0
 	{
 		get
 		{
-			return 6766;
+			return 520;
 		}
 	}
 
@@ -16,45 +16,32 @@ public class GClass509 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass509(int int_0 = 0)
+	public GClass509()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.MapId = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6766;
+		return 520;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (U.smethod_0(this.MapId, 4) | this.MapId << 28);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6766);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(520);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-10352);
-		binaryStream_0.smethod_4(this.MapId << 4 | U.smethod_0(this.MapId, 28));
-	}
-
-	public int MapId;
 }

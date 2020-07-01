@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass396 : GClass394, GInterface0
+public class GClass396 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 1552;
+			return 271;
 		}
 	}
 
@@ -16,48 +16,60 @@ public class GClass396 : GClass394, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 14;
 		}
 	}
 
-	public GClass396(uint uint_1 = 0U)
+	public GClass396(bool bool_2 = false, int int_3 = 0, int int_4 = 0, int int_5 = 0, bool bool_3 = false)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.uint_0 = uint_1;
+		this.bool_0 = bool_2;
+		this.int_0 = int_3;
+		this.int_1 = int_4;
+		this.int_2 = int_5;
+		this.bool_1 = bool_3;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 1552;
+		return 271;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 0;
+		return 14;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 3) | this.int_1 << 29);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 3 | U.smethod_0(this.int_2, 29));
+		this.bool_1 = binaryStream_0.ReadBoolean();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1552);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(271);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		binaryStream_0.smethod_4(this.int_1 << 3 | U.smethod_0(this.int_1, 29));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 3) | this.int_2 << 29);
+		binaryStream_0.WriteBoolean(this.bool_1);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(23428);
-		binaryStream_0.smethod_7(21233);
-		binaryStream_0.smethod_6(this.uint_0);
-	}
+	public bool bool_0;
 
-	public uint uint_0;
+	public int int_0;
+
+	public int int_1;
+
+	public int int_2;
+
+	public bool bool_1;
 }

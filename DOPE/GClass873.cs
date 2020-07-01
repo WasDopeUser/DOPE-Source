@@ -1,336 +1,138 @@
 ﻿using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
-using System.Windows.Interop;
-using System.Windows.Markup;
-using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using PErkava;
+using System.Drawing;
+using System.Numerics;
 
-public class GClass873 : Window, INotifyPropertyChanged, IComponentConnector
+public static class GClass873
 {
-	private void method_0()
+	public static Vector2 smethod_0(Vector2 vector2_0, Vector2 vector2_1, float float_0, Vector2? nullable_0 = null, float float_1 = 0.5f)
 	{
-		this.method_1(GEnum13.None, Keys.Oemtilde);
-		this.method_1((GEnum13)4U, Keys.Oemtilde);
-		this.method_1(GEnum13.None, Keys.Scroll);
-		this.method_1((GEnum13)4U, Keys.Scroll);
-	}
-
-	protected override void OnSourceInitialized(EventArgs e)
-	{
-		base.OnSourceInitialized(e);
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		this.hwndSource_0 = HwndSource.FromHwnd(windowInteropHelper.Handle);
-		this.hwndSource_0.AddHook(new HwndSourceHook(this.method_3));
-		this.method_0();
-	}
-
-	[DllImport("User32.dll")]
-	private static extern bool RegisterHotKey([In] IntPtr intptr_0, [In] int int_1, [In] uint uint_0, [In] uint uint_1);
-
-	[DllImport("User32.dll")]
-	private static extern bool UnregisterHotKey([In] IntPtr intptr_0, [In] int int_1);
-
-	protected override void OnClosed(EventArgs e)
-	{
-		HwndSource hwndSource = this.hwndSource_0;
-		if (hwndSource != null)
+		Vector2 vector = default(Vector2);
+		if (nullable_0 != null)
 		{
-			hwndSource.RemoveHook(new HwndSourceHook(this.method_3));
-		}
-		this.hwndSource_0 = null;
-		this.method_2();
-		base.OnClosed(e);
-	}
-
-	private void method_1(GEnum13 genum13_0, Keys keys_0)
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		int num = Interlocked.Increment(ref GClass873.int_0);
-		if (GClass873.RegisterHotKey(windowInteropHelper.Handle, num, (uint)genum13_0, (uint)keys_0))
-		{
-			this.hashSet_0.Add(num);
-		}
-	}
-
-	private void method_2()
-	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		foreach (int int_ in this.hashSet_0)
-		{
-			GClass873.UnregisterHotKey(windowInteropHelper.Handle, int_);
-		}
-		this.hashSet_0.Clear();
-	}
-
-	private IntPtr method_3(IntPtr intptr_0, int int_1, IntPtr intptr_1, IntPtr intptr_2, ref bool bool_1)
-	{
-		if (int_1 == 786)
-		{
-			int item = intptr_1.ToInt32();
-			if (this.hashSet_0.Contains(item))
+			Vector2 value = nullable_0.Value;
+			PointF left = GClass878.smethod_1(vector2_1.X, vector2_1.Y, float_0, new PointF(value.X, value.Y), new PointF(vector2_1.X, vector2_1.Y));
+			if (left != PointF.Empty)
 			{
-				Keys keys_ = (Keys)((int)intptr_2 >> 16 & 65535);
-				GEnum13 genum13_ = (GEnum13)((int)intptr_2 & 65535);
-				if (this.method_9(this, new GEventArgs0(genum13_, keys_)))
-				{
-					bool_1 = true;
-				}
+				vector = new Vector2(left.X, left.Y);
 			}
 		}
-		return IntPtr.Zero;
+		if (vector == default(Vector2))
+		{
+			double num = Math.Atan2((double)(vector2_0.X - vector2_1.X), (double)(vector2_0.Y - vector2_1.Y)) + (double)float_1;
+			vector = GClass873.smethod_8(vector2_1, float_0, (float)num);
+		}
+		return vector;
 	}
 
-	public GClass881 Proxy
+	public static int smethod_1(float float_0, float float_1)
 	{
-		get
+		if (float_0 >= 0f)
 		{
-			return this.gclass881_0;
-		}
-		set
-		{
-			this.method_6<GClass881>(ref this.gclass881_0, value, "Target", "Proxy");
-		}
-	}
-
-	public Ship Target
-	{
-		get
-		{
-			GClass881 proxy = this.Proxy;
-			if (proxy == null)
+			if (float_1 < 0f)
 			{
-				return null;
+				return 3;
 			}
-			GameManager game = proxy.Game;
-			if (game == null)
-			{
-				return null;
-			}
-			Map map = game.Map;
-			if (map == null)
-			{
-				return null;
-			}
-			return map.SelectedShip;
-		}
-	}
-
-	public GClass873()
-	{
-		Class13.NP5bWyNzLwONS();
-		this.hashSet_0 = new HashSet<int>();
-		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		base.Closed += this.GClass873_Closed;
-		this.gclass880_0 = new GClass880();
-		this.timer_0 = new System.Windows.Forms.Timer();
-		this.timer_0.Tick += this.timer_0_Tick;
-		this.timer_0.Interval = 100;
-		this.timer_0.Start();
-	}
-
-	public void method_4()
-	{
-		this.gclass880_0.method_3();
-		this.gclass880_0.ShowDialog();
-		base.Topmost = true;
-		base.Focus();
-	}
-
-	public bool method_5()
-	{
-		this.method_4();
-		if (!this.gclass880_0.IsSupported)
-		{
-			base.Close();
-			return false;
-		}
-		base.Visibility = Visibility.Visible;
-		base.Topmost = true;
-		base.Focus();
-		return true;
-	}
-
-	private void GClass873_Closed(object sender, EventArgs e)
-	{
-		System.Windows.Forms.Timer timer = this.timer_0;
-		if (timer != null)
-		{
-			timer.Stop();
-		}
-		System.Windows.Forms.Timer timer2 = this.timer_0;
-		if (timer2 != null)
-		{
-			timer2.Dispose();
-		}
-		if (this.gclass880_0 != null)
-		{
-			this.gclass880_0.method_2(true);
-		}
-		GClass880 gclass = this.gclass880_0;
-		if (gclass == null)
-		{
-			return;
-		}
-		gclass.Close();
-	}
-
-	protected void method_6<YqLgbXCxejbOLVroGWO>(ref YqLgbXCxejbOLVroGWO gparam_0, YqLgbXCxejbOLVroGWO CMW2sXCdEEd2YdhMHZe, string string_0 = null, [CallerMemberName] string name = null)
-	{
-		if (!EqualityComparer<YqLgbXCxejbOLVroGWO>.Default.Equals(gparam_0, CMW2sXCdEEd2YdhMHZe))
-		{
-			gparam_0 = CMW2sXCdEEd2YdhMHZe;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
-			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
-			}
-			if (string_0 != null)
-			{
-				PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
-				if (propertyChanged2 == null)
-				{
-					return;
-				}
-				propertyChanged2(this, new PropertyChangedEventArgs(string_0));
-			}
-		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	private void method_7(object sender, RoutedEventArgs e)
-	{
-		GClass881 proxy = this.Proxy;
-		if (proxy == null)
-		{
-			return;
-		}
-		GClass84<GClass804<GInterface7>> gclass = proxy.method_0();
-		if (gclass == null)
-		{
-			return;
-		}
-		GClass91 socket = gclass.Socket;
-		if (socket == null)
-		{
-			return;
-		}
-		socket.method_8();
-	}
-
-	private void timer_0_Tick(object sender, EventArgs e)
-	{
-		IntPtr foregroundWindow = GClass876.GetForegroundWindow();
-		GClass881 proxy = null;
-		PErkava.concurrentDictionary_0.TryGetValue(foregroundWindow, out proxy);
-		this.Proxy = proxy;
-	}
-
-	public void method_8(bool bool_1)
-	{
-		GClass873.<>c__DisplayClass30_0 CS$<>8__locals1 = new GClass873.<>c__DisplayClass30_0();
-		CS$<>8__locals1.hero_0 = this.Proxy.Game.Hero;
-		Ship ship;
-		if (bool_1)
-		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
+			return 0;
 		}
 		else
 		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
-		}
-		if (ship != null)
-		{
-			this.Proxy.Game.Connection.Server.method_9(ship, false);
-		}
-	}
-
-	public bool method_9(object object_0, GEventArgs0 geventArgs0_0)
-	{
-		if (this.Proxy == null)
-		{
-			return false;
-		}
-		if (geventArgs0_0.Key != Keys.Oemtilde)
-		{
-			if (geventArgs0_0.Key != Keys.Scroll)
+			if (float_1 < 0f)
 			{
-				return false;
+				return 2;
 			}
+			return 1;
 		}
-		this.method_8(geventArgs0_0.method_0().HasFlag((GEnum13)4U));
-		return true;
 	}
 
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
+	public static bool smethod_2(float float_0, float float_1, float float_2, float float_3)
 	{
-		if (this.bool_0)
+		double num = Math.Atan2((double)float_1, (double)float_0);
+		double num2 = Math.Atan2((double)float_3, (double)float_2);
+		int num3 = GClass873.smethod_1(float_0, float_1);
+		int num4 = GClass873.smethod_1(float_2, float_3);
+		double num5 = num2;
+		if (num3 == num4)
 		{
-			return;
+			num5 = Math.Max(num, num2);
 		}
-		this.bool_0 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/overlaywindow.xaml", UriKind.Relative);
-		System.Windows.Application.LoadComponent(this, resourceLocator);
-	}
-
-	[DebuggerNonUserCode]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	void IComponentConnector.Connect(int connectionId, object target)
-	{
-		switch (connectionId)
+		else if (num3 == (num4 + 1) % 4)
 		{
-		case 1:
-			this.Guide = (System.Windows.Controls.Label)target;
-			return;
-		case 2:
-			this.Progress = (System.Windows.Controls.Label)target;
-			return;
-		case 3:
-			((System.Windows.Controls.Button)target).Click += this.method_7;
-			return;
-		default:
-			this.bool_0 = true;
-			return;
+			num5 = num;
 		}
+		return num5 == num2;
 	}
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass873()
+	public static double smethod_3(float float_0, float float_1, float float_2, float float_3, bool bool_0 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		GClass873.int_0 = 913376;
+		double num = Math.Atan2((double)float_1, (double)float_0);
+		double num2 = Math.Atan2((double)float_3, (double)float_2);
+		int num3 = GClass873.smethod_1(float_0, float_1);
+		int num4 = GClass873.smethod_1(float_2, float_3);
+		double num5 = num2;
+		if (num3 == num4)
+		{
+			num5 = Math.Max(num, num2);
+		}
+		else if (num3 == (num4 + 1) % 4)
+		{
+			num5 = num;
+		}
+		if (!bool_0)
+		{
+			return num5;
+		}
+		if (num5 != num)
+		{
+			return num;
+		}
+		return num2;
 	}
 
-	private HwndSource hwndSource_0;
+	public static double smethod_4(Vector2 vector2_0, Vector2 vector2_1)
+	{
+		return GClass873.smethod_5(vector2_0.X, vector2_0.Y, vector2_1.X, vector2_1.Y);
+	}
 
-	private static int int_0;
+	public static double smethod_5(float float_0, float float_1, float float_2, float float_3)
+	{
+		return Math.Atan2(GClass873.Cross(float_0, float_1, float_2, float_3), GClass873.smethod_6(float_0, float_1, float_2, float_3));
+	}
 
-	private HashSet<int> hashSet_0;
+	public static double smethod_6(float float_0, float float_1, float float_2, float float_3)
+	{
+		return (double)(float_0 * float_2 + float_1 * float_3);
+	}
 
-	private GClass881 gclass881_0;
+	public static double Cross(float ox, float oy, float tx, float ty)
+	{
+		return (double)(ox * ty - oy * tx);
+	}
 
-	private System.Windows.Forms.Timer timer_0;
+	public static float smethod_7(float float_0, float float_1, float float_2, float float_3, float float_4)
+	{
+		float num = (float)Math.Atan2((double)float_1, (double)float_0);
+		double num2 = GClass873.smethod_5(float_0, float_1, float_2, float_3);
+		if (float_4 < 0f)
+		{
+			float_4 = -float_4;
+			num2 = 6.2831853071795862 - num2;
+		}
+		if (Math.Abs(num2) > (double)float_4)
+		{
+			num2 = (double)(float_4 * (float)Math.Sign(num2));
+		}
+		return (float)((double)num + num2);
+	}
 
-	private GClass880 gclass880_0;
+	public static Vector2 smethod_8(Vector2 vector2_0, float float_0, float float_1)
+	{
+		return new Vector2((float)((int)((double)vector2_0.X + (double)float_0 * Math.Sin((double)float_1))), (float)((int)((double)vector2_0.Y + (double)float_0 * Math.Cos((double)float_1))));
+	}
 
-	internal System.Windows.Controls.Label Guide;
-
-	internal System.Windows.Controls.Label Progress;
-
-	private bool bool_0;
+	public static Vector2 smethod_9(Vector2 vector2_0, Vector2 vector2_1)
+	{
+		float x = vector2_1.X + (vector2_0.X - vector2_1.X) * 2f;
+		float y = vector2_1.Y + (vector2_0.Y - vector2_1.Y) * 2f;
+		return new Vector2(x, y);
+	}
 }

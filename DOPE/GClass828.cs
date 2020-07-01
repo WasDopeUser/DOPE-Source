@@ -1,27 +1,53 @@
 ﻿using System;
-using System.Buffers;
-using System.IO;
-using Ace.Networking.Memory;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public static class GClass828
+public class GClass828 : GInterface0
 {
-	public static void smethod_0(Stream stream_0, Stream stream_1, int int_0)
+	short GInterface0.Id
 	{
-		ArrayPool<byte> pool = MemoryManager.Instance.Pool;
-		byte[] array = pool.Rent(4096);
-		try
+		get
 		{
-			int count = Math.Min(array.Length, int_0);
-			int num = stream_0.Read(array, 0, count);
-			if (num == 0)
-			{
-				throw new IndexOutOfRangeException();
-			}
-			stream_1.Write(array, 0, num);
-		}
-		finally
-		{
-			pool.Return(array, false);
+			return 62;
 		}
 	}
+
+	int GInterface0.SizeBytes
+	{
+		get
+		{
+			return 4;
+		}
+	}
+
+	public GClass828(int int_1 = 0)
+	{
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_1;
+	}
+
+	public virtual int vmethod_0()
+	{
+		return 62;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 4;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(62);
+		binaryStream_0.smethod_4(this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+	}
+
+	public int int_0;
 }

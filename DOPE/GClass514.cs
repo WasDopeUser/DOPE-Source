@@ -8,7 +8,7 @@ public class GClass514 : GInterface0
 	{
 		get
 		{
-			return 9784;
+			return 1724;
 		}
 	}
 
@@ -16,99 +16,78 @@ public class GClass514 : GInterface0
 	{
 		get
 		{
-			return 22;
+			return 38;
 		}
 	}
 
-	public GClass514(int int_5 = 0, int int_6 = 0, string string_1 = "", GClass631 gclass631_0 = null, GClass736 gclass736_1 = null, int int_7 = 0, int int_8 = 0, int int_9 = 0)
+	public GClass514(int int_5 = 0, int int_6 = 0, int int_7 = 0, double double_2 = 0.0, double double_3 = 0.0, int int_8 = 0, int int_9 = 0, string string_0 = "")
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
+		Class13.F93tSdiz1aNIA();
+		this.Name = "";
 		base..ctor();
-		this.int_4 = int_5;
-		this.int_3 = int_6;
-		this.string_0 = string_1;
-		if (gclass631_0 == null)
-		{
-			this.Progress = new GClass631(0, 0.0, 0.0, "", "", null, false);
-		}
-		else
-		{
-			this.Progress = gclass631_0;
-		}
-		if (gclass736_1 == null)
-		{
-			this.gclass736_0 = new GClass736(null);
-		}
-		else
-		{
-			this.gclass736_0 = gclass736_1;
-		}
-		this.int_1 = int_7;
-		this.int_2 = int_8;
-		this.int_0 = int_9;
+		this.int_0 = int_5;
+		this.int_1 = int_6;
+		this.int_2 = int_7;
+		this.double_0 = double_2;
+		this.double_1 = double_3;
+		this.int_3 = int_8;
+		this.int_4 = int_9;
+		this.Name = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9784;
+		return 1724;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 22;
+		return 38;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.Progress = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass631);
-		this.Progress.HrqIugnatr8(binaryStream_0);
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		this.int_1 = (U.smethod_0(this.int_1, 11) | this.int_1 << 21);
 		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (U.smethod_0(this.int_2, 15) | this.int_2 << 17);
+		this.int_2 = (U.smethod_0(this.int_2, 14) | this.int_2 << 18);
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
 		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (U.smethod_0(this.int_3, 3) | this.int_3 << 29);
+		this.int_3 = (U.smethod_0(this.int_3, 9) | this.int_3 << 23);
 		this.int_4 = binaryStream_0.smethod_0();
-		this.int_4 = (this.int_4 << 11 | U.smethod_0(this.int_4, 21));
-		this.gclass736_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass736);
-		this.gclass736_0.HrqIugnatr8(binaryStream_0);
+		this.int_4 = (this.int_4 << 1 | U.smethod_0(this.int_4, 31));
+		this.Name = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9784);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(1724);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		binaryStream_0.smethod_4(this.int_1 << 11 | U.smethod_0(this.int_1, 21));
+		binaryStream_0.smethod_4(this.int_2 << 14 | U.smethod_0(this.int_2, 18));
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_4(this.int_3 << 9 | U.smethod_0(this.int_3, 23));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 1) | this.int_4 << 31);
+		binaryStream_0.smethod_3(this.Name);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.Progress.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		binaryStream_0.smethod_4(this.int_2 << 15 | U.smethod_0(this.int_2, 17));
-		binaryStream_0.smethod_4(this.int_3 << 3 | U.smethod_0(this.int_3, 29));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 11) | this.int_4 << 21);
-		this.gclass736_0.imethod_1(binaryStream_0);
-	}
-
-	public GClass631 Progress;
 
 	public int int_0;
-
-	public string string_0;
 
 	public int int_1;
 
 	public int int_2;
 
+	public double double_0;
+
+	public double double_1;
+
 	public int int_3;
 
 	public int int_4;
 
-	public GClass736 gclass736_0;
+	public string Name;
 }

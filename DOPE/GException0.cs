@@ -6,25 +6,25 @@ public class GException0 : Exception
 {
 	public GException0()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 
 	public GException0(string string_0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor(string_0);
 	}
 
 	public GException0(string string_0, Exception exception_0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor(string_0, exception_0);
 	}
 
 	protected GException0(SerializationInfo serializationInfo_0, StreamingContext streamingContext_0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor(serializationInfo_0, streamingContext_0);
 	}
 }

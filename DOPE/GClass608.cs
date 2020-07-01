@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass608 : GClass602, GInterface0
+public class GClass608 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 23889;
+			return 125;
 		}
 	}
 
@@ -16,45 +16,71 @@ public class GClass608 : GClass602, GInterface0
 	{
 		get
 		{
-			return 6;
+			return 5;
 		}
 	}
 
-	public GClass608(string string_1 = "", string string_2 = "")
+	public GClass608(int int_2 = 0, GClass635 gclass635_1 = null, int int_3 = 0, bool bool_1 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
-		base..ctor(string_1);
-		this.string_0 = string_2;
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_2;
+		if (gclass635_1 == null)
+		{
+			this.gclass635_0 = new GClass635(0);
+		}
+		else
+		{
+			this.gclass635_0 = gclass635_1;
+		}
+		this.int_1 = int_3;
+		this.bool_0 = bool_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 23889;
+		return 125;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 6;
+		return 5;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (int)binaryStream_0.smethod_1();
+		this.gclass635_0 = (GClass635)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass635_0 != null)
+		{
+			this.gclass635_0.imethod_0(binaryStream_0);
+		}
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23889);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(125);
+		binaryStream_0.smethod_7(this.int_0);
+		if (this.gclass635_0 != null)
+		{
+			this.gclass635_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-	}
+	public int int_0;
 
-	public string string_0;
+	public GClass635 gclass635_0;
+
+	public int int_1;
+
+	public bool bool_0;
 }

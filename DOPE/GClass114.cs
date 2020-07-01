@@ -3,14 +3,14 @@ using DarkorbitAPI;
 
 public class GClass114 : GInterface4
 {
-	public void Run(GClass245 e)
+	public void Run(GClass241 e)
 	{
-		ConnectionManager.Instance.Value.Game.Hero.method_14(e.gclass244_0);
+		ConnectionManager.Instance.Value.Game.Hero.method_15(e.gclass240_0);
 	}
 
 	public GClass114()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 }

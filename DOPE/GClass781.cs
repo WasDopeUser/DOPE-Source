@@ -8,7 +8,7 @@ public class GClass781 : GInterface0
 	{
 		get
 		{
-			return 17448;
+			return 6001;
 		}
 	}
 
@@ -16,54 +16,58 @@ public class GClass781 : GInterface0
 	{
 		get
 		{
-			return 24;
+			return 4;
 		}
 	}
 
-	public GClass781(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
+	public GClass781(Vector<GClass368> vector_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.double_2 = double_3;
-		this.double_0 = double_4;
-		this.double_1 = double_5;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass368>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17448;
+		return 6001;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 24;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
-		binaryStream_0.smethod_1();
-		this.double_1 = binaryStream_0.ReadDouble();
-		this.double_2 = binaryStream_0.ReadDouble();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass368 gclass = (GClass368)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17448);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(6001);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass368 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_7(28027);
-		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.WriteDouble(this.double_2);
-	}
-
-	public double double_0;
-
-	public double double_1;
-
-	public double double_2;
+	public Vector<GClass368> vector_0;
 }

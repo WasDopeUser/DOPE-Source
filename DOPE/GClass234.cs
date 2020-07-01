@@ -8,7 +8,7 @@ public class GClass234 : GInterface0
 	{
 		get
 		{
-			return 21695;
+			return 19;
 		}
 	}
 
@@ -22,15 +22,15 @@ public class GClass234 : GInterface0
 
 	public GClass234(int int_1 = 0, int int_2 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.Unknown = int_1;
+		this.MapId = int_1;
 		this.int_0 = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 21695;
+		return 19;
 	}
 
 	public virtual int vmethod_1()
@@ -38,27 +38,22 @@ public class GClass234 : GInterface0
 		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.Unknown = binaryStream_0.smethod_0();
-		this.Unknown = (U.smethod_0(this.Unknown, 4) | this.Unknown << 28);
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (this.MapId << 7 | U.smethod_0(this.MapId, 25));
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		this.int_0 = (this.int_0 << 6 | U.smethod_0(this.int_0, 26));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(21695);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(19);
+		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 7) | this.MapId << 25);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.Unknown << 4 | U.smethod_0(this.Unknown, 28));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-	}
-
-	public int Unknown;
+	public int MapId;
 
 	public int int_0;
 }

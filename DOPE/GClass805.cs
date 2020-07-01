@@ -1,35 +1,75 @@
 ﻿using System;
-using System.Linq;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass805 : GClass803<GInterface7>
+public class GClass805 : GInterface0
 {
-	public static byte[] smethod_0(string string_0)
+	short GInterface0.Id
 	{
-		GClass805.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass805.<>c__DisplayClass0_0();
-		CS$<>8__locals1.string_0 = string_0;
-		return Enumerable.Range(0, CS$<>8__locals1.string_0.Length).Where(new Func<int, bool>(GClass805.<>c.<>c_0.method_0)).Select(new Func<int, byte>(CS$<>8__locals1.method_0)).ToArray<byte>();
+		get
+		{
+			return -4720;
+		}
 	}
 
-	public abstract void vmethod_2(byte[] byte_0);
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	int GInterface0.SizeBytes
 	{
-		base.imethod_0(byte_0, int_0, int_1);
+		get
+		{
+			return 0;
+		}
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public GClass805(GClass578 gclass578_1 = null, int int_1 = 0)
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-	}
-
-	public abstract void vmethod_3(DollConfig dollConfig_0, Action action_0);
-
-	public abstract byte[] vmethod_4();
-
-	protected GClass805()
-	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
+		if (gclass578_1 == null)
+		{
+			this.gclass578_0 = new GClass578(null, 0);
+		}
+		else
+		{
+			this.gclass578_0 = gclass578_1;
+		}
+		this.int_0 = int_1;
 	}
+
+	public virtual int vmethod_0()
+	{
+		return -4720;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 0;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.gclass578_0 = (GClass578)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass578_0 != null)
+		{
+			this.gclass578_0.imethod_0(binaryStream_0);
+		}
+		this.int_0 = (int)binaryStream_0.smethod_1();
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-4720);
+		if (this.gclass578_0 != null)
+		{
+			this.gclass578_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_7(this.int_0);
+	}
+
+	public GClass578 gclass578_0;
+
+	public int int_0;
 }

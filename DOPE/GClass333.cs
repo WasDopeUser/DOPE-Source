@@ -8,7 +8,7 @@ public class GClass333 : GInterface0
 	{
 		get
 		{
-			return 27037;
+			return -9857;
 		}
 	}
 
@@ -16,51 +16,79 @@ public class GClass333 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 4;
 		}
 	}
 
-	public GClass333(bool bool_2 = false, bool bool_3 = false)
+	public GClass333(Vector<GClass346> vector_0 = null, GClass346 gclass346_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.bool_0 = bool_2;
-		this.bool_1 = bool_3;
+		if (vector_0 == null)
+		{
+			this.mbGaUhdFgg = new Vector<GClass346>();
+		}
+		else
+		{
+			this.mbGaUhdFgg = vector_0;
+		}
+		if (gclass346_1 == null)
+		{
+			this.gclass346_0 = new GClass346(0, "", "", 0);
+			return;
+		}
+		this.gclass346_0 = gclass346_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 27037;
+		return -9857;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		binaryStream_0.smethod_1();
+		while (this.mbGaUhdFgg.Length > 0)
+		{
+			this.mbGaUhdFgg.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass346 gclass = (GClass346)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.mbGaUhdFgg.method_0(gclass);
+			i++;
+		}
+		this.gclass346_0 = (GClass346)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass346_0 != null)
+		{
+			this.gclass346_0.imethod_0(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(27037);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-9857);
+		binaryStream_0.WriteByte(this.mbGaUhdFgg.Length);
+		foreach (GClass346 gclass in this.mbGaUhdFgg)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		if (this.gclass346_0 != null)
+		{
+			this.gclass346_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_7(2128);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.smethod_7(1988);
-	}
+	public Vector<GClass346> mbGaUhdFgg;
 
-	public bool bool_0;
-
-	public bool bool_1;
+	public GClass346 gclass346_0;
 }

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass271 : GInterface0
+public class GClass271 : GClass270, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 13089;
+			return -7904;
 		}
 	}
 
@@ -16,63 +16,41 @@ public class GClass271 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 4;
 		}
 	}
 
-	public GClass271(int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
+	public GClass271(string string_1 = "", int int_0 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-		this.int_2 = int_4;
-		this.int_0 = int_5;
-		this.int_1 = int_6;
-		this.int_3 = int_7;
+		Class13.F93tSdiz1aNIA();
+		base..ctor(string_1);
+		this.Value = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 13089;
+		return -7904;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 16;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 15) | this.int_0 << 17);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 16) | this.int_1 << 16);
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 7 | U.smethod_0(this.int_2, 25));
-		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (U.smethod_0(this.int_3, 7) | this.int_3 << 25);
 		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.Value = binaryStream_0.smethod_0();
+		this.Value = (this.Value << 5 | U.smethod_0(this.Value, 27));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13089);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-7904);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.Value, 5) | this.Value << 27);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.int_0 << 15 | U.smethod_0(this.int_0, 17));
-		binaryStream_0.smethod_4(this.int_1 << 16 | U.smethod_0(this.int_1, 16));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 7) | this.int_2 << 25);
-		binaryStream_0.smethod_4(this.int_3 << 7 | U.smethod_0(this.int_3, 25));
-		binaryStream_0.smethod_7(13042);
-	}
-
-	public int int_0;
-
-	public int int_1;
-
-	public int int_2;
-
-	public int int_3;
+	public int Value;
 }

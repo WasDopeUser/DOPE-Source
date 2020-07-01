@@ -6,7 +6,7 @@ public sealed class GAttribute45 : Attribute
 {
 	public GAttribute45(GEnum2 genum2_1)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.method_1(genum2_1);
 	}

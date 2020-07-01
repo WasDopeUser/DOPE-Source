@@ -8,7 +8,7 @@ public class GClass400 : GInterface0
 	{
 		get
 		{
-			return 12232;
+			return -24050;
 		}
 	}
 
@@ -16,44 +16,32 @@ public class GClass400 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass400(double double_1 = 0.0)
+	public GClass400()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12232;
+		return -24050;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12232);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-24050);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-17287);
-		binaryStream_0.WriteDouble(this.double_0);
-	}
-
-	public double double_0;
 }

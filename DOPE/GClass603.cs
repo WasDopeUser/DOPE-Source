@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass603 : GClass602, GInterface0
+public class GClass603 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 29907;
+			return -5347;
 		}
 	}
 
@@ -16,47 +16,60 @@ public class GClass603 : GClass602, GInterface0
 	{
 		get
 		{
-			return 6;
+			return 1;
 		}
 	}
 
-	public GClass603(string string_0 = "", string string_1 = "")
+	public GClass603(GClass286 gclass286_1 = null, bool bool_1 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.Value = "";
-		base..ctor(string_0);
-		this.Value = string_1;
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		if (gclass286_1 == null)
+		{
+			this.gclass286_0 = new GClass286(0);
+		}
+		else
+		{
+			this.gclass286_0 = gclass286_1;
+		}
+		this.bool_0 = bool_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 29907;
+		return -5347;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 6;
+		return 1;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.Value = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
+		this.gclass286_0 = (GClass286)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass286_0 != null)
+		{
+			this.gclass286_0.imethod_0(binaryStream_0);
+		}
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29907);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-5347);
+		if (this.gclass286_0 != null)
+		{
+			this.gclass286_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.Value);
-		binaryStream_0.smethod_7(-10941);
-	}
+	public GClass286 gclass286_0;
 
-	public string Value;
+	public bool bool_0;
 }

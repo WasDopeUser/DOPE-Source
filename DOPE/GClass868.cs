@@ -1,400 +1,202 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Xml.Serialization;
-using DarkorbitAPI;
-using DOPE.Common.Models;
+using DarkorbitAPI.CommonStructures;
 
-public class GClass868 : GClass865
+public class GClass868
 {
-	[CompilerGenerated]
-	public DarkOrbitWebAPI.GalaxyGatesInfo method_2()
+	public GClass868(Vector<uint> vector_6, Vector<uint> vector_7)
 	{
-		return this.galaxyGatesInfo_0;
+		Class13.F93tSdiz1aNIA();
+		this.uint_0 = 16U;
+		base..ctor();
+		this.vector_1 = new Vector<uint>((int)this.uint_0);
+		this.vector_2 = new Vector<uint>((int)this.uint_0);
+		this.vector_3 = new Vector<uint>((int)((int)this.uint_0 << 2));
+		this.method_0(vector_7, vector_6);
 	}
 
-	[CompilerGenerated]
-	public void method_3(DarkOrbitWebAPI.GalaxyGatesInfo galaxyGatesInfo_1)
+	protected void method_0(Vector<uint> vector_6, Vector<uint> vector_7)
 	{
-		this.galaxyGatesInfo_0 = galaxyGatesInfo_1;
+		this.vector_5 = vector_7;
+		this.vector_4 = vector_6;
+		this.method_5();
+		this.vector_1[1U] = this.method_3(vector_6, 0U);
+		this.vector_1[2U] = this.method_3(vector_6, 4U);
+		this.vector_1[3U] = this.method_3(vector_6, 8U);
+		this.vector_1[4U] = this.method_3(vector_6, 12U);
+		Vector<uint> vector_8 = GClass868.vector_0;
+		this.vector_1[11U] = this.method_3(vector_6, 16U);
+		this.vector_1[12U] = this.method_3(vector_6, 20U);
+		this.vector_1[13U] = this.method_3(vector_6, 24U);
+		this.vector_1[14U] = this.method_3(vector_6, 28U);
+		this.vector_1[0U] = this.method_3(vector_8, 0U);
+		this.vector_1[5U] = this.method_3(vector_8, 4U);
+		this.vector_1[10U] = this.method_3(vector_8, 8U);
+		this.vector_1[15U] = this.method_3(vector_8, 12U);
+		this.vector_1[6U] = this.method_3(vector_7, 0U);
+		this.vector_1[7U] = this.method_3(vector_7, 4U);
+		this.vector_1[9U] = 0U;
+		this.vector_1[8U] = 0U;
 	}
 
-	public GClass868(GClass839 gclass839_1)
+	private void method_1(Vector<uint> vector_6, Vector<uint> vector_7)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, "GgSpinner");
-	}
-
-	public override int Cooldown
-	{
-		get
-		{
-			if (!this.method_11())
-			{
-				return 60000;
-			}
-			return 1000;
-		}
-	}
-
-	protected void method_4()
-	{
-		foreach (DarkOrbitWebAPI.jumpgateGate jumpgateGate in this.method_2().gates)
-		{
-			if (jumpgateGate.current == jumpgateGate.total && !jumpgateGate.prepared)
-			{
-				bool argument = false;
-				string text;
-				string argument2 = GClass868.dictionary_0.TryGetValue(jumpgateGate.id, out text) ? text : "unknown";
-				if (this.method_9(jumpgateGate.id))
-				{
-					jumpgateGate.prepared = true;
-					argument = true;
-				}
-				base.Log.Info<string, bool>("Deploying GG {ggName} success={success}", argument2, argument);
-			}
-		}
-	}
-
-	protected Dictionary<string, bool> method_5()
-	{
-		AccountSettings account = base.Context.Account;
-		return new Dictionary<string, bool>
-		{
-			{
-				"alpha",
-				account != null && account.Spinner_Alpha
-			},
-			{
-				"beta",
-				account != null && account.Spinner_Beta
-			},
-			{
-				"gamma",
-				account != null && account.Spinner_Gamma
-			},
-			{
-				"delta",
-				account != null && account.Spinner_Delta
-			},
-			{
-				"epsilon",
-				account != null && account.Spinner_Epsilon
-			},
-			{
-				"zeta",
-				account != null && account.Spinner_Zeta
-			},
-			{
-				"kappa",
-				account != null && account.Spinner_Kappa
-			},
-			{
-				"lambda",
-				account != null && account.Spinner_Lambda
-			},
-			{
-				"streuner",
-				account != null && account.Spinner_Kuiper
-			}
-		};
-	}
-
-	protected bool method_6(out string string_0, out int int_0)
-	{
-		string_0 = null;
-		Dictionary<string, bool> dictionary = this.method_5();
-		int_0 = 0;
-		bool flag = true;
-		AccountSettings account = base.Context.Account;
-		if (account != null && account.Spinner_StopABG)
-		{
-			foreach (DarkOrbitWebAPI.jumpgateGate jumpgateGate in this.method_2().gates)
-			{
-				string text;
-				string a = GClass868.dictionary_0.TryGetValue(jumpgateGate.id, out text) ? text : "unknown";
-				if ((a == "alpha" || a == "beta" || a == "gamma") && jumpgateGate.current == jumpgateGate.total)
-				{
-					flag = false;
-					break;
-				}
-			}
-		}
-		foreach (DarkOrbitWebAPI.jumpgateGate jumpgateGate2 in this.method_2().gates)
-		{
-			string text3;
-			string text2 = GClass868.dictionary_0.TryGetValue(jumpgateGate2.id, out text3) ? text3 : "unknown";
-			bool flag2;
-			if (jumpgateGate2.current != jumpgateGate2.total && dictionary.TryGetValue(text2, out flag2) && flag2 && ((!(text2 == "alpha") && !(text2 == "beta") && !(text2 == "gamma")) || flag))
-			{
-				string_0 = text2;
-				int_0 = jumpgateGate2.id;
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public int method_7()
-	{
-		int num = this.method_14();
-		GClass839 context = base.Context;
-		SpinnerModeSelection? spinnerModeSelection;
-		if (context == null)
-		{
-			spinnerModeSelection = null;
-		}
-		else
-		{
-			AccountSettings account = context.Account;
-			spinnerModeSelection = ((account != null) ? new SpinnerModeSelection?(account.Spinner_SpinSize) : null);
-		}
-		SpinnerModeSelection? spinnerModeSelection2 = spinnerModeSelection;
-		SpinnerModeSelection valueOrDefault = spinnerModeSelection2.GetValueOrDefault();
-		if (num >= 10 && valueOrDefault == SpinnerModeSelection.X10)
-		{
-			return 10;
-		}
-		if (num >= 5 && valueOrDefault == SpinnerModeSelection.X5)
-		{
-			return 5;
-		}
-		return 1;
-	}
-
-	protected bool method_8(out int int_0)
-	{
-		GClass868.<>c__DisplayClass12_0 CS$<>8__locals1 = new GClass868.<>c__DisplayClass12_0();
-		int_0 = 0;
-		int num;
-		if (!this.method_6(out CS$<>8__locals1.string_0, out num))
-		{
-			base.Log.Warn("Nothing to spin");
-			return false;
-		}
-		DarkOrbitWebAPI.jumpgateMultiplier jumpgateMultiplier = this.method_2().multipliers.FirstOrDefault(new Func<DarkOrbitWebAPI.jumpgateMultiplier, bool>(CS$<>8__locals1.method_0));
-		bool flag = jumpgateMultiplier != null && jumpgateMultiplier.value > 0;
-		string text = "&multiplier=" + (flag ? 1 : 0).ToString();
-		long samples = this.method_2().samples;
-		string text2 = "&sample=1";
-		int_0 = this.method_7();
-		DarkOrbitWebAPI web = base.Context.Game.Web;
-		DarkOrbitWebAPI.Response response = web.Get(string.Concat(new string[]
-		{
-			GClass829.oemHlkhhlQr(web.Server, web.Uid, web.Sid, "multiEnergy"),
-			string.Format("&gateID={0}&{1}=1", num, CS$<>8__locals1.string_0),
-			text2,
-			text,
-			string.Format("&spinamount={0}", int_0)
-		}), null);
-		if (!response.Data.IsSuccessStatusCode)
-		{
-			return false;
-		}
-		base.Log.Info<string, int>("Spinning GG {mode} X{spins}", CS$<>8__locals1.string_0, int_0);
-		XmlSerializer xmlSerializer = new XmlSerializer(typeof(DarkOrbitWebAPI.GalaxyGatesInfoUpdate));
-		using (StringReader stringReader = new StringReader(response.Content))
-		{
-			DarkOrbitWebAPI.GalaxyGatesInfoUpdate galaxyGatesInfoUpdate_ = (DarkOrbitWebAPI.GalaxyGatesInfoUpdate)xmlSerializer.Deserialize(stringReader);
-			this.method_10(galaxyGatesInfoUpdate_);
-		}
-		return true;
-	}
-
-	protected bool method_9(int int_0)
-	{
-		DarkOrbitWebAPI web = base.Context.Game.Web;
-		return web.Get(GClass829.oemHlkhhlQr(web.Server, web.Uid, web.Sid, "setupGate") + "&gateID=" + int_0.ToString(), null).Data.IsSuccessStatusCode;
-	}
-
-	protected bool twuHbTdjuGY()
-	{
-		return this.method_14() > 0;
-	}
-
-	protected bool method_10(DarkOrbitWebAPI.GalaxyGatesInfoUpdate galaxyGatesInfoUpdate_0)
-	{
-		this.method_2().mode = galaxyGatesInfoUpdate_0.mode;
-		this.method_2().money = galaxyGatesInfoUpdate_0.money;
-		this.method_2().samples = galaxyGatesInfoUpdate_0.samples;
-		this.method_2().spinOnSale = (int)galaxyGatesInfoUpdate_0.spinOnSale;
-		this.method_2().spinSalePercentage = (int)galaxyGatesInfoUpdate_0.spinSalePercentage;
-		this.method_2().galaxyGateDay = (int)galaxyGatesInfoUpdate_0.galaxyGateDay;
-		this.method_2().bonusRewardsDay = (int)galaxyGatesInfoUpdate_0.bonusRewardsDay;
-		this.method_2().spinamount_selected = (int)galaxyGatesInfoUpdate_0.spinamount_selected;
-		this.method_2().energy_cost.Value = galaxyGatesInfoUpdate_0.energy_cost.Value;
-		DarkOrbitWebAPI.jumpgateMultiplier[] multipliers = galaxyGatesInfoUpdate_0.multipliers;
-		for (int i = 0; i < multipliers.Length; i++)
-		{
-			GClass868.<>c__DisplayClass15_0 CS$<>8__locals1 = new GClass868.<>c__DisplayClass15_0();
-			CS$<>8__locals1.jumpgateMultiplier_0 = multipliers[i];
-			DarkOrbitWebAPI.jumpgateMultiplier jumpgateMultiplier = this.method_2().multipliers.FirstOrDefault(new Func<DarkOrbitWebAPI.jumpgateMultiplier, bool>(CS$<>8__locals1.method_0));
-			if (jumpgateMultiplier != null)
-			{
-				jumpgateMultiplier.state = CS$<>8__locals1.jumpgateMultiplier_0.state;
-				jumpgateMultiplier.value = CS$<>8__locals1.jumpgateMultiplier_0.value;
-			}
-		}
-		bool result = false;
-		DarkOrbitWebAPI.jumpgateItem[] items = galaxyGatesInfoUpdate_0.items;
-		for (int i = 0; i < items.Length; i++)
-		{
-			GClass868.<>c__DisplayClass15_1 CS$<>8__locals2 = new GClass868.<>c__DisplayClass15_1();
-			CS$<>8__locals2.jumpgateItem_0 = items[i];
-			if (CS$<>8__locals2.jumpgateItem_0.type == "part" && (!CS$<>8__locals2.jumpgateItem_0.duplicateSpecified || !CS$<>8__locals2.jumpgateItem_0.duplicate))
-			{
-				DarkOrbitWebAPI.jumpgateGate jumpgateGate = this.method_2().gates.FirstOrDefault(new Func<DarkOrbitWebAPI.jumpgateGate, bool>(CS$<>8__locals2.method_0));
-				if (jumpgateGate != null)
-				{
-					jumpgateGate.current = CS$<>8__locals2.jumpgateItem_0.current;
-					jumpgateGate.total = CS$<>8__locals2.jumpgateItem_0.total;
-					jumpgateGate.state = CS$<>8__locals2.jumpgateItem_0.state;
-					result = (jumpgateGate.current == jumpgateGate.total);
-				}
-			}
-		}
-		return result;
-	}
-
-	[CompilerGenerated]
-	public bool method_11()
-	{
-		return this.bool_1;
-	}
-
-	[CompilerGenerated]
-	public void method_12(bool bool_2)
-	{
-		this.bool_1 = bool_2;
-	}
-
-	public override void Execute()
-	{
-		AccountSettings account = base.Context.Account;
-		int millisecondsTimeout = (account != null) ? account.Spinner_SpinDelay : 250;
-		this.method_3(base.Context.Game.Web.GgInfo);
-		this.method_12(false);
-		AccountSettings account2 = base.Context.Account;
-		if (account2 != null && account2.Spinner_PlaceGates)
-		{
-			this.method_4();
-		}
-		int num = 0;
+		this.method_6(vector_6, 0U, this.vector_2, 0U, (uint)vector_6.Length);
+		uint num = 10U;
 		int num2 = 0;
-		while (num < 8 && this.twuHbTdjuGY())
+		while ((long)num2 < (long)((ulong)num))
 		{
-			try
+			this.vector_2[4U] = (this.vector_2[4U] ^ this.method_2(this.vector_2[0U] + this.vector_2[12U], 7U));
+			this.vector_2[8U] = (this.vector_2[8U] ^ this.method_2(this.vector_2[4U] + this.vector_2[0U], 9U));
+			this.vector_2[12U] = (this.vector_2[12U] ^ this.method_2(this.vector_2[8U] + this.vector_2[4U], 13U));
+			this.vector_2[0U] = (this.vector_2[0U] ^ this.method_2(this.vector_2[12U] + this.vector_2[8U], 18U));
+			this.vector_2[9U] = (this.vector_2[9U] ^ this.method_2(this.vector_2[5U] + this.vector_2[1U], 7U));
+			this.vector_2[13U] = (this.vector_2[13U] ^ this.method_2(this.vector_2[9U] + this.vector_2[5U], 9U));
+			this.vector_2[1U] = (this.vector_2[1U] ^ this.method_2(this.vector_2[13U] + this.vector_2[9U], 13U));
+			this.vector_2[5U] = (this.vector_2[5U] ^ this.method_2(this.vector_2[1U] + this.vector_2[13U], 18U));
+			this.vector_2[14U] = (this.vector_2[14U] ^ this.method_2(this.vector_2[10U] + this.vector_2[6U], 7U));
+			this.vector_2[2U] = (this.vector_2[2U] ^ this.method_2(this.vector_2[14U] + this.vector_2[10U], 9U));
+			this.vector_2[6U] = (this.vector_2[6U] ^ this.method_2(this.vector_2[2U] + this.vector_2[14U], 13U));
+			this.vector_2[10U] = (this.vector_2[10U] ^ this.method_2(this.vector_2[6U] + this.vector_2[2U], 18U));
+			this.vector_2[3U] = (this.vector_2[3U] ^ this.method_2(this.vector_2[15U] + this.vector_2[11U], 7U));
+			this.vector_2[7U] = (this.vector_2[7U] ^ this.method_2(this.vector_2[3U] + this.vector_2[15U], 9U));
+			this.vector_2[11U] = (this.vector_2[11U] ^ this.method_2(this.vector_2[7U] + this.vector_2[3U], 13U));
+			this.vector_2[15U] = (this.vector_2[15U] ^ this.method_2(this.vector_2[11U] + this.vector_2[7U], 18U));
+			this.vector_2[1U] = (this.vector_2[1U] ^ this.method_2(this.vector_2[0U] + this.vector_2[3U], 7U));
+			this.vector_2[2U] = (this.vector_2[2U] ^ this.method_2(this.vector_2[1U] + this.vector_2[0U], 9U));
+			this.vector_2[3U] = (this.vector_2[3U] ^ this.method_2(this.vector_2[2U] + this.vector_2[1U], 13U));
+			this.vector_2[0U] = (this.vector_2[0U] ^ this.method_2(this.vector_2[3U] + this.vector_2[2U], 18U));
+			this.vector_2[6U] = (this.vector_2[6U] ^ this.method_2(this.vector_2[5U] + this.vector_2[4U], 7U));
+			this.vector_2[7U] = (this.vector_2[7U] ^ this.method_2(this.vector_2[6U] + this.vector_2[5U], 9U));
+			this.vector_2[4U] = (this.vector_2[4U] ^ this.method_2(this.vector_2[7U] + this.vector_2[6U], 13U));
+			this.vector_2[5U] = (this.vector_2[5U] ^ this.method_2(this.vector_2[4U] + this.vector_2[7U], 18U));
+			this.vector_2[11U] = (this.vector_2[11U] ^ this.method_2(this.vector_2[10U] + this.vector_2[9U], 7U));
+			this.vector_2[8U] = (this.vector_2[8U] ^ this.method_2(this.vector_2[11U] + this.vector_2[10U], 9U));
+			this.vector_2[9U] = (this.vector_2[9U] ^ this.method_2(this.vector_2[8U] + this.vector_2[11U], 13U));
+			this.vector_2[10U] = (this.vector_2[10U] ^ this.method_2(this.vector_2[9U] + this.vector_2[8U], 18U));
+			this.vector_2[12U] = (this.vector_2[12U] ^ this.method_2(this.vector_2[15U] + this.vector_2[14U], 7U));
+			this.vector_2[13U] = (this.vector_2[13U] ^ this.method_2(this.vector_2[12U] + this.vector_2[15U], 9U));
+			this.vector_2[14U] = (this.vector_2[14U] ^ this.method_2(this.vector_2[13U] + this.vector_2[12U], 13U));
+			this.vector_2[15U] = (this.vector_2[15U] ^ this.method_2(this.vector_2[14U] + this.vector_2[13U], 18U));
+			num2++;
+		}
+		uint num3 = 0U;
+		for (uint num4 = 0U; num4 < this.uint_0; num4 += 1U)
+		{
+			this.method_4(this.vector_2[num4] + vector_6[num4], vector_7, num3);
+			num3 += 4U;
+		}
+		uint num5 = this.uint_0;
+		while ((ulong)num5 < (ulong)((long)this.vector_2.Length))
+		{
+			this.method_4(this.vector_2[num5], vector_7, num3);
+			num3 += 4U;
+			num5 += 1U;
+		}
+	}
+
+	private uint method_2(uint uint_5, uint uint_6)
+	{
+		return uint_5 << (int)uint_6 | (uint)U.smethod_2(uint_5, (int)(-(int)uint_6));
+	}
+
+	private uint method_3(Vector<uint> vector_6, uint uint_5)
+	{
+		return (vector_6[uint_5] & 255U) | (vector_6[uint_5 + 1U] & 255U) << 8 | (vector_6[uint_5 + 2U] & 255U) << 16 | vector_6[uint_5 + 3U] << 24;
+	}
+
+	private Vector<uint> method_4(uint uint_5, Vector<uint> vector_6, uint uint_6 = 0U)
+	{
+		vector_6[uint_6] = (uint_5 & 255U);
+		vector_6[uint_6 + 1U] = (uint)(U.smethod_2(uint_5, 8) & 255);
+		vector_6[uint_6 + 2U] = (uint)(U.smethod_2(uint_5, 16) & 255);
+		vector_6[uint_6 + 3U] = (uint)(U.smethod_2(uint_5, 24) & 255);
+		return vector_6;
+	}
+
+	private void method_5()
+	{
+		this.uint_2 = 0U;
+		this.uint_3 = 0U;
+		this.uint_4 = 0U;
+	}
+
+	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		for (int i = 0; i < int_1; i++)
+		{
+			if (this.uint_1 == 0U)
 			{
-				int num3;
-				if (!this.method_8(out num3))
+				this.method_1(this.vector_1, this.vector_3);
+				Vector<uint> vector = this.vector_1;
+				uint num = vector[8U];
+				vector[8U] = num + 1U;
+				if (this.vector_1[8U] == 0U)
 				{
-					break;
-				}
-				base.Context.Stats.Spins += num3;
-			}
-			catch
-			{
-				if (++num2 == 3)
-				{
-					break;
+					Vector<uint> vector2 = this.vector_1;
+					num = vector2[9U];
+					vector2[9U] = num + 1U;
 				}
 			}
-			Thread.Sleep(millisecondsTimeout);
-			num++;
+			byte_0[i + int_0] = (byte)(((uint)byte_0[i + int_0] ^ this.vector_3[this.uint_1]) & 255U);
+			this.uint_1 = (this.uint_1 + 1U & 63U);
 		}
-		this.method_12(num == 8);
 	}
 
-	private bool method_13()
+	private void method_6(Vector<uint> vector_6, uint uint_5, Vector<uint> vector_7, uint uint_6, uint uint_7)
 	{
-		if (base.Context.Game.Web.GgInfo == null)
+		uint num = uint_6;
+		uint num2 = uint_7 + uint_5;
+		for (uint num3 = uint_5; num3 < num2; num3 += 1U)
 		{
-			return false;
+			vector_7[num] = vector_6[num3];
+			num += 1U;
 		}
-		AccountSettings account = base.Context.Account;
-		return account != null && account.Spinner_Enabled;
-	}
-
-	public override bool vmethod_0()
-	{
-		if (!this.method_13())
-		{
-			return false;
-		}
-		string activeHangarName = base.Context.Game.Web.Equipment.ActiveHangarName;
-		AccountSettings account = base.Context.Account;
-		return account == null || !account.Spinner_UsePhoenix || GClass842.list_0.Contains(activeHangarName);
-	}
-
-	public int method_14()
-	{
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		if (!this.method_13())
-		{
-			return 0;
-		}
-		int result = (int)ggInfo.samples;
-		AccountSettings account = base.Context.Account;
-		if (account != null && account.Spinner_UseUridium == 0)
-		{
-			return result;
-		}
-		return (int)ggInfo.samples + (int)(Math.Max(0L, ggInfo.money - (long)base.Context.Account.Spinner_UseUridium) / (long)ggInfo.energy_cost.Value);
 	}
 
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass868()
 	{
-		Class13.NP5bWyNzLwONS();
-		GClass868.dictionary_0 = new Dictionary<int, string>
+		Class13.F93tSdiz1aNIA();
+		GClass868.vector_0 = new Vector<uint>
 		{
-			{
-				1,
-				"alpha"
-			},
-			{
-				2,
-				"beta"
-			},
-			{
-				3,
-				"gamma"
-			},
-			{
-				4,
-				"delta"
-			},
-			{
-				5,
-				"epsilon"
-			},
-			{
-				6,
-				"zeta"
-			},
-			{
-				7,
-				"kappa"
-			},
-			{
-				8,
-				"lambda"
-			},
-			{
-				19,
-				"streuner"
-			}
+			35U,
+			185U,
+			189U,
+			33U,
+			149U,
+			10U,
+			12U,
+			45U,
+			132U,
+			146U,
+			47U,
+			208U,
+			233U,
+			161U,
+			234U,
+			164U
 		};
 	}
 
-	[CompilerGenerated]
-	private DarkOrbitWebAPI.GalaxyGatesInfo galaxyGatesInfo_0;
+	public static readonly Vector<uint> vector_0;
 
-	public static Dictionary<int, string> dictionary_0;
+	private uint uint_0;
 
-	[CompilerGenerated]
-	private bool bool_1;
+	private uint uint_1;
+
+	private Vector<uint> vector_1;
+
+	private Vector<uint> vector_2;
+
+	private Vector<uint> vector_3;
+
+	private Vector<uint> vector_4;
+
+	private Vector<uint> vector_5;
+
+	private uint uint_2;
+
+	private uint uint_3;
+
+	private uint uint_4;
 }

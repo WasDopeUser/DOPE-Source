@@ -1,34 +1,96 @@
 ﻿using System;
-using System.Drawing;
-using System.IO;
-using System.Numerics;
-using System.Text;
+using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public static class GClass826
+public class GClass826 : GInterface0
 {
-	public static string smethod_0(this string string_0)
+	short GInterface0.Id
 	{
-		return Encoding.UTF8.GetString(Convert.FromBase64String(string_0));
+		get
+		{
+			return 203;
+		}
 	}
 
-	public static string smethod_1(this string string_0)
+	int GInterface0.SizeBytes
 	{
-		return Convert.ToBase64String(Encoding.UTF8.GetBytes(string_0));
+		get
+		{
+			return 4;
+		}
 	}
 
-	public static BinaryStream smethod_2(this Stream stream_0, bool bool_0 = true)
+	public GClass826(GClass823 gclass823_1 = null, Vector<GClass135> vector_1 = null)
 	{
-		return new BinaryStream(stream_0, ByteConverter.Big, Encoding.UTF8, BooleanCoding.Byte, DateTimeCoding.NetTicks, StringCoding.Int16CharCount, bool_0);
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		if (gclass823_1 == null)
+		{
+			this.gclass823_0 = new GClass823(0);
+		}
+		else
+		{
+			this.gclass823_0 = gclass823_1;
+		}
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass135>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
-	public static Point smethod_3(this Vector2 vector2_0)
+	public virtual int vmethod_0()
 	{
-		return new Point((int)vector2_0.X, (int)vector2_0.Y);
+		return 203;
 	}
 
-	public static Vector2 smethod_4(this Rectangle rectangle_0)
+	public virtual int vmethod_1()
 	{
-		return new Vector2((float)(rectangle_0.X + rectangle_0.Width / 2), (float)(rectangle_0.Y + rectangle_0.Height / 2));
+		return 4;
 	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.gclass823_0 = (GClass823)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_0(binaryStream_0);
+		}
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass135 gclass = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(203);
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass135 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+	}
+
+	public GClass823 gclass823_0;
+
+	public Vector<GClass135> vector_0;
 }

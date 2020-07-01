@@ -1,185 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using DOPE.Common;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
-using DOPE.Core;
-using DOPE.UI.Models;
+using System.Net.Http;
+using System.Security.Cryptography;
+using System.Text;
+using Newtonsoft.Json;
 
-public class GClass849 : GClass844
+public static class GClass849
 {
-	public GEnum5 GalaxyGateType
+	static GClass849()
 	{
-		[CompilerGenerated]
-		get
+		Class13.F93tSdiz1aNIA();
+		GClass849.httpClient_0 = new HttpClient();
+		GClass849.httpClient_0.DefaultRequestHeaders.ConnectionClose = new bool?(true);
+	}
+
+	public static bool smethod_0(int int_0, int int_1, string string_0, out DateTimeOffset dateTimeOffset_0, out GClass849.GEnum9 genum9_0, string string_1 = "basic")
+	{
+		genum9_0 = GClass849.GEnum9.Unknown;
+		dateTimeOffset_0 = DateTimeOffset.MaxValue;
+		bool result3;
+		try
 		{
-			return this.genum5_0;
-		}
-		[CompilerGenerated]
-		set
-		{
-			if (this.genum5_0 == value)
+			bool is64BitProcess = Environment.Is64BitProcess;
+			string text = string.Format("{0}", DateTime.Now.Ticks);
+			HttpResponseMessage result = GClass849.httpClient_0.PostAsync(string.Format("https://powerofdark.space/license/verify/{0}/", string_1), new FormUrlEncodedContent(new Dictionary<string, string>
 			{
-				return;
-			}
-			this.genum5_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_23);
-		}
-	}
-
-	public GClass849(GClass839 gclass839_1, TargetMap targetMap_1)
-	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, targetMap_1, "G", int.MinValue);
-		this.GalaxyGateType = MapUtils.smethod_10((int)targetMap_1);
-	}
-
-	protected override void OnBind()
-	{
-		base.OnBind();
-		base.C.Game.Map.ShipCreated += this.method_2;
-		base.C.Game.Map.ShipDestroyed += this.method_1;
-	}
-
-	protected override void OnUnbind()
-	{
-		base.OnUnbind();
-		base.C.Game.Map.ShipCreated -= this.method_2;
-		base.C.Game.Map.ShipDestroyed -= this.method_1;
-	}
-
-	private void method_1(Map map_0, Ship ship_0)
-	{
-		GClass853 behavior = base.C.Behavior;
-		if (ship_0.IsNpc)
-		{
-			GClass863 gclass = behavior as GClass863;
-			if (gclass != null)
-			{
-				gclass.method_37(false);
-			}
-		}
-	}
-
-	private void method_2(Map map_0, Ship ship_0)
-	{
-		GClass853 behavior = base.C.Behavior;
-		if (ship_0.IsNpc)
-		{
-			GClass863 gclass = behavior as GClass863;
-			if (gclass != null && !gclass.method_36())
-			{
-				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass849.<>c.<>c_0.method_0)) == 1;
-				gclass.method_37(flag);
-				if (flag)
 				{
-					base.Log.Info("New wave -- {ship}", ship_0.Name);
-				}
-			}
-		}
-	}
-
-	public override bool CheckStopped()
-	{
-		return !base.C.Map.IsGG;
-	}
-
-	protected virtual bool vmethod_0()
-	{
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(this.GalaxyGateType) : null;
-		if (jumpgateGate == null)
-		{
-			return false;
-		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?((int)base.Map), 0) : null;
-		if (selectedNpcModel != null && selectedNpcModel.Enabled)
-		{
-			if (jumpgateGate.prepared)
-			{
-				if (base.Context.Account.JumpGGLastLife || jumpgateGate.livesLeft != 1)
+					"ServerId",
+					string.Format("{0}", int_0)
+				},
 				{
-					return true;
+					"UserId",
+					string.Format("{0}", int_1)
+				},
+				{
+					"x64",
+					is64BitProcess.ToString() ?? ""
+				},
+				{
+					"Token",
+					text
+				},
+				{
+					"Key",
+					string_0
+				},
+				{
+					"Extra",
+					"v2"
 				}
-			}
-			return false;
-		}
-		return false;
-	}
-
-	public override int UpdatePriority()
-	{
-		int result = base.UpdatePriority();
-		GClass872 mainController = base.C.MainController;
-		bool? flag;
-		if (mainController == null)
-		{
-			flag = null;
-		}
-		else
-		{
-			Controller parent = mainController.Parent;
-			if (parent == null)
+			})).Result;
+			IEnumerable<string> source;
+			if (result.Headers.TryGetValues("X-Signature", out source) && result.IsSuccessStatusCode)
 			{
-				flag = null;
+				string result2 = result.Content.ReadAsStringAsync().Result;
+				byte[] byte_ = GClass858.smethod_1(source.First<string>());
+				Dictionary<string, string> dictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(result2);
+				byte[] byte_2 = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(result2));
+				if (dictionary["Token"] != text)
+				{
+					result3 = false;
+				}
+				else if (!GClass849.smethod_1(byte_2, byte_))
+				{
+					result3 = false;
+				}
+				else
+				{
+					genum9_0 = (GClass849.GEnum9)int.Parse(dictionary["LicenseState"]);
+					result3 = (genum9_0 == (GClass849.GEnum9)1);
+				}
 			}
 			else
 			{
-				DopeServiceStatus serviceStatus = parent.ServiceStatus;
-				flag = ((serviceStatus != null) ? new bool?(serviceStatus.EnabledGG) : null);
+				result3 = false;
 			}
 		}
-		bool? flag2 = flag;
-		if (flag2.GetValueOrDefault() && this.vmethod_0())
+		catch
 		{
-			return result;
+			result3 = false;
 		}
-		return int.MinValue;
+		return result3;
 	}
 
-	public virtual bool vmethod_1()
+	private static bool smethod_1(byte[] byte_0, byte[] byte_1)
 	{
-		int mapId = base.Context.Map.MapId;
-		GEnum5 galaxyGateType = this.GalaxyGateType;
-		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
-		if (((ggInfo != null) ? ggInfo.GetGate(galaxyGateType) : null) == null)
+		bool result;
+		using (RSACryptoServiceProvider rsacryptoServiceProvider = new RSACryptoServiceProvider())
 		{
-			return false;
-		}
-		MapProfile mapProfile = base.MapProfile;
-		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?(mapId), 0) : null;
-		return selectedNpcModel != null && mapProfile.NpcWhitelist.LastOrDefault<SelectedNpcModel>() == selectedNpcModel;
-	}
-
-	public virtual SelectedNpcModel vmethod_2(Ship ship_0)
-	{
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile == null)
-		{
-			return null;
-		}
-		return mapProfile.GetModel(Ship.Default, base.C.Map, null, 0);
-	}
-
-	public override bool TrySwitchMap(out int int_2)
-	{
-		if (!base.C.IsStopping)
-		{
-			if (base.State == ModuleState.Started)
+			RSAParameters parameters = new RSAParameters
 			{
-				int_2 = base.C.MapProfile.TargetMap.Resolve(base.C.Hero.FactionId);
-				return true;
-			}
+				Exponent = new byte[]
+				{
+					1,
+					0,
+					1
+				}
+			};
+			parameters.Modulus = GClass858.smethod_1("b8b8d2efed5992f8b89285b2367bfcdb28d1b781b7b852af87221c0db9ecb1bc4f1ad601b9bb931647f48aa9a91467334ddca081beecd915775ba38da95bff4d50b1ff5790d3c5a6f024688185e59362722570520f646e2c6dab3af3b2b736c585c49231f6300051a5238d3d80ea6653e4ecb3904dea8c364fe1936df9629a26db9a30f538cdd61414b6112df43038f66c73df802990f341d34fadeb447918c695748b0eac9f55d3ece99868506f616861e897cd062cae57b2e3ae1737adb4b9042e2902453c4a5946029fe53928f19fe7c9928f990a4e6ee01105a1d300e2aabab995b3dd7333e9564e9212938a6422a5e706710fce47ca78f3e62168faaea9");
+			rsacryptoServiceProvider.ImportParameters(parameters);
+			result = rsacryptoServiceProvider.VerifyHash(byte_0, byte_1, HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
 		}
-		int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
-		return true;
+		return result;
 	}
 
-	[CompilerGenerated]
-	private GEnum5 genum5_0;
+	public static readonly HttpClient httpClient_0;
+
+	public enum GEnum9
+	{
+		Unknown
+	}
 }

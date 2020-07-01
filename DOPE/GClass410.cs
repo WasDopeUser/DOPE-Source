@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass410 : GClass409, GInterface0
+public class GClass410 : GClass406, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 26880;
+			return -875;
 		}
 	}
 
@@ -16,76 +16,105 @@ public class GClass410 : GClass409, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 12;
 		}
 	}
 
-	public GClass410(GClass719 gclass719_1 = null, GClass651 gclass651_1 = null, GClass555 gclass555_1 = null)
+	public GClass410(string string_2 = "", string string_3 = "", int int_2 = 0, int int_3 = 0, GClass570 gclass570_1 = null, GClass438 gclass438_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.string_0 = "";
+		this.string_1 = "";
 		base..ctor();
-		if (gclass719_1 == null)
+		this.string_0 = string_2;
+		if (gclass570_1 == null)
 		{
-			this.gclass719_0 = new GClass719(0, 0, 0, 0.0);
+			this.gclass570_0 = new GClass570(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		}
 		else
 		{
-			this.gclass719_0 = gclass719_1;
+			this.gclass570_0 = gclass570_1;
 		}
-		if (gclass651_1 == null)
+		this.int_0 = int_2;
+		if (gclass438_1 == null)
 		{
-			this.gclass651_0 = new GClass651(null);
+			this.gclass438_0 = new GClass438(0, 0);
 		}
 		else
 		{
-			this.gclass651_0 = gclass651_1;
+			this.gclass438_0 = gclass438_1;
 		}
-		if (gclass555_1 == null)
-		{
-			this.gclass555_0 = new GClass555("", 0.0, null);
-			return;
-		}
-		this.gclass555_0 = gclass555_1;
+		this.string_1 = string_3;
+		this.int_1 = int_3;
 	}
 
 	public override int vmethod_0()
 	{
-		return 26880;
+		return -875;
 	}
 
 	public override int vmethod_1()
 	{
-		return 0;
+		return 12;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.gclass555_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass555);
-		this.gclass555_0.HrqIugnatr8(binaryStream_0);
-		this.gclass651_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass651);
-		this.gclass651_0.HrqIugnatr8(binaryStream_0);
-		this.gclass719_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass719);
-		this.gclass719_0.HrqIugnatr8(binaryStream_0);
+		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.string_0 = binaryStream_0.smethod_2();
+		this.gclass570_0 = (GClass570)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass570_0 != null)
+		{
+			this.gclass570_0.imethod_0(binaryStream_0);
+		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		this.gclass438_0 = (GClass438)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass438_0 != null)
+		{
+			this.gclass438_0.imethod_0(binaryStream_0);
+		}
+		this.string_1 = binaryStream_0.smethod_2();
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 11 | U.smethod_0(this.int_1, 21));
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26880);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-875);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_3(this.string_0);
+		if (this.gclass570_0 != null)
+		{
+			this.gclass570_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
+		if (this.gclass438_0 != null)
+		{
+			this.gclass438_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 11) | this.int_1 << 21);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		this.gclass555_0.imethod_1(binaryStream_0);
-		this.gclass651_0.imethod_1(binaryStream_0);
-		this.gclass719_0.imethod_1(binaryStream_0);
-	}
+	public string string_0;
 
-	public GClass555 gclass555_0;
+	public GClass570 gclass570_0;
 
-	public GClass651 gclass651_0;
+	public int int_0;
 
-	public GClass719 gclass719_0;
+	public GClass438 gclass438_0;
+
+	public string string_1;
+
+	public int int_1;
 }

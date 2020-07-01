@@ -13,20 +13,20 @@ public class GClass94 : GInterface4
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (GClass135 gclass in e.vector_0)
 		{
-			hashSet.Add((int)gclass.gclass265_0.uint_0);
-			ResourceType uint_ = (ResourceType)gclass.gclass265_0.uint_0;
-			if (uint_ != ResourceType.XENOMIT)
+			hashSet.Add(gclass.gclass259_0.int_0);
+			ResourceType int_ = (ResourceType)gclass.gclass259_0.int_0;
+			if (int_ != ResourceType.XENOMIT)
 			{
 				num -= (int)gclass.Count;
 			}
-			hero.method_22("resource_" + uint_.ToString().ToLower(), gclass.Count);
+			hero.method_24("resource_" + int_.ToString().ToLower(), gclass.Count);
 		}
 		for (int i = 0; i <= 8; i++)
 		{
 			ResourceType resourceType = (ResourceType)i;
 			if (!hashSet.Contains(i))
 			{
-				hero.method_22("resource_" + resourceType.ToString().ToLower(), 0.0);
+				hero.method_24("resource_" + resourceType.ToString().ToLower(), 0.0);
 			}
 		}
 		hero.FreeCargo = num;
@@ -34,7 +34,7 @@ public class GClass94 : GInterface4
 
 	public GClass94()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 }

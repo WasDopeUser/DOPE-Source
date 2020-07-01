@@ -1,191 +1,96 @@
 ﻿using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Markup;
-using DarkorbitAPI;
-using PErkava;
 
-public class GClass880 : Window, INotifyPropertyChanged, IComponentConnector
+public static class GClass880
 {
-	public bool IsSupported
+	public static string smethod_0(string string_1)
 	{
-		get
+		return string.Format(GClass880.string_0, string_1);
+	}
+
+	public static string smethod_1(string string_1, string string_2 = null)
+	{
+		if (string_2 == null)
 		{
-			return PErkava.IsSupported;
+			return GClass880.smethod_0(string_1) + "/indexInternal.es";
 		}
+		return GClass880.smethod_0(string_1) + "/indexInternal.es?action=" + string_2;
 	}
 
-	[CompilerGenerated]
-	public static DateTimeOffset smethod_0()
+	public static string smethod_2(string string_1)
 	{
-		return GClass880.dateTimeOffset_0;
+		return GClass880.smethod_1(string_1, "internalMapRevolution");
 	}
 
-	[CompilerGenerated]
-	public static void smethod_1(DateTimeOffset dateTimeOffset_1)
+	public static string Maps(string server)
 	{
-		GClass880.dateTimeOffset_0 = dateTimeOffset_1;
+		return GClass880.smethod_0(server) + "/spacemap/xml/maps.php";
 	}
 
-	public bool IsLoading
+	public static string smethod_3()
 	{
-		get
+		return "https://powerofdark.space/static/maps.xml";
+	}
+
+	public static string smethod_4(string string_1)
+	{
+		return GClass880.smethod_1(string_1, "externalLogout");
+	}
+
+	public static string XmuQwTgdixZ(string string_1)
+	{
+		return GClass880.smethod_0(string_1) + "/ajax/shop.php";
+	}
+
+	public static string smethod_5(string string_1, string string_2, string string_3, string string_4 = "init")
+	{
+		return string.Concat(new string[]
 		{
-			return this.bool_0;
-		}
-		set
-		{
-			this.method_4<bool>(ref this.bool_0, value, "IsLoading");
-		}
+			GClass880.smethod_0(string_1),
+			"/flashinput/galaxyGates.php?userID=",
+			string_2,
+			"&action=",
+			string_4,
+			"&sid=",
+			string_3
+		});
 	}
 
-	public string LoadingStatus
+	public static string smethod_6(string string_1)
 	{
-		get
-		{
-			return this.string_0;
-		}
-		set
-		{
-			this.method_4<string>(ref this.string_0, value, "LoadingStatus");
-		}
+		return GClass880.smethod_0(string_1) + "/flashAPI/dailyLogin.php?doBook=1";
 	}
 
-	private void method_0()
+	public static string smethod_7(string string_1)
 	{
-		this.IsLoading = false;
+		return GClass880.smethod_0(string_1) + "/ajax/instances.php";
 	}
 
-	[CompilerGenerated]
-	public bool method_1()
+	public static string smethod_8(string string_1)
 	{
-		return this.bool_1;
+		return GClass880.smethod_0(string_1) + "/flashAPI/inventory.php";
 	}
 
-	[CompilerGenerated]
-	public void method_2(bool bool_3)
+	public static string smethod_9(string string_1)
 	{
-		this.bool_1 = bool_3;
+		return GClass880.smethod_1(string_1, "internalNanoTechFactory");
 	}
 
-	protected override void OnClosing(CancelEventArgs e)
+	public static string smethod_10(string string_1)
 	{
-		if (!this.method_1())
-		{
-			e.Cancel = true;
-			base.Hide();
-		}
-		base.OnClosing(e);
+		return GClass880.smethod_0(string_1) + "/ajax/nanotechFactory.php";
 	}
 
-	public void method_3()
+	public static string smethod_11()
 	{
-		base.Focus();
+		return "https://powerofdark.space/static/ui.txt";
 	}
 
-	public GClass880()
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass880()
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "Wait...";
-		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-		if (propertyChanged != null)
-		{
-			propertyChanged(this, new PropertyChangedEventArgs("IsSupported"));
-		}
-		this.IsLoading = true;
-		if (!this.IsSupported)
-		{
-			this.LoadingStatus = "PErkava is not supported\r\nPlease run DOPE with Administrator privileges.";
-			return;
-		}
-		DateTimeOffset dateTimeOffset = GClass880.dateTimeOffset_0;
-		if (dateTimeOffset.AddMinutes(5.0) < DateTimeOffset.Now)
-		{
-			Task.Factory.StartNew(new Action(this.Load));
-			return;
-		}
-		this.method_0();
+		Class13.F93tSdiz1aNIA();
+		GClass880.string_0 = "https://{0}.darkorbit.com";
 	}
 
-	public void Load()
-	{
-		while (!Parallel.ForEach<GClass886>(PErkava.AllServersData, new ParallelOptions
-		{
-			MaxDegreeOfParallelism = 10
-		}, new Action<GClass886>(this.method_5)).IsCompleted)
-		{
-			Thread.Sleep(1);
-		}
-		GClass880.smethod_1(DateTimeOffset.Now);
-		this.LoadingStatus = "Done";
-		base.Dispatcher.Invoke(new Action(this.method_0));
-	}
-
-	protected void method_4<bu6HWrN2riP4MDsXRAU>(ref bu6HWrN2riP4MDsXRAU gparam_0, bu6HWrN2riP4MDsXRAU qdX2yyNJ1r5R36GFsTU, [CallerMemberName] string name = null)
-	{
-		if (!EqualityComparer<bu6HWrN2riP4MDsXRAU>.Default.Equals(gparam_0, qdX2yyNJ1r5R36GFsTU))
-		{
-			gparam_0 = qdX2yyNJ1r5R36GFsTU;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged == null)
-			{
-				return;
-			}
-			propertyChanged(this, new PropertyChangedEventArgs(name));
-		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		if (this.bool_2)
-		{
-			return;
-		}
-		this.bool_2 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/mainwindow.xaml", UriKind.Relative);
-		Application.LoadComponent(this, resourceLocator);
-	}
-
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	[DebuggerNonUserCode]
-	void IComponentConnector.Connect(int connectionId, object target)
-	{
-		this.bool_2 = true;
-	}
-
-	[CompilerGenerated]
-	private void method_5(GClass886 gclass886_0)
-	{
-		DarkOrbitWebAPI darkOrbitWebAPI = new DarkOrbitWebAPI(null);
-		darkOrbitWebAPI.Server = gclass886_0.Name;
-		this.LoadingStatus = "Finding game servers for " + gclass886_0.Name + "...";
-		gclass886_0.method_3(darkOrbitWebAPI);
-		PErkava.concurrentDictionary_3[gclass886_0.Name] = gclass886_0;
-	}
-
-	[CompilerGenerated]
-	private static DateTimeOffset dateTimeOffset_0;
-
-	private bool bool_0;
-
-	private string string_0;
-
-	[CompilerGenerated]
-	private bool bool_1;
-
-	private bool bool_2;
+	public static string string_0;
 }

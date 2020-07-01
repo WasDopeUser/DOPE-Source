@@ -8,14 +8,14 @@ using System.Runtime.CompilerServices;
 
 namespace DarkorbitAPI.Properties
 {
+	[CompilerGenerated]
 	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
 	[DebuggerNonUserCode]
-	[CompilerGenerated]
 	public class Resources
 	{
 		internal Resources()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 

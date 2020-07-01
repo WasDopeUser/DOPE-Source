@@ -13,30 +13,30 @@ public class GClass104 : GInterface4
 		}
 	}
 
-	public void method_0(GClass223 gclass223_0)
+	public void method_0(GClass220 gclass220_0)
 	{
-		HeroPet.CooldownType int_ = (HeroPet.CooldownType)gclass223_0.int_0;
-		if (gclass223_0.State == 0U)
+		HeroPet.CooldownType int_ = (HeroPet.CooldownType)gclass220_0.int_0;
+		if (gclass220_0.State == 0)
 		{
-			this.Pet.Cooldowns.method_1(int_, (double)(gclass223_0.vector_0.FirstOrDefault<int>() * 1000));
+			this.Pet.Cooldowns.method_1(int_, (double)(gclass220_0.vector_0.FirstOrDefault<int>() * 1000));
 			return;
 		}
 		this.Pet.Cooldowns.Clear(int_);
 	}
 
-	public void method_1(GClass227 gclass227_0)
+	public void method_1(GClass224 gclass224_0)
 	{
-		this.Pet.method_19(gclass227_0);
+		this.Pet.method_20(gclass224_0);
 	}
 
-	public void method_2(GClass226 gclass226_0)
+	public void method_2(GClass223 gclass223_0)
 	{
-		this.Pet.method_21(gclass226_0);
+		this.Pet.method_22(gclass223_0);
 	}
 
 	public GClass104()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 }

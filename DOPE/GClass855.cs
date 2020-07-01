@@ -1,110 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Numerics;
-using DarkorbitAPI.Packets.Static;
-using DarkorbitAPI.Structures;
-using DarkorbitAPI.Structures.Pathing;
-using DOPE.UI.Models;
+using DarkorbitAPI.CommonStructures;
 
 public class GClass855 : GClass854
 {
-	public GClass855(GClass839 gclass839_1)
+	public GClass853<GClass859> method_0()
 	{
-		Class13.NP5bWyNzLwONS();
-		this.list_0 = new List<Rectangle>();
-		base..ctor(gclass839_1);
-		this.list_0.Add(GClass855.rectangle_0);
+		return (GClass853<GClass859>)this.vmethod_0();
 	}
 
-	public override bool vmethod_10(NpcShip npcShip_0)
+	public GClass855()
 	{
-		GClass187 gclass;
-		if (npcShip_0.HasModifier(EntityModifierType.INVINCIBILITY, out gclass))
+		Class13.F93tSdiz1aNIA();
+		this.random_0 = new Random();
+		base..ctor();
+		this.vmethod_1(new GClass853<GClass859>());
+	}
+
+	public override void vmethod_2(byte[] byte_0)
+	{
+		GClass858 gclass = new GClass858(GClass858.smethod_2("cc0306d7b0f0c671000bd655485744417a868b29dd77619e42b51f70c28e67d0bbc2caf9dd364cb0419217bcfba86c33735b543fae2b666059b59c631955962afa1f97e0f49f92bf1a5463ae89c751a661e0485c2ec6e011634abfb4a4142157"), new BigInteger(65537), BigInteger.Zero);
+		using (MemoryStream memoryStream = new MemoryStream())
 		{
-			return false;
+			gclass.method_12(byte_0, memoryStream, 0U, (uint)byte_0.Length);
+			byte_0 = memoryStream.ToArray();
 		}
-		SelectedNpcModel selectedNpcModel = this.vmethod_5(npcShip_0);
-		return selectedNpcModel == null || selectedNpcModel.Enabled;
+		BigInteger value = GClass858.smethod_0(byte_0);
+		BigInteger modulus = GClass858.smethod_2("f0550ebfc21e0672738bdbe1aa5c8d4429b198803080e82cfcfef856fea9034b07fc92b787604f4ba375afee98fa61332cc1396694dcad4306a13bb86fe53f89");
+		byte[] byte_ = BigInteger.ModPow(value, this.bigInteger_0, modulus).ToByteArray().Reverse<byte>().ToArray<byte>().Take(16).ToArray<byte>();
+		this.method_0().method_0(byte_);
 	}
 
-	public override List<Rectangle> vmethod_17()
+	public override void vmethod_3(DollConfig dollConfig_0, Action action_0)
 	{
-		Point pt = base.Hero.Position.smethod_3();
-		if (GClass855.rectangle_0.Contains(pt))
+		GClass859 q31uyQN7KHW0WoXF = GClass866.smethod_0(dollConfig_0);
+		this.method_0().vmethod_1(q31uyQN7KHW0WoXF);
+		if (action_0 != null)
 		{
-			this.list_0[0] = GClass855.rectangle_0;
+			action_0();
 		}
-		else if (GClass855.rectangle_1.Contains(pt))
+	}
+
+	public override byte[] vmethod_4()
+	{
+		byte[] array = new byte[64];
+		array[0] = 87;
+		for (int i = 1; i < 64; i++)
 		{
-			this.list_0[0] = GClass855.rectangle_1;
+			array[i] = (byte)this.random_0.Next(1, 256);
 		}
-		else if (GClass855.rectangle_2.Contains(pt))
-		{
-			this.list_0[0] = GClass855.rectangle_2;
-		}
-		else
-		{
-			this.list_0[0] = GClass855.rectangle_3;
-		}
-		return this.list_0;
+		BigInteger exponent = GClass858.smethod_0(array);
+		BigInteger value = GClass858.smethod_2("3ba3fbfbbd62e5157c285ec65e4fd155039290adca28e46ba0f402c4dafdfa16fcfe26fb8e448fd3af608e4097c9d6a89f0a91b72c6166af77d1e46b139e7ff2");
+		BigInteger modulus = GClass858.smethod_2("f0550ebfc21e0672738bdbe1aa5c8d4429b198803080e82cfcfef856fea9034b07fc92b787604f4ba375afee98fa61332cc1396694dcad4306a13bb86fe53f89");
+		this.bigInteger_0 = exponent;
+		return BigInteger.ModPow(value, exponent, modulus).ToByteArray().Reverse<byte>().ToArray<byte>();
 	}
 
-	public override Vector2? vmethod_21(bool bool_3)
-	{
-		GClass855.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass855.<>c__DisplayClass9_0();
-		CS$<>8__locals1.gclass855_0 = this;
-		CS$<>8__locals1.vector2_0 = base.Hero.Position;
-		CS$<>8__locals1.vector2_1 = (this.vmethod_41(CS$<>8__locals1.vector2_0, 2250) ?? this.vmethod_17()[0].smethod_4());
-		CS$<>8__locals1.float_0 = Math.Min(Vector2.Distance(base.Hero.Position, CS$<>8__locals1.vector2_1) + 500f, 2500f);
-		CS$<>8__locals1.pathSequence_0 = null;
-		Map.Navigators.method_4(new Action<MapNavigator>(CS$<>8__locals1.method_0), 0);
-		if (CS$<>8__locals1.pathSequence_0 != null)
-		{
-			base.Map.Grid.method_13(CS$<>8__locals1.pathSequence_0);
-		}
-		PathSequence pathSequence_ = CS$<>8__locals1.pathSequence_0;
-		return new Vector2?((pathSequence_ != null) ? pathSequence_.Destination : base.C.Game.Security.method_5(base.Map, this.vmethod_17()));
-	}
+	private readonly Random random_0;
 
-	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
-	{
-		gate_0 = null;
-		return null;
-	}
-
-	public override bool vmethod_16()
-	{
-		return false;
-	}
-
-	public override bool vmethod_4(bool bool_3 = false, bool bool_4 = false)
-	{
-		Vector2 heroPosition = base.C.HeroPosition;
-		Ship ship = base.C.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(GClass855.<>c.<>c_0.method_0), null, 0);
-		return ship == null || Vector2.Distance(heroPosition, ship.Position) >= 2000f;
-	}
-
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass855()
-	{
-		Class13.NP5bWyNzLwONS();
-		GClass855.size_0 = new Size(MapUtils.LargeMapSize.Width / 2, MapUtils.LargeMapSize.Height / 2);
-		GClass855.rectangle_0 = new Rectangle(new Point(0, 0), GClass855.size_0);
-		GClass855.rectangle_1 = new Rectangle(new Point(GClass855.size_0.Width, 0), GClass855.size_0);
-		GClass855.rectangle_2 = new Rectangle(new Point(0, GClass855.size_0.Height), GClass855.size_0);
-		GClass855.rectangle_3 = new Rectangle(new Point(GClass855.size_0.Width, GClass855.size_0.Height), GClass855.size_0);
-	}
-
-	private readonly List<Rectangle> list_0;
-
-	public static Size size_0;
-
-	public static Rectangle rectangle_0;
-
-	public static Rectangle rectangle_1;
-
-	public static Rectangle rectangle_2;
-
-	public static Rectangle rectangle_3;
+	private BigInteger bigInteger_0;
 }

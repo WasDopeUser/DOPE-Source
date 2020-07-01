@@ -9,8 +9,8 @@ using DOPE.Common.Models.Bot.Stats;
 
 namespace DOPE.Common.Models.Bot
 {
-	[DataContract]
 	[Guid("63669AC1-AF22-4F9E-BDD6-5E73B550D772")]
+	[DataContract]
 	public class BotStats : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -489,8 +489,8 @@ namespace DOPE.Common.Models.Bot
 			propertyChanged(this, args);
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

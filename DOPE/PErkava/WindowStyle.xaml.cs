@@ -12,7 +12,7 @@ namespace PErkava
 	{
 		public WindowStyle()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 			this.InitializeComponent();
 		}
@@ -43,9 +43,9 @@ namespace PErkava
 			MessageBox.Show("Hello!");
 		}
 
-		[DebuggerNonUserCode]
-		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		[EditorBrowsable(EditorBrowsableState.Never)]
+		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+		[DebuggerNonUserCode]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			if (connectionId == 1)

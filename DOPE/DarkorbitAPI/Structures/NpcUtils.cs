@@ -14,7 +14,7 @@ namespace DarkorbitAPI.Structures
 	{
 		public static List<NpcUtils.NpcClass> Classes { get; private set; }
 
-		public static List<NpcUtils.NpcType> gwxubYhEsF(int int_0)
+		public static List<NpcUtils.NpcType> smethod_0(int int_0)
 		{
 			List<NpcUtils.NpcType> result;
 			if (!NpcUtils.NpcsByMap.TryGetValue(int_0, out result))
@@ -24,7 +24,7 @@ namespace DarkorbitAPI.Structures
 			return result;
 		}
 
-		public static void smethod_0(DarkOrbitWebAPI.NpcConstants npcConstants_0)
+		public static void smethod_1(DarkOrbitWebAPI.NpcConstants npcConstants_0)
 		{
 			NpcUtils.<>c__DisplayClass124_0 CS$<>8__locals1;
 			CS$<>8__locals1.uberPattern = "Uber([A-Z]\\S*)";
@@ -38,7 +38,7 @@ namespace DarkorbitAPI.Structures
 						int num;
 						if (int.TryParse(resourceItem.name.Replace("npc_name_", ""), out num))
 						{
-							string text = NpcUtils.smethod_1(resourceItem.Value, ref CS$<>8__locals1);
+							string text = NpcUtils.smethod_2(resourceItem.Value, ref CS$<>8__locals1);
 							NpcUtils.XmlNpcs[num] = text;
 							NpcUtils.XmlNpcIds[text] = num;
 						}
@@ -49,7 +49,7 @@ namespace DarkorbitAPI.Structures
 
 		static NpcUtils()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			NpcUtils.Groups = new List<NpcUtils.NpcGroup>();
 			NpcUtils.G_Regular = new NpcUtils.NpcGroup("Regular", "");
 			NpcUtils.G_Boss = new NpcUtils.NpcGroup("Boss", null);
@@ -376,59 +376,9 @@ namespace DarkorbitAPI.Structures
 				List<NpcUtils.NpcType> list2 = NpcUtils.NpcsByMap[keyValuePair.Key] = new List<NpcUtils.NpcType>();
 				foreach (string string_ in keyValuePair.Value)
 				{
-					list2.Add(NpcUtils.NpcType.smethod_4(string_));
+					list2.Add(NpcUtils.NpcType.smethod_5(string_));
 				}
 			}
-			List<NpcUtils.NpcType> collection = NpcUtils.NpcType.smethod_3(new NpcUtils.NpcClass[]
-			{
-				NpcUtils.N_HexorMimesis,
-				NpcUtils.N_RagingMimesis,
-				NpcUtils.N_KamikazeMimesis,
-				NpcUtils.N_TerrorMimesis,
-				NpcUtils.N_ReflectorMimesis,
-				NpcUtils.N_CloningMimesis,
-				NpcUtils.N_ClonedMimesis
-			}).ToList<NpcUtils.NpcType>();
-			for (int i = 1; i <= 3; i++)
-			{
-				List<NpcUtils.NpcType> list3 = NpcUtils.NpcsByMap[MapUtils.smethod_12(2, i)];
-				list3.Add(NpcUtils.NpcType.qnTuMsYlVx(NpcUtils.N_HexorMimesis));
-				list3.Add(NpcUtils.NpcType.qnTuMsYlVx(NpcUtils.N_RagingMimesis));
-				NpcUtils.NpcsByMap[MapUtils.smethod_12(3, i)].AddRange(collection);
-				NpcUtils.NpcsByMap[MapUtils.smethod_12(4, i)].AddRange(collection);
-				for (int j = 2; j <= 8; j++)
-				{
-					List<NpcUtils.NpcType> list4 = NpcUtils.NpcsByMap[MapUtils.smethod_12(j, i)];
-				}
-			}
-			foreach (int key in new int[]
-			{
-				13,
-				14,
-				15,
-				16
-			})
-			{
-				NpcUtils.NpcsByMap[key].AddRange(collection);
-			}
-			NpcUtils.NpcsByMap[431] = NpcUtils.NpcType.smethod_3(new NpcUtils.NpcClass[]
-			{
-				NpcUtils.N_HexorMimesis,
-				NpcUtils.N_RagingMimesis,
-				NpcUtils.N_ReflectorMimesis,
-				NpcUtils.N_AssailantMimesis,
-				NpcUtils.N_TerrorMimesis,
-				NpcUtils.N_ClonedMimesis,
-				NpcUtils.N_CloningMimesis,
-				NpcUtils.N_HardyMimesis,
-				NpcUtils.N_HoundingMimesis,
-				NpcUtils.N_MarkerMimesis,
-				NpcUtils.N_MedicMimesis,
-				NpcUtils.N_ObscuredMimesis,
-				NpcUtils.N_PiercingMimesis,
-				NpcUtils.N_RaiderMimesis,
-				NpcUtils.N_SniperMimesis
-			}).ToList<NpcUtils.NpcType>();
 			Dictionary<int, List<NpcUtils.NpcType>> dictionary2 = new Dictionary<int, List<NpcUtils.NpcType>>();
 			foreach (NpcUtils.NpcGroup npcGroup in new NpcUtils.NpcGroup[]
 			{
@@ -575,7 +525,7 @@ namespace DarkorbitAPI.Structures
 				"Skolls Icy",
 				"Skoll"
 			};
-			dictionary2[(int)NpcUtils.GG_ColdWave.method_0()] = source2.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_4)).ToList<NpcUtils.NpcType>();
+			dictionary2[(int)NpcUtils.GG_ColdWave.method_0()] = source2.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_5)).ToList<NpcUtils.NpcType>();
 			List<string> source3 = new List<string>
 			{
 				"Viral Kristallon",
@@ -583,7 +533,7 @@ namespace DarkorbitAPI.Structures
 				"Viral Gygerthrall",
 				"Gygerim Overlord"
 			};
-			dictionary2[(int)NpcUtils.GG_QZ.method_0()] = source3.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_4)).ToList<NpcUtils.NpcType>();
+			dictionary2[(int)NpcUtils.GG_QZ.method_0()] = source3.Select(new Func<string, NpcUtils.NpcType>(NpcUtils.NpcType.smethod_5)).ToList<NpcUtils.NpcType>();
 			foreach (KeyValuePair<int, List<NpcUtils.NpcType>> keyValuePair2 in dictionary2)
 			{
 				NpcUtils.NpcsByMap[keyValuePair2.Key] = keyValuePair2.Value;
@@ -591,7 +541,7 @@ namespace DarkorbitAPI.Structures
 		}
 
 		[CompilerGenerated]
-		internal static string smethod_1(string string_0, ref NpcUtils.<>c__DisplayClass124_0 <>c__DisplayClass124_0_0)
+		internal static string smethod_2(string string_0, ref NpcUtils.<>c__DisplayClass124_0 <>c__DisplayClass124_0_0)
 		{
 			return Regex.Replace(string_0, <>c__DisplayClass124_0_0.uberPattern, "Uber $1");
 		}
@@ -842,7 +792,7 @@ namespace DarkorbitAPI.Structures
 
 			public GGWaveType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, int int_0, string string_0 = null)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor(npcClass_0, npcGroup_0, false);
 				this.WaveNumber = int_0;
 				this.Description = string_0;
@@ -868,7 +818,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static GGWaveType()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				NpcUtils.GGWaveType.LastGGId = 2146483647;
 			}
 
@@ -888,7 +838,7 @@ namespace DarkorbitAPI.Structures
 
 			protected NpcType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, bool bool_0 = true)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Class = npcClass_0;
 				this.Group = npcGroup_0;
@@ -912,29 +862,29 @@ namespace DarkorbitAPI.Structures
 				string string_;
 				if (NpcUtils.XmlNpcs.TryGetValue(int_0, out string_))
 				{
-					return NpcUtils.NpcType.smethod_4(string_);
+					return NpcUtils.NpcType.smethod_5(string_);
 				}
 				return null;
 			}
 
 			public static NpcUtils.NpcType smethod_2(NpcUtils.NpcGroup npcGroup_0, NpcUtils.NpcClass npcClass_0)
 			{
-				return NpcUtils.NpcType.smethod_4(npcGroup_0.ToString() + " " + npcClass_0.ToString());
+				return NpcUtils.NpcType.smethod_5(npcGroup_0.ToString() + " " + npcClass_0.ToString());
 			}
 
-			public static NpcUtils.NpcType qnTuMsYlVx(NpcUtils.NpcClass npcClass_0)
+			public static NpcUtils.NpcType smethod_3(NpcUtils.NpcClass npcClass_0)
 			{
 				return NpcUtils.NpcType.smethod_2(NpcUtils.G_Regular, npcClass_0);
 			}
 
-			public static IEnumerable<NpcUtils.NpcType> smethod_3(params NpcUtils.NpcClass[] cls)
+			public static IEnumerable<NpcUtils.NpcType> smethod_4(params NpcUtils.NpcClass[] cls)
 			{
 				NpcUtils.NpcType.<GetList>d__18 <GetList>d__ = new NpcUtils.NpcType.<GetList>d__18(-2);
 				<GetList>d__.<>3__cls = cls;
 				return <GetList>d__;
 			}
 
-			public static NpcUtils.NpcType smethod_4(string string_0)
+			public static NpcUtils.NpcType smethod_5(string string_0)
 			{
 				NpcUtils.NpcType.<>c__DisplayClass19_0 CS$<>8__locals1 = new NpcUtils.NpcType.<>c__DisplayClass19_0();
 				CS$<>8__locals1.sanitized = NpcUtils.NpcType.smethod_0(string_0);
@@ -1008,7 +958,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcType()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 			}
 
 			public static int LastId;
@@ -1023,7 +973,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcClass(string string_0)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Name = string_0;
 				NpcUtils.Classes.Add(this);
@@ -1048,7 +998,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcClass()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				NpcUtils.NpcClass.LastId = 1;
 			}
 
@@ -1067,7 +1017,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcGroup(string string_0, string string_1 = null)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				if (string_1 == null)
 				{
@@ -1144,7 +1094,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcGroup()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				NpcUtils.NpcGroup.LastId = 1;
 			}
 

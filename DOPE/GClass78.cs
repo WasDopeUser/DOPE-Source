@@ -19,89 +19,32 @@ public class GClass78
 
 	public GClass78(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.Web = darkOrbitWebAPI_1;
 		this.gclass80_0 = new GClass78.GClass80();
 	}
 
-	public async Task method_1()
+	public Task method_1()
 	{
-		string sUrl = GClass829.smethod_1(this.Web.Server, "internalSkylab");
-		DarkOrbitWebAPI.Response response = await this.Web.GetAsync(sUrl, null);
-		response.Data.EnsureSuccessStatusCode();
-		this.method_0().method_9(response.Content);
+		GClass78.<Update>d__9 <Update>d__;
+		<Update>d__.<>4__this = this;
+		<Update>d__.<>t__builder = AsyncTaskMethodBuilder.Create();
+		<Update>d__.<>1__state = -1;
+		<Update>d__.<>t__builder.Start<GClass78.<Update>d__9>(ref <Update>d__);
+		return <Update>d__.<>t__builder.Task;
 	}
 
-	public async Task<bool> method_2(int int_0, int int_1)
+	public Task<bool> method_2(int int_0, int int_1)
 	{
-		Dictionary<string, string> data = new Dictionary<string, string>
-		{
-			{
-				"reloadToken",
-				this.Web.ReloadToken
-			},
-			{
-				"action",
-				"internalSkylab"
-			},
-			{
-				"subaction",
-				"startTransport"
-			},
-			{
-				"mode",
-				"normal"
-			},
-			{
-				"construction",
-				"TRANSPORT_MODULE"
-			},
-			{
-				"count_prometium",
-				"0"
-			},
-			{
-				"count_endurium",
-				"0"
-			},
-			{
-				"count_terbium",
-				"0"
-			},
-			{
-				"count_prometid",
-				"0"
-			},
-			{
-				"count_duranium",
-				"0"
-			},
-			{
-				"count_xenomit",
-				"0"
-			},
-			{
-				"count_promerium",
-				string.Format("{0}", int_0)
-			},
-			{
-				"count_seprom",
-				string.Format("{0}", int_1)
-			}
-		};
-		DarkOrbitWebAPI.Response response = await this.Web.PostAsync(GClass829.smethod_1(this.Web.Server, null), data, GClass829.smethod_1(this.Web.Server, "internalSkylab"), null);
-		bool result;
-		if (!response.Data.IsSuccessStatusCode)
-		{
-			result = false;
-		}
-		else
-		{
-			this.method_0().method_9(response.Content);
-			result = (this.method_0().method_10("transportModule").method_0() != null);
-		}
-		return result;
+		GClass78.<StartTransfer>d__10 <StartTransfer>d__;
+		<StartTransfer>d__.<>4__this = this;
+		<StartTransfer>d__.promeriumCount = int_0;
+		<StartTransfer>d__.sepromCount = int_1;
+		<StartTransfer>d__.<>t__builder = AsyncTaskMethodBuilder<bool>.Create();
+		<StartTransfer>d__.<>1__state = -1;
+		<StartTransfer>d__.<>t__builder.Start<GClass78.<StartTransfer>d__10>(ref <StartTransfer>d__);
+		return <StartTransfer>d__.<>t__builder.Task;
 	}
 
 	[CompilerGenerated]
@@ -132,14 +75,14 @@ public class GClass78
 
 		public GClass79()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static GClass79()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			GClass78.GClass79.list_0 = new List<string>
 			{
 				"baseModule",
@@ -175,20 +118,20 @@ public class GClass78
 	public class GClass80
 	{
 		[CompilerGenerated]
-		public DateTimeOffset ElvDuoZyEX()
+		public DateTimeOffset method_0()
 		{
 			return this.dateTimeOffset_0;
 		}
 
 		[CompilerGenerated]
-		private void method_0(DateTimeOffset dateTimeOffset_1)
+		private void method_1(DateTimeOffset dateTimeOffset_1)
 		{
 			this.dateTimeOffset_0 = dateTimeOffset_1;
 		}
 
 		public ConcurrentDictionary<string, int> Resources { get; }
 
-		public int method_1(string string_0)
+		public int opxUviAkXU(string string_0)
 		{
 			int result;
 			if (!this.Resources.TryGetValue(string_0, out result))
@@ -200,12 +143,12 @@ public class GClass78
 
 		public int method_2()
 		{
-			return this.method_1("resource_ore_promerium");
+			return this.opxUviAkXU("resource_ore_promerium");
 		}
 
 		public int method_3()
 		{
-			return this.method_1("resource_ore_seprom");
+			return this.opxUviAkXU("resource_ore_seprom");
 		}
 
 		[CompilerGenerated]
@@ -228,7 +171,7 @@ public class GClass78
 
 		public GClass80()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 			this.Resources = new ConcurrentDictionary<string, int>();
 			this.list_0 = new List<GClass78.GClass79>();
@@ -286,13 +229,13 @@ public class GClass78
 		{
 			this.method_7(string_0);
 			this.method_8(string_0);
-			this.method_0(DateTimeOffset.Now);
+			this.method_1(DateTimeOffset.Now);
 		}
 
 		public GClass78.GClass79 method_10(string string_0)
 		{
 			GClass78.GClass80.<>c__DisplayClass23_0 CS$<>8__locals1 = new GClass78.GClass80.<>c__DisplayClass23_0();
-			CS$<>8__locals1.string_0 = string_0;
+			CS$<>8__locals1.oyeLmxCiyR = string_0;
 			return this.method_6().Find(new Predicate<GClass78.GClass79>(CS$<>8__locals1.method_0));
 		}
 

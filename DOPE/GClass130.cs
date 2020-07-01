@@ -8,7 +8,7 @@ public class GClass130 : GInterface0
 	{
 		get
 		{
-			return 29784;
+			return 146;
 		}
 	}
 
@@ -20,16 +20,16 @@ public class GClass130 : GInterface0
 		}
 	}
 
-	public GClass130(uint uint_1 = 0U)
+	public GClass130(int int_1 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.uint_0 = uint_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 29784;
+		return 146;
 	}
 
 	public virtual int vmethod_1()
@@ -37,23 +37,16 @@ public class GClass130 : GInterface0
 		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(29784);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(146);
+		binaryStream_0.smethod_7(this.int_0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-32056);
-		binaryStream_0.smethod_6(this.uint_0);
-	}
-
-	public uint uint_0;
+	public int int_0;
 }

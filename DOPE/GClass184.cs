@@ -8,7 +8,7 @@ public class GClass184 : GClass180, GInterface0
 	{
 		get
 		{
-			return 11721;
+			return 6240;
 		}
 	}
 
@@ -16,59 +16,53 @@ public class GClass184 : GClass180, GInterface0
 	{
 		get
 		{
-			return 30;
+			return 10;
 		}
 	}
 
 	public GClass184(string string_2 = "", int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0, string string_3 = "")
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		this.string_1 = "";
 		base..ctor(string_2, int_4, int_5);
-		this.int_3 = int_6;
 		this.int_2 = int_7;
 		this.string_1 = string_3;
+		this.int_3 = int_6;
 	}
 
 	public override int vmethod_0()
 	{
-		return 11721;
+		return 6240;
 	}
 
 	public override int vmethod_1()
 	{
-		return 30;
+		return 10;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
 		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
 		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 9 | U.smethod_0(this.int_2, 23));
-		this.int_3 = binaryStream_0.smethod_0();
-		this.int_3 = (U.smethod_0(this.int_3, 3) | this.int_3 << 29);
+		this.int_2 = (this.int_2 << 7 | U.smethod_0(this.int_2, 25));
 		this.string_1 = binaryStream_0.smethod_2();
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (this.int_3 << 16 | U.smethod_0(this.int_3, 16));
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11721);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(31137);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 9) | this.int_2 << 23);
-		binaryStream_0.smethod_4(this.int_3 << 3 | U.smethod_0(this.int_3, 29));
+		binaryStream_0.smethod_7(6240);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 7) | this.int_2 << 25);
 		binaryStream_0.smethod_3(this.string_1);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_3, 16) | this.int_3 << 16);
 	}
 
 	public int int_2;
 
-	public int int_3;
-
 	public string string_1;
+
+	public int int_3;
 }

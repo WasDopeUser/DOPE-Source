@@ -8,7 +8,7 @@ public class GClass344 : GInterface0
 	{
 		get
 		{
-			return 14671;
+			return -23120;
 		}
 	}
 
@@ -16,63 +16,66 @@ public class GClass344 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 10;
 		}
 	}
 
-	public GClass344(Vector<GClass495> vector_1 = null)
+	public GClass344(string string_1 = "", double double_1 = 0.0, GClass784 gclass784_0 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.string_0 = "";
 		base..ctor();
-		if (vector_1 == null)
+		this.double_0 = double_1;
+		if (gclass784_0 == null)
 		{
-			this.vector_0 = new Vector<GClass495>();
-			return;
+			this.Status = new GClass784();
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.Status = gclass784_0;
+		}
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 14671;
+		return -23120;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 10;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.Status = (GClass784)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.Status != null)
 		{
-			this.vector_0.method_1();
+			this.Status.imethod_0(binaryStream_0);
 		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass495 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass495;
-			gclass.HrqIugnatr8(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(14671);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass495 gclass in this.vector_0)
+		binaryStream_0.smethod_7(-23120);
+		binaryStream_0.WriteDouble(this.double_0);
+		if (this.Status != null)
 		{
-			gclass.imethod_1(binaryStream_0);
+			this.Status.imethod_1(binaryStream_0);
 		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_3(this.string_0);
 	}
 
-	public Vector<GClass495> vector_0;
+	public double double_0;
+
+	public GClass784 Status;
+
+	public string string_0;
 }

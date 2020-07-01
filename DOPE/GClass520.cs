@@ -8,7 +8,7 @@ public class GClass520 : GInterface0
 	{
 		get
 		{
-			return 22778;
+			return 217;
 		}
 	}
 
@@ -20,15 +20,21 @@ public class GClass520 : GInterface0
 		}
 	}
 
-	public GClass520()
+	public GClass520(GClass823 gclass823_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
+		if (gclass823_1 == null)
+		{
+			this.gclass823_0 = new GClass823(0);
+			return;
+		}
+		this.gclass823_0 = gclass823_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22778;
+		return 217;
 	}
 
 	public virtual int vmethod_1()
@@ -36,19 +42,25 @@ public class GClass520 : GInterface0
 		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
+		this.gclass823_0 = (GClass823)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_0(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22778);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(217);
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(28061);
-	}
+	public GClass823 gclass823_0;
 }

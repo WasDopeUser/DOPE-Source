@@ -3,10 +3,10 @@ using DarkorbitAPI;
 
 public class GClass100 : GInterface4
 {
-	public void Run(GClass220 cmd)
+	public void Run(GClass217 cmd)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
-		if (!value.method_18())
+		if (!value.method_19())
 		{
 			return;
 		}
@@ -19,14 +19,14 @@ public class GClass100 : GInterface4
 		value.SendMessage(new GClass158());
 		if (cmd.Reset)
 		{
-			value.SendMessage(new GClass172(value.Game.Security.method_1(), value.Game.Settings.Use3D ? 1U : 0U));
-			value.SendMessage(new GClass172(value.Game.Security.method_1(), 2U));
+			value.SendMessage(new GClass172(value.Game.Security.method_1(), value.Game.Settings.Use3D ? 1 : 0));
+			value.SendMessage(new GClass172(value.Game.Security.method_1(), 2));
 		}
 	}
 
 	public GClass100()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 }

@@ -8,7 +8,7 @@ public class GClass245 : GInterface0
 	{
 		get
 		{
-			return 32068;
+			return 6676;
 		}
 	}
 
@@ -16,50 +16,38 @@ public class GClass245 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 2;
 		}
 	}
 
-	public GClass245(GClass244 gclass244_1 = null)
+	public GClass245(string string_0 = "")
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.Name = "";
 		base..ctor();
-		if (gclass244_1 == null)
-		{
-			this.gclass244_0 = new GClass244(0.0, "", 0.0, 0, false, 0.0, null);
-			return;
-		}
-		this.gclass244_0 = gclass244_1;
+		this.Name = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32068;
+		return 6676;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 2;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.gclass244_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass244);
-		this.gclass244_0.HrqIugnatr8(binaryStream_0);
-		binaryStream_0.smethod_1();
+		this.Name = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32068);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(6676);
+		binaryStream_0.smethod_3(this.Name);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.gclass244_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_7(13489);
-	}
-
-	public GClass244 gclass244_0;
+	public string Name;
 }

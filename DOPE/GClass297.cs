@@ -8,7 +8,7 @@ public class GClass297 : GInterface0
 	{
 		get
 		{
-			return 12114;
+			return 143;
 		}
 	}
 
@@ -16,49 +16,66 @@ public class GClass297 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 2;
 		}
 	}
 
-	public GClass297(int int_1 = 0, int int_2 = 0)
+	public GClass297(int int_1 = 0, GClass259 gclass259_1 = null, string string_1 = "")
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.string_0 = "";
 		base..ctor();
-		this.oIheiDaqGn = int_1;
-		this.int_0 = int_2;
+		this.int_0 = int_1;
+		if (gclass259_1 == null)
+		{
+			this.gclass259_0 = new GClass259(0);
+		}
+		else
+		{
+			this.gclass259_0 = gclass259_1;
+		}
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 12114;
+		return 143;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 2;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.oIheiDaqGn = binaryStream_0.smethod_0();
-		this.oIheiDaqGn = (this.oIheiDaqGn << 14 | U.smethod_0(this.oIheiDaqGn, 18));
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.int_0 = (int)binaryStream_0.smethod_1();
+		this.gclass259_0 = (GClass259)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_0(binaryStream_0);
+		}
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12114);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(143);
+		binaryStream_0.smethod_7(this.int_0);
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_3(this.string_0);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(U.smethod_0(this.oIheiDaqGn, 14) | this.oIheiDaqGn << 18);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-	}
-
-	public int oIheiDaqGn;
 
 	public int int_0;
+
+	public GClass259 gclass259_0;
+
+	public string string_0;
 }

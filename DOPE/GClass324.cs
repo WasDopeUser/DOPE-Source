@@ -8,7 +8,7 @@ public class GClass324 : GInterface0
 	{
 		get
 		{
-			return 20685;
+			return 229;
 		}
 	}
 
@@ -16,64 +16,47 @@ public class GClass324 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 3;
 		}
 	}
 
-	public GClass324(string string_2 = "", string string_3 = "", GClass341 gclass341_1 = null)
+	public GClass324(bool bool_3 = false, bool bool_4 = false, bool bool_5 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
-		this.string_1 = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.string_0 = string_2;
-		this.string_1 = string_3;
-		if (gclass341_1 == null)
-		{
-			this.gclass341_0 = new GClass341(0U);
-			return;
-		}
-		this.gclass341_0 = gclass341_1;
+		this.bool_0 = bool_3;
+		this.bool_1 = bool_4;
+		this.bool_2 = bool_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20685;
+		return 229;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 3;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.gclass341_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass341);
-		this.gclass341_0.HrqIugnatr8(binaryStream_0);
-		this.string_1 = binaryStream_0.smethod_2();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_2 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20685);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(229);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_2);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(4362);
-		binaryStream_0.smethod_7(32001);
-		binaryStream_0.smethod_3(this.string_0);
-		this.gclass341_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_1);
-	}
+	public bool bool_0;
 
-	public string string_0;
+	public bool bool_1;
 
-	public GClass341 gclass341_0;
-
-	public string string_1;
+	public bool bool_2;
 }

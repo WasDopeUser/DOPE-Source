@@ -8,7 +8,7 @@ public class GClass143 : GInterface0
 	{
 		get
 		{
-			return 16152;
+			return 89;
 		}
 	}
 
@@ -22,7 +22,7 @@ public class GClass143 : GInterface0
 
 	public GClass143(int int_2 = 0, int int_3 = 0, int int_4 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.Id = int_2;
 		this.int_0 = int_3;
@@ -31,7 +31,7 @@ public class GClass143 : GInterface0
 
 	public virtual int vmethod_0()
 	{
-		return 16152;
+		return 89;
 	}
 
 	public virtual int vmethod_1()
@@ -39,34 +39,27 @@ public class GClass143 : GInterface0
 		return 12;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 4 | U.smethod_0(this.int_0, 28));
 		this.Id = binaryStream_0.smethod_0();
-		this.Id = (U.smethod_0(this.Id, 3) | this.Id << 29);
+		this.Id = (U.smethod_0(this.Id, 2) | this.Id << 30);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 7) | this.int_1 << 25);
-		binaryStream_0.smethod_1();
+		this.int_1 = (this.int_1 << 14 | U.smethod_0(this.int_1, 18));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16152);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(89);
+		binaryStream_0.smethod_4(this.Id << 2 | U.smethod_0(this.Id, 30));
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 14) | this.int_1 << 18);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 4) | this.int_0 << 28);
-		binaryStream_0.smethod_4(this.Id << 3 | U.smethod_0(this.Id, 29));
-		binaryStream_0.smethod_4(this.int_1 << 7 | U.smethod_0(this.int_1, 25));
-		binaryStream_0.smethod_7(30298);
-	}
-
-	public int int_0;
 
 	public int Id;
+
+	public int int_0;
 
 	public int int_1;
 }

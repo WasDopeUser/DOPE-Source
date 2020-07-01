@@ -29,17 +29,17 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass839 Context
+		public GClass890 Context
 		{
 			get
 			{
-				return base.DataContext as GClass839;
+				return base.DataContext as GClass890;
 			}
 		}
 
 		public MapControl()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.Timer = new Timer();
 			this.LastRender = DateTime.Now;
 			base..ctor();
@@ -121,7 +121,7 @@ namespace DOPE.UI
 				{
 				}
 				this.method_5(drawingContext, float_, float_2, this.Map);
-				string text = string.Join("\r\n", this.Context.method_68());
+				string text = string.Join("\r\n", this.Context.method_69());
 				if (!string.IsNullOrWhiteSpace(text))
 				{
 					this.Progress.Visibility = Visibility.Visible;
@@ -129,11 +129,11 @@ namespace DOPE.UI
 				}
 				foreach (KeyValuePair<int, Gate> keyValuePair in map.Gates)
 				{
-					this.method_9(drawingContext, float_, float_2, keyValuePair.Value);
+					this.imhFjItmqr(drawingContext, float_, float_2, keyValuePair.Value);
 				}
 				foreach (KeyValuePair<string, Collectible> keyValuePair2 in map.Collectibles)
 				{
-					this.method_10(drawingContext, float_, float_2, keyValuePair2.Value);
+					this.method_9(drawingContext, float_, float_2, keyValuePair2.Value);
 				}
 				foreach (KeyValuePair<int, Ship> keyValuePair3 in map.Ships)
 				{
@@ -157,7 +157,7 @@ namespace DOPE.UI
 				}
 				if (this.Context != null && flag)
 				{
-					this.method_11(drawingContext, float_, float_2, this.Context);
+					this.method_10(drawingContext, float_, float_2, this.Context);
 				}
 				return;
 			}
@@ -286,7 +286,7 @@ namespace DOPE.UI
 			}
 		}
 
-		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
+		public void imhFjItmqr(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
 		{
 			System.Drawing.Color color = MapUtils.smethod_16(this.Map, gate_0);
 			SolidColorBrush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
@@ -294,27 +294,27 @@ namespace DOPE.UI
 			drawingContext_0.DrawEllipse(null, new System.Windows.Media.Pen(brush, 2.0), new System.Windows.Point((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1)), 10.0, 10.0);
 		}
 
-		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
+		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
 		{
 			System.Drawing.Color color = MapUtils.smethod_16(this.Map, collectible_0);
 			System.Windows.Media.Brush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)collectible_0.PosX * float_0), (double)((float)collectible_0.PosY * float_1), 3.0, 3.0));
 		}
 
-		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass839 gclass839_0)
+		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, GClass890 gclass890_0)
 		{
-			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass839_0.DormantTargets)
+			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass890_0.DormantTargets)
 			{
 				Collectible value = keyValuePair.Value;
 				drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.Pink, null, MapControl.smethod_0((double)(value.Position.X * float_0), (double)(value.Position.Y * float_1), 2.0, 2.0));
 			}
-			if (gclass839_0.RoamTarget != Vector2.Zero)
+			if (gclass890_0.RoamTarget != Vector2.Zero)
 			{
-				Vector2 roamTarget = gclass839_0.RoamTarget;
+				Vector2 roamTarget = gclass890_0.RoamTarget;
 				drawingContext_0.DrawEllipse(System.Windows.Media.Brushes.Magenta, null, new System.Windows.Point((double)(roamTarget.X * float_0), (double)(roamTarget.Y * float_1)), 6.0, 6.0);
 			}
-			GClass853 behavior = gclass839_0.Behavior;
-			List<Rectangle> list = (behavior != null) ? behavior.vmethod_17() : null;
+			GClass904 behavior = gclass890_0.Behavior;
+			List<Rectangle> list = (behavior != null) ? behavior.vmethod_13() : null;
 			if (list != null)
 			{
 				foreach (Rectangle rectangle in list)

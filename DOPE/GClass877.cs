@@ -1,49 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using System.Drawing;
+using System.IO;
+using System.Numerics;
+using System.Text;
+using Syroot.BinaryData;
 
-public class GClass877
+public static class GClass877
 {
-	[DllImport("user32")]
-	[return: MarshalAs(UnmanagedType.Bool)]
-	private static extern bool EnumChildWindows(IntPtr intptr_1, GClass877.Delegate0 delegate0_0, IntPtr intptr_2);
-
-	public GClass877(IntPtr intptr_1)
+	public static string smethod_0(this string string_0)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-		this.intptr_0 = intptr_1;
+		return Encoding.UTF8.GetString(Convert.FromBase64String(string_0));
 	}
 
-	public List<IntPtr> method_0()
+	public static string smethod_1(this string string_0)
 	{
-		List<IntPtr> list = new List<IntPtr>();
-		GCHandle value = GCHandle.Alloc(list);
-		IntPtr intptr_ = GCHandle.ToIntPtr(value);
-		try
-		{
-			GClass877.Delegate0 delegate0_ = new GClass877.Delegate0(this.method_1);
-			GClass877.EnumChildWindows(this.intptr_0, delegate0_, intptr_);
-		}
-		finally
-		{
-			value.Free();
-		}
-		return list;
+		return Convert.ToBase64String(Encoding.UTF8.GetBytes(string_0));
 	}
 
-	private bool method_1(IntPtr intptr_1, IntPtr intptr_2)
+	public static BinaryStream smethod_2(this Stream stream_0, bool bool_0 = true)
 	{
-		GCHandle gchandle = GCHandle.FromIntPtr(intptr_2);
-		if (gchandle.Target == null)
-		{
-			return false;
-		}
-		(gchandle.Target as List<IntPtr>).Add(intptr_1);
-		return true;
+		return new BinaryStream(stream_0, ByteConverter.Big, Encoding.UTF8, BooleanCoding.Byte, DateTimeCoding.NetTicks, StringCoding.Int16CharCount, bool_0);
 	}
 
-	private IntPtr intptr_0;
+	public static Point smethod_3(this Vector2 vector2_0)
+	{
+		return new Point((int)vector2_0.X, (int)vector2_0.Y);
+	}
 
-	private delegate bool Delegate0(IntPtr hwnd, IntPtr lParam);
+	public static Vector2 smethod_4(this Rectangle rectangle_0)
+	{
+		return new Vector2((float)(rectangle_0.X + rectangle_0.Width / 2), (float)(rectangle_0.Y + rectangle_0.Height / 2));
+	}
 }

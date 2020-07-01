@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass620 : GInterface0
+public class GClass620 : GClass617, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 13772;
+			return -5011;
 		}
 	}
 
@@ -16,51 +16,41 @@ public class GClass620 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 4;
 		}
 	}
 
-	public GClass620(int int_2 = 0, int int_3 = 0)
+	public GClass620(string string_0 = "", int int_0 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		Class13.F93tSdiz1aNIA();
+		base..ctor(string_0);
+		this.Value = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 13772;
+		return -5011;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 8;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 8 | U.smethod_0(this.int_1, 24));
+		base.imethod_0(binaryStream_0);
+		this.Value = binaryStream_0.smethod_0();
+		this.Value = (this.Value << 10 | U.smethod_0(this.Value, 22));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13772);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-5011);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.Value, 10) | this.Value << 22);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-32421);
-		binaryStream_0.smethod_4(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 8) | this.int_1 << 24);
-	}
-
-	public int int_0;
-
-	public int int_1;
+	public int Value;
 }

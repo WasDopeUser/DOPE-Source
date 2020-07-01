@@ -17,8 +17,8 @@ public class GClass86
 
 	static GClass86()
 	{
-		Class13.NP5bWyNzLwONS();
-		GClass86.dictionary_0 = new Dictionary<int, Type>();
+		Class13.F93tSdiz1aNIA();
+		GClass86.yOxTxpksbc = new Dictionary<int, Type>();
 		foreach (Type type in typeof(GClass86).Assembly.GetTypes())
 		{
 			if (typeof(GInterface0).IsAssignableFrom(type))
@@ -26,7 +26,7 @@ public class GClass86
 				GInterface0 ginterface = GClass85.smethod_0(type) as GInterface0;
 				if (ginterface != null)
 				{
-					GClass86.dictionary_0[(int)ginterface.Id] = type;
+					GClass86.yOxTxpksbc[(int)ginterface.Id] = type;
 				}
 			}
 		}
@@ -40,7 +40,7 @@ public class GClass86
 	public static GInterface0 smethod_2(int int_0)
 	{
 		Type type_;
-		if (!GClass86.dictionary_0.TryGetValue(int_0, out type_))
+		if (!GClass86.yOxTxpksbc.TryGetValue(int_0, out type_))
 		{
 			return null;
 		}
@@ -49,9 +49,9 @@ public class GClass86
 
 	public GClass86()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 
-	public static readonly Dictionary<int, Type> dictionary_0;
+	public static readonly Dictionary<int, Type> yOxTxpksbc;
 }

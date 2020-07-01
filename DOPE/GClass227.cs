@@ -8,7 +8,7 @@ public class GClass227 : GInterface0
 	{
 		get
 		{
-			return 20710;
+			return 236;
 		}
 	}
 
@@ -20,29 +20,29 @@ public class GClass227 : GInterface0
 		}
 	}
 
-	public GClass227(GClass262 gclass262_0 = null, Vector<int> vector_1 = null)
+	public GClass227(GClass256 gclass256_0 = null, Vector<int> vector_0 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass262_0 == null)
+		if (gclass256_0 == null)
 		{
-			this.Mode = new GClass262(0U);
+			this.Mode = new GClass256(0);
 		}
 		else
 		{
-			this.Mode = gclass262_0;
+			this.Mode = gclass256_0;
 		}
-		if (vector_1 == null)
+		if (vector_0 == null)
 		{
-			this.vector_0 = new Vector<int>();
+			this.State = new Vector<int>();
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.State = vector_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20710;
+		return 236;
 	}
 
 	public virtual int vmethod_1()
@@ -50,44 +50,47 @@ public class GClass227 : GInterface0
 		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.Mode = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass262);
-		this.Mode.HrqIugnatr8(binaryStream_0);
-		while (this.vector_0.Length > 0)
+		this.Mode = (GClass256)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.Mode != null)
 		{
-			this.vector_0.method_1();
+			this.Mode.imethod_0(binaryStream_0);
 		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
+		while (this.State.Length > 0)
 		{
-			int num3 = binaryStream_0.smethod_0();
-			num3 = (num3 << 13 | U.smethod_0(num3, 19));
-			this.vector_0.method_0(num3);
-			num++;
+			this.State.method_1();
 		}
-		binaryStream_0.smethod_1();
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			int num2 = binaryStream_0.smethod_0();
+			num2 = (U.smethod_0(num2, 3) | num2 << 29);
+			this.State.method_0(num2);
+			i++;
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20710);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.Mode.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (int num in this.vector_0)
+		binaryStream_0.smethod_7(236);
+		if (this.Mode != null)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 13) | num << 19);
+			this.Mode.imethod_1(binaryStream_0);
 		}
-		binaryStream_0.smethod_7(19298);
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.WriteByte(this.State.Length);
+		foreach (int num in this.State)
+		{
+			binaryStream_0.smethod_4(num << 3 | U.smethod_0(num, 29));
+		}
 	}
 
-	public GClass262 Mode;
+	public GClass256 Mode;
 
-	public Vector<int> vector_0;
+	public Vector<int> State;
 }

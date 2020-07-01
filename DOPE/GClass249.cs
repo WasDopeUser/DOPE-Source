@@ -8,7 +8,7 @@ public class GClass249 : GInterface0
 	{
 		get
 		{
-			return 1818;
+			return 13476;
 		}
 	}
 
@@ -16,43 +16,118 @@ public class GClass249 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 5;
 		}
 	}
 
-	public GClass249(string string_0 = "")
+	public GClass249(int int_3 = 0, GClass275 gclass275_0 = null, GClass276 gclass276_1 = null, GClass178 gclass178_1 = null, int int_4 = 0, int int_5 = 0, bool bool_1 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.Name = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.Name = string_0;
+		this.int_0 = int_3;
+		this.bool_0 = bool_1;
+		if (gclass276_1 == null)
+		{
+			this.gclass276_0 = new GClass276("", null, 0.0, 0.0, false);
+		}
+		else
+		{
+			this.gclass276_0 = gclass276_1;
+		}
+		this.int_1 = int_5;
+		if (gclass275_0 == null)
+		{
+			this.Status = new GClass275(false, false, "", null, null, false, 0.0, 0.0, 0, "", false, false, false);
+		}
+		else
+		{
+			this.Status = gclass275_0;
+		}
+		this.int_2 = int_4;
+		if (gclass178_1 == null)
+		{
+			this.gclass178_0 = new GClass178(0);
+			return;
+		}
+		this.gclass178_0 = gclass178_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 1818;
+		return 13476;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 5;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.Name = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.gclass276_0 = (GClass276)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass276_0 != null)
+		{
+			this.gclass276_0.imethod_0(binaryStream_0);
+		}
+		this.int_1 = (int)binaryStream_0.smethod_1();
+		this.Status = (GClass275)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.Status != null)
+		{
+			this.Status.imethod_0(binaryStream_0);
+		}
+		this.int_2 = (int)binaryStream_0.smethod_1();
+		this.gclass178_0 = (GClass178)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass178_0 != null)
+		{
+			this.gclass178_0.imethod_0(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1818);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(13476);
+		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		binaryStream_0.WriteBoolean(this.bool_0);
+		if (this.gclass276_0 != null)
+		{
+			this.gclass276_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_7(this.int_1);
+		if (this.Status != null)
+		{
+			this.Status.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_7(this.int_2);
+		if (this.gclass178_0 != null)
+		{
+			this.gclass178_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_3(this.Name);
-	}
+	public int int_0;
 
-	public string Name;
+	public bool bool_0;
+
+	public GClass276 gclass276_0;
+
+	public int int_1;
+
+	public GClass275 Status;
+
+	public int int_2;
+
+	public GClass178 gclass178_0;
 }

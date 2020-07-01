@@ -8,7 +8,7 @@ public class GClass182 : GClass180, GInterface0
 	{
 		get
 		{
-			return 18284;
+			return 147;
 		}
 	}
 
@@ -16,52 +16,54 @@ public class GClass182 : GClass180, GInterface0
 	{
 		get
 		{
-			return 20;
+			return 0;
 		}
 	}
 
-	public GClass182(string string_1 = "", int int_2 = 0, int int_3 = 0, GClass265 gclass265_1 = null)
+	public GClass182(string string_1 = "", int int_2 = 0, int int_3 = 0, GClass259 gclass259_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor(string_1, int_2, int_3);
-		if (gclass265_1 == null)
+		if (gclass259_1 == null)
 		{
-			this.gclass265_0 = new GClass265(0U);
+			this.gclass259_0 = new GClass259(0);
 			return;
 		}
-		this.gclass265_0 = gclass265_1;
+		this.gclass259_0 = gclass259_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 18284;
+		return 147;
 	}
 
 	public override int vmethod_1()
 	{
-		return 20;
+		return 0;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.gclass265_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass265);
-		this.gclass265_0.HrqIugnatr8(binaryStream_0);
 		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.gclass259_0 = (GClass259)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_0(binaryStream_0);
+		}
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18284);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(147);
+		base.imethod_1(binaryStream_0);
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		this.gclass265_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_7(30308);
-	}
-
-	public GClass265 gclass265_0;
+	public GClass259 gclass259_0;
 }

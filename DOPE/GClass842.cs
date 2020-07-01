@@ -1,94 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DOPE.Common.Models;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass842 : GClass841
+public class GClass842 : GInterface0
 {
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	short GInterface0.Id
 	{
-		return null;
-	}
-
-	public override bool ShouldBeInGame()
-	{
-		return false;
-	}
-
-	public override int UpdatePriority()
-	{
-		return -1;
-	}
-
-	public override void UpdateState()
-	{
-		base.UpdateState();
-	}
-
-	public override MapProfile GetMapProfile()
-	{
-		return base.Context.MapProfile ?? this.mapProfile_1;
-	}
-
-	public GClass842(GClass839 gclass839_1)
-	{
-		Class13.NP5bWyNzLwONS();
-		this.mapProfile_1 = new MapProfile
+		get
 		{
-			TargetMap = TargetMap.X1
-		};
-		base..ctor(gclass839_1, "Idle", -1);
-		base.MapProfile = null;
-	}
-
-	public override bool ShouldChangeHangar(out string string_1)
-	{
-		string_1 = null;
-		AccountSettings account = base.C.Account;
-		if (account != null && account.Spinner_UsePhoenix)
-		{
-			AccountSettings account2 = base.C.Account;
-			if (((account2 != null) ? account2.HangarDefault : null) != null && base.Started.Cooldown(30000))
-			{
-				GClass842.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass842.<>c__DisplayClass8_0();
-				GClass868 gclass = base.Context.method_60<GClass868>();
-				GClass842.<>c__DisplayClass8_0 CS$<>8__locals2 = CS$<>8__locals1;
-				AccountSettings account3 = base.C.Account;
-				List<string> list;
-				if (account3 == null)
-				{
-					list = null;
-				}
-				else
-				{
-					VolatileData @volatile = account3.Volatile;
-					list = ((@volatile != null) ? @volatile.Hangars : null);
-				}
-				CS$<>8__locals2.list_0 = list;
-				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass842.list_0.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
-				return string_1 != null && gclass.method_14() > 0;
-			}
+			return 64;
 		}
-		return false;
 	}
 
-	public override string ToString()
+	int GInterface0.SizeBytes
 	{
-		return "Idle";
-	}
-
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass842()
-	{
-		Class13.NP5bWyNzLwONS();
-		GClass842.list_0 = new List<string>
+		get
 		{
-			"ship_phoenix",
-			"ship_liberator"
-		};
+			return 8;
+		}
 	}
 
-	private MapProfile mapProfile_1;
+	public GClass842(int int_1 = 0, int int_2 = 0)
+	{
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.MapId = int_1;
+		this.int_0 = int_2;
+	}
 
-	public static List<string> list_0;
+	public virtual int vmethod_0()
+	{
+		return 64;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 8;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 11) | this.MapId << 21);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(64);
+		binaryStream_0.smethod_4(this.MapId << 11 | U.smethod_0(this.MapId, 21));
+		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+	}
+
+	public int MapId;
+
+	public int int_0;
 }

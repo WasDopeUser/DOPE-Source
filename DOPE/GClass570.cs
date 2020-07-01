@@ -8,7 +8,7 @@ public class GClass570 : GInterface0
 	{
 		get
 		{
-			return 8716;
+			return 25375;
 		}
 	}
 
@@ -16,73 +16,92 @@ public class GClass570 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 40;
 		}
 	}
 
-	public GClass570(Vector<string> vector_0 = null, uint uint_1 = 0U)
+	public GClass570(int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0, int int_18 = 0, int int_19 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (vector_0 == null)
-		{
-			this.SytGkYfPmb = new Vector<string>();
-		}
-		else
-		{
-			this.SytGkYfPmb = vector_0;
-		}
-		this.uint_0 = uint_1;
+		this.int_0 = int_17;
+		this.int_1 = int_16;
+		this.int_2 = int_12;
+		this.int_3 = int_11;
+		this.int_4 = int_15;
+		this.int_5 = int_14;
+		this.int_6 = int_18;
+		this.int_7 = int_19;
+		this.int_8 = int_10;
+		this.int_9 = int_13;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 8716;
+		return 25375;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 40;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		while (this.SytGkYfPmb.Length > 0)
-		{
-			this.SytGkYfPmb.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			string iai2vvt4Q2e7jARe47j = binaryStream_0.smethod_2();
-			this.SytGkYfPmb.method_0(iai2vvt4Q2e7jARe47j);
-			num++;
-		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 16 | U.smethod_0(this.int_0, 16));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 10) | this.int_1 << 22);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (U.smethod_0(this.int_2, 12) | this.int_2 << 20);
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (U.smethod_0(this.int_3, 13) | this.int_3 << 19);
+		this.int_4 = binaryStream_0.smethod_0();
+		this.int_4 = (U.smethod_0(this.int_4, 13) | this.int_4 << 19);
+		this.int_5 = binaryStream_0.smethod_0();
+		this.int_5 = (this.int_5 << 7 | U.smethod_0(this.int_5, 25));
+		this.int_6 = binaryStream_0.smethod_0();
+		this.int_6 = (U.smethod_0(this.int_6, 4) | this.int_6 << 28);
+		this.int_7 = binaryStream_0.smethod_0();
+		this.int_7 = (this.int_7 << 9 | U.smethod_0(this.int_7, 23));
+		this.int_8 = binaryStream_0.smethod_0();
+		this.int_8 = (this.int_8 << 1 | U.smethod_0(this.int_8, 31));
+		this.int_9 = binaryStream_0.smethod_0();
+		this.int_9 = (U.smethod_0(this.int_9, 11) | this.int_9 << 21);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8716);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(25375);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 16) | this.int_0 << 16);
+		binaryStream_0.smethod_4(this.int_1 << 10 | U.smethod_0(this.int_1, 22));
+		binaryStream_0.smethod_4(this.int_2 << 12 | U.smethod_0(this.int_2, 20));
+		binaryStream_0.smethod_4(this.int_3 << 13 | U.smethod_0(this.int_3, 19));
+		binaryStream_0.smethod_4(this.int_4 << 13 | U.smethod_0(this.int_4, 19));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_5, 7) | this.int_5 << 25);
+		binaryStream_0.smethod_4(this.int_6 << 4 | U.smethod_0(this.int_6, 28));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_7, 9) | this.int_7 << 23);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_8, 1) | this.int_8 << 31);
+		binaryStream_0.smethod_4(this.int_9 << 11 | U.smethod_0(this.int_9, 21));
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.smethod_7(1869);
-		binaryStream_0.smethod_7(-30819);
-		binaryStream_0.smethod_4(this.SytGkYfPmb.Length);
-		foreach (string string_ in this.SytGkYfPmb)
-		{
-			binaryStream_0.smethod_3(string_);
-		}
-	}
+	public int int_0;
 
-	public uint uint_0;
+	public int int_1;
 
-	public Vector<string> SytGkYfPmb;
+	public int int_2;
+
+	public int int_3;
+
+	public int int_4;
+
+	public int int_5;
+
+	public int int_6;
+
+	public int int_7;
+
+	public int int_8;
+
+	public int int_9;
 }

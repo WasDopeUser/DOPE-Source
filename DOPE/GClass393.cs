@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass393 : GInterface0
+public class GClass393 : GClass391, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 11199;
+			return 22640;
 		}
 	}
 
@@ -16,56 +16,40 @@ public class GClass393 : GInterface0
 	{
 		get
 		{
-			return 9;
+			return 0;
 		}
 	}
 
-	public GClass393(bool bool_1 = false, int int_2 = 0, int int_3 = 0)
+	public GClass393(int int_1 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.bool_0 = bool_1;
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.int_0 = int_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 11199;
+		return 22640;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 9;
+		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 		binaryStream_0.smethod_1();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 15) | this.int_1 << 17);
+		base.imethod_0(binaryStream_0);
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11199);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(22640);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_7(this.int_0);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
-		binaryStream_0.smethod_7(-1717);
-		binaryStream_0.smethod_4(this.int_1 << 15 | U.smethod_0(this.int_1, 17));
-	}
-
-	public bool bool_0;
 
 	public int int_0;
-
-	public int int_1;
 }

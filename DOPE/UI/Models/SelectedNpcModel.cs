@@ -12,8 +12,8 @@ using DOPE.Common.Models;
 
 namespace DOPE.UI.Models
 {
-	[DataContract]
 	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
+	[DataContract]
 	public class SelectedNpcModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -60,8 +60,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "$Name")]
 		[DataMember(Order = 3)]
+		[Layout(Description = "$Name")]
 		public bool Enabled
 		{
 			[CompilerGenerated]
@@ -104,8 +104,8 @@ namespace DOPE.UI.Models
 		}
 
 		[Layout(Parent = "Enabled", Description = "Rocket")]
-		[DataMember(Order = 5)]
 		[Category("Ammo")]
+		[DataMember(Order = 5)]
 		public virtual RocketType Rocket
 		{
 			[CompilerGenerated]
@@ -126,8 +126,8 @@ namespace DOPE.UI.Models
 		}
 
 		[Layout(Parent = "Enabled", Description = "Hellstorm")]
-		[Category("Ammo")]
 		[DataMember(Order = 6)]
+		[Category("Ammo")]
 		public virtual HellstormType Hellstorm
 		{
 			[CompilerGenerated]
@@ -168,9 +168,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 9)]
 		[Range(0, 2)]
 		[Layout(Description = "Config", Parent = "Enabled", RightDescription = "Set 0 to use the attack config")]
+		[DataMember(Order = 9)]
 		public int Config
 		{
 			[CompilerGenerated]
@@ -190,9 +190,9 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Range(-1, 100)]
 		[DataMember(Order = 10)]
 		[Layout(Description = "Priority", Parent = "Enabled")]
+		[Range(-1, 100)]
 		public int Priority
 		{
 			[CompilerGenerated]
@@ -212,8 +212,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Circle range", Parent = "Enabled", RightDescription = "Set below 350 to disable circling")]
 		[Range(300, 675)]
+		[Layout(Description = "Circle range", Parent = "Enabled", RightDescription = "Set below 350 to disable circling")]
 		[DataMember(Order = 11)]
 		public int CircleRange
 		{
@@ -251,12 +251,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseKamikaze>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_107);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
 			}
 		}
 
-		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
 		[DataMember(Order = 13)]
+		[Layout(Description = "Ammo when in corner", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')", Parent = "Enabled")]
 		public LaserType GgCornerLaser
 		{
 			[CompilerGenerated]
@@ -276,8 +276,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[DataMember(Order = 14)]
 		[Layout(Description = "Use offensive ship ability", Parent = "Enabled", RightDescription = "Works with Venom and Diminisher")]
+		[DataMember(Order = 14)]
 		public bool UseOffensiveAbility
 		{
 			[CompilerGenerated]
@@ -293,7 +293,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseOffensiveAbility>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
 			}
 		}
 
@@ -314,12 +314,12 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseSab>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_115);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_116);
 			}
 		}
 
-		[DataMember(Order = 16)]
 		[Layout(Description = "Ignore ownership", Parent = "Enabled")]
+		[DataMember(Order = 16)]
 		public bool IgnoreOwnership
 		{
 			[CompilerGenerated]
@@ -356,7 +356,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UsePetLocator>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_111);
 			}
 		}
 
@@ -381,8 +381,8 @@ namespace DOPE.UI.Models
 			}
 		}
 
-		[Layout(Description = "Chase if fleeing", Parent = "Enabled", RightDescription = "Keeps attacking the NPC even if its HP drops below 25%.\nIts priority is set to +1", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')")]
 		[DataMember(Order = 19)]
+		[Layout(Description = "Chase if fleeing", Parent = "Enabled", RightDescription = "Keeps attacking the NPC even if its HP drops below 25%.\nIts priority is set to +1", CustomVisibility = "(obj,p) => p !== undefined && p.Name.startsWith('GG ')")]
 		public bool GG_ChaseFleeing
 		{
 			[CompilerGenerated]
@@ -406,12 +406,12 @@ namespace DOPE.UI.Models
 		{
 			if (this.CircleRange < 300 || this.CircleRange > 675)
 			{
-				this.CircleRange = SecurityManager.smethod_1(NpcUtils.NpcType.smethod_4(this.Name));
+				this.CircleRange = SecurityManager.smethod_1(NpcUtils.NpcType.smethod_5(this.Name));
 			}
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

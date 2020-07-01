@@ -26,16 +26,19 @@ public static class GClass49
 		public IList<int> IList_5 { get; set; }
 
 		[JsonProperty("modules")]
-		public IList<int> IList_6 { get; set; }
+		public IList<int> QnVmnvUlbq { get; set; }
 
 		[JsonProperty("pet_related")]
-		public IList<int> IList_7 { get; set; }
+		public IList<int> IList_6 { get; set; }
 
 		public GClass50()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
+
+		[CompilerGenerated]
+		private IList<int> GjomEsTwo8;
 
 		[CompilerGenerated]
 		private IList<int> ilist_0;
@@ -57,9 +60,6 @@ public static class GClass49
 
 		[CompilerGenerated]
 		private IList<int> ilist_6;
-
-		[CompilerGenerated]
-		private IList<int> ilist_7;
 	}
 
 	public class GClass51
@@ -87,7 +87,7 @@ public static class GClass49
 
 		public GClass51()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -104,7 +104,7 @@ public static class GClass49
 		private string string_1;
 
 		[CompilerGenerated]
-		private IList<string> ilist_0;
+		private IList<string> lxlrewMktF;
 
 		[CompilerGenerated]
 		private int int_2;
@@ -153,12 +153,12 @@ public static class GClass49
 
 		public GClass52()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private string string_0;
+		private string ythrYutZex;
 
 		[CompilerGenerated]
 		private int int_0;
@@ -167,19 +167,19 @@ public static class GClass49
 		private int int_1;
 
 		[CompilerGenerated]
-		private string string_1;
+		private string string_0;
 
 		[CompilerGenerated]
-		private string string_2;
+		private string string_1;
 
 		[CompilerGenerated]
 		private int int_2;
 
 		[CompilerGenerated]
-		private string string_3;
+		private string string_2;
 
 		[CompilerGenerated]
-		private string string_4;
+		private string string_3;
 
 		[CompilerGenerated]
 		private int? nullable_0;
@@ -191,7 +191,7 @@ public static class GClass49
 		private int int_3;
 
 		[CompilerGenerated]
-		private string string_5;
+		private string string_4;
 	}
 
 	public class GClass53
@@ -200,11 +200,11 @@ public static class GClass49
 		public GClass49.GClass51 GClass51_0 { get; set; }
 
 		[JsonProperty("drones")]
-		public IList<GClass49.GClass52> XjiRxaacIQ { get; set; }
+		public IList<GClass49.GClass52> IList_0 { get; set; }
 
 		public GClass53()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -228,7 +228,7 @@ public static class GClass49
 
 		public GClass54()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -261,7 +261,7 @@ public static class GClass49
 
 		public GClass55()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -284,7 +284,7 @@ public static class GClass49
 	public class GClass56
 	{
 		[JsonProperty("I")]
-		public string GytRoooqcU { get; set; }
+		public string String_0 { get; set; }
 
 		[JsonProperty("LV")]
 		public int Int32_0 { get; set; }
@@ -293,25 +293,25 @@ public static class GClass49
 		public int Int32_1 { get; set; }
 
 		[JsonIgnore]
-		public string String_0 { get; set; }
+		public string String_1 { get; set; }
 
 		[JsonProperty("S")]
 		public int S { get; set; }
 
 		[JsonProperty("EQH")]
-		public string String_1 { get; set; }
-
-		[JsonProperty("EQC")]
 		public string String_2 { get; set; }
 
+		[JsonProperty("EQC")]
+		public string String_3 { get; set; }
+
 		[JsonProperty("EQT")]
-		public string KyXivYiMa4 { get; set; }
+		public string String_4 { get; set; }
 
 		[JsonProperty("properties")]
 		public GClass49.GClass55 GClass55_0 { get; set; }
 
 		[JsonProperty("CH")]
-		public string String_3 { get; set; }
+		public string String_5 { get; set; }
 
 		[JsonProperty("Q")]
 		public long? Nullable_0 { get; set; }
@@ -347,7 +347,7 @@ public static class GClass49
 
 		public GClass56()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -410,7 +410,7 @@ public static class GClass49
 
 		public GClass57()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -431,7 +431,7 @@ public static class GClass49
 
 		public GClass58()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -452,7 +452,7 @@ public static class GClass49
 
 		public GClass59()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -473,7 +473,7 @@ public static class GClass49
 
 		public GClass60()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -494,7 +494,7 @@ public static class GClass49
 
 		public GClass61()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -502,7 +502,7 @@ public static class GClass49
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private long long_0;
+		private long nXaeTiDuFH;
 	}
 
 	public class GClass62
@@ -515,7 +515,7 @@ public static class GClass49
 
 		public GClass62()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -529,14 +529,14 @@ public static class GClass49
 	public class GClass63
 	{
 		[JsonProperty("T")]
-		public IList<int> UoqJjsFyeR { get; set; }
+		public IList<int> IList_0 { get; set; }
 
 		[JsonProperty("Q")]
 		public long Int64_0 { get; set; }
 
 		public GClass63()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -572,7 +572,7 @@ public static class GClass49
 
 		public GClass64()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -614,9 +614,12 @@ public static class GClass49
 
 		public GClass65()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
+
+		[CompilerGenerated]
+		private string YbxhhxLriL;
 
 		[CompilerGenerated]
 		private string string_0;
@@ -626,9 +629,6 @@ public static class GClass49
 
 		[CompilerGenerated]
 		private string string_2;
-
-		[CompilerGenerated]
-		private string string_3;
 	}
 
 	public class GClass66
@@ -638,7 +638,7 @@ public static class GClass49
 
 		public GClass66()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -659,7 +659,7 @@ public static class GClass49
 
 		public GClass67()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -683,7 +683,7 @@ public static class GClass49
 
 		public GClass68()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -725,7 +725,7 @@ public static class GClass49
 
 		public GClass69()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -751,7 +751,7 @@ public static class GClass49
 		private IList<GClass49.GClass67> ilist_0;
 
 		[CompilerGenerated]
-		private int? hRaNiFwmas;
+		private int? nullable_0;
 
 		[CompilerGenerated]
 		private GClass49.GClass68 gclass68_0;
@@ -770,7 +770,7 @@ public static class GClass49
 
 		public GClass70()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -812,7 +812,7 @@ public static class GClass49
 
 		public GClass71()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -848,7 +848,7 @@ public static class GClass49
 
 		public GClass72()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -878,7 +878,7 @@ public static class GClass49
 
 		public GClass73()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -911,7 +911,7 @@ public static class GClass49
 
 		public GClass74()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -932,7 +932,7 @@ public static class GClass49
 
 		public Map()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -956,7 +956,7 @@ public static class GClass49
 
 		public GClass75()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 
@@ -992,18 +992,18 @@ public static class GClass49
 			}
 			foreach (GClass49.GClass56 gclass2 in this.data.ret.items)
 			{
-				gclass2.String_0 = this.data.Map_0.IList_1[gclass2.Int32_1];
+				gclass2.String_1 = this.data.Map_0.IList_1[gclass2.Int32_1];
 				GClass49.GClass69 gclass3;
 				gclass2.GClass69_0 = (dictionary.TryGetValue(gclass2.Int32_1, out gclass3) ? gclass3 : null);
 			}
 		}
 
-		public List<GClass49.GClass56> method_0(string m7vxFH0Ref4NiTk9HPd)
+		public List<GClass49.GClass56> method_0(string feAGBpCaC0xkFA1Lf3S)
 		{
 			List<GClass49.GClass56> list = new List<GClass49.GClass56>();
 			foreach (GClass49.GClass56 gclass in this.data.ret.items)
 			{
-				if (gclass.String_0 == m7vxFH0Ref4NiTk9HPd)
+				if (gclass.String_1 == feAGBpCaC0xkFA1Lf3S)
 				{
 					list.Add(gclass);
 				}
@@ -1011,11 +1011,11 @@ public static class GClass49
 			return list;
 		}
 
-		public GClass49.GClass56 AlqbcxjhrN(string tuYoCK0FOU0WOHhxK1m)
+		public GClass49.GClass56 method_1(string wJJLNbCGMKZ6xhkQ6xW)
 		{
 			foreach (GClass49.GClass56 gclass in this.data.ret.items)
 			{
-				if (gclass.String_0 == tuYoCK0FOU0WOHhxK1m)
+				if (gclass.String_1 == wJJLNbCGMKZ6xhkQ6xW)
 				{
 					return gclass;
 				}
@@ -1023,9 +1023,9 @@ public static class GClass49
 			return null;
 		}
 
-		public long method_1(string iRewum0stpN8Ym8NVe3)
+		public long method_2(string SXY67NCpjtdtUQHDeoH)
 		{
-			GClass49.GClass56 gclass = this.AlqbcxjhrN(iRewum0stpN8Ym8NVe3);
+			GClass49.GClass56 gclass = this.method_1(SXY67NCpjtdtUQHDeoH);
 			if (gclass == null)
 			{
 				return 0L;
@@ -1035,7 +1035,7 @@ public static class GClass49
 
 		public GClass76()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 

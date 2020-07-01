@@ -551,22 +551,22 @@
 						<Style
 							TargetType="{x:Type Button}">
 							<Style.Triggers>
-								<DataTrigger xmlns:vg5nhrccusdawe89x8u="clr-namespace:Vg5nHrCcUsdAWe89X8u"
-									Value="{x:Static vg5nhrccusdawe89x8u:eslebqCskdnd1vBKaWK.Connecting}"
+								<DataTrigger xmlns:akkgfjdmavlduacp8gs="clr-namespace:akkGfJDmAvlDuAcp8GS"
+									Value="{x:Static akkgfjdmavlduacp8gs:IXXBBbDO0teSmMTInnc.Connecting}"
 									Binding="{Binding Controller.Status}">
 									<Setter
 										Property="Background"
 										Value="#FFFF8C00" />
 								</DataTrigger>
 								<DataTrigger
-									Value="{x:Static :eslebqCskdnd1vBKaWK.Connected}"
+									Value="{x:Static :IXXBBbDO0teSmMTInnc.Connected}"
 									Binding="{Binding Controller.Status}">
 									<Setter
 										Property="Background"
 										Value="#FF228B22" />
 								</DataTrigger>
 								<DataTrigger
-									Value="{x:Static :eslebqCskdnd1vBKaWK.Disconnected}"
+									Value="{x:Static :IXXBBbDO0teSmMTInnc.Disconnected}"
 									Binding="{Binding Controller.Status}">
 									<Setter
 										Property="Background"

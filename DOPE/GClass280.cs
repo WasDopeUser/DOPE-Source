@@ -8,7 +8,7 @@ public class GClass280 : GInterface0
 	{
 		get
 		{
-			return 5147;
+			return 1527;
 		}
 	}
 
@@ -16,120 +16,132 @@ public class GClass280 : GInterface0
 	{
 		get
 		{
-			return 26;
+			return 36;
 		}
 	}
 
-	public GClass280(bool bool_5 = false, bool bool_6 = false, string string_1 = "", GClass367 gclass367_2 = null, GClass367 gclass367_3 = null, bool bool_7 = false, double double_2 = 0.0, double double_3 = 0.0, uint uint_1 = 0U, string string_2 = "", bool bool_8 = false, bool bool_9 = false, bool bool_10 = false)
+	public GClass280(int int_9 = 0, GClass201 gclass201_2 = null, GClass201 gclass201_3 = null, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
-		this.Id = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.bool_0 = bool_5;
-		this.Visible = bool_6;
-		this.Id = string_1;
-		if (gclass367_2 == null)
+		this.int_0 = int_9;
+		if (gclass201_2 == null)
 		{
-			this.gclass367_1 = new GClass367(null);
+			this.gclass201_0 = new GClass201(0);
 		}
 		else
 		{
-			this.gclass367_1 = gclass367_2;
+			this.gclass201_0 = gclass201_2;
 		}
-		if (gclass367_3 == null)
+		if (gclass201_3 == null)
 		{
-			this.gclass367_0 = new GClass367(null);
+			this.gclass201_1 = new GClass201(0);
 		}
 		else
 		{
-			this.gclass367_0 = gclass367_3;
+			this.gclass201_1 = gclass201_3;
 		}
-		this.bool_3 = bool_7;
-		this.double_1 = double_2;
-		this.double_0 = double_3;
-		this.uint_0 = uint_1;
-		this.string_0 = string_2;
-		this.bool_4 = bool_8;
-		this.bool_1 = bool_9;
-		this.bool_2 = bool_10;
+		this.int_1 = int_10;
+		this.int_2 = int_11;
+		this.int_3 = int_12;
+		this.int_4 = int_13;
+		this.int_5 = int_14;
+		this.int_6 = int_15;
+		this.int_7 = int_16;
+		this.int_8 = int_17;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 5147;
+		return 1527;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 26;
+		return 36;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.gclass367_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass367);
-		this.gclass367_0.HrqIugnatr8(binaryStream_0);
-		this.Visible = binaryStream_0.ReadBoolean();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass367_1 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass367);
-		this.gclass367_1.HrqIugnatr8(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.double_1 = binaryStream_0.ReadDouble();
-		this.Id = binaryStream_0.smethod_2();
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		this.bool_2 = binaryStream_0.ReadBoolean();
-		this.bool_3 = binaryStream_0.ReadBoolean();
-		this.bool_4 = binaryStream_0.ReadBoolean();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		this.gclass201_0 = (GClass201)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass201_0 != null)
+		{
+			this.gclass201_0.imethod_0(binaryStream_0);
+		}
+		this.gclass201_1 = (GClass201)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass201_1 != null)
+		{
+			this.gclass201_1.imethod_0(binaryStream_0);
+		}
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 12 | U.smethod_0(this.int_1, 20));
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (U.smethod_0(this.int_2, 3) | this.int_2 << 29);
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (this.int_3 << 8 | U.smethod_0(this.int_3, 24));
+		this.int_4 = binaryStream_0.smethod_0();
+		this.int_4 = (U.smethod_0(this.int_4, 9) | this.int_4 << 23);
+		this.int_5 = binaryStream_0.smethod_0();
+		this.int_5 = (this.int_5 << 4 | U.smethod_0(this.int_5, 28));
+		this.int_6 = binaryStream_0.smethod_0();
+		this.int_6 = (U.smethod_0(this.int_6, 11) | this.int_6 << 21);
+		this.int_7 = binaryStream_0.smethod_0();
+		this.int_7 = (this.int_7 << 4 | U.smethod_0(this.int_7, 28));
+		this.int_8 = binaryStream_0.smethod_0();
+		this.int_8 = (this.int_8 << 14 | U.smethod_0(this.int_8, 18));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(5147);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(1527);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		if (this.gclass201_0 != null)
+		{
+			this.gclass201_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		if (this.gclass201_1 != null)
+		{
+			this.gclass201_1.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 12) | this.int_1 << 20);
+		binaryStream_0.smethod_4(this.int_2 << 3 | U.smethod_0(this.int_2, 29));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_3, 8) | this.int_3 << 24);
+		binaryStream_0.smethod_4(this.int_4 << 9 | U.smethod_0(this.int_4, 23));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_5, 4) | this.int_5 << 28);
+		binaryStream_0.smethod_4(this.int_6 << 11 | U.smethod_0(this.int_6, 21));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_7, 4) | this.int_7 << 28);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_8, 14) | this.int_8 << 18);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.gclass367_0.imethod_1(binaryStream_0);
-		binaryStream_0.WriteBoolean(this.Visible);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		this.gclass367_1.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.smethod_3(this.Id);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.WriteBoolean(this.bool_2);
-		binaryStream_0.WriteBoolean(this.bool_3);
-		binaryStream_0.WriteBoolean(this.bool_4);
-	}
+	public int int_0;
 
-	public GClass367 gclass367_0;
+	public GClass201 gclass201_0;
 
-	public bool Visible;
+	public GClass201 gclass201_1;
 
-	public bool bool_0;
+	public int int_1;
 
-	public GClass367 gclass367_1;
+	public int int_2;
 
-	public string string_0;
+	public int int_3;
 
-	public double double_0;
+	public int int_4;
 
-	public uint uint_0;
+	public int int_5;
 
-	public double double_1;
+	public int int_6;
 
-	public string Id;
+	public int int_7;
 
-	public bool bool_1;
-
-	public bool bool_2;
-
-	public bool bool_3;
-
-	public bool bool_4;
+	public int int_8;
 }

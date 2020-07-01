@@ -8,7 +8,7 @@ public class GClass661 : GInterface0
 	{
 		get
 		{
-			return 11985;
+			return 11902;
 		}
 	}
 
@@ -22,15 +22,15 @@ public class GClass661 : GInterface0
 
 	public GClass661(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_1 = int_2;
-		this.int_0 = int_3;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 11985;
+		return 11902;
 	}
 
 	public virtual int vmethod_1()
@@ -38,26 +38,19 @@ public class GClass661 : GInterface0
 		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		this.int_0 = (U.smethod_0(this.int_0, 2) | this.int_0 << 30);
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 1 | U.smethod_0(this.int_1, 31));
+		this.int_1 = (U.smethod_0(this.int_1, 16) | this.int_1 << 16);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11985);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-5601);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 1) | this.int_1 << 31);
+		binaryStream_0.smethod_7(11902);
+		binaryStream_0.smethod_4(this.int_0 << 2 | U.smethod_0(this.int_0, 30));
+		binaryStream_0.smethod_4(this.int_1 << 16 | U.smethod_0(this.int_1, 16));
 	}
 
 	public int int_0;

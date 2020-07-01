@@ -129,7 +129,7 @@ namespace DOPE.UI.Models
 
 		public CommandViewModel()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.PropertyChanged = new PropertyChangedEventHandler(CommandViewModel.<>c.<>9.method_0);
 			base..ctor();
 		}

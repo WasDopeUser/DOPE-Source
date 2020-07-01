@@ -6,13 +6,13 @@ public sealed class GAttribute14 : Attribute
 {
 	public GAttribute14()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 
 	public GAttribute14([GAttribute1] string comment)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.String_0 = comment;
 	}
@@ -21,5 +21,5 @@ public sealed class GAttribute14 : Attribute
 	public string String_0 { get; private set; }
 
 	[CompilerGenerated]
-	private string WmqlkfEqCe;
+	private string string_0;
 }

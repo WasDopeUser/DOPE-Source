@@ -15,8 +15,8 @@ using DOPE.UI.Models;
 
 namespace DOPE.Common.Models
 {
-	[DataContract]
 	[Guid("2625FEDE-9CCE-40B7-BC31-2AB07A1B2D62")]
+	[DataContract]
 	public class MapProfile : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -40,8 +40,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Main", Description = "Group size", CustomVisibility = "obj => obj.ModuleType == 4")]
 		[Range(2, 8)]
+		[Layout(GroupName = "Main", Description = "Group size", CustomVisibility = "obj => obj.ModuleType == 4")]
 		[DefaultValue(2)]
 		[DataMember(Order = 42)]
 		public int QZ_GroupSize
@@ -63,9 +63,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 25)]
-		[Layout(GroupName = "Main", Description = "Priority", RightDescription = "Higher number -> higher priority")]
 		[Range(0, 9999999)]
+		[Layout(GroupName = "Main", Description = "Priority", RightDescription = "Higher number -> higher priority")]
+		[DataMember(Order = 25)]
 		public int Priority
 		{
 			[CompilerGenerated]
@@ -102,9 +102,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Collector", Description = "Enable box collector")]
 		[DefaultValue(true)]
 		[DataMember(Order = 4)]
+		[Layout(GroupName = "Collector", Description = "Enable box collector")]
 		public bool Collector
 		{
 			[CompilerGenerated]
@@ -124,9 +124,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[DefaultValue(true)]
 		[Layout(GroupName = "Hunter", Description = "Enable NPC hunter")]
 		[DataMember(Order = 5)]
-		[DefaultValue(true)]
 		public bool Hunter
 		{
 			[CompilerGenerated]
@@ -146,8 +146,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Collector", Description = "Stay cloaked", RightDescription = "Works only if NPC hunter is disabled", CustomVisibility = "obj => obj.ModuleType == 0 && !obj.Name.startsWith('GG ')")]
 		[DataMember(Order = 6)]
+		[Layout(GroupName = "Collector", Description = "Stay cloaked", RightDescription = "Works only if NPC hunter is disabled", CustomVisibility = "obj => obj.ModuleType == 0 && !obj.Name.startsWith('GG ')")]
 		public bool Cloak
 		{
 			[CompilerGenerated]
@@ -167,9 +167,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[DefaultValue(true)]
 		[DataMember(Order = 7)]
 		[Layout(GroupName = "Collector", Description = "Collect bonus boxes")]
-		[DefaultValue(true)]
 		public bool CollectBonus
 		{
 			[CompilerGenerated]
@@ -189,8 +189,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Collector", Description = "Collect cargo boxes")]
 		[DataMember(Order = 8)]
+		[Layout(GroupName = "Collector", Description = "Collect cargo boxes")]
 		public bool CollectCargo
 		{
 			[CompilerGenerated]
@@ -231,9 +231,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 10)]
-		[DefaultValue(true)]
 		[Layout(GroupName = "Main_Safety", Description = "Flee from enemies seen")]
+		[DefaultValue(true)]
+		[DataMember(Order = 10)]
 		public bool FleeFromEnemySeen
 		{
 			[CompilerGenerated]
@@ -275,8 +275,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(true)]
 		[Layout(GroupName = "Main_Safety", Description = "Flee from enemy on attack")]
+		[DefaultValue(true)]
 		[DataMember(Order = 11)]
 		public bool FleeFromEnemyAttacker
 		{
@@ -318,10 +318,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Range(0, 100)]
 		[DefaultValue(40)]
 		[DataMember(Order = 12)]
 		[Layout(GroupName = "Main_Safety", Description = "Repair below % HP", CustomVisibility = "obj => obj.ModuleType != 1")]
+		[Range(0, 100)]
 		public int MinHp
 		{
 			[CompilerGenerated]
@@ -341,8 +341,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Main_Safety", Description = "Use heal ability below % HP")]
 		[DataMember(Order = 37)]
+		[Layout(GroupName = "Main_Safety", Description = "Use heal ability below % HP")]
 		[DefaultValue(60)]
 		public int MinHealHp
 		{
@@ -363,8 +363,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(TargetMap.X1)]
 		[DataMember(Order = 13)]
+		[DefaultValue(TargetMap.X1)]
 		public TargetMap TargetMap
 		{
 			[CompilerGenerated]
@@ -381,13 +381,13 @@ namespace DOPE.Common.Models
 				}
 				this.<TargetMap>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Name);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_102);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_103);
 			}
 		}
 
+		[DataMember(Order = 14)]
 		[DefaultValue(60)]
 		[Layout(GroupName = "Main_Safety", Description = "Wait X seconds after fleeing")]
-		[DataMember(Order = 14)]
 		public int FleeTimeout
 		{
 			[CompilerGenerated]
@@ -407,8 +407,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Main", Description = "Revive at nearest portal")]
 		[DataMember(Order = 30)]
+		[Layout(GroupName = "Main", Description = "Revive at nearest portal")]
 		public bool ReviveAtPortal
 		{
 			[CompilerGenerated]
@@ -428,10 +428,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Main_Config", Description = "Flying config")]
 		[DefaultValue(1)]
-		[DataMember(Order = 15)]
 		[Range(1, 2)]
+		[Layout(GroupName = "Main_Config", Description = "Flying config")]
+		[DataMember(Order = 15)]
 		public int FlyingConfig
 		{
 			[CompilerGenerated]
@@ -495,8 +495,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Main_Config", Description = "Flee config formation")]
 		[DataMember(Order = 32)]
+		[Layout(GroupName = "Main_Config", Description = "Flee config formation")]
 		public GEnum4 FleeFormation
 		{
 			[CompilerGenerated]
@@ -516,9 +516,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(2)]
 		[DataMember(Order = 17)]
 		[Layout(GroupName = "Main_Config", Description = "Attack config")]
+		[DefaultValue(2)]
 		[Range(1, 2)]
 		public int AttackConfig
 		{
@@ -603,8 +603,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 36)]
 		[Layout(GroupName = "Main_Config", Description = "Use Moth formation to kill corner NPCs", CustomVisibility = "obj => obj.Name.startsWith('GG ')")]
+		[DataMember(Order = 36)]
 		public bool UseMothToKillCorners
 		{
 			[CompilerGenerated]
@@ -620,13 +620,13 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseMothToKillCorners>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
 			}
 		}
 
+		[DataMember(Order = 19)]
 		[DefaultValue(true)]
 		[Layout(GroupName = "Hunter", Description = "Circle NPCs", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
-		[DataMember(Order = 19)]
 		public bool CircleNpcs
 		{
 			[CompilerGenerated]
@@ -646,8 +646,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(true)]
 		[Layout(GroupName = "Hunter", Description = "Drag NPCs instead of circling", CustomVisibility = "obj => obj.Name.startsWith('GG ')")]
+		[DefaultValue(true)]
 		[DataMember(Order = 39)]
 		public bool GG_DragNpcs
 		{
@@ -668,9 +668,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[Layout(GroupName = "Hunter", Description = "Collect boxes while circling", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
 		[DataMember(Order = 33)]
 		[DefaultValue(true)]
+		[Layout(GroupName = "Hunter", Description = "Collect boxes while circling", CustomVisibility = "obj => !obj.Name.startsWith('GG ')")]
 		public bool SecondaryCircleNpcs
 		{
 			[CompilerGenerated]
@@ -690,9 +690,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[DefaultValue(LaserType.LCB_10)]
 		[DataMember(Order = 20)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Default laser")]
-		[DefaultValue(LaserType.LCB_10)]
 		public LaserType DefaultLaser
 		{
 			[CompilerGenerated]
@@ -734,9 +734,9 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DefaultValue(HellstormType.None)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Default hellstorm")]
 		[DataMember(Order = 22)]
+		[DefaultValue(HellstormType.None)]
 		public HellstormType DefaultHellstorm
 		{
 			[CompilerGenerated]
@@ -756,10 +756,10 @@ namespace DOPE.Common.Models
 			}
 		}
 
+		[Range(0, 100)]
+		[DataMember(Order = 38)]
 		[DefaultValue(60)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Allow SAB-50 when shield below X%")]
-		[DataMember(Order = 38)]
-		[Range(0, 100)]
 		public int MinSabShield
 		{
 			[CompilerGenerated]
@@ -779,8 +779,8 @@ namespace DOPE.Common.Models
 			}
 		}
 
-		[DataMember(Order = 41)]
 		[Layout(GroupName = "Hunter_Ammo", Description = "Use rocket precision tech")]
+		[DataMember(Order = 41)]
 		public bool UseRocketPrecision
 		{
 			[CompilerGenerated]
@@ -796,7 +796,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseRocketPrecision>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_114);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_115);
 			}
 		}
 
@@ -864,9 +864,9 @@ namespace DOPE.Common.Models
 		}
 
 		[Range(0, 2147483647)]
-		[DefaultValue(0)]
 		[DataMember(Order = 3)]
 		[Layout(GroupName = "Schedule", Description = "Change map after X deaths", RightDescription = "Leave 0 to disable")]
+		[DefaultValue(0)]
 		public int MaxDeaths
 		{
 			[CompilerGenerated]
@@ -887,8 +887,8 @@ namespace DOPE.Common.Models
 		}
 
 		[Layout(GroupName = "Schedule", Description = "Switch to another map profile after X minutes", RightDescription = "Leave 0 to disable")]
-		[Range(0, 1440)]
 		[DataMember(Order = 27)]
+		[Range(0, 1440)]
 		public int MapDuration
 		{
 			[CompilerGenerated]
@@ -1045,7 +1045,7 @@ namespace DOPE.Common.Models
 				return null;
 			}
 			string name = ship.Name;
-			NpcUtils.NpcType npc = NpcUtils.NpcType.smethod_4(name);
+			NpcUtils.NpcType npc = NpcUtils.NpcType.smethod_5(name);
 			return this.NpcWhitelist.FirstOrDefault((SelectedNpcModel t) => t.NpcId == npc.Id);
 		}
 
@@ -1076,7 +1076,7 @@ namespace DOPE.Common.Models
 				{
 					a = model.GgCornerLaser;
 				}
-				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_19("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
+				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_21("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
 				{
 					a = LaserType.SAB_50;
 				}
@@ -1108,7 +1108,7 @@ namespace DOPE.Common.Models
 		public void Fill(Action<SelectedNpcModel> newModel = null)
 		{
 			MapProfile.<>c__DisplayClass192_0 CS$<>8__locals1 = new MapProfile.<>c__DisplayClass192_0();
-			List<NpcUtils.NpcType> list = NpcUtils.gwxubYhEsF((int)this.TargetMap);
+			List<NpcUtils.NpcType> list = NpcUtils.smethod_0((int)this.TargetMap);
 			MapProfile.<>c__DisplayClass192_0 CS$<>8__locals2 = CS$<>8__locals1;
 			IEnumerable<int> collection;
 			if (list != null)
@@ -1168,7 +1168,7 @@ namespace DOPE.Common.Models
 				NpcUtils.N_Charopos,
 				NpcUtils.N_Styxus
 			}
-			select NpcUtils.NpcType.qnTuMsYlVx(t).Id);
+			select NpcUtils.NpcType.smethod_3(t).Id);
 			foreach (SelectedNpcModel selectedNpcModel4 in this.NpcWhitelist)
 			{
 				if (this.TargetMap == TargetMap.GG_Kuiper)
@@ -1224,8 +1224,8 @@ namespace DOPE.Common.Models
 			base..ctor();
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

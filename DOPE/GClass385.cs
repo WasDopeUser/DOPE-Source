@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass385 : GClass383, GInterface0
+public class GClass385 : GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 25295;
+			return 9;
 		}
 	}
 
@@ -16,51 +16,49 @@ public class GClass385 : GClass383, GInterface0
 	{
 		get
 		{
-			return 6;
+			return 12;
 		}
 	}
 
-	public GClass385(string string_1 = "", int int_1 = 0)
+	public GClass385(int int_0 = 0, int int_1 = 0, double double_1 = 0.0)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.string_0 = string_1;
-		this.int_0 = int_1;
+		this.Credits = int_0;
+		this.Uridium = int_1;
+		this.double_0 = double_1;
 	}
 
-	public override int vmethod_0()
+	public virtual int vmethod_0()
 	{
-		return 25295;
+		return 9;
 	}
 
-	public override int vmethod_1()
+	public virtual int vmethod_1()
 	{
-		return 6;
+		return 12;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		this.Credits = binaryStream_0.smethod_0();
+		this.Credits = (U.smethod_0(this.Credits, 2) | this.Credits << 30);
+		this.Uridium = binaryStream_0.smethod_0();
+		this.Uridium = (U.smethod_0(this.Uridium, 13) | this.Uridium << 19);
+		this.double_0 = (double)binaryStream_0.smethod_10();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(25295);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(9);
+		binaryStream_0.smethod_4(this.Credits << 2 | U.smethod_0(this.Credits, 30));
+		binaryStream_0.smethod_4(this.Uridium << 13 | U.smethod_0(this.Uridium, 19));
+		binaryStream_0.smethod_9(this.double_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-	}
+	public int Credits;
 
-	public string string_0;
+	public int Uridium;
 
-	public int int_0;
+	public double double_0;
 }

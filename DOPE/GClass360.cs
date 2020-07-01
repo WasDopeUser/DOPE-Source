@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass360 : GInterface0
+public class GClass360 : GClass359, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 22843;
+			return 19743;
 		}
 	}
 
@@ -16,51 +16,54 @@ public class GClass360 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass360(int int_2 = 0, int int_3 = 0)
+	public GClass360(GClass439 gclass439_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
+		if (gclass439_1 == null)
+		{
+			this.gclass439_0 = new GClass439(0, "", null, null);
+			return;
+		}
+		this.gclass439_0 = gclass439_1;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 22843;
+		return 19743;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 2) | this.int_1 << 30);
 		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.gclass439_0 = (GClass439)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass439_0 != null)
+		{
+			this.gclass439_0.imethod_0(binaryStream_0);
+		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22843);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(19743);
+		base.imethod_1(binaryStream_0);
+		if (this.gclass439_0 != null)
+		{
+			this.gclass439_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-		binaryStream_0.smethod_4(this.int_1 << 2 | U.smethod_0(this.int_1, 30));
-		binaryStream_0.smethod_7(-27592);
-	}
-
-	public int int_0;
-
-	public int int_1;
+	public GClass439 gclass439_0;
 }

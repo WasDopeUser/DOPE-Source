@@ -1,56 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI;
-using DOPE.Common.Models;
 
-public class GClass851 : GClass850
+public class GClass851
 {
-	public GClass851(GClass839 gclass839_1)
+	public GClass851(byte[] byte_0 = null)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, TargetMap.GG_VoT);
-	}
-
-	protected override void OnBind()
-	{
-		base.C.Game.LogMessage += this.method_3;
-	}
-
-	protected override void OnUnbind()
-	{
-		base.C.Game.LogMessage -= this.method_3;
-	}
-
-	private void method_3(GameManager gameManager_0, GClass273 gclass273_0)
-	{
-		string[] source;
-		if (GClass90.smethod_1(gclass273_0.string_0, out source, new string[]
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_1 = 0;
+		this.int_0 = 0;
+		if (byte_0 != null)
 		{
-			"n",
-			"MSG",
-			"1",
-			"0",
-			"msg_galaxy_gate_cooldown_active"
-		}) && source.FirstOrDefault<string>() != null)
-		{
-			Dictionary<string, string> dictionary = GClass90.smethod_0(source.FirstOrDefault<string>());
-			string s;
-			string s2;
-			int num;
-			int num2;
-			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
-			{
-				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
-				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
-			}
+			this.method_0(byte_0);
 		}
 	}
 
-	protected override bool vmethod_0()
+	public void method_0(byte[] byte_0)
 	{
-		return this.dateTimeOffset_2.Cooldown(0);
+		this.State = new byte[256];
+		int i;
+		for (i = 0; i < 256; i++)
+		{
+			this.State[i] = (byte)i;
+		}
+		int num = 0;
+		i = 0;
+		int num2 = num;
+		while (i < 256)
+		{
+			num2 = (num2 + (int)this.State[i] + (int)byte_0[i % byte_0.Length] & 255);
+			int num3 = (int)this.State[i];
+			this.State[i] = this.State[num2];
+			this.State[num2] = (byte)(num3 & 255);
+			i++;
+		}
+		this.int_1 = 0;
+		this.int_0 = 0;
 	}
 
-	public DateTimeOffset dateTimeOffset_2;
+	public uint method_1()
+	{
+		this.int_0 = (this.int_0 + 1 & 255);
+		this.int_1 = (this.int_1 + (int)this.State[this.int_0] & 255);
+		int num = (int)this.State[this.int_0];
+		this.State[this.int_0] = this.State[this.int_1];
+		this.State[this.int_1] = (byte)(num & 255);
+		return (uint)this.State[num + (int)this.State[this.int_0] & 255];
+	}
+
+	public void method_2(byte[] byte_0, int int_2, int int_3)
+	{
+		if (this.State == null)
+		{
+			return;
+		}
+		uint num = 0U;
+		while ((ulong)num < (ulong)((long)int_3))
+		{
+			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.method_1()) & 255U);
+			num += 1U;
+		}
+	}
+
+	public byte[] State;
+
+	public int int_0;
+
+	public int int_1;
 }

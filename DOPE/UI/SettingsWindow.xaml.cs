@@ -72,7 +72,7 @@ namespace DOPE.UI
 
 		public SettingsWindow(Controller controller_0)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.PropertyChanged = new PropertyChangedEventHandler(SettingsWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -118,8 +118,8 @@ namespace DOPE.UI
 			MessageBox.Show("Invalid key");
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_2(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

@@ -10,7 +10,7 @@ namespace DarkorbitAPI.Structures
 
 		public Collectible(int int_0, int int_1, string string_0, string string_1)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor(int_0, int_1);
 			this.Type = string_0;
 			this.Hash = string_1;
@@ -20,7 +20,7 @@ namespace DarkorbitAPI.Structures
 		{
 			get
 			{
-				return GClass89.smethod_0(this.Type);
+				return GClass89.WvgjcyLaVY(this.Type);
 			}
 		}
 	}

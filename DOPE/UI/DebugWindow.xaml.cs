@@ -33,7 +33,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Filtered>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.Filtered);
+				this.method_13(<>PropertyChangedEventArgs.Filtered);
 			}
 		}
 
@@ -52,7 +52,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<All>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.All);
+				this.method_13(<>PropertyChangedEventArgs.All);
 			}
 		}
 
@@ -71,7 +71,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<FilterReceived>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.FilterReceived);
+				this.method_13(<>PropertyChangedEventArgs.FilterReceived);
 			}
 		}
 
@@ -90,7 +90,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<Commands>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.Commands);
+				this.method_13(<>PropertyChangedEventArgs.Commands);
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<CommandById>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.CommandById);
+				this.method_13(<>PropertyChangedEventArgs.CommandById);
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace DOPE.UI
 					return;
 				}
 				this.<JumpToLast>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.JumpToLast);
+				this.method_13(<>PropertyChangedEventArgs.JumpToLast);
 			}
 		}
 
@@ -147,13 +147,13 @@ namespace DOPE.UI
 					return;
 				}
 				this.<SearchText>k__BackingField = value;
-				this.method_12(<>PropertyChangedEventArgs.SearchText);
+				this.method_13(<>PropertyChangedEventArgs.SearchText);
 			}
 		}
 
 		public DebugWindow()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.<Filtered>k__BackingField = new ObservableCollection<TreeNode>();
 			this.<All>k__BackingField = new List<TreeHeaderNode>();
 			this.<JumpToLast>k__BackingField = true;
@@ -164,7 +164,7 @@ namespace DOPE.UI
 			this.InitializeComponent();
 			base.DataContext = this;
 			base.Closing += this.DebugWindow_Closing;
-			this.Commands = GClass86.dictionary_0.Select(new Func<KeyValuePair<int, Type>, CommandViewModel>(DebugWindow.<>c.<>9.method_0)).ToList<CommandViewModel>();
+			this.Commands = GClass86.yOxTxpksbc.Select(new Func<KeyValuePair<int, Type>, CommandViewModel>(DebugWindow.<>c.<>9.method_0)).ToList<CommandViewModel>();
 			foreach (CommandViewModel commandViewModel in this.Commands)
 			{
 				commandViewModel.PropertyChanged += this.method_0;
@@ -211,7 +211,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void method_1<Fl4buWsl5SHRoTqOvA>(GClass84<Fl4buWsl5SHRoTqOvA> gclass84_0) where Fl4buWsl5SHRoTqOvA : GInterface7
+		public void method_1<m2eLf0pOKNSypsINdH>(GClass84<m2eLf0pOKNSypsINdH> gclass84_0) where m2eLf0pOKNSypsINdH : GInterface7
 		{
 			gclass84_0.MessageSent += this.method_6;
 			gclass84_0.MessageReceived += this.method_5;
@@ -224,7 +224,7 @@ namespace DOPE.UI
 			lock (@lock)
 			{
 				BindingOperations.DisableCollectionSynchronization(this.Filtered);
-				this.Filtered = new ObservableCollection<TreeNode>(this.Filtered.Where(new Func<TreeNode, bool>(this.TsyHqovntg)));
+				this.Filtered = new ObservableCollection<TreeNode>(this.Filtered.Where(new Func<TreeNode, bool>(this.method_11)));
 				BindingOperations.EnableCollectionSynchronization(this.Filtered, this._lock);
 			}
 		}
@@ -259,7 +259,7 @@ namespace DOPE.UI
 				}
 				if (this.JumpToLast)
 				{
-					base.Dispatcher.BeginInvoke(new Action(this.method_11), Array.Empty<object>());
+					base.Dispatcher.BeginInvoke(new Action(this.method_12), Array.Empty<object>());
 				}
 			}
 		}
@@ -293,16 +293,16 @@ namespace DOPE.UI
 		{
 		}
 
-		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
 		internal Delegate method_10(Type type_0, string string_0)
 		{
 			return Delegate.CreateDelegate(type_0, this, string_0);
 		}
 
+		[DebuggerNonUserCode]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-		[DebuggerNonUserCode]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			if (connectionId == 6)
@@ -312,20 +312,20 @@ namespace DOPE.UI
 		}
 
 		[CompilerGenerated]
-		private bool TsyHqovntg(TreeNode treeNode_0)
+		private bool method_11(TreeNode treeNode_0)
 		{
 			return this.method_3(treeNode_0 as TreeHeaderNode);
 		}
 
 		[CompilerGenerated]
-		private void method_11()
+		private void method_12()
 		{
 			this.CmdList.ScrollToEnd();
 		}
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_12(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_13(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)

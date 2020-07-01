@@ -4,19 +4,19 @@ namespace DarkorbitAPI.Structures
 {
 	public class Resource : Collectible
 	{
-		public Resource(int int_0, int int_1, uint uint_0, string string_0)
+		public Resource(int int_0, int int_1, int int_2, string string_0)
 		{
-			Class13.NP5bWyNzLwONS();
-			base..ctor(int_0, int_1, uint_0.ToString(), string_0);
+			Class13.F93tSdiz1aNIA();
+			base..ctor(int_0, int_1, int_2.ToString(), string_0);
 		}
 
-		public uint ResourceId { get; set; }
+		public int ResourceId { get; set; }
 
 		public override GEnum6 CollectibleType
 		{
 			get
 			{
-				if (this.ResourceId != 8U)
+				if (this.ResourceId != 8)
 				{
 					return (GEnum6)1;
 				}
@@ -32,8 +32,8 @@ namespace DarkorbitAPI.Structures
 			}
 			set
 			{
-				uint resourceId;
-				if (uint.TryParse(value, out resourceId))
+				int resourceId;
+				if (int.TryParse(value, out resourceId))
 				{
 					this.ResourceId = resourceId;
 				}

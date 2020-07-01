@@ -1,84 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass812 : GClass808
+public class GClass812 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass819 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass819_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass819 gclass819_2)
-	{
-		this.gclass819_0 = gclass819_2;
-	}
-
-	[CompilerGenerated]
-	public GClass819 method_2()
-	{
-		return this.gclass819_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass819 gclass819_2)
-	{
-		this.gclass819_1 = gclass819_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return -6607;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
+	}
+
+	int GInterface0.SizeBytes
+	{
+		get
 		{
-			vector.Add((uint)item);
+			return 0;
 		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		if (vector.Length != 12)
-		{
-			Vector<uint> vector3 = vector2;
-			Vector<uint> vector4 = vector;
-			vector = vector3;
-			vector2 = vector4;
-		}
-		this.method_1(new GClass819(new Vector<uint>(vector), new Vector<uint>(vector2)));
-		this.method_3(new GClass819(new Vector<uint>(vector), new Vector<uint>(vector2)));
 	}
 
 	public GClass812()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 
-	[CompilerGenerated]
-	private GClass819 gclass819_0;
+	public virtual int vmethod_0()
+	{
+		return -6607;
+	}
 
-	[CompilerGenerated]
-	private GClass819 gclass819_1;
+	public virtual int vmethod_1()
+	{
+		return 0;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-6607);
+	}
 }

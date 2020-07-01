@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass206 : GClass198, GInterface0
+public class GClass206 : GClass197, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12603;
+			return -26817;
 		}
 	}
 
@@ -16,69 +16,40 @@ public class GClass206 : GClass198, GInterface0
 	{
 		get
 		{
-			return 2;
+			return 1;
 		}
 	}
 
-	public GClass206(GClass208 gclass208_1 = null, string string_0 = "", GClass199 gclass199_1 = null)
+	public GClass206(bool bool_1 = false)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.Name = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass208_1 == null)
-		{
-			this.gclass208_0 = new GClass208(0U);
-		}
-		else
-		{
-			this.gclass208_0 = gclass208_1;
-		}
-		this.Name = string_0;
-		if (gclass199_1 == null)
-		{
-			this.gclass199_0 = new GClass199(0, 0, 0, 0, 0, 0);
-			return;
-		}
-		this.gclass199_0 = gclass199_1;
+		this.bool_0 = bool_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 12603;
+		return -26817;
 	}
 
 	public override int vmethod_1()
 	{
-		return 2;
+		return 1;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
-		this.gclass199_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass199);
-		this.gclass199_0.HrqIugnatr8(binaryStream_0);
-		this.gclass208_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass208);
-		this.gclass208_0.HrqIugnatr8(binaryStream_0);
-		this.Name = binaryStream_0.smethod_2();
+		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12603);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-26817);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		this.gclass199_0.imethod_1(binaryStream_0);
-		this.gclass208_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_3(this.Name);
-	}
-
-	public GClass199 gclass199_0;
-
-	public GClass208 gclass208_0;
-
-	public string Name;
+	public bool bool_0;
 }

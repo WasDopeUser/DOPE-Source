@@ -8,7 +8,7 @@ public class GClass736 : GInterface0
 	{
 		get
 		{
-			return 5314;
+			return 177;
 		}
 	}
 
@@ -16,63 +16,44 @@ public class GClass736 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass736(Vector<GClass374> vector_1 = null)
+	public GClass736(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass374>();
-			return;
-		}
-		this.vector_0 = vector_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 5314;
+		return 177;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass374 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass374;
-			gclass.HrqIugnatr8(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			num++;
-		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 10 | U.smethod_0(this.int_1, 22));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(5314);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(177);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 10) | this.int_1 << 22);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (GClass374 gclass in this.vector_0)
-		{
-			gclass.imethod_1(binaryStream_0);
-		}
-	}
+	public int int_0;
 
-	public Vector<GClass374> vector_0;
+	public int int_1;
 }

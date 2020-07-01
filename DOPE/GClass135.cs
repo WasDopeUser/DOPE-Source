@@ -8,7 +8,7 @@ public class GClass135 : GInterface0
 	{
 		get
 		{
-			return 16659;
+			return 105;
 		}
 	}
 
@@ -20,24 +20,24 @@ public class GClass135 : GInterface0
 		}
 	}
 
-	public GClass135(GClass265 gclass265_1 = null, double double_0 = 0.0)
+	public GClass135(GClass259 gclass259_1 = null, double double_0 = 0.0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass265_1 == null)
+		if (gclass259_1 == null)
 		{
-			this.gclass265_0 = new GClass265(0U);
+			this.gclass259_0 = new GClass259(0);
 		}
 		else
 		{
-			this.gclass265_0 = gclass265_1;
+			this.gclass259_0 = gclass259_1;
 		}
 		this.Count = double_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 16659;
+		return 105;
 	}
 
 	public virtual int vmethod_1()
@@ -45,26 +45,31 @@ public class GClass135 : GInterface0
 		return 8;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.gclass265_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass265);
-		this.gclass265_0.HrqIugnatr8(binaryStream_0);
+		this.gclass259_0 = (GClass259)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_0(binaryStream_0);
+		}
 		this.Count = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16659);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.gclass265_0.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_7(105);
+		if (this.gclass259_0 != null)
+		{
+			this.gclass259_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
 		binaryStream_0.WriteDouble(this.Count);
 	}
 
-	public GClass265 gclass265_0;
+	public GClass259 gclass259_0;
 
 	public double Count;
 }

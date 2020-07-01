@@ -8,7 +8,7 @@ public class GClass455 : GInterface0
 	{
 		get
 		{
-			return 2764;
+			return 2090;
 		}
 	}
 
@@ -20,37 +20,37 @@ public class GClass455 : GInterface0
 		}
 	}
 
-	public GClass455(GClass491 gclass491_1 = null, Vector<dwRmlsivakRhKtrVyu6> vector_1 = null, dwRmlsivakRhKtrVyu6 dwRmlsivakRhKtrVyu6_1 = null)
+	public GClass455(GClass490 gclass490_1 = null, Vector<GClass680> vector_1 = null, GClass680 gclass680_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass491_1 == null)
+		if (gclass490_1 == null)
 		{
-			this.gclass491_0 = new GClass491(0, null, null, null, null, "", "");
+			this.gclass490_0 = new GClass490(0, null, null, null, null, "", "");
 		}
 		else
 		{
-			this.gclass491_0 = gclass491_1;
+			this.gclass490_0 = gclass490_1;
 		}
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<dwRmlsivakRhKtrVyu6>();
+			this.vector_0 = new Vector<GClass680>();
 		}
 		else
 		{
 			this.vector_0 = vector_1;
 		}
-		if (dwRmlsivakRhKtrVyu6_1 == null)
+		if (gclass680_1 == null)
 		{
-			this.dwRmlsivakRhKtrVyu6_0 = new dwRmlsivakRhKtrVyu6("", "", 0, 0, 0);
+			this.gclass680_0 = new GClass680("", "", 0, 0, 0);
 			return;
 		}
-		this.dwRmlsivakRhKtrVyu6_0 = dwRmlsivakRhKtrVyu6_1;
+		this.gclass680_0 = gclass680_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2764;
+		return 2090;
 	}
 
 	public virtual int vmethod_1()
@@ -58,49 +58,60 @@ public class GClass455 : GInterface0
 		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.gclass491_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass491);
-		this.gclass491_0.HrqIugnatr8(binaryStream_0);
-		binaryStream_0.smethod_1();
-		this.dwRmlsivakRhKtrVyu6_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as dwRmlsivakRhKtrVyu6);
-		this.dwRmlsivakRhKtrVyu6_0.HrqIugnatr8(binaryStream_0);
+		this.gclass490_0 = (GClass490)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass490_0 != null)
+		{
+			this.gclass490_0.imethod_0(binaryStream_0);
+		}
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
 		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
 		{
-			dwRmlsivakRhKtrVyu6 dwRmlsivakRhKtrVyu = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as dwRmlsivakRhKtrVyu6;
-			dwRmlsivakRhKtrVyu.HrqIugnatr8(binaryStream_0);
-			this.vector_0.method_0(dwRmlsivakRhKtrVyu);
-			num++;
+			GClass680 gclass = (GClass680)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
+		this.gclass680_0 = (GClass680)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass680_0 != null)
+		{
+			this.gclass680_0.imethod_0(binaryStream_0);
 		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2764);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		this.gclass491_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_7(9517);
-		this.dwRmlsivakRhKtrVyu6_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(this.vector_0.Length);
-		foreach (dwRmlsivakRhKtrVyu6 dwRmlsivakRhKtrVyu in this.vector_0)
+		binaryStream_0.smethod_7(2090);
+		if (this.gclass490_0 != null)
 		{
-			dwRmlsivakRhKtrVyu.imethod_1(binaryStream_0);
+			this.gclass490_0.imethod_1(binaryStream_0);
 		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass680 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		if (this.gclass680_0 != null)
+		{
+			this.gclass680_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public GClass491 gclass491_0;
+	public GClass490 gclass490_0;
 
-	public dwRmlsivakRhKtrVyu6 dwRmlsivakRhKtrVyu6_0;
+	public Vector<GClass680> vector_0;
 
-	public Vector<dwRmlsivakRhKtrVyu6> vector_0;
+	public GClass680 gclass680_0;
 }

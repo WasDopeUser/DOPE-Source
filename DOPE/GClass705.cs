@@ -8,7 +8,7 @@ public class GClass705 : GInterface0
 	{
 		get
 		{
-			return 18075;
+			return 216;
 		}
 	}
 
@@ -20,21 +20,24 @@ public class GClass705 : GInterface0
 		}
 	}
 
-	public GClass705(GClass799 gclass799_1 = null)
+	public GClass705(GClass823 gclass823_1 = null, int int_0 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		if (gclass799_1 == null)
+		if (gclass823_1 == null)
 		{
-			this.gclass799_0 = new GClass799(0U);
-			return;
+			this.gclass823_0 = new GClass823(0);
 		}
-		this.gclass799_0 = gclass799_1;
+		else
+		{
+			this.gclass823_0 = gclass823_1;
+		}
+		this.uTafUcwfCN = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 18075;
+		return 216;
 	}
 
 	public virtual int vmethod_1()
@@ -42,26 +45,31 @@ public class GClass705 : GInterface0
 		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
-		this.gclass799_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass799);
-		this.gclass799_0.HrqIugnatr8(binaryStream_0);
+		this.gclass823_0 = (GClass823)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_0(binaryStream_0);
+		}
+		this.uTafUcwfCN = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(18075);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(216);
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_7(this.uTafUcwfCN);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(1013);
-		binaryStream_0.smethod_7(23264);
-		this.gclass799_0.imethod_1(binaryStream_0);
-	}
+	public GClass823 gclass823_0;
 
-	public GClass799 gclass799_0;
+	public int uTafUcwfCN;
 }

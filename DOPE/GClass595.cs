@@ -8,7 +8,7 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 26805;
+			return 135;
 		}
 	}
 
@@ -16,55 +16,58 @@ public class GClass595 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 4;
 		}
 	}
 
-	public GClass595(int int_1 = 0, double double_2 = 0.0, double double_3 = 0.0)
+	public GClass595(Vector<GClass543> vector_1 = null)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_0 = int_1;
-		this.double_0 = double_2;
-		this.double_1 = double_3;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass543>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 26805;
+		return 135;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.double_0 = (double)binaryStream_0.smethod_10();
-		this.double_1 = (double)binaryStream_0.smethod_10();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass543 gclass = (GClass543)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26805);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(135);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass543 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-2961);
-		binaryStream_0.smethod_9(this.double_0);
-		binaryStream_0.smethod_9(this.double_1);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-	}
-
-	public double double_0;
-
-	public double double_1;
-
-	public int int_0;
+	public Vector<GClass543> vector_0;
 }

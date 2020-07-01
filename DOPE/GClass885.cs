@@ -1,96 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Management;
-using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass885 : Interface0
+public class GClass885 : StatisticsCategory
 {
-	private static a2SEbqNABZ9dcF80NRy smethod_0<a2SEbqNABZ9dcF80NRy>(ManagementObject managementObject_0, string string_0)
+	public DarkOrbitWebAPI Web { get; }
+
+	public GClass885(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		GClass885.<>c__DisplayClass0_0<a2SEbqNABZ9dcF80NRy> CS$<>8__locals1 = new GClass885.<>c__DisplayClass0_0<a2SEbqNABZ9dcF80NRy>();
-		CS$<>8__locals1.property = string_0;
-		PropertyData propertyData = managementObject_0.Properties.Cast<PropertyData>().FirstOrDefault(new Func<PropertyData, bool>(CS$<>8__locals1.method_0));
-		return (a2SEbqNABZ9dcF80NRy)((object)((propertyData != null) ? propertyData.Value : null));
+		Class13.F93tSdiz1aNIA();
+		base..ctor("GG", new string[]
+		{
+			"Name",
+			"Parts",
+			"Wave",
+			"Lives"
+		}, null);
+		this.Web = darkOrbitWebAPI_1;
+		base.Subscribe<DarkOrbitWebAPI>(this.Web);
 	}
 
-	public static bool smethod_1(string string_0, TimeSpan timeSpan_0)
+	public override void Update()
 	{
-		if (string_0 == "99999999235959.000000:000")
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = this.Web.GgInfo;
+		if (ggInfo == null)
 		{
-			return false;
+			return;
 		}
-		bool result;
-		try
+		Dictionary<Type, object> subscribed = this.Subscribed;
+		lock (subscribed)
 		{
-			result = (ManagementDateTimeConverter.ToTimeSpan(string_0) <= timeSpan_0);
+			this.Subscribed[typeof(DarkOrbitWebAPI.GalaxyGatesInfo)] = ggInfo;
 		}
-		catch
+		DarkOrbitWebAPI.jumpgateGate[] gates = ggInfo.gates;
+		for (int i = 0; i < gates.Length; i++)
 		{
-			result = false;
-		}
-		return result;
-	}
-
-	public bool imethod_2()
-	{
-		try
-		{
-			ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
-			new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
-			using (ManagementObjectCollection.ManagementObjectEnumerator enumerator = new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get().GetEnumerator())
+			GClass885.<>c__DisplayClass4_0 CS$<>8__locals1 = new GClass885.<>c__DisplayClass4_0();
+			CS$<>8__locals1.jumpgateGate_0 = gates[i];
+			string key;
+			if (GClass919.dictionary_0.TryGetValue(CS$<>8__locals1.jumpgateGate_0.id, out key))
 			{
-				if (enumerator.MoveNext())
+				base.Add(StatisticsCategory.WithName(key, new IValueWrapper<string>[]
 				{
-					ManagementObject managementObject = (ManagementObject)enumerator.Current;
-					return true;
-				}
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_0)),
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_1)),
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_2))
+				}));
 			}
 		}
-		catch
-		{
-		}
-		return false;
+		base.Update();
 	}
 
-	public void imethod_0(HashSet<string> hashSet_0 = null)
+	[CompilerGenerated]
+	private IValueWrapper<string> method_0(Func<DarkOrbitWebAPI.GalaxyGatesInfo, string> func_0)
 	{
-		ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
-		new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
-		foreach (ManagementBaseObject managementBaseObject in new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get())
-		{
-			ManagementObject managementObject = (ManagementObject)managementBaseObject;
-			string item = GClass885.smethod_0<string>(managementObject, "IPAddress");
-			if ((long)NetworkInterface.LoopbackInterfaceIndex == (long)((ulong)GClass885.smethod_0<uint>(managementObject, "InterfaceIndex")) & (GClass885.smethod_1(GClass885.smethod_0<string>(managementObject, "PreferredLifetime"), TimeSpan.FromHours(24.0)) && (hashSet_0 == null || hashSet_0.Contains(item))))
-			{
-				managementObject.Delete();
-			}
-		}
+		return base.L<DarkOrbitWebAPI.GalaxyGatesInfo>(func_0);
 	}
 
-	public void imethod_1(string[] string_0)
-	{
-		HashSet<string> hashSet = new HashSet<string>(string_0);
-		ManagementScope scope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\standardcimv2");
-		ManagementClass managementClass = new ManagementClass(scope, new ManagementPath("MSFT_NetIPAddress"), new ObjectGetOptions());
-		foreach (ManagementBaseObject managementBaseObject in new ManagementObjectSearcher(scope, new ObjectQuery("SELECT * FROM MSFT_NetIPAddress")).Get())
-		{
-			string item = GClass885.smethod_0<string>((ManagementObject)managementBaseObject, "IPAddress");
-			hashSet.Remove(item);
-		}
-		ManagementBaseObject methodParameters = managementClass.GetMethodParameters("Create");
-		methodParameters["InterfaceIndex"] = NetworkInterface.LoopbackInterfaceIndex;
-		methodParameters["PreferredLifetime"] = ManagementDateTimeConverter.ToDmtfTimeInterval(TimeSpan.FromHours(24.0));
-		foreach (string value in hashSet)
-		{
-			methodParameters["IPAddress"] = value;
-			managementClass.InvokeMethod("Create", methodParameters, null);
-		}
-	}
-
-	public GClass885()
-	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-	}
+	[CompilerGenerated]
+	private readonly DarkOrbitWebAPI darkOrbitWebAPI_0;
 }

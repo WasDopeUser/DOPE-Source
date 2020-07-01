@@ -8,7 +8,7 @@ public class GClass326 : GInterface0
 	{
 		get
 		{
-			return 25014;
+			return 74;
 		}
 	}
 
@@ -16,52 +16,61 @@ public class GClass326 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 4;
 		}
 	}
 
-	public GClass326(int int_1 = 0, bool bool_0 = false)
+	public GClass326(GClass431 gclass431_1 = null, int int_1 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
+		if (gclass431_1 == null)
+		{
+			this.gclass431_0 = new GClass431(0);
+		}
+		else
+		{
+			this.gclass431_0 = gclass431_1;
+		}
 		this.int_0 = int_1;
-		this.Visible = bool_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 25014;
+		return 74;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
+		this.gclass431_0 = (GClass431)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass431_0 != null)
+		{
+			this.gclass431_0.imethod_0(binaryStream_0);
+		}
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
-		this.Visible = binaryStream_0.ReadBoolean();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(25014);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(74);
+		if (this.gclass431_0 != null)
+		{
+			this.gclass431_0.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(28619);
-		binaryStream_0.smethod_7(6437);
-		binaryStream_0.smethod_4(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
-		binaryStream_0.WriteBoolean(this.Visible);
-	}
+	public GClass431 gclass431_0;
 
 	public int int_0;
-
-	public bool Visible;
 }

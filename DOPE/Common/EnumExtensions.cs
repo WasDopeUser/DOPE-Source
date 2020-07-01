@@ -9,7 +9,7 @@ namespace DOPE.Common
 	{
 		public static string GetName(this Enum value)
 		{
-			DisplayAttribute displayAttribute = value.smethod_0<DisplayAttribute>();
+			DisplayAttribute displayAttribute = value.smethod_1<DisplayAttribute>();
 			if (displayAttribute != null)
 			{
 				return displayAttribute.Name;
@@ -19,7 +19,7 @@ namespace DOPE.Common
 
 		public static string GetName(this TargetMap value)
 		{
-			MapAttribute mapAttribute = value.smethod_0<MapAttribute>();
+			MapAttribute mapAttribute = value.smethod_1<MapAttribute>();
 			if (mapAttribute != null)
 			{
 				return mapAttribute.Name;
@@ -29,7 +29,7 @@ namespace DOPE.Common
 
 		public static int Resolve(this TargetMap value, int factionId)
 		{
-			MapAttribute mapAttribute = value.smethod_0<MapAttribute>();
+			MapAttribute mapAttribute = value.smethod_1<MapAttribute>();
 			if (mapAttribute != null && mapAttribute.ByFaction != 0)
 			{
 				return MapUtils.smethod_12(mapAttribute.ByFaction, factionId);

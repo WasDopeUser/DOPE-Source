@@ -9,14 +9,14 @@ namespace DarkorbitAPI.CommonStructures
 
 		public MaxStack(int int_0 = 1000)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 			this.Limit = int_0;
 		}
 
-		public void method_0(T ntw5wttk1NWRxIiIHj4)
+		public void method_0(T oHoAkwuIsFsNqAVjndq)
 		{
-			base.AddLast(ntw5wttk1NWRxIiIHj4);
+			base.AddLast(oHoAkwuIsFsNqAVjndq);
 			if (base.Count > this.Limit)
 			{
 				base.RemoveFirst();

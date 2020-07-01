@@ -24,7 +24,7 @@ namespace DarkorbitAPI
 	{
 		static DarkOrbitWebAPI()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			DarkOrbitWebAPI.randomizer = new Random();
 			DarkOrbitWebAPI.place_bet_btn = "BID";
 			DarkOrbitWebAPI.ServerInstances = null;
@@ -46,7 +46,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Sid>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_102);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_106);
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Uid>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_113);
 			}
 		}
 
@@ -84,7 +84,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<GgInfo>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.eiqHdNdevkj);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_29);
 			}
 		}
 
@@ -103,7 +103,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Equipment>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.OkoHdWwavJy);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_19);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<UserName>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_111);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_115);
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Server>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_96);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_100);
 			}
 		}
 
@@ -181,8 +181,8 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<ForcedUserAgent>k__BackingField = value;
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_110);
-				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_24);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_114);
+				this.<>OnPropertyChanged(Class5.propertyChangedEventArgs_25);
 			}
 		}
 
@@ -212,7 +212,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI(GameManager game)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.BootyArray = new string[3];
 			this.HourAuctionItems = new List<DarkOrbitWebAPI.Item>();
 			this.MyOffers = new List<DarkOrbitWebAPI.Item>();
@@ -248,7 +248,7 @@ namespace DarkorbitAPI
 
 		public bool CheckLoggedIn()
 		{
-			return this.CheckedLoggedIn(this.Get(GClass829.smethod_1(this.Server, null), null).Content);
+			return this.CheckedLoggedIn(this.Get(GClass880.smethod_1(this.Server, null), null).Content);
 		}
 
 		private IDictionary<string, string> GetValues(object data)
@@ -306,53 +306,18 @@ namespace DarkorbitAPI
 			return false;
 		}
 
-		public async Task<DarkOrbitWebAPI.Response> PostAsync(string sUrl, IDictionary<string, string> data, string referer = "https://darkorbit.com", Action<FormUrlEncodedContent> conf = null)
+		public Task<DarkOrbitWebAPI.Response> PostAsync(string sUrl, IDictionary<string, string> data, string referer = "https://darkorbit.com", Action<FormUrlEncodedContent> conf = null)
 		{
-			DateTime now = DateTime.Now;
-			Uri uri = new Uri(sUrl);
-			FormUrlEncodedContent formUrlEncodedContent = new FormUrlEncodedContent(data);
-			HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, sUrl);
-			httpRequestMessage.Content = formUrlEncodedContent;
-			httpRequestMessage.Headers.Referrer = new Uri(referer);
-			httpRequestMessage.Headers.UserAgent.ParseAdd(this.UserAgent);
-			if (conf != null)
-			{
-				conf(formUrlEncodedContent);
-			}
-			TaskAwaiter<HttpResponseMessage> taskAwaiter = this.Http.SendAsync(httpRequestMessage).GetAwaiter();
-			if (!taskAwaiter.IsCompleted)
-			{
-				await taskAwaiter;
-				TaskAwaiter<HttpResponseMessage> taskAwaiter2;
-				taskAwaiter = taskAwaiter2;
-				taskAwaiter2 = default(TaskAwaiter<HttpResponseMessage>);
-			}
-			HttpResponseMessage result = taskAwaiter.GetResult();
-			HttpResponseMessage response = result;
-			HttpResponseMessage httpResponseMessage;
-			if (this.FixResponse(response, out httpResponseMessage))
-			{
-				response = httpResponseMessage;
-			}
-			TaskAwaiter<string> taskAwaiter3 = response.Content.ReadAsStringAsync().GetAwaiter();
-			if (!taskAwaiter3.IsCompleted)
-			{
-				await taskAwaiter3;
-				TaskAwaiter<string> taskAwaiter4;
-				taskAwaiter3 = taskAwaiter4;
-				taskAwaiter4 = default(TaskAwaiter<string>);
-			}
-			string result2 = taskAwaiter3.GetResult();
-			string reloadToken = this.GetReloadToken(result2);
-			if (reloadToken.Length > 2)
-			{
-				string reloadToken2 = this.ReloadToken;
-				lock (reloadToken2)
-				{
-					this.ReloadToken = reloadToken;
-				}
-			}
-			return new DarkOrbitWebAPI.Response(uri, result2, response);
+			DarkOrbitWebAPI.<PostAsync>d__70 <PostAsync>d__;
+			<PostAsync>d__.<>4__this = this;
+			<PostAsync>d__.sUrl = sUrl;
+			<PostAsync>d__.data = data;
+			<PostAsync>d__.referer = referer;
+			<PostAsync>d__.conf = conf;
+			<PostAsync>d__.<>t__builder = AsyncTaskMethodBuilder<DarkOrbitWebAPI.Response>.Create();
+			<PostAsync>d__.<>1__state = -1;
+			<PostAsync>d__.<>t__builder.Start<DarkOrbitWebAPI.<PostAsync>d__70>(ref <PostAsync>d__);
+			return <PostAsync>d__.<>t__builder.Task;
 		}
 
 		public DarkOrbitWebAPI.Response Post(string sUrl, IDictionary<string, string> data, string referer = "https://darkorbit.com", Action<FormUrlEncodedContent> conf = null)
@@ -360,49 +325,16 @@ namespace DarkorbitAPI
 			return this.PostAsync(sUrl, data, referer, conf).GetAwaiter().GetResult();
 		}
 
-		public async Task<DarkOrbitWebAPI.Response> GetAsync(string sUrl, Action<HttpRequestMessage> config = null)
+		public Task<DarkOrbitWebAPI.Response> GetAsync(string sUrl, Action<HttpRequestMessage> config = null)
 		{
-			Uri uri = new Uri(sUrl);
-			HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, sUrl);
-			httpRequestMessage.Headers.UserAgent.ParseAdd(this.UserAgent);
-			if (config != null)
-			{
-				config(httpRequestMessage);
-			}
-			TaskAwaiter<HttpResponseMessage> taskAwaiter = this.Http.SendAsync(httpRequestMessage).GetAwaiter();
-			if (!taskAwaiter.IsCompleted)
-			{
-				await taskAwaiter;
-				TaskAwaiter<HttpResponseMessage> taskAwaiter2;
-				taskAwaiter = taskAwaiter2;
-				taskAwaiter2 = default(TaskAwaiter<HttpResponseMessage>);
-			}
-			HttpResponseMessage result = taskAwaiter.GetResult();
-			HttpResponseMessage response = result;
-			HttpResponseMessage httpResponseMessage;
-			if (this.FixResponse(response, out httpResponseMessage))
-			{
-				response = httpResponseMessage;
-			}
-			TaskAwaiter<string> taskAwaiter3 = response.Content.ReadAsStringAsync().GetAwaiter();
-			if (!taskAwaiter3.IsCompleted)
-			{
-				await taskAwaiter3;
-				TaskAwaiter<string> taskAwaiter4;
-				taskAwaiter3 = taskAwaiter4;
-				taskAwaiter4 = default(TaskAwaiter<string>);
-			}
-			string result2 = taskAwaiter3.GetResult();
-			string reloadToken = this.GetReloadToken(result2);
-			if (reloadToken.Length > 2)
-			{
-				string reloadToken2 = this.ReloadToken;
-				lock (reloadToken2)
-				{
-					this.ReloadToken = reloadToken;
-				}
-			}
-			return new DarkOrbitWebAPI.Response(uri, result2, response);
+			DarkOrbitWebAPI.<GetAsync>d__73 <GetAsync>d__;
+			<GetAsync>d__.<>4__this = this;
+			<GetAsync>d__.sUrl = sUrl;
+			<GetAsync>d__.config = config;
+			<GetAsync>d__.<>t__builder = AsyncTaskMethodBuilder<DarkOrbitWebAPI.Response>.Create();
+			<GetAsync>d__.<>1__state = -1;
+			<GetAsync>d__.<>t__builder.Start<DarkOrbitWebAPI.<GetAsync>d__73>(ref <GetAsync>d__);
+			return <GetAsync>d__.<>t__builder.Task;
 		}
 
 		public DarkOrbitWebAPI.Response Get(string url, Action<HttpRequestMessage> config = null)
@@ -449,7 +381,7 @@ namespace DarkorbitAPI
 			{
 				return;
 			}
-			MatchCollection matchCollection = Regex.Matches(JsonConvert.DeserializeObject<DarkOrbitWebAPI.ServerInstanceList>(this.Post(GClass829.smethod_7(this.Server), new Dictionary<string, string>
+			MatchCollection matchCollection = Regex.Matches(JsonConvert.DeserializeObject<DarkOrbitWebAPI.ServerInstanceList>(this.Post(GClass880.smethod_7(this.Server), new Dictionary<string, string>
 			{
 				{
 					"command",
@@ -521,7 +453,7 @@ namespace DarkorbitAPI
 			this.IsLoggedIn = false;
 			CS$<>8__locals1.server = CS$<>8__locals1.server.ToLower();
 			this.Server = CS$<>8__locals1.server;
-			string text = GClass829.smethod_0(CS$<>8__locals1.server);
+			string text = GClass880.smethod_0(CS$<>8__locals1.server);
 			CS$<>8__locals1.reqs = 0;
 			DarkOrbitWebAPI.Response response = this.Get(text, null);
 			CS$<>8__locals1.token = DarkOrbitWebAPI.StringBetween(response.Content, "bgcdw_login_form\" action=\"", "\"").Replace("amp;", "");
@@ -551,7 +483,7 @@ namespace DarkorbitAPI
 				})[0].Trim();
 				if (((text3 != null) ? text3.ToLower() : null) != this.Server)
 				{
-					CS$<>8__locals1.resp = this.Post(GClass829.smethod_7(text3), new Dictionary<string, string>
+					CS$<>8__locals1.resp = this.Post(GClass880.smethod_7(text3), new Dictionary<string, string>
 					{
 						{
 							"command",
@@ -651,7 +583,7 @@ namespace DarkorbitAPI
 
 		public FlashSettings GetFlashSettings()
 		{
-			return this.GetFlashSettings(this.Get(GClass829.smethod_2(this.Server), null).Content);
+			return this.GetFlashSettings(this.Get(GClass880.smethod_2(this.Server), null).Content);
 		}
 
 		public FlashSettings GetFlashSettings(string content)
@@ -681,13 +613,17 @@ namespace DarkorbitAPI
 
 		public Dictionary<int, string> GetMapHosts()
 		{
-			return this.GetMapHosts(this.Get(GClass829.Maps(this.Server), null).Content);
+			return this.GetMapHosts(this.Get(GClass880.Maps(this.Server), null).Content);
 		}
 
-		public async Task<Dictionary<int, string>> GetMapHostsAsync()
+		public Task<Dictionary<int, string>> GetMapHostsAsync()
 		{
-			DarkOrbitWebAPI.Response response = await this.GetAsync(GClass829.Maps(this.Server), null);
-			return this.GetMapHosts(response.Content);
+			DarkOrbitWebAPI.<GetMapHostsAsync>d__94 <GetMapHostsAsync>d__;
+			<GetMapHostsAsync>d__.<>4__this = this;
+			<GetMapHostsAsync>d__.<>t__builder = AsyncTaskMethodBuilder<Dictionary<int, string>>.Create();
+			<GetMapHostsAsync>d__.<>1__state = -1;
+			<GetMapHostsAsync>d__.<>t__builder.Start<DarkOrbitWebAPI.<GetMapHostsAsync>d__94>(ref <GetMapHostsAsync>d__);
+			return <GetMapHostsAsync>d__.<>t__builder.Task;
 		}
 
 		public Dictionary<int, string> GetMapHosts(string content)
@@ -703,7 +639,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI.spacemap GetSpacemapConfig()
 		{
-			return this.GetSpacemapConfig(this.Get(GClass829.smethod_3(), null).Content);
+			return this.GetSpacemapConfig(this.Get(GClass880.smethod_3(), null).Content);
 		}
 
 		public DarkOrbitWebAPI.spacemap GetSpacemapConfig(string content)
@@ -742,7 +678,7 @@ namespace DarkorbitAPI
 
 		public DarkOrbitWebAPI.MapConstants GetMapList()
 		{
-			return DarkOrbitWebAPI.GetMapList(this.Get(GClass829.smethod_0("int1") + "/spacemap/graphics/maps-config.xml", null).Content);
+			return DarkOrbitWebAPI.GetMapList(this.Get(GClass880.smethod_0("int1") + "/spacemap/graphics/maps-config.xml", null).Content);
 		}
 
 		public static DarkOrbitWebAPI.MapConstants GetMapList(string content)
@@ -765,7 +701,7 @@ namespace DarkorbitAPI
 
 		public string method_0()
 		{
-			return this.Get(GClass829.smethod_11(), null).Content;
+			return this.Get(GClass880.smethod_11(), null).Content;
 		}
 
 		public DarkOrbitWebAPI.GalaxyGatesInfo GetGalaxyGatesInfo()
@@ -774,7 +710,7 @@ namespace DarkorbitAPI
 			{
 				return null;
 			}
-			DarkOrbitWebAPI.Response response = this.Get(GClass829.oemHlkhhlQr(this.Server, this.Uid, this.Sid, "init"), delegate(HttpRequestMessage msg)
+			DarkOrbitWebAPI.Response response = this.Get(GClass880.smethod_5(this.Server, this.Uid, this.Sid, "init"), delegate(HttpRequestMessage msg)
 			{
 				msg.Headers.Add("X-Requested-With", "ShockwaveFlash/32.0.0.270");
 			});
@@ -831,7 +767,7 @@ namespace DarkorbitAPI
 
 		public void Logout()
 		{
-			this.Get(GClass829.smethod_4(this.Server), null);
+			this.Get(GClass880.smethod_4(this.Server), null);
 		}
 
 		private static int ParseNumber(string str, bool ZeroIfNone)
@@ -859,13 +795,13 @@ namespace DarkorbitAPI
 			}
 			new
 			{
-				M09tLeEIhK7FxkyyW2V = "hour",
-				fBp3ddEXiwa0Crkbi8L = "bid",
-				J6HVvrEYo8rUAJWkNg4 = item.lootId,
-				ptf0smEG1AhwtEE2xeO = item.itemId,
-				zYfUaKEUTbFDLTxGmd3 = credits,
-				ByNvCiE1Tjf5UpOKmSd = DarkOrbitWebAPI.place_bet_btn,
-				phkvhJEf6Gc3KywqbjW = reloadToken2
+				dH57uuc8oGbFFuiABCY = "hour",
+				sBDNkgcOagLXt7vykqf = "bid",
+				OYCs3Pcmjp0t325AxRr = item.lootId,
+				GeEZpAcrNuTyGM74Te3 = item.itemId,
+				kXIoJecJMYN8DXaBKBU = credits,
+				dYCwpOc9m2sbdsJL7DF = DarkOrbitWebAPI.place_bet_btn,
+				gBK0qrce1egLHdQWPnc = reloadToken2
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -898,7 +834,7 @@ namespace DarkorbitAPI
 					reloadToken2
 				}
 			};
-			string content = this.Post(GClass829.smethod_1(this.Server, "internalAuction") + "&reloadToken=" + reloadToken2, data, GClass829.smethod_1(this.Server, "internalAuction"), null).Content;
+			string content = this.Post(GClass880.smethod_1(this.Server, "internalAuction") + "&reloadToken=" + reloadToken2, data, GClass880.smethod_1(this.Server, "internalAuction"), null).Content;
 			item.Credits = credits;
 			return content;
 		}
@@ -950,12 +886,12 @@ namespace DarkorbitAPI
 		{
 			new
 			{
-				efs5BXEKEVoWaYZfWaQ = "purchase",
-				Tdk9coEiKJ669bDfsES = category,
-				RvZFpPEo73RXEGmlrjU = itemId,
-				t58NvgE8mHYj50k0sPT = amount,
-				E1cIrwEeXNL8grI0I3P = level,
-				FQFSHFEr9HLUh36dTHM = selectedName
+				Xm0Q6kcjrVqvQCJOtIW = "purchase",
+				GVIlVXcxV0Lhkq5tGTg = category,
+				xgZVM3cAIdSwHgcuDqH = itemId,
+				CNbQWxc7IBMxAc4DBNZ = amount,
+				v7giNNcIgC2wlc8BnWF = level,
+				v8U1fFci3U1N4k6rq70 = selectedName
 			};
 			Dictionary<string, string> data = new Dictionary<string, string>
 			{
@@ -984,7 +920,7 @@ namespace DarkorbitAPI
 					selectedName
 				}
 			};
-			return this.Post(GClass829.smethod_5(this.Server), data, "https://darkorbit.com", null).Content.Contains("result: \"success\"");
+			return this.Post(GClass880.XmuQwTgdixZ(this.Server), data, "https://darkorbit.com", null).Content.Contains("result: \"success\"");
 		}
 
 		public bool BuyCloak()
@@ -1035,8 +971,8 @@ namespace DarkorbitAPI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void <>OnPropertyChanged(PropertyChangedEventArgs eventArgs)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -1070,7 +1006,7 @@ namespace DarkorbitAPI
 		{
 			public Response(Uri uri, string response, HttpResponseMessage data)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Uri = uri;
 				this.Content = response;
@@ -1088,7 +1024,7 @@ namespace DarkorbitAPI
 		{
 			public Credentials(string Username, string Password, string server, bool Auto, bool IsTemplate = false)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Username = Username;
 				this.Password = Password;
@@ -1099,7 +1035,7 @@ namespace DarkorbitAPI
 
 			protected Credentials()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1118,7 +1054,7 @@ namespace DarkorbitAPI
 		{
 			public BasicItem(string Name, DarkOrbitWebAPI.ItemType type, string itemId, string lootId, int Uridium, int Credits)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Name = Name;
 				this.Type = type;
@@ -1130,7 +1066,7 @@ namespace DarkorbitAPI
 
 			protected BasicItem()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1151,7 +1087,7 @@ namespace DarkorbitAPI
 		{
 			public Item(string Name, DarkOrbitWebAPI.ItemType Type, string itemId, string lootId, int Uridium, int Credits, int LocalCredits, string Winner, string Image, bool Winning = false)
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 				this.Type = Type;
 				this.itemId = itemId;
@@ -1167,7 +1103,7 @@ namespace DarkorbitAPI
 
 			protected Item()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1201,9 +1137,9 @@ namespace DarkorbitAPI
 			week
 		}
 
+		[DesignerCategory("code")]
 		[XmlRoot("jumpgate")]
 		[XmlType(AnonymousType = true)]
-		[DesignerCategory("code")]
 		[Serializable]
 		public class GalaxyGatesInfo
 		{
@@ -1318,8 +1254,8 @@ namespace DarkorbitAPI
 				}
 			}
 
-			[XmlArray]
 			[XmlArrayItem("spinamount", IsNullable = false)]
+			[XmlArray]
 			public int[] spinamounts
 			{
 				get
@@ -1445,7 +1381,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfo()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1478,8 +1414,8 @@ namespace DarkorbitAPI
 			private int bonusRewardsDayField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class jumpgateEnergy_cost
 		{
@@ -1511,7 +1447,7 @@ namespace DarkorbitAPI
 
 			public jumpgateEnergy_cost()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1566,7 +1502,7 @@ namespace DarkorbitAPI
 
 			public jumpgateMultiplier()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1577,8 +1513,8 @@ namespace DarkorbitAPI
 			private int stateField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class jumpgateProbability
 		{
@@ -1610,7 +1546,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbability()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1619,8 +1555,8 @@ namespace DarkorbitAPI
 			private string modeField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class jumpgateProbabilityCat
 		{
@@ -1652,7 +1588,7 @@ namespace DarkorbitAPI
 
 			public jumpgateProbabilityCat()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1661,8 +1597,8 @@ namespace DarkorbitAPI
 			private int percentageField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class jumpgateGate
 		{
@@ -1814,7 +1750,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGate()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1839,8 +1775,8 @@ namespace DarkorbitAPI
 			private int lifePriceField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class jumpgateGateGatebuilders
 		{
@@ -1885,7 +1821,7 @@ namespace DarkorbitAPI
 
 			public jumpgateGateGatebuilders()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -1896,9 +1832,9 @@ namespace DarkorbitAPI
 			private int totalField;
 		}
 
-		[XmlRoot("jumpgate")]
 		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[XmlRoot("jumpgate")]
 		[Serializable]
 		public class GalaxyGatesInfoUpdate
 		{
@@ -2050,7 +1986,7 @@ namespace DarkorbitAPI
 
 			public GalaxyGatesInfoUpdate()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2255,7 +2191,7 @@ namespace DarkorbitAPI
 
 			public jumpgateItem()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2295,7 +2231,7 @@ namespace DarkorbitAPI
 
 			public ServerInstanceList()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 		}
@@ -2321,7 +2257,7 @@ namespace DarkorbitAPI
 
 			public maps()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2360,7 +2296,7 @@ namespace DarkorbitAPI
 
 			public mapsMap()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2369,9 +2305,9 @@ namespace DarkorbitAPI
 			private ushort idField;
 		}
 
-		[DesignerCategory("code")]
-		[XmlRoot(Namespace = "", IsNullable = false)]
 		[XmlType(AnonymousType = true)]
+		[XmlRoot(Namespace = "", IsNullable = false)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class spacemap
 		{
@@ -2403,7 +2339,7 @@ namespace DarkorbitAPI
 
 			public spacemap()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2412,8 +2348,8 @@ namespace DarkorbitAPI
 			private DarkOrbitWebAPI.spacemapMap[] npcsField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class spacemapJumpgate
 		{
@@ -2505,7 +2441,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgate()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2524,8 +2460,8 @@ namespace DarkorbitAPI
 			private ushort refField;
 		}
 
-		[DesignerCategory("code")]
 		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class spacemapJumpgatePosition
 		{
@@ -2557,7 +2493,7 @@ namespace DarkorbitAPI
 
 			public spacemapJumpgatePosition()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2599,7 +2535,7 @@ namespace DarkorbitAPI
 
 			public spacemapMap()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2628,16 +2564,16 @@ namespace DarkorbitAPI
 
 			public spacemapMapNpc()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
 			private byte idField;
 		}
 
-		[DesignerCategory("code")]
-		[XmlType(AnonymousType = true)]
 		[XmlRoot(Namespace = "", IsNullable = false)]
+		[XmlType(AnonymousType = true)]
+		[DesignerCategory("code")]
 		[Serializable]
 		public class NpcConstants
 		{
@@ -2656,15 +2592,15 @@ namespace DarkorbitAPI
 
 			public NpcConstants()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
 			private DarkOrbitWebAPI.resourceItem[] itemField;
 		}
 
-		[XmlType(AnonymousType = true)]
 		[DesignerCategory("code")]
+		[XmlType(AnonymousType = true)]
 		[Serializable]
 		public class resourceItem
 		{
@@ -2696,7 +2632,7 @@ namespace DarkorbitAPI
 
 			public resourceItem()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2726,7 +2662,7 @@ namespace DarkorbitAPI
 
 			public MapConstants()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				base..ctor();
 			}
 
@@ -2805,7 +2741,7 @@ namespace DarkorbitAPI
 
 			public MapConfig()
 			{
-				Class13.NP5bWyNzLwONS();
+				Class13.F93tSdiz1aNIA();
 				this.scaleFactorField = 1.0;
 				base..ctor();
 			}

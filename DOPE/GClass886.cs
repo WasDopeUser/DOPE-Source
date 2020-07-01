@@ -1,116 +1,182 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using DarkorbitAPI;
-using PErkava;
+using DarkorbitAPI.Structures;
+using DOPE.Common;
+using DOPE.Common.Models.Bot.Stats;
 
-public class GClass886 : INotifyPropertyChanged
+public class GClass886 : StatisticsCategory
 {
-	protected void method_0<ndZaklNKpVscBkILKEu>(ref ndZaklNKpVscBkILKEu gparam_0, ndZaklNKpVscBkILKEu KAA0tmNibBFg8ypKRgo, [CallerMemberName] string name = null)
+	public Hero Hero { get; }
+
+	public GClass882 Stats { get; }
+
+	public GClass886(Hero hero_1, GClass882 gclass882_1)
 	{
-		if (!EqualityComparer<ndZaklNKpVscBkILKEu>.Default.Equals(gparam_0, KAA0tmNibBFg8ypKRgo))
+		Class13.F93tSdiz1aNIA();
+		base..ctor("Hero", new string[]
 		{
-			gparam_0 = KAA0tmNibBFg8ypKRgo;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
+			"Name",
+			"Value"
+		}, null);
+		this.Hero = hero_1;
+		this.Stats = gclass882_1;
+		base.Subscribe<Hero>(this.Hero);
+		base.Subscribe<GClass882>(this.Stats);
+	}
+
+	private void method_0(List<IRowEntry> list_2)
+	{
+		List<IRowEntry> list = new List<IRowEntry>();
+		using (IEnumerator<KeyValuePair<string, double>> enumerator = this.Hero.Ammo.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
 			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
-			}
-			if (name == "Enabled")
-			{
-				if ((bool)((object)KAA0tmNibBFg8ypKRgo))
+				GClass886.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass886.<>c__DisplayClass9_0();
+				CS$<>8__locals1.keyValuePair_0 = enumerator.Current;
+				list.Add(StatisticsCategory.WithName(CS$<>8__locals1.keyValuePair_0.Key.ToPascal(), new IValueWrapper<string>[]
 				{
-					PErkava.smethod_5(this);
-					return;
-				}
-				PErkava.smethod_6(this);
+					base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0))
+				}));
 			}
 		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	public bool Enabled
-	{
-		get
+		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, double>(GClass886.<>c.<>c_0.method_0)).ThenBy(new Func<IRowEntry, string>(GClass886.<>c.<>c_0.method_1)))
 		{
-			return this.bool_0;
-		}
-		set
-		{
-			this.method_0<bool>(ref this.bool_0, value, "Enabled");
+			list_2.Add(item);
 		}
 	}
 
-	public string Name
+	private void method_1(List<IRowEntry> list_2)
 	{
-		get
+		List<IRowEntry> list = new List<IRowEntry>();
+		foreach (string text in GClass886.list_0)
 		{
-			return this.string_0;
-		}
-		set
-		{
-			this.method_0<string>(ref this.string_0, value, "Name");
-		}
-	}
-
-	public int ServerCount
-	{
-		get
-		{
-			HashSet<string> servers = this.Servers;
-			if (servers == null)
+			string text2 = "resource_" + text;
+			if (this.Hero.Resources.ContainsKey(text2))
 			{
-				return 0;
+				list_2.Add(StatisticsCategory.WithName("Cargo_" + text.ToPascal(), new IValueWrapper<string>[]
+				{
+					this.method_2(text2)
+				}));
 			}
-			return servers.Count;
 		}
-	}
-
-	public HashSet<string> Servers { get; set; }
-
-	[CompilerGenerated]
-	public Dictionary<int, string> method_1()
-	{
-		return this.dictionary_0;
-	}
-
-	[CompilerGenerated]
-	public void method_2(Dictionary<int, string> dictionary_1)
-	{
-		this.dictionary_0 = dictionary_1;
-	}
-
-	public void method_3(DarkOrbitWebAPI darkOrbitWebAPI_0)
-	{
-		Dictionary<int, string> mapHosts;
-		this.method_2(mapHosts = darkOrbitWebAPI_0.GetMapHosts());
-		this.Servers = new HashSet<string>(mapHosts.Select(new Func<KeyValuePair<int, string>, string>(GClass886.<>c.<>c_0.method_0)));
-		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-		if (propertyChanged == null)
+		foreach (KeyValuePair<string, double> keyValuePair in this.Hero.Resources)
 		{
-			return;
+			if (!GClass886.list_0.Contains(keyValuePair.Key.Replace("resource_", "")))
+			{
+				list.Add(StatisticsCategory.WithName(keyValuePair.Key.Replace("resource_collectable", "Materials").ToPascal(), new IValueWrapper<string>[]
+				{
+					this.method_2(keyValuePair.Key)
+				}));
+			}
 		}
-		propertyChanged(this, new PropertyChangedEventArgs("ServerCount"));
+		foreach (IRowEntry item in list.OrderBy(new Func<IRowEntry, string>(GClass886.<>c.<>c_0.method_2)))
+		{
+			list_2.Add(item);
+		}
 	}
 
-	public GClass886()
+	public override void Update()
 	{
-		Class13.NP5bWyNzLwONS();
-		this.Servers = new HashSet<string>();
-		this.dictionary_0 = new Dictionary<int, string>();
-		base..ctor();
+		List<IRowEntry> list = new List<IRowEntry>();
+		list.Add(this.method_3("In game", new Func<Hero, string>(GClass886.<>c.<>c_0.method_3)));
+		list.Add(this.method_3("Name", new Func<Hero, string>(GClass886.<>c.<>c_0.method_4)));
+		list.Add(this.method_3("Clan", new Func<Hero, string>(GClass886.<>c.<>c_0.method_5)));
+		list.Add(this.method_3("Credits", new Func<Hero, string>(GClass886.<>c.<>c_0.method_6)));
+		list.Add(this.method_3("Uridium", new Func<Hero, string>(GClass886.<>c.<>c_0.method_7)));
+		list.Add(this.method_3("Level", new Func<Hero, string>(GClass886.<>c.<>c_0.method_8)));
+		list.Add(this.method_3("Experience", new Func<Hero, string>(GClass886.<>c.<>c_0.method_9)));
+		list.Add(this.method_3("Honor", new Func<Hero, string>(GClass886.<>c.<>c_0.method_10)));
+		list.Add(this.method_3("Booty keys", new Func<Hero, string>(GClass886.<>c.<>c_0.method_11)));
+		list.Add(this.method_3("Map", new Func<Hero, string>(GClass886.<>c.<>c_0.method_12)));
+		list.Add(this.method_4("TypeId", new Func<Hero, string>(GClass886.<>c.<>c_0.method_13)));
+		list.Add(this.method_4("Cloaked", new Func<Hero, string>(GClass886.<>c.<>c_0.method_14)));
+		list.Add(this.method_4("Speed", new Func<Hero, string>(GClass886.<>c.<>c_0.method_15)));
+		list.Add(this.method_4("HP", new Func<Hero, string>(GClass886.<>c.<>c_0.method_16)));
+		list.Add(this.method_4("Shield", new Func<Hero, string>(GClass886.<>c.<>c_0.method_17)));
+		list.Add(this.method_4("Config", new Func<Hero, string>(GClass886.<>c.<>c_0.method_18)));
+		list.Add(this.method_4("Formation", new Func<Hero, string>(GClass886.<>c.<>c_0.method_19)));
+		list.Add(this.method_4("Cargo", new Func<Hero, string>(GClass886.<>c.<>c_0.method_20)));
+		List<IRowEntry> list2 = list;
+		this.method_0(list2);
+		this.method_1(list2);
+		int num = 0;
+		foreach (IRowEntry rowEntry in list2)
+		{
+			rowEntry.Order = num++;
+			base.Add(rowEntry);
+		}
+		base.Update();
 	}
 
-	private bool bool_0;
-
-	private string string_0;
+	// Note: this type is marked as 'beforefieldinit'.
+	static GClass886()
+	{
+		Class13.F93tSdiz1aNIA();
+		GClass886.list_0 = new List<string>
+		{
+			"prometium",
+			"endurium",
+			"terbium",
+			"duranium",
+			"prometid",
+			"promerium",
+			"seprom",
+			"xenomit",
+			"palladium"
+		};
+		GClass886.list_1 = new List<string>
+		{
+			"ammunition_laser_lcb-10",
+			"ammunition_laser_mcb-25",
+			"ammunition_laser_mcb-50",
+			"ammunition_laser_ucb-100",
+			"ammunition_laser_job-100",
+			"ammunition_laser_sab-50",
+			"ammunition_rocket_r-310",
+			"ammunition_rocket_plt-2026",
+			"ammunition_rocket_plt-2021",
+			"ammunition_rocket_plt-3030",
+			"ammunition_rocketlauncher_eco-10",
+			"ammunition_rocketlauncher_hstrm-01",
+			"ammunition_rocketlauncher_ubr-100"
+		};
+	}
 
 	[CompilerGenerated]
-	private HashSet<string> hashSet_0;
+	private LazyBindingValue<string, Hero> method_2(string string_0)
+	{
+		GClass886.<>c__DisplayClass10_0 CS$<>8__locals1 = new GClass886.<>c__DisplayClass10_0();
+		CS$<>8__locals1.LcrQrigrdcy = string_0;
+		return base.L<Hero>(new Func<Hero, string>(CS$<>8__locals1.method_0));
+	}
 
 	[CompilerGenerated]
-	private Dictionary<int, string> dictionary_0;
+	private IRowEntry method_3(string string_0, Func<Hero, string> func_0)
+	{
+		return StatisticsCategory.WithName(string_0, new IValueWrapper<string>[]
+		{
+			base.L<Hero>(func_0)
+		});
+	}
+
+	[CompilerGenerated]
+	private IRowEntry method_4(string string_0, Func<Hero, string> func_0)
+	{
+		return StatisticsCategory.WithName("Ship_" + string_0, new IValueWrapper<string>[]
+		{
+			base.L<Hero>(func_0)
+		});
+	}
+
+	[CompilerGenerated]
+	private readonly Hero hero_0;
+
+	[CompilerGenerated]
+	private readonly GClass882 gclass882_0;
+
+	public static readonly List<string> list_0;
+
+	public static readonly List<string> list_1;
 }

@@ -1,34 +1,52 @@
 ﻿using System;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass804<zkuBAww34br3qbhrKUN> : GClass803<zkuBAww34br3qbhrKUN> where zkuBAww34br3qbhrKUN : GInterface7
+public class GClass804 : GInterface0
 {
-	public GClass804()
+	short GInterface0.Id
 	{
-		Class13.NP5bWyNzLwONS();
+		get
+		{
+			return 86;
+		}
+	}
+
+	int GInterface0.SizeBytes
+	{
+		get
+		{
+			return 1;
+		}
+	}
+
+	public GClass804(bool bool_1 = false)
+	{
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.gclass802_0 = new GClass802(null);
-		this.gclass802_1 = new GClass802(null);
+		this.bool_0 = bool_1;
 	}
 
-	public void method_0(byte[] byte_0)
+	public virtual int vmethod_0()
 	{
-		this.gclass802_0.method_0(byte_0);
-		this.gclass802_1.method_0(byte_0);
+		return 86;
 	}
 
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	public virtual int vmethod_1()
 	{
-		base.imethod_1(byte_0, int_0, int_1);
-		this.gclass802_1.method_2(byte_0, int_0, int_1);
+		return 1;
 	}
 
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.gclass802_0.method_2(byte_0, int_0, int_1);
-		base.imethod_0(byte_0, int_0, int_1);
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	private GClass802 gclass802_0;
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(86);
+		binaryStream_0.WriteBoolean(this.bool_0);
+	}
 
-	private GClass802 gclass802_1;
+	public bool bool_0;
 }

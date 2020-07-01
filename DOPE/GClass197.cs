@@ -8,7 +8,7 @@ public class GClass197 : GInterface0
 	{
 		get
 		{
-			return 31397;
+			return -30083;
 		}
 	}
 
@@ -20,16 +20,15 @@ public class GClass197 : GInterface0
 		}
 	}
 
-	public GClass197(uint uint_0 = 0U)
+	public GClass197()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.Mode = uint_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 31397;
+		return -30083;
 	}
 
 	public virtual int vmethod_1()
@@ -37,23 +36,12 @@ public class GClass197 : GInterface0
 		return 0;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		this.Mode = (uint)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31397);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-30083);
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-26705);
-		binaryStream_0.smethod_6(this.Mode);
-	}
-
-	public uint Mode;
 }

@@ -1,59 +1,79 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using DOPE.Common;
-using DOPE.Common.Models;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public abstract class GClass844 : GClass841
+public class GClass844 : GInterface0
 {
-	public TargetMap Map
+	short GInterface0.Id
 	{
-		[CompilerGenerated]
 		get
 		{
-			return this.targetMap_0;
-		}
-		[CompilerGenerated]
-		protected set
-		{
-			if (this.targetMap_0 == value)
-			{
-				return;
-			}
-			this.targetMap_0 = value;
-			this.method_0(Class10.Map);
+			return 19398;
 		}
 	}
 
-	public GClass844(GClass839 gclass839_1, TargetMap targetMap_1, string string_1, int int_2 = -2147483648)
+	int GInterface0.SizeBytes
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, string_1 + "_" + targetMap_1.GetName(), int_2);
-		this.Map = targetMap_1;
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		GClass844.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass844.<>c__DisplayClass5_0();
-		CS$<>8__locals1.targetMap_0 = this.Map;
-		if (botProfile_1 == null)
+		get
 		{
-			return null;
+			return 6;
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(CS$<>8__locals1.method_0));
 	}
 
-	public override string ToString()
+	public GClass844(string string_1 = "", Vector<GClass376> vector_0 = null)
 	{
-		return this.Map.GetName() ?? "";
+		Class13.F93tSdiz1aNIA();
+		this.string_0 = "";
+		base..ctor();
+		this.string_0 = string_1;
+		if (vector_0 == null)
+		{
+			this.Items = new Vector<GClass376>();
+			return;
+		}
+		this.Items = vector_0;
 	}
 
-	[CompilerGenerated]
-	private TargetMap targetMap_0;
+	public virtual int vmethod_0()
+	{
+		return 19398;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 6;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.string_0 = binaryStream_0.smethod_2();
+		while (this.Items.Length > 0)
+		{
+			this.Items.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass376 gclass = (GClass376)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.Items.method_0(gclass);
+			i++;
+		}
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(19398);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.WriteByte(this.Items.Length);
+		foreach (GClass376 gclass in this.Items)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+	}
+
+	public string string_0;
+
+	public Vector<GClass376> Items;
 }

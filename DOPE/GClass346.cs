@@ -8,7 +8,7 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return 9007;
+			return -15957;
 		}
 	}
 
@@ -16,61 +16,56 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 12;
 		}
 	}
 
-	public GClass346(string string_1 = "", double double_1 = 0.0, GClass738 gclass738_0 = null)
+	public GClass346(int int_2 = 0, string string_1 = "", string string_2 = "", int int_3 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.Name = "";
 		this.string_0 = "";
 		base..ctor();
-		this.string_0 = string_1;
-		this.double_0 = double_1;
-		if (gclass738_0 == null)
-		{
-			this.Status = new GClass738();
-			return;
-		}
-		this.Status = gclass738_0;
+		this.int_0 = int_3;
+		this.Name = string_1;
+		this.string_0 = string_2;
+		this.int_1 = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9007;
+		return -15957;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 12;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.Name = binaryStream_0.smethod_2();
 		this.string_0 = binaryStream_0.smethod_2();
-		binaryStream_0.smethod_1();
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.Status = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass738);
-		this.Status.HrqIugnatr8(binaryStream_0);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 6) | this.int_1 << 26);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9007);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-15957);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_3(this.Name);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_4(this.int_1 << 6 | U.smethod_0(this.int_1, 26));
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(-6409);
-		binaryStream_0.WriteDouble(this.double_0);
-		this.Status.imethod_1(binaryStream_0);
-	}
+	public int int_0;
+
+	public string Name;
 
 	public string string_0;
 
-	public double double_0;
-
-	public GClass738 Status;
+	public int int_1;
 }

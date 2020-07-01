@@ -1,77 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass814 : GClass808
+public class GClass814 : GInterface0
 {
-	[CompilerGenerated]
-	public GClass821 method_0()
+	short GInterface0.Id
 	{
-		return this.gclass821_0;
-	}
-
-	[CompilerGenerated]
-	private void method_1(GClass821 gclass821_2)
-	{
-		this.gclass821_0 = gclass821_2;
-	}
-
-	[CompilerGenerated]
-	public GClass821 method_2()
-	{
-		return this.gclass821_1;
-	}
-
-	[CompilerGenerated]
-	private void method_3(GClass821 gclass821_2)
-	{
-		this.gclass821_1 = gclass821_2;
-	}
-
-	public override void imethod_2()
-	{
-	}
-
-	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_2().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		this.method_0().vmethod_0(byte_0, int_0, int_1);
-	}
-
-	public override void Init(List<byte[]> list_0)
-	{
-		if (list_0.Count != 2)
+		get
 		{
-			throw new Exception();
+			return 10123;
 		}
-		Vector<uint> vector = new Vector<uint>();
-		Vector<uint> vector2 = new Vector<uint>();
-		foreach (byte item in list_0[0])
-		{
-			vector.Add((uint)item);
-		}
-		foreach (byte item2 in list_0[1])
-		{
-			vector2.Add((uint)item2);
-		}
-		this.method_1(new GClass821(new Vector<uint>(vector2), new Vector<uint>(vector)));
-		this.method_3(new GClass821(vector2, vector));
 	}
 
-	public GClass814()
+	int GInterface0.SizeBytes
 	{
-		Class13.NP5bWyNzLwONS();
+		get
+		{
+			return 0;
+		}
+	}
+
+	public GClass814(int int_1 = 0)
+	{
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
+		this.int_0 = int_1;
 	}
 
-	[CompilerGenerated]
-	private GClass821 gclass821_0;
+	public virtual int vmethod_0()
+	{
+		return 10123;
+	}
 
-	[CompilerGenerated]
-	private GClass821 gclass821_1;
+	public virtual int vmethod_1()
+	{
+		return 0;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.int_0 = (int)binaryStream_0.smethod_1();
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(10123);
+		binaryStream_0.smethod_7(this.int_0);
+	}
+
+	public int int_0;
 }

@@ -1,62 +1,72 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI.Packets.Static;
-using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass847 : GClass845
+public class GClass847 : GInterface0
 {
-	public GClass847(GClass839 gclass839_1)
+	short GInterface0.Id
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, TargetMap.FL_ATLAS_A);
+		get
+		{
+			return -31293;
+		}
 	}
 
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	int GInterface0.SizeBytes
 	{
-		if (botProfile_1 == null)
+		get
 		{
-			return null;
+			return 4;
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass847.<>c.<>c_0.method_0));
 	}
 
-	public override bool TrySwitchMap(out int int_2)
+	public GClass847(GClass391 gclass391_1 = null, int int_1 = 0)
 	{
-		if (!base.C.IsStopping)
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_1;
+		if (gclass391_1 == null)
 		{
-			if (base.State == ModuleState.Started)
-			{
-				int_2 = 430;
-				return MapUtils.smethod_2(base.C.Map.MapId) != MapGroup.FrozenLabyrinth;
-			}
+			this.gclass391_0 = new GClass391();
+			return;
 		}
-		int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
-		return int_2 != base.C.Map.MapId;
+		this.gclass391_0 = gclass391_1;
 	}
 
-	public override int UpdatePriority()
+	public virtual int vmethod_0()
 	{
-		DateTimeOffset eventGateOpening = base.C.Game.EventGateOpening;
-		DateTimeOffset eventGateClosing = base.C.Game.EventGateClosing;
-		bool flag = eventGateOpening == default(DateTimeOffset) || eventGateClosing == default(DateTimeOffset);
-		DateTimeOffset now = DateTimeOffset.Now;
-		if (!flag && !(eventGateOpening < now) && !(eventGateClosing > now))
-		{
-			return int.MinValue;
-		}
-		return base.UpdatePriority();
+		return -31293;
 	}
 
-	public override string ToString()
+	public virtual int vmethod_1()
 	{
-		return "Frozen Labirynth";
+		return 4;
 	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		this.gclass391_0 = (GClass391)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass391_0 != null)
+		{
+			this.gclass391_0.imethod_0(binaryStream_0);
+		}
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-31293);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
+		if (this.gclass391_0 != null)
+		{
+			this.gclass391_0.imethod_1(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
+	}
+
+	public int int_0;
+
+	public GClass391 gclass391_0;
 }

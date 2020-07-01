@@ -8,7 +8,7 @@ public class GClass216 : GInterface0
 	{
 		get
 		{
-			return 32482;
+			return 1300;
 		}
 	}
 
@@ -16,48 +16,56 @@ public class GClass216 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 16;
 		}
 	}
 
-	public GClass216(ByteArray byteArray_1 = null)
+	public GClass216(int int_4 = 0, int int_5 = 0, int int_6 = 0, int int_7 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.byteArray_0 = new ByteArray();
-		if (byteArray_1 != null)
-		{
-			this.byteArray_0 = byteArray_1;
-		}
+		this.int_0 = int_4;
+		this.int_1 = int_5;
+		this.int_2 = int_6;
+		this.int_3 = int_7;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32482;
+		return 1300;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 16;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.byteArray_0.Clear();
-		binaryStream_0.smethod_11(this.byteArray_0, 0, binaryStream_0.smethod_0());
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 1) | this.int_1 << 31);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 13 | U.smethod_0(this.int_2, 19));
+		this.int_3 = binaryStream_0.smethod_0();
+		this.int_3 = (U.smethod_0(this.int_3, 6) | this.int_3 << 26);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32482);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(1300);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_4(this.int_1 << 1 | U.smethod_0(this.int_1, 31));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 13) | this.int_2 << 19);
+		binaryStream_0.smethod_4(this.int_3 << 6 | U.smethod_0(this.int_3, 26));
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.byteArray_0.Length);
-		binaryStream_0.smethod_12(this.byteArray_0, 0, this.byteArray_0.Length);
-	}
+	public int int_0;
 
-	public ByteArray byteArray_0;
+	public int int_1;
+
+	public int int_2;
+
+	public int int_3;
 }

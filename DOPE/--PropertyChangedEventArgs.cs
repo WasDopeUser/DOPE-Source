@@ -4,8 +4,8 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-[DebuggerNonUserCode]
 [GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+[DebuggerNonUserCode]
 [StructLayout(LayoutKind.Auto, CharSet = CharSet.Auto)]
 internal static class <>PropertyChangedEventArgs
 {

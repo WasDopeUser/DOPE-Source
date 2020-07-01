@@ -68,8 +68,8 @@ namespace DOPE.Common.Models
 		P51 = 91,
 		[Map("5-2")]
 		P52,
-		[NotMapped]
 		[Map("5-3")]
+		[NotMapped]
 		P53,
 		[Map("BL-1")]
 		BL1 = 306,
@@ -77,11 +77,11 @@ namespace DOPE.Common.Models
 		BL2,
 		[Map("BL-3")]
 		BL3,
+		[NotMapped]
 		[Map("FL ATLAS A", MapGroup = MapGroup.FrozenLabyrinth)]
-		[NotMapped]
 		FL_ATLAS_A = 430,
-		[NotMapped]
 		[Map("Payload Escort", MapGroup = MapGroup.PayloadEscort)]
+		[NotMapped]
 		PayloadEscort
 	}
 }

@@ -8,7 +8,7 @@ public class GClass686 : GInterface0
 	{
 		get
 		{
-			return 16725;
+			return 160;
 		}
 	}
 
@@ -16,66 +16,58 @@ public class GClass686 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 14;
 		}
 	}
 
-	public GClass686(uint uint_1 = 0U, GClass355 gclass355_1 = null, int int_1 = 0, bool bool_1 = false)
+	public GClass686(int int_3 = 0, double double_1 = 0.0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.uint_0 = uint_1;
-		if (gclass355_1 == null)
-		{
-			this.gclass355_0 = new GClass355(0U);
-		}
-		else
-		{
-			this.gclass355_0 = gclass355_1;
-		}
-		this.int_0 = int_1;
-		this.bool_0 = bool_1;
+		this.int_0 = int_3;
+		this.double_0 = double_1;
+		this.int_1 = int_4;
+		this.int_2 = int_5;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 16725;
+		return 160;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 14;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		this.uint_0 = (uint)binaryStream_0.smethod_1();
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass355_0 = (GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass355);
-		this.gclass355_0.HrqIugnatr8(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		this.int_0 = (int)binaryStream_0.smethod_1();
+		this.int_0 = (65535 & ((65535 & this.int_0) << 14 | U.smethod_0(65535 & this.int_0, 2)));
+		this.int_0 = ((this.int_0 > 32767) ? (this.int_0 - 65536) : this.int_0);
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.int_1 = (int)binaryStream_0.smethod_1();
+		this.int_1 = (65535 & (U.smethod_0(65535 & this.int_1, 0) | (65535 & this.int_1) << 16));
+		this.int_1 = ((this.int_1 > 32767) ? (this.int_1 - 65536) : this.int_1);
+		this.int_2 = (int)binaryStream_0.smethod_1();
+		this.int_2 = (65535 & (U.smethod_0(65535 & this.int_2, 3) | (65535 & this.int_2) << 13));
+		this.int_2 = ((this.int_2 > 32767) ? (this.int_2 - 65536) : this.int_2);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(16725);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(160);
+		binaryStream_0.smethod_7(65535 & (U.smethod_0(65535 & this.int_0, 14) | (65535 & this.int_0) << 2));
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(65535 & ((65535 & this.int_1) | U.smethod_0(65535 & this.int_1, 16)));
+		binaryStream_0.smethod_7(65535 & ((65535 & this.int_2) << 3 | U.smethod_0(65535 & this.int_2, 13)));
 	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_6(this.uint_0);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		this.gclass355_0.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-	}
-
-	public uint uint_0;
-
-	public bool bool_0;
-
-	public GClass355 gclass355_0;
 
 	public int int_0;
+
+	public double double_0;
+
+	public int int_1;
+
+	public int int_2;
 }

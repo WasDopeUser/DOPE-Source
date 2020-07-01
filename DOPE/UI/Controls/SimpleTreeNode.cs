@@ -68,7 +68,7 @@ namespace DOPE.UI.Controls
 
 		public SimpleTreeNode()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			this.<Children>k__BackingField = new List<SimpleTreeNode>();
 			base..ctor();
 		}

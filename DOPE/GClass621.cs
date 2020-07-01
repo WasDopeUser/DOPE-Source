@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass621 : GInterface0
+public class GClass621 : GClass617, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 8905;
+			return -15348;
 		}
 	}
 
@@ -20,59 +20,37 @@ public class GClass621 : GInterface0
 		}
 	}
 
-	public GClass621(Vector<GClass682> vector_0 = null)
+	public GClass621(string string_0 = "", int int_0 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor();
-		if (vector_0 == null)
-		{
-			this.gMwoQebySC = new Vector<GClass682>();
-			return;
-		}
-		this.gMwoQebySC = vector_0;
+		Class13.F93tSdiz1aNIA();
+		base..ctor(string_0);
+		this.Value = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return 8905;
+		return -15348;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
 		return 4;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		while (this.gMwoQebySC.Length > 0)
-		{
-			this.gMwoQebySC.method_1();
-		}
-		int num = 0;
-		uint num2 = (uint)binaryStream_0.smethod_0();
-		while ((long)num < (long)((ulong)num2))
-		{
-			GClass682 gclass = GClass86.smethod_2((int)binaryStream_0.smethod_1()) as GClass682;
-			gclass.HrqIugnatr8(binaryStream_0);
-			this.gMwoQebySC.method_0(gclass);
-			num++;
-		}
+		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
+		this.Value = binaryStream_0.smethod_0();
+		this.Value = (this.Value << 5 | U.smethod_0(this.Value, 27));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(8905);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(-15348);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.Value, 5) | this.Value << 27);
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_4(this.gMwoQebySC.Length);
-		foreach (GClass682 gclass in this.gMwoQebySC)
-		{
-			gclass.imethod_1(binaryStream_0);
-		}
-	}
-
-	public Vector<GClass682> gMwoQebySC;
+	public int Value;
 }

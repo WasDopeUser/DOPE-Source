@@ -5,7 +5,7 @@ public sealed class GAttribute34 : Attribute
 {
 	public GAttribute34()
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 	}
 }

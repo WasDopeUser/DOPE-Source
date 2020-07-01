@@ -21,7 +21,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Type>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_107);
+				this.method_11(Class5.propertyChangedEventArgs_111);
 			}
 		}
 
@@ -42,7 +42,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this._leashedBy = value;
-				this.method_10(Class5.propertyChangedEventArgs_63);
+				this.method_11(Class5.propertyChangedEventArgs_67);
 			}
 		}
 
@@ -61,7 +61,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Range>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_81);
+				this.method_11(Class5.propertyChangedEventArgs_85);
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<RangeFix>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_82);
+				this.method_11(Class5.propertyChangedEventArgs_86);
 			}
 		}
 
@@ -99,7 +99,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastDistance>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_55);
+				this.method_11(Class5.propertyChangedEventArgs_59);
 			}
 		}
 
@@ -119,19 +119,19 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public override void Init(GClass269 gclass269_0)
+		public override void Init(GClass263 gclass263_0)
 		{
-			base.Init(gclass269_0);
-			if (gclass269_0.bool_0)
+			base.Init(gclass263_0);
+			if (gclass263_0.bool_2)
 			{
-				this.Type = NpcUtils.NpcType.smethod_4(base.Name);
+				this.Type = NpcUtils.NpcType.smethod_5(base.Name);
 			}
 			this.Range = SecurityManager.smethod_3(this);
 		}
 
 		public NpcShip()
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 		}
 

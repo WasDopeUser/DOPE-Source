@@ -1,111 +1,104 @@
 ﻿using System;
 using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass820
+public class GClass820 : GInterface0
 {
-	private void method_0(Vector<uint> vector_2)
+	short GInterface0.Id
 	{
-		this.vector_1[0U] = this.method_1(this.vector_0, 0U);
-		this.vector_1[1U] = this.method_1(this.vector_0, 4U);
-		this.vector_1[2U] = ((this.vector_0[8U] & 255U) | (this.vector_0[9U] << 8 & 65280U));
-		this.vector_1[3U] = this.method_1(vector_2, 0U);
-		this.vector_1[4U] = this.method_1(vector_2, 4U);
-		this.vector_1[5U] = ((vector_2[8U] & 255U) | (vector_2[9U] << 8 & 65280U));
-		this.vector_1[6U] = 0U;
-		this.vector_1[7U] = 0U;
-		this.vector_1[8U] = 0U;
-		this.vector_1[9U] = 28672U;
-		for (int i = 0; i < 36; i++)
+		get
 		{
-			uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
-			uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
-			uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
-			num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
-			num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
-			num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
-			this.vector_1[2U] = this.vector_1[1U];
-			this.vector_1[1U] = this.vector_1[0U];
-			this.vector_1[0U] = num3;
-			this.vector_1[5U] = this.vector_1[4U];
-			this.vector_1[4U] = this.vector_1[3U];
-			this.vector_1[3U] = num;
-			this.vector_1[9U] = this.vector_1[8U];
-			this.vector_1[8U] = this.vector_1[7U];
-			this.vector_1[7U] = this.vector_1[6U];
-			this.vector_1[6U] = num2;
+			return 28177;
 		}
 	}
 
-	private uint method_1(Vector<uint> vector_2, uint uint_2)
+	int GInterface0.SizeBytes
 	{
-		return vector_2[uint_2 + 3U] << 24 | (vector_2[uint_2 + 2U] & 255U) << 16 | (vector_2[uint_2 + 1U] & 255U) << 8 | (vector_2[uint_2] & 255U);
+		get
+		{
+			return 6;
+		}
 	}
 
-	private uint method_2()
+	public GClass820(Vector<GClass820> vector_1 = null, string string_0 = "", GClass617 gclass617_0 = null)
 	{
-		uint num = (this.vector_1[2U] << 30 | (uint)U.smethod_2(this.vector_1[1U], 2)) ^ (this.vector_1[2U] << 3 | (uint)U.smethod_2(this.vector_1[1U], 29));
-		uint num2 = (this.vector_1[5U] << 27 | (uint)U.smethod_2(this.vector_1[4U], 5)) ^ (this.vector_1[5U] << 12 | (uint)U.smethod_2(this.vector_1[4U], 20));
-		uint num3 = (this.vector_1[8U] << 30 | (uint)U.smethod_2(this.vector_1[7U], 2)) ^ (this.vector_1[9U] << 17 | (uint)U.smethod_2(this.vector_1[8U], 15));
-		uint result = num ^ num2 ^ num3;
-		num ^= (((this.vector_1[2U] << 5 | (uint)U.smethod_2(this.vector_1[1U], 27)) & (this.vector_1[2U] << 4 | (uint)U.smethod_2(this.vector_1[1U], 28))) ^ (this.vector_1[5U] << 18 | (uint)U.smethod_2(this.vector_1[4U], 14)));
-		num2 ^= (((this.vector_1[5U] << 14 | (uint)U.smethod_2(this.vector_1[4U], 18)) & (this.vector_1[5U] << 13 | (uint)U.smethod_2(this.vector_1[4U], 19))) ^ (this.vector_1[8U] << 9 | (uint)U.smethod_2(this.vector_1[7U], 23)));
-		num3 ^= (((this.vector_1[9U] << 19 | (uint)U.smethod_2(this.vector_1[8U], 13)) & (this.vector_1[9U] << 18 | (uint)U.smethod_2(this.vector_1[8U], 14))) ^ (this.vector_1[2U] << 27 | (uint)U.smethod_2(this.vector_1[1U], 5)));
-		this.vector_1[2U] = this.vector_1[1U];
-		this.vector_1[1U] = this.vector_1[0U];
-		this.vector_1[0U] = num3;
-		this.vector_1[5U] = this.vector_1[4U];
-		this.vector_1[4U] = this.vector_1[3U];
-		this.vector_1[3U] = num;
-		this.vector_1[9U] = this.vector_1[8U];
-		this.vector_1[8U] = this.vector_1[7U];
-		this.vector_1[7U] = this.vector_1[6U];
-		this.vector_1[6U] = num2;
-		return result;
-	}
-
-	public GClass820(Vector<uint> vector_2, Vector<uint> vector_3)
-	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
+		this.Name = "";
 		base..ctor();
-		this.vector_1 = new Vector<uint>(10);
-		if (vector_2 != null)
+		if (vector_1 == null)
 		{
-			if (vector_2.Length == 10)
-			{
-				if (vector_3 != null)
-				{
-					if (vector_3.Length == 10)
-					{
-						this.vector_0 = vector_2;
-						this.method_0(vector_3);
-						return;
-					}
-				}
-				return;
-			}
+			this.vector_0 = new Vector<GClass820>();
 		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		if (gclass617_0 == null)
+		{
+			this.Value = new GClass617("");
+		}
+		else
+		{
+			this.Value = gclass617_0;
+		}
+		this.Name = string_0;
 	}
 
-	public virtual void vmethod_0(byte[] byte_0, int int_0, int int_1)
+	public virtual int vmethod_0()
 	{
-		for (int i = 0; i < int_1; i++)
-		{
-			if (this.uint_1 == 0U)
-			{
-				this.uint_0 = this.method_2();
-				this.uint_1 = 4U;
-			}
-			byte_0[i + int_0] = (byte)(((uint)byte_0[i + int_0] ^ this.uint_0) & 255U);
-			this.uint_0 >>= 8;
-			this.uint_1 -= 1U;
-		}
+		return 28177;
 	}
 
-	private uint uint_0;
+	public virtual int vmethod_1()
+	{
+		return 6;
+	}
 
-	private uint uint_1;
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = (int)binaryStream_0.smethod_1();
+		while (i < num)
+		{
+			GClass820 gclass = (GClass820)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
+		this.Value = (GClass617)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.Value != null)
+		{
+			this.Value.imethod_0(binaryStream_0);
+		}
+		this.Name = binaryStream_0.smethod_2();
+	}
 
-	private Vector<uint> vector_0;
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(28177);
+		binaryStream_0.smethod_7(this.vector_0.Length);
+		foreach (GClass820 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		if (this.Value != null)
+		{
+			this.Value.imethod_1(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_3(this.Name);
+	}
 
-	private Vector<uint> vector_1;
+	public Vector<GClass820> vector_0;
+
+	public GClass617 Value;
+
+	public string Name;
 }

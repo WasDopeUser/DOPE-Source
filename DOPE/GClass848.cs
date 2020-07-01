@@ -1,76 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI.Packets.Static;
-using DarkorbitAPI.Structures;
-using DOPE.Common.Models;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public class GClass848 : GClass845
+public class GClass848 : GInterface0
 {
-	public override bool IsInterruptible
+	short GInterface0.Id
 	{
 		get
 		{
-			return false;
+			return 4714;
 		}
 	}
 
-	public GClass848(GClass839 gclass839_1)
+	int GInterface0.SizeBytes
 	{
-		Class13.NP5bWyNzLwONS();
-		base..ctor(gclass839_1, TargetMap.PayloadEscort);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		if (botProfile_1 == null)
+		get
 		{
-			return null;
+			return 0;
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass848.<>c.<>c_0.method_0));
 	}
 
-	public override bool TrySwitchMap(out int int_2)
+	public GClass848(int int_1 = 0)
 	{
-		int_2 = 431;
-		if (MapUtils.smethod_2(base.C.Map.MapId) == MapGroup.PayloadEscort)
-		{
-			int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
-		}
-		return true;
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_1;
 	}
 
-	public override int UpdatePriority()
+	public virtual int vmethod_0()
 	{
-		DateTimeOffset eventGateOpening = base.C.Game.EventGateOpening;
-		DateTimeOffset eventGateClosing = base.C.Game.EventGateClosing;
-		DateTimeOffset now = DateTimeOffset.Now;
-		bool flag = (eventGateOpening != default(DateTimeOffset) && eventGateOpening < now && eventGateClosing < now) || base.C.Hero.LastStatUpdate == default(DateTimeOffset);
-		bool flag2 = base.C.Hero.method_24("resource_payload-keys") > 0.0;
-		if (!flag && (!(eventGateClosing > eventGateOpening) || !(eventGateClosing > now) || !flag2) && (!base.C.gclass856_0.method_28().smethod_0(120000) || !base.C.Game.LastDied.smethod_0(60000)))
-		{
-			return int.MinValue;
-		}
-		int num = base.UpdatePriority();
-		if (num > 0)
-		{
-			base.C.Scheduler.method_9(this);
-		}
-		return num;
+		return 4714;
 	}
 
-	public override bool CheckStopped()
+	public virtual int vmethod_1()
 	{
-		return MapUtils.smethod_2(base.C.Map.MapId) != MapGroup.PayloadEscort;
+		return 0;
 	}
 
-	public override string ToString()
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		return "Payload Escort";
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(4714);
+		binaryStream_0.smethod_7(this.int_0);
+	}
+
+	public int int_0;
 }

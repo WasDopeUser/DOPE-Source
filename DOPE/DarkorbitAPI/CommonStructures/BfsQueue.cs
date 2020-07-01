@@ -23,7 +23,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public BfsQueue(T[] gparam_0, Comparer<T> comparer_0)
 		{
-			Class13.NP5bWyNzLwONS();
+			Class13.F93tSdiz1aNIA();
 			base..ctor();
 			this._pendingUpdates = new List<int>();
 			this._store = gparam_0;

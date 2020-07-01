@@ -8,7 +8,7 @@ public class GClass566 : GInterface0
 	{
 		get
 		{
-			return 5949;
+			return 2280;
 		}
 	}
 
@@ -16,53 +16,49 @@ public class GClass566 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 12;
 		}
 	}
 
-	public GClass566(int int_1 = 0, string string_1 = "")
+	public GClass566(int int_2 = 0, int int_3 = 0, double double_1 = 0.0)
 	{
-		Class13.NP5bWyNzLwONS();
-		this.string_0 = "";
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_0 = int_1;
-		this.string_0 = string_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
+		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 5949;
+		return 2280;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 12;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
-		binaryStream_0.smethod_1();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 15) | this.int_1 << 17);
+		this.double_0 = (double)binaryStream_0.smethod_10();
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(5949);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(30352);
-		binaryStream_0.smethod_7(2538);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(2280);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		binaryStream_0.smethod_4(this.int_1 << 15 | U.smethod_0(this.int_1, 17));
+		binaryStream_0.smethod_9(this.double_0);
 	}
 
 	public int int_0;
 
-	public string string_0;
+	public int int_1;
+
+	public double double_0;
 }

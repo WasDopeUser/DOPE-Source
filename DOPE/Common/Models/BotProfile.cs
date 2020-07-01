@@ -14,8 +14,8 @@ using DOPE.UI.Models;
 
 namespace DOPE.Common.Models
 {
-	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	[DataContract]
+	[Guid("7122A7DC-8FD9-47B7-97FA-6170F257094D")]
 	public class BotProfile : INotifyPropertyChanged
 	{
 		[DataMember(Order = 1)]
@@ -128,7 +128,7 @@ namespace DOPE.Common.Models
 				npc.Enabled = true;
 				npc.Priority = -1;
 			});
-			int battlerayId = NpcUtils.NpcType.smethod_4("Battleray").Id;
+			int battlerayId = NpcUtils.NpcType.smethod_5("Battleray").Id;
 			mapProfile.NpcWhitelist.First((SelectedNpcModel t) => t.NpcId == battlerayId).Enabled = false;
 		}
 
@@ -144,7 +144,7 @@ namespace DOPE.Common.Models
 				maps.Add(mapProfile2);
 			}
 			mapProfile.TargetMap = TargetMap.X6;
-			int cubikonId = NpcUtils.NpcType.smethod_4("Cubikon").Id;
+			int cubikonId = NpcUtils.NpcType.smethod_5("Cubikon").Id;
 			mapProfile.Fill(delegate(SelectedNpcModel npc)
 			{
 				npc.Enabled = true;
@@ -210,7 +210,7 @@ namespace DOPE.Common.Models
 			}
 			mapProfile.FleeFromEnemyAttacker = false;
 			mapProfile.TargetMap = TargetMap.PayloadEscort;
-			IEnumerable<NpcUtils.NpcType> worthy = NpcUtils.NpcType.smethod_3(new NpcUtils.NpcClass[]
+			IEnumerable<NpcUtils.NpcType> worthy = NpcUtils.NpcType.smethod_4(new NpcUtils.NpcClass[]
 			{
 				NpcUtils.N_PiercingMimesis,
 				NpcUtils.N_ObscuredMimesis

@@ -8,7 +8,7 @@ public class GClass689 : GInterface0
 	{
 		get
 		{
-			return 23791;
+			return 2075;
 		}
 	}
 
@@ -16,47 +16,77 @@ public class GClass689 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 13;
 		}
 	}
 
-	public GClass689(int int_1 = 0)
+	public GClass689(Vector<GClass716> vector_1 = null, bool bool_1 = false, int int_2 = 0, int int_3 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass716>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		this.bool_0 = bool_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 23791;
+		return 2075;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 13;
 	}
 
-	public virtual void HrqIugnatr8(BinaryStream binaryStream_0)
+	public virtual void imethod_0(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_1();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = (int)binaryStream_0.smethod_1();
+		while (i < num)
+		{
+			GClass716 gclass = (GClass716)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_0(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
+		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 9) | this.int_0 << 23);
-		binaryStream_0.smethod_1();
+		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 15) | this.int_1 << 17);
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(23791);
-		this.vmethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(2075);
+		binaryStream_0.smethod_7(this.vector_0.Length);
+		foreach (GClass716 gclass in this.vector_0)
+		{
+			gclass.imethod_1(binaryStream_0);
+		}
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_4(this.int_1 << 15 | U.smethod_0(this.int_1, 17));
 	}
 
-	protected virtual void vmethod_2(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_7(-29558);
-		binaryStream_0.smethod_4(this.int_0 << 9 | U.smethod_0(this.int_0, 23));
-		binaryStream_0.smethod_7(17733);
-	}
+	public Vector<GClass716> vector_0;
+
+	public bool bool_0;
 
 	public int int_0;
+
+	public int int_1;
 }

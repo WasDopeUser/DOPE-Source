@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass319 : GClass314, GInterface0
+public class GClass319 : GClass316, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 4607;
+			return 28875;
 		}
 	}
 
@@ -22,14 +22,14 @@ public class GClass319 : GClass314, GInterface0
 
 	public GClass319(int int_1 = 0)
 	{
-		Class13.NP5bWyNzLwONS();
+		Class13.F93tSdiz1aNIA();
 		base..ctor();
 		this.int_0 = int_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 4607;
+		return 28875;
 	}
 
 	public override int vmethod_1()
@@ -37,25 +37,19 @@ public class GClass319 : GClass314, GInterface0
 		return 4;
 	}
 
-	public override void HrqIugnatr8(BinaryStream binaryStream_0)
+	public override void imethod_0(BinaryStream binaryStream_0)
 	{
-		base.HrqIugnatr8(binaryStream_0);
 		binaryStream_0.smethod_1();
+		base.imethod_0(binaryStream_0);
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(4607);
-		this.vmethod_2(binaryStream_0);
-	}
-
-	protected override void vmethod_2(BinaryStream binaryStream_0)
-	{
-		base.vmethod_2(binaryStream_0);
-		binaryStream_0.smethod_7(-17727);
-		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));
+		binaryStream_0.smethod_7(28875);
+		base.imethod_1(binaryStream_0);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
 	}
 
 	public int int_0;

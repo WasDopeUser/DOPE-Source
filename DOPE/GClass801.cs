@@ -1,59 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using DarkorbitAPI.CommonStructures;
+using Syroot.BinaryData;
 
-public static class GClass801
+public class GClass801 : GInterface0
 {
-	public static string smethod_0(string string_0, string string_1)
+	short GInterface0.Id
 	{
-		Encoding unicode = Encoding.Unicode;
-		return Convert.ToBase64String(GClass801.smethod_2(unicode.GetBytes(string_0), unicode.GetBytes(string_1)));
-	}
-
-	public static string smethod_1(string string_0, string string_1)
-	{
-		Encoding unicode = Encoding.Unicode;
-		return unicode.GetString(GClass801.smethod_2(unicode.GetBytes(string_0), Convert.FromBase64String(string_1)));
-	}
-
-	public static byte[] smethod_2(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass801.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	public static byte[] smethod_3(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass801.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	private static byte[] smethod_4(byte[] byte_0)
-	{
-		byte[] array = Enumerable.Range(0, 256).Select(new Func<int, byte>(GClass801.<>c.<>c_0.method_0)).ToArray<byte>();
-		int i = 0;
-		int num = 0;
-		while (i < 256)
+		get
 		{
-			num = (num + (int)byte_0[i % byte_0.Length] + (int)array[i] & 255);
-			GClass801.smethod_6(array, i, num);
-			i++;
+			return 13028;
 		}
-		return array;
 	}
 
-	private static IEnumerable<byte> smethod_5(byte[] byte_0, IEnumerable<byte> ienumerable_0)
+	int GInterface0.SizeBytes
 	{
-		GClass801.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass801.<>c__DisplayClass5_0();
-		CS$<>8__locals1.byte_0 = GClass801.smethod_4(byte_0);
-		CS$<>8__locals1.int_0 = 0;
-		CS$<>8__locals1.int_1 = 0;
-		return ienumerable_0.Select(new Func<byte, byte>(CS$<>8__locals1.method_0));
+		get
+		{
+			return 8;
+		}
 	}
 
-	private static void smethod_6(byte[] byte_0, int int_0, int int_1)
+	public GClass801(int int_2 = 0, int int_3 = 0)
 	{
-		byte b = byte_0[int_0];
-		byte_0[int_0] = byte_0[int_1];
-		byte_0[int_1] = b;
+		Class13.F93tSdiz1aNIA();
+		base..ctor();
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
+
+	public virtual int vmethod_0()
+	{
+		return 13028;
+	}
+
+	public virtual int vmethod_1()
+	{
+		return 8;
+	}
+
+	public virtual void imethod_0(BinaryStream binaryStream_0)
+	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
+	}
+
+	public virtual void imethod_1(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(13028);
+		binaryStream_0.smethod_4(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+	}
+
+	public int int_0;
+
+	public int int_1;
 }
