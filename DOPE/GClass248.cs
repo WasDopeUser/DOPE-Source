@@ -22,7 +22,7 @@ public class GClass248 : GInterface0
 
 	public GClass248(string string_1 = "", Vector<GClass249> vector_0 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -44,7 +44,7 @@ public class GClass248 : GInterface0
 		return 6;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		while (this.Items.Length > 0)
@@ -56,20 +56,20 @@ public class GClass248 : GInterface0
 		while (i < num)
 		{
 			GClass249 gclass = (GClass249)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			gclass.imethod_1(binaryStream_0);
 			this.Items.method_0(gclass);
 			i++;
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(7263);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.WriteByte(this.Items.Length);
 		foreach (GClass249 gclass in this.Items)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 	}
 

@@ -22,7 +22,7 @@ public class GClass646 : GInterface0
 
 	public GClass646(int int_3 = 0, int int_4 = 0, string string_3 = "", string string_4 = "", string string_5 = "", int int_5 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";
@@ -45,7 +45,7 @@ public class GClass646 : GInterface0
 		return 18;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 15 | U.smethod_0(this.int_0, 17));
@@ -58,7 +58,7 @@ public class GClass646 : GInterface0
 		this.int_2 = (U.smethod_0(this.int_2, 4) | this.int_2 << 28);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(6008);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 15) | this.int_0 << 17);

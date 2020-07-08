@@ -8,7 +8,7 @@ public class GClass828 : GInterface0
 	{
 		get
 		{
-			return 62;
+			return 24370;
 		}
 	}
 
@@ -16,38 +16,47 @@ public class GClass828 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 24;
 		}
 	}
 
-	public GClass828(int int_1 = 0)
+	public GClass828(double double_3 = 0.0, double double_4 = 0.0, double double_5 = 0.0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.int_0 = int_1;
+		this.double_0 = double_4;
+		this.double_1 = double_5;
+		this.double_2 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 62;
+		return 24370;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		return 24;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(62);
-		binaryStream_0.smethod_4(this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
+		this.double_2 = binaryStream_0.ReadDouble();
 	}
 
-	public int int_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(24370);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.WriteDouble(this.double_2);
+	}
+
+	public double double_0;
+
+	public double double_1;
+
+	public double double_2;
 }

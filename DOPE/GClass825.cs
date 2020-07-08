@@ -8,7 +8,7 @@ public class GClass825 : GInterface0
 	{
 		get
 		{
-			return 11916;
+			return 203;
 		}
 	}
 
@@ -20,16 +20,29 @@ public class GClass825 : GInterface0
 		}
 	}
 
-	public GClass825(int int_1 = 0)
+	public GClass825(GClass822 gclass822_1 = null, Vector<GClass135> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.int_0 = int_1;
+		if (gclass822_1 == null)
+		{
+			this.gclass822_0 = new GClass822(0);
+		}
+		else
+		{
+			this.gclass822_0 = gclass822_1;
+		}
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass135>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 11916;
+		return 203;
 	}
 
 	public virtual int vmethod_1()
@@ -37,17 +50,47 @@ public class GClass825 : GInterface0
 		return 4;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-	}
-
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(11916);
-		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.gclass822_0 = (GClass822)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass822_0 != null)
+		{
+			this.gclass822_0.imethod_1(binaryStream_0);
+		}
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass135 gclass = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
-	public int int_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(203);
+		if (this.gclass822_0 != null)
+		{
+			this.gclass822_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass135 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+	}
+
+	public GClass822 gclass822_0;
+
+	public Vector<GClass135> vector_0;
 }

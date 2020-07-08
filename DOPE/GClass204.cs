@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass204 : GClass197, GInterface0
+public class GClass204 : GClass196, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 31125;
+			return 28116;
 		}
 	}
 
@@ -16,53 +16,83 @@ public class GClass204 : GClass197, GInterface0
 	{
 		get
 		{
-			return 12;
+			return 2;
 		}
 	}
 
-	public GClass204(int int_2 = 0, int int_3 = 0, int int_4 = 0)
+	public GClass204(GClass206 gclass206_1 = null, string string_0 = "", GClass197 gclass197_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
+		this.Name = "";
 		base..ctor();
-		this.int_0 = int_4;
-		this.int_1 = int_3;
-		this.MapId = int_2;
+		if (gclass197_1 == null)
+		{
+			this.gclass197_0 = new GClass197(0, 0, 0, 0, 0, 0);
+		}
+		else
+		{
+			this.gclass197_0 = gclass197_1;
+		}
+		this.Name = string_0;
+		if (gclass206_1 == null)
+		{
+			this.gclass206_0 = new GClass206(0);
+			return;
+		}
+		this.gclass206_0 = gclass206_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 31125;
+		return 28116;
 	}
 
 	public override int vmethod_1()
 	{
-		return 12;
-	}
-
-	public override void imethod_0(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 13 | U.smethod_0(this.int_1, 19));
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (this.MapId << 5 | U.smethod_0(this.MapId, 27));
+		return 2;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31125);
+		binaryStream_0.smethod_1();
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 13) | this.int_1 << 19);
-		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 5) | this.MapId << 27);
+		this.gclass197_0 = (GClass197)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass197_0 != null)
+		{
+			this.gclass197_0.imethod_1(binaryStream_0);
+		}
+		this.Name = binaryStream_0.smethod_2();
+		this.gclass206_0 = (GClass206)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass206_0 != null)
+		{
+			this.gclass206_0.imethod_1(binaryStream_0);
+		}
 	}
 
-	public int int_0;
+	public override void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(28116);
+		base.imethod_2(binaryStream_0);
+		if (this.gclass197_0 != null)
+		{
+			this.gclass197_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_3(this.Name);
+		if (this.gclass206_0 != null)
+		{
+			this.gclass206_0.imethod_2(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
+	}
 
-	public int int_1;
+	public GClass197 gclass197_0;
 
-	public int MapId;
+	public string Name;
+
+	public GClass206 gclass206_0;
 }

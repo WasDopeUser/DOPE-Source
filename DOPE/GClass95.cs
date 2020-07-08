@@ -32,7 +32,7 @@ public class GClass95 : GInterface4
 
 	public GClass95()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 }

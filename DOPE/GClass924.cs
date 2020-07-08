@@ -1,336 +1,120 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
-using System.Windows.Interop;
-using System.Windows.Markup;
-using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using PErkava;
 
-public class GClass924 : Window, INotifyPropertyChanged, IComponentConnector
+public class GClass924
 {
-	private void method_0()
+	[CompilerGenerated]
+	public int method_0()
 	{
-		this.method_1(GEnum13.None, Keys.Oemtilde);
-		this.method_1((GEnum13)4U, Keys.Oemtilde);
-		this.method_1(GEnum13.None, Keys.Scroll);
-		this.method_1((GEnum13)4U, Keys.Scroll);
+		return this.int_0;
 	}
 
-	protected override void OnSourceInitialized(EventArgs e)
+	[CompilerGenerated]
+	private void method_1(int int_1)
 	{
-		base.OnSourceInitialized(e);
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		this.hwndSource_0 = HwndSource.FromHwnd(windowInteropHelper.Handle);
-		this.hwndSource_0.AddHook(new HwndSourceHook(this.method_3));
-		this.method_0();
+		this.int_0 = int_1;
 	}
 
-	[DllImport("User32.dll")]
-	private static extern bool RegisterHotKey([In] IntPtr intptr_0, [In] int int_1, [In] uint uint_0, [In] uint uint_1);
-
-	[DllImport("User32.dll")]
-	private static extern bool UnregisterHotKey([In] IntPtr intptr_0, [In] int int_1);
-
-	protected override void OnClosed(EventArgs e)
+	[CompilerGenerated]
+	public IntPtr method_2()
 	{
-		HwndSource hwndSource = this.hwndSource_0;
-		if (hwndSource != null)
-		{
-			hwndSource.RemoveHook(new HwndSourceHook(this.method_3));
-		}
-		this.hwndSource_0 = null;
-		this.method_2();
-		base.OnClosed(e);
+		return this.intptr_2;
 	}
 
-	private void method_1(GEnum13 genum13_0, Keys keys_0)
+	[CompilerGenerated]
+	private void method_3(IntPtr intptr_3)
 	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		int num = Interlocked.Increment(ref GClass924.int_0);
-		if (GClass924.RegisterHotKey(windowInteropHelper.Handle, num, (uint)genum13_0, (uint)keys_0))
-		{
-			this.hashSet_0.Add(num);
-		}
+		this.intptr_2 = intptr_3;
 	}
 
-	private void method_2()
+	[CompilerGenerated]
+	public List<GClass926.GStruct3> method_4()
 	{
-		WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
-		foreach (int int_ in this.hashSet_0)
-		{
-			GClass924.UnregisterHotKey(windowInteropHelper.Handle, int_);
-		}
-		this.hashSet_0.Clear();
+		return this.list_0;
 	}
 
-	private IntPtr method_3(IntPtr intptr_0, int int_1, IntPtr intptr_1, IntPtr intptr_2, ref bool bool_1)
+	[CompilerGenerated]
+	private void method_5(List<GClass926.GStruct3> list_1)
 	{
-		if (int_1 == 786)
-		{
-			int item = intptr_1.ToInt32();
-			if (this.hashSet_0.Contains(item))
-			{
-				Keys keys_ = (Keys)((int)intptr_2 >> 16 & 65535);
-				GEnum13 genum13_ = (GEnum13)((int)intptr_2 & 65535);
-				if (this.method_9(this, new GEventArgs0(genum13_, keys_)))
-				{
-					bool_1 = true;
-				}
-			}
-		}
-		return IntPtr.Zero;
+		this.list_0 = list_1;
 	}
 
-	public GClass932 Proxy
+	public GClass924(int int_1)
 	{
-		get
-		{
-			return this.gclass932_0;
-		}
-		set
-		{
-			this.method_6<GClass932>(ref this.gclass932_0, value, "Target", "Proxy");
-		}
-	}
-
-	public Ship Target
-	{
-		get
-		{
-			GClass932 proxy = this.Proxy;
-			if (proxy == null)
-			{
-				return null;
-			}
-			GameManager game = proxy.Game;
-			if (game == null)
-			{
-				return null;
-			}
-			Map map = game.Map;
-			if (map == null)
-			{
-				return null;
-			}
-			return map.SelectedShip;
-		}
-	}
-
-	public GClass924()
-	{
-		Class13.F93tSdiz1aNIA();
-		this.hashSet_0 = new HashSet<int>();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		base.Closed += this.GClass924_Closed;
-		this.gclass931_0 = new GClass931();
-		this.timer_0 = new System.Windows.Forms.Timer();
-		this.timer_0.Tick += this.timer_0_Tick;
-		this.timer_0.Interval = 100;
-		this.timer_0.Start();
+		this.method_1(int_1);
 	}
 
-	public void method_4()
+	public bool method_6()
 	{
-		this.gclass931_0.method_3();
-		this.gclass931_0.ShowDialog();
-		base.Topmost = true;
-		base.Focus();
-	}
-
-	public bool method_5()
-	{
-		this.method_4();
-		if (!this.gclass931_0.IsSupported)
+		this.method_5(new List<GClass926.GStruct3>());
+		GClass926.GStruct1 gstruct = default(GClass926.GStruct1);
+		GClass926.GetSystemInfo(out gstruct);
+		this.intptr_0 = gstruct.vaGwoxQbGjs;
+		this.intptr_1 = gstruct.intptr_0;
+		long num = (long)this.intptr_0;
+		long num2 = (long)this.intptr_1;
+		IntPtr intPtr;
+		this.method_3(intPtr = GClass926.OpenProcess(5176, false, this.method_0()));
+		IntPtr intPtr2 = intPtr;
+		GClass926.GStruct3 gstruct2 = default(GClass926.GStruct3);
+		if (GClass926.smethod_0(intPtr2))
 		{
-			base.Close();
-			return false;
+			num2 = Math.Min(2147483647L, num2);
 		}
-		base.Visibility = Visibility.Visible;
-		base.Topmost = true;
-		base.Focus();
-		return true;
-	}
-
-	private void GClass924_Closed(object sender, EventArgs e)
-	{
-		System.Windows.Forms.Timer timer = this.timer_0;
-		if (timer != null)
+		this.intptr_1 = (IntPtr)num2;
+		int num3 = 0;
+		while (num < num2)
 		{
-			timer.Stop();
-		}
-		System.Windows.Forms.Timer timer2 = this.timer_0;
-		if (timer2 != null)
-		{
-			timer2.Dispose();
-		}
-		if (this.gclass931_0 != null)
-		{
-			this.gclass931_0.method_2(true);
-		}
-		GClass931 gclass = this.gclass931_0;
-		if (gclass == null)
-		{
-			return;
-		}
-		gclass.Close();
-	}
-
-	protected void method_6<Ys0Na4DTbDSwkZVqse3>(ref Ys0Na4DTbDSwkZVqse3 gparam_0, Ys0Na4DTbDSwkZVqse3 jdfEKDDjpPoRh1ldpQO, string string_0 = null, [CallerMemberName] string name = null)
-	{
-		if (!EqualityComparer<Ys0Na4DTbDSwkZVqse3>.Default.Equals(gparam_0, jdfEKDDjpPoRh1ldpQO))
-		{
-			gparam_0 = jdfEKDDjpPoRh1ldpQO;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged != null)
+			int num4;
+			gstruct2 = GClass926.smethod_2(intPtr2, this.intptr_0, out num4);
+			if (num4 == 0)
 			{
-				propertyChanged(this, new PropertyChangedEventArgs(name));
-			}
-			if (string_0 != null)
-			{
-				PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
-				if (propertyChanged2 == null)
+				if (gstruct2.int_1 == 4 && gstruct2.State == 4096)
 				{
-					return;
+					this.method_4().Add(gstruct2);
 				}
-				propertyChanged2(this, new PropertyChangedEventArgs(string_0));
+				num += gstruct2.long_0;
+				this.intptr_0 = new IntPtr(num);
+				num3++;
 			}
-		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	private void method_7(object sender, RoutedEventArgs e)
-	{
-		GClass932 proxy = this.Proxy;
-		if (proxy == null)
-		{
-			return;
-		}
-		GClass84<GClass857> gclass = proxy.method_0();
-		if (gclass == null)
-		{
-			return;
-		}
-		GClass91 socket = gclass.Socket;
-		if (socket == null)
-		{
-			return;
-		}
-		socket.method_8();
-	}
-
-	private void timer_0_Tick(object sender, EventArgs e)
-	{
-		IntPtr foregroundWindow = GClass927.GetForegroundWindow();
-		GClass932 proxy = null;
-		PErkava.concurrentDictionary_0.TryGetValue(foregroundWindow, out proxy);
-		this.Proxy = proxy;
-	}
-
-	public void method_8(bool bool_1)
-	{
-		GClass924.<>c__DisplayClass30_0 CS$<>8__locals1 = new GClass924.<>c__DisplayClass30_0();
-		CS$<>8__locals1.hero_0 = this.Proxy.Game.Hero;
-		Ship ship;
-		if (bool_1)
-		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_0), null, 0);
-		}
-		else
-		{
-			ship = this.Proxy.Game.Map.method_5<Ship>(CS$<>8__locals1.hero_0.Position, new Func<Ship, bool>(CS$<>8__locals1.method_1), null, 0);
-		}
-		if (ship != null)
-		{
-			this.Proxy.Game.Connection.Server.method_9(ship, false);
-		}
-	}
-
-	public bool method_9(object object_0, GEventArgs0 geventArgs0_0)
-	{
-		if (this.Proxy == null)
-		{
-			return false;
-		}
-		if (geventArgs0_0.Key != Keys.Oemtilde)
-		{
-			if (geventArgs0_0.Key != Keys.Scroll)
+			else
 			{
-				return false;
+				if (num3 == 0)
+				{
+					throw new Win32Exception(num4);
+				}
+				return true;
 			}
 		}
-		this.method_8(geventArgs0_0.method_0().HasFlag((GEnum13)4U));
 		return true;
 	}
 
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
+	public bool method_7(IntPtr intptr_3, byte[] byte_0)
 	{
-		if (this.bool_0)
-		{
-			return;
-		}
-		this.bool_0 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/overlaywindow.xaml", UriKind.Relative);
-		System.Windows.Application.LoadComponent(this, resourceLocator);
+		int num = 0;
+		return GClass926.WriteProcessMemory(this.method_2(), intptr_3, byte_0, byte_0.Length, ref num);
 	}
 
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	void IComponentConnector.Connect(int connectionId, object target)
+	public bool method_8(IntPtr intptr_3, byte[] byte_0, int int_1)
 	{
-		switch (connectionId)
-		{
-		case 1:
-			this.Guide = (System.Windows.Controls.Label)target;
-			return;
-		case 2:
-			this.Progress = (System.Windows.Controls.Label)target;
-			return;
-		case 3:
-			((System.Windows.Controls.Button)target).Click += this.method_7;
-			return;
-		default:
-			this.bool_0 = true;
-			return;
-		}
+		int num = 0;
+		return GClass926.ReadProcessMemory(this.method_2(), intptr_3, byte_0, int_1, ref num);
 	}
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass924()
-	{
-		Class13.F93tSdiz1aNIA();
-		GClass924.int_0 = 913376;
-	}
+	[CompilerGenerated]
+	private int int_0;
 
-	private HwndSource hwndSource_0;
+	private IntPtr intptr_0;
 
-	private static int int_0;
+	private IntPtr intptr_1;
 
-	private HashSet<int> hashSet_0;
+	[CompilerGenerated]
+	private IntPtr intptr_2;
 
-	private GClass932 gclass932_0;
-
-	private System.Windows.Forms.Timer timer_0;
-
-	private GClass931 gclass931_0;
-
-	internal System.Windows.Controls.Label Guide;
-
-	internal System.Windows.Controls.Label Progress;
-
-	private bool bool_0;
+	[CompilerGenerated]
+	private List<GClass926.GStruct3> list_0;
 }

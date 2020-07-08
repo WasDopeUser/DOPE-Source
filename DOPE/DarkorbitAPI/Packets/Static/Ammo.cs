@@ -7,7 +7,7 @@ namespace DarkorbitAPI.Packets.Static
 	{
 		public static string smethod_0(this Enum enum_0)
 		{
-			GAttribute70 gattribute = enum_0.smethod_0<GAttribute70>();
+			GAttribute69 gattribute = enum_0.smethod_0<GAttribute69>();
 			if (gattribute == null)
 			{
 				return null;

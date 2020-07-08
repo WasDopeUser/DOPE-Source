@@ -22,7 +22,7 @@ public class GClass368 : GInterface0
 
 	public GClass368(int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0, int int_18 = 0, int int_19 = 0, int int_20 = 0, int int_21 = 0, string string_1 = "", int int_22 = 0, int int_23 = 0, int int_24 = 0, int int_25 = 0, int int_26 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.int_0 = int_13;
@@ -39,7 +39,7 @@ public class GClass368 : GInterface0
 		this.int_10 = int_23;
 		this.int_11 = int_24;
 		this.int_12 = int_25;
-		this.FbyGfehjip = int_26;
+		this.kYlQyCluj2 = int_26;
 	}
 
 	public virtual int vmethod_0()
@@ -52,7 +52,7 @@ public class GClass368 : GInterface0
 		return 54;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
@@ -80,11 +80,11 @@ public class GClass368 : GInterface0
 		this.int_11 = (U.smethod_0(this.int_11, 6) | this.int_11 << 26);
 		this.int_12 = binaryStream_0.smethod_0();
 		this.int_12 = (U.smethod_0(this.int_12, 4) | this.int_12 << 28);
-		this.FbyGfehjip = binaryStream_0.smethod_0();
-		this.FbyGfehjip = (this.FbyGfehjip << 1 | U.smethod_0(this.FbyGfehjip, 31));
+		this.kYlQyCluj2 = binaryStream_0.smethod_0();
+		this.kYlQyCluj2 = (this.kYlQyCluj2 << 1 | U.smethod_0(this.kYlQyCluj2, 31));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(6017);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
@@ -101,7 +101,7 @@ public class GClass368 : GInterface0
 		binaryStream_0.smethod_4(this.int_10 << 3 | U.smethod_0(this.int_10, 29));
 		binaryStream_0.smethod_4(this.int_11 << 6 | U.smethod_0(this.int_11, 26));
 		binaryStream_0.smethod_4(this.int_12 << 4 | U.smethod_0(this.int_12, 28));
-		binaryStream_0.smethod_4(U.smethod_0(this.FbyGfehjip, 1) | this.FbyGfehjip << 31);
+		binaryStream_0.smethod_4(U.smethod_0(this.kYlQyCluj2, 1) | this.kYlQyCluj2 << 31);
 	}
 
 	public int int_0;
@@ -132,5 +132,5 @@ public class GClass368 : GInterface0
 
 	public int int_12;
 
-	public int FbyGfehjip;
+	public int kYlQyCluj2;
 }

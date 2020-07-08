@@ -6,29 +6,29 @@ public sealed class GAttribute9 : Attribute
 {
 	public GAttribute9()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this..ctor(true);
 	}
 
-	public GAttribute9(bool bool_0)
+	public GAttribute9(bool bool_1)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.method_1(bool_0);
+		this.method_1(bool_1);
 	}
 
 	[CompilerGenerated]
 	public bool method_0()
 	{
-		return this.gmpcrObcuC;
+		return this.bool_0;
 	}
 
 	[CompilerGenerated]
-	private void method_1(bool bool_0)
+	private void method_1(bool bool_1)
 	{
-		this.gmpcrObcuC = bool_0;
+		this.bool_0 = bool_1;
 	}
 
 	[CompilerGenerated]
-	private bool gmpcrObcuC;
+	private bool bool_0;
 }

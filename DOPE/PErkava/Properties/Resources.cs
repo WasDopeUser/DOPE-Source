@@ -9,14 +9,14 @@ using System.Runtime.CompilerServices;
 
 namespace PErkava.Properties
 {
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
 	[CompilerGenerated]
 	[DebuggerNonUserCode]
-	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
 	public class Resources
 	{
 		internal Resources()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -25,11 +25,11 @@ namespace PErkava.Properties
 		{
 			get
 			{
-				if (Resources.resourceManager_0 == null)
+				if (Resources.AfHwdagYehW == null)
 				{
-					Resources.resourceManager_0 = new ResourceManager("PErkava.Properties.Resources", typeof(Resources).Assembly);
+					Resources.AfHwdagYehW = new ResourceManager("PErkava.Properties.Resources", typeof(Resources).Assembly);
 				}
-				return Resources.resourceManager_0;
+				return Resources.AfHwdagYehW;
 			}
 		}
 
@@ -62,7 +62,7 @@ namespace PErkava.Properties
 			}
 		}
 
-		private static ResourceManager resourceManager_0;
+		private static ResourceManager AfHwdagYehW;
 
 		private static CultureInfo cultureInfo_0;
 	}

@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass202 : GClass197, GInterface0
+public class GClass202 : GClass196, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12691;
+			return 28893;
 		}
 	}
 
@@ -16,40 +16,41 @@ public class GClass202 : GClass197, GInterface0
 	{
 		get
 		{
-			return 1;
+			return 4;
 		}
 	}
 
-	public GClass202(bool bool_1 = false)
+	public GClass202(int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.bool_0 = bool_1;
+		this.int_0 = int_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 12691;
+		return 28893;
 	}
 
 	public override int vmethod_1()
 	{
-		return 1;
-	}
-
-	public override void imethod_0(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		return 4;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12691);
+		binaryStream_0.smethod_1();
 		base.imethod_1(binaryStream_0);
-		binaryStream_0.WriteBoolean(this.bool_0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 4) | this.int_0 << 28);
 	}
 
-	public bool bool_0;
+	public override void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(28893);
+		base.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_4(this.int_0 << 4 | U.smethod_0(this.int_0, 28));
+	}
+
+	public int int_0;
 }

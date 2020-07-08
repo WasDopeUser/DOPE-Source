@@ -1,76 +1,185 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DarkorbitAPI.Packets.Static;
+using System.Runtime.CompilerServices;
+using DarkorbitAPI;
 using DarkorbitAPI.Structures;
+using DOPE.Common;
 using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
+using DOPE.Core;
+using DOPE.UI.Models;
 
-public class GClass899 : GClass896
+public class GClass899 : GClass894
 {
-	public override bool IsInterruptible
+	public GEnum5 GalaxyGateType
 	{
+		[CompilerGenerated]
 		get
 		{
-			return false;
+			return this.genum5_0;
+		}
+		[CompilerGenerated]
+		set
+		{
+			if (this.genum5_0 == value)
+			{
+				return;
+			}
+			this.genum5_0 = value;
+			this.method_0(Class10.propertyChangedEventArgs_23);
 		}
 	}
 
-	public GClass899(GClass890 gclass890_1)
+	public GClass899(GClass889 gclass889_1, TargetMap targetMap_1)
 	{
-		Class13.F93tSdiz1aNIA();
-		base..ctor(gclass890_1, TargetMap.PayloadEscort);
+		Class13.xnk8ImWzpOt04();
+		base..ctor(gclass889_1, targetMap_1, "G", int.MinValue);
+		this.GalaxyGateType = MapUtils.smethod_10((int)targetMap_1);
 	}
 
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	protected override void OnBind()
 	{
-		if (botProfile_1 == null)
-		{
-			return null;
-		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass899.<>c.<>c_0.method_0));
+		base.OnBind();
+		base.C.Game.Map.ShipCreated += this.method_2;
+		base.C.Game.Map.ShipDestroyed += this.method_1;
 	}
 
-	public override bool TrySwitchMap(out int int_2)
+	protected override void OnUnbind()
 	{
-		int_2 = 431;
-		if (MapUtils.smethod_2(base.C.Map.MapId) == MapGroup.PayloadEscort)
-		{
-			int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
-		}
-		return true;
+		base.OnUnbind();
+		base.C.Game.Map.ShipCreated -= this.method_2;
+		base.C.Game.Map.ShipDestroyed -= this.method_1;
 	}
 
-	public override int UpdatePriority()
+	private void method_1(Map map_0, Ship ship_0, bool bool_0)
 	{
-		DateTimeOffset eventGateOpening = base.C.Game.EventGateOpening;
-		DateTimeOffset eventGateClosing = base.C.Game.EventGateClosing;
-		DateTimeOffset now = DateTimeOffset.Now;
-		bool flag = (eventGateOpening != default(DateTimeOffset) && eventGateOpening < now && eventGateClosing < now) || base.C.Hero.LastStatUpdate == default(DateTimeOffset);
-		bool flag2 = base.C.Hero.method_26("resource_payload-keys") > 0.0;
-		if (!flag && (!(eventGateClosing > eventGateOpening) || !(eventGateClosing > now) || !flag2) && (!base.C.gclass907_0.method_28().smethod_0(120000) || !base.C.Game.LastDied.smethod_0(60000)))
+		GClass903 behavior = base.C.Behavior;
+		if (ship_0.IsNpc)
 		{
-			return int.MinValue;
+			GClass913 gclass = behavior as GClass913;
+			if (gclass != null)
+			{
+				gclass.method_38(false);
+			}
 		}
-		int num = base.UpdatePriority();
-		if (num > 0)
+	}
+
+	private void method_2(Map map_0, Ship ship_0)
+	{
+		GClass903 behavior = base.C.Behavior;
+		if (ship_0.IsNpc)
 		{
-			base.C.Scheduler.method_11(this);
+			GClass913 gclass = behavior as GClass913;
+			if (gclass != null && !gclass.method_37())
+			{
+				bool flag = map_0.Ships.Count(new Func<KeyValuePair<int, Ship>, bool>(GClass899.<>c.<>c_0.method_0)) == 1;
+				gclass.method_38(flag);
+				if (flag)
+				{
+					base.Log.Info("New wave -- {ship}", ship_0.Name);
+				}
+			}
 		}
-		return num;
 	}
 
 	public override bool CheckStopped()
 	{
-		return MapUtils.smethod_2(base.C.Map.MapId) != MapGroup.PayloadEscort;
+		return !base.C.Map.IsGG;
 	}
 
-	public override string ToString()
+	protected virtual bool vmethod_0()
 	{
-		return "Payload Escort";
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
+		DarkOrbitWebAPI.jumpgateGate jumpgateGate = (ggInfo != null) ? ggInfo.GetGate(this.GalaxyGateType) : null;
+		if (jumpgateGate == null)
+		{
+			return false;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?((int)base.Map), 0) : null;
+		if (selectedNpcModel != null && selectedNpcModel.Enabled)
+		{
+			if (jumpgateGate.prepared)
+			{
+				if (base.Context.Account.JumpGGLastLife || jumpgateGate.livesLeft != 1)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		return false;
 	}
+
+	public override int UpdatePriority()
+	{
+		int result = base.UpdatePriority();
+		GClass922 mainController = base.C.MainController;
+		bool? flag;
+		if (mainController == null)
+		{
+			flag = null;
+		}
+		else
+		{
+			Controller parent = mainController.Parent;
+			if (parent == null)
+			{
+				flag = null;
+			}
+			else
+			{
+				DopeServiceStatus serviceStatus = parent.ServiceStatus;
+				flag = ((serviceStatus != null) ? new bool?(serviceStatus.EnabledGG) : null);
+			}
+		}
+		bool? flag2 = flag;
+		if (flag2.GetValueOrDefault() && this.vmethod_0())
+		{
+			return result;
+		}
+		return int.MinValue;
+	}
+
+	public virtual bool vmethod_1()
+	{
+		int mapId = base.Context.Map.MapId;
+		GEnum5 galaxyGateType = this.GalaxyGateType;
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = base.Context.Game.Web.GgInfo;
+		if (((ggInfo != null) ? ggInfo.GetGate(galaxyGateType) : null) == null)
+		{
+			return false;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		SelectedNpcModel selectedNpcModel = (mapProfile != null) ? mapProfile.GetModel(Ship.Default, base.Context.Map, new int?(mapId), 0) : null;
+		return selectedNpcModel != null && mapProfile.NpcWhitelist.LastOrDefault<SelectedNpcModel>() == selectedNpcModel;
+	}
+
+	public virtual SelectedNpcModel vmethod_2(Ship ship_0)
+	{
+		MapProfile mapProfile = base.MapProfile;
+		if (mapProfile == null)
+		{
+			return null;
+		}
+		return mapProfile.GetModel(Ship.Default, base.C.Map, null, 0);
+	}
+
+	public override bool TrySwitchMap(out int int_2)
+	{
+		if (!base.C.IsStopping)
+		{
+			if (base.State == ModuleState.Started)
+			{
+				int_2 = base.C.MapProfile.TargetMap.Resolve(base.C.Hero.FactionId);
+				return true;
+			}
+		}
+		int_2 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
+		return true;
+	}
+
+	[CompilerGenerated]
+	private GEnum5 genum5_0;
 }

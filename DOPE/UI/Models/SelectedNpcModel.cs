@@ -12,8 +12,8 @@ using DOPE.Common.Models;
 
 namespace DOPE.UI.Models
 {
-	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
 	[DataContract]
+	[Guid("7481B707-DD1F-45BA-AAC1-BFED30058532")]
 	public class SelectedNpcModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate(object sender, PropertyChangedEventArgs e)
@@ -36,7 +36,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<NpcId>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_67);
+				this.<>OnPropertyChanged(Class7.obhwnPxvhrh);
 			}
 		}
 
@@ -99,7 +99,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Laser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_56);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_53);
 			}
 		}
 
@@ -121,7 +121,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Rocket>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_81);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_76);
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Hellstorm>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_49);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_46);
 			}
 		}
 
@@ -164,7 +164,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<DroneFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_20);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_18);
 			}
 		}
 
@@ -208,7 +208,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<Priority>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_74);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
 			}
 		}
 
@@ -230,7 +230,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<CircleRange>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_8);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_6);
 			}
 		}
 
@@ -251,7 +251,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseKamikaze>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_108);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_102);
 			}
 		}
 
@@ -272,7 +272,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GgCornerLaser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_42);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_39);
 			}
 		}
 
@@ -293,7 +293,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseOffensiveAbility>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_104);
 			}
 		}
 
@@ -314,7 +314,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UseSab>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_116);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_110);
 			}
 		}
 
@@ -335,7 +335,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<IgnoreOwnership>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_51);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_48);
 			}
 		}
 
@@ -356,7 +356,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<UsePetLocator>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_111);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_105);
 			}
 		}
 
@@ -377,7 +377,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GroupAttackMode>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_43);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_40);
 			}
 		}
 
@@ -398,7 +398,7 @@ namespace DOPE.UI.Models
 					return;
 				}
 				this.<GG_ChaseFleeing>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_39);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_36);
 			}
 		}
 

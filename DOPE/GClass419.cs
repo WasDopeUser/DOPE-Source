@@ -20,9 +20,9 @@ public class GClass419 : GInterface0
 		}
 	}
 
-	public GClass419(string string_3 = "", Vector<GClass744> vector_1 = null, string string_4 = "", string string_5 = "", bool bool_0 = false)
+	public GClass419(string string_3 = "", Vector<GClass743> vector_1 = null, string string_4 = "", string string_5 = "", bool bool_0 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";
@@ -32,7 +32,7 @@ public class GClass419 : GInterface0
 		this.string_2 = string_4;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass744>();
+			this.vector_0 = new Vector<GClass743>();
 		}
 		else
 		{
@@ -51,7 +51,7 @@ public class GClass419 : GInterface0
 		return 11;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.string_1 = binaryStream_0.smethod_2();
@@ -64,24 +64,24 @@ public class GClass419 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass744 gclass = (GClass744)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			GClass743 gclass = (GClass743)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 		this.Visible = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-4);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.smethod_3(this.string_1);
 		binaryStream_0.smethod_3(this.string_2);
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass744 gclass in this.vector_0)
+		foreach (GClass743 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.WriteBoolean(this.Visible);
 	}
@@ -92,7 +92,7 @@ public class GClass419 : GInterface0
 
 	public string string_2;
 
-	public Vector<GClass744> vector_0;
+	public Vector<GClass743> vector_0;
 
 	public bool Visible;
 }

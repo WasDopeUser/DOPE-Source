@@ -8,7 +8,7 @@ public class GClass689 : GInterface0
 	{
 		get
 		{
-			return 2075;
+			return 188;
 		}
 	}
 
@@ -16,77 +16,44 @@ public class GClass689 : GInterface0
 	{
 		get
 		{
-			return 13;
+			return 6;
 		}
 	}
 
-	public GClass689(Vector<GClass716> vector_1 = null, bool bool_1 = false, int int_2 = 0, int int_3 = 0)
+	public GClass689(int int_0 = 0, string string_1 = "")
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
+		this.string_0 = "";
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass716>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		this.bool_0 = bool_1;
-		this.int_0 = int_2;
-		this.int_1 = int_3;
+		this.MapId = int_0;
+		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2075;
+		return 188;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 13;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int i = 0;
-		int num = (int)binaryStream_0.smethod_1();
-		while (i < num)
-		{
-			GClass716 gclass = (GClass716)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			i++;
-		}
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 15) | this.int_1 << 17);
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2075);
-		binaryStream_0.smethod_7(this.vector_0.Length);
-		foreach (GClass716 gclass in this.vector_0)
-		{
-			gclass.imethod_1(binaryStream_0);
-		}
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		binaryStream_0.smethod_4(this.int_1 << 15 | U.smethod_0(this.int_1, 17));
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 8) | this.MapId << 24);
+		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public Vector<GClass716> vector_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(188);
+		binaryStream_0.smethod_4(this.MapId << 8 | U.smethod_0(this.MapId, 24));
+		binaryStream_0.smethod_3(this.string_0);
+	}
 
-	public bool bool_0;
+	public int MapId;
 
-	public int int_0;
-
-	public int int_1;
+	public string string_0;
 }

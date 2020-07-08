@@ -22,7 +22,7 @@ public class GClass355 : GInterface0
 
 	public GClass355(int int_5 = 0, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0, bool bool_1 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_8;
 		this.bool_0 = bool_1;
@@ -42,7 +42,7 @@ public class GClass355 : GInterface0
 		return 17;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 9 | U.smethod_0(this.int_0, 23));
@@ -56,7 +56,7 @@ public class GClass355 : GInterface0
 		this.int_4 = (U.smethod_0(this.int_4, 3) | this.int_4 << 29);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(4009);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 9) | this.int_0 << 23);

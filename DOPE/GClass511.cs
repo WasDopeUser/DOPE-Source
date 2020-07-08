@@ -22,7 +22,7 @@ public class GClass511 : GInterface0
 
 	public GClass511(int int_1 = 0, bool bool_3 = false, bool bool_4 = false, bool bool_5 = false, int int_2 = 0, Vector<GClass529> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.Id = int_1;
 		this.bool_0 = bool_3;
@@ -47,7 +47,7 @@ public class GClass511 : GInterface0
 		return 15;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.Id = binaryStream_0.smethod_0();
 		this.Id = (U.smethod_0(this.Id, 11) | this.Id << 21);
@@ -65,13 +65,13 @@ public class GClass511 : GInterface0
 		while (i < num)
 		{
 			GClass529 gclass = (GClass529)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(2000);
 		binaryStream_0.smethod_4(this.Id << 11 | U.smethod_0(this.Id, 21));
@@ -82,7 +82,7 @@ public class GClass511 : GInterface0
 		binaryStream_0.WriteByte(this.vector_0.Length);
 		foreach (GClass529 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 	}
 

@@ -8,7 +8,7 @@ public class GClass748 : GInterface0
 	{
 		get
 		{
-			return 20342;
+			return 70;
 		}
 	}
 
@@ -22,13 +22,13 @@ public class GClass748 : GInterface0
 
 	public GClass748()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20342;
+		return 70;
 	}
 
 	public virtual int vmethod_1()
@@ -36,12 +36,12 @@ public class GClass748 : GInterface0
 		return 0;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20342);
+		binaryStream_0.smethod_7(70);
 	}
 }

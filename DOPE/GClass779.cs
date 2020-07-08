@@ -8,7 +8,7 @@ public class GClass779 : GInterface0
 	{
 		get
 		{
-			return 222;
+			return 6521;
 		}
 	}
 
@@ -16,44 +16,32 @@ public class GClass779 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass779(int int_0 = 0, int int_1 = 0)
+	public GClass779()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.jwngorFwJv = int_0;
-		this.MapId = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 222;
+		return 6521;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.jwngorFwJv = binaryStream_0.smethod_0();
-		this.jwngorFwJv = (this.jwngorFwJv << 12 | U.smethod_0(this.jwngorFwJv, 20));
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (this.MapId << 14 | U.smethod_0(this.MapId, 18));
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(222);
-		binaryStream_0.smethod_4(U.smethod_0(this.jwngorFwJv, 12) | this.jwngorFwJv << 20);
-		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 14) | this.MapId << 18);
 	}
 
-	public int jwngorFwJv;
-
-	public int MapId;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(6521);
+	}
 }

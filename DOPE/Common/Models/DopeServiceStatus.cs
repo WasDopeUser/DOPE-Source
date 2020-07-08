@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models
 {
-	[Guid("CB97D19B-EABB-4D5B-A517-D914CC96AA76")]
 	[DataContract]
+	[Guid("CB97D19B-EABB-4D5B-A517-D914CC96AA76")]
 	public class DopeServiceStatus
 	{
 		[DataMember(Order = 1)]

@@ -22,7 +22,7 @@ public class GClass389 : GInterface0
 
 	public GClass389(int int_0 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.MapId = int_0;
 	}
@@ -37,13 +37,13 @@ public class GClass389 : GInterface0
 		return 4;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.MapId = binaryStream_0.smethod_0();
 		this.MapId = (this.MapId << 4 | U.smethod_0(this.MapId, 28));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(37);
 		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 4) | this.MapId << 28);

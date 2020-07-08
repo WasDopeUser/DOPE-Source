@@ -8,7 +8,7 @@ public class GClass831 : GInterface0
 	{
 		get
 		{
-			return 2281;
+			return 11873;
 		}
 	}
 
@@ -16,32 +16,38 @@ public class GClass831 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass831()
+	public GClass831(int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2281;
+		return 11873;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2281);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 3 | U.smethod_0(this.int_0, 29));
 	}
+
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(11873);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 3) | this.int_0 << 29);
+	}
+
+	public int int_0;
 }

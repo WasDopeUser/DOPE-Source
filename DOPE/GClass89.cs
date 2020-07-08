@@ -4,7 +4,7 @@ using NLog;
 
 public static class GClass89
 {
-	public static GEnum6 WvgjcyLaVY(string string_0)
+	public static GEnum6 smethod_0(string string_0)
 	{
 		if (string_0 != null)
 		{
@@ -400,7 +400,7 @@ public static class GClass89
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass89()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		GClass89.Unknown = new HashSet<string>();
 	}
 

@@ -22,7 +22,7 @@ public class GClass549 : GInterface0
 
 	public GClass549(int int_3 = 0, string string_1 = "", bool bool_1 = false, Vector<string> vector_1 = null, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.int_0 = int_3;
@@ -50,7 +50,7 @@ public class GClass549 : GInterface0
 		return 15;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
@@ -72,7 +72,7 @@ public class GClass549 : GInterface0
 		this.int_2 = (int)binaryStream_0.smethod_1();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(2270);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);

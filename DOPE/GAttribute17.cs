@@ -6,13 +6,13 @@ public sealed class GAttribute17 : Attribute
 {
 	public GAttribute17()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 
 	public GAttribute17([GAttribute1] string justification)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.String_0 = justification;
 	}
@@ -21,5 +21,5 @@ public sealed class GAttribute17 : Attribute
 	public string String_0 { get; private set; }
 
 	[CompilerGenerated]
-	private string string_0;
+	private string eYxKsQbbEy;
 }

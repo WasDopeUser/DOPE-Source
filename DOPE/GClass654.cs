@@ -22,7 +22,7 @@ public class GClass654 : GInterface0
 
 	public GClass654(int int_2 = 0, Vector<int> vector_1 = null, int int_3 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_2;
 		if (vector_1 == null)
@@ -46,7 +46,7 @@ public class GClass654 : GInterface0
 		return 12;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
@@ -67,7 +67,7 @@ public class GClass654 : GInterface0
 		this.int_1 = (U.smethod_0(this.int_1, 13) | this.int_1 << 19);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(4900);
 		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));

@@ -22,7 +22,7 @@ public class GClass618 : GClass617, GInterface0
 
 	public GClass618(string string_0 = "", bool bool_0 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor(string_0);
 		this.Value = bool_0;
 	}
@@ -37,17 +37,17 @@ public class GClass618 : GClass617, GInterface0
 		return 1;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
+		base.imethod_1(binaryStream_0);
 		this.Value = binaryStream_0.ReadBoolean();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(29203);
-		base.imethod_1(binaryStream_0);
+		base.imethod_2(binaryStream_0);
 		binaryStream_0.WriteBoolean(this.Value);
 	}
 

@@ -22,7 +22,7 @@ public class GClass242 : GInterface0
 
 	public GClass242(Vector<GClass240> vector_0 = null, int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (vector_0 == null)
 		{
@@ -47,7 +47,7 @@ public class GClass242 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		while (this.Items.Length > 0)
 		{
@@ -58,7 +58,7 @@ public class GClass242 : GInterface0
 		while (i < num)
 		{
 			GClass240 gclass = (GClass240)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			gclass.imethod_1(binaryStream_0);
 			this.Items.method_0(gclass);
 			i++;
 		}
@@ -70,13 +70,13 @@ public class GClass242 : GInterface0
 		this.int_2 = (this.int_2 << 10 | U.smethod_0(this.int_2, 22));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-19699);
 		binaryStream_0.smethod_7(this.Items.Length);
 		foreach (GClass240 gclass in this.Items)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
 		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));

@@ -22,7 +22,7 @@ public class GClass585 : GInterface0
 
 	public GClass585(int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_6;
 		this.Color = int_5;
@@ -40,7 +40,7 @@ public class GClass585 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
@@ -52,7 +52,7 @@ public class GClass585 : GInterface0
 		this.int_2 = (this.int_2 << 16 | U.smethod_0(this.int_2, 16));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-30023);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);

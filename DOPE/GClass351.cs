@@ -22,7 +22,7 @@ public class GClass351 : GInterface0
 
 	public GClass351(string string_2 = "", string string_3 = "", double double_0 = 0.0, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
@@ -42,7 +42,7 @@ public class GClass351 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.string_1 = binaryStream_0.smethod_2();
@@ -51,7 +51,7 @@ public class GClass351 : GInterface0
 		this.int_0 = (this.int_0 << 11 | U.smethod_0(this.int_0, 21));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-5163);
 		binaryStream_0.smethod_3(this.string_0);

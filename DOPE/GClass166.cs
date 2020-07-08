@@ -8,7 +8,7 @@ public class GClass166 : GInterface0
 	{
 		get
 		{
-			return 132;
+			return 255;
 		}
 	}
 
@@ -20,21 +20,29 @@ public class GClass166 : GInterface0
 		}
 	}
 
-	public GClass166(GClass135 gclass135_1 = null)
+	public GClass166(GClass258 gclass258_1 = null, GClass238 gclass238_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (gclass135_1 == null)
+		if (gclass258_1 == null)
 		{
-			this.gclass135_0 = new GClass135(null, 0.0);
+			this.gclass258_0 = new GClass258(0);
+		}
+		else
+		{
+			this.gclass258_0 = gclass258_1;
+		}
+		if (gclass238_1 == null)
+		{
+			this.gclass238_0 = new GClass238(0, 0, "", "", 0);
 			return;
 		}
-		this.gclass135_0 = gclass135_1;
+		this.gclass238_0 = gclass238_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 132;
+		return 255;
 	}
 
 	public virtual int vmethod_1()
@@ -42,25 +50,40 @@ public class GClass166 : GInterface0
 		return 0;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass135_0 = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass135_0 != null)
+		this.gclass258_0 = (GClass258)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass258_0 != null)
 		{
-			this.gclass135_0.imethod_0(binaryStream_0);
+			this.gclass258_0.imethod_1(binaryStream_0);
+		}
+		this.gclass238_0 = (GClass238)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass238_0 != null)
+		{
+			this.gclass238_0.imethod_1(binaryStream_0);
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(132);
-		if (this.gclass135_0 != null)
+		binaryStream_0.smethod_7(255);
+		if (this.gclass258_0 != null)
 		{
-			this.gclass135_0.imethod_1(binaryStream_0);
+			this.gclass258_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		if (this.gclass238_0 != null)
+		{
+			this.gclass238_0.imethod_2(binaryStream_0);
 			return;
 		}
 		binaryStream_0.smethod_7(0);
 	}
 
-	public GClass135 gclass135_0;
+	public GClass258 gclass258_0;
+
+	public GClass238 gclass238_0;
 }

@@ -70,7 +70,7 @@ namespace DarkorbitAPI
 
 		public SecurityManager(GameManager gameManager_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.HashBlockList = new CooldownTracker<string>();
 			this.Random = new Random();
 			base..ctor();
@@ -132,7 +132,7 @@ namespace DarkorbitAPI
 
 		static SecurityManager()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			SecurityManager.NpcRangesRegular = new Dictionary<NpcUtils.NpcClass, int>
 			{
 				{

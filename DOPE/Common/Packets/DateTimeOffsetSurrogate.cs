@@ -4,8 +4,8 @@ using ProtoBuf;
 
 namespace DOPE.Common.Packets
 {
-	[ProtoContract]
 	[Guid("98D9B168-D2AF-4158-9BB0-3A02C7D8D04C")]
+	[ProtoContract]
 	public class DateTimeOffsetSurrogate
 	{
 		[ProtoMember(1)]

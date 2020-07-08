@@ -12,7 +12,7 @@ public class GClass113 : GInterface4
 
 	public GClass113()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 }

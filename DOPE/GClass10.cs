@@ -8,17 +8,17 @@ public static class GClass10
 	public class GClass11
 	{
 		[JsonProperty("sumRockets")]
-		public int Int32_0 { get; set; }
+		public int CmIkwFwIkd { get; set; }
 
 		[JsonProperty("sumBatteries")]
-		public int Int32_1 { get; set; }
+		public int Int32_0 { get; set; }
 
 		[JsonProperty("sumLaser")]
-		public int Int32_2 { get; set; }
+		public int Int32_1 { get; set; }
 
 		public GClass11()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -48,7 +48,7 @@ public static class GClass10
 
 		public GClass12()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -84,7 +84,7 @@ public static class GClass10
 
 		public GClass13()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -113,14 +113,14 @@ public static class GClass10
 		public string String_1 { get; set; }
 
 		[JsonProperty("apis")]
-		public string String_2 { get; set; }
+		public string ifFkasaMiM { get; set; }
 
 		[JsonProperty("zeus")]
-		public string String_3 { get; set; }
+		public string zYjkgExcrn { get; set; }
 
 		public GClass14()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -162,7 +162,7 @@ public static class GClass10
 
 		public GClass15()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -198,7 +198,7 @@ public static class GClass10
 
 		public GClass16()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -231,7 +231,7 @@ public static class GClass10
 
 		public GClass17()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -257,10 +257,10 @@ public static class GClass10
 	public class GClass18
 	{
 		[JsonProperty("flax")]
-		public int Int32_0 { get; set; }
+		public int eLfnwyEyEQ { get; set; }
 
 		[JsonProperty("iris")]
-		public int yvIowbdMjn { get; set; }
+		public int Int32_0 { get; set; }
 
 		[JsonProperty("apis")]
 		public int Int32_1 { get; set; }
@@ -270,15 +270,15 @@ public static class GClass10
 
 		public GClass18()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private int int_0;
+		private int gvOnDqQwoF;
 
 		[CompilerGenerated]
-		private int RamoqIryNA;
+		private int int_0;
 
 		[CompilerGenerated]
 		private int int_1;
@@ -293,22 +293,22 @@ public static class GClass10
 		public string String_0 { get; set; }
 
 		[JsonProperty("dro_defaultID")]
-		public string PvhoedbWlG { get; set; }
-
-		[JsonProperty("dro_level")]
 		public string String_1 { get; set; }
 
-		[JsonProperty("ddro_droneID")]
+		[JsonProperty("dro_level")]
 		public string String_2 { get; set; }
 
+		[JsonProperty("ddro_droneID")]
+		public string String_3 { get; set; }
+
 		[JsonProperty("points")]
-		public string EuEoAkkRrw { get; set; }
+		public string String_4 { get; set; }
 
 		[JsonProperty("ddro_durability")]
-		public string DrOoistbXf { get; set; }
+		public string String_5 { get; set; }
 
 		[JsonProperty("name")]
-		public string String_3 { get; set; }
+		public string String_6 { get; set; }
 
 		[JsonProperty("damage")]
 		public int Int32_0 { get; set; }
@@ -318,7 +318,7 @@ public static class GClass10
 
 		public GClass19()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -338,16 +338,16 @@ public static class GClass10
 		private string string_4;
 
 		[CompilerGenerated]
-		private string VnjoSprgSs;
+		private string string_5;
 
 		[CompilerGenerated]
-		private string string_5;
+		private string YcKnHsyvuY;
 
 		[CompilerGenerated]
 		private int int_0;
 
 		[CompilerGenerated]
-		private int? RjeoExcDk8;
+		private int? nullable_0;
 	}
 
 	public class GClass20
@@ -356,7 +356,7 @@ public static class GClass10
 		public string String_0 { get; set; }
 
 		[JsonProperty("iris")]
-		public string String_1 { get; set; }
+		public string BtZnUgwkb5 { get; set; }
 
 		[JsonProperty("apis")]
 		public int Int32_0 { get; set; }
@@ -366,7 +366,7 @@ public static class GClass10
 
 		public GClass20()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -380,7 +380,7 @@ public static class GClass10
 		private int int_0;
 
 		[CompilerGenerated]
-		private int gcvCwvHxy7;
+		private int int_1;
 	}
 
 	public class GClass21
@@ -396,7 +396,7 @@ public static class GClass10
 
 		public GClass21()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -420,7 +420,7 @@ public static class GClass10
 
 		public GClass22()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -546,7 +546,7 @@ public static class GClass10
 
 		public GClass23()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -602,9 +602,6 @@ public static class GClass10
 		private string string_16;
 
 		[CompilerGenerated]
-		private string zjOdxowiWe;
-
-		[CompilerGenerated]
 		private string string_17;
 
 		[CompilerGenerated]
@@ -638,12 +635,6 @@ public static class GClass10
 		private string string_27;
 
 		[CompilerGenerated]
-		private string UjqdGydlo5;
-
-		[CompilerGenerated]
-		private string SePdpsJwEj;
-
-		[CompilerGenerated]
 		private string string_28;
 
 		[CompilerGenerated]
@@ -660,6 +651,15 @@ public static class GClass10
 
 		[CompilerGenerated]
 		private string string_33;
+
+		[CompilerGenerated]
+		private string string_34;
+
+		[CompilerGenerated]
+		private string string_35;
+
+		[CompilerGenerated]
+		private string string_36;
 	}
 
 	public class GClass24
@@ -678,7 +678,7 @@ public static class GClass10
 
 		public GClass24()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -705,7 +705,7 @@ public static class GClass10
 
 		public GClass25()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -726,7 +726,7 @@ public static class GClass10
 
 		public GClass26()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -747,7 +747,7 @@ public static class GClass10
 
 		public GClass27()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 

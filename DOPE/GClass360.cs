@@ -22,7 +22,7 @@ public class GClass360 : GClass359, GInterface0
 
 	public GClass360(GClass439 gclass439_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (gclass439_1 == null)
 		{
@@ -42,24 +42,24 @@ public class GClass360 : GClass359, GInterface0
 		return 0;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
+		base.imethod_1(binaryStream_0);
 		this.gclass439_0 = (GClass439)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass439_0 != null)
 		{
-			this.gclass439_0.imethod_0(binaryStream_0);
+			this.gclass439_0.imethod_1(binaryStream_0);
 		}
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(19743);
-		base.imethod_1(binaryStream_0);
+		base.imethod_2(binaryStream_0);
 		if (this.gclass439_0 != null)
 		{
-			this.gclass439_0.imethod_1(binaryStream_0);
+			this.gclass439_0.imethod_2(binaryStream_0);
 			return;
 		}
 		binaryStream_0.smethod_7(0);

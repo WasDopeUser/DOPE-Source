@@ -20,17 +20,17 @@ public class GClass452 : GInterface0
 		}
 	}
 
-	public GClass452(GClass327 gclass327_0 = null, int int_1 = 0)
+	public GClass452(GClass327 gclass327_1 = null, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (gclass327_0 == null)
+		if (gclass327_1 == null)
 		{
-			this.RyfskxUpTi = new GClass327(0);
+			this.gclass327_0 = new GClass327(0);
 		}
 		else
 		{
-			this.RyfskxUpTi = gclass327_0;
+			this.gclass327_0 = gclass327_1;
 		}
 		this.int_0 = int_1;
 	}
@@ -45,23 +45,23 @@ public class GClass452 : GInterface0
 		return 4;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.RyfskxUpTi = (GClass327)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.RyfskxUpTi != null)
+		this.gclass327_0 = (GClass327)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass327_0 != null)
 		{
-			this.RyfskxUpTi.imethod_0(binaryStream_0);
+			this.gclass327_0.imethod_1(binaryStream_0);
 		}
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(41);
-		if (this.RyfskxUpTi != null)
+		if (this.gclass327_0 != null)
 		{
-			this.RyfskxUpTi.imethod_1(binaryStream_0);
+			this.gclass327_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -70,7 +70,7 @@ public class GClass452 : GInterface0
 		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
 	}
 
-	public GClass327 RyfskxUpTi;
+	public GClass327 gclass327_0;
 
 	public int int_0;
 }

@@ -7,9 +7,9 @@ namespace DarkorbitAPI.Structures
 	{
 		public BattlestationModule(int int_0, int int_1)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor(int_0, int_1);
-			base.Hitbox = MapGrid.smethod_1(int_0 - 650, int_1 - 650, 1300, 1300);
+			base.Hitbox = MapGrid.smethod_2(int_0 - 650, int_1 - 650, 1300, 1300);
 		}
 
 		public override CollidableType imethod_0(Map map_0)

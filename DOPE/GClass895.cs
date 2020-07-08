@@ -1,59 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using DOPE.Common;
+using DarkorbitAPI.Structures;
 using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
 
-public abstract class GClass895 : GClass892
+public class GClass895 : GClass894
 {
-	public TargetMap Map
+	public override bool IsInterruptible
 	{
-		[CompilerGenerated]
 		get
 		{
-			return this.targetMap_0;
-		}
-		[CompilerGenerated]
-		protected set
-		{
-			if (this.targetMap_0 == value)
-			{
-				return;
-			}
-			this.targetMap_0 = value;
-			this.method_0(Class10.Map);
+			return true;
 		}
 	}
 
-	public GClass895(GClass890 gclass890_1, TargetMap targetMap_1, string string_1, int int_2 = -2147483648)
+	public GClass895(GClass889 gclass889_1, TargetMap targetMap_1)
 	{
-		Class13.F93tSdiz1aNIA();
-		base..ctor(gclass890_1, string_1 + "_" + targetMap_1.GetName(), int_2);
-		this.Map = targetMap_1;
+		Class13.xnk8ImWzpOt04();
+		base..ctor(gclass889_1, targetMap_1, "S", int.MinValue);
 	}
 
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	protected override void OnStopping()
 	{
-		GClass895.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass895.<>c__DisplayClass5_0();
-		CS$<>8__locals1.targetMap_0 = this.Map;
-		if (botProfile_1 == null)
+		if (base.C.State == BotState.Hunt && base.C.EnemyTarget != null)
 		{
-			return null;
+			this.ship_0 = base.C.EnemyTarget;
 		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
+		else
 		{
-			return null;
+			this.ship_0 = null;
 		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(CS$<>8__locals1.method_0));
+		base.OnStopping();
 	}
 
-	public override string ToString()
+	public override bool CheckStopped()
 	{
-		return this.Map.GetName() ?? "";
+		return this.ship_0 == null || base.C.EnemyTarget != this.ship_0 || base.C.Map.SelectedShip != this.ship_0;
 	}
 
-	[CompilerGenerated]
-	private TargetMap targetMap_0;
+	private Ship ship_0;
 }

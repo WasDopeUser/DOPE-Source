@@ -20,15 +20,15 @@ public class GClass560 : GInterface0
 		}
 	}
 
-	public GClass560(string string_1 = "", double double_1 = 0.0, Vector<GClass844> vector_1 = null)
+	public GClass560(string string_1 = "", double double_1 = 0.0, Vector<GClass843> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass844>();
+			this.vector_0 = new Vector<GClass843>();
 		}
 		else
 		{
@@ -47,7 +47,7 @@ public class GClass560 : GInterface0
 		return 14;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		while (this.vector_0.Length > 0)
@@ -58,29 +58,29 @@ public class GClass560 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass844 gclass = (GClass844)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			GClass843 gclass = (GClass843)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(23465);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass844 gclass in this.vector_0)
+		foreach (GClass843 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.WriteDouble(this.double_0);
 	}
 
 	public string string_0;
 
-	public Vector<GClass844> vector_0;
+	public Vector<GClass843> vector_0;
 
 	public double double_0;
 }

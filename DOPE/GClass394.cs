@@ -22,7 +22,7 @@ public class GClass394 : GInterface0
 
 	public GClass394(Vector<GClass351> vector_1 = null, double double_0 = 0.0, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_1;
 		if (vector_1 == null)
@@ -46,7 +46,7 @@ public class GClass394 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
@@ -59,21 +59,21 @@ public class GClass394 : GInterface0
 		while (i < num)
 		{
 			GClass351 gclass = (GClass351)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 		this.Timestamp = binaryStream_0.ReadDouble();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-28258);
 		binaryStream_0.smethod_4(this.int_0 << 8 | U.smethod_0(this.int_0, 24));
 		binaryStream_0.WriteByte(this.vector_0.Length);
 		foreach (GClass351 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.WriteDouble(this.Timestamp);
 	}

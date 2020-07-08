@@ -8,14 +8,14 @@ using System.Runtime.CompilerServices;
 
 namespace DOPE.Properties
 {
-	[CompilerGenerated]
-	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
 	[DebuggerNonUserCode]
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+	[CompilerGenerated]
 	internal class Resources
 	{
 		internal Resources()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
@@ -37,7 +37,7 @@ namespace DOPE.Properties
 		{
 			set
 			{
-				Resources.cultureInfo_0 = value;
+				Resources.iomcUunUtY = value;
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace DOPE.Properties
 		{
 			get
 			{
-				return (byte[])Resources.ResourceManager.GetObject("Buster", Resources.cultureInfo_0);
+				return (byte[])Resources.ResourceManager.GetObject("Buster", Resources.iomcUunUtY);
 			}
 		}
 
@@ -53,12 +53,12 @@ namespace DOPE.Properties
 		{
 			get
 			{
-				return (byte[])Resources.ResourceManager.GetObject("pandora", Resources.cultureInfo_0);
+				return (byte[])Resources.ResourceManager.GetObject("pandora", Resources.iomcUunUtY);
 			}
 		}
 
 		private static ResourceManager resourceManager_0;
 
-		private static CultureInfo cultureInfo_0;
+		private static CultureInfo iomcUunUtY;
 	}
 }

@@ -63,7 +63,7 @@ namespace DOPE.UI
 
 		public BrowserWindow(DarkOrbitWebAPI darkOrbitWebAPI_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.PropertyChanged = new PropertyChangedEventHandler(BrowserWindow.<>c.<>9.method_0);
 			base..ctor();
 			this.InitializeComponent();
@@ -104,7 +104,7 @@ namespace DOPE.UI
 				Cookie cookie = (Cookie)obj;
 				Application.SetCookie(uri, cookie.Name + "=" + cookie.Value);
 			}
-			this.Browser.Navigate(GClass880.smethod_1(this.Server, null) ?? "");
+			this.Browser.Navigate(GClass879.smethod_1(this.Server, null) ?? "");
 		}
 
 		private void method_2(object sender, EventArgs e)
@@ -112,8 +112,8 @@ namespace DOPE.UI
 			this.Browser.Dispose();
 		}
 
-		[DebuggerNonUserCode]
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
+		[DebuggerNonUserCode]
 		protected void method_3(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

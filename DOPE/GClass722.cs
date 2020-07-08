@@ -8,7 +8,7 @@ public class GClass722 : GInterface0
 	{
 		get
 		{
-			return 17418;
+			return 183;
 		}
 	}
 
@@ -16,67 +16,54 @@ public class GClass722 : GInterface0
 	{
 		get
 		{
-			return 19;
+			return 6;
 		}
 	}
 
-	public GClass722(string string_1 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0, bool bool_1 = false)
+	public GClass722(int int_3 = 0, int int_4 = 0, int int_5 = 0, string string_0 = "")
 	{
-		Class13.F93tSdiz1aNIA();
-		this.string_0 = "";
+		Class13.xnk8ImWzpOt04();
+		this.GsnyzFeslK = "";
 		base..ctor();
 		this.int_0 = int_3;
-		this.bool_0 = bool_1;
 		this.int_1 = int_4;
-		this.string_0 = string_1;
-		this.Width = int_5;
-		this.int_2 = int_6;
+		this.int_2 = int_5;
+		this.GsnyzFeslK = string_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 17418;
+		return 183;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 19;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 9) | this.int_1 << 23);
-		this.string_0 = binaryStream_0.smethod_2();
-		this.Width = binaryStream_0.smethod_0();
-		this.Width = (U.smethod_0(this.Width, 10) | this.Width << 22);
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (U.smethod_0(this.int_2, 2) | this.int_2 << 30);
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(17418);
-		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
-		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.smethod_4(this.int_1 << 9 | U.smethod_0(this.int_1, 23));
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.Width << 10 | U.smethod_0(this.Width, 22));
-		binaryStream_0.smethod_4(this.int_2 << 2 | U.smethod_0(this.int_2, 30));
+		this.int_0 = (int)binaryStream_0.smethod_1();
+		this.int_1 = (int)binaryStream_0.smethod_1();
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (U.smethod_0(this.int_2, 5) | this.int_2 << 27);
+		this.GsnyzFeslK = binaryStream_0.smethod_2();
+	}
+
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(183);
+		binaryStream_0.smethod_7(this.int_0);
+		binaryStream_0.smethod_7(this.int_1);
+		binaryStream_0.smethod_4(this.int_2 << 5 | U.smethod_0(this.int_2, 27));
+		binaryStream_0.smethod_3(this.GsnyzFeslK);
 	}
 
 	public int int_0;
 
-	public bool bool_0;
-
 	public int int_1;
 
-	public string string_0;
-
-	public int Width;
-
 	public int int_2;
+
+	public string GsnyzFeslK;
 }

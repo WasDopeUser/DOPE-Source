@@ -22,7 +22,7 @@ public class GClass623 : GClass617, GInterface0
 
 	public GClass623(string string_1 = "", string string_2 = "")
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor(string_1);
 		this.string_0 = string_2;
@@ -38,17 +38,17 @@ public class GClass623 : GClass617, GInterface0
 		return 2;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
+		base.imethod_1(binaryStream_0);
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(27189);
-		base.imethod_1(binaryStream_0);
+		base.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_3(this.string_0);
 	}
 

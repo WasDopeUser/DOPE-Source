@@ -20,7 +20,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<OwnerId>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_80);
+				this.method_10(Class5.propertyChangedEventArgs_77);
 			}
 		}
 
@@ -39,7 +39,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Level>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_68);
+				this.method_10(Class5.propertyChangedEventArgs_66);
 			}
 		}
 
@@ -51,7 +51,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void method_12(GClass253 gclass253_0)
+		public void method_11(GClass253 gclass253_0)
 		{
 			this.OwnerId = gclass253_0.int_0;
 			base.Id = gclass253_0.int_1;
@@ -65,7 +65,7 @@ namespace DarkorbitAPI.Structures
 
 		public Pet()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 	}

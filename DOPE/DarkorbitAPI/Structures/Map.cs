@@ -33,7 +33,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Ships>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_105);
+				this.method_26(Class5.propertyChangedEventArgs_102);
 			}
 		}
 
@@ -52,7 +52,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Collectibles>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_12);
+				this.method_26(Class5.xCywTyrSaDy);
 			}
 		}
 
@@ -71,7 +71,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Gates>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_28);
+				this.method_26(Class5.propertyChangedEventArgs_26);
 			}
 		}
 
@@ -90,7 +90,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Collidables>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_13);
+				this.method_26(Class5.propertyChangedEventArgs_12);
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Assets>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_2);
+				this.method_26(Class5.propertyChangedEventArgs_2);
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Battlestation>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_3);
+				this.method_26(Class5.propertyChangedEventArgs_3);
 			}
 		}
 
@@ -147,10 +147,10 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<MapId>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_45);
-				this.method_27(Class5.GG);
+				this.method_26(Class5.propertyChangedEventArgs_43);
+				this.method_26(Class5.GG);
 				this.method_0();
-				this.method_27(Class5.MapId);
+				this.method_26(Class5.MapId);
 			}
 		}
 
@@ -169,8 +169,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Game>k__BackingField = value;
-				this.method_27(Class5.Hero);
-				this.method_27(Class5.Game);
+				this.method_26(Class5.Hero);
+				this.method_26(Class5.Game);
 			}
 		}
 
@@ -197,7 +197,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<SelectedShip>k__BackingField = value;
-				this.method_27(Class5.SelectedShip);
+				this.method_26(Class5.SelectedShip);
 			}
 		}
 
@@ -216,7 +216,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<MapName>k__BackingField = value;
-				this.method_27(Class5.MapName);
+				this.method_26(Class5.MapName);
 			}
 		}
 
@@ -235,7 +235,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<MapSize>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_74);
+				this.method_26(Class5.propertyChangedEventArgs_71);
 			}
 		}
 
@@ -254,7 +254,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Center>k__BackingField = value;
-				this.method_27(Class5.Center);
+				this.method_26(Class5.Center);
 			}
 		}
 
@@ -273,7 +273,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<RightCorner>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_97);
+				this.method_26(Class5.propertyChangedEventArgs_94);
 			}
 		}
 
@@ -292,7 +292,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Rect>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_87);
+				this.method_26(Class5.propertyChangedEventArgs_84);
 			}
 		}
 
@@ -311,7 +311,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<DefaultWorkArea>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_15);
+				this.method_26(Class5.propertyChangedEventArgs_14);
 			}
 		}
 
@@ -346,7 +346,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<NpcTypes>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_79);
+				this.method_26(Class5.propertyChangedEventArgs_76);
 			}
 		}
 
@@ -365,7 +365,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsX1>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_50);
+				this.method_26(Class5.propertyChangedEventArgs_48);
 			}
 		}
 
@@ -405,7 +405,7 @@ namespace DarkorbitAPI.Structures
 						int num = all;
 						all = num + 1;
 						bool flag;
-						if (value.HpPercentage < 25f || this.method_8(value, out flag))
+						if (value.HpPercentage < 25f || this.mdGbaKqNuQ(value, out flag))
 						{
 							num = done;
 							done = num + 1;
@@ -439,7 +439,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Grid>k__BackingField = value;
-				this.method_27(Class5.propertyChangedEventArgs_30);
+				this.method_26(Class5.propertyChangedEventArgs_28);
 			}
 		}
 
@@ -467,9 +467,9 @@ namespace DarkorbitAPI.Structures
 			return null;
 		}
 
-		public XehMuqNo2upnIXnL7wu method_5<XehMuqNo2upnIXnL7wu>(Vector2 vector2_0, Func<XehMuqNo2upnIXnL7wu, bool> func_0 = null, Func<XehMuqNo2upnIXnL7wu, int> func_1 = null, int int_0 = 0) where XehMuqNo2upnIXnL7wu : Entity
+		public t1Ee312RA6Nl7yiWXeI method_5<t1Ee312RA6Nl7yiWXeI>(Vector2 vector2_0, Func<t1Ee312RA6Nl7yiWXeI, bool> func_0 = null, Func<t1Ee312RA6Nl7yiWXeI, int> func_1 = null, int int_0 = 0) where t1Ee312RA6Nl7yiWXeI : Entity
 		{
-			return this.All<XehMuqNo2upnIXnL7wu>(vector2_0, func_0, func_1, int_0).FirstOrDefault<XehMuqNo2upnIXnL7wu>();
+			return this.All<t1Ee312RA6Nl7yiWXeI>(vector2_0, func_0, func_1, int_0).FirstOrDefault<t1Ee312RA6Nl7yiWXeI>();
 		}
 
 		public NpcShip method_6(Vector2 vector2_0, Func<NpcShip, bool> func_0 = null, Func<NpcShip, int> func_1 = null, int int_0 = 0)
@@ -522,9 +522,9 @@ namespace DarkorbitAPI.Structures
 			"dist",
 			"priority"
 		})]
-		public IEnumerable<ValueTuple<rtbhMbNCTUDSOXHgK0o, float, int>> method_7<rtbhMbNCTUDSOXHgK0o>(Vector2 vector2_0, Func<rtbhMbNCTUDSOXHgK0o, bool> func_0 = null, Func<rtbhMbNCTUDSOXHgK0o, int> func_1 = null, int int_0 = 0) where rtbhMbNCTUDSOXHgK0o : Entity
+		public IEnumerable<ValueTuple<h79Yt72SMEwRHBqxqkG, float, int>> method_7<h79Yt72SMEwRHBqxqkG>(Vector2 vector2_0, Func<h79Yt72SMEwRHBqxqkG, bool> func_0 = null, Func<h79Yt72SMEwRHBqxqkG, int> func_1 = null, int int_0 = 0) where h79Yt72SMEwRHBqxqkG : Entity
 		{
-			Map.<EnumAll>d__88<rtbhMbNCTUDSOXHgK0o> <EnumAll>d__ = new Map.<EnumAll>d__88<rtbhMbNCTUDSOXHgK0o>(-2);
+			Map.<EnumAll>d__88<h79Yt72SMEwRHBqxqkG> <EnumAll>d__ = new Map.<EnumAll>d__88<h79Yt72SMEwRHBqxqkG>(-2);
 			<EnumAll>d__.<>4__this = this;
 			<EnumAll>d__.<>3__origin = vector2_0;
 			<EnumAll>d__.<>3__selector = func_0;
@@ -542,17 +542,17 @@ namespace DarkorbitAPI.Structures
 
 		static Map()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			Map.Navigators = new ObjectPool<MapNavigator>("MapNavigator");
 			for (int i = 0; i < 2; i++)
 			{
-				Map.<Navigators>k__BackingField.method_3(new MapNavigator());
+				Map.<Navigators>k__BackingField.method_2(new MapNavigator());
 			}
 		}
 
 		public Map(GameManager gameManager_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.<Ships>k__BackingField = new ConcurrentDictionary<int, Ship>();
 			this.<Collectibles>k__BackingField = new ConcurrentDictionary<string, Collectible>();
 			this.<Gates>k__BackingField = new ConcurrentDictionary<int, Gate>();
@@ -591,7 +591,7 @@ namespace DarkorbitAPI.Structures
 			this.MapId = 0;
 		}
 
-		public bool method_8(Ship ship_0, out bool bool_0)
+		public bool mdGbaKqNuQ(Ship ship_0, out bool bool_0)
 		{
 			bool_0 = false;
 			if (!this.IsGG)
@@ -604,23 +604,23 @@ namespace DarkorbitAPI.Structures
 			return this.Game.Security.method_3(mapSize.Vector, position, 0) | bool_0;
 		}
 
-		internal void method_9(GClass181 gclass181_0)
+		internal void method_8(GClass180 gclass180_0)
 		{
-			Collectible collectible_ = new Collectible(gclass181_0.int_1, gclass181_0.int_0, gclass181_0.string_1, gclass181_0.string_0);
+			Collectible collectible_ = new Collectible(gclass180_0.int_1, gclass180_0.int_0, gclass180_0.string_1, gclass180_0.string_0);
 			if (MapUtils.smethod_2(this.MapId) == MapGroup.PayloadEscort)
 			{
-				this.Game.LogManager.Get("Net-Handlers").Info("Spawned box of type {type}", gclass181_0.string_1);
+				this.Game.LogManager.Get("Net-Handlers").Info("Spawned box of type {type}", gclass180_0.string_1);
 			}
-			this.method_11(collectible_);
+			this.method_10(collectible_);
 		}
 
-		internal void method_10(GClass182 gclass182_0)
+		internal void method_9(GClass181 gclass181_0)
 		{
-			Resource collectible_ = new Resource(gclass182_0.int_1, gclass182_0.int_0, gclass182_0.gclass259_0.int_0, gclass182_0.string_0);
-			this.method_11(collectible_);
+			Resource collectible_ = new Resource(gclass181_0.int_1, gclass181_0.int_0, gclass181_0.gclass259_0.int_0, gclass181_0.string_0);
+			this.method_10(collectible_);
 		}
 
-		internal void method_11(Collectible collectible_0)
+		internal void method_10(Collectible collectible_0)
 		{
 			if (this.Game.Security.method_7(collectible_0, true) && this.Collectibles.TryAdd(collectible_0.Hash, collectible_0))
 			{
@@ -633,22 +633,22 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_12(GClass140 gclass140_0)
+		internal void method_11(HjlsnuKxjUgfkCoFhrD hjlsnuKxjUgfkCoFhrD_0)
 		{
 			Collectible collectible;
-			this.Collectibles.TryRemove(gclass140_0.string_0, out collectible);
+			this.Collectibles.TryRemove(hjlsnuKxjUgfkCoFhrD_0.string_0, out collectible);
 			Map.Delegates.CollectibleCollected collectibleCollected = this.CollectibleCollected;
 			if (collectibleCollected == null)
 			{
 				return;
 			}
-			collectibleCollected(this, gclass140_0.string_0, collectible, gclass140_0.bool_0);
+			collectibleCollected(this, hjlsnuKxjUgfkCoFhrD_0.string_0, collectible, hjlsnuKxjUgfkCoFhrD_0.bool_0);
 		}
 
-		internal void method_13(GClass191 gclass191_0)
+		internal void method_12(GClass190 gclass190_0)
 		{
-			int int_ = gclass191_0.vector_0.FirstOrDefault<int>();
-			Gate gate = new Gate(gclass191_0.int_2, gclass191_0.int_3, int_, gclass191_0.Id, gclass191_0.int_1);
+			int int_ = gclass190_0.vector_0.FirstOrDefault<int>();
+			Gate gate = new Gate(gclass190_0.int_2, gclass190_0.int_3, int_, gclass190_0.Id, gclass190_0.int_1);
 			if (this.Gates.TryAdd(gate.Id, gate))
 			{
 				Map.Delegates.GateCreatedHandler gateCreated = this.GateCreated;
@@ -660,7 +660,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_14(GClass263 gclass263_0)
+		internal void ypabzsOej5(GClass263 gclass263_0)
 		{
 			Ship ship = gclass263_0.bool_2 ? new NpcShip() : new Ship();
 			ship.Init(gclass263_0);
@@ -675,7 +675,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_15(int int_0, bool bool_0)
+		internal void method_13(int int_0, bool bool_0)
 		{
 			Ship ship;
 			if (this.Ships.TryRemove(int_0, out ship))
@@ -697,7 +697,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_16(GClass267 gclass267_0)
+		internal void method_14(GClass267 gclass267_0)
 		{
 			DateTime now = DateTime.Now;
 			Ship ship = this.method_4(gclass267_0.int_0);
@@ -718,7 +718,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_17(int int_0, int int_1, int int_2, int int_3, int int_4, int int_5)
+		internal void method_15(int int_0, int int_1, int int_2, int int_3, int int_4, int int_5)
 		{
 			DateTimeOffset now = DateTimeOffset.Now;
 			Ship ship = this.method_4(int_0);
@@ -757,49 +757,49 @@ namespace DarkorbitAPI.Structures
 			}
 			if (ship != null)
 			{
-				ship.method_10(this, ship2, ship, int_2, int_3);
+				ship.method_9(this, ship2, ship, int_2, int_3);
 			}
 		}
 
-		internal void method_18(GClass262 gclass262_0)
+		internal void method_16(GClass262 gclass262_0)
 		{
-			this.method_17(gclass262_0.int_1, gclass262_0.int_0, gclass262_0.int_5, gclass262_0.gclass132_0.int_0, gclass262_0.int_2, gclass262_0.int_3);
+			this.method_15(gclass262_0.int_1, gclass262_0.int_0, gclass262_0.int_5, gclass262_0.gclass132_0.int_0, gclass262_0.int_2, gclass262_0.int_3);
 		}
 
-		internal void method_19(GClass179 gclass179_0)
+		internal void method_17(GClass178 gclass178_0)
 		{
-			Ship ship = this.method_4(gclass179_0.int_0);
+			Ship ship = this.method_4(gclass178_0.int_0);
 			if (ship != null)
 			{
-				ship.HpMax = gclass179_0.int_2;
-				ship.ShieldMax = gclass179_0.int_3;
+				ship.HpMax = gclass178_0.int_2;
+				ship.ShieldMax = gclass178_0.int_3;
 			}
-			this.method_17(gclass179_0.int_0, gclass179_0.int_4, gclass179_0.weQiVacMkK, gclass179_0.gclass132_0.int_0, gclass179_0.int_6, gclass179_0.int_7);
+			this.method_15(gclass178_0.int_0, gclass178_0.int_4, gclass178_0.int_8, gclass178_0.gclass132_0.int_0, gclass178_0.int_6, gclass178_0.int_7);
 		}
 
-		internal void method_20(GClass187 gclass187_0)
+		internal void method_18(GClass186 gclass186_0)
 		{
-			Ship ship = this.method_4(gclass187_0.int_0);
+			Ship ship = this.method_4(gclass186_0.zgNxkCynsb);
 			if (ship == null)
 			{
 				return;
 			}
-			ship.ApplyModifier(gclass187_0);
+			ship.ApplyModifier(gclass186_0);
 		}
 
-		internal void method_21(GClass221 gclass221_0)
+		internal void method_19(GClass220 gclass220_0)
 		{
-			this.Hero.Pet.method_14(gclass221_0);
-			this.Ships[gclass221_0.int_1] = this.Hero.Pet;
+			this.Hero.Pet.method_13(gclass220_0);
+			this.Ships[gclass220_0.int_1] = this.Hero.Pet;
 		}
 
-		internal void method_22(GClass253 gclass253_0)
+		internal void method_20(GClass253 gclass253_0)
 		{
 			Pet pet = this.method_4(gclass253_0.int_1) as Pet;
 			if (pet == null)
 			{
 				pet = new Pet();
-				pet.method_12(gclass253_0);
+				pet.method_11(gclass253_0);
 				if (this.Ships.TryAdd(gclass253_0.int_1, pet))
 				{
 					Map.Delegates.ShipUpdateHandler shipCreated = this.ShipCreated;
@@ -813,11 +813,11 @@ namespace DarkorbitAPI.Structures
 			}
 			else
 			{
-				pet.method_12(gclass253_0);
+				pet.method_11(gclass253_0);
 			}
 		}
 
-		internal void ltqXoKvxr2(GClass243 gclass243_0)
+		internal void method_21(GClass243 gclass243_0)
 		{
 			ICollidable collidable = null;
 			ICollidable collidable2 = null;
@@ -831,7 +831,7 @@ namespace DarkorbitAPI.Structures
 			{
 				return;
 			}
-			CollidableType int_ = (CollidableType)gclass243_0.gclass141_0.int_0;
+			CollidableType int_ = (CollidableType)gclass243_0.gclass140_0.int_0;
 			if (gclass243_0.int_0 == 2 && (int_ == CollidableType.Wall || int_ == CollidableType.Mines))
 			{
 				int num = Map.smethod_1(gclass243_0.vector_0[0U], gclass243_0.vector_0[2U], gclass243_0.vector_0[4U]);
@@ -859,7 +859,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_23(GClass245 gclass245_0)
+		internal void method_22(GClass245 gclass245_0)
 		{
 			ICollidable icollidable_;
 			if (this.Collidables.TryRemove(gclass245_0.Name, out icollidable_))
@@ -868,12 +868,12 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_24(GClass265 gclass265_0)
+		internal void method_23(GClass265 gclass265_0)
 		{
 			Ship ship;
 			if (this.Ships.TryGetValue(gclass265_0.int_0, out ship))
 			{
-				ship.method_2(gclass265_0.eniugXpUft, gclass265_0.int_1, gclass265_0.int_2);
+				ship.method_1(gclass265_0.int_1, gclass265_0.int_2, gclass265_0.int_3);
 				Map.Delegates.ShipMoveStartedHandler shipMoveStarted = this.ShipMoveStarted;
 				if (shipMoveStarted == null)
 				{
@@ -883,7 +883,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_25(GClass237 gclass237_0)
+		internal void method_24(GClass237 gclass237_0)
 		{
 			DateTimeOffset now = DateTimeOffset.Now;
 			Ship ship = this.method_4(gclass237_0.int_1);
@@ -900,7 +900,7 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		internal void method_26(GClass246 gclass246_0)
+		internal void method_25(GClass246 gclass246_0)
 		{
 		}
 
@@ -921,7 +921,7 @@ namespace DarkorbitAPI.Structures
 		public event Map.Delegates.CollectibleCollected CollectibleCollected;
 
 		[CompilerGenerated]
-		internal static ValueTuple<yIEGlyN0kpp1ESQXJ3O, float, int> smethod_0<yIEGlyN0kpp1ESQXJ3O>(Entity entity_0, ref Map.<>c__DisplayClass88_0<yIEGlyN0kpp1ESQXJ3O> <>c__DisplayClass88_0_0) where yIEGlyN0kpp1ESQXJ3O : Entity
+		internal static ValueTuple<jVL1aX2XHAmEo3RcMkZ, float, int> smethod_0<jVL1aX2XHAmEo3RcMkZ>(Entity entity_0, ref Map.<>c__DisplayClass88_0<jVL1aX2XHAmEo3RcMkZ> <>c__DisplayClass88_0_0) where jVL1aX2XHAmEo3RcMkZ : Entity
 		{
 			Vector2 value = entity_0.Position;
 			if (<>c__DisplayClass88_0_0.predictionMs > 0)
@@ -929,16 +929,16 @@ namespace DarkorbitAPI.Structures
 				MovingEntity movingEntity = entity_0 as MovingEntity;
 				if (movingEntity != null)
 				{
-					value = movingEntity.method_1(<>c__DisplayClass88_0_0.predictionMs);
+					value = movingEntity.method_0(<>c__DisplayClass88_0_0.predictionMs);
 				}
 			}
 			float num = Vector2.Distance(<>c__DisplayClass88_0_0.origin, value);
 			int num2 = 0;
 			if (<>c__DisplayClass88_0_0.priority != null)
 			{
-				num2 = <>c__DisplayClass88_0_0.priority(entity_0 as yIEGlyN0kpp1ESQXJ3O);
+				num2 = <>c__DisplayClass88_0_0.priority(entity_0 as jVL1aX2XHAmEo3RcMkZ);
 			}
-			return new ValueTuple<yIEGlyN0kpp1ESQXJ3O, float, int>((yIEGlyN0kpp1ESQXJ3O)((object)entity_0), num, num2);
+			return new ValueTuple<jVL1aX2XHAmEo3RcMkZ, float, int>((jVL1aX2XHAmEo3RcMkZ)((object)entity_0), num, num2);
 		}
 
 		[CompilerGenerated]
@@ -955,7 +955,7 @@ namespace DarkorbitAPI.Structures
 
 		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
-		protected void method_27(PropertyChangedEventArgs propertyChangedEventArgs_0)
+		protected void method_26(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
 			if (propertyChanged != null)
@@ -968,7 +968,7 @@ namespace DarkorbitAPI.Structures
 		{
 			public Delegates()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 			}
 

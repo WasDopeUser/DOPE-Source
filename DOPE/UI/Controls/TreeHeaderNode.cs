@@ -93,7 +93,7 @@ namespace DOPE.UI.Controls
 
 		public TreeHeaderNode(CommandViewModel commandViewModel_0, DateTime dateTime_0, bool bool_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.PropertyChanged = new PropertyChangedEventHandler(TreeHeaderNode.<>c.<>9.method_0);
 			base..ctor();
 			this.Command = commandViewModel_0;
@@ -107,8 +107,8 @@ namespace DOPE.UI.Controls
 			this.Command = this.Command;
 		}
 
-		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		[DebuggerNonUserCode]
+		[GeneratedCode("PropertyChanged.Fody", "3.2.3.0")]
 		protected void method_1(PropertyChangedEventArgs propertyChangedEventArgs_0)
 		{
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;

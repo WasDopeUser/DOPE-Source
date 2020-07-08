@@ -8,7 +8,7 @@ public class GClass800 : GInterface0
 	{
 		get
 		{
-			return 2863;
+			return 13028;
 		}
 	}
 
@@ -16,51 +16,44 @@ public class GClass800 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 8;
 		}
 	}
 
-	public GClass800(GClass196 gclass196_0 = null)
+	public GClass800(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (gclass196_0 == null)
-		{
-			this.Mode = new GClass196(0);
-			return;
-		}
-		this.Mode = gclass196_0;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2863;
+		return 13028;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.Mode = (GClass196)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.Mode != null)
-		{
-			this.Mode.imethod_0(binaryStream_0);
-		}
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2863);
-		if (this.Mode != null)
-		{
-			this.Mode.imethod_1(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
 	}
 
-	public GClass196 Mode;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(13028);
+		binaryStream_0.smethod_4(this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
+	}
+
+	public int int_0;
+
+	public int int_1;
 }

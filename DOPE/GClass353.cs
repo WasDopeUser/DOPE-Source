@@ -20,14 +20,14 @@ public class GClass353 : GInterface0
 		}
 	}
 
-	public GClass353(string string_0 = "", Vector<GClass820> vector_1 = null)
+	public GClass353(string string_0 = "", Vector<GClass819> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.Name = "";
 		base..ctor();
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass820>();
+			this.vector_0 = new Vector<GClass819>();
 		}
 		else
 		{
@@ -46,7 +46,7 @@ public class GClass353 : GInterface0
 		return 6;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		while (this.vector_0.Length > 0)
 		{
@@ -56,26 +56,26 @@ public class GClass353 : GInterface0
 		int num = (int)binaryStream_0.smethod_1();
 		while (i < num)
 		{
-			GClass820 gclass = (GClass820)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			GClass819 gclass = (GClass819)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 		this.Name = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(18844);
 		binaryStream_0.smethod_7(this.vector_0.Length);
-		foreach (GClass820 gclass in this.vector_0)
+		foreach (GClass819 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.smethod_3(this.Name);
 	}
 
-	public Vector<GClass820> vector_0;
+	public Vector<GClass819> vector_0;
 
 	public string Name;
 }

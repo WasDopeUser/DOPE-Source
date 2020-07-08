@@ -2,7 +2,7 @@
 
 internal class Class13
 {
-	internal static void F93tSdiz1aNIA()
+	internal static void xnk8ImWzpOt04()
 	{
 	}
 

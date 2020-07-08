@@ -1,59 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-public static class GClass850
+public class GClass850
 {
-	public static string smethod_0(string string_0, string string_1)
+	public GClass850(byte[] byte_0 = null)
 	{
-		Encoding unicode = Encoding.Unicode;
-		return Convert.ToBase64String(GClass850.smethod_2(unicode.GetBytes(string_0), unicode.GetBytes(string_1)));
+		Class13.xnk8ImWzpOt04();
+		base..ctor();
+		this.int_1 = 0;
+		this.int_0 = 0;
+		if (byte_0 != null)
+		{
+			this.method_0(byte_0);
+		}
 	}
 
-	public static string smethod_1(string string_0, string string_1)
+	public void method_0(byte[] byte_0)
 	{
-		Encoding unicode = Encoding.Unicode;
-		return unicode.GetString(GClass850.smethod_2(unicode.GetBytes(string_0), Convert.FromBase64String(string_1)));
-	}
-
-	public static byte[] smethod_2(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass850.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	public static byte[] smethod_3(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass850.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	private static byte[] smethod_4(byte[] byte_0)
-	{
-		byte[] array = Enumerable.Range(0, 256).Select(new Func<int, byte>(GClass850.<>c.<>c_0.method_0)).ToArray<byte>();
-		int i = 0;
+		this.State = new byte[256];
+		int i;
+		for (i = 0; i < 256; i++)
+		{
+			this.State[i] = (byte)i;
+		}
 		int num = 0;
+		i = 0;
+		int num2 = num;
 		while (i < 256)
 		{
-			num = (num + (int)byte_0[i % byte_0.Length] + (int)array[i] & 255);
-			GClass850.smethod_6(array, i, num);
+			num2 = (num2 + (int)this.State[i] + (int)byte_0[i % byte_0.Length] & 255);
+			int num3 = (int)this.State[i];
+			this.State[i] = this.State[num2];
+			this.State[num2] = (byte)(num3 & 255);
 			i++;
 		}
-		return array;
+		this.int_1 = 0;
+		this.int_0 = 0;
 	}
 
-	private static IEnumerable<byte> smethod_5(byte[] byte_0, IEnumerable<byte> ienumerable_0)
+	public uint method_1()
 	{
-		GClass850.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass850.<>c__DisplayClass5_0();
-		CS$<>8__locals1.byte_0 = GClass850.smethod_4(byte_0);
-		CS$<>8__locals1.int_0 = 0;
-		CS$<>8__locals1.int_1 = 0;
-		return ienumerable_0.Select(new Func<byte, byte>(CS$<>8__locals1.method_0));
+		this.int_0 = (this.int_0 + 1 & 255);
+		this.int_1 = (this.int_1 + (int)this.State[this.int_0] & 255);
+		int num = (int)this.State[this.int_0];
+		this.State[this.int_0] = this.State[this.int_1];
+		this.State[this.int_1] = (byte)(num & 255);
+		return (uint)this.State[num + (int)this.State[this.int_0] & 255];
 	}
 
-	private static void smethod_6(byte[] byte_0, int int_0, int int_1)
+	public void method_2(byte[] byte_0, int int_2, int int_3)
 	{
-		byte b = byte_0[int_0];
-		byte_0[int_0] = byte_0[int_1];
-		byte_0[int_1] = b;
+		if (this.State == null)
+		{
+			return;
+		}
+		uint num = 0U;
+		while ((ulong)num < (ulong)((long)int_3))
+		{
+			byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] = (byte)(((uint)byte_0[(int)(checked((IntPtr)(unchecked((ulong)num + (ulong)((long)int_2)))))] ^ this.method_1()) & 255U);
+			num += 1U;
+		}
 	}
+
+	public byte[] State;
+
+	public int int_0;
+
+	public int int_1;
 }

@@ -20,12 +20,12 @@ public class GClass330 : GInterface0
 		}
 	}
 
-	public GClass330(string string_1 = "")
+	public GClass330(string string_0 = "")
 	{
-		Class13.F93tSdiz1aNIA();
-		this.string_0 = "";
+		Class13.xnk8ImWzpOt04();
+		this.nsXhfOnfwl = "";
 		base..ctor();
-		this.string_0 = string_1;
+		this.nsXhfOnfwl = string_0;
 	}
 
 	public virtual int vmethod_0()
@@ -38,16 +38,16 @@ public class GClass330 : GInterface0
 		return 2;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.string_0 = binaryStream_0.smethod_2();
-	}
-
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-23886);
-		binaryStream_0.smethod_3(this.string_0);
+		this.nsXhfOnfwl = binaryStream_0.smethod_2();
 	}
 
-	public string string_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-23886);
+		binaryStream_0.smethod_3(this.nsXhfOnfwl);
+	}
+
+	public string nsXhfOnfwl;
 }

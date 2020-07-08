@@ -22,7 +22,7 @@ public class GClass448 : GInterface0
 
 	public GClass448(int int_5 = 0, int int_6 = 0, int int_7 = 0, int int_8 = 0, int int_9 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_9;
 		this.int_1 = int_6;
@@ -41,7 +41,7 @@ public class GClass448 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
@@ -54,7 +54,7 @@ public class GClass448 : GInterface0
 		this.int_4 = (U.smethod_0(this.int_4, 10) | this.int_4 << 22);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(17323);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);

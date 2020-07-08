@@ -1,132 +1,158 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using PErkava;
+using System.Management;
+using System.Runtime.InteropServices;
 
 public static class GClass926
 {
-	public static IEnumerable<IntPtr> smethod_0(GClass925 gclass925_0, GClass927.GStruct3 gstruct3_0, byte[] byte_0)
+	[DllImport("User32.dll")]
+	public static extern IntPtr GetForegroundWindow();
+
+	[DllImport("User32.dll", SetLastError = true)]
+	public static extern uint GetWindowThreadProcessId(IntPtr intptr_0, out uint uint_0);
+
+	[DllImport("kernel32.dll")]
+	public static extern void GetSystemInfo(out GClass926.GStruct1 gstruct1_0);
+
+	[DllImport("kernel32.dll", SetLastError = true)]
+	public static extern int VirtualQueryEx(IntPtr intptr_0, IntPtr intptr_1, out GClass926.GStruct2 gstruct2_0, uint uint_0);
+
+	[DllImport("kernel32.dll", EntryPoint = "VirtualQueryEx", SetLastError = true)]
+	public static extern int VirtualQueryEx_1(IntPtr intptr_0, IntPtr intptr_1, out GClass926.GStruct3 gstruct3_0, uint uint_0);
+
+	[DllImport("kernel32.dll")]
+	public static extern bool ReadProcessMemory(IntPtr intptr_0, IntPtr intptr_1, byte[] byte_0, int int_0, ref int int_1);
+
+	[DllImport("kernel32.dll")]
+	public static extern IntPtr OpenProcess(int int_0, bool bool_0, int int_1);
+
+	[DllImport("kernel32.dll", SetLastError = true)]
+	public static extern bool WriteProcessMemory(IntPtr intptr_0, IntPtr intptr_1, byte[] byte_0, int int_0, ref int int_1);
+
+	[DllImport("kernel32.dll", SetLastError = true)]
+	[return: MarshalAs(UnmanagedType.Bool)]
+	public static extern bool IsWow64Process([In] IntPtr intptr_0, out bool bool_0);
+
+	public static bool smethod_0(IntPtr intptr_0)
 	{
-		goto IL_23;
-		for (;;)
-		{
-			IEnumerator<int> enumerator;
-			long pos;
-			long left;
-			long toRead;
-			IntPtr from;
-			try
-			{
-				IL_133:
-				if (!enumerator.MoveNext())
-				{
-					goto JumpOutOfTryFinally-3;
-				}
-				goto IL_1A1;
-				IL_23:
-				int bufferSize = (int)Math.Min(gstruct3_0.long_0, (long)Math.Max(1048576, byte_0.Length * 4));
-				byte[] buf = new byte[bufferSize];
-				pos = 0L;
-				left = gstruct3_0.long_0;
-				GClass930 kmp = new GClass930(byte_0);
-				Debug.WriteLine(gstruct3_0.long_0);
-				goto IL_18B;
-				IL_B2:
-				toRead = Math.Min((long)bufferSize, left);
-				from = (IntPtr)((long)gstruct3_0.intptr_0 + pos);
-				if (!gclass925_0.method_7(from, buf, (int)toRead))
-				{
-					goto IL_1D1;
-				}
-				enumerator = kmp.method_4(buf).GetEnumerator();
-				goto IL_133;
-			}
-			finally
-			{
-				if (enumerator != null)
-				{
-					enumerator.Dispose();
-				}
-			}
-			goto JumpOutOfTryFinally-3;
-			IL_18B:
-			if (left <= 0L)
-			{
-				break;
-			}
-			goto IL_B2;
-			IL_1A1:
-			int num = enumerator.Current;
-			yield return new IntPtr((long)from + (long)num);
-			continue;
-			JumpOutOfTryFinally-3:
-			enumerator = null;
-			left -= toRead;
-			pos += toRead;
-			pos -= (long)(byte_0.Length - 1);
-			goto IL_18B;
-		}
-		IL_1D1:
-		yield break;
-		yield break;
+		bool flag;
+		return !Environment.Is64BitOperatingSystem || ((Environment.OSVersion.Version.Major > 5 || (Environment.OSVersion.Version.Major == 5 && Environment.OSVersion.Version.Minor >= 1)) && (GClass926.IsWow64Process(intptr_0, out flag) && flag));
 	}
 
-	public static bool smethod_1(IntPtr intptr_0, Action<int> action_0 = null)
+	public static bool smethod_1()
 	{
-		List<IntPtr> list = new GClass928(intptr_0).method_0();
-		uint num;
-		GClass927.GetWindowThreadProcessId(intptr_0, out num);
-		Process processById = Process.GetProcessById((int)num);
-		list.Reverse();
-		List<uint> list2 = list.Select(new Func<IntPtr, uint>(GClass926.<>c.<>c_0.method_0)).ToList<uint>();
-		list2.Add(num);
-		if (processById.ProcessName.StartsWith("chrome"))
+		return !Environment.Is64BitProcess;
+	}
+
+	public static GClass926.GStruct3 smethod_2(IntPtr intptr_0, IntPtr intptr_1, out int int_0)
+	{
+		int_0 = 0;
+		GClass926.GStruct3 result = default(GClass926.GStruct3);
+		if (GClass926.smethod_1())
 		{
-			list2 = Process.GetProcessesByName("chrome").Select(new Func<Process, uint>(GClass926.<>c.<>c_0.method_1)).ToList<uint>();
-			List<uint> list3 = new List<uint>();
-			foreach (uint num2 in list2)
+			GClass926.GStruct2 gstruct = default(GClass926.GStruct2);
+			if (GClass926.VirtualQueryEx(intptr_0, intptr_1, out gstruct, (uint)Marshal.SizeOf(typeof(GClass926.GStruct2))) != 0)
 			{
-				string text = GClass927.smethod_3(num2);
-				if (text != null && text.Contains("flash"))
-				{
-					list3.Add(num2);
-					Debug.WriteLine(string.Format("Found chrome flash player @{0:X2}", num2));
-				}
+				result.intptr_1 = gstruct.intptr_1;
+				result.int_0 = gstruct.int_0;
+				result.intptr_0 = gstruct.intptr_0;
+				result.int_1 = gstruct.int_2;
+				result.long_0 = (long)gstruct.int_1;
+				result.State = gstruct.State;
+				result.int_2 = gstruct.int_3;
+				return result;
 			}
-			list2 = list3;
+			int_0 = Marshal.GetLastWin32Error();
 		}
-		list2 = list2.GroupBy(new Func<uint, uint>(GClass926.<>c.<>c_0.method_2)).Select(new Func<IGrouping<uint, uint>, uint>(GClass926.<>c.<>c_0.method_3)).ToList<uint>();
-		bool flag = false;
-		long num3 = 0L;
-		foreach (uint int_ in list2)
+		else
 		{
-			GClass925 gclass = new GClass925((int)int_);
-			if (!gclass.method_5())
+			if (GClass926.VirtualQueryEx_1(intptr_0, intptr_1, out result, (uint)Marshal.SizeOf(typeof(GClass926.GStruct3))) != 0)
 			{
-				MessageBox.Show("Your browser is compiled for different architecture. Please use the " + (GClass927.smethod_1() ? "64" : "32") + "-bit version of PErkava.");
-				return false;
+				return result;
 			}
-			foreach (GClass927.GStruct3 gstruct in gclass.method_4())
+			int_0 = Marshal.GetLastWin32Error();
+		}
+		return result;
+	}
+
+	public static string smethod_3(uint uint_0)
+	{
+		string text = null;
+		using (ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(string.Format("SELECT CommandLine FROM Win32_Process WHERE ProcessId = {0}", uint_0)))
+		{
+			ManagementObjectCollection.ManagementObjectEnumerator enumerator = managementObjectSearcher.Get().GetEnumerator();
+			if (enumerator.MoveNext())
 			{
-				foreach (IntPtr intptr_ in GClass926.smethod_0(gclass, gstruct, Encoding.UTF8.GetBytes("cc0306d7b0f0c671000bd655485744417a868b29dd77619e42b51f70c28e67d0bbc2caf9dd364cb0419217bcfba86c33735b543fae2b666059b59c631955962afa1f97e0f49f92bf1a5463ae89c751a661e0485c2ec6e011634abfb4a4142157")))
-				{
-					flag = true;
-					gclass.method_6(intptr_, Encoding.UTF8.GetBytes("ef09b1bcec67808eeff374b1b51fb155edaac4fcc7a78ed75d5848d6e9eaabee41dec018bb5482d01acea8ce13688bfe33076dde70f06febb80cf3b7327953fb32c08889b815587ded2cdd056d0ec9965b894751848766c27fdee32c707b6fc9"));
-				}
-				num3 += gstruct.long_0;
-				if (action_0 != null)
-				{
-					action_0((int)(num3 / 1024L / 1024L));
-				}
-			}
-			if (flag)
-			{
-				PErkava.hashSet_0.Add((uint)gclass.method_0());
+				object obj = enumerator.Current["CommandLine"];
+				text = ((obj != null) ? obj.ToString() : null);
 			}
 		}
-		return flag;
+		if (text == null)
+		{
+			return "";
+		}
+		return text;
+	}
+
+	public struct GStruct1
+	{
+		public ushort ushort_0;
+
+		private ushort ushort_1;
+
+		public uint uint_0;
+
+		public IntPtr vaGwoxQbGjs;
+
+		public IntPtr intptr_0;
+
+		public IntPtr intptr_1;
+
+		public uint uint_1;
+
+		public uint uint_2;
+
+		public uint uint_3;
+
+		public ushort ushort_2;
+
+		public ushort ushort_3;
+	}
+
+	public struct GStruct2
+	{
+		public IntPtr intptr_0;
+
+		public IntPtr intptr_1;
+
+		public int int_0;
+
+		public int int_1;
+
+		public int State;
+
+		public int int_2;
+
+		public int int_3;
+	}
+
+	public struct GStruct3
+	{
+		public IntPtr intptr_0;
+
+		public IntPtr intptr_1;
+
+		public int int_0;
+
+		public uint uint_0;
+
+		public long long_0;
+
+		public int State;
+
+		public int int_1;
+
+		public int int_2;
+
+		public uint xcxwoycrNbd;
 	}
 }

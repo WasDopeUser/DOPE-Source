@@ -4,8 +4,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Packets
 {
-	[Guid("B88F4A36-4254-4515-8AE6-BA04FDF385C4")]
 	[DataContract]
+	[Guid("B88F4A36-4254-4515-8AE6-BA04FDF385C4")]
 	public class S2C_ConnectionClosed
 	{
 		[DataMember(Order = 1)]

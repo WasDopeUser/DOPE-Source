@@ -22,7 +22,7 @@ public class GClass414 : GClass406, GInterface0
 
 	public GClass414(double double_1 = 0.0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.double_0 = double_1;
 	}
@@ -37,17 +37,17 @@ public class GClass414 : GClass406, GInterface0
 		return 4;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
+		base.imethod_1(binaryStream_0);
 		this.double_0 = (double)binaryStream_0.smethod_10();
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(29198);
-		base.imethod_1(binaryStream_0);
+		base.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_9(this.double_0);
 	}
 

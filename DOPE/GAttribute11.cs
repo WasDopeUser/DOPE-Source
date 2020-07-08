@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-[GAttribute11(typeof(Attribute))]
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+[GAttribute11(typeof(Attribute))]
 public sealed class GAttribute11 : Attribute
 {
 	public GAttribute11([GAttribute1] Type baseType)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.Type_0 = baseType;
 	}

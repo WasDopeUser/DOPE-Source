@@ -22,7 +22,7 @@ public class GClass552 : GInterface0
 
 	public GClass552(int int_2 = 0, string string_1 = "", string string_2 = "", int int_3 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.Name = "";
 		this.string_0 = "";
 		base..ctor();
@@ -42,7 +42,7 @@ public class GClass552 : GInterface0
 		return 12;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
@@ -52,7 +52,7 @@ public class GClass552 : GInterface0
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(653);
 		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));

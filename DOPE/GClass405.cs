@@ -22,7 +22,7 @@ public class GClass405 : GClass401, GInterface0
 
 	public GClass405()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 
@@ -36,15 +36,15 @@ public class GClass405 : GClass401, GInterface0
 		return 0;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
-	{
-		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
-	}
-
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(26146);
+		binaryStream_0.smethod_1();
 		base.imethod_1(binaryStream_0);
+	}
+
+	public override void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(26146);
+		base.imethod_2(binaryStream_0);
 	}
 }

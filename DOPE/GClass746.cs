@@ -8,7 +8,7 @@ public class GClass746 : GInterface0
 	{
 		get
 		{
-			return 4715;
+			return 21005;
 		}
 	}
 
@@ -16,51 +16,56 @@ public class GClass746 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 16;
 		}
 	}
 
-	public GClass746(GClass848 gclass848_1 = null)
+	public GClass746(int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (gclass848_1 == null)
-		{
-			this.gclass848_0 = new GClass848(0);
-			return;
-		}
-		this.gclass848_0 = gclass848_1;
+		this.Color = int_5;
+		this.int_0 = int_4;
+		this.int_1 = int_6;
+		this.int_2 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 4715;
+		return 21005;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.gclass848_0 = (GClass848)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass848_0 != null)
-		{
-			this.gclass848_0.imethod_0(binaryStream_0);
-		}
+		return 16;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(4715);
-		if (this.gclass848_0 != null)
-		{
-			this.gclass848_0.imethod_1(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		this.Color = binaryStream_0.smethod_0();
+		this.Color = (U.smethod_0(this.Color, 8) | this.Color << 24);
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 8) | this.int_1 << 24);
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 12 | U.smethod_0(this.int_2, 20));
 	}
 
-	public GClass848 gclass848_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(21005);
+		binaryStream_0.smethod_4(this.Color << 8 | U.smethod_0(this.Color, 24));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
+		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 12) | this.int_2 << 20);
+	}
+
+	public int Color;
+
+	public int int_0;
+
+	public int int_1;
+
+	public int int_2;
 }

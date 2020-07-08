@@ -22,7 +22,7 @@ public class GClass413 : GClass406, GInterface0
 
 	public GClass413(int int_1 = 0, GClass365 gclass365_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_1;
 		if (gclass365_1 == null)
@@ -43,27 +43,27 @@ public class GClass413 : GClass406, GInterface0
 		return 4;
 	}
 
-	public override void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
-		base.imethod_0(binaryStream_0);
+		base.imethod_1(binaryStream_0);
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 		this.gclass365_0 = (GClass365)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass365_0 != null)
 		{
-			this.gclass365_0.imethod_0(binaryStream_0);
+			this.gclass365_0.imethod_1(binaryStream_0);
 		}
 	}
 
-	public override void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-31248);
-		base.imethod_1(binaryStream_0);
+		base.imethod_2(binaryStream_0);
 		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
 		if (this.gclass365_0 != null)
 		{
-			this.gclass365_0.imethod_1(binaryStream_0);
+			this.gclass365_0.imethod_2(binaryStream_0);
 			return;
 		}
 		binaryStream_0.smethod_7(0);

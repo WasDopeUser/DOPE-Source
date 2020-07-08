@@ -1,56 +1,34 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-public abstract class GClass852<xxVci2NxsSJZx0hAccJ> : GInterface7 where xxVci2NxsSJZx0hAccJ : GInterface7
+public class GClass852<QpHKL22pmvc8t9PK061> : GClass851<QpHKL22pmvc8t9PK061> where QpHKL22pmvc8t9PK061 : GInterface7
 {
-	[CompilerGenerated]
-	public virtual xxVci2NxsSJZx0hAccJ vmethod_0()
+	public GClass852()
 	{
-		return this.gparam_0;
-	}
-
-	[CompilerGenerated]
-	public virtual void vmethod_1(xxVci2NxsSJZx0hAccJ q31uyQN7KHW0WoXF398)
-	{
-		this.gparam_0 = q31uyQN7KHW0WoXF398;
-	}
-
-	public virtual void imethod_0(byte[] byte_0, int int_0, int int_1)
-	{
-		xxVci2NxsSJZx0hAccJ xxVci2NxsSJZx0hAccJ = this.vmethod_0();
-		if (xxVci2NxsSJZx0hAccJ == null)
-		{
-			return;
-		}
-		xxVci2NxsSJZx0hAccJ.imethod_0(byte_0, int_0, int_1);
-	}
-
-	public virtual void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-		xxVci2NxsSJZx0hAccJ xxVci2NxsSJZx0hAccJ = this.vmethod_0();
-		if (xxVci2NxsSJZx0hAccJ == null)
-		{
-			return;
-		}
-		xxVci2NxsSJZx0hAccJ.imethod_1(byte_0, int_0, int_1);
-	}
-
-	public virtual void imethod_2()
-	{
-		xxVci2NxsSJZx0hAccJ xxVci2NxsSJZx0hAccJ = this.vmethod_0();
-		if (xxVci2NxsSJZx0hAccJ == null)
-		{
-			return;
-		}
-		xxVci2NxsSJZx0hAccJ.imethod_2();
-	}
-
-	protected GClass852()
-	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
+		this.gclass850_0 = new GClass850(null);
+		this.gclass850_1 = new GClass850(null);
 	}
 
-	[CompilerGenerated]
-	private xxVci2NxsSJZx0hAccJ gparam_0;
+	public void method_0(byte[] byte_0)
+	{
+		this.gclass850_0.method_0(byte_0);
+		this.gclass850_1.method_0(byte_0);
+	}
+
+	public override void imethod_1(byte[] byte_0, int int_0, int int_1)
+	{
+		base.imethod_1(byte_0, int_0, int_1);
+		this.gclass850_1.method_2(byte_0, int_0, int_1);
+	}
+
+	public override void imethod_0(byte[] byte_0, int int_0, int int_1)
+	{
+		this.gclass850_0.method_2(byte_0, int_0, int_1);
+		base.imethod_0(byte_0, int_0, int_1);
+	}
+
+	private GClass850 gclass850_0;
+
+	private GClass850 gclass850_1;
 }

@@ -22,7 +22,7 @@ public class GClass255 : GInterface0
 
 	public GClass255(GClass256 gclass256_1 = null, int int_2 = 0, int int_3 = 0, bool bool_0 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (gclass256_1 == null)
 		{
@@ -47,12 +47,12 @@ public class GClass255 : GInterface0
 		return 9;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.gclass256_0 = (GClass256)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass256_0 != null)
 		{
-			this.gclass256_0.imethod_0(binaryStream_0);
+			this.gclass256_0.imethod_1(binaryStream_0);
 		}
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
@@ -61,12 +61,12 @@ public class GClass255 : GInterface0
 		this.Enabled = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(234);
 		if (this.gclass256_0 != null)
 		{
-			this.gclass256_0.imethod_1(binaryStream_0);
+			this.gclass256_0.imethod_2(binaryStream_0);
 		}
 		else
 		{

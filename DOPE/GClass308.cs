@@ -20,9 +20,9 @@ public class GClass308 : GInterface0
 		}
 	}
 
-	public GClass308(GClass522 gclass522_0 = null, int int_1 = 0, string string_1 = "", Vector<GClass693> vector_1 = null)
+	public GClass308(GClass522 gclass522_0 = null, int int_1 = 0, string string_1 = "", Vector<GClass692> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -37,7 +37,7 @@ public class GClass308 : GInterface0
 		}
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass693>();
+			this.vector_0 = new Vector<GClass692>();
 			return;
 		}
 		this.vector_0 = vector_1;
@@ -53,7 +53,7 @@ public class GClass308 : GInterface0
 		return 10;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.int_0 = binaryStream_0.smethod_0();
@@ -61,7 +61,7 @@ public class GClass308 : GInterface0
 		this.Status = (GClass522)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.Status != null)
 		{
-			this.Status.imethod_0(binaryStream_0);
+			this.Status.imethod_1(binaryStream_0);
 		}
 		while (this.vector_0.Length > 0)
 		{
@@ -71,30 +71,30 @@ public class GClass308 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass693 gclass = (GClass693)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			GClass692 gclass = (GClass692)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-29263);
 		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.smethod_4(this.int_0 << 1 | U.smethod_0(this.int_0, 31));
 		if (this.Status != null)
 		{
-			this.Status.imethod_1(binaryStream_0);
+			this.Status.imethod_2(binaryStream_0);
 		}
 		else
 		{
 			binaryStream_0.smethod_7(0);
 		}
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass693 gclass in this.vector_0)
+		foreach (GClass692 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 	}
 
@@ -104,5 +104,5 @@ public class GClass308 : GInterface0
 
 	public GClass522 Status;
 
-	public Vector<GClass693> vector_0;
+	public Vector<GClass692> vector_0;
 }

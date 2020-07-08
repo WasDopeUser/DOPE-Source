@@ -1,79 +1,200 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
-using System.Net.Sockets;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
-using System.Threading;
-using PErkava;
+using System.Text.RegularExpressions;
 
-public class GClass933
+public class GClass933 : Interface0
 {
 	[CompilerGenerated]
-	public TcpListener method_0()
+	public Dictionary<string, GClass933.GClass934> method_0()
 	{
-		return this.tcpListener_0;
+		return this.dictionary_0;
 	}
 
-	[CompilerGenerated]
-	public void method_1(TcpListener tcpListener_1)
+	public bool imethod_2()
 	{
-		this.tcpListener_0 = tcpListener_1;
+		try
+		{
+			GClass933.GClass934 gclass = new GClass933.GClass934("69.69.69.69", false);
+			gclass.method_1();
+			return gclass.method_2(false);
+		}
+		catch
+		{
+		}
+		return false;
 	}
 
-	[CompilerGenerated]
-	public Thread method_2()
+	public void imethod_0(HashSet<string> hashSet_0 = null)
 	{
-		return this.thread_0;
+		object obj = this.object_0;
+		lock (obj)
+		{
+			if (hashSet_0 != null)
+			{
+				using (HashSet<string>.Enumerator enumerator = hashSet_0.GetEnumerator())
+				{
+					while (enumerator.MoveNext())
+					{
+						string text = enumerator.Current;
+						GClass933.GClass934 gclass;
+						if (!this.method_0().TryGetValue(text, out gclass))
+						{
+							gclass = new GClass933.GClass934(text, false);
+						}
+						gclass.method_2(true);
+						this.method_0().Remove(text);
+					}
+					return;
+				}
+			}
+			GClass933.GClass934 gclass2 = new GClass933.GClass934("127.0.0.1", false);
+			this.imethod_0(gclass2.method_3());
+		}
 	}
 
-	[CompilerGenerated]
-	public void method_3(Thread thread_1)
+	public void imethod_1(string[] string_0)
 	{
-		this.thread_0 = thread_1;
+		object obj = this.object_0;
+		lock (obj)
+		{
+			foreach (string text in string_0)
+			{
+				GClass933.GClass934 gclass;
+				if (!this.method_0().TryGetValue(text, out gclass))
+				{
+					gclass = (this.method_0()[text] = new GClass933.GClass934(text, false));
+				}
+				if (gclass.bool_0)
+				{
+					gclass.method_1();
+				}
+			}
+		}
 	}
 
 	public GClass933()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
+		this.dictionary_0 = new Dictionary<string, GClass933.GClass934>();
+		this.object_0 = new object();
 		base..ctor();
-		this.method_1(new TcpListener(IPAddress.Any, 5001));
-		this.method_3(new Thread(new ThreadStart(this.method_4)));
-		this.method_2().IsBackground = true;
 	}
 
-	private void method_4()
+	[CompilerGenerated]
+	private readonly Dictionary<string, GClass933.GClass934> dictionary_0;
+
+	private readonly object object_0;
+
+	public class GClass934
 	{
-		try
+		public GClass934(string string_1, bool bool_1 = false)
 		{
-			this.method_0().Start();
+			Class13.xnk8ImWzpOt04();
+			this.string_0 = "";
+			base..ctor();
+			this.ipaddress_0 = IPAddress.Parse(string_1);
+			this.bool_0 = true;
 		}
-		catch
+
+		~GClass934()
 		{
-			PErkava.IsSupported = false;
-			return;
-		}
-		try
-		{
-			IL_17:
-			TcpClient parameter = this.method_0().AcceptTcpClient();
-			new Thread(new ParameterizedThreadStart(GClass933.<>c.<>c_0.method_0))
+			if (!this.bool_0)
 			{
-				IsBackground = true
-			}.Start(parameter);
+				this.method_2(false);
+			}
 		}
-		catch
+
+		public string method_0(string string_1)
 		{
+			Process process = new Process();
+			this.string_0 = "";
+			process.StartInfo = new ProcessStartInfo
+			{
+				FileName = "cmd.exe",
+				Arguments = "/c " + string_1,
+				CreateNoWindow = true,
+				RedirectStandardOutput = true,
+				UseShellExecute = false
+			};
+			process.OutputDataReceived += this.method_5;
+			process.Start();
+			process.EnableRaisingEvents = true;
+			process.BeginOutputReadLine();
+			process.WaitForExit();
+			return this.string_0;
 		}
-		goto IL_17;
+
+		public void method_1()
+		{
+			this.bool_0 = false;
+			string text;
+			if ((text = this.method_0(string.Concat(new string[]
+			{
+				"netsh int ip add addr ",
+				this.method_4().ToString(),
+				" ",
+				this.ipaddress_0.ToString(),
+				"/32 st=ac sk=tr"
+			}))).Length <= 3)
+			{
+				return;
+			}
+			if (this.method_2(true))
+			{
+				this.method_1();
+				return;
+			}
+			text = text.Replace("\n", "").Replace("\r", "");
+			if (text.ToLower().Contains("dhcp"))
+			{
+				this.method_0("netsh interface ip set dns \"Loopback Pseudo - Interface 1\" dhcp");
+			}
+			throw new Exception("An error ocurred, >" + text + "\n");
+		}
+
+		public bool method_2(bool bool_1 = false)
+		{
+			if (this.bool_0 && !bool_1)
+			{
+				return true;
+			}
+			this.bool_0 = true;
+			return this.method_0("netsh int ip delete addr " + this.method_4().ToString() + " " + this.ipaddress_0.ToString()).Length <= 3;
+		}
+
+		public HashSet<string> method_3()
+		{
+			HashSet<string> hashSet = new HashSet<string>();
+			this.method_0("netsh int ip show ipaddresses " + this.method_4().ToString());
+			foreach (object obj in Regex.Matches(this.string_0, "(?:\\d{1,3}\\.){3}\\d{1,3}"))
+			{
+				string value = ((Match)obj).Groups[0].Value;
+				if (!(value == "127.0.0.1") && !value.StartsWith("192.168"))
+				{
+					hashSet.Add(value);
+				}
+			}
+			return hashSet;
+		}
+
+		public int method_4()
+		{
+			return NetworkInterface.LoopbackInterfaceIndex;
+		}
+
+		private void method_5(object sender, DataReceivedEventArgs e)
+		{
+			this.string_0 = this.string_0 + e.Data + "\n";
+		}
+
+		public string string_0;
+
+		public volatile bool bool_0;
+
+		public IPAddress ipaddress_0;
 	}
-
-	public void Start()
-	{
-		this.method_2().Start();
-	}
-
-	[CompilerGenerated]
-	private TcpListener tcpListener_0;
-
-	[CompilerGenerated]
-	private Thread thread_0;
 }

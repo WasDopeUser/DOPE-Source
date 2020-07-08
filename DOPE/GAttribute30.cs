@@ -6,13 +6,13 @@ public sealed class GAttribute30 : Attribute
 {
 	public GAttribute30()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 
 	public GAttribute30([GAttribute1] string anonymousProperty)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.String_0 = anonymousProperty;
 	}

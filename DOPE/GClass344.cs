@@ -20,19 +20,19 @@ public class GClass344 : GInterface0
 		}
 	}
 
-	public GClass344(string string_1 = "", double double_1 = 0.0, GClass784 gclass784_0 = null)
+	public GClass344(string string_1 = "", double double_1 = 0.0, GClass783 gclass783_0 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.double_0 = double_1;
-		if (gclass784_0 == null)
+		if (gclass783_0 == null)
 		{
-			this.Status = new GClass784();
+			this.Status = new GClass783();
 		}
 		else
 		{
-			this.Status = gclass784_0;
+			this.Status = gclass783_0;
 		}
 		this.string_0 = string_1;
 	}
@@ -47,24 +47,24 @@ public class GClass344 : GInterface0
 		return 10;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.double_0 = binaryStream_0.ReadDouble();
-		this.Status = (GClass784)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		this.Status = (GClass783)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.Status != null)
 		{
-			this.Status.imethod_0(binaryStream_0);
+			this.Status.imethod_1(binaryStream_0);
 		}
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-23120);
 		binaryStream_0.WriteDouble(this.double_0);
 		if (this.Status != null)
 		{
-			this.Status.imethod_1(binaryStream_0);
+			this.Status.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -75,7 +75,7 @@ public class GClass344 : GInterface0
 
 	public double double_0;
 
-	public GClass784 Status;
+	public GClass783 Status;
 
 	public string string_0;
 }

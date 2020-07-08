@@ -22,7 +22,7 @@ public class GClass493 : GInterface0
 
 	public GClass493(string string_1 = "", bool bool_1 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -39,13 +39,13 @@ public class GClass493 : GInterface0
 		return 3;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(26421);
 		binaryStream_0.smethod_3(this.string_0);

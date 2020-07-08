@@ -236,7 +236,7 @@ namespace DarkorbitAPI.Structures
 
 		static MapUtils()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			MapUtils.LargeMapSize = new DarkorbitAPI.CommonStructures.Size(42000, 27000);
 			MapUtils.DefaultMapSize = new DarkorbitAPI.CommonStructures.Size(21000, 13500);
 			MapUtils.HalfSize = new DarkorbitAPI.CommonStructures.Size(10500, 6750);
@@ -244,7 +244,7 @@ namespace DarkorbitAPI.Structures
 			MapUtils._mapsOnline = false;
 			MapUtils.Events = new List<GEnum5>();
 			MapUtils._init = false;
-			MapUtils.DefaultMapCheckpointComparer = Comparer<MapUtils.MapCheckpoint>.Create(new Comparison<MapUtils.MapCheckpoint>(MapUtils.<>c.<>9.hIeXtuujJZ));
+			MapUtils.DefaultMapCheckpointComparer = Comparer<MapUtils.MapCheckpoint>.Create(new Comparison<MapUtils.MapCheckpoint>(MapUtils.<>c.<>9.method_1));
 			MapUtils.Portals = new Dictionary<int, MapUtils.PortalEdge>();
 			MapUtils.MapIdByName = new Dictionary<string, int>();
 			MapUtils.SpaceGraph = new Dictionary<int, List<MapUtils.PortalEdge>>();
@@ -504,15 +504,15 @@ namespace DarkorbitAPI.Structures
 								if (!hashSet.Contains(CS$<>8__locals5.port.Id))
 								{
 									Gate gate = (mapId3 == mapId2) ? CS$<>8__locals1.map.Gates.FirstOrDefault(new Func<KeyValuePair<int, Gate>, bool>(CS$<>8__locals5.method_0)).Value : null;
-									if (CS$<>8__locals1.map.Hero.method_28(CS$<>8__locals5.port, gate) && (gate == null || !CS$<>8__locals1.map.Grid.method_7(gate.Position)))
+									if (CS$<>8__locals1.map.Hero.method_27(CS$<>8__locals5.port, gate) && (gate == null || !CS$<>8__locals1.map.Grid.method_7(gate.Position)))
 									{
-										bool flag3 = !CS$<>8__locals1.map.Hero.method_29(CS$<>8__locals5.port, gate);
+										bool flag3 = !CS$<>8__locals1.map.Hero.method_28(CS$<>8__locals5.port, gate);
 										if (mapId3 != mapId2 || gate != null)
 										{
 											Vector2 value2 = (gate != null) ? gate.Position : CS$<>8__locals5.port.Position;
 											MapUtils.PortalEdge otherSide = CS$<>8__locals5.port.OtherSide;
 											Vector2 position = (otherSide != null) ? otherSide.Position : MapUtils.smethod_3(CS$<>8__locals5.port.ToMapId);
-											MapUtils.MapCheckpoint vs3Km2uTyEMwSmsKOgm = new MapUtils.MapCheckpoint
+											MapUtils.MapCheckpoint aLxqon5UM6GC61oveUQ = new MapUtils.MapCheckpoint
 											{
 												Parent = mapCheckpoint2,
 												Distance = mapCheckpoint2.Distance + Vector2.Distance(mapCheckpoint2.Position, value2) + 1200f,
@@ -521,7 +521,7 @@ namespace DarkorbitAPI.Structures
 												Edge = CS$<>8__locals5.port,
 												MapId = (short)CS$<>8__locals5.port.ToMapId
 											};
-											minHeap.method_0(vs3Km2uTyEMwSmsKOgm);
+											minHeap.method_0(aLxqon5UM6GC61oveUQ);
 										}
 									}
 								}
@@ -568,7 +568,7 @@ namespace DarkorbitAPI.Structures
 				{
 					return Color.Lime;
 				}
-				if (ship.method_8(hero))
+				if (ship.method_7(hero))
 				{
 					return Color.Red;
 				}
@@ -605,7 +605,7 @@ namespace DarkorbitAPI.Structures
 					Gate gate = entity_0 as Gate;
 					if (gate != null)
 					{
-						if (map_0.Hero.method_29(gate.Edge, gate))
+						if (map_0.Hero.method_28(gate.Edge, gate))
 						{
 							return Color.Lime;
 						}
@@ -694,7 +694,7 @@ namespace DarkorbitAPI.Structures
 
 			public PortalEdge(int int_0, int int_1, int int_2, int int_3, bool bool_0, int int_4, int int_5)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				this.Id = int_0;
 				this.FromMapId = int_1;
@@ -709,7 +709,7 @@ namespace DarkorbitAPI.Structures
 		{
 			public MapCheckpoint()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 			}
 

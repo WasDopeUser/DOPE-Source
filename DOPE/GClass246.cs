@@ -22,7 +22,7 @@ public class GClass246 : GInterface0
 
 	public GClass246(string string_1 = "", int int_3 = 0, int int_4 = 0, int int_5 = 0, int int_6 = 0, double double_2 = 0.0, double double_3 = 0.0, bool bool_1 = false, GClass488 gclass488_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.int_0 = int_3;
@@ -53,7 +53,7 @@ public class GClass246 : GInterface0
 		return 23;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
@@ -63,7 +63,7 @@ public class GClass246 : GInterface0
 		this.gclass488_0 = (GClass488)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass488_0 != null)
 		{
-			this.gclass488_0.imethod_0(binaryStream_0);
+			this.gclass488_0.imethod_1(binaryStream_0);
 		}
 		this.double_1 = (double)binaryStream_0.smethod_10();
 		this.Count = binaryStream_0.smethod_0();
@@ -73,7 +73,7 @@ public class GClass246 : GInterface0
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(5568);
 		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
@@ -82,7 +82,7 @@ public class GClass246 : GInterface0
 		binaryStream_0.smethod_7(this.int_1);
 		if (this.gclass488_0 != null)
 		{
-			this.gclass488_0.imethod_1(binaryStream_0);
+			this.gclass488_0.imethod_2(binaryStream_0);
 		}
 		else
 		{

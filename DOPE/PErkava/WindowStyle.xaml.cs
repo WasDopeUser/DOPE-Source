@@ -12,7 +12,7 @@ namespace PErkava
 	{
 		public WindowStyle()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 			this.InitializeComponent();
 		}

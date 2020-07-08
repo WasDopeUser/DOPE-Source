@@ -22,7 +22,7 @@ public class GClass586 : GInterface0
 
 	public GClass586(string string_3 = "", int int_2 = 0, string string_4 = "", int int_3 = 0, string string_5 = "")
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		this.string_2 = "";
@@ -44,7 +44,7 @@ public class GClass586 : GInterface0
 		return 14;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
@@ -55,7 +55,7 @@ public class GClass586 : GInterface0
 		this.string_2 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(22669);
 		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));

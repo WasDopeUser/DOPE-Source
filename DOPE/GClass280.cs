@@ -20,26 +20,26 @@ public class GClass280 : GInterface0
 		}
 	}
 
-	public GClass280(int int_9 = 0, GClass201 gclass201_2 = null, GClass201 gclass201_3 = null, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0)
+	public GClass280(int int_9 = 0, GClass200 gclass200_2 = null, GClass200 gclass200_3 = null, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, int int_14 = 0, int int_15 = 0, int int_16 = 0, int int_17 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_9;
-		if (gclass201_2 == null)
+		if (gclass200_2 == null)
 		{
-			this.gclass201_0 = new GClass201(0);
+			this.gclass200_0 = new GClass200(0);
 		}
 		else
 		{
-			this.gclass201_0 = gclass201_2;
+			this.gclass200_0 = gclass200_2;
 		}
-		if (gclass201_3 == null)
+		if (gclass200_3 == null)
 		{
-			this.gclass201_1 = new GClass201(0);
+			this.gclass200_1 = new GClass200(0);
 		}
 		else
 		{
-			this.gclass201_1 = gclass201_3;
+			this.gclass200_1 = gclass200_3;
 		}
 		this.int_1 = int_10;
 		this.int_2 = int_11;
@@ -61,19 +61,19 @@ public class GClass280 : GInterface0
 		return 36;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
-		this.gclass201_0 = (GClass201)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass201_0 != null)
+		this.gclass200_0 = (GClass200)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass200_0 != null)
 		{
-			this.gclass201_0.imethod_0(binaryStream_0);
+			this.gclass200_0.imethod_1(binaryStream_0);
 		}
-		this.gclass201_1 = (GClass201)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass201_1 != null)
+		this.gclass200_1 = (GClass200)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass200_1 != null)
 		{
-			this.gclass201_1.imethod_0(binaryStream_0);
+			this.gclass200_1.imethod_1(binaryStream_0);
 		}
 		this.int_1 = binaryStream_0.smethod_0();
 		this.int_1 = (this.int_1 << 12 | U.smethod_0(this.int_1, 20));
@@ -93,21 +93,21 @@ public class GClass280 : GInterface0
 		this.int_8 = (this.int_8 << 14 | U.smethod_0(this.int_8, 18));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(1527);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-		if (this.gclass201_0 != null)
+		if (this.gclass200_0 != null)
 		{
-			this.gclass201_0.imethod_1(binaryStream_0);
+			this.gclass200_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
 			binaryStream_0.smethod_7(0);
 		}
-		if (this.gclass201_1 != null)
+		if (this.gclass200_1 != null)
 		{
-			this.gclass201_1.imethod_1(binaryStream_0);
+			this.gclass200_1.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -125,9 +125,9 @@ public class GClass280 : GInterface0
 
 	public int int_0;
 
-	public GClass201 gclass201_0;
+	public GClass200 gclass200_0;
 
-	public GClass201 gclass201_1;
+	public GClass200 gclass200_1;
 
 	public int int_1;
 

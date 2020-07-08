@@ -21,7 +21,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Type>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_111);
+				this.method_10(Class5.propertyChangedEventArgs_107);
 			}
 		}
 
@@ -42,7 +42,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this._leashedBy = value;
-				this.method_11(Class5.propertyChangedEventArgs_67);
+				this.method_10(Class5.propertyChangedEventArgs_65);
 			}
 		}
 
@@ -61,7 +61,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Range>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_85);
+				this.method_10(Class5.propertyChangedEventArgs_82);
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<RangeFix>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_86);
+				this.method_10(Class5.propertyChangedEventArgs_83);
 			}
 		}
 
@@ -99,7 +99,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastDistance>k__BackingField = value;
-				this.method_11(Class5.propertyChangedEventArgs_59);
+				this.method_10(Class5.propertyChangedEventArgs_57);
 			}
 		}
 
@@ -131,7 +131,7 @@ namespace DarkorbitAPI.Structures
 
 		public NpcShip()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 

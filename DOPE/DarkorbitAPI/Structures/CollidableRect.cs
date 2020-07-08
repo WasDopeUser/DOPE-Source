@@ -10,12 +10,12 @@ namespace DarkorbitAPI.Structures
 
 		public CollidableRect(string string_0, bool bool_0, int int_0, int int_1, int int_2, int int_3, CollidableType collidableType_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor(collidableType_0, 2, string_0);
 			base.Shape = 2;
 			base.Active = bool_0;
 			base.Name = string_0;
-			this.Rect = MapGrid.smethod_1(int_0 - 50, int_1 - 50, int_2 + 100, int_3 + 100);
+			this.Rect = MapGrid.smethod_2(int_0 - 50, int_1 - 50, int_2 + 100, int_3 + 100);
 		}
 
 		public override Rectangle imethod_1()

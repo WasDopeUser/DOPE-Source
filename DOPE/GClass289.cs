@@ -22,7 +22,7 @@ public class GClass289 : GInterface0
 
 	public GClass289(string string_1 = "", int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -39,14 +39,14 @@ public class GClass289 : GInterface0
 		return 6;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(1270);
 		binaryStream_0.smethod_3(this.string_0);

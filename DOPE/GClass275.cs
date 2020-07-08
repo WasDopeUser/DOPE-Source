@@ -22,7 +22,7 @@ public class GClass275 : GInterface0
 
 	public GClass275(bool bool_5 = false, bool bool_6 = false, string string_1 = "", GClass363 gclass363_2 = null, GClass363 gclass363_3 = null, bool bool_7 = false, double double_2 = 0.0, double double_3 = 0.0, int int_1 = 0, string string_2 = "", bool bool_8 = false, bool bool_9 = false, bool bool_10 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.Id = "";
 		base..ctor();
@@ -65,13 +65,13 @@ public class GClass275 : GInterface0
 		return 26;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.gclass363_0 = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass363_0 != null)
 		{
-			this.gclass363_0.imethod_0(binaryStream_0);
+			this.gclass363_0.imethod_1(binaryStream_0);
 		}
 		this.bool_1 = binaryStream_0.ReadBoolean();
 		this.bool_2 = binaryStream_0.ReadBoolean();
@@ -84,19 +84,19 @@ public class GClass275 : GInterface0
 		this.gclass363_1 = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass363_1 != null)
 		{
-			this.gclass363_1.imethod_0(binaryStream_0);
+			this.gclass363_1.imethod_1(binaryStream_0);
 		}
 		this.double_1 = binaryStream_0.ReadDouble();
 		this.bool_4 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-25534);
 		binaryStream_0.WriteBoolean(this.bool_0);
 		if (this.gclass363_0 != null)
 		{
-			this.gclass363_0.imethod_1(binaryStream_0);
+			this.gclass363_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -112,7 +112,7 @@ public class GClass275 : GInterface0
 		binaryStream_0.smethod_3(this.Id);
 		if (this.gclass363_1 != null)
 		{
-			this.gclass363_1.imethod_1(binaryStream_0);
+			this.gclass363_1.imethod_2(binaryStream_0);
 		}
 		else
 		{

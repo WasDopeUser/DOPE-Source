@@ -22,7 +22,7 @@ public class GClass304 : GInterface0
 
 	public GClass304(bool bool_1 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.bool_0 = bool_1;
 	}
@@ -37,12 +37,12 @@ public class GClass304 : GInterface0
 		return 1;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-31275);
 		binaryStream_0.WriteBoolean(this.bool_0);

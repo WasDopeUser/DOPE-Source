@@ -22,7 +22,7 @@ public class GClass464 : GInterface0
 
 	public GClass464(Vector<int> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (vector_1 == null)
 		{
@@ -42,7 +42,7 @@ public class GClass464 : GInterface0
 		return 4;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		while (this.vector_0.Length > 0)
 		{
@@ -59,7 +59,7 @@ public class GClass464 : GInterface0
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(12121);
 		binaryStream_0.smethod_7(this.vector_0.Length);

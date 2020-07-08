@@ -49,7 +49,7 @@ namespace DarkorbitAPI.Structures
 
 		static NpcUtils()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			NpcUtils.Groups = new List<NpcUtils.NpcGroup>();
 			NpcUtils.G_Regular = new NpcUtils.NpcGroup("Regular", "");
 			NpcUtils.G_Boss = new NpcUtils.NpcGroup("Boss", null);
@@ -792,7 +792,7 @@ namespace DarkorbitAPI.Structures
 
 			public GGWaveType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, int int_0, string string_0 = null)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor(npcClass_0, npcGroup_0, false);
 				this.WaveNumber = int_0;
 				this.Description = string_0;
@@ -818,7 +818,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static GGWaveType()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				NpcUtils.GGWaveType.LastGGId = 2146483647;
 			}
 
@@ -838,7 +838,7 @@ namespace DarkorbitAPI.Structures
 
 			protected NpcType(NpcUtils.NpcClass npcClass_0, NpcUtils.NpcGroup npcGroup_0, bool bool_0 = true)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				this.Class = npcClass_0;
 				this.Group = npcGroup_0;
@@ -958,7 +958,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcType()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 			}
 
 			public static int LastId;
@@ -973,7 +973,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcClass(string string_0)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				this.Name = string_0;
 				NpcUtils.Classes.Add(this);
@@ -998,7 +998,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcClass()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				NpcUtils.NpcClass.LastId = 1;
 			}
 
@@ -1017,7 +1017,7 @@ namespace DarkorbitAPI.Structures
 
 			internal NpcGroup(string string_0, string string_1 = null)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				if (string_1 == null)
 				{
@@ -1094,7 +1094,7 @@ namespace DarkorbitAPI.Structures
 			// Note: this type is marked as 'beforefieldinit'.
 			static NpcGroup()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				NpcUtils.NpcGroup.LastId = 1;
 			}
 

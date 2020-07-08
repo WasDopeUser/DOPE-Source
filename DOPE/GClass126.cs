@@ -20,9 +20,9 @@ public class GClass126 : GInterface0
 		}
 	}
 
-	public GClass126(GClass130 gclass130_1 = null, string string_2 = "", int int_7 = 0, string string_3 = "", int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, bool bool_4 = false, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, GClass139 gclass139_1 = null, Vector<GClass187> vector_1 = null)
+	public GClass126(GClass130 gclass130_1 = null, string string_2 = "", int int_7 = 0, string string_3 = "", int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, int int_12 = 0, int int_13 = 0, bool bool_4 = false, bool bool_5 = false, bool bool_6 = false, bool bool_7 = false, GClass139 gclass139_1 = null, Vector<GClass186> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
@@ -54,7 +54,7 @@ public class GClass126 : GInterface0
 		}
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass187>();
+			this.vector_0 = new Vector<GClass186>();
 		}
 		else
 		{
@@ -75,7 +75,7 @@ public class GClass126 : GInterface0
 		return 40;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.int_0 = binaryStream_0.smethod_0();
@@ -86,7 +86,7 @@ public class GClass126 : GInterface0
 		this.gclass139_0 = (GClass139)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass139_0 != null)
 		{
-			this.gclass139_0.imethod_0(binaryStream_0);
+			this.gclass139_0.imethod_1(binaryStream_0);
 		}
 		this.bool_1 = binaryStream_0.ReadBoolean();
 		this.bool_2 = binaryStream_0.ReadBoolean();
@@ -99,7 +99,7 @@ public class GClass126 : GInterface0
 		this.gclass130_0 = (GClass130)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass130_0 != null)
 		{
-			this.gclass130_0.imethod_0(binaryStream_0);
+			this.gclass130_0.imethod_1(binaryStream_0);
 		}
 		while (this.vector_0.Length > 0)
 		{
@@ -109,8 +109,8 @@ public class GClass126 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass187 gclass = (GClass187)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
+			GClass186 gclass = (GClass186)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
@@ -122,7 +122,7 @@ public class GClass126 : GInterface0
 		this.int_6 = (U.smethod_0(this.int_6, 1) | this.int_6 << 31);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(5908);
 		binaryStream_0.smethod_3(this.string_0);
@@ -131,7 +131,7 @@ public class GClass126 : GInterface0
 		binaryStream_0.WriteBoolean(this.bool_0);
 		if (this.gclass139_0 != null)
 		{
-			this.gclass139_0.imethod_1(binaryStream_0);
+			this.gclass139_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -145,16 +145,16 @@ public class GClass126 : GInterface0
 		binaryStream_0.smethod_4(this.int_3 << 2 | U.smethod_0(this.int_3, 30));
 		if (this.gclass130_0 != null)
 		{
-			this.gclass130_0.imethod_1(binaryStream_0);
+			this.gclass130_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
 			binaryStream_0.smethod_7(0);
 		}
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass187 gclass in this.vector_0)
+		foreach (GClass186 gclass in this.vector_0)
 		{
-			gclass.imethod_1(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
 		binaryStream_0.smethod_4(U.smethod_0(this.int_4, 15) | this.int_4 << 17);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_5, 11) | this.int_5 << 21);
@@ -185,7 +185,7 @@ public class GClass126 : GInterface0
 
 	public GClass130 gclass130_0;
 
-	public Vector<GClass187> vector_0;
+	public Vector<GClass186> vector_0;
 
 	public int int_4;
 

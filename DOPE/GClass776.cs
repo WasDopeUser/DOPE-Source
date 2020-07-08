@@ -8,7 +8,7 @@ public class GClass776 : GInterface0
 	{
 		get
 		{
-			return 19521;
+			return 26314;
 		}
 	}
 
@@ -16,38 +16,32 @@ public class GClass776 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass776(int int_1 = 0)
+	public GClass776()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 19521;
+		return 26314;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(19521);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
 	}
 
-	public int int_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(26314);
+	}
 }

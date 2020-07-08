@@ -8,7 +8,7 @@ public class GClass796 : GInterface0
 	{
 		get
 		{
-			return -13705;
+			return 221;
 		}
 	}
 
@@ -16,72 +16,44 @@ public class GClass796 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 8;
 		}
 	}
 
-	public GClass796(string string_1 = "", int int_1 = 0, Vector<int> vector_0 = null)
+	public GClass796(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
-		this.string_0 = "";
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (vector_0 == null)
-		{
-			this.puTgEpvgye = new Vector<int>();
-		}
-		else
-		{
-			this.puTgEpvgye = vector_0;
-		}
-		this.string_0 = string_1;
-		this.int_0 = int_1;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -13705;
+		return 221;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		while (this.puTgEpvgye.Length > 0)
-		{
-			this.puTgEpvgye.method_1();
-		}
-		int i = 0;
-		int num = binaryStream_0.ReadByte();
-		while (i < num)
-		{
-			int num2 = binaryStream_0.smethod_0();
-			num2 = (num2 << 9 | U.smethod_0(num2, 23));
-			this.puTgEpvgye.method_0(num2);
-			i++;
-		}
-		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-13705);
-		binaryStream_0.WriteByte(this.puTgEpvgye.Length);
-		foreach (int num in this.puTgEpvgye)
-		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 9) | num << 23);
-		}
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 3) | this.int_1 << 29);
 	}
 
-	public Vector<int> puTgEpvgye;
-
-	public string string_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(221);
+		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
+		binaryStream_0.smethod_4(this.int_1 << 3 | U.smethod_0(this.int_1, 29));
+	}
 
 	public int int_0;
+
+	public int int_1;
 }

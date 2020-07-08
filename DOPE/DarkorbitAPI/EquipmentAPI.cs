@@ -18,7 +18,7 @@ namespace DarkorbitAPI
 		{
 			get
 			{
-				if (this.Web.Game.Connection.Socket.method_1() && this.Web.Game.Hero.IsInitialized)
+				if (this.Web.Game.Connection.Socket.method_2() && this.Web.Game.Hero.IsInitialized)
 				{
 					return this.Web.Game.Hero.TypeId;
 				}
@@ -67,14 +67,14 @@ namespace DarkorbitAPI
 
 		public EquipmentAPI(DarkOrbitWebAPI web)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 			this.Web = web;
 		}
 
 		public GClass28.GClass48 GetHangarList()
 		{
-			string text = this.Web.Post(GClass880.smethod_8(this.Web.Server), new Dictionary<string, string>
+			string text = this.Web.Post(GClass879.smethod_9(this.Web.Server), new Dictionary<string, string>
 			{
 				{
 					"params",
@@ -118,7 +118,7 @@ namespace DarkorbitAPI
 		public GClass10.GClass27 GetDetails(GClass28.GClass32 hangar)
 		{
 			string string_ = string.Format("{{\"params\":{{\"lootId\":\"{0}\",\"hi\":{1},\"hangarId\":\"{2}\"}}}}", hangar.GClass31_0.GClass30_0, hangar.String_0, hangar.String_0);
-			DarkOrbitWebAPI.Response response = this.Web.Post(GClass880.smethod_8(this.Web.Server), new Dictionary<string, string>
+			DarkOrbitWebAPI.Response response = this.Web.Post(GClass879.smethod_9(this.Web.Server), new Dictionary<string, string>
 			{
 				{
 					"action",
@@ -140,7 +140,7 @@ namespace DarkorbitAPI
 		public GClass49.GClass76 GetHangar(int id)
 		{
 			string string_ = string.Format("{{\"params\":{{\"hi\":{0}}}}}", id);
-			string text = this.Web.Post(GClass880.smethod_8(this.Web.Server), new Dictionary<string, string>
+			string text = this.Web.Post(GClass879.smethod_9(this.Web.Server), new Dictionary<string, string>
 			{
 				{
 					"action",
@@ -231,9 +231,9 @@ namespace DarkorbitAPI
 				hangar.Map_0.IList_1[drone.Int32_0],
 				drone.Int32_1,
 				drone.String_0,
-				drone.Int32_3
+				drone.ebgiIhKxb8
 			});
-			return EquipmentAPI.HasNoError(this.Web.Post(GClass880.smethod_8(this.Web.Server), new Dictionary<string, string>
+			return EquipmentAPI.HasNoError(this.Web.Post(GClass879.smethod_9(this.Web.Server), new Dictionary<string, string>
 			{
 				{
 					"action",
@@ -270,7 +270,7 @@ namespace DarkorbitAPI
 				string_,
 				"}}"
 			});
-			bool flag = EquipmentAPI.HasNoError(this.Web.Post(GClass880.smethod_8(this.Web.Server), new Dictionary<string, string>
+			bool flag = EquipmentAPI.HasNoError(this.Web.Post(GClass879.smethod_9(this.Web.Server), new Dictionary<string, string>
 			{
 				{
 					"action",
@@ -292,7 +292,7 @@ namespace DarkorbitAPI
 		{
 			public EquipmentItem(int L, string Name, string T, EquipmentAPI.EquipmentItemType Type, int Selling)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				this.L = L;
 				this.Name = Name;
@@ -326,7 +326,7 @@ namespace DarkorbitAPI
 		{
 			public ItemHeader(string I, int LV, int L, int S)
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 				this.I = I;
 				this.LV = LV;

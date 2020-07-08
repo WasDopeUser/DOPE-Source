@@ -16,7 +16,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return string.Format("{0}.{1}", 0, 54);
+				return string.Format("{0}.{1}", 0, 55);
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace DOPE.Common
 		{
 			get
 			{
-				return "2288b5adc1b3377c217c9e212e024300";
+				return "688b75415cb841f68eaae105cf0f2de9";
 			}
 		}
 

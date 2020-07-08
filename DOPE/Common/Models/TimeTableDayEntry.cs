@@ -6,8 +6,8 @@ using System.Runtime.Serialization;
 
 namespace DOPE.Common.Models
 {
-	[Guid("D5226792-3A9E-4762-AC1B-CDC08F9D4286")]
 	[DataContract]
+	[Guid("D5226792-3A9E-4762-AC1B-CDC08F9D4286")]
 	public class TimeTableDayEntry
 	{
 		[DataMember(Order = 1)]

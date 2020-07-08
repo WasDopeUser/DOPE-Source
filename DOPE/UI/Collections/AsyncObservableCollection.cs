@@ -11,14 +11,14 @@ namespace DOPE.UI.Collections
 	{
 		public AsyncObservableCollection()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this._synchronizationContext = SynchronizationContext.Current;
 			base..ctor();
 		}
 
 		public AsyncObservableCollection(IEnumerable<T> ienumerable_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this._synchronizationContext = SynchronizationContext.Current;
 			base..ctor(ienumerable_0);
 		}

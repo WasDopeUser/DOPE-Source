@@ -1,94 +1,198 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using DOPE.Common;
 using DOPE.Common.Models;
+using DOPE.Common.Models.Bot;
 
-public class GClass893 : GClass892
+public class GClass893 : GClass891
 {
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	public MapProfile CollectProfile
 	{
-		return null;
+		[CompilerGenerated]
+		get
+		{
+			return this.mapProfile_1;
+		}
+		[CompilerGenerated]
+		protected set
+		{
+			if (object.Equals(this.mapProfile_1, value))
+			{
+				return;
+			}
+			this.mapProfile_1 = value;
+			this.method_0(Class10.propertyChangedEventArgs_10);
+		}
 	}
 
-	public override bool ShouldBeInGame()
+	public MapProfile SellProfile
 	{
-		return false;
+		[CompilerGenerated]
+		get
+		{
+			return this.mapProfile_2;
+		}
+		[CompilerGenerated]
+		protected set
+		{
+			if (object.Equals(this.mapProfile_2, value))
+			{
+				return;
+			}
+			this.mapProfile_2 = value;
+			this.method_0(Class10.propertyChangedEventArgs_51);
+		}
+	}
+
+	public GClass893(GClass889 gclass889_1)
+	{
+		Class13.xnk8ImWzpOt04();
+		this.bool_0 = true;
+		base..ctor(gclass889_1, "Palladium", int.MinValue);
+		this.gclass909_0 = new GClass909(gclass889_1);
+		this.gclass910_0 = new GClass910(gclass889_1);
+	}
+
+	public override MapProfile UpdateProfile(BotProfile botProfile_1)
+	{
+		MapProfile collectProfile;
+		if (botProfile_1 == null)
+		{
+			collectProfile = null;
+		}
+		else
+		{
+			List<MapProfile> maps = botProfile_1.Maps;
+			if (maps == null)
+			{
+				collectProfile = null;
+			}
+			else
+			{
+				collectProfile = maps.FirstOrDefault(new Func<MapProfile, bool>(GClass893.<>c.<>c_0.method_0));
+			}
+		}
+		this.CollectProfile = collectProfile;
+		if (this.CollectProfile != null)
+		{
+			this.SellProfile = DataUtils.DeepClone<MapProfile>(this.CollectProfile);
+			this.SellProfile.TargetMap = TargetMap.P52;
+			MapProfile sellProfile = this.SellProfile;
+			this.SellProfile.Collector = false;
+			sellProfile.Hunter = false;
+			this.CollectProfile.CollectPalladium = true;
+		}
+		return this.CollectProfile;
+	}
+
+	public override GClass903 GetBehavior()
+	{
+		int mapId = base.Context.Map.MapId;
+		if (mapId == 93)
+		{
+			return this.gclass909_0;
+		}
+		if (mapId == 92)
+		{
+			return this.gclass910_0;
+		}
+		return base.GetBehavior();
 	}
 
 	public override int UpdatePriority()
 	{
-		return -1;
+		if (this.CollectProfile != null)
+		{
+			AccountSettings account = base.C.Account;
+			if (((account != null) ? account.HangarPalladiumSell : null) != null)
+			{
+				AccountSettings account2 = base.C.Account;
+				if (((account2 != null) ? account2.HangarPalladiumCollect : null) != null)
+				{
+					return base.UpdatePriority();
+				}
+			}
+		}
+		return int.MinValue;
 	}
 
 	public override void UpdateState()
 	{
 		base.UpdateState();
+		if (base.State == ModuleState.Started && base.C.Hero.CargoCapacity > 1)
+		{
+			string activeHangarName = base.Context.Game.Web.Equipment.ActiveHangarName;
+			if (activeHangarName != null)
+			{
+				if (activeHangarName == base.Context.Account.HangarPalladiumCollect)
+				{
+					this.bool_0 = (base.C.Hero.FreeCargo > 50);
+					return;
+				}
+				this.bool_0 = this.CheckStopped();
+			}
+		}
+	}
+
+	protected override void OnStopping()
+	{
+		base.OnStopping();
+		this.bool_0 = false;
+	}
+
+	public override void ClearStats()
+	{
+		base.ClearStats();
+		this.bool_0 = true;
+	}
+
+	public override bool CheckStopped()
+	{
+		return base.Context.Hero.ResourcePalladium < 15.0;
 	}
 
 	public override MapProfile GetMapProfile()
 	{
-		return base.Context.MapProfile ?? this.mapProfile_1;
-	}
-
-	public GClass893(GClass890 gclass890_1)
-	{
-		Class13.F93tSdiz1aNIA();
-		this.mapProfile_1 = new MapProfile
+		if (base.Context.Account.HangarPalladiumCollect == base.Context.Account.HangarPalladiumSell)
 		{
-			TargetMap = TargetMap.X1
-		};
-		base..ctor(gclass890_1, "Idle", -1);
-		base.MapProfile = null;
-	}
-
-	public override bool ShouldChangeHangar(out string string_1)
-	{
-		string_1 = null;
-		AccountSettings account = base.C.Account;
-		if (account != null && account.Spinner_UsePhoenix)
-		{
-			AccountSettings account2 = base.C.Account;
-			if (((account2 != null) ? account2.HangarDefault : null) != null && base.Started.Cooldown(30000))
+			if (!this.bool_0)
 			{
-				GClass893.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass893.<>c__DisplayClass8_0();
-				GClass919 gclass = base.Context.method_61<GClass919>();
-				GClass893.<>c__DisplayClass8_0 CS$<>8__locals2 = CS$<>8__locals1;
-				AccountSettings account3 = base.C.Account;
-				List<string> list;
-				if (account3 == null)
-				{
-					list = null;
-				}
-				else
-				{
-					VolatileData @volatile = account3.Volatile;
-					list = ((@volatile != null) ? @volatile.Hangars : null);
-				}
-				CS$<>8__locals2.list_0 = list;
-				string_1 = ((CS$<>8__locals1.list_0 == null) ? null : GClass893.list_0.FirstOrDefault(new Func<string, bool>(CS$<>8__locals1.method_0)));
-				return string_1 != null && gclass.method_15() > 0;
+				return this.SellProfile;
 			}
+			return this.CollectProfile;
 		}
-		return false;
+		else
+		{
+			if (!(base.Context.Game.Web.Equipment.ActiveHangarName == base.Context.Account.HangarPalladiumSell))
+			{
+				return this.CollectProfile;
+			}
+			return this.SellProfile;
+		}
 	}
 
 	public override string ToString()
 	{
-		return "Idle";
+		return "Palladium " + (this.bool_0 ? "collector" : "seller");
 	}
 
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass893()
+	public override bool ShouldChangeHangar(out string string_1)
 	{
-		Class13.F93tSdiz1aNIA();
-		GClass893.list_0 = new List<string>
-		{
-			"ship_phoenix",
-			"ship_liberator"
-		};
+		string_1 = (this.bool_0 ? base.C.Account.HangarPalladiumCollect : base.C.Account.HangarPalladiumSell);
+		return string_1 != null;
 	}
 
+	public readonly GClass909 gclass909_0;
+
+	public readonly GClass910 gclass910_0;
+
+	[CompilerGenerated]
 	private MapProfile mapProfile_1;
 
-	public static List<string> list_0;
+	[CompilerGenerated]
+	private MapProfile mapProfile_2;
+
+	public bool bool_0;
 }

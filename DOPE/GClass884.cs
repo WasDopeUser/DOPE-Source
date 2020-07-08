@@ -1,83 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using DarkorbitAPI;
 using DOPE.Common.Models.Bot.Stats;
 
 public class GClass884 : StatisticsCategory
 {
-	public Dictionary<string, GClass884.GStruct0> DeathLog
-	{
-		[CompilerGenerated]
-		get
-		{
-			return this.YseQmTtwhLo;
-		}
-		[CompilerGenerated]
-		private set
-		{
-			if (object.Equals(this.YseQmTtwhLo, value))
-			{
-				return;
-			}
-			this.YseQmTtwhLo = value;
-			this.<>OnPropertyChanged(Class10.propertyChangedEventArgs_16);
-		}
-	}
+	public DarkOrbitWebAPI Web { get; }
 
-	public GClass884(Dictionary<string, GClass884.GStruct0> dictionary_0)
+	public GClass884(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.F93tSdiz1aNIA();
-		base..ctor("Deaths", new string[]
+		Class13.xnk8ImWzpOt04();
+		base..ctor("GG", new string[]
 		{
-			"Killer",
-			"Count",
-			"LastDeath"
+			"Name",
+			"Parts",
+			"Wave",
+			"Lives"
 		}, null);
-		this.DeathLog = dictionary_0;
-	}
-
-	public void method_0(string string_0)
-	{
-		Dictionary<string, GClass884.GStruct0> deathLog = this.DeathLog;
-		lock (deathLog)
-		{
-			GClass884.GStruct0 value;
-			this.DeathLog.TryGetValue(string_0, out value);
-			value.Count++;
-			value.dateTimeOffset_0 = DateTimeOffset.Now;
-			this.DeathLog[string_0] = value;
-		}
-	}
-
-	public override void Rebuild()
-	{
+		this.Web = darkOrbitWebAPI_1;
+		base.Subscribe<DarkOrbitWebAPI>(this.Web);
 	}
 
 	public override void Update()
 	{
-		Dictionary<string, GClass884.GStruct0> deathLog = this.DeathLog;
-		lock (deathLog)
+		DarkOrbitWebAPI.GalaxyGatesInfo ggInfo = this.Web.GgInfo;
+		if (ggInfo == null)
 		{
-			foreach (KeyValuePair<string, GClass884.GStruct0> keyValuePair in this.DeathLog)
+			return;
+		}
+		Dictionary<Type, object> subscribed = this.Subscribed;
+		lock (subscribed)
+		{
+			this.Subscribed[typeof(DarkOrbitWebAPI.GalaxyGatesInfo)] = ggInfo;
+		}
+		DarkOrbitWebAPI.jumpgateGate[] gates = ggInfo.gates;
+		for (int i = 0; i < gates.Length; i++)
+		{
+			GClass884.<>c__DisplayClass4_0 CS$<>8__locals1 = new GClass884.<>c__DisplayClass4_0();
+			CS$<>8__locals1.jumpgateGate_0 = gates[i];
+			string key;
+			if (GClass918.dictionary_0.TryGetValue(CS$<>8__locals1.jumpgateGate_0.id, out key))
 			{
-				GClass884.<>c__DisplayClass8_0 CS$<>8__locals1 = new GClass884.<>c__DisplayClass8_0();
-				CS$<>8__locals1.string_0 = this.Key + "_" + keyValuePair.Key;
-				RowEntry rowEntry = (RowEntry)base.GetOrAdd(CS$<>8__locals1.string_0, new Func<IRowEntry>(CS$<>8__locals1.method_0));
-				(rowEntry.Cells[1] as VariableValue<string>).Value = string.Format("{0:N0}", keyValuePair.Value.Count);
-				(rowEntry.Cells[2] as VariableValue<string>).Value = string.Format("{0}", keyValuePair.Value.dateTimeOffset_0);
-				rowEntry.Order = keyValuePair.Value.Count;
+				base.Add(StatisticsCategory.WithName(key, new IValueWrapper<string>[]
+				{
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_0)),
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_1)),
+					this.method_0(new Func<DarkOrbitWebAPI.GalaxyGatesInfo, string>(CS$<>8__locals1.method_2))
+				}));
 			}
 		}
 		base.Update();
 	}
 
 	[CompilerGenerated]
-	private Dictionary<string, GClass884.GStruct0> YseQmTtwhLo;
-
-	public struct GStruct0
+	private IValueWrapper<string> method_0(Func<DarkOrbitWebAPI.GalaxyGatesInfo, string> func_0)
 	{
-		public int Count;
-
-		public DateTimeOffset dateTimeOffset_0;
+		return base.L<DarkOrbitWebAPI.GalaxyGatesInfo>(func_0);
 	}
+
+	[CompilerGenerated]
+	private readonly DarkOrbitWebAPI darkOrbitWebAPI_0;
 }

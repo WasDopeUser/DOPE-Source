@@ -8,7 +8,7 @@ public class GClass676 : GInterface0
 	{
 		get
 		{
-			return 32320;
+			return -29311;
 		}
 	}
 
@@ -16,50 +16,58 @@ public class GClass676 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 4;
 		}
 	}
 
-	public GClass676(string string_0 = "", int int_1 = 0, int int_2 = 0)
+	public GClass676(Vector<int> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
-		this.Id = "";
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.Id = string_0;
-		this.Progress = int_1;
-		this.int_0 = int_2;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<int>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 32320;
+		return -29311;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.Id = binaryStream_0.smethod_2();
-		this.Progress = binaryStream_0.smethod_0();
-		this.Progress = (this.Progress << 10 | U.smethod_0(this.Progress, 22));
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 1 | U.smethod_0(this.int_0, 31));
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(32320);
-		binaryStream_0.smethod_3(this.Id);
-		binaryStream_0.smethod_4(U.smethod_0(this.Progress, 10) | this.Progress << 22);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 1) | this.int_0 << 31);
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			int num2 = binaryStream_0.smethod_0();
+			num2 = (num2 << 12 | U.smethod_0(num2, 20));
+			this.vector_0.method_0(num2);
+			i++;
+		}
 	}
 
-	public string Id;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(-29311);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (int num in this.vector_0)
+		{
+			binaryStream_0.smethod_4(U.smethod_0(num, 12) | num << 20);
+		}
+	}
 
-	public int Progress;
-
-	public int int_0;
+	public Vector<int> vector_0;
 }

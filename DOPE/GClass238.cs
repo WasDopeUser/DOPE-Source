@@ -22,7 +22,7 @@ public class GClass238 : GInterface0
 
 	public GClass238(int int_3 = 0, int int_4 = 0, string string_2 = "", string string_3 = "", int int_5 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		this.string_1 = "";
 		base..ctor();
@@ -43,7 +43,7 @@ public class GClass238 : GInterface0
 		return 14;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 3) | this.int_0 << 29);
@@ -56,7 +56,7 @@ public class GClass238 : GInterface0
 		this.int_2 = (U.smethod_0(this.int_2, 12) | this.int_2 << 20);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(7);
 		binaryStream_0.smethod_4(this.int_0 << 3 | U.smethod_0(this.int_0, 29));

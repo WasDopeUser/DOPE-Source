@@ -22,7 +22,7 @@ public class GClass257 : GInterface0
 
 	public GClass257(bool bool_0 = false, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.Enabled = bool_0;
 		this.int_0 = int_1;
@@ -38,14 +38,14 @@ public class GClass257 : GInterface0
 		return 5;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.Enabled = binaryStream_0.ReadBoolean();
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 1) | this.int_0 << 31);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(244);
 		binaryStream_0.WriteBoolean(this.Enabled);

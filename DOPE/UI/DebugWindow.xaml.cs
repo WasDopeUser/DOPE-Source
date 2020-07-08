@@ -153,7 +153,7 @@ namespace DOPE.UI
 
 		public DebugWindow()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.<Filtered>k__BackingField = new ObservableCollection<TreeNode>();
 			this.<All>k__BackingField = new List<TreeHeaderNode>();
 			this.<JumpToLast>k__BackingField = true;
@@ -164,7 +164,7 @@ namespace DOPE.UI
 			this.InitializeComponent();
 			base.DataContext = this;
 			base.Closing += this.DebugWindow_Closing;
-			this.Commands = GClass86.yOxTxpksbc.Select(new Func<KeyValuePair<int, Type>, CommandViewModel>(DebugWindow.<>c.<>9.method_0)).ToList<CommandViewModel>();
+			this.Commands = GClass86.dictionary_0.Select(new Func<KeyValuePair<int, Type>, CommandViewModel>(DebugWindow.<>c.<>9.method_0)).ToList<CommandViewModel>();
 			foreach (CommandViewModel commandViewModel in this.Commands)
 			{
 				commandViewModel.PropertyChanged += this.method_0;
@@ -211,7 +211,7 @@ namespace DOPE.UI
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void method_1<m2eLf0pOKNSypsINdH>(GClass84<m2eLf0pOKNSypsINdH> gclass84_0) where m2eLf0pOKNSypsINdH : GInterface7
+		public void method_1<X63y1w9L9T8SFlQBGS>(GClass84<X63y1w9L9T8SFlQBGS> gclass84_0) where X63y1w9L9T8SFlQBGS : GInterface7
 		{
 			gclass84_0.MessageSent += this.method_6;
 			gclass84_0.MessageReceived += this.method_5;
@@ -300,9 +300,9 @@ namespace DOPE.UI
 			return Delegate.CreateDelegate(type_0, this, string_0);
 		}
 
-		[DebuggerNonUserCode]
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
+		[DebuggerNonUserCode]
 		void IStyleConnector.Connect(int connectionId, object target)
 		{
 			if (connectionId == 6)

@@ -22,7 +22,7 @@ public class GClass494 : GInterface0
 
 	public GClass494(bool bool_9 = false, bool bool_10 = false, bool bool_11 = false, bool bool_12 = false, bool bool_13 = false, bool bool_14 = false, bool bool_15 = false, bool bool_16 = false, bool bool_17 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.bool_0 = bool_9;
 		this.bool_1 = bool_10;
@@ -45,7 +45,7 @@ public class GClass494 : GInterface0
 		return 9;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.bool_1 = binaryStream_0.ReadBoolean();
@@ -58,7 +58,7 @@ public class GClass494 : GInterface0
 		this.bool_8 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(265);
 		binaryStream_0.WriteBoolean(this.bool_0);

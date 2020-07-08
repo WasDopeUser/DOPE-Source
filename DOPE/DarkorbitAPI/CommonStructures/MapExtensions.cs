@@ -77,7 +77,7 @@ namespace DarkorbitAPI.CommonStructures
 			return binaryStream_0.Read(buffer, int_0, int_1);
 		}
 
-		public static void smethod_12(this BinaryStream binaryStream_0, ByteArray byteArray_0, int int_0, int int_1)
+		public static void UpywTrjnjkV(this BinaryStream binaryStream_0, ByteArray byteArray_0, int int_0, int int_1)
 		{
 			byteArray_0.Memory.Position = (long)int_0;
 			if (byteArray_0.Memory.Position == (long)int_0 && byteArray_0.Memory.Length == (long)(int_0 + int_1))

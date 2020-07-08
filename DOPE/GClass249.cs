@@ -20,9 +20,9 @@ public class GClass249 : GInterface0
 		}
 	}
 
-	public GClass249(int int_3 = 0, GClass275 gclass275_0 = null, GClass276 gclass276_1 = null, GClass178 gclass178_1 = null, int int_4 = 0, int int_5 = 0, bool bool_1 = false)
+	public GClass249(int int_3 = 0, GClass275 gclass275_0 = null, GClass276 gclass276_1 = null, GClass177 gclass177_1 = null, int int_4 = 0, int int_5 = 0, bool bool_1 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_3;
 		this.bool_0 = bool_1;
@@ -44,12 +44,12 @@ public class GClass249 : GInterface0
 			this.Status = gclass275_0;
 		}
 		this.int_2 = int_4;
-		if (gclass178_1 == null)
+		if (gclass177_1 == null)
 		{
-			this.gclass178_0 = new GClass178(0);
+			this.gclass177_0 = new GClass177(0);
 			return;
 		}
-		this.gclass178_0 = gclass178_1;
+		this.gclass177_0 = gclass177_1;
 	}
 
 	public virtual int vmethod_0()
@@ -62,7 +62,7 @@ public class GClass249 : GInterface0
 		return 5;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 12) | this.int_0 << 20);
@@ -70,30 +70,30 @@ public class GClass249 : GInterface0
 		this.gclass276_0 = (GClass276)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass276_0 != null)
 		{
-			this.gclass276_0.imethod_0(binaryStream_0);
+			this.gclass276_0.imethod_1(binaryStream_0);
 		}
 		this.int_1 = (int)binaryStream_0.smethod_1();
 		this.Status = (GClass275)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.Status != null)
 		{
-			this.Status.imethod_0(binaryStream_0);
+			this.Status.imethod_1(binaryStream_0);
 		}
 		this.int_2 = (int)binaryStream_0.smethod_1();
-		this.gclass178_0 = (GClass178)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass178_0 != null)
+		this.gclass177_0 = (GClass177)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass177_0 != null)
 		{
-			this.gclass178_0.imethod_0(binaryStream_0);
+			this.gclass177_0.imethod_1(binaryStream_0);
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(13476);
 		binaryStream_0.smethod_4(this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 		binaryStream_0.WriteBoolean(this.bool_0);
 		if (this.gclass276_0 != null)
 		{
-			this.gclass276_0.imethod_1(binaryStream_0);
+			this.gclass276_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -102,16 +102,16 @@ public class GClass249 : GInterface0
 		binaryStream_0.smethod_7(this.int_1);
 		if (this.Status != null)
 		{
-			this.Status.imethod_1(binaryStream_0);
+			this.Status.imethod_2(binaryStream_0);
 		}
 		else
 		{
 			binaryStream_0.smethod_7(0);
 		}
 		binaryStream_0.smethod_7(this.int_2);
-		if (this.gclass178_0 != null)
+		if (this.gclass177_0 != null)
 		{
-			this.gclass178_0.imethod_1(binaryStream_0);
+			this.gclass177_0.imethod_2(binaryStream_0);
 			return;
 		}
 		binaryStream_0.smethod_7(0);
@@ -129,5 +129,5 @@ public class GClass249 : GInterface0
 
 	public int int_2;
 
-	public GClass178 gclass178_0;
+	public GClass177 gclass177_0;
 }

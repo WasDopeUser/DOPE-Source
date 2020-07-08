@@ -8,13 +8,13 @@ public class GClass124 : GInterface6
 {
 	public GClass124()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 	}
 
 	public GClass124(TcpClient tcpClient_2)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (tcpClient_2 == null)
 		{
@@ -25,7 +25,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -37,7 +37,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -53,7 +53,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, string string_4, string string_5)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{
@@ -75,7 +75,7 @@ public class GClass124 : GInterface6
 
 	public GClass124(string string_3, int int_1, string string_4, string string_5)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		if (string.IsNullOrEmpty(string_3))
 		{

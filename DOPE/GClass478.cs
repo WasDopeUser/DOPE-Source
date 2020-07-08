@@ -20,18 +20,18 @@ public class GClass478 : GInterface0
 		}
 	}
 
-	public GClass478(GClass673 gclass673_1 = null, string string_1 = "", GClass613 gclass613_1 = null)
+	public GClass478(GClass672 gclass672_1 = null, string string_1 = "", GClass613 gclass613_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
-		if (gclass673_1 == null)
+		if (gclass672_1 == null)
 		{
-			this.gclass673_0 = new GClass673(0);
+			this.gclass672_0 = new GClass672(0);
 		}
 		else
 		{
-			this.gclass673_0 = gclass673_1;
+			this.gclass672_0 = gclass672_1;
 		}
 		if (gclass613_1 == null)
 		{
@@ -54,27 +54,27 @@ public class GClass478 : GInterface0
 		return 2;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass673_0 = (GClass673)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass673_0 != null)
+		this.gclass672_0 = (GClass672)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass672_0 != null)
 		{
-			this.gclass673_0.imethod_0(binaryStream_0);
+			this.gclass672_0.imethod_1(binaryStream_0);
 		}
 		this.gclass613_0 = (GClass613)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.gclass613_0 != null)
 		{
-			this.gclass613_0.imethod_0(binaryStream_0);
+			this.gclass613_0.imethod_1(binaryStream_0);
 		}
 		this.string_0 = binaryStream_0.smethod_2();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-17051);
-		if (this.gclass673_0 != null)
+		if (this.gclass672_0 != null)
 		{
-			this.gclass673_0.imethod_1(binaryStream_0);
+			this.gclass672_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -82,7 +82,7 @@ public class GClass478 : GInterface0
 		}
 		if (this.gclass613_0 != null)
 		{
-			this.gclass613_0.imethod_1(binaryStream_0);
+			this.gclass613_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -91,7 +91,7 @@ public class GClass478 : GInterface0
 		binaryStream_0.smethod_3(this.string_0);
 	}
 
-	public GClass673 gclass673_0;
+	public GClass672 gclass672_0;
 
 	public GClass613 gclass613_0;
 

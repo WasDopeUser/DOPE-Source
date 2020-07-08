@@ -1,51 +1,68 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
+using System.Net.Sockets;
 using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Text;
 using System.Windows;
-using System.Windows.Markup;
 using DarkorbitAPI;
+using DarkorbitAPI.CommonStructures;
+using DarkorbitAPI.Packets.Static;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
 using PErkava;
+using Syroot.BinaryData;
 
-public class GClass931 : Window, INotifyPropertyChanged, IComponentConnector
+public class GClass931 : INotifyPropertyChanged
 {
-	public bool IsSupported
+	public GameManager Game
 	{
 		get
 		{
-			return PErkava.IsSupported;
+			return this.gameManager_0;
 		}
 	}
 
-	[CompilerGenerated]
-	public static DateTimeOffset smethod_0()
-	{
-		return GClass931.dateTimeOffset_0;
-	}
-
-	[CompilerGenerated]
-	public static void smethod_1(DateTimeOffset dateTimeOffset_1)
-	{
-		GClass931.dateTimeOffset_0 = dateTimeOffset_1;
-	}
-
-	public bool IsLoading
+	public GClass88 Server
 	{
 		get
 		{
-			return this.bool_0;
-		}
-		set
-		{
-			this.method_4<bool>(ref this.bool_0, value, "IsLoading");
+			GameManager gameManager = this.gameManager_0;
+			if (gameManager == null)
+			{
+				return null;
+			}
+			ConnectionManager connection = gameManager.Connection;
+			if (connection == null)
+			{
+				return null;
+			}
+			return connection.Server;
 		}
 	}
 
-	public string LoadingStatus
+	public GClass84<GClass856> method_0()
+	{
+		return this.gclass84_0;
+	}
+
+	[CompilerGenerated]
+	public IntPtr method_1()
+	{
+		return this.intptr_0;
+	}
+
+	[CompilerGenerated]
+	private void method_2(IntPtr intptr_1)
+	{
+		this.intptr_0 = intptr_1;
+	}
+
+	public event PropertyChangedEventHandler PropertyChanged;
+
+	public string Status
 	{
 		get
 		{
@@ -53,139 +70,443 @@ public class GClass931 : Window, INotifyPropertyChanged, IComponentConnector
 		}
 		set
 		{
-			this.method_4<string>(ref this.string_0, value, "LoadingStatus");
+			this.method_3<string>(ref this.string_0, value, null, "Status");
 		}
 	}
 
-	private void method_0()
+	public bool IsAttached
 	{
-		this.IsLoading = false;
-	}
-
-	[CompilerGenerated]
-	public bool method_1()
-	{
-		return this.bool_1;
-	}
-
-	[CompilerGenerated]
-	public void method_2(bool bool_3)
-	{
-		this.bool_1 = bool_3;
-	}
-
-	protected override void OnClosing(CancelEventArgs e)
-	{
-		if (!this.method_1())
+		get
 		{
-			e.Cancel = true;
-			base.Hide();
+			return this.bool_4;
 		}
-		base.OnClosing(e);
+		set
+		{
+			this.method_3<bool>(ref this.bool_4, value, null, "IsAttached");
+		}
 	}
 
-	public void method_3()
+	protected void method_3<IZ5vjfiOkITPtM8TIrF>(ref IZ5vjfiOkITPtM8TIrF gparam_0, IZ5vjfiOkITPtM8TIrF zggmlBiVe2EdRetCJR2, string string_1 = null, [CallerMemberName] string name = null)
 	{
-		base.Focus();
+		if (!EqualityComparer<IZ5vjfiOkITPtM8TIrF>.Default.Equals(gparam_0, zggmlBiVe2EdRetCJR2))
+		{
+			gparam_0 = zggmlBiVe2EdRetCJR2;
+			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+			if (propertyChanged != null)
+			{
+				propertyChanged(this, new PropertyChangedEventArgs(name));
+			}
+			if (string_1 != null)
+			{
+				PropertyChangedEventHandler propertyChanged2 = this.PropertyChanged;
+				if (propertyChanged2 == null)
+				{
+					return;
+				}
+				propertyChanged2(this, new PropertyChangedEventArgs(string_1));
+			}
+		}
+	}
+
+	public void method_4(TcpClient tcpClient_0)
+	{
+		this.gclass91_0 = new GClass91();
+		this.gclass84_0 = new GClass84<GClass856>(null);
+		this.gclass84_0.method_3("PROXY");
+		this.method_10();
+		this.method_11();
+		this.bool_0 = false;
+		this.bool_3 = true;
+		this.gclass84_0.method_9(this.gclass91_0, new GClass856());
+		this.gclass91_0.Connected += this.method_5;
+		this.gclass91_0.Disconnected += this.method_6;
+		this.gclass91_0.method_0(new GClass91.GClass92.GDelegate7(this.method_9));
+		this.gclass91_0.Connect(tcpClient_0);
+	}
+
+	private void method_5(GClass91 gclass91_1)
+	{
+		this.bool_3 = true;
+	}
+
+	private void method_6(GClass91 gclass91_1, ErrorReason errorReason_0, Exception exception_0)
+	{
+		GameManager game = this.Game;
+		int? num;
+		if (game == null)
+		{
+			num = null;
+		}
+		else
+		{
+			Settings settings = game.Settings;
+			if (settings == null)
+			{
+				num = null;
+			}
+			else
+			{
+				FlashSettings flashSettings = settings.FlashSettings;
+				num = ((flashSettings != null) ? new int?(flashSettings.userID) : null);
+			}
+		}
+		int? num2 = num;
+		IPErkavaBotController iperkavaBotController;
+		if (!PErkava.smethod_0().TryGetValue(num2 ?? -1, out iperkavaBotController))
+		{
+			return;
+		}
+		this.gameManager_0.Connection.Socket.method_5().method_1(new Action<GInterface0>(GClass82.smethod_3));
+		iperkavaBotController.DetachPErkava();
+		this.gclass84_0.method_1(null);
+		try
+		{
+			this.gclass91_0.method_7();
+		}
+		catch
+		{
+		}
+	}
+
+	private void EwiwpqGmAv3(GInterface0 ginterface0_0)
+	{
+		this.bool_2 = true;
+		this.commandDispatcher_0.method_0(ginterface0_0);
+		if (this.bool_0 && this.bool_2)
+		{
+			GameManager gameManager = this.gameManager_0;
+			if (gameManager == null)
+			{
+				return;
+			}
+			gameManager.Connection.SendMessage(ginterface0_0);
+		}
+	}
+
+	private void method_7(GInterface0 ginterface0_0)
+	{
+		GClass82.smethod_3(ginterface0_0);
+		if (this.bool_0 && this.gameManager_0.Connection.IsAuthenticated)
+		{
+			this.bool_1 = true;
+			this.commandDispatcher_1.method_0(ginterface0_0);
+			if (this.bool_1)
+			{
+				this.gclass84_0.SendMessage(ginterface0_0);
+			}
+		}
+	}
+
+	public bool method_8()
+	{
+		IntPtr foregroundWindow = GClass926.GetForegroundWindow();
+		this.method_2(foregroundWindow);
+		this.Status = "Getting ready.";
+		PErkava.concurrentDictionary_0[foregroundWindow] = this;
+		try
+		{
+			this.Status = "Patching result: " + "success";
+			return true;
+		}
+		catch (Exception ex)
+		{
+			MessageBox.Show(ex.Message + ex.StackTrace + ex.ToString());
+		}
+		return false;
+	}
+
+	private void method_9(GClass91 gclass91_1, BinaryStream binaryStream_0, byte[] byte_0, int int_0)
+	{
+		if (this.method_1() == IntPtr.Zero)
+		{
+			this.method_2(GClass926.GetForegroundWindow());
+		}
+		if (int_0 == 23 && Encoding.UTF8.GetString(byte_0).Contains("policy"))
+		{
+			byte[] bytes = Encoding.ASCII.GetBytes("<cross-domain-policy><allow-access-from domain=\"*\" to-ports=\"*\" /></cross-domain-policy>\0");
+			gclass91_1.method_2().GetStream().Write(bytes, 0, bytes.Length);
+			try
+			{
+				gclass91_1.method_7();
+			}
+			catch
+			{
+			}
+			PErkava.concurrentDictionary_2[this.method_1()] = false;
+			if (!this.method_8())
+			{
+				Debug.WriteLine("Patching failed");
+				MessageBox.Show("Could not patch the client. This could mean that PErkava doesn't yet support this client version.");
+				return;
+			}
+			PErkava.concurrentDictionary_2[this.method_1()] = true;
+			return;
+		}
+		else
+		{
+			if (this.bool_3)
+			{
+				this.bool_3 = false;
+				int_0--;
+				long position = binaryStream_0.Position;
+				binaryStream_0.Position = position + 1L;
+			}
+			GClass84<GClass856> gclass = this.gclass84_0;
+			if (gclass == null)
+			{
+				return;
+			}
+			gclass.method_12(binaryStream_0, byte_0, int_0);
+			return;
+		}
+	}
+
+	private void method_10()
+	{
+		if (this.commandDispatcher_0 == null)
+		{
+			this.commandDispatcher_0 = new CommandDispatcher();
+			this.gclass84_0.method_1(new Action<GInterface0>(this.EwiwpqGmAv3));
+			this.commandDispatcher_0.method_1<GClass278>(new Action<GClass278>(this.method_16));
+			this.commandDispatcher_0.method_1<GClass238>(new Action<GClass238>(this.method_13));
+			this.commandDispatcher_0.method_1<GClass145>(new Action<GClass145>(this.method_17));
+			this.commandDispatcher_0.method_1<GClass235>(new Action<GClass235>(this.method_18));
+			this.commandDispatcher_0.method_1<GClass146>(new Action<GClass146>(this.method_19));
+			this.commandDispatcher_0.method_1<GClass160>(new Action<GClass160>(this.method_20));
+			this.commandDispatcher_0.method_1<GClass162>(new Action<GClass162>(this.method_21));
+			this.commandDispatcher_0.method_1<GClass171>(new Action<GClass171>(this.method_22));
+		}
+	}
+
+	private void method_11()
+	{
+		if (this.commandDispatcher_1 == null)
+		{
+			this.commandDispatcher_1 = new CommandDispatcher();
+			this.commandDispatcher_1.method_1<GClass260>(new Action<GClass260>(this.method_23));
+			this.commandDispatcher_1.method_1<GClass279>(new Action<GClass279>(this.method_24));
+			this.commandDispatcher_1.method_1<GClass268>(new Action<GClass268>(this.method_12));
+		}
+		GameManager gameManager = this.gameManager_0;
+		Action<GInterface0> d;
+		if (gameManager != null)
+		{
+			ConnectionManager connection = gameManager.Connection;
+			if (connection != null)
+			{
+				GClass93 socket = connection.Socket;
+				if (socket != null)
+				{
+					GClass84<GClass853> gclass = socket.method_5();
+					if (gclass != null)
+					{
+						if ((d = gclass.method_0()) != null)
+						{
+							goto IL_9E;
+						}
+					}
+				}
+			}
+		}
+		d = new Action<GInterface0>(this.method_7);
+		IL_9E:
+		if (d != new Action<GInterface0>(this.method_7))
+		{
+			this.gameManager_0.Connection.Socket.method_5().method_1(new Action<GInterface0>(this.method_7));
+			this.method_15();
+		}
+	}
+
+	private void method_12(GClass268 gclass268_0)
+	{
+		string[] array;
+		if (GClass90.smethod_1(gclass268_0.string_0, out array, new string[]
+		{
+			"n",
+			"INV"
+		}))
+		{
+			int num = int.Parse(array[0]);
+			Ship ship = this.Game.Map.method_4(num);
+			if (array[1] == "1" && ship != null && num != this.Game.Hero.Id)
+			{
+				this.bool_1 = false;
+				this.method_0().method_10(GClass90.smethod_2(num, false));
+				this.method_0().method_10(GClass90.Log("Unmasked: " + ship.Name));
+				return;
+			}
+		}
+		else if (GClass90.smethod_1(gclass268_0.string_0, out array, new string[]
+		{
+			"i"
+		}))
+		{
+			this.bool_1 = false;
+		}
+	}
+
+	private void method_13(GClass238 gclass238_0)
+	{
+		this.bool_2 = false;
+		IPErkavaBotController iperkavaBotController;
+		if (!PErkava.smethod_0().TryGetValue(gclass238_0.int_0, out iperkavaBotController))
+		{
+			return;
+		}
+		this.gameManager_0 = iperkavaBotController.Game;
+		this.gameManager_0.Settings.MapHosts = PErkava.concurrentDictionary_3[iperkavaBotController.GameServer].method_1();
+		if (!iperkavaBotController.AttachPErkava(gclass238_0))
+		{
+			return;
+		}
+		this.gameManager_0.Connection.ProxySocket = this.method_0();
+		this.method_11();
+		this.method_15();
+	}
+
+	private void method_14(GClass91 gclass91_1, ErrorReason errorReason_0, Exception exception_0 = null)
+	{
+		if (errorReason_0 != ErrorReason.VersionMismatch && this.gclass91_0.ljsNmtBbtu())
+		{
+			this.gameManager_0.Start();
+		}
+	}
+
+	private void method_15()
+	{
+		this.IsAttached = true;
+		PErkava.concurrentDictionary_0[this.method_1()] = this;
+	}
+
+	private void method_16(GClass278 gclass278_0)
+	{
+		GClass279 gclass = new GClass279("688b75415cb841f68eaae105cf0f2de9", false);
+		if (gclass278_0.string_0 != "688b75415cb841f68eaae105cf0f2de9")
+		{
+			gclass.bool_0 = false;
+		}
+		else
+		{
+			gclass.bool_0 = true;
+		}
+		if (!gclass.bool_0)
+		{
+			MessageBox.Show("PErkava doesn't yet support this client version.\r\nLocal: " + gclass.string_0 + "\r\nRemote: " + gclass278_0.string_0);
+			return;
+		}
+		this.bool_0 = true;
+		this.gclass84_0.SendMessage(gclass);
 	}
 
 	public GClass931()
 	{
-		Class13.F93tSdiz1aNIA();
-		this.string_0 = "Wait...";
+		Class13.xnk8ImWzpOt04();
+		this.random_0 = new Random();
+		this.bool_3 = true;
 		base..ctor();
-		this.InitializeComponent();
-		base.DataContext = this;
-		PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-		if (propertyChanged != null)
-		{
-			propertyChanged(this, new PropertyChangedEventArgs("IsSupported"));
-		}
-		this.IsLoading = true;
-		if (!this.IsSupported)
-		{
-			this.LoadingStatus = "PErkava is not supported\r\nPlease run DOPE with Administrator privileges.";
-			return;
-		}
-		DateTimeOffset dateTimeOffset = GClass931.dateTimeOffset_0;
-		if (dateTimeOffset.AddMinutes(5.0) < DateTimeOffset.Now)
-		{
-			Task.Factory.StartNew(new Action(this.Load));
-			return;
-		}
-		this.method_0();
-	}
-
-	public void Load()
-	{
-		while (!Parallel.ForEach<GClass937>(PErkava.AllServersData, new ParallelOptions
-		{
-			MaxDegreeOfParallelism = 10
-		}, new Action<GClass937>(this.method_5)).IsCompleted)
-		{
-			Thread.Sleep(1);
-		}
-		GClass931.smethod_1(DateTimeOffset.Now);
-		this.LoadingStatus = "Done";
-		base.Dispatcher.Invoke(new Action(this.method_0));
-	}
-
-	protected void method_4<EC6ULBDnsjpnsSWZdSO>(ref EC6ULBDnsjpnsSWZdSO gparam_0, EC6ULBDnsjpnsSWZdSO Omg77EDS5te7sduZYTM, [CallerMemberName] string name = null)
-	{
-		if (!EqualityComparer<EC6ULBDnsjpnsSWZdSO>.Default.Equals(gparam_0, Omg77EDS5te7sduZYTM))
-		{
-			gparam_0 = Omg77EDS5te7sduZYTM;
-			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-			if (propertyChanged == null)
-			{
-				return;
-			}
-			propertyChanged(this, new PropertyChangedEventArgs(name));
-		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		if (this.bool_2)
-		{
-			return;
-		}
-		this.bool_2 = true;
-		Uri resourceLocator = new Uri("/DOPE;component/mainwindow.xaml", UriKind.Relative);
-		Application.LoadComponent(this, resourceLocator);
-	}
-
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]
-	[DebuggerNonUserCode]
-	void IComponentConnector.Connect(int connectionId, object target)
-	{
-		this.bool_2 = true;
 	}
 
 	[CompilerGenerated]
-	private void method_5(GClass937 gclass937_0)
+	private void method_17(GClass145 gclass145_0)
 	{
-		DarkOrbitWebAPI darkOrbitWebAPI = new DarkOrbitWebAPI(null);
-		darkOrbitWebAPI.Server = gclass937_0.Name;
-		this.LoadingStatus = "Finding game servers for " + gclass937_0.Name + "...";
-		gclass937_0.method_3(darkOrbitWebAPI);
-		PErkava.concurrentDictionary_3[gclass937_0.Name] = gclass937_0;
+		this.bool_2 = false;
 	}
 
 	[CompilerGenerated]
-	private static DateTimeOffset dateTimeOffset_0;
+	private void method_18(GClass235 gclass235_0)
+	{
+		this.bool_2 = false;
+		this.gclass84_0.SendMessage(new GClass260());
+	}
+
+	[CompilerGenerated]
+	private void method_19(GClass146 gclass146_0)
+	{
+		this.bool_2 = false;
+		if (gclass146_0.string_0.StartsWith("!dope"))
+		{
+			this.bool_2 = false;
+			string str = gclass146_0.string_0.Substring(5).Trim();
+			this.Game.method_9(new GClass268("69|" + str));
+			return;
+		}
+		GInterface5 ginterface = null;
+		if (gclass146_0.string_0.StartsWith("!!>"))
+		{
+			ginterface = this.Game.Connection;
+		}
+		else if (gclass146_0.string_0.StartsWith("!!<"))
+		{
+			ginterface = this.method_0();
+		}
+		if (ginterface == null)
+		{
+			this.bool_2 = true;
+			return;
+		}
+		GClass268 ginterface0_ = new GClass268(gclass146_0.string_0.Substring(3));
+		ginterface.SendMessage(ginterface0_);
+	}
+
+	[CompilerGenerated]
+	private void method_20(GClass160 gclass160_0)
+	{
+		this.Game.Hero.method_4(gclass160_0.int_0, gclass160_0.int_3, gclass160_0.int_2, gclass160_0.int_1, this.Game.Hero.Speed);
+	}
+
+	[CompilerGenerated]
+	private void method_21(GClass162 gclass162_0)
+	{
+		this.Game.Hero.Pet.Mode = (PetMode)gclass162_0.gclass256_0.Mode;
+		this.Game.Hero.Pet.ModeExtra = gclass162_0.int_0;
+	}
+
+	[CompilerGenerated]
+	private void method_22(GClass171 gclass171_0)
+	{
+		this.bool_2 = false;
+		File.AppendAllLines("client.txt", new List<string>
+		{
+			gclass171_0.string_0 + "-type-" + gclass171_0.encoQoFjf1.ToString()
+		});
+	}
+
+	[CompilerGenerated]
+	private void method_23(GClass260 gclass260_0)
+	{
+		this.bool_1 = false;
+	}
+
+	[CompilerGenerated]
+	private void method_24(GClass279 gclass279_0)
+	{
+		this.bool_1 = false;
+	}
+
+	private GClass91 gclass91_0;
+
+	private GameManager gameManager_0;
+
+	private GClass84<GClass856> gclass84_0;
+
+	private CommandDispatcher commandDispatcher_0;
+
+	private CommandDispatcher commandDispatcher_1;
+
+	[CompilerGenerated]
+	private IntPtr intptr_0;
 
 	private bool bool_0;
 
-	private string string_0;
+	private Random random_0;
 
-	[CompilerGenerated]
 	private bool bool_1;
 
 	private bool bool_2;
+
+	private bool bool_3;
+
+	private string string_0;
+
+	private bool bool_4;
 }

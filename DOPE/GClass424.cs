@@ -22,7 +22,7 @@ public class GClass424 : GInterface0
 
 	public GClass424(string string_1 = "", bool bool_0 = false, GClass363 gclass363_0 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		if (gclass363_0 == null)
@@ -47,23 +47,23 @@ public class GClass424 : GInterface0
 		return 3;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.ToolTip = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 		if (this.ToolTip != null)
 		{
-			this.ToolTip.imethod_0(binaryStream_0);
+			this.ToolTip.imethod_1(binaryStream_0);
 		}
 		this.string_0 = binaryStream_0.smethod_2();
 		this.Visible = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(-30808);
 		if (this.ToolTip != null)
 		{
-			this.ToolTip.imethod_1(binaryStream_0);
+			this.ToolTip.imethod_2(binaryStream_0);
 		}
 		else
 		{

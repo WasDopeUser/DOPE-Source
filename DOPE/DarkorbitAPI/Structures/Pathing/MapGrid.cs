@@ -51,7 +51,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return int_0 + (int_1 - num);
 		}
 
-		public static int HiEzAhkThI(int int_0, int int_1)
+		public static int smethod_1(int int_0, int int_1)
 		{
 			int num = int_0 % int_1;
 			if (num == 0)
@@ -65,16 +65,16 @@ namespace DarkorbitAPI.Structures.Pathing
 			return int_0 - num;
 		}
 
-		public static Rectangle smethod_1(int int_0, int int_1, int int_2, int int_3)
+		public static Rectangle smethod_2(int int_0, int int_1, int int_2, int int_3)
 		{
 			int x;
-			int num = Math.Abs(int_0 - (x = MapGrid.HiEzAhkThI(int_0, 100)));
+			int num = Math.Abs(int_0 - (x = MapGrid.smethod_1(int_0, 100)));
 			int y;
-			int num2 = Math.Abs(int_1 - (y = MapGrid.HiEzAhkThI(int_1, 50)));
+			int num2 = Math.Abs(int_1 - (y = MapGrid.smethod_1(int_1, 50)));
 			return new Rectangle(x, y, MapGrid.smethod_0(int_2 + num, 100), MapGrid.smethod_0(int_3 + num2, 50));
 		}
 
-		public static int smethod_2(int int_0, int int_1)
+		public static int smethod_3(int int_0, int int_1)
 		{
 			int num = int_0 / int_1;
 			if (int_0 % int_1 == 0)
@@ -86,7 +86,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapGrid(Map map_0)
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this._lock = new object();
 			base..ctor();
 			this.Map = map_0;
@@ -126,7 +126,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				while (enumerator.MoveNext())
 				{
 					Vector2 vector;
-					if (GClass878.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
+					if (GClass877.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector))
 					{
 						return true;
 					}
@@ -142,7 +142,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				while (enumerator.MoveNext())
 				{
-					if (GClass878.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
+					if (GClass877.smethod_7(enumerator.Current.imethod_1(), vector2_0, vector2_1, out vector2_2))
 					{
 						return true;
 					}
@@ -159,9 +159,9 @@ namespace DarkorbitAPI.Structures.Pathing
 		public void method_6(Rectangle rectangle_0, Action<int, int> action_0)
 		{
 			int num = Math.Min(this._bx, Math.Max(0, rectangle_0.Left / this.ScaleX));
-			int num2 = Math.Min(this._bx, Math.Max(0, MapGrid.smethod_2(rectangle_0.Right, this.ScaleX)));
+			int num2 = Math.Min(this._bx, Math.Max(0, MapGrid.smethod_3(rectangle_0.Right, this.ScaleX)));
 			int num3 = Math.Min(this._by, Math.Max(0, rectangle_0.Top / this.ScaleY));
-			int num4 = Math.Min(this._by, Math.Max(0, MapGrid.smethod_2(rectangle_0.Bottom, this.ScaleY)));
+			int num4 = Math.Min(this._by, Math.Max(0, MapGrid.smethod_3(rectangle_0.Bottom, this.ScaleY)));
 			for (int i = num; i <= num2; i++)
 			{
 				for (int j = num3; j <= num4; j++)
@@ -214,7 +214,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				object @lock = this._lock;
 				lock (@lock)
 				{
-					this.kcmzbXwaaA();
+					this.method_13();
 					if (this.Collidables.Contains(icollidable_0))
 					{
 						this.method_10(icollidable_0);
@@ -232,19 +232,19 @@ namespace DarkorbitAPI.Structures.Pathing
 			object @lock = this._lock;
 			lock (@lock)
 			{
-				this.kcmzbXwaaA();
+				this.method_13();
 				this.Collidables = new HashSet<ICollidable>();
 				DarkorbitAPI.CommonStructures.Size mapSize = this.Map.MapSize;
 				this.Blocks = new byte[(this._bx = mapSize.Width / this.ScaleX) + 10, (this._by = mapSize.Height / this.ScaleY) + 10];
 			}
 		}
 
-		private void kcmzbXwaaA()
+		private void method_13()
 		{
 			this.PathCache.Clear();
 		}
 
-		public PathSequence method_13(Vector2 vector2_0, Vector2 vector2_1, int int_0 = 30, int int_1 = 0)
+		public PathSequence method_14(Vector2 vector2_0, Vector2 vector2_1, int int_0 = 30, int int_1 = 0)
 		{
 			MapGrid.<>c__DisplayClass49_0 CS$<>8__locals1 = new MapGrid.<>c__DisplayClass49_0();
 			CS$<>8__locals1.origin = vector2_0;
@@ -268,7 +268,7 @@ namespace DarkorbitAPI.Structures.Pathing
 					return CS$<>8__locals1.ret;
 				}
 			}
-			Map.Navigators.method_4(new Action<MapNavigator>(CS$<>8__locals1.method_0), int_1);
+			Map.Navigators.method_3(new Action<MapNavigator>(CS$<>8__locals1.method_0), int_1);
 			if (CS$<>8__locals1.ret != null)
 			{
 				@lock = this._lock;
@@ -280,7 +280,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return CS$<>8__locals1.ret;
 		}
 
-		public void method_14(PathSequence pathSequence_0)
+		public void method_15(PathSequence pathSequence_0)
 		{
 			object @lock = this._lock;
 			lock (@lock)
@@ -289,7 +289,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			}
 		}
 
-		public Vector2 method_15(Vector2 vector2_0, float float_0)
+		public Vector2 method_16(Vector2 vector2_0, float float_0)
 		{
 			if (!this.method_7(vector2_0))
 			{
@@ -319,14 +319,14 @@ namespace DarkorbitAPI.Structures.Pathing
 				}
 				if (CS$<>8__locals1.v.Add(new ValueTuple<int, int>(valueTuple.Item1, valueTuple.Item2)) && Vector2.Distance(vector, vector2_0) <= float_0)
 				{
-					MapGrid.smethod_3(valueTuple.Item1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 - 1, valueTuple.Item2, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 + 1, valueTuple.Item2, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 - 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 - 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 + 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_3(valueTuple.Item1 + 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
 				}
 			}
 			if (num3 < float_0)
@@ -336,7 +336,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return default(Vector2);
 		}
 
-		public Vector2 method_16(Vector2 vector2_0)
+		public Vector2 isTzeKvmAG(Vector2 vector2_0)
 		{
 			if (!this.method_7(vector2_0))
 			{
@@ -358,14 +358,14 @@ namespace DarkorbitAPI.Structures.Pathing
 				}
 				if (CS$<>8__locals1.v.Add(new ValueTuple<int, int>(valueTuple.Item1, valueTuple.Item2)))
 				{
-					MapGrid.smethod_4(valueTuple.Item1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 - 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
-					MapGrid.smethod_4(valueTuple.Item1 + 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 - 1, valueTuple.Item2, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 + 1, valueTuple.Item2, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 - 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 - 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 + 1, valueTuple.Item2 - 1, ref CS$<>8__locals1);
+					MapGrid.smethod_5(valueTuple.Item1 + 1, valueTuple.Item2 + 1, ref CS$<>8__locals1);
 				}
 			}
 			return default(Vector2);
@@ -384,7 +384,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static void smethod_3(int int_0, int int_1, ref MapGrid.<>c__DisplayClass51_0 <>c__DisplayClass51_0_0)
+		internal static void smethod_4(int int_0, int int_1, ref MapGrid.<>c__DisplayClass51_0 <>c__DisplayClass51_0_0)
 		{
 			ValueTuple<int, int> item = new ValueTuple<int, int>(int_0, int_1);
 			if (<>c__DisplayClass51_0_0.v.Contains(item))
@@ -395,7 +395,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		internal static void smethod_4(int int_0, int int_1, ref MapGrid.<>c__DisplayClass52_0 <>c__DisplayClass52_0_0)
+		internal static void smethod_5(int int_0, int int_1, ref MapGrid.<>c__DisplayClass52_0 <>c__DisplayClass52_0_0)
 		{
 			ValueTuple<int, int> item = new ValueTuple<int, int>(int_0, int_1);
 			if (<>c__DisplayClass52_0_0.v.Contains(item))

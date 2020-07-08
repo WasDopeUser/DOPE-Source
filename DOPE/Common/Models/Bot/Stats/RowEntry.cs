@@ -26,7 +26,7 @@ namespace DOPE.Common.Models.Bot.Stats
 				this.<Key>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Group);
 				this.OnKeyChanged();
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
 			}
 		}
 
@@ -51,7 +51,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<First>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_29);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_27);
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Order>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_69);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_65);
 			}
 		}
 

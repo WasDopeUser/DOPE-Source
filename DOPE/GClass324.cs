@@ -22,7 +22,7 @@ public class GClass324 : GInterface0
 
 	public GClass324(bool bool_3 = false, bool bool_4 = false, bool bool_5 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.bool_0 = bool_3;
 		this.bool_1 = bool_4;
@@ -39,14 +39,14 @@ public class GClass324 : GInterface0
 		return 3;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.bool_1 = binaryStream_0.ReadBoolean();
 		this.bool_2 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(229);
 		binaryStream_0.WriteBoolean(this.bool_0);

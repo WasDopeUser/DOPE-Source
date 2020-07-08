@@ -20,12 +20,12 @@ public class GClass472 : GInterface0
 		}
 	}
 
-	public GClass472(int int_1 = 0, int int_2 = 0, bool bool_1 = false)
+	public GClass472(int int_0 = 0, int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		this.MapId = int_1;
-		this.int_0 = int_2;
+		this.MapId = int_0;
+		this.aHcjhHyag1 = int_1;
 		this.bool_0 = bool_1;
 	}
 
@@ -39,26 +39,26 @@ public class GClass472 : GInterface0
 		return 9;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.MapId = binaryStream_0.smethod_0();
 		this.MapId = (this.MapId << 13 | U.smethod_0(this.MapId, 19));
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 9) | this.int_0 << 23);
+		this.aHcjhHyag1 = binaryStream_0.smethod_0();
+		this.aHcjhHyag1 = (U.smethod_0(this.aHcjhHyag1, 9) | this.aHcjhHyag1 << 23);
 		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(63);
 		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 13) | this.MapId << 19);
-		binaryStream_0.smethod_4(this.int_0 << 9 | U.smethod_0(this.int_0, 23));
+		binaryStream_0.smethod_4(this.aHcjhHyag1 << 9 | U.smethod_0(this.aHcjhHyag1, 23));
 		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
 	public int MapId;
 
-	public int int_0;
+	public int aHcjhHyag1;
 
 	public bool bool_0;
 }

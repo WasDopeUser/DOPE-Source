@@ -8,7 +8,7 @@ public class GClass769 : GInterface0
 	{
 		get
 		{
-			return 6014;
+			return 235;
 		}
 	}
 
@@ -16,58 +16,32 @@ public class GClass769 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass769(Vector<GClass368> vector_1 = null)
+	public GClass769()
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass368>();
-			return;
-		}
-		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 6014;
+		return 235;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int i = 0;
-		int num = (int)binaryStream_0.smethod_1();
-		while (i < num)
-		{
-			GClass368 gclass = (GClass368)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_0(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			i++;
-		}
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(6014);
-		binaryStream_0.smethod_7(this.vector_0.Length);
-		foreach (GClass368 gclass in this.vector_0)
-		{
-			gclass.imethod_1(binaryStream_0);
-		}
 	}
 
-	public Vector<GClass368> vector_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(235);
+	}
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 public static class GClass3
 {
-	public static bool smethod_0<KMLMuJm7Dc97vrBHPu>(this IEnumerable<KMLMuJm7Dc97vrBHPu> ienumerable_0, Func<KMLMuJm7Dc97vrBHPu, bool> func_0)
+	public static bool smethod_0<aeYBosWbyjT5x5w8kK>(this IEnumerable<aeYBosWbyjT5x5w8kK> ienumerable_0, Func<aeYBosWbyjT5x5w8kK, bool> func_0)
 	{
-		foreach (KMLMuJm7Dc97vrBHPu arg in ienumerable_0)
+		foreach (aeYBosWbyjT5x5w8kK arg in ienumerable_0)
 		{
 			if (func_0(arg))
 			{
@@ -17,11 +17,11 @@ public static class GClass3
 		return false;
 	}
 
-	public static bool smethod_1<hKQc9yrwD0LkO3qajP>(this IEnumerable ienumerable_0, Func<hKQc9yrwD0LkO3qajP, bool> func_0)
+	public static bool tpImDwgt4<sUMs8ENu09n77rtowE>(this IEnumerable ienumerable_0, Func<sUMs8ENu09n77rtowE, bool> func_0)
 	{
 		foreach (object obj in ienumerable_0)
 		{
-			hKQc9yrwD0LkO3qajP arg = (hKQc9yrwD0LkO3qajP)((object)obj);
+			sUMs8ENu09n77rtowE arg = (sUMs8ENu09n77rtowE)((object)obj);
 			if (func_0(arg))
 			{
 				return true;
@@ -30,7 +30,7 @@ public static class GClass3
 		return false;
 	}
 
-	public static int smethod_2<UUh66EJbF7BGCvARwx>(this IEnumerable<UUh66EJbF7BGCvARwx> ienumerable_0, Func<UUh66EJbF7BGCvARwx, bool> func_0)
+	public static int smethod_1<GA4DFoF5hod29n4xy0>(this IEnumerable<GA4DFoF5hod29n4xy0> ienumerable_0, Func<GA4DFoF5hod29n4xy0, bool> func_0)
 	{
 		if (ienumerable_0 == null)
 		{
@@ -41,7 +41,7 @@ public static class GClass3
 			throw new ArgumentNullException("predicate");
 		}
 		int num = 0;
-		foreach (UUh66EJbF7BGCvARwx arg in ienumerable_0)
+		foreach (GA4DFoF5hod29n4xy0 arg in ienumerable_0)
 		{
 			if (func_0(arg))
 			{
@@ -52,11 +52,11 @@ public static class GClass3
 		return -1;
 	}
 
-	public static string smethod_3<p4HcJQ9ZmAPQ3JRYkW>(this IEnumerable<p4HcJQ9ZmAPQ3JRYkW> ienumerable_0, Func<p4HcJQ9ZmAPQ3JRYkW, string> func_0, string string_0 = ", ")
+	public static string smethod_2<RkhKTMpX58FPHra07S>(this IEnumerable<RkhKTMpX58FPHra07S> ienumerable_0, Func<RkhKTMpX58FPHra07S, string> func_0, string string_0 = ", ")
 	{
 		StringBuilder stringBuilder = new StringBuilder();
 		bool flag = true;
-		foreach (p4HcJQ9ZmAPQ3JRYkW arg in ienumerable_0)
+		foreach (RkhKTMpX58FPHra07S arg in ienumerable_0)
 		{
 			if (flag)
 			{
@@ -71,17 +71,17 @@ public static class GClass3
 		return stringBuilder.ToString();
 	}
 
-	public static void smethod_4<CWIHlwerPU3XorD7T2>(this IEnumerable<CWIHlwerPU3XorD7T2> ienumerable_0, Action<CWIHlwerPU3XorD7T2> action_0)
+	public static void smethod_3<r1RAKLA7vSur6fQgQQ>(this IEnumerable<r1RAKLA7vSur6fQgQQ> ienumerable_0, Action<r1RAKLA7vSur6fQgQQ> action_0)
 	{
-		foreach (CWIHlwerPU3XorD7T2 obj in ienumerable_0)
+		foreach (r1RAKLA7vSur6fQgQQ obj in ienumerable_0)
 		{
 			action_0(obj);
 		}
 	}
 
-	public static void smethod_5<KNwTUPhZ5twwC3AFmy>(this IEnumerable<KNwTUPhZ5twwC3AFmy> ienumerable_0, Action<KNwTUPhZ5twwC3AFmy> action_0)
+	public static void smethod_4<rviRCvTDuNU8tQmRcU>(this IEnumerable<rviRCvTDuNU8tQmRcU> ienumerable_0, Action<rviRCvTDuNU8tQmRcU> action_0)
 	{
-		foreach (KNwTUPhZ5twwC3AFmy obj in new List<KNwTUPhZ5twwC3AFmy>(ienumerable_0))
+		foreach (rviRCvTDuNU8tQmRcU obj in new List<rviRCvTDuNU8tQmRcU>(ienumerable_0))
 		{
 			action_0(obj);
 		}

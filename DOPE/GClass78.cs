@@ -19,7 +19,7 @@ public class GClass78
 
 	public GClass78(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.Web = darkOrbitWebAPI_1;
 		this.gclass80_0 = new GClass78.GClass80();
@@ -75,14 +75,14 @@ public class GClass78
 
 		public GClass79()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static GClass79()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			GClass78.GClass79.list_0 = new List<string>
 			{
 				"baseModule",
@@ -131,7 +131,7 @@ public class GClass78
 
 		public ConcurrentDictionary<string, int> Resources { get; }
 
-		public int opxUviAkXU(string string_0)
+		public int method_2(string string_0)
 		{
 			int result;
 			if (!this.Resources.TryGetValue(string_0, out result))
@@ -141,24 +141,24 @@ public class GClass78
 			return result;
 		}
 
-		public int method_2()
-		{
-			return this.opxUviAkXU("resource_ore_promerium");
-		}
-
 		public int method_3()
 		{
-			return this.opxUviAkXU("resource_ore_seprom");
+			return this.method_2("resource_ore_promerium");
+		}
+
+		public int method_4()
+		{
+			return this.method_2("resource_ore_seprom");
 		}
 
 		[CompilerGenerated]
-		public DateTimeOffset? method_4()
+		public DateTimeOffset? method_5()
 		{
 			return this.nullable_0;
 		}
 
 		[CompilerGenerated]
-		public void method_5(DateTimeOffset? nullable_1)
+		public void zxuluvwwd9(DateTimeOffset? nullable_1)
 		{
 			this.nullable_0 = nullable_1;
 		}
@@ -171,7 +171,7 @@ public class GClass78
 
 		public GClass80()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			base..ctor();
 			this.Resources = new ConcurrentDictionary<string, int>();
 			this.list_0 = new List<GClass78.GClass79>();
@@ -222,7 +222,7 @@ public class GClass78
 					gclass.method_1(null);
 				}
 			}
-			this.method_5(this.method_10("transportModule").method_0());
+			this.zxuluvwwd9(this.method_10("transportModule").method_0());
 		}
 
 		public void method_9(string string_0)
@@ -235,7 +235,7 @@ public class GClass78
 		public GClass78.GClass79 method_10(string string_0)
 		{
 			GClass78.GClass80.<>c__DisplayClass23_0 CS$<>8__locals1 = new GClass78.GClass80.<>c__DisplayClass23_0();
-			CS$<>8__locals1.oyeLmxCiyR = string_0;
+			CS$<>8__locals1.string_0 = string_0;
 			return this.method_6().Find(new Predicate<GClass78.GClass79>(CS$<>8__locals1.method_0));
 		}
 

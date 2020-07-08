@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass701 : GInterface0
+public class GClass701 : GClass700, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return -23970;
+			return 6120;
 		}
 	}
 
@@ -16,32 +16,46 @@ public class GClass701 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass701()
+	public GClass701(int int_0 = 0, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
+		this.lcdJlrdihm = int_1;
+		this.MapId = int_0;
 	}
 
-	public virtual int vmethod_0()
+	public override int vmethod_0()
 	{
-		return -23970;
+		return 6120;
 	}
 
-	public virtual int vmethod_1()
+	public override int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public override void imethod_1(BinaryStream binaryStream_0)
 	{
+		binaryStream_0.smethod_1();
+		base.imethod_1(binaryStream_0);
+		this.lcdJlrdihm = (int)binaryStream_0.smethod_1();
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 12) | this.MapId << 20);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-23970);
+		binaryStream_0.smethod_7(6120);
+		base.imethod_2(binaryStream_0);
+		binaryStream_0.smethod_7(this.lcdJlrdihm);
+		binaryStream_0.smethod_4(this.MapId << 12 | U.smethod_0(this.MapId, 20));
 	}
+
+	public int lcdJlrdihm;
+
+	public int MapId;
 }

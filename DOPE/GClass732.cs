@@ -8,7 +8,7 @@ public class GClass732 : GInterface0
 	{
 		get
 		{
-			return 214;
+			return 130;
 		}
 	}
 
@@ -16,67 +16,58 @@ public class GClass732 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 4;
 		}
 	}
 
-	public GClass732(GClass823 gclass823_1 = null, string string_1 = "", int int_1 = 0)
+	public GClass732(Vector<GClass639> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
-		this.string_0 = "";
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
-		if (gclass823_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass823_0 = new GClass823(0);
+			this.vector_0 = new Vector<GClass639>();
+			return;
 		}
-		else
-		{
-			this.gclass823_0 = gclass823_1;
-		}
-		this.string_0 = string_1;
-		this.int_0 = int_1;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 214;
+		return 130;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
-	}
-
-	public virtual void imethod_0(BinaryStream binaryStream_0)
-	{
-		this.gclass823_0 = (GClass823)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass823_0 != null)
-		{
-			this.gclass823_0.imethod_0(binaryStream_0);
-		}
-		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(214);
-		if (this.gclass823_0 != null)
+		while (this.vector_0.Length > 0)
 		{
-			this.gclass823_0.imethod_1(binaryStream_0);
+			this.vector_0.method_1();
 		}
-		else
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
 		{
-			binaryStream_0.smethod_7(0);
+			GClass639 gclass = (GClass639)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
 		}
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
 	}
 
-	public GClass823 gclass823_0;
+	public virtual void imethod_2(BinaryStream binaryStream_0)
+	{
+		binaryStream_0.smethod_7(130);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass639 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+	}
 
-	public string string_0;
-
-	public int int_0;
+	public Vector<GClass639> vector_0;
 }

@@ -22,7 +22,7 @@ public class GClass383 : GInterface0
 
 	public GClass383(int int_2 = 0, int int_3 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_2;
 		this.int_1 = int_3;
@@ -44,7 +44,7 @@ public class GClass383 : GInterface0
 		return 12;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
@@ -65,7 +65,7 @@ public class GClass383 : GInterface0
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(282);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);

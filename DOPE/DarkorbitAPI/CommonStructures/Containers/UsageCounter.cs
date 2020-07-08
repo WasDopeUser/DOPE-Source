@@ -9,33 +9,33 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 		public UsageCounter()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.Stats = new Dictionary<T, UsageCounter<T>.UsageEntry>();
 			base..ctor();
 		}
 
-		public UsageCounter<T>.UsageEntry method_0(T XO1gy9uHxgmXN69CJ6c)
+		public UsageCounter<T>.UsageEntry method_0(T Hn9XIR5fkno4ybtBjhp)
 		{
 			Dictionary<T, UsageCounter<T>.UsageEntry> stats = this.Stats;
 			UsageCounter<T>.UsageEntry result;
 			lock (stats)
 			{
 				UsageCounter<T>.UsageEntry usageEntry;
-				result = (this.Stats.TryGetValue(XO1gy9uHxgmXN69CJ6c, out usageEntry) ? usageEntry : new UsageCounter<T>.UsageEntry());
+				result = (this.Stats.TryGetValue(Hn9XIR5fkno4ybtBjhp, out usageEntry) ? usageEntry : new UsageCounter<T>.UsageEntry());
 			}
 			return result;
 		}
 
-		public UsageCounter<T>.UsageEntry method_1(T FSJoLFuDQy5YyPBVkKx)
+		public UsageCounter<T>.UsageEntry method_1(T uSMUmU5iJUkfdHH2KMS)
 		{
 			Dictionary<T, UsageCounter<T>.UsageEntry> stats = this.Stats;
 			UsageCounter<T>.UsageEntry result;
 			lock (stats)
 			{
 				UsageCounter<T>.UsageEntry usageEntry;
-				if (!this.Stats.TryGetValue(FSJoLFuDQy5YyPBVkKx, out usageEntry))
+				if (!this.Stats.TryGetValue(uSMUmU5iJUkfdHH2KMS, out usageEntry))
 				{
-					usageEntry = (this.Stats[FSJoLFuDQy5YyPBVkKx] = new UsageCounter<T>.UsageEntry());
+					usageEntry = (this.Stats[uSMUmU5iJUkfdHH2KMS] = new UsageCounter<T>.UsageEntry());
 				}
 				UsageCounter<T>.UsageEntry usageEntry2 = usageEntry;
 				int count = usageEntry2.Count;
@@ -46,16 +46,16 @@ namespace DarkorbitAPI.CommonStructures.Containers
 			return result;
 		}
 
-		public UsageCounter<T>.UsageEntry method_2(T hoKuWGuaQQ4YMu50k1y, TimeSpan timeSpan_0, bool bool_0 = false)
+		public UsageCounter<T>.UsageEntry YwdwTharpER(T E453dh5vdbZ5OvOGELq, TimeSpan timeSpan_0, bool bool_0 = false)
 		{
 			Dictionary<T, UsageCounter<T>.UsageEntry> stats = this.Stats;
 			UsageCounter<T>.UsageEntry result;
 			lock (stats)
 			{
 				UsageCounter<T>.UsageEntry usageEntry;
-				if (!this.Stats.TryGetValue(hoKuWGuaQQ4YMu50k1y, out usageEntry))
+				if (!this.Stats.TryGetValue(E453dh5vdbZ5OvOGELq, out usageEntry))
 				{
-					usageEntry = (this.Stats[hoKuWGuaQQ4YMu50k1y] = new UsageCounter<T>.UsageEntry());
+					usageEntry = (this.Stats[E453dh5vdbZ5OvOGELq] = new UsageCounter<T>.UsageEntry());
 				}
 				if (!usageEntry.LastUsed.smethod_1(timeSpan_0))
 				{
@@ -73,13 +73,13 @@ namespace DarkorbitAPI.CommonStructures.Containers
 			return result;
 		}
 
-		public bool method_3(T h361pKuGpgoRMeTdrjL)
+		public bool method_2(T m7asbV5lA4ngSKBuoY8)
 		{
 			Dictionary<T, UsageCounter<T>.UsageEntry> stats = this.Stats;
 			bool result;
 			lock (stats)
 			{
-				result = this.Stats.Remove(h361pKuGpgoRMeTdrjL);
+				result = this.Stats.Remove(m7asbV5lA4ngSKBuoY8);
 			}
 			return result;
 		}
@@ -101,7 +101,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 			public UsageEntry()
 			{
-				Class13.F93tSdiz1aNIA();
+				Class13.xnk8ImWzpOt04();
 				base..ctor();
 			}
 		}

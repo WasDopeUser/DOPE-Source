@@ -22,7 +22,7 @@ public class GClass466 : GInterface0
 
 	public GClass466(bool bool_1 = false, int int_1 = 0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.int_0 = int_1;
 		this.bool_0 = bool_1;
@@ -38,14 +38,14 @@ public class GClass466 : GInterface0
 		return 5;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (U.smethod_0(this.int_0, 16) | this.int_0 << 16);
 		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(32739);
 		binaryStream_0.smethod_4(this.int_0 << 16 | U.smethod_0(this.int_0, 16));

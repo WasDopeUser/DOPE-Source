@@ -22,7 +22,7 @@ public class GClass653 : GInterface0
 
 	public GClass653(bool bool_6 = false, bool bool_7 = false, bool bool_8 = false, bool bool_9 = false, bool bool_10 = false, bool bool_11 = false)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.bool_0 = bool_6;
 		this.bool_1 = bool_8;
@@ -42,7 +42,7 @@ public class GClass653 : GInterface0
 		return 6;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.bool_0 = binaryStream_0.ReadBoolean();
 		this.bool_1 = binaryStream_0.ReadBoolean();
@@ -52,7 +52,7 @@ public class GClass653 : GInterface0
 		this.bool_5 = binaryStream_0.ReadBoolean();
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(2962);
 		binaryStream_0.WriteBoolean(this.bool_0);

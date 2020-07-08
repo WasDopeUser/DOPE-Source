@@ -29,17 +29,17 @@ namespace DOPE.UI
 			}
 		}
 
-		public GClass890 Context
+		public GClass889 Context
 		{
 			get
 			{
-				return base.DataContext as GClass890;
+				return base.DataContext as GClass889;
 			}
 		}
 
 		public MapControl()
 		{
-			Class13.F93tSdiz1aNIA();
+			Class13.xnk8ImWzpOt04();
 			this.Timer = new Timer();
 			this.LastRender = DateTime.Now;
 			base..ctor();
@@ -129,11 +129,11 @@ namespace DOPE.UI
 				}
 				foreach (KeyValuePair<int, Gate> keyValuePair in map.Gates)
 				{
-					this.imhFjItmqr(drawingContext, float_, float_2, keyValuePair.Value);
+					this.method_9(drawingContext, float_, float_2, keyValuePair.Value);
 				}
 				foreach (KeyValuePair<string, Collectible> keyValuePair2 in map.Collectibles)
 				{
-					this.method_9(drawingContext, float_, float_2, keyValuePair2.Value);
+					this.method_10(drawingContext, float_, float_2, keyValuePair2.Value);
 				}
 				foreach (KeyValuePair<int, Ship> keyValuePair3 in map.Ships)
 				{
@@ -157,7 +157,7 @@ namespace DOPE.UI
 				}
 				if (this.Context != null && flag)
 				{
-					this.method_10(drawingContext, float_, float_2, this.Context);
+					this.method_11(drawingContext, float_, float_2, this.Context);
 				}
 				return;
 			}
@@ -286,7 +286,7 @@ namespace DOPE.UI
 			}
 		}
 
-		public void imhFjItmqr(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
+		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Gate gate_0)
 		{
 			System.Drawing.Color color = MapUtils.smethod_16(this.Map, gate_0);
 			SolidColorBrush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
@@ -294,27 +294,27 @@ namespace DOPE.UI
 			drawingContext_0.DrawEllipse(null, new System.Windows.Media.Pen(brush, 2.0), new System.Windows.Point((double)((float)gate_0.PosX * float_0), (double)((float)gate_0.PosY * float_1)), 10.0, 10.0);
 		}
 
-		public void method_9(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
+		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, Collectible collectible_0)
 		{
 			System.Drawing.Color color = MapUtils.smethod_16(this.Map, collectible_0);
 			System.Windows.Media.Brush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B));
 			drawingContext_0.DrawRectangle(brush, null, MapControl.smethod_0((double)((float)collectible_0.PosX * float_0), (double)((float)collectible_0.PosY * float_1), 3.0, 3.0));
 		}
 
-		public void method_10(DrawingContext drawingContext_0, float float_0, float float_1, GClass890 gclass890_0)
+		public void method_11(DrawingContext drawingContext_0, float float_0, float float_1, GClass889 gclass889_0)
 		{
-			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass890_0.DormantTargets)
+			foreach (KeyValuePair<string, Collectible> keyValuePair in gclass889_0.DormantTargets)
 			{
 				Collectible value = keyValuePair.Value;
 				drawingContext_0.DrawRectangle(System.Windows.Media.Brushes.Pink, null, MapControl.smethod_0((double)(value.Position.X * float_0), (double)(value.Position.Y * float_1), 2.0, 2.0));
 			}
-			if (gclass890_0.RoamTarget != Vector2.Zero)
+			if (gclass889_0.RoamTarget != Vector2.Zero)
 			{
-				Vector2 roamTarget = gclass890_0.RoamTarget;
+				Vector2 roamTarget = gclass889_0.RoamTarget;
 				drawingContext_0.DrawEllipse(System.Windows.Media.Brushes.Magenta, null, new System.Windows.Point((double)(roamTarget.X * float_0), (double)(roamTarget.Y * float_1)), 6.0, 6.0);
 			}
-			GClass904 behavior = gclass890_0.Behavior;
-			List<Rectangle> list = (behavior != null) ? behavior.vmethod_13() : null;
+			GClass903 behavior = gclass889_0.Behavior;
+			List<Rectangle> list = (behavior != null) ? behavior.vmethod_17() : null;
 			if (list != null)
 			{
 				foreach (Rectangle rectangle in list)

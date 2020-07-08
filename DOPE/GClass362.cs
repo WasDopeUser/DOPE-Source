@@ -22,7 +22,7 @@ public class GClass362 : GInterface0
 
 	public GClass362(string string_1 = "", int int_2 = 0, int int_3 = 0, Vector<int> vector_1 = null)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		this.string_0 = "";
 		base..ctor();
 		this.string_0 = string_1;
@@ -46,7 +46,7 @@ public class GClass362 : GInterface0
 		return 14;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.string_0 = binaryStream_0.smethod_2();
 		this.int_0 = binaryStream_0.smethod_0();
@@ -68,7 +68,7 @@ public class GClass362 : GInterface0
 		}
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(150);
 		binaryStream_0.smethod_3(this.string_0);

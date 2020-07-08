@@ -22,7 +22,7 @@ public class GClass458 : GInterface0
 
 	public GClass458(int int_2 = 0, int int_3 = 0, double double_1 = 0.0)
 	{
-		Class13.F93tSdiz1aNIA();
+		Class13.xnk8ImWzpOt04();
 		base..ctor();
 		this.double_0 = double_1;
 		this.int_0 = int_3;
@@ -39,7 +39,7 @@ public class GClass458 : GInterface0
 		return 16;
 	}
 
-	public virtual void imethod_0(BinaryStream binaryStream_0)
+	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.double_0 = binaryStream_0.ReadDouble();
 		this.int_0 = binaryStream_0.smethod_0();
@@ -48,7 +48,7 @@ public class GClass458 : GInterface0
 		this.int_1 = (U.smethod_0(this.int_1, 12) | this.int_1 << 20);
 	}
 
-	public virtual void imethod_1(BinaryStream binaryStream_0)
+	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(32449);
 		binaryStream_0.WriteDouble(this.double_0);
