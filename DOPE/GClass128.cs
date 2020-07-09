@@ -22,7 +22,7 @@ public class GClass128 : GInterface0
 
 	public GClass128(int int_3 = 0, int int_4 = 0, int int_5 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.int_0 = int_3;
 		this.int_1 = int_4;

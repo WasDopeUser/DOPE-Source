@@ -400,7 +400,7 @@ public static class GClass89
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass89()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		GClass89.Unknown = new HashSet<string>();
 	}
 

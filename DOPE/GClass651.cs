@@ -8,7 +8,7 @@ public class GClass651 : GInterface0
 	{
 		get
 		{
-			return 73;
+			return 40;
 		}
 	}
 
@@ -20,24 +20,21 @@ public class GClass651 : GInterface0
 		}
 	}
 
-	public GClass651(GClass431 gclass431_1 = null, int int_1 = 0)
+	public GClass651(Vector<GClass728> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass431_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass431_0 = new GClass431(0);
+			this.vector_0 = new Vector<GClass728>();
+			return;
 		}
-		else
-		{
-			this.gclass431_0 = gclass431_1;
-		}
-		this.int_0 = int_1;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 73;
+		return 40;
 	}
 
 	public virtual int vmethod_1()
@@ -47,30 +44,30 @@ public class GClass651 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass431_0 = (GClass431)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass431_0 != null)
+		while (this.vector_0.Length > 0)
 		{
-			this.gclass431_0.imethod_1(binaryStream_0);
+			this.vector_0.method_1();
 		}
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 16 | U.smethod_0(this.int_0, 16));
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass728 gclass = (GClass728)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(73);
-		if (this.gclass431_0 != null)
+		binaryStream_0.smethod_7(40);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass728 gclass in this.vector_0)
 		{
-			this.gclass431_0.imethod_2(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 16) | this.int_0 << 16);
 	}
 
-	public GClass431 gclass431_0;
-
-	public int int_0;
+	public Vector<GClass728> vector_0;
 }

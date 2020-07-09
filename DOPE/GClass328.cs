@@ -8,7 +8,7 @@ public class GClass328 : GInterface0
 	{
 		get
 		{
-			return 179;
+			return 38;
 		}
 	}
 
@@ -16,43 +16,37 @@ public class GClass328 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 0;
 		}
 	}
 
-	public GClass328(int int_1 = 0, bool bool_0 = false)
+	public GClass328(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.int_0 = int_1;
-		this.Visible = bool_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 179;
+		return 38;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
-		this.Visible = binaryStream_0.ReadBoolean();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(179);
-		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		binaryStream_0.WriteBoolean(this.Visible);
+		binaryStream_0.smethod_7(38);
+		binaryStream_0.smethod_7(this.int_0);
 	}
 
 	public int int_0;
-
-	public bool Visible;
 }

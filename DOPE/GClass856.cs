@@ -1,22 +1,24 @@
 ﻿using System;
+using DarkorbitAPI.CommonStructures;
 
-public class GClass856 : GInterface7
+public class GClass856 : GClass854
 {
-	public void imethod_2()
+	public override byte[] vmethod_4()
+	{
+		return null;
+	}
+
+	public override void vmethod_3(DollConfig dollConfig_0, Action action_0)
 	{
 	}
 
-	public void imethod_1(byte[] byte_0, int int_0, int int_1)
-	{
-	}
-
-	public void imethod_0(byte[] byte_0, int int_0, int int_1)
+	public override void vmethod_2(byte[] byte_0)
 	{
 	}
 
 	public GClass856()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 }

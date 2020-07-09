@@ -8,7 +8,7 @@ public class GClass465 : GInterface0
 	{
 		get
 		{
-			return 31986;
+			return 12121;
 		}
 	}
 
@@ -16,42 +16,58 @@ public class GClass465 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 4;
 		}
 	}
 
-	public GClass465(double double_2 = 0.0, double double_3 = 0.0)
+	public GClass465(Vector<int> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.double_0 = double_2;
-		this.double_1 = double_3;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<int>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 31986;
+		return 12121;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.double_1 = binaryStream_0.ReadDouble();
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = (int)binaryStream_0.smethod_1();
+		while (i < num)
+		{
+			int num2 = binaryStream_0.smethod_0();
+			num2 = (U.smethod_0(num2, 6) | num2 << 26);
+			this.vector_0.method_0(num2);
+			i++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(31986);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.WriteDouble(this.double_1);
+		binaryStream_0.smethod_7(12121);
+		binaryStream_0.smethod_7(this.vector_0.Length);
+		foreach (int num in this.vector_0)
+		{
+			binaryStream_0.smethod_4(num << 6 | U.smethod_0(num, 26));
+		}
 	}
 
-	public double double_0;
-
-	public double double_1;
+	public Vector<int> vector_0;
 }

@@ -59,7 +59,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<QZ_GroupSize>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_73);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_75);
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Priority>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_72);
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Collector>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_13);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_15);
 			}
 		}
 
@@ -142,7 +142,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Hunter>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_47);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_49);
 			}
 		}
 
@@ -163,7 +163,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Cloak>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_7);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_9);
 			}
 		}
 
@@ -185,7 +185,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectBonus>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_8);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_10);
 			}
 		}
 
@@ -206,7 +206,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectCargo>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_9);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_11);
 			}
 		}
 
@@ -227,7 +227,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectMaterials>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_12);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_14);
 			}
 		}
 
@@ -249,7 +249,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFromEnemySeen>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_31);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_33);
 			}
 		}
 
@@ -271,7 +271,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeOnlyFromKnownEnemySeen>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.JqewnTmbAsh);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_34);
 			}
 		}
 
@@ -293,7 +293,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFromEnemyAttacker>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_30);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_32);
 			}
 		}
 
@@ -314,7 +314,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeStopOnEnemyLost>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_32);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_35);
 			}
 		}
 
@@ -337,7 +337,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinHp>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_60);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
 			}
 		}
 
@@ -359,7 +359,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinHealHp>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
+				this.<>OnPropertyChanged(Class7.krqMrQduOiI);
 			}
 		}
 
@@ -381,7 +381,7 @@ namespace DOPE.Common.Models
 				}
 				this.<TargetMap>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Name);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_97);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_101);
 			}
 		}
 
@@ -403,7 +403,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeTimeout>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_33);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_36);
 			}
 		}
 
@@ -424,7 +424,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<ReviveAtPortal>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_75);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_78);
 			}
 		}
 
@@ -447,7 +447,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FlyingConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_34);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_37);
 			}
 		}
 
@@ -468,7 +468,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FlyingFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_35);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_38);
 			}
 		}
 
@@ -491,7 +491,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_28);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_30);
 			}
 		}
 
@@ -512,7 +512,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<FleeFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_29);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_31);
 			}
 		}
 
@@ -578,7 +578,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<KamikazeConfig>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_50);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
 			}
 		}
 
@@ -599,7 +599,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<KamikazeFormation>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_51);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_53);
 			}
 		}
 
@@ -620,7 +620,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseMothToKillCorners>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_103);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_107);
 			}
 		}
 
@@ -642,7 +642,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CircleNpcs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_5);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_7);
 			}
 		}
 
@@ -664,7 +664,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<GG_DragNpcs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_37);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_40);
 			}
 		}
 
@@ -686,7 +686,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<SecondaryCircleNpcs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_77);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_80);
 			}
 		}
 
@@ -708,7 +708,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultLaser>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_16);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_18);
 			}
 		}
 
@@ -730,7 +730,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultRocket>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_17);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_19);
 			}
 		}
 
@@ -752,7 +752,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<DefaultHellstorm>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_15);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_17);
 			}
 		}
 
@@ -775,7 +775,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MinSabShield>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_61);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_62);
 			}
 		}
 
@@ -796,7 +796,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<UseRocketPrecision>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_109);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_113);
 			}
 		}
 
@@ -817,7 +817,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<NpcWhitelist>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_64);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_66);
 			}
 		}
 
@@ -838,7 +838,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<PetMode>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_69);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_71);
 			}
 		}
 
@@ -859,7 +859,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<GG_UseKamikazeCorner>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_38);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_41);
 			}
 		}
 
@@ -882,7 +882,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MaxDeaths>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_58);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_60);
 			}
 		}
 
@@ -904,7 +904,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MapDuration>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_56);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_58);
 			}
 		}
 
@@ -926,7 +926,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<MapCooldown>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_55);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_57);
 			}
 		}
 
@@ -947,7 +947,7 @@ namespace DOPE.Common.Models
 				}
 				this.<ModuleType>k__BackingField = value;
 				this.<>OnPropertyChanged(Class7.Name);
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_62);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_63);
 			}
 		}
 
@@ -968,7 +968,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Escort_PreferFreeNPCs>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_26);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_28);
 			}
 		}
 
@@ -988,7 +988,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<CollectPalladium>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_14);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_16);
 			}
 		}
 
@@ -1072,11 +1072,11 @@ namespace DOPE.Common.Models
 				r = ((model.Rocket == RocketType.Default) ? r : model.Rocket);
 				h = ((model.Hellstorm == HellstormType.Default) ? h : model.Hellstorm);
 				bool flag;
-				if (map.mdGbaKqNuQ(ship, out flag) && model.GgCornerLaser != LaserType.Default)
+				if (map.method_8(ship, out flag) && model.GgCornerLaser != LaserType.Default)
 				{
 					a = model.GgCornerLaser;
 				}
-				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_20("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
+				else if (model.UseSab && ship.Shield >= 2000 && map.Hero.ShieldPercentage <= (float)this.MinSabShield && map.Hero.method_21("ammunition_laser_sab-50") > 100.0 && map.Hero.Formation != GEnum4.Moth)
 				{
 					a = LaserType.SAB_50;
 				}

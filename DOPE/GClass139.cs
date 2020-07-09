@@ -20,11 +20,11 @@ public class GClass139 : GInterface0
 		}
 	}
 
-	public GClass139(int int_0 = 0)
+	public GClass139(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.foPdUtqmpJ = int_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
@@ -39,14 +39,14 @@ public class GClass139 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.foPdUtqmpJ = (int)binaryStream_0.smethod_1();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_7(7010);
-		binaryStream_0.smethod_7(this.foPdUtqmpJ);
+		binaryStream_0.smethod_7(this.int_0);
 	}
 
-	public int foPdUtqmpJ;
+	public int int_0;
 }

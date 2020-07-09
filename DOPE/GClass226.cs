@@ -8,7 +8,7 @@ public class GClass226 : GInterface0
 	{
 		get
 		{
-			return 236;
+			return 161;
 		}
 	}
 
@@ -16,81 +16,44 @@ public class GClass226 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass226(GClass256 gclass256_0 = null, Vector<int> vector_0 = null)
+	public GClass226(int int_2 = 0, int int_3 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass256_0 == null)
-		{
-			this.Mode = new GClass256(0);
-		}
-		else
-		{
-			this.Mode = gclass256_0;
-		}
-		if (vector_0 == null)
-		{
-			this.State = new Vector<int>();
-			return;
-		}
-		this.State = vector_0;
+		this.int_0 = int_2;
+		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 236;
+		return 161;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Mode = (GClass256)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.Mode != null)
-		{
-			this.Mode.imethod_1(binaryStream_0);
-		}
-		while (this.State.Length > 0)
-		{
-			this.State.method_1();
-		}
-		int i = 0;
-		int num = binaryStream_0.ReadByte();
-		while (i < num)
-		{
-			int num2 = binaryStream_0.smethod_0();
-			num2 = (U.smethod_0(num2, 3) | num2 << 29);
-			this.State.method_0(num2);
-			i++;
-		}
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 13 | U.smethod_0(this.int_0, 19));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (U.smethod_0(this.int_1, 6) | this.int_1 << 26);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(236);
-		if (this.Mode != null)
-		{
-			this.Mode.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.WriteByte(this.State.Length);
-		foreach (int num in this.State)
-		{
-			binaryStream_0.smethod_4(num << 3 | U.smethod_0(num, 29));
-		}
+		binaryStream_0.smethod_7(161);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 13) | this.int_0 << 19);
+		binaryStream_0.smethod_4(this.int_1 << 6 | U.smethod_0(this.int_1, 26));
 	}
 
-	public GClass256 Mode;
+	public int int_0;
 
-	public Vector<int> State;
+	public int int_1;
 }

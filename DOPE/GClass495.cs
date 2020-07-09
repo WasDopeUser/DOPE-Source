@@ -8,7 +8,7 @@ public class GClass495 : GInterface0
 	{
 		get
 		{
-			return 2085;
+			return 265;
 		}
 	}
 
@@ -16,63 +16,77 @@ public class GClass495 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 9;
 		}
 	}
 
-	public GClass495(int int_2 = 0, int int_3 = 0, GClass363 gclass363_0 = null)
+	public GClass495(bool bool_9 = false, bool bool_10 = false, bool bool_11 = false, bool bool_12 = false, bool bool_13 = false, bool bool_14 = false, bool bool_15 = false, bool bool_16 = false, bool bool_17 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
-		if (gclass363_0 == null)
-		{
-			this.ToolTip = new GClass363(null);
-			return;
-		}
-		this.ToolTip = gclass363_0;
+		this.bool_0 = bool_9;
+		this.bool_1 = bool_10;
+		this.bool_2 = bool_11;
+		this.bool_3 = bool_12;
+		this.bool_4 = bool_13;
+		this.bool_5 = bool_14;
+		this.bool_6 = bool_15;
+		this.bool_7 = bool_16;
+		this.bool_8 = bool_17;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2085;
+		return 265;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 9;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 5) | this.int_1 << 27);
-		this.ToolTip = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.ToolTip != null)
-		{
-			this.ToolTip.imethod_1(binaryStream_0);
-		}
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_2 = binaryStream_0.ReadBoolean();
+		this.bool_3 = binaryStream_0.ReadBoolean();
+		this.bool_4 = binaryStream_0.ReadBoolean();
+		this.bool_5 = binaryStream_0.ReadBoolean();
+		this.bool_6 = binaryStream_0.ReadBoolean();
+		this.bool_7 = binaryStream_0.ReadBoolean();
+		this.bool_8 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2085);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
-		binaryStream_0.smethod_4(this.int_1 << 5 | U.smethod_0(this.int_1, 27));
-		if (this.ToolTip != null)
-		{
-			this.ToolTip.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(265);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_2);
+		binaryStream_0.WriteBoolean(this.bool_3);
+		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.WriteBoolean(this.bool_5);
+		binaryStream_0.WriteBoolean(this.bool_6);
+		binaryStream_0.WriteBoolean(this.bool_7);
+		binaryStream_0.WriteBoolean(this.bool_8);
 	}
 
-	public int int_0;
+	public bool bool_0;
 
-	public int int_1;
+	public bool bool_1;
 
-	public GClass363 ToolTip;
+	public bool bool_2;
+
+	public bool bool_3;
+
+	public bool bool_4;
+
+	public bool bool_5;
+
+	public bool bool_6;
+
+	public bool bool_7;
+
+	public bool bool_8;
 }

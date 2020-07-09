@@ -7,14 +7,14 @@ namespace DarkorbitAPI.CommonStructures
 	{
 		public ByteArray()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.Memory = new MemoryStream();
 			base..ctor();
 		}
 
 		public ByteArray(MemoryStream memoryStream_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.Memory = new MemoryStream();
 			base..ctor();
 			this.Memory = memoryStream_0;
@@ -22,7 +22,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public ByteArray(ByteArray byteArray_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.Memory = new MemoryStream();
 			base..ctor();
 			byteArray_0.Memory.Position = 0L;
@@ -32,7 +32,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		public ByteArray(byte[] byte_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.Memory = new MemoryStream();
 			base..ctor();
 			this.Memory.Write(byte_0, 0, byte_0.Length);

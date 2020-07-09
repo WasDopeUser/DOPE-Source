@@ -8,7 +8,7 @@ public class GClass472 : GInterface0
 	{
 		get
 		{
-			return 63;
+			return 204;
 		}
 	}
 
@@ -16,49 +16,65 @@ public class GClass472 : GInterface0
 	{
 		get
 		{
-			return 9;
+			return 8;
 		}
 	}
 
-	public GClass472(int int_0 = 0, int int_1 = 0, bool bool_1 = false)
+	public GClass472(GClass823 gclass823_1 = null, double double_2 = 0.0, double double_3 = 0.0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.MapId = int_0;
-		this.aHcjhHyag1 = int_1;
-		this.bool_0 = bool_1;
+		if (gclass823_1 == null)
+		{
+			this.gclass823_0 = new GClass823(0);
+		}
+		else
+		{
+			this.gclass823_0 = gclass823_1;
+		}
+		this.double_0 = double_2;
+		this.double_1 = double_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 63;
+		return 204;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 9;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.MapId = binaryStream_0.smethod_0();
-		this.MapId = (this.MapId << 13 | U.smethod_0(this.MapId, 19));
-		this.aHcjhHyag1 = binaryStream_0.smethod_0();
-		this.aHcjhHyag1 = (U.smethod_0(this.aHcjhHyag1, 9) | this.aHcjhHyag1 << 23);
-		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.gclass823_0 = (GClass823)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_1(binaryStream_0);
+		}
+		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.double_1 = (double)binaryStream_0.smethod_10();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(63);
-		binaryStream_0.smethod_4(U.smethod_0(this.MapId, 13) | this.MapId << 19);
-		binaryStream_0.smethod_4(this.aHcjhHyag1 << 9 | U.smethod_0(this.aHcjhHyag1, 23));
-		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(204);
+		if (this.gclass823_0 != null)
+		{
+			this.gclass823_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_9(this.double_1);
 	}
 
-	public int MapId;
+	public GClass823 gclass823_0;
 
-	public int aHcjhHyag1;
+	public double double_0;
 
-	public bool bool_0;
+	public double double_1;
 }

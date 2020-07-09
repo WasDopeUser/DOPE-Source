@@ -8,7 +8,7 @@ public class GClass839 : GInterface0
 	{
 		get
 		{
-			return 20572;
+			return -24962;
 		}
 	}
 
@@ -20,16 +20,29 @@ public class GClass839 : GInterface0
 		}
 	}
 
-	public GClass839(int int_1 = 0)
+	public GClass839(Vector<GClass377> vector_1 = null, GClass540 gclass540_0 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass377>();
+		}
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		if (gclass540_0 == null)
+		{
+			this.PuDmqHehYi = new GClass540(0, 0, 0);
+			return;
+		}
+		this.PuDmqHehYi = gclass540_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 20572;
+		return -24962;
 	}
 
 	public virtual int vmethod_1()
@@ -39,15 +52,43 @@ public class GClass839 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 8) | this.int_0 << 24);
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass377 gclass = (GClass377)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
+		this.PuDmqHehYi = (GClass540)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.PuDmqHehYi != null)
+		{
+			this.PuDmqHehYi.imethod_1(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(20572);
-		binaryStream_0.smethod_4(this.int_0 << 8 | U.smethod_0(this.int_0, 24));
+		binaryStream_0.smethod_7(-24962);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass377 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
+		if (this.PuDmqHehYi != null)
+		{
+			this.PuDmqHehYi.imethod_2(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public int int_0;
+	public Vector<GClass377> vector_0;
+
+	public GClass540 PuDmqHehYi;
 }

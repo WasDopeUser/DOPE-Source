@@ -4,7 +4,7 @@ using DarkorbitAPI.Structures;
 
 public class GClass105 : GInterface4
 {
-	public void Run(GClass221 e)
+	public void Run(GClass222 e)
 	{
 		HeroPet pet = ConnectionManager.Instance.Value.Game.Hero.Pet;
 		pet.Hp = e.int_0;
@@ -14,7 +14,7 @@ public class GClass105 : GInterface4
 
 	public GClass105()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 }

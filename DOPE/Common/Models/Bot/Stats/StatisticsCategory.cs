@@ -26,7 +26,7 @@ namespace DOPE.Common.Models.Bot.Stats
 					return;
 				}
 				this.<Key>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_52);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_54);
 			}
 		}
 

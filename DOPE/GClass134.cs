@@ -20,14 +20,14 @@ public class GClass134 : GInterface0
 		}
 	}
 
-	public GClass134(double double_1 = 0.0, Vector<GClass338> vector_1 = null)
+	public GClass134(double double_1 = 0.0, Vector<GClass339> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.double_0 = double_1;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass338>();
+			this.vector_0 = new Vector<GClass339>();
 			return;
 		}
 		this.vector_0 = vector_1;
@@ -54,7 +54,7 @@ public class GClass134 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass338 gclass = (GClass338)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			GClass339 gclass = (GClass339)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
@@ -66,7 +66,7 @@ public class GClass134 : GInterface0
 		binaryStream_0.smethod_7(1150);
 		binaryStream_0.WriteDouble(this.double_0);
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass338 gclass in this.vector_0)
+		foreach (GClass339 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
@@ -74,5 +74,5 @@ public class GClass134 : GInterface0
 
 	public double double_0;
 
-	public Vector<GClass338> vector_0;
+	public Vector<GClass339> vector_0;
 }

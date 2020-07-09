@@ -8,7 +8,7 @@ public class GClass399 : GInterface0
 	{
 		get
 		{
-			return 187;
+			return -21477;
 		}
 	}
 
@@ -16,44 +16,37 @@ public class GClass399 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 8;
 		}
 	}
 
-	public GClass399(string string_1 = "", int int_1 = 0)
+	public GClass399(double double_1 = 0.0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.string_0 = string_1;
-		this.int_0 = int_1;
+		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 187;
+		return -21477;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(187);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
+		binaryStream_0.smethod_7(-21477);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public string string_0;
-
-	public int int_0;
+	public double double_0;
 }

@@ -27,7 +27,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<ProxySocket>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_81);
+				this.method_20(Class5.propertyChangedEventArgs_83);
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<InjectedEncoder>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_32);
+				this.method_20(Class5.propertyChangedEventArgs_34);
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<SecretKey>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_95);
+				this.method_20(Class5.propertyChangedEventArgs_97);
 			}
 		}
 
@@ -84,7 +84,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<InjectedLen>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_33);
+				this.method_20(Class5.propertyChangedEventArgs_35);
 			}
 		}
 
@@ -103,7 +103,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Host>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_29);
+				this.method_20(Class5.propertyChangedEventArgs_31);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Socket>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_104);
+				this.method_20(Class5.propertyChangedEventArgs_106);
 			}
 		}
 
@@ -145,7 +145,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<IsAuthenticated>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_37);
+				this.method_20(Class5.propertyChangedEventArgs_39);
 			}
 		}
 
@@ -198,7 +198,7 @@ namespace DarkorbitAPI
 					return;
 				}
 				this.<Server>k__BackingField = value;
-				this.method_20(Class5.propertyChangedEventArgs_97);
+				this.method_20(Class5.propertyChangedEventArgs_99);
 			}
 		}
 
@@ -229,7 +229,7 @@ namespace DarkorbitAPI
 
 		public ConnectionManager(GameManager gameManager_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.Port = 5001;
 			this.CommandQueue = new Queue<GInterface0>();
 			this._lastKeepAlive = DateTime.Now;
@@ -257,7 +257,7 @@ namespace DarkorbitAPI
 
 		public void method_2(params string[] cmd)
 		{
-			this.SendMessage(new GClass268(string.Join("|", cmd)));
+			this.SendMessage(new GClass269(string.Join("|", cmd)));
 		}
 
 		public void SendMessage(GInterface0 ginterface0_0)
@@ -335,7 +335,7 @@ namespace DarkorbitAPI
 
 		private void method_6(GClass91 gclass91_0)
 		{
-			gclass91_0.method_2().GetStream().WriteByte(0);
+			gclass91_0.method_3().GetStream().WriteByte(0);
 			this.PingMeasurements.Clear();
 			this._lastKeepAlive = DateTime.Now;
 			this._keepAlive = false;
@@ -353,18 +353,18 @@ namespace DarkorbitAPI
 		private void method_7()
 		{
 			this.IsAuthenticated = false;
-			this.SendMessage(new GClass278("688b75415cb841f68eaae105cf0f2de9"));
+			this.SendMessage(new GClass279("99e62eb0ce99bc68ab3912dae14869ba"));
 		}
 
 		internal void method_8(bool bool_0, string string_0)
 		{
-			if (bool_0 && string_0 == "688b75415cb841f68eaae105cf0f2de9")
+			if (bool_0 && string_0 == "99e62eb0ce99bc68ab3912dae14869ba")
 			{
 				this.IsAuthenticated = true;
 				this.method_16();
 				return;
 			}
-			this.Socket.Disconnect(ErrorReason.VersionMismatch, new Exception("client version: 688b75415cb841f68eaae105cf0f2de9; remote " + string_0), false);
+			this.Socket.Disconnect(ErrorReason.VersionMismatch, new Exception("client version: 99e62eb0ce99bc68ab3912dae14869ba; remote " + string_0), false);
 		}
 
 		internal void method_9(byte[] byte_0, uint uint_0)
@@ -397,7 +397,7 @@ namespace DarkorbitAPI
 			this._lastSentPing = DateTime.Now;
 			this._keepAlive = true;
 			this._sentPings++;
-			this.SendMessage(new GClass235());
+			this.SendMessage(new GClass236());
 		}
 
 		internal void method_13(byte[] byte_0)
@@ -411,10 +411,10 @@ namespace DarkorbitAPI
 			this.Socket.Disconnect(ErrorReason.GracefullyDisconnected, null, false);
 		}
 
-		public GClass238 method_15()
+		public GClass239 method_15()
 		{
 			FlashSettings flashSettings = this.Game.Settings.FlashSettings;
-			GClass238 result = new GClass238(0, 0, "", "", 0)
+			GClass239 result = new GClass239(0, 0, "", "", 0)
 			{
 				int_1 = flashSettings.factionID,
 				int_2 = flashSettings.pid,
@@ -431,7 +431,7 @@ namespace DarkorbitAPI
 
 		internal void method_16()
 		{
-			GClass238 ginterface0_ = this.method_15();
+			GClass239 ginterface0_ = this.method_15();
 			this.SendMessage(ginterface0_);
 			this.method_12();
 		}
@@ -454,10 +454,10 @@ namespace DarkorbitAPI
 		internal void method_17()
 		{
 			this._lastKeepAlive = DateTime.Now;
-			int ouw90M5rxKm07snR4TM = (int)(this._lastKeepAlive - this._lastSentPing).TotalMilliseconds;
+			int eaB5m4QLO3HqtTVTcfT = (int)(this._lastKeepAlive - this._lastSentPing).TotalMilliseconds;
 			if (this._keepAlive)
 			{
-				this.PingMeasurements.method_0(ouw90M5rxKm07snR4TM);
+				this.PingMeasurements.method_0(eaB5m4QLO3HqtTVTcfT);
 			}
 			this._receivedPings++;
 			PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
@@ -477,8 +477,8 @@ namespace DarkorbitAPI
 			bool result = true;
 			FlashSettings flashSettings = this.Game.Settings.FlashSettings;
 			DateTimeOffset licenseExpiration;
-			GClass848.GEnum9 licenseState;
-			if (!GClass848.smethod_0(flashSettings.pid, flashSettings.userID, this.Game.Dope.Key, out licenseExpiration, out licenseState, "basic"))
+			GClass849.GEnum9 licenseState;
+			if (!GClass849.smethod_0(flashSettings.pid, flashSettings.userID, this.Game.Dope.Key, out licenseExpiration, out licenseState, "basic"))
 			{
 				GClass93 socket = this.Socket;
 				if (socket != null)
@@ -495,7 +495,7 @@ namespace DarkorbitAPI
 		// Note: this type is marked as 'beforefieldinit'.
 		static ConnectionManager()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			ConnectionManager.Instance = new ThreadLocal<ConnectionManager>();
 		}
 

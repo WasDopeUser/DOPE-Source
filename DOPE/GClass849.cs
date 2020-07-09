@@ -1,59 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
+using Newtonsoft.Json;
 
 public static class GClass849
 {
-	public static string smethod_0(string string_0, string string_1)
+	static GClass849()
 	{
-		Encoding unicode = Encoding.Unicode;
-		return Convert.ToBase64String(GClass849.smethod_2(unicode.GetBytes(string_0), unicode.GetBytes(string_1)));
+		Class13.lOBHd9Nzn7x2T();
+		GClass849.httpClient_0 = new HttpClient();
+		GClass849.httpClient_0.DefaultRequestHeaders.ConnectionClose = new bool?(true);
 	}
 
-	public static string smethod_1(string string_0, string string_1)
+	public static bool smethod_0(int int_0, int int_1, string string_0, out DateTimeOffset dateTimeOffset_0, out GClass849.GEnum9 genum9_0, string string_1 = "basic")
 	{
-		Encoding unicode = Encoding.Unicode;
-		return unicode.GetString(GClass849.smethod_2(unicode.GetBytes(string_0), Convert.FromBase64String(string_1)));
-	}
-
-	public static byte[] smethod_2(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass849.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	public static byte[] smethod_3(byte[] byte_0, byte[] byte_1)
-	{
-		return GClass849.smethod_5(byte_0, byte_1).ToArray<byte>();
-	}
-
-	private static byte[] smethod_4(byte[] byte_0)
-	{
-		byte[] array = Enumerable.Range(0, 256).Select(new Func<int, byte>(GClass849.<>c.<>c_0.method_0)).ToArray<byte>();
-		int i = 0;
-		int num = 0;
-		while (i < 256)
+		genum9_0 = GClass849.GEnum9.Unknown;
+		dateTimeOffset_0 = DateTimeOffset.MaxValue;
+		bool result3;
+		try
 		{
-			num = (num + (int)byte_0[i % byte_0.Length] + (int)array[i] & 255);
-			GClass849.vIpwtYlqAsn(array, i, num);
-			i++;
+			bool is64BitProcess = Environment.Is64BitProcess;
+			string text = string.Format("{0}", DateTime.Now.Ticks);
+			HttpResponseMessage result = GClass849.httpClient_0.PostAsync(string.Format("https://powerofdark.space/license/verify/{0}/", string_1), new FormUrlEncodedContent(new Dictionary<string, string>
+			{
+				{
+					"ServerId",
+					string.Format("{0}", int_0)
+				},
+				{
+					"UserId",
+					string.Format("{0}", int_1)
+				},
+				{
+					"x64",
+					is64BitProcess.ToString() ?? ""
+				},
+				{
+					"Token",
+					text
+				},
+				{
+					"Key",
+					string_0
+				},
+				{
+					"Extra",
+					"v2"
+				}
+			})).Result;
+			IEnumerable<string> source;
+			if (result.Headers.TryGetValues("X-Signature", out source) && result.IsSuccessStatusCode)
+			{
+				string result2 = result.Content.ReadAsStringAsync().Result;
+				byte[] byte_ = GClass858.smethod_1(source.First<string>());
+				Dictionary<string, string> dictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(result2);
+				byte[] byte_2 = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(result2));
+				if (dictionary["Token"] != text)
+				{
+					result3 = false;
+				}
+				else if (!GClass849.smethod_1(byte_2, byte_))
+				{
+					result3 = false;
+				}
+				else
+				{
+					genum9_0 = (GClass849.GEnum9)int.Parse(dictionary["LicenseState"]);
+					result3 = (genum9_0 == (GClass849.GEnum9)1);
+				}
+			}
+			else
+			{
+				result3 = false;
+			}
 		}
-		return array;
+		catch
+		{
+			result3 = false;
+		}
+		return result3;
 	}
 
-	private static IEnumerable<byte> smethod_5(byte[] byte_0, IEnumerable<byte> ienumerable_0)
+	private static bool smethod_1(byte[] byte_0, byte[] byte_1)
 	{
-		GClass849.<>c__DisplayClass5_0 CS$<>8__locals1 = new GClass849.<>c__DisplayClass5_0();
-		CS$<>8__locals1.byte_0 = GClass849.smethod_4(byte_0);
-		CS$<>8__locals1.int_0 = 0;
-		CS$<>8__locals1.int_1 = 0;
-		return ienumerable_0.Select(new Func<byte, byte>(CS$<>8__locals1.method_0));
+		bool result;
+		using (RSACryptoServiceProvider rsacryptoServiceProvider = new RSACryptoServiceProvider())
+		{
+			RSAParameters parameters = new RSAParameters
+			{
+				Exponent = new byte[]
+				{
+					1,
+					0,
+					1
+				}
+			};
+			parameters.Modulus = GClass858.smethod_1("b8b8d2efed5992f8b89285b2367bfcdb28d1b781b7b852af87221c0db9ecb1bc4f1ad601b9bb931647f48aa9a91467334ddca081beecd915775ba38da95bff4d50b1ff5790d3c5a6f024688185e59362722570520f646e2c6dab3af3b2b736c585c49231f6300051a5238d3d80ea6653e4ecb3904dea8c364fe1936df9629a26db9a30f538cdd61414b6112df43038f66c73df802990f341d34fadeb447918c695748b0eac9f55d3ece99868506f616861e897cd062cae57b2e3ae1737adb4b9042e2902453c4a5946029fe53928f19fe7c9928f990a4e6ee01105a1d300e2aabab995b3dd7333e9564e9212938a6422a5e706710fce47ca78f3e62168faaea9");
+			rsacryptoServiceProvider.ImportParameters(parameters);
+			result = rsacryptoServiceProvider.VerifyHash(byte_0, byte_1, HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+		}
+		return result;
 	}
 
-	private static void vIpwtYlqAsn(byte[] byte_0, int int_0, int int_1)
+	public static readonly HttpClient httpClient_0;
+
+	public enum GEnum9
 	{
-		byte b = byte_0[int_0];
-		byte_0[int_0] = byte_0[int_1];
-		byte_0[int_1] = b;
+		Unknown
 	}
 }

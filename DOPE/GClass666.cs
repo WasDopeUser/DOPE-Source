@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass666 : GClass664, GInterface0
+public class GClass666 : GClass665, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 12075;
+			return 17489;
 		}
 	}
 
@@ -16,35 +16,40 @@ public class GClass666 : GClass664, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 8;
 		}
 	}
 
-	public GClass666()
+	public GClass666(double double_1 = 0.0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
+		this.double_0 = double_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 12075;
+		return 17489;
 	}
 
 	public override int vmethod_1()
 	{
-		return 0;
+		return 8;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
 		base.imethod_1(binaryStream_0);
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(12075);
+		binaryStream_0.smethod_7(17489);
 		base.imethod_2(binaryStream_0);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
+
+	public double double_0;
 }

@@ -9,9 +9,9 @@ using Syroot.BinaryData;
 
 public class GClass91
 {
-	public bool ljsNmtBbtu()
+	public bool method_0()
 	{
-		TcpClient tcpClient = this.method_2();
+		TcpClient tcpClient = this.method_3();
 		bool? flag;
 		if (tcpClient == null)
 		{
@@ -31,7 +31,7 @@ public class GClass91
 	public event GClass91.GClass92.GDelegate5 Connected;
 
 	[CompilerGenerated]
-	public void method_0(GClass91.GClass92.GDelegate7 gdelegate7_1)
+	public void method_1(GClass91.GClass92.GDelegate7 gdelegate7_1)
 	{
 		GClass91.GClass92.GDelegate7 gdelegate = this.gdelegate7_0;
 		GClass91.GClass92.GDelegate7 gdelegate2;
@@ -45,7 +45,7 @@ public class GClass91
 	}
 
 	[CompilerGenerated]
-	public void method_1(GClass91.GClass92.GDelegate7 gdelegate7_1)
+	public void method_2(GClass91.GClass92.GDelegate7 gdelegate7_1)
 	{
 		GClass91.GClass92.GDelegate7 gdelegate = this.gdelegate7_0;
 		GClass91.GClass92.GDelegate7 gdelegate2;
@@ -59,35 +59,35 @@ public class GClass91
 	}
 
 	[CompilerGenerated]
-	public TcpClient method_2()
+	public TcpClient method_3()
 	{
 		return this.tcpClient_0;
 	}
 
 	[CompilerGenerated]
-	private void method_3(TcpClient tcpClient_1)
+	private void method_4(TcpClient tcpClient_1)
 	{
 		this.tcpClient_0 = tcpClient_1;
 	}
 
 	[CompilerGenerated]
-	public Thread method_4()
+	public Thread method_5()
 	{
 		return this.thread_0;
 	}
 
 	[CompilerGenerated]
-	private void method_5(Thread thread_1)
+	private void method_6(Thread thread_1)
 	{
 		this.thread_0 = thread_1;
 	}
 
 	public GClass91()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.method_5(new Thread(new ThreadStart(this.method_6)));
-		this.method_4().IsBackground = true;
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
+		this.method_5().IsBackground = true;
 	}
 
 	public static void smethod_0(Socket socket_0)
@@ -99,14 +99,14 @@ public class GClass91
 
 	public void Connect(string host, int port, bool forceNonLoopback = true, ProxySettings proxySettings = null)
 	{
-		this.method_7();
-		this.method_3(new TcpClient());
+		this.method_8();
+		this.method_4(new TcpClient());
 		if (proxySettings != null)
 		{
 			try
 			{
 				GClass124 gclass = new GClass124(proxySettings.Host, proxySettings.Port, proxySettings.User, proxySettings.Password);
-				this.method_3(gclass.imethod_7(host, port));
+				this.method_4(gclass.imethod_7(host, port));
 				goto IL_AC;
 			}
 			catch (Exception exception)
@@ -121,12 +121,12 @@ public class GClass91
 		}
 		if (forceNonLoopback)
 		{
-			this.method_2().Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-			GClass91.smethod_0(this.method_2().Client);
+			this.method_3().Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+			GClass91.smethod_0(this.method_3().Client);
 		}
 		try
 		{
-			this.method_2().Connect(host, port);
+			this.method_3().Connect(host, port);
 		}
 		catch (Exception exception2)
 		{
@@ -138,25 +138,25 @@ public class GClass91
 			return;
 		}
 		IL_AC:
-		this.method_5(new Thread(new ThreadStart(this.method_6)));
-		this.method_4().IsBackground = true;
-		this.method_4().Start();
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
+		this.method_5().IsBackground = true;
+		this.method_5().Start();
 	}
 
 	public void Connect(TcpClient client)
 	{
-		this.method_7();
-		this.method_3(client);
-		this.method_5(new Thread(new ThreadStart(this.method_6)));
-		this.method_4().IsBackground = true;
-		this.method_4().Start();
+		this.method_8();
+		this.method_4(client);
+		this.method_6(new Thread(new ThreadStart(this.method_7)));
+		this.method_5().IsBackground = true;
+		this.method_5().Start();
 	}
 
-	private void method_6()
+	private void method_7()
 	{
 		try
 		{
-			TcpClient tcpClient = this.method_2();
+			TcpClient tcpClient = this.method_3();
 			if (tcpClient == null || tcpClient.Client == null)
 			{
 				return;
@@ -183,7 +183,7 @@ public class GClass91
 				{
 					for (;;)
 					{
-						TcpClient tcpClient2 = this.method_2();
+						TcpClient tcpClient2 = this.method_3();
 						if (tcpClient2 == null)
 						{
 							goto IL_120;
@@ -244,11 +244,11 @@ public class GClass91
 		disconnected4(this, ErrorReason.ConnectionLost, null);
 	}
 
-	public void method_7()
+	public void method_8()
 	{
 		try
 		{
-			TcpClient tcpClient = this.method_2();
+			TcpClient tcpClient = this.method_3();
 			if (tcpClient != null)
 			{
 				tcpClient.Close();

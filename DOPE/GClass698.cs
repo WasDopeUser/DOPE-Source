@@ -8,7 +8,7 @@ public class GClass698 : GInterface0
 	{
 		get
 		{
-			return 151;
+			return 6677;
 		}
 	}
 
@@ -16,44 +16,32 @@ public class GClass698 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 0;
 		}
 	}
 
-	public GClass698(int int_2 = 0, int int_3 = 0)
+	public GClass698()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 151;
+		return 6677;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 16 | U.smethod_0(this.int_1, 16));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(151);
-		binaryStream_0.smethod_4(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 16) | this.int_1 << 16);
+		binaryStream_0.smethod_7(6677);
 	}
-
-	public int int_0;
-
-	public int int_1;
 }

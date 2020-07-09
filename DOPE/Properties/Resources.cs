@@ -15,7 +15,7 @@ namespace DOPE.Properties
 	{
 		internal Resources()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -37,7 +37,7 @@ namespace DOPE.Properties
 		{
 			set
 			{
-				Resources.iomcUunUtY = value;
+				Resources.cultureInfo_0 = value;
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace DOPE.Properties
 		{
 			get
 			{
-				return (byte[])Resources.ResourceManager.GetObject("Buster", Resources.iomcUunUtY);
+				return (byte[])Resources.ResourceManager.GetObject("Buster", Resources.cultureInfo_0);
 			}
 		}
 
@@ -53,12 +53,12 @@ namespace DOPE.Properties
 		{
 			get
 			{
-				return (byte[])Resources.ResourceManager.GetObject("pandora", Resources.iomcUunUtY);
+				return (byte[])Resources.ResourceManager.GetObject("pandora", Resources.cultureInfo_0);
 			}
 		}
 
 		private static ResourceManager resourceManager_0;
 
-		private static CultureInfo iomcUunUtY;
+		private static CultureInfo cultureInfo_0;
 	}
 }

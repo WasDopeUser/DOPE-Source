@@ -8,7 +8,7 @@ public class GClass373 : GInterface0
 	{
 		get
 		{
-			return 15641;
+			return 5892;
 		}
 	}
 
@@ -16,32 +16,58 @@ public class GClass373 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass373()
+	public GClass373(Vector<GClass287> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass287>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 15641;
+		return 5892;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass287 gclass = (GClass287)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15641);
+		binaryStream_0.smethod_7(5892);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass287 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
 	}
+
+	public Vector<GClass287> vector_0;
 }

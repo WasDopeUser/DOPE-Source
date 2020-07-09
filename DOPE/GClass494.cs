@@ -8,7 +8,7 @@ public class GClass494 : GInterface0
 	{
 		get
 		{
-			return 265;
+			return 26421;
 		}
 	}
 
@@ -16,77 +16,43 @@ public class GClass494 : GInterface0
 	{
 		get
 		{
-			return 9;
+			return 3;
 		}
 	}
 
-	public GClass494(bool bool_9 = false, bool bool_10 = false, bool bool_11 = false, bool bool_12 = false, bool bool_13 = false, bool bool_14 = false, bool bool_15 = false, bool bool_16 = false, bool bool_17 = false)
+	public GClass494(string string_1 = "", bool bool_1 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
+		this.string_0 = "";
 		base..ctor();
-		this.bool_0 = bool_9;
-		this.bool_1 = bool_10;
-		this.bool_2 = bool_11;
-		this.bool_3 = bool_12;
-		this.bool_4 = bool_13;
-		this.bool_5 = bool_14;
-		this.bool_6 = bool_15;
-		this.bool_7 = bool_16;
-		this.bool_8 = bool_17;
+		this.string_0 = string_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 265;
+		return 26421;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 9;
+		return 3;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.string_0 = binaryStream_0.smethod_2();
 		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		this.bool_2 = binaryStream_0.ReadBoolean();
-		this.bool_3 = binaryStream_0.ReadBoolean();
-		this.bool_4 = binaryStream_0.ReadBoolean();
-		this.bool_5 = binaryStream_0.ReadBoolean();
-		this.bool_6 = binaryStream_0.ReadBoolean();
-		this.bool_7 = binaryStream_0.ReadBoolean();
-		this.bool_8 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(265);
+		binaryStream_0.smethod_7(26421);
+		binaryStream_0.smethod_3(this.string_0);
 		binaryStream_0.WriteBoolean(this.bool_0);
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.WriteBoolean(this.bool_2);
-		binaryStream_0.WriteBoolean(this.bool_3);
-		binaryStream_0.WriteBoolean(this.bool_4);
-		binaryStream_0.WriteBoolean(this.bool_5);
-		binaryStream_0.WriteBoolean(this.bool_6);
-		binaryStream_0.WriteBoolean(this.bool_7);
-		binaryStream_0.WriteBoolean(this.bool_8);
 	}
 
+	public string string_0;
+
 	public bool bool_0;
-
-	public bool bool_1;
-
-	public bool bool_2;
-
-	public bool bool_3;
-
-	public bool bool_4;
-
-	public bool bool_5;
-
-	public bool bool_6;
-
-	public bool bool_7;
-
-	public bool bool_8;
 }

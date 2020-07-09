@@ -8,7 +8,7 @@ public class GClass548 : GInterface0
 	{
 		get
 		{
-			return 278;
+			return -15125;
 		}
 	}
 
@@ -16,40 +16,45 @@ public class GClass548 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 4;
 		}
 	}
 
-	public GClass548(int int_1 = 0, int int_2 = 0, Vector<int> vector_1 = null)
+	public GClass548(Vector<GClass377> vector_1 = null, GClass693 gclass693_1 = null, int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_1;
-		this.yspMzcloEM = int_2;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<int>();
-			return;
+			this.vector_0 = new Vector<GClass377>();
 		}
-		this.vector_0 = vector_1;
+		else
+		{
+			this.vector_0 = vector_1;
+		}
+		if (gclass693_1 == null)
+		{
+			this.gclass693_0 = new GClass693(0, 0);
+		}
+		else
+		{
+			this.gclass693_0 = gclass693_1;
+		}
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 278;
+		return -15125;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 11) | this.int_0 << 21);
-		this.yspMzcloEM = binaryStream_0.smethod_0();
-		this.yspMzcloEM = (U.smethod_0(this.yspMzcloEM, 6) | this.yspMzcloEM << 26);
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -58,28 +63,41 @@ public class GClass548 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			int num2 = binaryStream_0.smethod_0();
-			num2 = (num2 << 13 | U.smethod_0(num2, 19));
-			this.vector_0.method_0(num2);
+			GClass377 gclass = (GClass377)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
 			i++;
 		}
+		this.gclass693_0 = (GClass693)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass693_0 != null)
+		{
+			this.gclass693_0.imethod_1(binaryStream_0);
+		}
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(278);
-		binaryStream_0.smethod_4(this.int_0 << 11 | U.smethod_0(this.int_0, 21));
-		binaryStream_0.smethod_4(this.yspMzcloEM << 6 | U.smethod_0(this.yspMzcloEM, 26));
+		binaryStream_0.smethod_7(-15125);
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (int num in this.vector_0)
+		foreach (GClass377 gclass in this.vector_0)
 		{
-			binaryStream_0.smethod_4(U.smethod_0(num, 13) | num << 19);
+			gclass.imethod_2(binaryStream_0);
 		}
+		if (this.gclass693_0 != null)
+		{
+			this.gclass693_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		binaryStream_0.smethod_7(this.int_0);
 	}
 
+	public Vector<GClass377> vector_0;
+
+	public GClass693 gclass693_0;
+
 	public int int_0;
-
-	public int yspMzcloEM;
-
-	public Vector<int> vector_0;
 }

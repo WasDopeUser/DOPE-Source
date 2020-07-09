@@ -6,13 +6,13 @@ public sealed class GAttribute19 : Attribute
 {
 	public GAttribute19()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 
 	public GAttribute19([GAttribute1] [GAttribute19] string basePath)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.String_0 = basePath;
 	}

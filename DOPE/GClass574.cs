@@ -8,7 +8,7 @@ public class GClass574 : GInterface0
 	{
 		get
 		{
-			return 1283;
+			return 25500;
 		}
 	}
 
@@ -16,102 +16,44 @@ public class GClass574 : GInterface0
 	{
 		get
 		{
-			return 1;
+			return 6;
 		}
 	}
 
-	public GClass574(bool bool_1 = false, GClass367 gclass367_2 = null, GClass367 gclass367_3 = null, GClass526 gclass526_1 = null)
+	public GClass574(int int_1 = 0, string string_1 = "")
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
+		this.string_0 = "";
 		base..ctor();
-		if (gclass367_3 == null)
-		{
-			this.gclass367_0 = new GClass367("", 0, 0, 0, 0, 0, 0, 0.0);
-		}
-		else
-		{
-			this.gclass367_0 = gclass367_3;
-		}
-		this.bool_0 = bool_1;
-		if (gclass526_1 == null)
-		{
-			this.gclass526_0 = new GClass526("");
-		}
-		else
-		{
-			this.gclass526_0 = gclass526_1;
-		}
-		if (gclass367_2 == null)
-		{
-			this.gclass367_1 = new GClass367("", 0, 0, 0, 0, 0, 0, 0.0);
-			return;
-		}
-		this.gclass367_1 = gclass367_2;
+		this.string_0 = string_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 1283;
+		return 25500;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 1;
+		return 6;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass367_0 = (GClass367)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass367_0 != null)
-		{
-			this.gclass367_0.imethod_1(binaryStream_0);
-		}
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass526_0 = (GClass526)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass526_0 != null)
-		{
-			this.gclass526_0.imethod_1(binaryStream_0);
-		}
-		this.gclass367_1 = (GClass367)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass367_1 != null)
-		{
-			this.gclass367_1.imethod_1(binaryStream_0);
-		}
+		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 10) | this.int_0 << 22);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1283);
-		if (this.gclass367_0 != null)
-		{
-			this.gclass367_0.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.WriteBoolean(this.bool_0);
-		if (this.gclass526_0 != null)
-		{
-			this.gclass526_0.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		if (this.gclass367_1 != null)
-		{
-			this.gclass367_1.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(25500);
+		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_4(this.int_0 << 10 | U.smethod_0(this.int_0, 22));
 	}
 
-	public GClass367 gclass367_0;
+	public string string_0;
 
-	public bool bool_0;
-
-	public GClass526 gclass526_0;
-
-	public GClass367 gclass367_1;
+	public int int_0;
 }

@@ -8,7 +8,7 @@ public class GClass649 : GInterface0
 	{
 		get
 		{
-			return -4571;
+			return 2024;
 		}
 	}
 
@@ -16,44 +16,38 @@ public class GClass649 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 4;
 		}
 	}
 
-	public GClass649(int int_1 = 0, string string_1 = "")
+	public GClass649(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.int_0 = int_1;
-		this.string_0 = string_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -4571;
+		return 2024;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 2) | this.int_0 << 30);
-		this.string_0 = binaryStream_0.smethod_2();
+		this.int_0 = (this.int_0 << 2 | U.smethod_0(this.int_0, 30));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-4571);
-		binaryStream_0.smethod_4(this.int_0 << 2 | U.smethod_0(this.int_0, 30));
-		binaryStream_0.smethod_3(this.string_0);
+		binaryStream_0.smethod_7(2024);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 2) | this.int_0 << 30);
 	}
 
 	public int int_0;
-
-	public string string_0;
 }

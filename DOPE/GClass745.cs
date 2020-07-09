@@ -8,7 +8,7 @@ public class GClass745 : GInterface0
 	{
 		get
 		{
-			return 4715;
+			return 60;
 		}
 	}
 
@@ -16,51 +16,37 @@ public class GClass745 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 1;
 		}
 	}
 
-	public GClass745(GClass847 gclass847_1 = null)
+	public GClass745(bool bool_1 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass847_1 == null)
-		{
-			this.gclass847_0 = new GClass847(0);
-			return;
-		}
-		this.gclass847_0 = gclass847_1;
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 4715;
+		return 60;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass847_0 = (GClass847)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass847_0 != null)
-		{
-			this.gclass847_0.imethod_1(binaryStream_0);
-		}
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(4715);
-		if (this.gclass847_0 != null)
-		{
-			this.gclass847_0.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(60);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
 
-	public GClass847 gclass847_0;
+	public bool bool_0;
 }

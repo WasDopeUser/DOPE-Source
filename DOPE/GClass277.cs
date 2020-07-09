@@ -8,7 +8,7 @@ public class GClass277 : GInterface0
 	{
 		get
 		{
-			return 801;
+			return 23376;
 		}
 	}
 
@@ -16,65 +16,72 @@ public class GClass277 : GInterface0
 	{
 		get
 		{
-			return 5;
+			return 19;
 		}
 	}
 
-	public GClass277(Vector<GClass236> vector_1 = null, bool bool_1 = false)
+	public GClass277(string string_0 = "", GClass814 gclass814_1 = null, double double_2 = 0.0, double double_3 = 0.0, bool bool_1 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
+		this.Id = "";
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass236>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
+		this.double_0 = double_2;
+		this.double_1 = double_3;
 		this.bool_0 = bool_1;
+		this.Id = string_0;
+		if (gclass814_1 == null)
+		{
+			this.gclass814_0 = new GClass814(0);
+			return;
+		}
+		this.gclass814_0 = gclass814_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 801;
+		return 23376;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 5;
+		return 19;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int i = 0;
-		int num = binaryStream_0.ReadByte();
-		while (i < num)
-		{
-			GClass236 gclass = (GClass236)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			i++;
-		}
+		this.double_0 = binaryStream_0.ReadDouble();
+		this.double_1 = binaryStream_0.ReadDouble();
 		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.Id = binaryStream_0.smethod_2();
+		this.gclass814_0 = (GClass814)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass814_0 != null)
+		{
+			this.gclass814_0.imethod_1(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(801);
-		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass236 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
+		binaryStream_0.smethod_7(23376);
+		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.WriteDouble(this.double_1);
 		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_3(this.Id);
+		if (this.gclass814_0 != null)
+		{
+			this.gclass814_0.imethod_2(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public Vector<GClass236> vector_0;
+	public double double_0;
+
+	public double double_1;
 
 	public bool bool_0;
+
+	public string Id;
+
+	public GClass814 gclass814_0;
 }

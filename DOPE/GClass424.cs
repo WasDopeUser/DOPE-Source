@@ -8,7 +8,7 @@ public class GClass424 : GInterface0
 	{
 		get
 		{
-			return -30808;
+			return 2271;
 		}
 	}
 
@@ -16,66 +16,38 @@ public class GClass424 : GInterface0
 	{
 		get
 		{
-			return 3;
+			return 4;
 		}
 	}
 
-	public GClass424(string string_1 = "", bool bool_0 = false, GClass363 gclass363_0 = null)
+	public GClass424(int int_0 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass363_0 == null)
-		{
-			this.ToolTip = new GClass363(null);
-		}
-		else
-		{
-			this.ToolTip = gclass363_0;
-		}
-		this.string_0 = string_1;
-		this.Visible = bool_0;
+		this.Id = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -30808;
+		return 2271;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 3;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.ToolTip = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.ToolTip != null)
-		{
-			this.ToolTip.imethod_1(binaryStream_0);
-		}
-		this.string_0 = binaryStream_0.smethod_2();
-		this.Visible = binaryStream_0.ReadBoolean();
+		this.Id = binaryStream_0.smethod_0();
+		this.Id = (U.smethod_0(this.Id, 11) | this.Id << 21);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-30808);
-		if (this.ToolTip != null)
-		{
-			this.ToolTip.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteBoolean(this.Visible);
+		binaryStream_0.smethod_7(2271);
+		binaryStream_0.smethod_4(this.Id << 11 | U.smethod_0(this.Id, 21));
 	}
 
-	public GClass363 ToolTip;
-
-	public string string_0;
-
-	public bool Visible;
+	public int Id;
 }

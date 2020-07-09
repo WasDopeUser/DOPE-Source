@@ -8,7 +8,7 @@ public class GClass230 : GInterface0
 	{
 		get
 		{
-			return -9740;
+			return 1011;
 		}
 	}
 
@@ -20,21 +20,15 @@ public class GClass230 : GInterface0
 		}
 	}
 
-	public GClass230(GClass501 gclass501_1 = null)
+	public GClass230()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass501_1 == null)
-		{
-			this.gclass501_0 = new GClass501();
-			return;
-		}
-		this.gclass501_0 = gclass501_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -9740;
+		return 1011;
 	}
 
 	public virtual int vmethod_1()
@@ -44,23 +38,10 @@ public class GClass230 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass501_0 = (GClass501)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass501_0 != null)
-		{
-			this.gclass501_0.imethod_1(binaryStream_0);
-		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-9740);
-		if (this.gclass501_0 != null)
-		{
-			this.gclass501_0.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(1011);
 	}
-
-	public GClass501 gclass501_0;
 }

@@ -52,7 +52,7 @@ namespace DarkorbitAPI.Structures
 
 		public Asset(int int_0, int int_1)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor(int_0, int_1);
 		}
 
@@ -63,8 +63,8 @@ namespace DarkorbitAPI.Structures
 			this.Id = gclass126_0.int_2;
 			this.Name = gclass126_0.string_1;
 			this.ClanTag = gclass126_0.string_0;
-			this.FactionId = gclass126_0.int_6;
-			this.ClanDiplomacy = gclass126_0.gclass139_0.foPdUtqmpJ;
+			this.FactionId = gclass126_0.qeCqsHxEdF;
+			this.ClanDiplomacy = gclass126_0.gclass139_0.int_0;
 			this.AssetType = (AssetType)gclass126_0.gclass130_0.int_0;
 		}
 

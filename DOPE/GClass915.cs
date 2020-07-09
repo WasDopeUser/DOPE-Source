@@ -1,75 +1,153 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Numerics;
 using System.Runtime.CompilerServices;
-using NLog;
+using DarkorbitAPI.Structures;
+using DOPE.Common.Models;
 
-public abstract class GClass915 : GInterface9
+public class GClass915 : GClass914
 {
-	public GClass889 Context { get; }
+	public GClass903 Module { get; private set; }
 
-	public Logger Log { get; set; }
-
-	[CompilerGenerated]
-	public DateTimeOffset method_0()
+	public GClass915(GClass890 gclass890_1, GClass903 gclass903_1)
 	{
-		return this.dateTimeOffset_0;
+		Class13.lOBHd9Nzn7x2T();
+		base..ctor(gclass890_1);
+		this.Module = gclass903_1;
 	}
 
-	[CompilerGenerated]
-	public void method_1(DateTimeOffset dateTimeOffset_1)
+	public override bool vmethod_26()
 	{
-		this.dateTimeOffset_0 = dateTimeOffset_1;
+		return !base.Map.Ships.Any(new Func<KeyValuePair<int, Ship>, bool>(GClass915.<>c.<>c_0.method_0));
 	}
 
-	public abstract int Cooldown { get; }
-
-	public GClass915(GClass889 gclass889_1, string string_0)
+	public override int vmethod_49()
 	{
-		Class13.xnk8ImWzpOt04();
-		base..ctor();
-		this.Context = gclass889_1;
-		this.Log = this.Context.method_70("BackgroundLogic-" + string_0);
+		return int.MaxValue;
 	}
 
-	void GInterface9.Execute()
+	protected override bool vmethod_50(Ship ship_0, Ship ship_1)
 	{
-		this.bool_0 = true;
-		try
+		int num = this.vmethod_8(ship_0 as NpcShip);
+		int num2 = this.vmethod_8(ship_1 as NpcShip);
+		return num < num2 || base.vmethod_50(ship_0, ship_1);
+	}
+
+	public override bool vmethod_48(NpcShip npcShip_0)
+	{
+		return false;
+	}
+
+	protected override IEnumerable<Vector2> vmethod_22()
+	{
+		GClass915.<GetRoamTargets>d__11 <GetRoamTargets>d__ = new GClass915.<GetRoamTargets>d__11(-2);
+		<GetRoamTargets>d__.<>4__this = this;
+		return <GetRoamTargets>d__;
+	}
+
+	public override int vmethod_40(NpcShip npcShip_0)
+	{
+		NpcUtils.NpcClass npcClass;
+		if (npcShip_0 == null)
 		{
-			this.Execute();
+			npcClass = null;
 		}
-		catch (Exception ex)
+		else
 		{
-			this.Log.Error("Error executing background task {exception}", ex.ToString());
+			NpcUtils.NpcType type = npcShip_0.Type;
+			npcClass = ((type != null) ? type.Class : null);
 		}
-		finally
+		if (npcClass == NpcUtils.N_GygerimOverlord)
 		{
-			this.bool_0 = false;
-			this.method_1(DateTimeOffset.Now);
+			int val = base.vmethod_40(npcShip_0);
+			int num = Math.Max(550, val);
+			int num2 = Math.Max(200, num - 150);
+			int num3 = num - num2;
+			float num4;
+			if (base.Hero.ShieldMax > 1000)
+			{
+				num4 = (base.Hero.HpPercentage + base.Hero.ShieldPercentage) / 200f;
+			}
+			else
+			{
+				num4 = base.Hero.HpPercentage / 100f;
+			}
+			float num5 = 1f - num4;
+			return (int)((float)num - (float)num3 * num5);
 		}
+		return base.vmethod_40(npcShip_0);
 	}
 
-	public abstract void Execute();
+	public GClass915.GEnum11 State { get; protected set; }
 
-	public abstract bool vmethod_0();
-
-	bool GInterface9.q323Tl3UCqS()
+	public GClass915.GEnum11 method_42()
 	{
-		return !this.bool_0 && this.method_0().Cooldown(this.Cooldown) && this.vmethod_0();
+		if (!base.Map.Gates.Any<KeyValuePair<int, Gate>>())
+		{
+			return (GClass915.GEnum11)2;
+		}
+		int num = base.C.Hero.Group.method_11().Count<GroupManager.GroupMember>() + 1;
+		MapProfile mapProfile = base.C.MapProfile;
+		if (((mapProfile != null) ? mapProfile.QZ_GroupSize : 2) > num)
+		{
+			return (GClass915.GEnum11)0;
+		}
+		return (GClass915.GEnum11)1;
 	}
 
-	public virtual void imethod_1()
+	public override bool vmethod_51(NpcShip npcShip_0)
 	{
-		this.method_1(DateTimeOffset.MinValue);
+		return this.vmethod_11(npcShip_0);
+	}
+
+	protected override bool vmethod_53()
+	{
+		return false;
+	}
+
+	protected override float vmethod_34(Vector2 vector2_1)
+	{
+		float num = Math.Max(10000f - vector2_1.X, 0f) / 3f;
+		return base.vmethod_34(vector2_1) - num;
+	}
+
+	public override void Update()
+	{
+		base.Update();
+		this.State = this.method_42();
+	}
+
+	public override IEnumerable<string> vmethod_47()
+	{
+		GClass915.<GetStatusText>d__22 <GetStatusText>d__ = new GClass915.<GetStatusText>d__22(-2);
+		<GetStatusText>d__.<>4__this = this;
+		return <GetStatusText>d__;
+	}
+
+	[DebuggerHidden]
+	[CompilerGenerated]
+	private IEnumerable<Vector2> method_43()
+	{
+		return base.vmethod_22();
 	}
 
 	[CompilerGenerated]
-	private readonly GClass889 gclass889_0;
+	[DebuggerHidden]
+	private IEnumerable<string> method_44()
+	{
+		return base.vmethod_47();
+	}
 
 	[CompilerGenerated]
-	private Logger logger_0;
+	private GClass903 gclass903_0;
 
 	[CompilerGenerated]
-	private DateTimeOffset dateTimeOffset_0;
+	private GClass915.GEnum11 genum11_0;
 
-	private volatile bool bool_0;
+	public enum GEnum11
+	{
+
+	}
 }

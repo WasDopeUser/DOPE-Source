@@ -8,7 +8,7 @@ public class GClass819 : GInterface0
 	{
 		get
 		{
-			return 28177;
+			return -31874;
 		}
 	}
 
@@ -16,89 +16,38 @@ public class GClass819 : GInterface0
 	{
 		get
 		{
-			return 6;
+			return 4;
 		}
 	}
 
-	public GClass819(Vector<GClass819> vector_1 = null, string string_0 = "", GClass617 gclass617_0 = null)
+	public GClass819(int int_0 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.Name = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (vector_1 == null)
-		{
-			this.vector_0 = new Vector<GClass819>();
-		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		if (gclass617_0 == null)
-		{
-			this.Value = new GClass617("");
-		}
-		else
-		{
-			this.Value = gclass617_0;
-		}
-		this.Name = string_0;
+		this.MapId = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 28177;
+		return -31874;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 6;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
-		{
-			this.vector_0.method_1();
-		}
-		int i = 0;
-		int num = (int)binaryStream_0.smethod_1();
-		while (i < num)
-		{
-			GClass819 gclass = (GClass819)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			i++;
-		}
-		this.Value = (GClass617)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.Value != null)
-		{
-			this.Value.imethod_1(binaryStream_0);
-		}
-		this.Name = binaryStream_0.smethod_2();
+		this.MapId = binaryStream_0.smethod_0();
+		this.MapId = (U.smethod_0(this.MapId, 4) | this.MapId << 28);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(28177);
-		binaryStream_0.smethod_7(this.vector_0.Length);
-		foreach (GClass819 gclass in this.vector_0)
-		{
-			gclass.imethod_2(binaryStream_0);
-		}
-		if (this.Value != null)
-		{
-			this.Value.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.smethod_3(this.Name);
+		binaryStream_0.smethod_7(-31874);
+		binaryStream_0.smethod_4(this.MapId << 4 | U.smethod_0(this.MapId, 28));
 	}
 
-	public Vector<GClass819> vector_0;
-
-	public GClass617 Value;
-
-	public string Name;
+	public int MapId;
 }

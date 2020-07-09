@@ -8,7 +8,7 @@ using NLog;
 
 public class GClass102 : GInterface4
 {
-	public void Run(GClass218 e)
+	public void Run(GClass219 e)
 	{
 		ConnectionManager value = ConnectionManager.Instance.Value;
 		bool isControlDisabled = value.Game.Hero.Pet.IsControlDisabled;
@@ -18,7 +18,7 @@ public class GClass102 : GInterface4
 			GClass102.<>c__DisplayClass0_0 CS$<>8__locals1 = new GClass102.<>c__DisplayClass0_0();
 			if (isControlDisabled)
 			{
-				value.Game.Hero.Pet.method_22();
+				value.Game.Hero.Pet.method_23();
 			}
 			HeroPet.PetModeData petModeData;
 			if (!value.Game.Hero.Pet.Modes.TryGetValue(PetMode.Kamikaze, out petModeData))
@@ -31,7 +31,7 @@ public class GClass102 : GInterface4
 			string text = string.Format("Kamikaze hit {0} enemies", num);
 			if (value.ProxySocket != null)
 			{
-				value.ProxySocket.SendMessage(new GClass268(GClass90.Log(text)));
+				value.ProxySocket.SendMessage(new GClass269(GClass90.Log(text)));
 			}
 			LogManager.GetLogger("Base-Game-Pet").Info(text);
 		}
@@ -39,7 +39,7 @@ public class GClass102 : GInterface4
 
 	public GClass102()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 }

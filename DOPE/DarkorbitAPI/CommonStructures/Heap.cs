@@ -25,23 +25,23 @@ namespace DarkorbitAPI.CommonStructures
 
 		private protected Comparer<T> Comparer { protected get; private set; }
 
-		protected abstract bool Dominates(T Np8C4e5bwD8YqFJ8ir3, T h8yv0y56ESegr8jMsmB);
+		protected abstract bool Dominates(T NDBVkCQZknrqIcrUaHv, T ihqRiWQ7uoFWeagmTJl);
 
 		protected Heap()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this..ctor(Comparer<T>.Default);
 		}
 
 		protected Heap(Comparer<T> comparer_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this..ctor(Enumerable.Empty<T>(), comparer_0);
 		}
 
 		protected Heap(IEnumerable<T> ienumerable_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this..ctor(ienumerable_0, Comparer<T>.Default);
 		}
 
@@ -49,7 +49,7 @@ namespace DarkorbitAPI.CommonStructures
 
 		protected Heap(IEnumerable<T> ienumerable_0, Comparer<T> comparer_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this._heap = new T[0];
 			base..ctor();
 			if (ienumerable_0 == null)
@@ -78,7 +78,7 @@ namespace DarkorbitAPI.CommonStructures
 			}
 		}
 
-		public void method_0(T aLxqon5UM6GC61oveUQ)
+		public void method_0(T hyCjLCQVo3xuobpgxqW)
 		{
 			int num = this.Insertions;
 			this.Insertions = num + 1;
@@ -89,7 +89,7 @@ namespace DarkorbitAPI.CommonStructures
 			T[] heap = this._heap;
 			num = this._tail;
 			this._tail = num + 1;
-			heap[num] = aLxqon5UM6GC61oveUQ;
+			heap[num] = hyCjLCQVo3xuobpgxqW;
 			this.method_1(this._tail - 1);
 		}
 

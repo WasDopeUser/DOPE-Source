@@ -8,7 +8,7 @@ public class GClass175 : GInterface0
 	{
 		get
 		{
-			return 15783;
+			return -14016;
 		}
 	}
 
@@ -16,74 +16,58 @@ public class GClass175 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass175(GClass789 gclass789_1 = null, GClass614 gclass614_1 = null)
+	public GClass175(Vector<GClass176> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass614_1 == null)
+		if (vector_1 == null)
 		{
-			this.gclass614_0 = new GClass614(0, null);
-		}
-		else
-		{
-			this.gclass614_0 = gclass614_1;
-		}
-		if (gclass789_1 == null)
-		{
-			this.gclass789_0 = new GClass789(0, null);
+			this.vector_0 = new Vector<GClass176>();
 			return;
 		}
-		this.gclass789_0 = gclass789_1;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 15783;
+		return -14016;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass614_0 = (GClass614)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass614_0 != null)
+		while (this.vector_0.Length > 0)
 		{
-			this.gclass614_0.imethod_1(binaryStream_0);
+			this.vector_0.method_1();
 		}
-		this.gclass789_0 = (GClass789)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass789_0 != null)
+		int i = 0;
+		int num = (int)binaryStream_0.smethod_1();
+		while (i < num)
 		{
-			this.gclass789_0.imethod_1(binaryStream_0);
+			GClass176 gclass = (GClass176)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
 		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15783);
-		if (this.gclass614_0 != null)
+		binaryStream_0.smethod_7(-14016);
+		binaryStream_0.smethod_7(this.vector_0.Length);
+		foreach (GClass176 gclass in this.vector_0)
 		{
-			this.gclass614_0.imethod_2(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		if (this.gclass789_0 != null)
-		{
-			this.gclass789_0.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
 	}
 
-	public GClass614 gclass614_0;
-
-	public GClass789 gclass789_0;
+	public Vector<GClass176> vector_0;
 }

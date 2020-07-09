@@ -20,18 +20,18 @@ public class GClass129 : GInterface0
 		}
 	}
 
-	public GClass129(int int_7 = 0, GClass130 gclass130_0 = null, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, bool bool_1 = false, int int_12 = 0, int int_13 = 0)
+	public GClass129(int int_7 = 0, GClass130 gclass130_1 = null, int int_8 = 0, int int_9 = 0, int int_10 = 0, int int_11 = 0, bool bool_1 = false, int int_12 = 0, int int_13 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.int_0 = int_7;
-		if (gclass130_0 == null)
+		if (gclass130_1 == null)
 		{
-			this.xohdAaxmPd = new GClass130(0);
+			this.gclass130_0 = new GClass130(0);
 		}
 		else
 		{
-			this.xohdAaxmPd = gclass130_0;
+			this.gclass130_0 = gclass130_1;
 		}
 		this.int_1 = int_8;
 		this.int_2 = int_9;
@@ -56,10 +56,10 @@ public class GClass129 : GInterface0
 	{
 		this.int_0 = binaryStream_0.smethod_0();
 		this.int_0 = (this.int_0 << 4 | U.smethod_0(this.int_0, 28));
-		this.xohdAaxmPd = (GClass130)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.xohdAaxmPd != null)
+		this.gclass130_0 = (GClass130)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass130_0 != null)
 		{
-			this.xohdAaxmPd.imethod_1(binaryStream_0);
+			this.gclass130_0.imethod_1(binaryStream_0);
 		}
 		this.int_1 = binaryStream_0.smethod_0();
 		this.int_1 = (this.int_1 << 9 | U.smethod_0(this.int_1, 23));
@@ -80,9 +80,9 @@ public class GClass129 : GInterface0
 	{
 		binaryStream_0.smethod_7(80);
 		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 4) | this.int_0 << 28);
-		if (this.xohdAaxmPd != null)
+		if (this.gclass130_0 != null)
 		{
-			this.xohdAaxmPd.imethod_2(binaryStream_0);
+			this.gclass130_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
@@ -99,7 +99,7 @@ public class GClass129 : GInterface0
 
 	public int int_0;
 
-	public GClass130 xohdAaxmPd;
+	public GClass130 gclass130_0;
 
 	public int int_1;
 

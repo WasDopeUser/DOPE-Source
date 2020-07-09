@@ -2,44 +2,44 @@
 
 public enum GEnum4
 {
-	[GAttribute69("drone_formation_default")]
+	[GAttribute70("drone_formation_default")]
 	Default,
-	[GAttribute69("drone_formation_f-01-tu")]
+	[GAttribute70("drone_formation_f-01-tu")]
 	Turtle,
-	[GAttribute69("drone_formation_f-02-ar")]
+	[GAttribute70("drone_formation_f-02-ar")]
 	Arrow,
-	[GAttribute69("drone_formation_f-04-st")]
+	[GAttribute70("drone_formation_f-04-st")]
 	Star,
-	[GAttribute69("drone_formation_f-06-da")]
+	[GAttribute70("drone_formation_f-06-da")]
 	DoubleArrow,
-	[GAttribute69("drone_formation_f-05-pi")]
+	[GAttribute70("drone_formation_f-05-pi")]
 	Pincer,
-	[GAttribute69("drone_formation_f-07-di")]
+	[GAttribute70("drone_formation_f-07-di")]
 	Diamond,
-	[GAttribute69("drone_formation_f-08-ch")]
+	[GAttribute70("drone_formation_f-08-ch")]
 	Chevron,
-	[GAttribute69("drone_formation_f-09-mo")]
+	[GAttribute70("drone_formation_f-09-mo")]
 	Moth,
-	[GAttribute69("drone_formation_f-11-he")]
+	[GAttribute70("drone_formation_f-11-he")]
 	Heart,
-	[GAttribute69("drone_formation_f-10-cr")]
+	[GAttribute70("drone_formation_f-10-cr")]
 	Crab,
-	[GAttribute69("drone_formation_f-12-ba")]
+	[GAttribute70("drone_formation_f-12-ba")]
 	Barrage,
-	[GAttribute69("drone_formation_f-3d-dm")]
+	[GAttribute70("drone_formation_f-3d-dm")]
 	Dome,
-	[GAttribute69("drone_formation_f-3d-dr")]
+	[GAttribute70("drone_formation_f-3d-dr")]
 	Drill,
-	[GAttribute69("drone_formation_f-3d-rg")]
+	[GAttribute70("drone_formation_f-3d-rg")]
 	Ring,
-	[GAttribute69("drone_formation_f-3d-vt")]
+	[GAttribute70("drone_formation_f-3d-vt")]
 	Veteran,
-	[GAttribute69("drone_formation_f-3d-wl")]
+	[GAttribute70("drone_formation_f-3d-wl")]
 	Wheel,
-	[GAttribute69("drone_formation_f-3d-wv")]
+	[GAttribute70("drone_formation_f-3d-wv")]
 	Wave,
-	[GAttribute69("drone_formation_f-3d-x")]
+	[GAttribute70("drone_formation_f-3d-x")]
 	X,
-	[GAttribute69("drone_formation_f-13-bt")]
+	[GAttribute70("drone_formation_f-13-bt")]
 	Bat
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using DarkorbitAPI.CommonStructures;
 
-public class GClass864 : GClass858
+public class GClass864 : GClass859
 {
 	[CompilerGenerated]
 	public GClass871 method_0()
@@ -59,13 +59,13 @@ public class GClass864 : GClass858
 		{
 			vector2.Add((uint)item2);
 		}
-		this.method_1(new GClass871(new Vector<uint>(vector2), new Vector<uint>(vector)));
-		this.method_3(new GClass871(vector2, vector));
+		this.method_1(new GClass871(new Vector<uint>(vector), new Vector<uint>(vector2)));
+		this.method_3(new GClass871(vector, vector2));
 	}
 
 	public GClass864()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 

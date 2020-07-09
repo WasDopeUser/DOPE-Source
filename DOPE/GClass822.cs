@@ -8,7 +8,7 @@ public class GClass822 : GInterface0
 	{
 		get
 		{
-			return 202;
+			return 15;
 		}
 	}
 
@@ -20,16 +20,15 @@ public class GClass822 : GInterface0
 		}
 	}
 
-	public GClass822(int int_1 = 0)
+	public GClass822()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 202;
+		return 15;
 	}
 
 	public virtual int vmethod_1()
@@ -39,14 +38,10 @@ public class GClass822 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(202);
-		binaryStream_0.smethod_7(this.int_0);
+		binaryStream_0.smethod_7(15);
 	}
-
-	public int int_0;
 }

@@ -8,7 +8,7 @@ public class GClass170 : GInterface0
 	{
 		get
 		{
-			return 131;
+			return 25;
 		}
 	}
 
@@ -20,21 +20,15 @@ public class GClass170 : GInterface0
 		}
 	}
 
-	public GClass170(GClass135 gclass135_1 = null)
+	public GClass170()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass135_1 == null)
-		{
-			this.gclass135_0 = new GClass135(null, 0.0);
-			return;
-		}
-		this.gclass135_0 = gclass135_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 131;
+		return 25;
 	}
 
 	public virtual int vmethod_1()
@@ -44,23 +38,10 @@ public class GClass170 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass135_0 = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass135_0 != null)
-		{
-			this.gclass135_0.imethod_1(binaryStream_0);
-		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(131);
-		if (this.gclass135_0 != null)
-		{
-			this.gclass135_0.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(25);
 	}
-
-	public GClass135 gclass135_0;
 }

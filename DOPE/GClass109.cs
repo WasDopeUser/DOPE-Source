@@ -4,7 +4,7 @@ using DarkorbitAPI.Structures;
 
 public class GClass109 : GInterface4
 {
-	public void Run(GClass228 e)
+	public void Run(GClass229 e)
 	{
 		Hero hero = ConnectionManager.Instance.Value.Game.Hero;
 		hero.Shield = e.int_0;
@@ -14,7 +14,7 @@ public class GClass109 : GInterface4
 
 	public GClass109()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 	}
 }

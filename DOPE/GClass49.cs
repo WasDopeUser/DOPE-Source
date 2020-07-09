@@ -33,7 +33,7 @@ public static class GClass49
 
 		public GClass50()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -71,7 +71,7 @@ public static class GClass49
 		public string HP { get; set; }
 
 		[JsonProperty("L")]
-		public int nsaiKxjcfh { get; set; }
+		public int Int32_1 { get; set; }
 
 		[JsonProperty("SM")]
 		public string String_0 { get; set; }
@@ -80,14 +80,14 @@ public static class GClass49
 		public IList<string> IList_0 { get; set; }
 
 		[JsonProperty("SCE")]
-		public int Int32_1 { get; set; }
+		public int Int32_2 { get; set; }
 
 		[JsonProperty("SCU")]
-		public int Int32_2 { get; set; }
+		public int Int32_3 { get; set; }
 
 		public GClass51()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -146,14 +146,14 @@ public static class GClass49
 		public int? Nullable_1 { get; set; }
 
 		[JsonProperty("repair")]
-		public int ebgiIhKxb8 { get; set; }
+		public int Int32_3 { get; set; }
 
 		[JsonProperty("currency")]
 		public string String_4 { get; set; }
 
 		public GClass52()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -204,7 +204,7 @@ public static class GClass49
 
 		public GClass53()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -228,12 +228,12 @@ public static class GClass49
 
 		public GClass54()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private int int_0;
+		private int usqUyeqTx6;
 
 		[CompilerGenerated]
 		private bool bool_0;
@@ -261,7 +261,7 @@ public static class GClass49
 
 		public GClass55()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -347,7 +347,7 @@ public static class GClass49
 
 		public GClass56()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -410,7 +410,7 @@ public static class GClass49
 
 		public GClass57()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -431,7 +431,7 @@ public static class GClass49
 
 		public GClass58()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -439,7 +439,7 @@ public static class GClass49
 		private IList<int> ilist_0;
 
 		[CompilerGenerated]
-		private long MhoCchLkxl;
+		private long long_0;
 	}
 
 	public class GClass59
@@ -452,7 +452,7 @@ public static class GClass49
 
 		public GClass59()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -473,12 +473,12 @@ public static class GClass49
 
 		public GClass60()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private IList<int> tHlCiOlCts;
+		private IList<int> ilist_0;
 
 		[CompilerGenerated]
 		private long long_0;
@@ -494,7 +494,7 @@ public static class GClass49
 
 		public GClass61()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -515,7 +515,7 @@ public static class GClass49
 
 		public GClass62()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -536,7 +536,7 @@ public static class GClass49
 
 		public GClass63()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -572,7 +572,7 @@ public static class GClass49
 
 		public GClass64()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -614,7 +614,7 @@ public static class GClass49
 
 		public GClass65()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -638,7 +638,7 @@ public static class GClass49
 
 		public GClass66()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -659,7 +659,7 @@ public static class GClass49
 
 		public GClass67()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -683,7 +683,7 @@ public static class GClass49
 
 		public GClass68()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -725,7 +725,7 @@ public static class GClass49
 
 		public GClass69()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -770,7 +770,7 @@ public static class GClass49
 
 		public GClass70()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -812,7 +812,7 @@ public static class GClass49
 
 		public GClass71()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -829,7 +829,7 @@ public static class GClass49
 		private GClass49.GClass70 gclass70_0;
 
 		[CompilerGenerated]
-		private object PitvbZmtgK;
+		private object object_0;
 
 		[CompilerGenerated]
 		private int int_2;
@@ -848,7 +848,7 @@ public static class GClass49
 
 		public GClass72()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -871,14 +871,14 @@ public static class GClass49
 		public IList<GClass49.GClass69> IList_0 { get; set; }
 
 		[JsonProperty("shipInfo")]
-		public IList<GClass49.GClass71> LypXinCmXY { get; set; }
+		public IList<GClass49.GClass71> IList_1 { get; set; }
 
 		[JsonProperty("userInfo")]
 		public GClass49.GClass72 GClass72_0 { get; set; }
 
 		public GClass73()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -911,7 +911,7 @@ public static class GClass49
 
 		public GClass74()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -932,7 +932,7 @@ public static class GClass49
 
 		public Map()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -956,12 +956,12 @@ public static class GClass49
 
 		public GClass75()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
 		[CompilerGenerated]
-		private GClass49.GClass73 gclass73_0;
+		private GClass49.GClass73 CxpfabwJp2;
 
 		[CompilerGenerated]
 		private GClass49.GClass74 gclass74_0;
@@ -998,12 +998,12 @@ public static class GClass49
 			}
 		}
 
-		public List<GClass49.GClass56> method_0(string njBT0USvIQx35fwrPmw)
+		public List<GClass49.GClass56> method_0(string cxaoeFFpIvhNJby9tuU)
 		{
 			List<GClass49.GClass56> list = new List<GClass49.GClass56>();
 			foreach (GClass49.GClass56 gclass in this.data.ret.items)
 			{
-				if (gclass.String_1 == njBT0USvIQx35fwrPmw)
+				if (gclass.String_1 == cxaoeFFpIvhNJby9tuU)
 				{
 					list.Add(gclass);
 				}
@@ -1011,11 +1011,11 @@ public static class GClass49
 			return list;
 		}
 
-		public GClass49.GClass56 method_1(string PSRragSl32KNb89fihw)
+		public GClass49.GClass56 method_1(string VqYvTaFI2Vh8ChmGHf4)
 		{
 			foreach (GClass49.GClass56 gclass in this.data.ret.items)
 			{
-				if (gclass.String_1 == PSRragSl32KNb89fihw)
+				if (gclass.String_1 == VqYvTaFI2Vh8ChmGHf4)
 				{
 					return gclass;
 				}
@@ -1023,9 +1023,9 @@ public static class GClass49
 			return null;
 		}
 
-		public long method_2(string Do1LUDS9E7MDkUU3HVJ)
+		public long method_2(string UgXobeF0GO6SKi0vWdy)
 		{
-			GClass49.GClass56 gclass = this.method_1(Do1LUDS9E7MDkUU3HVJ);
+			GClass49.GClass56 gclass = this.method_1(UgXobeF0GO6SKi0vWdy);
 			if (gclass == null)
 			{
 				return 0L;
@@ -1035,7 +1035,7 @@ public static class GClass49
 
 		public GClass76()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 

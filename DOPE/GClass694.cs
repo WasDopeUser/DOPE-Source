@@ -8,7 +8,7 @@ public class GClass694 : GInterface0
 	{
 		get
 		{
-			return 1520;
+			return -31499;
 		}
 	}
 
@@ -16,32 +16,37 @@ public class GClass694 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 1;
 		}
 	}
 
-	public GClass694()
+	public GClass694(bool bool_1 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
+		this.bool_0 = bool_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 1520;
+		return -31499;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.bool_0 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(1520);
+		binaryStream_0.smethod_7(-31499);
+		binaryStream_0.WriteBoolean(this.bool_0);
 	}
+
+	public bool bool_0;
 }

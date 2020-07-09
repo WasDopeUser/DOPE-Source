@@ -8,7 +8,7 @@ public class GClass157 : GInterface0
 	{
 		get
 		{
-			return 137;
+			return -18246;
 		}
 	}
 
@@ -16,32 +16,38 @@ public class GClass157 : GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass157()
+	public GClass157(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 137;
+		return -18246;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 14) | this.int_0 << 18);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(137);
+		binaryStream_0.smethod_7(-18246);
+		binaryStream_0.smethod_4(this.int_0 << 14 | U.smethod_0(this.int_0, 18));
 	}
+
+	public int int_0;
 }

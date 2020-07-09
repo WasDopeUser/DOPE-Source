@@ -8,7 +8,7 @@ public class GClass149 : GInterface0
 	{
 		get
 		{
-			return 15856;
+			return 14552;
 		}
 	}
 
@@ -16,38 +16,32 @@ public class GClass149 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 0;
 		}
 	}
 
-	public GClass149(int int_0 = 0)
+	public GClass149()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.FromId = int_0;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 15856;
+		return 14552;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.FromId = binaryStream_0.smethod_0();
-		this.FromId = (U.smethod_0(this.FromId, 1) | this.FromId << 31);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(15856);
-		binaryStream_0.smethod_4(this.FromId << 1 | U.smethod_0(this.FromId, 31));
+		binaryStream_0.smethod_7(14552);
 	}
-
-	public int FromId;
 }

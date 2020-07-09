@@ -54,7 +54,7 @@ namespace DOPE.Common.Models
 					return;
 				}
 				this.<Maps>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_57);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_59);
 			}
 		}
 

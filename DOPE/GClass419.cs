@@ -8,7 +8,7 @@ public class GClass419 : GInterface0
 	{
 		get
 		{
-			return -4;
+			return -11674;
 		}
 	}
 
@@ -16,46 +16,36 @@ public class GClass419 : GInterface0
 	{
 		get
 		{
-			return 11;
+			return 4;
 		}
 	}
 
-	public GClass419(string string_3 = "", Vector<GClass743> vector_1 = null, string string_4 = "", string string_5 = "", bool bool_0 = false)
+	public GClass419(Vector<GClass377> vector_1 = null, int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
-		this.string_1 = "";
-		this.string_2 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.string_0 = string_3;
-		this.string_1 = string_5;
-		this.string_2 = string_4;
+		this.int_0 = int_1;
 		if (vector_1 == null)
 		{
-			this.vector_0 = new Vector<GClass743>();
+			this.vector_0 = new Vector<GClass377>();
+			return;
 		}
-		else
-		{
-			this.vector_0 = vector_1;
-		}
-		this.Visible = bool_0;
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -4;
+		return -11674;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 11;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.string_1 = binaryStream_0.smethod_2();
-		this.string_2 = binaryStream_0.smethod_2();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 		while (this.vector_0.Length > 0)
 		{
 			this.vector_0.method_1();
@@ -64,35 +54,25 @@ public class GClass419 : GInterface0
 		int num = binaryStream_0.ReadByte();
 		while (i < num)
 		{
-			GClass743 gclass = (GClass743)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			GClass377 gclass = (GClass377)GClass86.smethod_2((int)binaryStream_0.smethod_1());
 			gclass.imethod_1(binaryStream_0);
 			this.vector_0.method_0(gclass);
 			i++;
 		}
-		this.Visible = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-4);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_3(this.string_1);
-		binaryStream_0.smethod_3(this.string_2);
+		binaryStream_0.smethod_7(-11674);
+		binaryStream_0.smethod_7(this.int_0);
 		binaryStream_0.WriteByte(this.vector_0.Length);
-		foreach (GClass743 gclass in this.vector_0)
+		foreach (GClass377 gclass in this.vector_0)
 		{
 			gclass.imethod_2(binaryStream_0);
 		}
-		binaryStream_0.WriteBoolean(this.Visible);
 	}
 
-	public string string_0;
+	public int int_0;
 
-	public string string_1;
-
-	public string string_2;
-
-	public Vector<GClass743> vector_0;
-
-	public bool Visible;
+	public Vector<GClass377> vector_0;
 }

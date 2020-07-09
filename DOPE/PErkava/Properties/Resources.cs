@@ -16,7 +16,7 @@ namespace PErkava.Properties
 	{
 		internal Resources()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
@@ -25,11 +25,11 @@ namespace PErkava.Properties
 		{
 			get
 			{
-				if (Resources.AfHwdagYehW == null)
+				if (Resources.resourceManager_0 == null)
 				{
-					Resources.AfHwdagYehW = new ResourceManager("PErkava.Properties.Resources", typeof(Resources).Assembly);
+					Resources.resourceManager_0 = new ResourceManager("PErkava.Properties.Resources", typeof(Resources).Assembly);
 				}
-				return Resources.AfHwdagYehW;
+				return Resources.resourceManager_0;
 			}
 		}
 
@@ -62,7 +62,7 @@ namespace PErkava.Properties
 			}
 		}
 
-		private static ResourceManager AfHwdagYehW;
+		private static ResourceManager resourceManager_0;
 
 		private static CultureInfo cultureInfo_0;
 	}

@@ -8,7 +8,7 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return -15957;
+			return 340;
 		}
 	}
 
@@ -16,56 +16,58 @@ public class GClass346 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 4;
 		}
 	}
 
-	public GClass346(int int_1 = 0, string string_1 = "", string string_2 = "", int int_2 = 0)
+	public GClass346(Vector<GClass845> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.Name = "";
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.pmdhyqXflM = int_2;
-		this.Name = string_1;
-		this.string_0 = string_2;
-		this.int_0 = int_1;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass845>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -15957;
+		return 340;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.pmdhyqXflM = binaryStream_0.smethod_0();
-		this.pmdhyqXflM = (this.pmdhyqXflM << 9 | U.smethod_0(this.pmdhyqXflM, 23));
-		this.Name = binaryStream_0.smethod_2();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 6) | this.int_0 << 26);
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass845 gclass = (GClass845)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-15957);
-		binaryStream_0.smethod_4(U.smethod_0(this.pmdhyqXflM, 9) | this.pmdhyqXflM << 23);
-		binaryStream_0.smethod_3(this.Name);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_4(this.int_0 << 6 | U.smethod_0(this.int_0, 26));
+		binaryStream_0.smethod_7(340);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass845 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
 	}
 
-	public int pmdhyqXflM;
-
-	public string Name;
-
-	public string string_0;
-
-	public int int_0;
+	public Vector<GClass845> vector_0;
 }

@@ -8,7 +8,7 @@ public class GClass846 : GInterface0
 	{
 		get
 		{
-			return -31293;
+			return -3126;
 		}
 	}
 
@@ -16,57 +16,37 @@ public class GClass846 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 8;
 		}
 	}
 
-	public GClass846(GClass391 gclass391_1 = null, int int_1 = 0)
+	public GClass846(double double_1 = 0.0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_1;
-		if (gclass391_1 == null)
-		{
-			this.gclass391_0 = new GClass391();
-			return;
-		}
-		this.gclass391_0 = gclass391_1;
+		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -31293;
+		return -3126;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 8;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 5 | U.smethod_0(this.int_0, 27));
-		this.gclass391_0 = (GClass391)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass391_0 != null)
-		{
-			this.gclass391_0.imethod_1(binaryStream_0);
-		}
+		this.double_0 = binaryStream_0.ReadDouble();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-31293);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 5) | this.int_0 << 27);
-		if (this.gclass391_0 != null)
-		{
-			this.gclass391_0.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
+		binaryStream_0.smethod_7(-3126);
+		binaryStream_0.WriteDouble(this.double_0);
 	}
 
-	public int int_0;
-
-	public GClass391 gclass391_0;
+	public double double_0;
 }

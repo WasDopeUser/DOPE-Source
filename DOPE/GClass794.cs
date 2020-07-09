@@ -8,7 +8,7 @@ public class GClass794 : GInterface0
 	{
 		get
 		{
-			return 22823;
+			return 1524;
 		}
 	}
 
@@ -16,43 +16,38 @@ public class GClass794 : GInterface0
 	{
 		get
 		{
-			return 10;
+			return 4;
 		}
 	}
 
-	public GClass794(string string_1 = "", double double_1 = 0.0)
+	public GClass794(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.string_0 = string_1;
-		this.double_0 = double_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22823;
+		return 1524;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 10;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 8 | U.smethod_0(this.int_0, 24));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22823);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(1524);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 8) | this.int_0 << 24);
 	}
 
-	public string string_0;
-
-	public double double_0;
+	public int int_0;
 }

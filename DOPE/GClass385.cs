@@ -8,7 +8,7 @@ public class GClass385 : GInterface0
 	{
 		get
 		{
-			return 9;
+			return 2521;
 		}
 	}
 
@@ -16,49 +16,76 @@ public class GClass385 : GInterface0
 	{
 		get
 		{
-			return 12;
+			return 16;
 		}
 	}
 
-	public GClass385(int int_0 = 0, int int_1 = 0, double double_1 = 0.0)
+	public GClass385(int int_3 = 0, int int_4 = 0, int int_5 = 0, Vector<GClass808> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.Credits = int_0;
-		this.Uridium = int_1;
-		this.double_0 = double_1;
+		this.int_0 = int_3;
+		this.int_1 = int_4;
+		this.int_2 = int_5;
+		if (vector_1 == null)
+		{
+			this.vector_0 = new Vector<GClass808>();
+			return;
+		}
+		this.vector_0 = vector_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 9;
+		return 2521;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 12;
+		return 16;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Credits = binaryStream_0.smethod_0();
-		this.Credits = (U.smethod_0(this.Credits, 2) | this.Credits << 30);
-		this.Uridium = binaryStream_0.smethod_0();
-		this.Uridium = (U.smethod_0(this.Uridium, 13) | this.Uridium << 19);
-		this.double_0 = (double)binaryStream_0.smethod_10();
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (this.int_0 << 7 | U.smethod_0(this.int_0, 25));
+		this.int_1 = binaryStream_0.smethod_0();
+		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		this.int_2 = binaryStream_0.smethod_0();
+		this.int_2 = (this.int_2 << 3 | U.smethod_0(this.int_2, 29));
+		while (this.vector_0.Length > 0)
+		{
+			this.vector_0.method_1();
+		}
+		int i = 0;
+		int num = binaryStream_0.ReadByte();
+		while (i < num)
+		{
+			GClass808 gclass = (GClass808)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(9);
-		binaryStream_0.smethod_4(this.Credits << 2 | U.smethod_0(this.Credits, 30));
-		binaryStream_0.smethod_4(this.Uridium << 13 | U.smethod_0(this.Uridium, 19));
-		binaryStream_0.smethod_9(this.double_0);
+		binaryStream_0.smethod_7(2521);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 7) | this.int_0 << 25);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 3) | this.int_2 << 29);
+		binaryStream_0.WriteByte(this.vector_0.Length);
+		foreach (GClass808 gclass in this.vector_0)
+		{
+			gclass.imethod_2(binaryStream_0);
+		}
 	}
 
-	public int Credits;
+	public int int_0;
 
-	public int Uridium;
+	public int int_1;
 
-	public double double_0;
+	public int int_2;
+
+	public Vector<GClass808> vector_0;
 }

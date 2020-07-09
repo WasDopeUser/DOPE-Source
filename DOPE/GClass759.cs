@@ -8,7 +8,7 @@ public class GClass759 : GInterface0
 	{
 		get
 		{
-			return 71;
+			return 114;
 		}
 	}
 
@@ -16,67 +16,49 @@ public class GClass759 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 12;
 		}
 	}
 
-	public GClass759(GClass748 gclass748_1 = null, int int_2 = 0, int int_3 = 0)
+	public GClass759(int int_2 = 0, int int_3 = 0, double double_1 = 0.0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass748_1 == null)
-		{
-			this.gclass748_0 = new GClass748();
-		}
-		else
-		{
-			this.gclass748_0 = gclass748_1;
-		}
 		this.int_0 = int_2;
 		this.int_1 = int_3;
+		this.double_0 = double_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 71;
+		return 114;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 12;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.gclass748_0 = (GClass748)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass748_0 != null)
-		{
-			this.gclass748_0.imethod_1(binaryStream_0);
-		}
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 14 | U.smethod_0(this.int_0, 18));
+		this.int_0 = (this.int_0 << 12 | U.smethod_0(this.int_0, 20));
 		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 3) | this.int_1 << 29);
+		this.int_1 = (this.int_1 << 2 | U.smethod_0(this.int_1, 30));
+		this.double_0 = (double)binaryStream_0.smethod_10();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(71);
-		if (this.gclass748_0 != null)
-		{
-			this.gclass748_0.imethod_2(binaryStream_0);
-		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 14) | this.int_0 << 18);
-		binaryStream_0.smethod_4(this.int_1 << 3 | U.smethod_0(this.int_1, 29));
+		binaryStream_0.smethod_7(114);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 12) | this.int_0 << 20);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 2) | this.int_1 << 30);
+		binaryStream_0.smethod_9(this.double_0);
 	}
-
-	public GClass748 gclass748_0;
 
 	public int int_0;
 
 	public int int_1;
+
+	public double double_0;
 }

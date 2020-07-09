@@ -48,7 +48,7 @@ public static class GClass82
 							IDictionary<int, LinkedList<GClass82.GClass83>> d = GClass82.dictionary_0;
 							int key = num2;
 							GClass82.GClass83 gclass = new GClass82.GClass83();
-							gclass.method_3(ginterface);
+							gclass.method_2(ginterface);
 							gclass.method_1(DelegateHelper.ConstructDelegateCallVoid(methodInfo, type));
 							d.Append(key, gclass);
 							num++;
@@ -76,7 +76,7 @@ public static class GClass82
 		{
 			try
 			{
-				gclass.method_4(ginterface0_0);
+				gclass.method_3(ginterface0_0);
 			}
 			catch
 			{
@@ -87,7 +87,7 @@ public static class GClass82
 	// Note: this type is marked as 'beforefieldinit'.
 	static GClass82()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 	}
 
 	[CompilerGenerated]
@@ -112,20 +112,20 @@ public static class GClass82
 		}
 
 		[CompilerGenerated]
-		public GInterface4 method_2()
+		public GInterface4 uvMyuijdsR()
 		{
 			return this.ginterface4_0;
 		}
 
 		[CompilerGenerated]
-		public void method_3(GInterface4 ginterface4_1)
+		public void method_2(GInterface4 ginterface4_1)
 		{
 			this.ginterface4_0 = ginterface4_1;
 		}
 
-		public void method_4(GInterface0 ginterface0_0)
+		public void method_3(GInterface0 ginterface0_0)
 		{
-			this.method_0()(this.method_2(), new object[]
+			this.method_0()(this.uvMyuijdsR(), new object[]
 			{
 				ginterface0_0
 			});
@@ -133,7 +133,7 @@ public static class GClass82
 
 		public GClass83()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 

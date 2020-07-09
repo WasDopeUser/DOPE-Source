@@ -2,13 +2,13 @@
 using DarkorbitAPI.CommonStructures;
 using Syroot.BinaryData;
 
-public class GClass403 : GClass401, GInterface0
+public class GClass403 : GClass402, GInterface0
 {
 	short GInterface0.Id
 	{
 		get
 		{
-			return 24733;
+			return 5850;
 		}
 	}
 
@@ -16,77 +16,61 @@ public class GClass403 : GClass401, GInterface0
 	{
 		get
 		{
-			return 0;
+			return 4;
 		}
 	}
 
-	public GClass403(GClass622 gclass622_2 = null, GClass622 gclass622_3 = null)
+	public GClass403(Vector<GClass618> vector_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (gclass622_3 == null)
+		if (vector_1 == null)
 		{
-			this.gclass622_0 = new GClass622("", 0.0);
-		}
-		else
-		{
-			this.gclass622_0 = gclass622_3;
-		}
-		if (gclass622_2 == null)
-		{
-			this.gclass622_1 = new GClass622("", 0.0);
+			this.vector_0 = new Vector<GClass618>();
 			return;
 		}
-		this.gclass622_1 = gclass622_2;
+		this.vector_0 = vector_1;
 	}
 
 	public override int vmethod_0()
 	{
-		return 24733;
+		return 5850;
 	}
 
 	public override int vmethod_1()
 	{
-		return 0;
+		return 4;
 	}
 
 	public override void imethod_1(BinaryStream binaryStream_0)
 	{
 		binaryStream_0.smethod_1();
 		base.imethod_1(binaryStream_0);
-		this.gclass622_0 = (GClass622)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass622_0 != null)
+		while (this.vector_0.Length > 0)
 		{
-			this.gclass622_0.imethod_1(binaryStream_0);
+			this.vector_0.method_1();
 		}
-		this.gclass622_1 = (GClass622)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass622_1 != null)
+		int i = 0;
+		int num = (int)binaryStream_0.smethod_1();
+		while (i < num)
 		{
-			this.gclass622_1.imethod_1(binaryStream_0);
+			GClass618 gclass = (GClass618)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+			gclass.imethod_1(binaryStream_0);
+			this.vector_0.method_0(gclass);
+			i++;
 		}
 	}
 
 	public override void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(24733);
+		binaryStream_0.smethod_7(5850);
 		base.imethod_2(binaryStream_0);
-		if (this.gclass622_0 != null)
+		binaryStream_0.smethod_7(this.vector_0.Length);
+		foreach (GClass618 gclass in this.vector_0)
 		{
-			this.gclass622_0.imethod_2(binaryStream_0);
+			gclass.imethod_2(binaryStream_0);
 		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		if (this.gclass622_1 != null)
-		{
-			this.gclass622_1.imethod_2(binaryStream_0);
-			return;
-		}
-		binaryStream_0.smethod_7(0);
 	}
 
-	public GClass622 gclass622_0;
-
-	public GClass622 gclass622_1;
+	public Vector<GClass618> vector_0;
 }

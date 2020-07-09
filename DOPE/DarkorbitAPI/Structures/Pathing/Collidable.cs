@@ -15,7 +15,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public Collidable(CollidableType collidableType_0, int int_0, string string_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 			this.Type = collidableType_0;
 			this.Shape = int_0;

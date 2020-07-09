@@ -25,8 +25,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsEnabled>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_5);
-				this.method_10(Class5.propertyChangedEventArgs_41);
+				this.method_11(Class5.propertyChangedEventArgs_5);
+				this.method_11(Class5.propertyChangedEventArgs_42);
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsRepairNeeded>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_47);
+				this.method_11(Class5.propertyChangedEventArgs_48);
 			}
 		}
 
@@ -64,7 +64,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<IsAvailable>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_38);
+				this.method_11(Class5.propertyChangedEventArgs_40);
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this._isControlDisabled = value;
-				this.method_10(Class5.propertyChangedEventArgs_40);
+				this.method_11(Class5.propertyChangedEventArgs_41);
 				if (value)
 				{
 					this.LastControlDisabled = DateTimeOffset.Now;
@@ -104,7 +104,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<LastControlDisabled>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_54);
+				this.method_11(Class5.propertyChangedEventArgs_55);
 			}
 		}
 
@@ -123,7 +123,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Fuel>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_25);
+				this.method_11(Class5.propertyChangedEventArgs_27);
 			}
 		}
 
@@ -142,7 +142,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Experience>k__BackingField = value;
-				this.method_10(Class5.Experience);
+				this.method_11(Class5.Experience);
 			}
 		}
 
@@ -161,7 +161,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Mode>k__BackingField = value;
-				this.method_10(Class5.Mode);
+				this.method_11(Class5.Mode);
 			}
 		}
 
@@ -180,7 +180,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<ModeExtra>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_73);
+				this.method_11(Class5.propertyChangedEventArgs_75);
 			}
 		}
 
@@ -199,8 +199,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Modes>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_5);
-				this.method_10(Class5.propertyChangedEventArgs_74);
+				this.method_11(Class5.propertyChangedEventArgs_5);
+				this.method_11(Class5.propertyChangedEventArgs_76);
 			}
 		}
 
@@ -219,8 +219,8 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<Cooldowns>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_5);
-				this.method_10(Class5.propertyChangedEventArgs_13);
+				this.method_11(Class5.propertyChangedEventArgs_5);
+				this.method_11(Class5.propertyChangedEventArgs_14);
 			}
 		}
 
@@ -239,7 +239,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<EnabledSince>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_16);
+				this.method_11(Class5.propertyChangedEventArgs_17);
 			}
 		}
 
@@ -258,7 +258,7 @@ namespace DarkorbitAPI.Structures
 					return;
 				}
 				this.<EnemyLocated>k__BackingField = value;
-				this.method_10(Class5.propertyChangedEventArgs_17);
+				this.method_11(Class5.propertyChangedEventArgs_18);
 			}
 		}
 
@@ -271,7 +271,7 @@ namespace DarkorbitAPI.Structures
 				bool flag = this.Cooldowns.method_0(HeroPet.CooldownType.Kamikaze);
 				if (this.IsEnabled)
 				{
-					flag &= (this.method_14(PetMode.Kamikaze) && base.HpPercentage <= 10f);
+					flag &= (this.method_15(PetMode.Kamikaze) && base.HpPercentage <= 10f);
 				}
 				return flag;
 			}
@@ -279,14 +279,14 @@ namespace DarkorbitAPI.Structures
 
 		public HeroPet()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.<Modes>k__BackingField = new Dictionary<PetMode, HeroPet.PetModeData>();
 			this.<Cooldowns>k__BackingField = new CooldownTracker<HeroPet.CooldownType>();
 			this.EnemyLocatedList = new EnemyLocatorResultCollection();
 			base..ctor();
 		}
 
-		public void method_12()
+		public void method_13()
 		{
 			if (this.IsEnabled && this.EnabledSince == null)
 			{
@@ -299,86 +299,86 @@ namespace DarkorbitAPI.Structures
 			}
 		}
 
-		public void method_13(GClass220 gclass220_0)
+		public void method_14(GClass221 gclass221_0)
 		{
-			base.ClanTag = gclass220_0.string_0;
-			base.FactionId = gclass220_0.int_4;
-			base.Id = gclass220_0.int_1;
-			base.OwnerId = gclass220_0.int_0;
-			base.Name = gclass220_0.Name;
-			base.Level = gclass220_0.int_6;
-			this.PosX = gclass220_0.int_7;
-			this.PosY = gclass220_0.int_8;
+			base.ClanTag = gclass221_0.string_0;
+			base.FactionId = gclass221_0.int_4;
+			base.Id = gclass221_0.int_1;
+			base.OwnerId = gclass221_0.int_0;
+			base.Name = gclass221_0.Name;
+			base.Level = gclass221_0.int_6;
+			this.PosX = gclass221_0.int_7;
+			this.PosY = gclass221_0.int_8;
 		}
 
-		public bool method_14(PetMode petMode_0)
+		public bool method_15(PetMode petMode_0)
 		{
 			HeroPet.PetModeData petModeData;
 			return this.Modes.TryGetValue(petMode_0, out petModeData) && petModeData.Data.Enabled;
 		}
 
-		public void method_15(GClass226 gclass226_0)
+		public void method_16(GClass227 gclass227_0)
 		{
 			this.IsAvailable = true;
-			if (this.Mode != (PetMode)gclass226_0.Mode.Mode)
+			if (this.Mode != (PetMode)gclass227_0.Mode.Mode)
 			{
 				this.ModeExtra = 0;
 			}
-			this.Mode = (PetMode)gclass226_0.Mode.Mode;
+			this.Mode = (PetMode)gclass227_0.Mode.Mode;
 		}
 
-		public void method_16(GClass217 gclass217_0)
+		public void method_17(GClass218 gclass218_0)
 		{
 			this.IsAvailable = true;
-			this.Fuel = gclass217_0.int_0;
-		}
-
-		public void method_17(GClass254 gclass254_0)
-		{
-			this.IsAvailable = true;
-			this.IsEnabled = true;
-			base.Hp = gclass254_0.int_2;
-			base.HpMax = gclass254_0.int_3;
-			base.Shield = gclass254_0.int_4;
-			base.ShieldMax = gclass254_0.int_5;
-			base.Level = gclass254_0.int_1;
-			this.Experience = gclass254_0.Experience;
-			this.Fuel = gclass254_0.int_6;
-			base.Name = gclass254_0.Name;
-			base.Id = gclass254_0.int_0;
+			this.Fuel = gclass218_0.int_0;
 		}
 
 		public void method_18(GClass255 gclass255_0)
 		{
-			PetMode mode = (PetMode)gclass255_0.gclass256_0.Mode;
+			this.IsAvailable = true;
+			this.IsEnabled = true;
+			base.Hp = gclass255_0.int_2;
+			base.HpMax = gclass255_0.int_3;
+			base.Shield = gclass255_0.int_4;
+			base.ShieldMax = gclass255_0.int_5;
+			base.Level = gclass255_0.int_1;
+			this.Experience = gclass255_0.Experience;
+			this.Fuel = gclass255_0.int_6;
+			base.Name = gclass255_0.Name;
+			base.Id = gclass255_0.int_0;
+		}
+
+		public void method_19(GClass256 gclass256_0)
+		{
+			PetMode mode = (PetMode)gclass256_0.gclass257_0.Mode;
 			HeroPet.PetModeData petModeData;
 			if (!this.Modes.TryGetValue(mode, out petModeData))
 			{
-				petModeData = (this.Modes[mode] = new HeroPet.PetModeData(gclass255_0, mode));
+				petModeData = (this.Modes[mode] = new HeroPet.PetModeData(gclass256_0, mode));
 			}
-			petModeData.Data = gclass255_0;
+			petModeData.Data = gclass256_0;
 		}
 
-		public void method_19(GClass223 gclass223_0)
+		public void method_20(GClass224 gclass224_0)
 		{
-			PetMode mode = (PetMode)gclass223_0.Mode.Mode;
+			PetMode mode = (PetMode)gclass224_0.Mode.Mode;
 			HeroPet.PetModeData petModeData;
 			if (!this.Modes.TryGetValue(mode, out petModeData))
 			{
 				return;
 			}
-			petModeData.Extra = gclass223_0.vector_0;
+			petModeData.Extra = gclass224_0.vector_0;
 		}
 
-		public bool method_20(PetMode petMode_0, int int_0)
+		public bool method_21(PetMode petMode_0, int int_0)
 		{
 			HeroPet.PetModeData petModeData;
 			return this.Modes.TryGetValue(petMode_0, out petModeData) && petModeData.Extra.Contains(int_0);
 		}
 
-		internal void method_21(GClass222 gclass222_0)
+		internal void method_22(GClass223 gclass223_0)
 		{
-			this.EnemyLocated = new HeroPet.EnemyLocatorResult((this.Mode == PetMode.EnemyLocator) ? this.ModeExtra : 0, gclass222_0);
+			this.EnemyLocated = new HeroPet.EnemyLocatorResult((this.Mode == PetMode.EnemyLocator) ? this.ModeExtra : 0, gclass223_0);
 			this.EnemyLocatedList.method_0(this.EnemyLocated);
 			Action<HeroPet, HeroPet.EnemyLocatorResult> enemyLocatorTick = this.EnemyLocatorTick;
 			if (enemyLocatorTick == null)
@@ -392,7 +392,7 @@ namespace DarkorbitAPI.Structures
 
 		public event Action<HeroPet, HeroPet.EnemyLocatorResult> EnemyLocatorTick;
 
-		internal void method_22()
+		internal void method_23()
 		{
 			Action kamikazeDeath = this.KamikazeDeath;
 			if (kamikazeDeath == null)
@@ -426,14 +426,14 @@ namespace DarkorbitAPI.Structures
 
 			public List<int> Extra { get; set; }
 
-			public GClass255 Data { get; set; }
+			public GClass256 Data { get; set; }
 
-			public PetModeData(GClass255 gclass255_0, PetMode petMode_0)
+			public PetModeData(GClass256 gclass256_0, PetMode petMode_0)
 			{
-				Class13.xnk8ImWzpOt04();
+				Class13.lOBHd9Nzn7x2T();
 				base..ctor();
 				this.Extra = new List<int>();
-				this.Data = gclass255_0;
+				this.Data = gclass256_0;
 				this.Mode = petMode_0;
 			}
 		}
@@ -456,15 +456,15 @@ namespace DarkorbitAPI.Structures
 				}
 			}
 
-			public EnemyLocatorResult(int int_0, GClass222 gclass222_0)
+			public EnemyLocatorResult(int int_0, GClass223 gclass223_0)
 			{
-				Class13.xnk8ImWzpOt04();
+				Class13.lOBHd9Nzn7x2T();
 				base..ctor();
 				this.Timestamp = DateTimeOffset.Now;
 				this.Id = int_0;
-				if (gclass222_0.int_0 != -1 || gclass222_0.int_1 != -1)
+				if (gclass223_0.int_0 != -1 || gclass223_0.int_1 != -1)
 				{
-					this.Position = new Vector2((float)gclass222_0.int_0, (float)gclass222_0.int_1);
+					this.Position = new Vector2((float)gclass223_0.int_0, (float)gclass223_0.int_1);
 					this.Found = true;
 				}
 			}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Input;
-using xcwaDuiebvuNrIkSlmL;
 
 namespace DOPE.UI.Models.Commands
 {
@@ -10,19 +9,19 @@ namespace DOPE.UI.Models.Commands
 
 		public bool CanExecute(object parameter)
 		{
-			return parameter is GClass881;
+			return parameter is GClass882;
 		}
 
 		public void Execute(object parameter)
 		{
-			GClass881 gclass = parameter as GClass881;
+			GClass882 gclass = parameter as GClass882;
 			gclass.Reset();
 			gclass.Started = new DateTime?(DateTime.Now);
 		}
 
 		public ResetStatsCommand()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.CanExecuteChanged = new EventHandler(ResetStatsCommand.<>c.<>9.method_0);
 			base..ctor();
 		}
@@ -30,7 +29,7 @@ namespace DOPE.UI.Models.Commands
 		// Note: this type is marked as 'beforefieldinit'.
 		static ResetStatsCommand()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			ResetStatsCommand.Instance = new ResetStatsCommand();
 		}
 

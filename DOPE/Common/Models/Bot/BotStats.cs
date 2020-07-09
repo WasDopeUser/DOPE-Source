@@ -133,7 +133,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX1>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_21);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_23);
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX2>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_22);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_24);
 			}
 		}
 
@@ -173,7 +173,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX3>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_23);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_25);
 			}
 		}
 
@@ -193,7 +193,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedX4>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_24);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_26);
 			}
 		}
 
@@ -213,7 +213,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedSAB>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_20);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_22);
 			}
 		}
 
@@ -233,7 +233,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<EarnedJackpot>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_19);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_21);
 			}
 		}
 
@@ -293,7 +293,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<Resets>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_74);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_77);
 			}
 		}
 
@@ -333,7 +333,7 @@ namespace DOPE.Common.Models.Bot
 					return;
 				}
 				this.<PetDeaths>k__BackingField = value;
-				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_68);
+				this.<>OnPropertyChanged(Class7.propertyChangedEventArgs_70);
 			}
 		}
 

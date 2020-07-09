@@ -27,15 +27,15 @@ namespace DOPE.Core
 	{
 		public Controller(string string_2, string string_3)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.dateTimeOffset_1 = DateTimeOffset.MinValue;
 			this.dateTimeOffset_2 = DateTimeOffset.MinValue;
 			this.object_0 = new object();
-			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.UcuwmWgrdt8);
+			this.PropertyChanged = new PropertyChangedEventHandler(Controller.<>c.<>c_0.method_0);
 			base..ctor();
 			this.entanglementHostService_0 = new EntanglementHostService();
-			this.entanglementHostService_0.Register<GInterface8, GClass922>(EntanglementAccess.Global).Register<IBotController, GClass921>(EntanglementAccess.Manual);
-			this.Control = (GClass922)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
+			this.entanglementHostService_0.Register<GInterface8, GClass923>(EntanglementAccess.Global).Register<IBotController, GClass922>(EntanglementAccess.Manual);
+			this.Control = (GClass923)this.entanglementHostService_0.GetHostedObject(this.entanglementHostService_0.GetInstance(typeof(GInterface8).GUID, null).Value);
 			this.Control.Parent = this;
 			this.Control.Type = string_2;
 			this.Control.Version = string_3;
@@ -139,21 +139,21 @@ namespace DOPE.Core
 			}
 		}
 
-		public GClass922 Control
+		public GClass923 Control
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.gclass922_0;
+				return this.gclass923_0;
 			}
 			[CompilerGenerated]
 			set
 			{
-				if (object.Equals(this.gclass922_0, value))
+				if (object.Equals(this.gclass923_0, value))
 				{
 					return;
 				}
-				this.gclass922_0 = value;
+				this.gclass923_0 = value;
 				this.method_18(Class10.propertyChangedEventArgs_11);
 			}
 		}
@@ -181,7 +181,7 @@ namespace DOPE.Core
 					return;
 				}
 				this.string_1 = value;
-				this.method_18(Class10.propertyChangedEventArgs_31);
+				this.method_18(Class10.propertyChangedEventArgs_30);
 			}
 		}
 
@@ -246,7 +246,7 @@ namespace DOPE.Core
 		{
 			Controller.logger_0.Info("Stopping...");
 			this.timer_0.Change(-1, -1);
-			foreach (GClass921 gclass in this.Control.Bots)
+			foreach (GClass922 gclass in this.Control.Bots)
 			{
 				this.Control.ForceStopBot(gclass.BotId).GetAwaiter().GetResult();
 			}
@@ -412,7 +412,7 @@ namespace DOPE.Core
 		// Note: this type is marked as 'beforefieldinit'.
 		static Controller()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			Controller.logger_0 = LogManager.GetLogger("Core-Controller");
 		}
 
@@ -502,7 +502,7 @@ namespace DOPE.Core
 		private string string_0;
 
 		[CompilerGenerated]
-		private GClass922 gclass922_0;
+		private GClass923 gclass923_0;
 
 		[CompilerGenerated]
 		private string string_1;

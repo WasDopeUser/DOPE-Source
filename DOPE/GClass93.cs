@@ -30,7 +30,7 @@ public class GClass93
 	public bool method_2()
 	{
 		GClass91 socket = this.Socket;
-		return socket != null && socket.ljsNmtBbtu();
+		return socket != null && socket.method_0();
 	}
 
 	[CompilerGenerated]
@@ -46,27 +46,27 @@ public class GClass93
 	}
 
 	[CompilerGenerated]
-	public GClass84<GClass853> method_5()
+	public GClass84<GClass854> method_5()
 	{
-		return this.gclass84_0;
+		return this.yothKkfRe5;
 	}
 
 	[CompilerGenerated]
-	private void method_6(GClass84<GClass853> gclass84_1)
+	private void method_6(GClass84<GClass854> gclass84_0)
 	{
-		this.gclass84_0 = gclass84_1;
+		this.yothKkfRe5 = gclass84_0;
 	}
 
 	public ConnectionManager Connection { get; private set; }
 
 	public GClass93(ConnectionManager connectionManager_1)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		this.object_0 = new object();
 		this.bool_1 = true;
 		base..ctor();
 		this.Connection = connectionManager_1;
-		this.method_6(new GClass84<GClass853>(connectionManager_1));
+		this.method_6(new GClass84<GClass854>(connectionManager_1));
 		this.method_5().method_1(new Action<GInterface0>(GClass82.smethod_3));
 		GClass82.smethod_2();
 	}
@@ -89,7 +89,7 @@ public class GClass93
 
 	private void method_8(bool bool_2, ProxySettings proxySettings_0)
 	{
-		if (this.Socket != null && this.Socket.ljsNmtBbtu())
+		if (this.Socket != null && this.Socket.method_0())
 		{
 			this.method_14();
 			this.Disconnect(ErrorReason.ConnectionOverridden, null, false);
@@ -107,7 +107,7 @@ public class GClass93
 			GClass91 socket = this.Socket;
 			if (socket != null)
 			{
-				socket.method_7();
+				socket.method_8();
 			}
 		}
 	}
@@ -115,7 +115,7 @@ public class GClass93
 	private void method_9()
 	{
 		this.Socket.Connected += this.method_12;
-		this.Socket.method_0(new GClass91.GClass92.GDelegate7(this.method_11));
+		this.Socket.method_1(new GClass91.GClass92.GDelegate7(this.method_11));
 		this.Socket.Disconnected += this.method_10;
 	}
 
@@ -138,7 +138,7 @@ public class GClass93
 	{
 		if (!this.method_3())
 		{
-			this.method_5().method_12(binaryStream_0, byte_0, int_1);
+			this.method_5().method_10(binaryStream_0, byte_0, int_1);
 		}
 	}
 
@@ -165,7 +165,7 @@ public class GClass93
 
 	private void method_13()
 	{
-		this.method_5().method_9(this.Socket, new GClass854());
+		this.method_5().method_8(this.Socket, new GClass855());
 	}
 
 	public void Disconnect(ErrorReason reason, Exception ex = null, bool fromEvent = false)
@@ -179,7 +179,7 @@ public class GClass93
 		GClass91 socket = this.Socket;
 		if (socket != null)
 		{
-			socket.method_7();
+			socket.method_8();
 		}
 		if (!fromEvent)
 		{
@@ -195,7 +195,7 @@ public class GClass93
 	private void method_14()
 	{
 		this.Socket.Connected -= this.method_12;
-		this.Socket.method_1(new GClass91.GClass92.GDelegate7(this.method_11));
+		this.Socket.method_2(new GClass91.GClass92.GDelegate7(this.method_11));
 		this.Socket.Disconnected -= this.method_10;
 	}
 
@@ -214,13 +214,13 @@ public class GClass93
 	private int int_0;
 
 	[CompilerGenerated]
-	private string sRvNqfyMoU;
+	private string string_0;
 
 	[CompilerGenerated]
 	private bool bool_0;
 
 	[CompilerGenerated]
-	private GClass84<GClass853> gclass84_0;
+	private GClass84<GClass854> yothKkfRe5;
 
 	[CompilerGenerated]
 	private ConnectionManager connectionManager_0;

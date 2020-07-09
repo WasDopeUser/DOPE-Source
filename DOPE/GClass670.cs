@@ -8,7 +8,7 @@ public class GClass670 : GInterface0
 	{
 		get
 		{
-			return 13131;
+			return 88;
 		}
 	}
 
@@ -16,43 +16,189 @@ public class GClass670 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 23;
 		}
 	}
 
-	public GClass670(int int_2 = 0, int int_3 = 0)
+	public GClass670(bool bool_22 = false, bool bool_23 = false, bool bool_24 = false, bool bool_25 = false, bool bool_26 = false, bool bool_27 = false, bool bool_28 = false, bool bool_29 = false, bool bool_30 = false, bool bool_31 = false, bool bool_32 = false, bool bool_33 = false, bool bool_34 = false, bool bool_35 = false, bool bool_36 = false, bool bool_37 = false, bool bool_38 = false, bool bool_39 = false, bool bool_40 = false, bool bool_41 = false, bool bool_42 = false, bool bool_43 = false, bool bool_44 = false, GClass328 gclass328_2 = null, GClass328 gclass328_3 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.int_0 = int_2;
-		this.int_1 = int_3;
+		this.bool_0 = bool_22;
+		this.bool_1 = bool_23;
+		this.bool_2 = bool_24;
+		this.bool_3 = bool_25;
+		this.bool_4 = bool_26;
+		this.bool_5 = bool_27;
+		this.bool_6 = bool_28;
+		this.HobcSmUvr4 = bool_29;
+		this.bool_7 = bool_30;
+		this.bool_8 = bool_31;
+		this.bool_9 = bool_32;
+		this.bool_10 = bool_33;
+		this.bool_11 = bool_34;
+		this.bool_12 = bool_35;
+		this.bool_13 = bool_36;
+		this.bool_14 = bool_37;
+		this.bool_15 = bool_38;
+		this.bool_16 = bool_39;
+		this.bool_17 = bool_40;
+		this.bool_18 = bool_41;
+		this.bool_19 = bool_42;
+		this.bool_20 = bool_43;
+		this.bool_21 = bool_44;
+		if (gclass328_2 == null)
+		{
+			this.gclass328_0 = new GClass328(0);
+		}
+		else
+		{
+			this.gclass328_0 = gclass328_2;
+		}
+		if (gclass328_3 == null)
+		{
+			this.gclass328_1 = new GClass328(0);
+			return;
+		}
+		this.gclass328_1 = gclass328_3;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 13131;
+		return 88;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 23;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.int_0 = (int)binaryStream_0.smethod_1();
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (this.int_1 << 14 | U.smethod_0(this.int_1, 18));
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.bool_1 = binaryStream_0.ReadBoolean();
+		this.bool_2 = binaryStream_0.ReadBoolean();
+		this.bool_3 = binaryStream_0.ReadBoolean();
+		this.bool_4 = binaryStream_0.ReadBoolean();
+		this.bool_5 = binaryStream_0.ReadBoolean();
+		this.bool_6 = binaryStream_0.ReadBoolean();
+		this.HobcSmUvr4 = binaryStream_0.ReadBoolean();
+		this.bool_7 = binaryStream_0.ReadBoolean();
+		this.bool_8 = binaryStream_0.ReadBoolean();
+		this.bool_9 = binaryStream_0.ReadBoolean();
+		this.bool_10 = binaryStream_0.ReadBoolean();
+		this.bool_11 = binaryStream_0.ReadBoolean();
+		this.bool_12 = binaryStream_0.ReadBoolean();
+		this.bool_13 = binaryStream_0.ReadBoolean();
+		this.bool_14 = binaryStream_0.ReadBoolean();
+		this.bool_15 = binaryStream_0.ReadBoolean();
+		this.bool_16 = binaryStream_0.ReadBoolean();
+		this.bool_17 = binaryStream_0.ReadBoolean();
+		this.bool_18 = binaryStream_0.ReadBoolean();
+		this.bool_19 = binaryStream_0.ReadBoolean();
+		this.bool_20 = binaryStream_0.ReadBoolean();
+		this.bool_21 = binaryStream_0.ReadBoolean();
+		this.gclass328_0 = (GClass328)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass328_0 != null)
+		{
+			this.gclass328_0.imethod_1(binaryStream_0);
+		}
+		this.gclass328_1 = (GClass328)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass328_1 != null)
+		{
+			this.gclass328_1.imethod_1(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(13131);
-		binaryStream_0.smethod_7(this.int_0);
-		binaryStream_0.smethod_4(U.smethod_0(this.int_1, 14) | this.int_1 << 18);
+		binaryStream_0.smethod_7(88);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.WriteBoolean(this.bool_1);
+		binaryStream_0.WriteBoolean(this.bool_2);
+		binaryStream_0.WriteBoolean(this.bool_3);
+		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.WriteBoolean(this.bool_5);
+		binaryStream_0.WriteBoolean(this.bool_6);
+		binaryStream_0.WriteBoolean(this.HobcSmUvr4);
+		binaryStream_0.WriteBoolean(this.bool_7);
+		binaryStream_0.WriteBoolean(this.bool_8);
+		binaryStream_0.WriteBoolean(this.bool_9);
+		binaryStream_0.WriteBoolean(this.bool_10);
+		binaryStream_0.WriteBoolean(this.bool_11);
+		binaryStream_0.WriteBoolean(this.bool_12);
+		binaryStream_0.WriteBoolean(this.bool_13);
+		binaryStream_0.WriteBoolean(this.bool_14);
+		binaryStream_0.WriteBoolean(this.bool_15);
+		binaryStream_0.WriteBoolean(this.bool_16);
+		binaryStream_0.WriteBoolean(this.bool_17);
+		binaryStream_0.WriteBoolean(this.bool_18);
+		binaryStream_0.WriteBoolean(this.bool_19);
+		binaryStream_0.WriteBoolean(this.bool_20);
+		binaryStream_0.WriteBoolean(this.bool_21);
+		if (this.gclass328_0 != null)
+		{
+			this.gclass328_0.imethod_2(binaryStream_0);
+		}
+		else
+		{
+			binaryStream_0.smethod_7(0);
+		}
+		if (this.gclass328_1 != null)
+		{
+			this.gclass328_1.imethod_2(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public int int_0;
+	public bool bool_0;
 
-	public int int_1;
+	public bool bool_1;
+
+	public bool bool_2;
+
+	public bool bool_3;
+
+	public bool bool_4;
+
+	public bool bool_5;
+
+	public bool bool_6;
+
+	public bool HobcSmUvr4;
+
+	public bool bool_7;
+
+	public bool bool_8;
+
+	public bool bool_9;
+
+	public bool bool_10;
+
+	public bool bool_11;
+
+	public bool bool_12;
+
+	public bool bool_13;
+
+	public bool bool_14;
+
+	public bool bool_15;
+
+	public bool bool_16;
+
+	public bool bool_17;
+
+	public bool bool_18;
+
+	public bool bool_19;
+
+	public bool bool_20;
+
+	public bool bool_21;
+
+	public GClass328 gclass328_0;
+
+	public GClass328 gclass328_1;
 }

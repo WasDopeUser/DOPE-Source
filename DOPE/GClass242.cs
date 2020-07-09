@@ -8,7 +8,7 @@ public class GClass242 : GInterface0
 	{
 		get
 		{
-			return -19699;
+			return -11531;
 		}
 	}
 
@@ -16,78 +16,51 @@ public class GClass242 : GInterface0
 	{
 		get
 		{
-			return 16;
+			return 0;
 		}
 	}
 
-	public GClass242(Vector<GClass240> vector_0 = null, int int_3 = 0, int int_4 = 0, int int_5 = 0)
+	public GClass242(GClass241 gclass241_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		if (vector_0 == null)
+		if (gclass241_1 == null)
 		{
-			this.Items = new Vector<GClass240>();
+			this.gclass241_0 = new GClass241(0.0, "", 0.0, 0, false, 0.0, null);
+			return;
 		}
-		else
-		{
-			this.Items = vector_0;
-		}
-		this.int_0 = int_5;
-		this.int_1 = int_4;
-		this.int_2 = int_3;
+		this.gclass241_0 = gclass241_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -19699;
+		return -11531;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 16;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.Items.Length > 0)
+		this.gclass241_0 = (GClass241)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass241_0 != null)
 		{
-			this.Items.method_1();
+			this.gclass241_0.imethod_1(binaryStream_0);
 		}
-		int i = 0;
-		int num = (int)binaryStream_0.smethod_1();
-		while (i < num)
-		{
-			GClass240 gclass = (GClass240)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_1(binaryStream_0);
-			this.Items.method_0(gclass);
-			i++;
-		}
-		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (this.int_0 << 10 | U.smethod_0(this.int_0, 22));
-		this.int_1 = binaryStream_0.smethod_0();
-		this.int_1 = (U.smethod_0(this.int_1, 8) | this.int_1 << 24);
-		this.int_2 = binaryStream_0.smethod_0();
-		this.int_2 = (this.int_2 << 10 | U.smethod_0(this.int_2, 22));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-19699);
-		binaryStream_0.smethod_7(this.Items.Length);
-		foreach (GClass240 gclass in this.Items)
+		binaryStream_0.smethod_7(-11531);
+		if (this.gclass241_0 != null)
 		{
-			gclass.imethod_2(binaryStream_0);
+			this.gclass241_0.imethod_2(binaryStream_0);
+			return;
 		}
-		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 10) | this.int_0 << 22);
-		binaryStream_0.smethod_4(this.int_1 << 8 | U.smethod_0(this.int_1, 24));
-		binaryStream_0.smethod_4(U.smethod_0(this.int_2, 10) | this.int_2 << 22);
+		binaryStream_0.smethod_7(0);
 	}
 
-	public Vector<GClass240> Items;
-
-	public int int_0;
-
-	public int int_1;
-
-	public int int_2;
+	public GClass241 gclass241_0;
 }

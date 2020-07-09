@@ -8,7 +8,7 @@ public class GClass171 : GInterface0
 	{
 		get
 		{
-			return 14;
+			return 131;
 		}
 	}
 
@@ -16,43 +16,51 @@ public class GClass171 : GInterface0
 	{
 		get
 		{
-			return 2;
+			return 0;
 		}
 	}
 
-	public GClass171(string string_1 = "", int int_0 = 0)
+	public GClass171(GClass135 gclass135_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.string_0 = string_1;
-		this.encoQoFjf1 = int_0;
+		if (gclass135_1 == null)
+		{
+			this.gclass135_0 = new GClass135(null, 0.0);
+			return;
+		}
+		this.gclass135_0 = gclass135_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 14;
+		return 131;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 2;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.string_0 = binaryStream_0.smethod_2();
-		this.encoQoFjf1 = (int)binaryStream_0.smethod_1();
+		this.gclass135_0 = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass135_0 != null)
+		{
+			this.gclass135_0.imethod_1(binaryStream_0);
+		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(14);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.smethod_7(this.encoQoFjf1);
+		binaryStream_0.smethod_7(131);
+		if (this.gclass135_0 != null)
+		{
+			this.gclass135_0.imethod_2(binaryStream_0);
+			return;
+		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public string string_0;
-
-	public int encoQoFjf1;
+	public GClass135 gclass135_0;
 }

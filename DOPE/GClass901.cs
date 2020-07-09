@@ -1,56 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DarkorbitAPI;
+using DarkorbitAPI.Structures;
 using DOPE.Common.Models;
+using DOPE.UI.Models;
 
 public class GClass901 : GClass900
 {
-	public GClass901(GClass889 gclass889_1)
+	public GClass901(GClass890 gclass890_1, TargetMap targetMap_1)
 	{
-		Class13.xnk8ImWzpOt04();
-		base..ctor(gclass889_1, TargetMap.GG_VoT);
-	}
-
-	protected override void OnBind()
-	{
-		base.C.Game.LogMessage += this.method_3;
-	}
-
-	protected override void OnUnbind()
-	{
-		base.C.Game.LogMessage -= this.method_3;
-	}
-
-	private void method_3(GameManager gameManager_0, GClass268 gclass268_0)
-	{
-		string[] source;
-		if (GClass90.smethod_1(gclass268_0.string_0, out source, new string[]
-		{
-			"n",
-			"MSG",
-			"1",
-			"0",
-			"msg_galaxy_gate_cooldown_active"
-		}) && source.FirstOrDefault<string>() != null)
-		{
-			Dictionary<string, string> dictionary = GClass90.smethod_0(source.FirstOrDefault<string>());
-			string s;
-			string s2;
-			int num;
-			int num2;
-			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
-			{
-				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
-				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
-			}
-		}
+		Class13.lOBHd9Nzn7x2T();
+		base..ctor(gclass890_1, targetMap_1);
 	}
 
 	protected override bool vmethod_0()
 	{
-		return this.dateTimeOffset_2.Cooldown(0);
+		return true;
 	}
 
-	public DateTimeOffset dateTimeOffset_2;
+	public override bool vmethod_1()
+	{
+		return false;
+	}
+
+	public override SelectedNpcModel vmethod_2(Ship ship_0)
+	{
+		if (ship_0 == null)
+		{
+			return null;
+		}
+		MapProfile mapProfile = base.MapProfile;
+		if (mapProfile == null)
+		{
+			return null;
+		}
+		return mapProfile.GetModel(ship_0, base.C.Map, null, 0);
+	}
 }

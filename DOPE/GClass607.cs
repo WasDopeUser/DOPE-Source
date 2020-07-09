@@ -8,7 +8,7 @@ public class GClass607 : GInterface0
 	{
 		get
 		{
-			return 2006;
+			return -29577;
 		}
 	}
 
@@ -20,16 +20,16 @@ public class GClass607 : GInterface0
 		}
 	}
 
-	public GClass607(int int_0 = 0)
+	public GClass607(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.Id = int_0;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2006;
+		return -29577;
 	}
 
 	public virtual int vmethod_1()
@@ -39,15 +39,15 @@ public class GClass607 : GInterface0
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.Id = binaryStream_0.smethod_0();
-		this.Id = (this.Id << 1 | U.smethod_0(this.Id, 31));
+		this.int_0 = binaryStream_0.smethod_0();
+		this.int_0 = (U.smethod_0(this.int_0, 5) | this.int_0 << 27);
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2006);
-		binaryStream_0.smethod_4(U.smethod_0(this.Id, 1) | this.Id << 31);
+		binaryStream_0.smethod_7(-29577);
+		binaryStream_0.smethod_4(this.int_0 << 5 | U.smethod_0(this.int_0, 27));
 	}
 
-	public int Id;
+	public int int_0;
 }

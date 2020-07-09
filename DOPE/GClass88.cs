@@ -27,7 +27,7 @@ public class GClass88
 
 	public GClass88(ConnectionManager connectionManager_1)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.Connection = connectionManager_1;
 	}
@@ -36,13 +36,13 @@ public class GClass88
 	{
 		this.Log.Trace("Activate interactible {id}", int_0);
 		this.method_5();
-		this.Connection.SendMessage(new GClass158(int_0));
+		this.Connection.SendMessage(new GClass159(int_0));
 	}
 
 	public void method_1()
 	{
 		this.Log.Trace("Opening ore trade window");
-		this.Connection.SendMessage(new GClass161());
+		this.Connection.SendMessage(new GClass162());
 	}
 
 	public void method_2(int int_0 = 0)
@@ -51,9 +51,9 @@ public class GClass88
 		if (int_0 != 0)
 		{
 			this.method_5();
-			this.Connection.SendMessage(new GClass158(int_0));
+			this.Connection.SendMessage(new GClass159(int_0));
 		}
-		this.Connection.SendMessage(new GClass159());
+		this.Connection.SendMessage(new GClass160());
 	}
 
 	public void method_3(int int_0)
@@ -61,7 +61,7 @@ public class GClass88
 		if (int_0 != 0)
 		{
 			this.method_5();
-			this.Connection.SendMessage(new GClass158(int_0));
+			this.Connection.SendMessage(new GClass159(int_0));
 		}
 	}
 
@@ -80,11 +80,11 @@ public class GClass88
 
 	public void method_5()
 	{
-		this.Connection.SendMessage(new GClass273(null)
+		this.Connection.SendMessage(new GClass274(null)
 		{
-			vector_0 = new DarkorbitAPI.CommonStructures.Vector<GClass270>
+			vector_0 = new DarkorbitAPI.CommonStructures.Vector<GClass271>
 			{
-				new GClass271("map_clicks", 1)
+				new GClass272("map_clicks", 1)
 			}
 		});
 	}
@@ -106,18 +106,18 @@ public class GClass88
 		{
 			this.method_5();
 		}
-		GClass160 gclass = new GClass160((int)position.X, int_1, int_0, (int)position.Y);
+		GClass161 gclass = new GClass161((int)position.X, int_1, int_0, (int)position.Y);
 		if ((gclass.int_3 + int_0) % 3 == 0)
 		{
 			gclass.int_3++;
 		}
 		gclass.int_0 -= (gclass.int_0 + int_1) % 3;
 		this.Connection.SendMessage(gclass);
-		int num = hero.method_3(int_0, int_1, hero.Speed);
+		int num = hero.method_4(int_0, int_1, hero.Speed);
 		GInterface5 proxySocket = this.Connection.ProxySocket;
 		if (proxySocket != null)
 		{
-			proxySocket.SendMessage(new GClass265(this.Connection.Game.Hero.Id, int_0, int_1, num));
+			proxySocket.SendMessage(new GClass266(this.Connection.Game.Hero.Id, int_0, int_1, num));
 		}
 		return num;
 	}
@@ -125,11 +125,11 @@ public class GClass88
 	public void method_8(int int_0 = 1)
 	{
 		this.Log.Trace("Repair ship {selection}", int_0);
-		GClass238 gclass = this.Connection.method_15();
+		GClass239 gclass = this.Connection.method_15();
 		gclass.string_1 = "";
 		gclass.int_2 = 0;
 		this.Connection.Game.Map.Clear();
-		this.Connection.SendMessage(new GClass166(new GClass258(int_0), gclass));
+		this.Connection.SendMessage(new GClass167(new GClass259(int_0), gclass));
 	}
 
 	public bool method_9(Ship ship_0, bool bool_0 = false)
@@ -147,8 +147,8 @@ public class GClass88
 			return false;
 		}
 		this.method_5();
-		GClass167 gclass = new GClass167(ship_0.Id, (int)position2.X, (int)position2.Y, (int)position.X, (int)position.Y);
-		gclass.int_2 -= (gclass.int_1 + gclass.int_2 + gclass.int_4 + gclass.int_3) % 5;
+		GClass168 gclass = new GClass168(ship_0.Id, (int)position2.X, (int)position2.Y, (int)position.X, (int)position.Y);
+		gclass.int_1 -= (gclass.wHjwugopYw + gclass.int_1 + gclass.int_3 + gclass.int_2) % 5;
 		this.Connection.SendMessage(gclass);
 		return true;
 	}
@@ -161,7 +161,7 @@ public class GClass88
 	public void method_11()
 	{
 		this.Log.Trace("Stop attacking");
-		this.Connection.SendMessage(new GClass169());
+		this.Connection.SendMessage(new GClass170());
 	}
 
 	public void method_12(Ship ship_0)
@@ -172,10 +172,10 @@ public class GClass88
 		}
 		this.Log.Trace("Attack {shipName}", (ship_0 != null) ? ship_0.Name : null);
 		Vector2 position = ship_0.Position;
-		GClass141 gclass = new GClass141(ship_0.Id, (int)position.X, (int)position.Y);
-		if ((gclass.wOxdzeurwW + gclass.int_0) % 3 == 0)
+		GClass142 gclass = new GClass142(ship_0.Id, (int)position.X, (int)position.Y);
+		if ((gclass.int_0 + gclass.int_1) % 3 == 0)
 		{
-			gclass.wOxdzeurwW++;
+			gclass.int_0++;
 		}
 		this.Connection.SendMessage(gclass);
 	}
@@ -188,7 +188,7 @@ public class GClass88
 		}
 		this.Log.Trace("Attack rocket {shipName}", (ship_0 != null) ? ship_0.Name : null);
 		Vector2 position = ship_0.Position;
-		GClass142 gclass = new GClass142(ship_0.Id, (int)position.X, (int)position.Y);
+		GClass143 gclass = new GClass143(ship_0.Id, (int)position.X, (int)position.Y);
 		if ((gclass.int_0 + gclass.int_1) % 3 == 0)
 		{
 			gclass.int_1++;
@@ -207,10 +207,10 @@ public class GClass88
 		DarkorbitAPI.Structures.Resource resource = collectible_0 as DarkorbitAPI.Structures.Resource;
 		if (resource != null)
 		{
-			this.Connection.SendMessage(new GClass144(resource.Hash));
+			this.Connection.SendMessage(new GClass145(resource.Hash));
 			return;
 		}
-		GClass143 gclass = new GClass143(collectible_0.Hash, collectible_0.PosX, collectible_0.PosY, collectible_0.PosX, collectible_0.PosY);
+		GClass144 gclass = new GClass144(collectible_0.Hash, collectible_0.PosX, collectible_0.PosY, collectible_0.PosX, collectible_0.PosY);
 		if ((gclass.int_1 + gclass.int_2 + gclass.int_3) % 3 == 0)
 		{
 			gclass.int_3++;
@@ -225,7 +225,7 @@ public class GClass88
 			return;
 		}
 		this.Log.Trace<string, bool>("Use {type}, activate={activate}", string_0, bool_0);
-		this.Connection.SendMessage(new GClass172(string_0, bool_0 ? 1 : 0, bool_1 ? 1 : 0));
+		this.Connection.SendMessage(new GClass173(string_0, bool_0 ? 1 : 0, bool_1 ? 1 : 0));
 	}
 
 	public void method_16(string string_0, bool bool_0)
@@ -235,54 +235,54 @@ public class GClass88
 			return;
 		}
 		Hero hero = this.Connection.Game.Hero;
-		if (!hero.method_15(string_0))
+		if (!hero.method_16(string_0))
 		{
 			return;
 		}
-		if (hero.method_18(string_0) == bool_0)
+		if (hero.method_19(string_0) == bool_0)
 		{
 			return;
 		}
 		this.method_15(string_0, false, false);
 	}
 
-	public void IkjYedywGg(string string_0)
+	public void method_17(string string_0)
 	{
 		this.Log.Trace("Use HUD button {id}", string_0);
-		this.Connection.SendMessage(new GClass173(string_0));
+		this.Connection.SendMessage(new GClass174(string_0));
 	}
 
-	public void method_17()
+	public void method_18()
 	{
-		this.IkjYedywGg("logout");
+		this.method_17("logout");
 	}
 
-	public void method_18(PetState petState_0)
+	public void method_19(PetState petState_0)
 	{
 		this.Log.Trace<PetState>("Set pet state {petState}", petState_0);
-		this.Connection.SendMessage(new GClass163((int)petState_0));
+		this.Connection.SendMessage(new GClass164((int)petState_0));
 	}
 
-	public void method_19(PetMode petMode_0, int int_0 = 0)
+	public void method_20(PetMode petMode_0, int int_0 = 0)
 	{
 		this.Log.Trace<PetMode, int>("Set pet mode {petMode} ({extra})", petMode_0, int_0);
-		this.Connection.SendMessage(new GClass162(new GClass256((int)petMode_0), int_0));
+		this.Connection.SendMessage(new GClass163(new GClass257((int)petMode_0), int_0));
 		this.Connection.Game.Hero.Pet.Mode = petMode_0;
 		this.Connection.Game.Hero.Pet.ModeExtra = int_0;
 	}
 
-	public void method_20(ResourceType resourceType_0, double double_0)
+	public void method_21(ResourceType resourceType_0, double double_0)
 	{
 		if (double_0 == 0.0)
 		{
 			return;
 		}
 		this.Log.Trace<double, ResourceType>("Refine {count} of {resource}", double_0, resourceType_0);
-		this.Connection.SendMessage(new GClass165(new GClass135(new GClass259((int)resourceType_0), double_0)));
-		this.Connection.SendMessage(new GClass157());
+		this.Connection.SendMessage(new GClass166(new GClass135(new GClass260((int)resourceType_0), double_0)));
+		this.Connection.SendMessage(new GClass158());
 	}
 
-	public void method_21(ResourceType resourceType_0, double double_0)
+	public void method_22(ResourceType resourceType_0, double double_0)
 	{
 		if (double_0 == 0.0)
 		{
@@ -300,48 +300,48 @@ public class GClass88
 		}
 		else
 		{
-			this.Connection.SendMessage(new GClass170(new GClass135(new GClass259((int)resourceType_0), double_0)));
+			this.Connection.SendMessage(new GClass171(new GClass135(new GClass260((int)resourceType_0), double_0)));
 		}
-		this.Connection.SendMessage(new GClass157());
-	}
-
-	public void method_22(int int_0)
-	{
-		this.Log.Trace("Accepting group invite from id {id}", int_0);
-		this.Connection.SendMessage(new GClass147(int_0));
+		this.Connection.SendMessage(new GClass158());
 	}
 
 	public void method_23(int int_0)
 	{
-		this.Log.Trace("Kicking group member with id {id}", int_0);
-		this.Connection.SendMessage(new GClass151(int_0));
+		this.Log.Trace("Accepting group invite from id {id}", int_0);
+		this.Connection.SendMessage(new GClass148(int_0));
 	}
 
-	public void method_24(string string_0)
+	public void method_24(int int_0)
+	{
+		this.Log.Trace("Kicking group member with id {id}", int_0);
+		this.Connection.SendMessage(new GClass152(int_0));
+	}
+
+	public void method_25(string string_0)
 	{
 		if (string.IsNullOrWhiteSpace(string_0))
 		{
 			return;
 		}
 		this.Log.Trace("Sending group invite to {player}", string_0);
-		this.Connection.SendMessage(new GClass150(string_0));
+		this.Connection.SendMessage(new GClass151(string_0));
 	}
 
-	public void method_25(int int_0)
+	public void method_26(int int_0)
 	{
 		this.Log.Trace("Declining group invite from id {id}", int_0);
-		this.Connection.SendMessage(new GClass149(int_0));
+		this.Connection.SendMessage(new GClass150(int_0));
 	}
 
-	public void method_26(Vector2 vector2_0)
+	public void method_27(Vector2 vector2_0)
 	{
-		this.method_27((int)vector2_0.X, (int)vector2_0.Y);
+		this.method_28((int)vector2_0.X, (int)vector2_0.Y);
 	}
 
-	public void method_27(int int_0, int int_1)
+	public void method_28(int int_0, int int_1)
 	{
 		this.Log.Trace<int, int>("Pinging map location ({x}, {y})", int_0, int_1);
-		this.Connection.SendMessage(new GClass153(int_0, int_1));
+		this.Connection.SendMessage(new GClass154(int_0, int_1));
 	}
 
 	[CompilerGenerated]

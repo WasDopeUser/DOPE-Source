@@ -12,7 +12,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 		public MapNavigator()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 			this.items = new MapNavigator.QueueItem[(MapUtils.LargeMapSize.Width / 100 + 1) * (MapUtils.LargeMapSize.Height / 50 + 1)];
 			this._queue = new BfsQueue<MapNavigator.QueueItem>(this.items, new MapNavigator.Comparer());
@@ -23,16 +23,16 @@ namespace DarkorbitAPI.Structures.Pathing
 			PathSequence pathSequence = new PathSequence(vector2_1);
 			int num;
 			int num2;
-			this.Grid.method_0(vector2_0, out num, out num2);
+			this.Grid.ClHzudsGyZ(vector2_0, out num, out num2);
 			int num3;
 			int num4;
-			this.Grid.method_0(vector2_1, out num3, out num4);
+			this.Grid.ClHzudsGyZ(vector2_1, out num3, out num4);
 			Stack<Vector2> stack = new Stack<Vector2>();
 			stack.Push(vector2_1);
 			int num5 = this.method_1(num3, num4);
 			int num6 = num3;
 			int num7 = num4;
-			Vector2 item = this.Grid.method_5(num3, num4);
+			Vector2 item = this.Grid.method_4(num3, num4);
 			int num8 = 0;
 			int num9 = 0;
 			int parent;
@@ -40,7 +40,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				int num10;
 				int num11;
-				this.method_2(parent, out num10, out num11);
+				this.hEmzxAaTll(parent, out num10, out num11);
 				int num12 = num10 - num6;
 				int num13 = num11 - num7;
 				if (num8 != num12 || num9 != num13)
@@ -49,7 +49,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				}
 				num8 = num12;
 				num9 = num13;
-				item = this.Grid.method_5(num10, num11);
+				item = this.Grid.method_4(num10, num11);
 				num5 = parent;
 				num6 = num10;
 				num7 = num11;
@@ -58,7 +58,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				int num14;
 				int num15;
-				this.Grid.method_0(stack.Peek(), out num14, out num15);
+				this.Grid.ClHzudsGyZ(stack.Peek(), out num14, out num15);
 				if (num14 == num && num15 == num2)
 				{
 					stack.Pop();
@@ -84,7 +84,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return int_1 * this.Grid.Bx + int_0;
 		}
 
-		private void method_2(int int_0, out int int_1, out int int_2)
+		private void hEmzxAaTll(int int_0, out int int_1, out int int_2)
 		{
 			int_2 = Math.DivRem(int_0, this.Grid.Bx, out int_1);
 		}
@@ -142,7 +142,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			"x",
 			"y"
 		})]
-		private IEnumerable<ValueTuple<int, int>> method_3(int int_0, int int_1)
+		private IEnumerable<ValueTuple<int, int>> method_2(int int_0, int int_1)
 		{
 			int num = this.method_1(int_0, int_1);
 			if (this.items[num].Parent != -1)
@@ -167,14 +167,14 @@ namespace DarkorbitAPI.Structures.Pathing
 					IL_B5:
 					int num2;
 					int num3;
-					this.method_2(this.items[num].Parent, out num2, out num3);
+					this.hEmzxAaTll(this.items[num].Parent, out num2, out num3);
 					dx = (int_0 - num2) / Math.Max(Math.Abs(int_0 - num2), 1);
 					dy = (int_1 - num3) / Math.Max(Math.Abs(int_1 - num3), 1);
 					if ((dx & dy) == 0)
 					{
 						goto IL_17C;
 					}
-					if (!(both = this.method_8(int_0, int_1 + dy)))
+					if (!(both = this.method_7(int_0, int_1 + dy)))
 					{
 						goto IL_2DF;
 					}
@@ -185,9 +185,9 @@ namespace DarkorbitAPI.Structures.Pathing
 					{
 						goto IL_202;
 					}
-					bool flag = this.method_8(int_0 + dx, int_1);
-					both = this.method_8(int_0, int_1 + 1);
-					bottomWalkable = this.method_8(int_0, int_1 - 1);
+					bool flag = this.method_7(int_0 + dx, int_1);
+					both = this.method_7(int_0, int_1 + 1);
+					bottomWalkable = this.method_7(int_0, int_1 - 1);
 					if (!flag)
 					{
 						goto IL_3FB;
@@ -199,9 +199,9 @@ namespace DarkorbitAPI.Structures.Pathing
 					{
 						goto IL_558;
 					}
-					bool flag2 = this.method_8(int_0, int_1 + dy);
-					bottomWalkable = this.method_8(int_0 + 1, int_1);
-					both = this.method_8(int_0 - 1, int_1);
+					bool flag2 = this.method_7(int_0, int_1 + dy);
+					bottomWalkable = this.method_7(int_0 + 1, int_1);
+					both = this.method_7(int_0 - 1, int_1);
 					if (!flag2)
 					{
 						goto IL_4F0;
@@ -228,7 +228,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			yield break;
 			IL_2D8:
 			IL_2DF:
-			if (!this.method_8(int_0 + dx, int_1))
+			if (!this.method_7(int_0 + dx, int_1))
 			{
 				goto IL_558;
 			}
@@ -282,7 +282,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			yield break;
 		}
 
-		private bool method_4(int int_0, int int_1, int int_2, int int_3, [TupleElementNames(new string[]
+		private bool method_3(int int_0, int int_1, int int_2, int int_3, [TupleElementNames(new string[]
 		{
 			"x",
 			"y"
@@ -295,7 +295,7 @@ namespace DarkorbitAPI.Structures.Pathing
 				{
 					return true;
 				}
-				if (!this.method_9(int_2, int_3))
+				if (!this.method_8(int_2, int_3))
 				{
 					return false;
 				}
@@ -304,31 +304,31 @@ namespace DarkorbitAPI.Structures.Pathing
 				if ((num & num2) != 0)
 				{
 					ValueTuple<int, int> valueTuple;
-					if (this.method_4(int_2, int_3, int_2 + num, int_3, out valueTuple))
+					if (this.method_3(int_2, int_3, int_2 + num, int_3, out valueTuple))
 					{
 						break;
 					}
-					if (this.method_4(int_2, int_3, int_2, int_3 + num2, out valueTuple))
+					if (this.method_3(int_2, int_3, int_2, int_3 + num2, out valueTuple))
 					{
 						break;
 					}
 				}
 				else if (num != 0)
 				{
-					if (this.method_9(int_2, int_3 - 1) && !this.method_9(int_2 - num, int_3 - 1))
+					if (this.method_8(int_2, int_3 - 1) && !this.method_8(int_2 - num, int_3 - 1))
 					{
 						return true;
 					}
-					if (this.method_9(int_2, int_3 + 1) && !this.method_9(int_2 - num, int_3 + 1))
+					if (this.method_8(int_2, int_3 + 1) && !this.method_8(int_2 - num, int_3 + 1))
 					{
 						goto Block_8;
 					}
 				}
-				else if (num2 != 0 && ((this.method_9(int_2 - 1, int_3) && !this.method_9(int_2 - 1, int_3 - num2)) || (this.method_9(int_2 + 1, int_3) && !this.method_9(int_2 + 1, int_3 - num2))))
+				else if (num2 != 0 && ((this.method_8(int_2 - 1, int_3) && !this.method_8(int_2 - 1, int_3 - num2)) || (this.method_8(int_2 + 1, int_3) && !this.method_8(int_2 + 1, int_3 - num2))))
 				{
 					return true;
 				}
-				if (!this.method_9(int_2 + num, int_3) || !this.method_9(int_2, int_3 + num2))
+				if (!this.method_8(int_2 + num, int_3) || !this.method_8(int_2, int_3 + num2))
 				{
 					return false;
 				}
@@ -342,7 +342,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return true;
 		}
 
-		public PathSequence method_5(Vector2 vector2_0, Vector2 vector2_1, MapGrid mapGrid_0)
+		public PathSequence method_4(Vector2 vector2_0, Vector2 vector2_1, MapGrid mapGrid_0)
 		{
 			Vector2 destination = vector2_1;
 			if (vector2_1.Y == mapGrid_0.Map.RightCorner.Y || vector2_1.X == mapGrid_0.Map.RightCorner.X)
@@ -353,7 +353,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				vector2_0 = new Vector2(vector2_0.X - 1f, vector2_0.Y - 1f);
 			}
-			PathSequence pathSequence = this.method_6(vector2_0, vector2_1, mapGrid_0);
+			PathSequence pathSequence = this.method_5(vector2_0, vector2_1, mapGrid_0);
 			if (pathSequence != null)
 			{
 				pathSequence.Destination = destination;
@@ -361,19 +361,19 @@ namespace DarkorbitAPI.Structures.Pathing
 			return pathSequence;
 		}
 
-		public unsafe PathSequence method_6(Vector2 vector2_0, Vector2 vector2_1, MapGrid mapGrid_0)
+		public unsafe PathSequence method_5(Vector2 vector2_0, Vector2 vector2_1, MapGrid mapGrid_0)
 		{
 			MapNavigator.<>c__DisplayClass19_0 CS$<>8__locals1;
 			CS$<>8__locals1.<>4__this = this;
 			this.Grid = mapGrid_0;
-			if (!this.Grid.method_1(vector2_1.X, vector2_1.Y, out CS$<>8__locals1.endX, out CS$<>8__locals1.endY))
+			if (!this.Grid.method_0(vector2_1.X, vector2_1.Y, out CS$<>8__locals1.endX, out CS$<>8__locals1.endY))
 			{
 				return null;
 			}
 			int int_;
 			int int_2;
-			this.Grid.method_0(vector2_0, out int_, out int_2);
-			if (!this.Grid.method_3(vector2_0, vector2_1))
+			this.Grid.ClHzudsGyZ(vector2_0, out int_, out int_2);
+			if (!this.Grid.method_2(vector2_0, vector2_1))
 			{
 				int num = this.method_1(CS$<>8__locals1.endX, CS$<>8__locals1.endY);
 				int num2 = this.method_1(int_, int_2);
@@ -390,7 +390,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			MapNavigator.QueueItem[] array = this.items;
 			int num3 = this.method_1(int_, int_2);
 			array[num3].Distance = 0;
-			array[num3].Left = this.method_10(int_, int_2, ref CS$<>8__locals1);
+			array[num3].Left = this.method_9(int_, int_2, ref CS$<>8__locals1);
 			array[num3].Parent = -1;
 			CS$<>8__locals1.q = this._queue;
 			CS$<>8__locals1.q.method_0();
@@ -409,13 +409,13 @@ namespace DarkorbitAPI.Structures.Pathing
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Distance = 1000000000;
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Visited = true;
 				CS$<>8__locals1.q.method_3(CS$<>8__locals2.topIndex);
-				this.method_2(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
+				this.hEmzxAaTll(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
 				num4++;
 				if (CS$<>8__locals2.currentX == CS$<>8__locals1.endX && CS$<>8__locals2.currentY == CS$<>8__locals1.endY)
 				{
 					break;
 				}
-				if (num4 % num5 == 0 && !this.Grid.method_3(this.Grid.method_5(CS$<>8__locals2.currentX, CS$<>8__locals2.currentY), vector2_1))
+				if (num4 % num5 == 0 && !this.Grid.method_2(this.Grid.method_4(CS$<>8__locals2.currentX, CS$<>8__locals2.currentY), vector2_1))
 				{
 					this.method_11(CS$<>8__locals1.endX, CS$<>8__locals1.endY, ref CS$<>8__locals1, ref CS$<>8__locals2);
 				}
@@ -450,7 +450,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			return this.method_0(vector2_0, vector2_1);
 		}
 
-		public unsafe PathSequence method_7(Vector2 vector2_0, Vector2 vector2_1, float float_0, MapGrid mapGrid_0)
+		public unsafe PathSequence method_6(Vector2 vector2_0, Vector2 vector2_1, float float_0, MapGrid mapGrid_0)
 		{
 			MapNavigator.<>c__DisplayClass20_0 CS$<>8__locals1;
 			CS$<>8__locals1.grid = mapGrid_0;
@@ -458,7 +458,7 @@ namespace DarkorbitAPI.Structures.Pathing
 			this.Grid = CS$<>8__locals1.grid;
 			int int_;
 			int int_2;
-			this.Grid.method_0(vector2_0, out int_, out int_2);
+			this.Grid.ClHzudsGyZ(vector2_0, out int_, out int_2);
 			for (int i = 0; i < this.items.Length; i++)
 			{
 				this.items[i].Distance = 1000000000;
@@ -469,13 +469,13 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				if (keyValuePair.Value.IsNpc)
 				{
-					CS$<>8__locals1.npcPositions.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_0(200), (keyValuePair.Value as NpcShip).Range));
+					CS$<>8__locals1.npcPositions.Add(new ValueTuple<Vector2, int>(keyValuePair.Value.method_1(200), (keyValuePair.Value as NpcShip).Range));
 				}
 			}
 			MapNavigator.QueueItem[] array = this.items;
 			int num = this.method_1(int_, int_2);
 			array[num].Distance = 0;
-			array[num].Left = this.method_12(CS$<>8__locals1.grid.method_5(int_, int_2), ref CS$<>8__locals1);
+			array[num].Left = this.method_12(CS$<>8__locals1.grid.method_4(int_, int_2), ref CS$<>8__locals1);
 			array[num].Parent = -1;
 			CS$<>8__locals1.q = this._queue;
 			CS$<>8__locals1.q.method_0();
@@ -494,9 +494,9 @@ namespace DarkorbitAPI.Structures.Pathing
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Distance = 1000000000;
 				CS$<>8__locals1.q[CS$<>8__locals2.topIndex].Visited = true;
 				CS$<>8__locals1.q.method_3(CS$<>8__locals2.topIndex);
-				this.method_2(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
+				this.hEmzxAaTll(CS$<>8__locals2.topIndex, out CS$<>8__locals2.currentX, out CS$<>8__locals2.currentY);
 				num2++;
-				CS$<>8__locals2.currentPos = CS$<>8__locals1.grid.method_5(CS$<>8__locals2.currentX, CS$<>8__locals2.currentY);
+				CS$<>8__locals2.currentPos = CS$<>8__locals1.grid.method_4(CS$<>8__locals2.currentX, CS$<>8__locals2.currentY);
 				if (Vector2.Distance(CS$<>8__locals2.currentPos, vector2_1) >= float_0)
 				{
 					break;
@@ -536,26 +536,26 @@ namespace DarkorbitAPI.Structures.Pathing
 		// Note: this type is marked as 'beforefieldinit'.
 		static MapNavigator()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			MapNavigator.NULL = new ValueTuple<int, int>(-1, -1);
 		}
 
 		[CompilerGenerated]
 		internal static bool smethod_1(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass12_0 <>c__DisplayClass12_0_0)
 		{
-			return !<>c__DisplayClass12_0_0.grid.method_9(int_0, int_1);
+			return !<>c__DisplayClass12_0_0.grid.method_8(int_0, int_1);
+		}
+
+		[CompilerGenerated]
+		private bool method_7(int int_0, int int_1)
+		{
+			return !this.Grid.method_8(int_0, int_1);
 		}
 
 		[CompilerGenerated]
 		private bool method_8(int int_0, int int_1)
 		{
-			return !this.Grid.method_9(int_0, int_1);
-		}
-
-		[CompilerGenerated]
-		private bool method_9(int int_0, int int_1)
-		{
-			return !this.Grid.method_9(int_0, int_1);
+			return !this.Grid.method_8(int_0, int_1);
 		}
 
 		[CompilerGenerated]
@@ -573,7 +573,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		private int method_10(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass19_0 <>c__DisplayClass19_0_0)
+		private int method_9(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass19_0 <>c__DisplayClass19_0_0)
 		{
 			int num = Math.Abs(int_0 - <>c__DisplayClass19_0_0.endX);
 			int num2 = Math.Abs(int_1 - <>c__DisplayClass19_0_0.endY);
@@ -581,7 +581,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		}
 
 		[CompilerGenerated]
-		private int yrDwtnTiUav(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass19_0 <>c__DisplayClass19_0_0)
+		private int method_10(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass19_0 <>c__DisplayClass19_0_0)
 		{
 			int num = Math.Abs(int_0);
 			int num2 = Math.Abs(int_1);
@@ -591,7 +591,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		[CompilerGenerated]
 		private bool method_11(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass19_0 <>c__DisplayClass19_0_0, ref MapNavigator.<>c__DisplayClass19_1 <>c__DisplayClass19_1_0)
 		{
-			if (this.Grid.method_9(int_0, int_1))
+			if (this.Grid.method_8(int_0, int_1))
 			{
 				return false;
 			}
@@ -600,13 +600,13 @@ namespace DarkorbitAPI.Structures.Pathing
 			{
 				return true;
 			}
-			int num2 = <>c__DisplayClass19_1_0.current.Distance + this.yrDwtnTiUav(<>c__DisplayClass19_1_0.currentX - int_0, <>c__DisplayClass19_1_0.currentY - int_1, ref <>c__DisplayClass19_0_0);
+			int num2 = <>c__DisplayClass19_1_0.current.Distance + this.method_10(<>c__DisplayClass19_1_0.currentX - int_0, <>c__DisplayClass19_1_0.currentY - int_1, ref <>c__DisplayClass19_0_0);
 			if (num2 >= this.items[num].Distance)
 			{
 				return true;
 			}
 			this.items[num].Distance = num2;
-			this.items[num].Left = this.method_10(int_0, int_1, ref <>c__DisplayClass19_0_0);
+			this.items[num].Left = this.method_9(int_0, int_1, ref <>c__DisplayClass19_0_0);
 			this.items[num].Parent = <>c__DisplayClass19_1_0.topIndex;
 			<>c__DisplayClass19_0_0.q.method_3(num);
 			return true;
@@ -635,7 +635,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		[CompilerGenerated]
 		private bool method_13(int int_0, int int_1, ref MapNavigator.<>c__DisplayClass20_0 <>c__DisplayClass20_0_0, ref MapNavigator.<>c__DisplayClass20_1 <>c__DisplayClass20_1_0)
 		{
-			if (this.Grid.method_9(int_0, int_1))
+			if (this.Grid.method_8(int_0, int_1))
 			{
 				return false;
 			}
@@ -675,7 +675,7 @@ namespace DarkorbitAPI.Structures.Pathing
 		{
 			public QueueItem(int int_0, int int_1)
 			{
-				Class13.xnk8ImWzpOt04();
+				Class13.lOBHd9Nzn7x2T();
 				this.Distance = int_0;
 				this.Left = int_1;
 				this.Visited = false;
@@ -700,7 +700,7 @@ namespace DarkorbitAPI.Structures.Pathing
 
 			public Comparer()
 			{
-				Class13.xnk8ImWzpOt04();
+				Class13.lOBHd9Nzn7x2T();
 				base..ctor();
 			}
 		}

@@ -8,7 +8,7 @@ public class GClass644 : GInterface0
 	{
 		get
 		{
-			return 2976;
+			return 6672;
 		}
 	}
 
@@ -16,44 +16,38 @@ public class GClass644 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 4;
 		}
 	}
 
-	public GClass644(int int_1 = 0, int int_2 = 0)
+	public GClass644(int int_1 = 0)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.int_0 = int_1;
-		this.UaxWcqipHJ = int_2;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 2976;
+		return 6672;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 4;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
 		this.int_0 = binaryStream_0.smethod_0();
-		this.int_0 = (U.smethod_0(this.int_0, 7) | this.int_0 << 25);
-		this.UaxWcqipHJ = binaryStream_0.smethod_0();
-		this.UaxWcqipHJ = (this.UaxWcqipHJ << 3 | U.smethod_0(this.UaxWcqipHJ, 29));
+		this.int_0 = (this.int_0 << 6 | U.smethod_0(this.int_0, 26));
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(2976);
-		binaryStream_0.smethod_4(this.int_0 << 7 | U.smethod_0(this.int_0, 25));
-		binaryStream_0.smethod_4(U.smethod_0(this.UaxWcqipHJ, 3) | this.UaxWcqipHJ << 29);
+		binaryStream_0.smethod_7(6672);
+		binaryStream_0.smethod_4(U.smethod_0(this.int_0, 6) | this.int_0 << 26);
 	}
 
 	public int int_0;
-
-	public int UaxWcqipHJ;
 }

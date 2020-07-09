@@ -8,7 +8,7 @@ public class GClass307 : GInterface0
 	{
 		get
 		{
-			return 14365;
+			return 3530;
 		}
 	}
 
@@ -16,58 +16,57 @@ public class GClass307 : GInterface0
 	{
 		get
 		{
-			return 4;
+			return 2;
 		}
 	}
 
-	public GClass307(Vector<GClass593> vector_1 = null)
+	public GClass307(string string_1 = "", GClass187 gclass187_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
+		this.string_0 = "";
 		base..ctor();
-		if (vector_1 == null)
+		this.string_0 = string_1;
+		if (gclass187_1 == null)
 		{
-			this.vector_0 = new Vector<GClass593>();
+			this.gclass187_0 = new GClass187(0, 0, 0, "", 0, false);
 			return;
 		}
-		this.vector_0 = vector_1;
+		this.gclass187_0 = gclass187_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 14365;
+		return 3530;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 4;
+		return 2;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		while (this.vector_0.Length > 0)
+		this.string_0 = binaryStream_0.smethod_2();
+		this.gclass187_0 = (GClass187)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass187_0 != null)
 		{
-			this.vector_0.method_1();
-		}
-		int i = 0;
-		int num = (int)binaryStream_0.smethod_1();
-		while (i < num)
-		{
-			GClass593 gclass = (GClass593)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-			gclass.imethod_1(binaryStream_0);
-			this.vector_0.method_0(gclass);
-			i++;
+			this.gclass187_0.imethod_1(binaryStream_0);
 		}
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(14365);
-		binaryStream_0.smethod_7(this.vector_0.Length);
-		foreach (GClass593 gclass in this.vector_0)
+		binaryStream_0.smethod_7(3530);
+		binaryStream_0.smethod_3(this.string_0);
+		if (this.gclass187_0 != null)
 		{
-			gclass.imethod_2(binaryStream_0);
+			this.gclass187_0.imethod_2(binaryStream_0);
+			return;
 		}
+		binaryStream_0.smethod_7(0);
 	}
 
-	public Vector<GClass593> vector_0;
+	public string string_0;
+
+	public GClass187 gclass187_0;
 }

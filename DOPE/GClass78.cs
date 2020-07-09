@@ -19,7 +19,7 @@ public class GClass78
 
 	public GClass78(DarkOrbitWebAPI darkOrbitWebAPI_1)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
 		this.Web = darkOrbitWebAPI_1;
 		this.gclass80_0 = new GClass78.GClass80();
@@ -75,14 +75,14 @@ public class GClass78
 
 		public GClass79()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 		}
 
 		// Note: this type is marked as 'beforefieldinit'.
 		static GClass79()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			GClass78.GClass79.list_0 = new List<string>
 			{
 				"baseModule",
@@ -158,33 +158,33 @@ public class GClass78
 		}
 
 		[CompilerGenerated]
-		public void zxuluvwwd9(DateTimeOffset? nullable_1)
+		public void method_6(DateTimeOffset? nullable_1)
 		{
 			this.nullable_0 = nullable_1;
 		}
 
 		[CompilerGenerated]
-		public List<GClass78.GClass79> method_6()
+		public List<GClass78.GClass79> method_7()
 		{
 			return this.list_0;
 		}
 
 		public GClass80()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 			this.Resources = new ConcurrentDictionary<string, int>();
 			this.list_0 = new List<GClass78.GClass79>();
 			foreach (string name in GClass78.GClass79.list_0)
 			{
-				this.method_6().Add(new GClass78.GClass79
+				this.method_7().Add(new GClass78.GClass79
 				{
 					Name = name
 				});
 			}
 		}
 
-		private void method_7(string string_0)
+		private void method_8(string string_0)
 		{
 			foreach (object obj in Regex.Matches(string_0, "<span class=\"ore_(.+?)\">.+?<\\/span><br \\/>\\s+(\\S+)"))
 			{
@@ -199,7 +199,7 @@ public class GClass78
 			}
 		}
 
-		private void method_8(string string_0)
+		private void method_9(string string_0)
 		{
 			Dictionary<string, DateTimeOffset> dictionary = new Dictionary<string, DateTimeOffset>();
 			foreach (object obj in Regex.Matches(string_0, "tmp\\.init\\(\\s*'(.+?)',\\s*(.+?),\\s*(.+?)\\s*\\);"))
@@ -210,7 +210,7 @@ public class GClass78
 				long seconds = long.Parse(match.Groups[3].Value);
 				dictionary[value] = DateTimeOffset.FromUnixTimeSeconds(seconds);
 			}
-			foreach (GClass78.GClass79 gclass in this.method_6())
+			foreach (GClass78.GClass79 gclass in this.method_7())
 			{
 				DateTimeOffset value3;
 				if (dictionary.TryGetValue(gclass.Name, out value3))
@@ -222,21 +222,21 @@ public class GClass78
 					gclass.method_1(null);
 				}
 			}
-			this.zxuluvwwd9(this.method_10("transportModule").method_0());
+			this.method_6(this.method_11("transportModule").method_0());
 		}
 
-		public void method_9(string string_0)
+		public void method_10(string string_0)
 		{
-			this.method_7(string_0);
 			this.method_8(string_0);
+			this.method_9(string_0);
 			this.method_1(DateTimeOffset.Now);
 		}
 
-		public GClass78.GClass79 method_10(string string_0)
+		public GClass78.GClass79 method_11(string string_0)
 		{
 			GClass78.GClass80.<>c__DisplayClass23_0 CS$<>8__locals1 = new GClass78.GClass80.<>c__DisplayClass23_0();
 			CS$<>8__locals1.string_0 = string_0;
-			return this.method_6().Find(new Predicate<GClass78.GClass79>(CS$<>8__locals1.method_0));
+			return this.method_7().Find(new Predicate<GClass78.GClass79>(CS$<>8__locals1.method_0));
 		}
 
 		[CompilerGenerated]

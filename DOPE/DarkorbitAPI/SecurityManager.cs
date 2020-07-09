@@ -70,7 +70,7 @@ namespace DarkorbitAPI
 
 		public SecurityManager(GameManager gameManager_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.HashBlockList = new CooldownTracker<string>();
 			this.Random = new Random();
 			base..ctor();
@@ -121,7 +121,7 @@ namespace DarkorbitAPI
 			int num3 = CS$<>8__locals1.int_1 * CS$<>8__locals1.int_0 + num;
 			int num4 = CS$<>8__locals1.int_3 * CS$<>8__locals1.int_2 + num2;
 			Vector2 vector = new Vector2((float)num3, (float)num4);
-			if (map_0.Grid.method_7(vector))
+			if (map_0.Grid.method_6(vector))
 			{
 				return this.method_4(map_0, rectangle_0);
 			}
@@ -132,7 +132,7 @@ namespace DarkorbitAPI
 
 		static SecurityManager()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			SecurityManager.NpcRangesRegular = new Dictionary<NpcUtils.NpcClass, int>
 			{
 				{
@@ -424,7 +424,7 @@ namespace DarkorbitAPI
 			return this.Random.Next(0, int_0) == 0;
 		}
 
-		public Vector2 method_9(Vector2 vector2_0, int int_0, int int_1, int int_2 = 640, int int_3 = 360, int int_4 = 25, int int_5 = 25, int int_6 = 7)
+		public Vector2 RsiCywyor9(Vector2 vector2_0, int int_0, int int_1, int int_2 = 640, int int_3 = 360, int int_4 = 25, int int_5 = 25, int int_6 = 7)
 		{
 			Vector2 vector = new Vector2((float)int_0, (float)int_1);
 			if (!this.method_2(vector2_0, int_0, int_1, 0))
@@ -448,16 +448,16 @@ namespace DarkorbitAPI
 					num6 = (int)((float)num6 * ((float)int_2 / (float)num5));
 					num5 = int_2;
 				}
-				return this.method_11(new Vector2(vector2_0.X + (float)(num5 * num3), vector2_0.Y + (float)(num6 * num4)), int_4, int_5);
+				return this.method_10(new Vector2(vector2_0.X + (float)(num5 * num3), vector2_0.Y + (float)(num6 * num4)), int_4, int_5);
 			}
 			if (int_6 > 0 && this.method_8(int_6))
 			{
-				return this.method_11(vector, int_4, int_5);
+				return this.method_10(vector, int_4, int_5);
 			}
 			return vector;
 		}
 
-		public Vector2 method_10(Vector2 vector2_0, int int_0, int int_1)
+		public Vector2 method_9(Vector2 vector2_0, int int_0, int int_1)
 		{
 			Vector2 vector = new Vector2((float)int_0, (float)int_1);
 			if (!this.method_2(vector2_0, int_0, int_1, 0))
@@ -466,25 +466,25 @@ namespace DarkorbitAPI
 				int num2 = (int)((float)int_1 - vector2_0.Y);
 				int num3 = Math.Min(Math.Abs(num), 640) * ((num >= 0) ? 1 : -1);
 				int num4 = Math.Min(Math.Abs(num2), 360) * ((num2 >= 0) ? 1 : -1);
-				return this.method_11(new Vector2(vector2_0.X + (float)num3, vector2_0.Y + (float)num4), 25, 25);
+				return this.method_10(new Vector2(vector2_0.X + (float)num3, vector2_0.Y + (float)num4), 25, 25);
 			}
 			if (this.method_8(15))
 			{
-				return this.method_11(vector, 50, 50);
+				return this.method_10(vector, 50, 50);
 			}
 			return vector;
 		}
 
-		public Vector2 method_11(Vector2 vector2_0, int int_0 = 50, int int_1 = 50)
+		public Vector2 method_10(Vector2 vector2_0, int int_0 = 50, int int_1 = 50)
 		{
-			return this.method_12((int)vector2_0.X, (int)vector2_0.Y, int_0, int_1);
+			return this.method_11((int)vector2_0.X, (int)vector2_0.Y, int_0, int_1);
 		}
 
-		public Vector2 method_12(int int_0, int int_1, int int_2 = 50, int int_3 = 50)
+		public Vector2 method_11(int int_0, int int_1, int int_2 = 50, int int_3 = 50)
 		{
 			int num;
 			int num2;
-			if (this.Game.Map.Grid.method_1((float)int_0, (float)int_1, out num, out num2))
+			if (this.Game.Map.Grid.method_0((float)int_0, (float)int_1, out num, out num2))
 			{
 				int scaleX = this.Game.Map.Grid.ScaleX;
 				int scaleY = this.Game.Map.Grid.ScaleY;

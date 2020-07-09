@@ -8,7 +8,7 @@ public class GClass296 : GInterface0
 	{
 		get
 		{
-			return 22888;
+			return -13836;
 		}
 	}
 
@@ -16,37 +16,42 @@ public class GClass296 : GInterface0
 	{
 		get
 		{
-			return 8;
+			return 1;
 		}
 	}
 
-	public GClass296(double double_1 = 0.0)
+	public GClass296(int int_1 = 0, bool bool_1 = false)
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.double_0 = double_1;
+		this.bool_0 = bool_1;
+		this.int_0 = int_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return 22888;
+		return -13836;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 8;
+		return 1;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.double_0 = binaryStream_0.ReadDouble();
+		this.bool_0 = binaryStream_0.ReadBoolean();
+		this.int_0 = (int)binaryStream_0.smethod_1();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(22888);
-		binaryStream_0.WriteDouble(this.double_0);
+		binaryStream_0.smethod_7(-13836);
+		binaryStream_0.WriteBoolean(this.bool_0);
+		binaryStream_0.smethod_7(this.int_0);
 	}
 
-	public double double_0;
+	public bool bool_0;
+
+	public int int_0;
 }

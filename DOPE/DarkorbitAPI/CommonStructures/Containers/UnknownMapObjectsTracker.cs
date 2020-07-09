@@ -75,7 +75,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 		public UnknownMapObjectsTracker()
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor();
 			this.Objects = new HashSet<UnknownMapObjectsTracker<T>.ObjectEntry<T>>();
 		}
@@ -108,7 +108,7 @@ namespace DarkorbitAPI.CommonStructures.Containers
 
 			public ObjectEntry()
 			{
-				Class13.xnk8ImWzpOt04();
+				Class13.lOBHd9Nzn7x2T();
 				base..ctor();
 				this.Created = DateTimeOffset.Now;
 				this.LastUpdated = this.Created;

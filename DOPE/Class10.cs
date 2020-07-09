@@ -12,7 +12,7 @@ internal static class Class10
 	// Note: this type is marked as 'beforefieldinit'.
 	static Class10()
 	{
-		Class13.xnk8ImWzpOt04();
+		Class13.lOBHd9Nzn7x2T();
 		Class10.Account = new PropertyChangedEventArgs("Account");
 		Class10.propertyChangedEventArgs_0 = new PropertyChangedEventArgs("AttackingId");
 		Class10.propertyChangedEventArgs_1 = new PropertyChangedEventArgs("BackgroundQueue");
@@ -42,35 +42,35 @@ internal static class Class10
 		Class10.Email = new PropertyChangedEventArgs("Email");
 		Class10.propertyChangedEventArgs_19 = new PropertyChangedEventArgs("EnemyLocated");
 		Class10.propertyChangedEventArgs_20 = new PropertyChangedEventArgs("EnemyTarget");
-		Class10.propertyChangedEventArgs_21 = new PropertyChangedEventArgs("FailedJumpCount");
-		Class10.propertyChangedEventArgs_22 = new PropertyChangedEventArgs("ForceLogout");
-		Class10.propertyChangedEventArgs_23 = new PropertyChangedEventArgs("GalaxyGateType");
+		Class10.jysMspmoQwR = new PropertyChangedEventArgs("FailedJumpCount");
+		Class10.propertyChangedEventArgs_21 = new PropertyChangedEventArgs("ForceLogout");
+		Class10.propertyChangedEventArgs_22 = new PropertyChangedEventArgs("GalaxyGateType");
 		Class10.Game = new PropertyChangedEventArgs("Game");
-		Class10.propertyChangedEventArgs_24 = new PropertyChangedEventArgs("GameServer");
+		Class10.propertyChangedEventArgs_23 = new PropertyChangedEventArgs("GameServer");
 		Class10.Hero = new PropertyChangedEventArgs("Hero");
-		Class10.propertyChangedEventArgs_25 = new PropertyChangedEventArgs("HeroPosition");
-		Class10.propertyChangedEventArgs_26 = new PropertyChangedEventArgs("ignoreShields");
-		Class10.propertyChangedEventArgs_27 = new PropertyChangedEventArgs("IsAttacking");
-		Class10.propertyChangedEventArgs_28 = new PropertyChangedEventArgs("IsCollecting");
-		Class10.propertyChangedEventArgs_29 = new PropertyChangedEventArgs("IsEnabled");
+		Class10.propertyChangedEventArgs_24 = new PropertyChangedEventArgs("HeroPosition");
+		Class10.propertyChangedEventArgs_25 = new PropertyChangedEventArgs("ignoreShields");
+		Class10.propertyChangedEventArgs_26 = new PropertyChangedEventArgs("IsAttacking");
+		Class10.propertyChangedEventArgs_27 = new PropertyChangedEventArgs("IsCollecting");
+		Class10.propertyChangedEventArgs_28 = new PropertyChangedEventArgs("IsEnabled");
 		Class10.IsPaused = new PropertyChangedEventArgs("IsPaused");
-		Class10.propertyChangedEventArgs_30 = new PropertyChangedEventArgs("IsStopping");
-		Class10.propertyChangedEventArgs_31 = new PropertyChangedEventArgs("Key");
-		Class10.propertyChangedEventArgs_32 = new PropertyChangedEventArgs("LastBackgroundAction");
-		Class10.propertyChangedEventArgs_33 = new PropertyChangedEventArgs("LastBackgroundHandlerAction");
+		Class10.propertyChangedEventArgs_29 = new PropertyChangedEventArgs("IsStopping");
+		Class10.propertyChangedEventArgs_30 = new PropertyChangedEventArgs("Key");
+		Class10.propertyChangedEventArgs_31 = new PropertyChangedEventArgs("LastBackgroundAction");
+		Class10.propertyChangedEventArgs_32 = new PropertyChangedEventArgs("LastBackgroundHandlerAction");
 		Class10.LastDisconnectReason = new PropertyChangedEventArgs("LastDisconnectReason");
-		Class10.propertyChangedEventArgs_34 = new PropertyChangedEventArgs("LastLogin");
-		Class10.propertyChangedEventArgs_35 = new PropertyChangedEventArgs("LastMapLogin");
-		Class10.propertyChangedEventArgs_36 = new PropertyChangedEventArgs("LastStates");
-		Class10.propertyChangedEventArgs_37 = new PropertyChangedEventArgs("Log");
-		Class10.propertyChangedEventArgs_38 = new PropertyChangedEventArgs("LoginTask");
-		Class10.propertyChangedEventArgs_39 = new PropertyChangedEventArgs("MainController");
+		Class10.propertyChangedEventArgs_33 = new PropertyChangedEventArgs("LastLogin");
+		Class10.propertyChangedEventArgs_34 = new PropertyChangedEventArgs("LastMapLogin");
+		Class10.propertyChangedEventArgs_35 = new PropertyChangedEventArgs("LastStates");
+		Class10.propertyChangedEventArgs_36 = new PropertyChangedEventArgs("Log");
+		Class10.propertyChangedEventArgs_37 = new PropertyChangedEventArgs("LoginTask");
+		Class10.propertyChangedEventArgs_38 = new PropertyChangedEventArgs("MainController");
 		Class10.Map = new PropertyChangedEventArgs("Map");
-		Class10.propertyChangedEventArgs_40 = new PropertyChangedEventArgs("MapProfile");
+		Class10.propertyChangedEventArgs_39 = new PropertyChangedEventArgs("MapProfile");
 		Class10.Module = new PropertyChangedEventArgs("Module");
 		Class10.Name = new PropertyChangedEventArgs("Name");
-		Class10.propertyChangedEventArgs_41 = new PropertyChangedEventArgs("NextBot");
-		Class10.etcwNxiscIA = new PropertyChangedEventArgs("NpcLockout");
+		Class10.propertyChangedEventArgs_40 = new PropertyChangedEventArgs("NextBot");
+		Class10.propertyChangedEventArgs_41 = new PropertyChangedEventArgs("NpcLockout");
 		Class10.propertyChangedEventArgs_42 = new PropertyChangedEventArgs("Priority");
 		Class10.propertyChangedEventArgs_43 = new PropertyChangedEventArgs("Profile");
 		Class10.propertyChangedEventArgs_44 = new PropertyChangedEventArgs("RealDist");
@@ -158,17 +158,19 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_20;
 
+	internal static readonly PropertyChangedEventArgs jysMspmoQwR;
+
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_21;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_22;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_23;
-
 	internal static readonly PropertyChangedEventArgs Game;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_24;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_23;
 
 	internal static readonly PropertyChangedEventArgs Hero;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_24;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_25;
 
@@ -178,9 +180,9 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_28;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_29;
-
 	internal static readonly PropertyChangedEventArgs IsPaused;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_29;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_30;
 
@@ -188,9 +190,9 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_32;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_33;
-
 	internal static readonly PropertyChangedEventArgs LastDisconnectReason;
+
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_33;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_34;
 
@@ -202,19 +204,17 @@ internal static class Class10
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_38;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_39;
-
 	internal static readonly PropertyChangedEventArgs Map;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_40;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_39;
 
 	internal static readonly PropertyChangedEventArgs Module;
 
 	internal static readonly PropertyChangedEventArgs Name;
 
-	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_41;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_40;
 
-	internal static readonly PropertyChangedEventArgs etcwNxiscIA;
+	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_41;
 
 	internal static readonly PropertyChangedEventArgs propertyChangedEventArgs_42;
 

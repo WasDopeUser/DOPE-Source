@@ -1,155 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using DarkorbitAPI;
-using DarkorbitAPI.Structures;
-using DOPE.Common;
 using DOPE.Common.Models;
-using DOPE.Common.Models.Bot;
 
-public class GClass902 : GClass900
+public class GClass902 : GClass901
 {
-	public GClass914 Behavior
+	public GClass902(GClass890 gclass890_1)
 	{
-		[CompilerGenerated]
-		get
-		{
-			return this.gclass914_0;
-		}
-		[CompilerGenerated]
-		private set
-		{
-			if (object.Equals(this.gclass914_0, value))
-			{
-				return;
-			}
-			this.gclass914_0 = value;
-			this.method_0(Class10.propertyChangedEventArgs_2);
-		}
-	}
-
-	public int FailedJumpCount
-	{
-		[CompilerGenerated]
-		get
-		{
-			return this.int_2;
-		}
-		[CompilerGenerated]
-		private set
-		{
-			if (this.int_2 == value)
-			{
-				return;
-			}
-			this.int_2 = value;
-			this.method_0(Class10.propertyChangedEventArgs_21);
-		}
-	}
-
-	public int method_3()
-	{
-		MenuItem menuItem;
-		return (int)(base.C.Hero.MenuItems.TryGetValue("ammunition_ggportal_quarantine-zone-cpu", out menuItem) ? menuItem.CounterValue : 0.0);
-	}
-
-	public GClass902(GClass889 gclass889_1)
-	{
-		Class13.xnk8ImWzpOt04();
-		base..ctor(gclass889_1, TargetMap.GG_QZ);
-		this.Behavior = new GClass914(gclass889_1, this);
-	}
-
-	public override MapProfile UpdateProfile(BotProfile botProfile_1)
-	{
-		if (botProfile_1 == null)
-		{
-			return null;
-		}
-		List<MapProfile> maps = botProfile_1.Maps;
-		if (maps == null)
-		{
-			return null;
-		}
-		return maps.FirstOrDefault(new Func<MapProfile, bool>(GClass902.<>c.<>c_0.method_0));
-	}
-
-	public override int UpdatePriority()
-	{
-		MapProfile mapProfile = base.MapProfile;
-		if (mapProfile != null)
-		{
-			int qz_GroupSize = mapProfile.QZ_GroupSize;
-		}
-		int num = this.method_3();
-		if ((base.C.Hero.IsInitialized || base.C.Hero.LastStatUpdate.smethod_0(3600000)) && (num == 0 || base.C.Hero.Group.Members.Count < 2))
-		{
-			return int.MinValue;
-		}
-		return base.UpdatePriority();
+		Class13.lOBHd9Nzn7x2T();
+		base..ctor(gclass890_1, TargetMap.GG_VoT);
 	}
 
 	protected override void OnBind()
 	{
-		base.OnBind();
-		base.C.Game.LogMessage += this.method_4;
+		base.C.Game.LogMessage += this.method_3;
 	}
 
 	protected override void OnUnbind()
 	{
-		base.OnUnbind();
-		base.C.Game.LogMessage -= this.method_4;
+		base.C.Game.LogMessage -= this.method_3;
 	}
 
-	private void method_4(GameManager gameManager_0, GClass268 gclass268_0)
+	private void method_3(GameManager gameManager_0, GClass269 gclass269_0)
 	{
-		if (gclass268_0.string_0 == "0|A|STM|jumpgate_failed_no_key_activated" && this.method_3() > 0)
+		string[] source;
+		if (GClass90.smethod_1(gclass269_0.string_0, out source, new string[]
 		{
-			base.C.Server.method_15("ammunition_ggportal_quarantine-zone-cpu", false, false);
-			return;
-		}
-	}
-
-	public override GClass903 GetBehavior()
-	{
-		if (base.C.Map.MapId == 229)
+			"n",
+			"MSG",
+			"1",
+			"0",
+			"msg_galaxy_gate_cooldown_active"
+		}) && source.FirstOrDefault<string>() != null)
 		{
-			return this.Behavior;
-		}
-		return base.GetBehavior();
-	}
-
-	public override void ClearStats()
-	{
-		base.ClearStats();
-		this.FailedJumpCount = 0;
-	}
-
-	public override bool TrySwitchMap(out int int_3)
-	{
-		if (!base.C.IsStopping)
-		{
-			if (base.State == ModuleState.Started)
+			Dictionary<string, string> dictionary = GClass90.smethod_0(source.FirstOrDefault<string>());
+			string s;
+			string s2;
+			int num;
+			int num2;
+			if (dictionary.TryGetValue("%HOURS%", out s) && dictionary.TryGetValue("%MINUTES%", out s2) && int.TryParse(s, out num) && int.TryParse(s2, out num2))
 			{
-				int_3 = base.C.MapProfile.TargetMap.Resolve(base.C.Hero.FactionId);
-				return int_3 != base.C.Map.MapId;
+				base.Log.Info<int, int>("GG cooldown: {hours}h {minutes}m", num, num2);
+				this.dateTimeOffset_2 = DateTimeOffset.Now.AddHours((double)num).AddMinutes((double)num2);
 			}
 		}
-		int_3 = MapUtils.smethod_12(1, base.C.Hero.FactionId);
-		return true;
 	}
 
-	public override void HandleError(GClass891.GEnum10 genum10_0)
+	protected override bool vmethod_0()
 	{
-		TimeSpan value = TimeSpan.FromMinutes(3.0);
-		base.C.Timeout = new DateTime?(DateTime.Now.Add(value));
-		base.C.method_12(true, false);
+		return this.dateTimeOffset_2.Cooldown(0);
 	}
 
-	[CompilerGenerated]
-	private GClass914 gclass914_0;
-
-	[CompilerGenerated]
-	private int int_2;
+	public DateTimeOffset dateTimeOffset_2;
 }

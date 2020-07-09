@@ -1,110 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Numerics;
-using DarkorbitAPI.Packets.Static;
+using System.Runtime.CompilerServices;
 using DarkorbitAPI.Structures;
-using DarkorbitAPI.Structures.Pathing;
-using DOPE.UI.Models;
 
 public class GClass905 : GClass904
 {
-	public GClass905(GClass889 gclass889_1)
+	public GClass905(GClass890 gclass890_1)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.list_0 = new List<Rectangle>();
-		base..ctor(gclass889_1);
-		this.list_0.Add(GClass905.rectangle_0);
+		Class13.lOBHd9Nzn7x2T();
+		base..ctor(gclass890_1);
 	}
 
-	public override bool vmethod_10(NpcShip npcShip_0)
+	public override bool UntCgkpMdca(Ship ship_0, out Ship ship_1)
 	{
-		GClass186 gclass;
-		if (npcShip_0.HasModifier(EntityModifierType.INVINCIBILITY, out gclass))
+		GClass905.<>c__DisplayClass1_0 CS$<>8__locals1;
+		CS$<>8__locals1.gclass905_0 = this;
+		ship_1 = null;
+		if (base.UntCgkpMdca(ship_0, out ship_1))
+		{
+			return true;
+		}
+		CS$<>8__locals1.ship_0 = ship_0;
+		if (CS$<>8__locals1.ship_0 == null)
 		{
 			return false;
 		}
-		SelectedNpcModel selectedNpcModel = this.vmethod_5(npcShip_0);
-		return selectedNpcModel == null || selectedNpcModel.Enabled;
-	}
-
-	public override List<Rectangle> vmethod_17()
-	{
-		Point pt = base.Hero.Position.smethod_3();
-		if (GClass905.rectangle_0.Contains(pt))
+		Vector2 position = CS$<>8__locals1.ship_0.Position;
+		Vector2 heroPosition = base.C.HeroPosition;
+		NpcShip npcShip = CS$<>8__locals1.ship_0 as NpcShip;
+		if (npcShip == null)
 		{
-			this.list_0[0] = GClass905.rectangle_0;
+			this.method_23(1.0, ref CS$<>8__locals1);
+			return true;
 		}
-		else if (GClass905.rectangle_1.Contains(pt))
+		if ((!base.C.IsAttacking || base.C.AttackingId != CS$<>8__locals1.ship_0.Id) && CS$<>8__locals1.ship_0 == base.C.Map.SelectedShip && !this.vmethod_5(npcShip))
 		{
-			this.list_0[0] = GClass905.rectangle_1;
+			bool flag = base.Hero.Pet.IsEnabled && base.Hero.Pet.TargetId == npcShip.Id;
+			if ((npcShip.ShieldPercentage < 99f && !flag) || !this.vmethod_6(npcShip))
+			{
+				this.method_23(2.0, ref CS$<>8__locals1);
+				return true;
+			}
 		}
-		else if (GClass905.rectangle_2.Contains(pt))
+		if (CS$<>8__locals1.ship_0.ShieldPercentage >= 98f && Vector2.Distance(position, heroPosition) > 3500f && CS$<>8__locals1.ship_0.HpMax - CS$<>8__locals1.ship_0.Hp <= 150000)
 		{
-			this.list_0[0] = GClass905.rectangle_2;
+			this.method_23(1.0, ref CS$<>8__locals1);
+			return true;
 		}
-		else
-		{
-			this.list_0[0] = GClass905.rectangle_3;
-		}
-		return this.list_0;
-	}
-
-	public override Vector2? vmethod_21(bool bool_3)
-	{
-		GClass905.<>c__DisplayClass9_0 CS$<>8__locals1 = new GClass905.<>c__DisplayClass9_0();
-		CS$<>8__locals1.gclass905_0 = this;
-		CS$<>8__locals1.vector2_0 = base.Hero.Position;
-		CS$<>8__locals1.vector2_1 = (this.vmethod_41(CS$<>8__locals1.vector2_0, 2250) ?? this.vmethod_17()[0].smethod_4());
-		CS$<>8__locals1.float_0 = Math.Min(Vector2.Distance(base.Hero.Position, CS$<>8__locals1.vector2_1) + 500f, 2500f);
-		CS$<>8__locals1.pathSequence_0 = null;
-		Map.Navigators.method_3(new Action<MapNavigator>(CS$<>8__locals1.method_0), 0);
-		if (CS$<>8__locals1.pathSequence_0 != null)
-		{
-			base.Map.Grid.method_15(CS$<>8__locals1.pathSequence_0);
-		}
-		PathSequence pathSequence_ = CS$<>8__locals1.pathSequence_0;
-		return new Vector2?((pathSequence_ != null) ? pathSequence_.Destination : base.C.Game.Security.method_5(base.Map, this.vmethod_17()));
-	}
-
-	public override Vector2? vmethod_20(Vector2 vector2_1, out Gate gate_0, bool bool_3 = false, bool bool_4 = true)
-	{
-		gate_0 = null;
-		return null;
-	}
-
-	public override bool vmethod_16()
-	{
 		return false;
 	}
 
-	public override bool vmethod_4(bool bool_3 = false, bool bool_4 = false)
+	[CompilerGenerated]
+	private void method_23(double double_0, ref GClass905.<>c__DisplayClass1_0 <>c__DisplayClass1_0_0)
 	{
-		Vector2 heroPosition = base.C.HeroPosition;
-		Ship ship = base.C.Map.method_5<Ship>(heroPosition, new Func<Ship, bool>(GClass905.<>c.<>c_0.method_0), null, 0);
-		return ship == null || Vector2.Distance(heroPosition, ship.Position) >= 2000f;
+		base.C.NpcLockout.method_1(<>c__DisplayClass1_0_0.ship_0.Id, double_0 * 10000.0);
 	}
-
-	// Note: this type is marked as 'beforefieldinit'.
-	static GClass905()
-	{
-		Class13.xnk8ImWzpOt04();
-		GClass905.size_0 = new Size(MapUtils.LargeMapSize.Width / 2, MapUtils.LargeMapSize.Height / 2);
-		GClass905.rectangle_0 = new Rectangle(new Point(0, 0), GClass905.size_0);
-		GClass905.rectangle_1 = new Rectangle(new Point(GClass905.size_0.Width, 0), GClass905.size_0);
-		GClass905.rectangle_2 = new Rectangle(new Point(0, GClass905.size_0.Height), GClass905.size_0);
-		GClass905.rectangle_3 = new Rectangle(new Point(GClass905.size_0.Width, GClass905.size_0.Height), GClass905.size_0);
-	}
-
-	private readonly List<Rectangle> list_0;
-
-	public static Size size_0;
-
-	public static Rectangle rectangle_0;
-
-	public static Rectangle rectangle_1;
-
-	public static Rectangle rectangle_2;
-
-	public static Rectangle rectangle_3;
 }

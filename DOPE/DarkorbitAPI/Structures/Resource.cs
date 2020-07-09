@@ -6,7 +6,7 @@ namespace DarkorbitAPI.Structures
 	{
 		public Resource(int int_0, int int_1, int int_2, string string_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			base..ctor(int_0, int_1, int_2.ToString(), string_0);
 		}
 

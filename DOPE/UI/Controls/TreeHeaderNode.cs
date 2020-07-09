@@ -93,7 +93,7 @@ namespace DOPE.UI.Controls
 
 		public TreeHeaderNode(CommandViewModel commandViewModel_0, DateTime dateTime_0, bool bool_0)
 		{
-			Class13.xnk8ImWzpOt04();
+			Class13.lOBHd9Nzn7x2T();
 			this.PropertyChanged = new PropertyChangedEventHandler(TreeHeaderNode.<>c.<>9.method_0);
 			base..ctor();
 			this.Command = commandViewModel_0;

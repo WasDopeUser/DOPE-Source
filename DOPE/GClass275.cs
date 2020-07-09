@@ -8,7 +8,7 @@ public class GClass275 : GInterface0
 	{
 		get
 		{
-			return -25534;
+			return 133;
 		}
 	}
 
@@ -16,135 +16,74 @@ public class GClass275 : GInterface0
 	{
 		get
 		{
-			return 26;
+			return 0;
 		}
 	}
 
-	public GClass275(bool bool_5 = false, bool bool_6 = false, string string_1 = "", GClass363 gclass363_2 = null, GClass363 gclass363_3 = null, bool bool_7 = false, double double_2 = 0.0, double double_3 = 0.0, int int_1 = 0, string string_2 = "", bool bool_8 = false, bool bool_9 = false, bool bool_10 = false)
+	public GClass275(GClass188 gclass188_1 = null, GClass135 gclass135_1 = null)
 	{
-		Class13.xnk8ImWzpOt04();
-		this.string_0 = "";
-		this.Id = "";
+		Class13.lOBHd9Nzn7x2T();
 		base..ctor();
-		this.bool_0 = bool_7;
-		if (gclass363_2 == null)
+		if (gclass188_1 == null)
 		{
-			this.gclass363_0 = new GClass363(null);
+			this.gclass188_0 = new GClass188(0);
 		}
 		else
 		{
-			this.gclass363_0 = gclass363_2;
+			this.gclass188_0 = gclass188_1;
 		}
-		this.bool_1 = bool_5;
-		this.bool_2 = bool_10;
-		this.bool_3 = bool_8;
-		this.int_0 = int_1;
-		this.Visible = bool_6;
-		this.string_0 = string_2;
-		this.double_0 = double_2;
-		this.Id = string_1;
-		if (gclass363_3 == null)
+		if (gclass135_1 == null)
 		{
-			this.gclass363_1 = new GClass363(null);
+			this.gclass135_0 = new GClass135(null, 0.0);
+			return;
 		}
-		else
-		{
-			this.gclass363_1 = gclass363_3;
-		}
-		this.double_1 = double_3;
-		this.bool_4 = bool_9;
+		this.gclass135_0 = gclass135_1;
 	}
 
 	public virtual int vmethod_0()
 	{
-		return -25534;
+		return 133;
 	}
 
 	public virtual int vmethod_1()
 	{
-		return 26;
+		return 0;
 	}
 
 	public virtual void imethod_1(BinaryStream binaryStream_0)
 	{
-		this.bool_0 = binaryStream_0.ReadBoolean();
-		this.gclass363_0 = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass363_0 != null)
+		this.gclass188_0 = (GClass188)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass188_0 != null)
 		{
-			this.gclass363_0.imethod_1(binaryStream_0);
+			this.gclass188_0.imethod_1(binaryStream_0);
 		}
-		this.bool_1 = binaryStream_0.ReadBoolean();
-		this.bool_2 = binaryStream_0.ReadBoolean();
-		this.bool_3 = binaryStream_0.ReadBoolean();
-		this.int_0 = (int)binaryStream_0.smethod_1();
-		this.Visible = binaryStream_0.ReadBoolean();
-		this.string_0 = binaryStream_0.smethod_2();
-		this.double_0 = binaryStream_0.ReadDouble();
-		this.Id = binaryStream_0.smethod_2();
-		this.gclass363_1 = (GClass363)GClass86.smethod_2((int)binaryStream_0.smethod_1());
-		if (this.gclass363_1 != null)
+		this.gclass135_0 = (GClass135)GClass86.smethod_2((int)binaryStream_0.smethod_1());
+		if (this.gclass135_0 != null)
 		{
-			this.gclass363_1.imethod_1(binaryStream_0);
+			this.gclass135_0.imethod_1(binaryStream_0);
 		}
-		this.double_1 = binaryStream_0.ReadDouble();
-		this.bool_4 = binaryStream_0.ReadBoolean();
 	}
 
 	public virtual void imethod_2(BinaryStream binaryStream_0)
 	{
-		binaryStream_0.smethod_7(-25534);
-		binaryStream_0.WriteBoolean(this.bool_0);
-		if (this.gclass363_0 != null)
+		binaryStream_0.smethod_7(133);
+		if (this.gclass188_0 != null)
 		{
-			this.gclass363_0.imethod_2(binaryStream_0);
+			this.gclass188_0.imethod_2(binaryStream_0);
 		}
 		else
 		{
 			binaryStream_0.smethod_7(0);
 		}
-		binaryStream_0.WriteBoolean(this.bool_1);
-		binaryStream_0.WriteBoolean(this.bool_2);
-		binaryStream_0.WriteBoolean(this.bool_3);
-		binaryStream_0.smethod_7(this.int_0);
-		binaryStream_0.WriteBoolean(this.Visible);
-		binaryStream_0.smethod_3(this.string_0);
-		binaryStream_0.WriteDouble(this.double_0);
-		binaryStream_0.smethod_3(this.Id);
-		if (this.gclass363_1 != null)
+		if (this.gclass135_0 != null)
 		{
-			this.gclass363_1.imethod_2(binaryStream_0);
+			this.gclass135_0.imethod_2(binaryStream_0);
+			return;
 		}
-		else
-		{
-			binaryStream_0.smethod_7(0);
-		}
-		binaryStream_0.WriteDouble(this.double_1);
-		binaryStream_0.WriteBoolean(this.bool_4);
+		binaryStream_0.smethod_7(0);
 	}
 
-	public bool bool_0;
+	public GClass188 gclass188_0;
 
-	public GClass363 gclass363_0;
-
-	public bool bool_1;
-
-	public bool bool_2;
-
-	public bool bool_3;
-
-	public int int_0;
-
-	public bool Visible;
-
-	public string string_0;
-
-	public double double_0;
-
-	public string Id;
-
-	public GClass363 gclass363_1;
-
-	public double double_1;
-
-	public bool bool_4;
+	public GClass135 gclass135_0;
 }
